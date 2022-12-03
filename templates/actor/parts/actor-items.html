@@ -1,0 +1,134 @@
+<div class="grid grid-3col">
+  <ol class="items-list flex-group-center">
+    <li class="item items-header">Wealth Points</li>
+    <li class="item grid grid-4col">
+      <div>Money</div>
+      <input name="system.wealth.wp" value="{{system.wealth.wp}}" type="text" dats-dstring="Number">
+      <input class="grid-span-2" name="system.wealth.notes" value="{{system.wealth.notes}}" type="text" dats-dstring="String" placeholder="Notes">
+      <a class="rollable" data-roll="{{system.wealth.income}}" data-label="Payday">Income</a>
+      <input class="grid-span-3" name="system.wealth.income" value="{{system.wealth.income}}" type="text" dats-dstring="String">
+    </li>
+  </ol>
+  <ol class="items-list flex-group-center">
+    <li class="item items-header">Capital</li>
+    <li class="item grid grid-4col">
+      <div>Personal</div>
+      <input name="system.wealth.capital.personal.total" value="{{system.wealth.capital.personal.total}}" type="text" dats-dstring="Number" readonly>
+      <div>External</div>
+      <input name="system.wealth.capital.external.total" value="{{system.wealth.capital.external.total}}" type="text" dats-dstring="Number">      
+      <div>Hard</div>
+      <input name="system.wealth.capital.personal.hard" value="{{system.wealth.capital.personal.hard}}" type="text" dats-dstring="Number">
+      <div>Hard</div>
+      <input name="system.wealth.capital.external.hard" value="{{system.wealth.capital.external.hard}}" type="text" dats-dstring="Number">
+    </li>
+  </ol>
+  <ol class="items-list flex-group-center">
+    <li class="item items-header">Carrying Capacity</li>
+    <li class="item grid grid-4col">
+      <div>Light</div>
+      <input class="grid-span-2" type="text" name="system.carrying.capacity" value="{{system.carrying.capacity}}" data-dtype="String">
+      <input type="text" value="{{system.carrying.light}}" readonly>
+      <div>Medium</div>
+      <input type="text" value="{{system.carrying.medium}}" readonly>
+      <div>Heavy</div>
+      <input type="text" value="{{system.carrying.heavy}}" readonly>
+    </li>
+  </ol>
+</div>
+
+<ol class="items-list flex-group-center">
+  {{#each nestedGear}}
+    <li class="item items-header grid grid-10col">
+      <div class="align-center item-name grid-span-4 grid-start-4">{{@key}} Items</div>
+      {{#if @first}}
+      <div class="align-center grid-start-10">
+        <a class="item-control item-create" title="Create item" data-type="object"><i class="fas fa-plus"></i></a>
+      </div>
+      {{/if}}
+    </li>
+    {{#each this as |item id|}}
+      <li class="item grid grid-10col">
+        <div class="item-name grid-span-3">
+          <div class="item-image">
+            <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
+          </div>
+          {{#if item.label}}
+          <h4>{{item.label}}</h4>
+          {{else}}
+          <h4>{{item.name}}</h4>
+          {{/if}}
+        </div>
+        <div class="grid-span-6">
+          <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
+        </div>
+        <div class="align-center grid grid-2col grid-start-10">
+          <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+          <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+      </li>
+      {{#each this.children as |item id|}}
+        <li class="item grid grid-10col">
+          <div class="item-name grid-start-2 grid-span-3">
+            <div class="item-image">
+              <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
+            </div>
+            {{#if item.label}}
+            <h4>{{item.label}}</h4>
+            {{else}}
+            <h4>{{item.name}}</h4>
+            {{/if}}
+          </div>
+          <div class="grid-span-5">
+            <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
+          </div>
+          <div class="align-center grid grid-2col grid-start-10">
+            <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+        {{#each this.children as |item id|}}
+          <li class="item grid grid-10col">
+            <div class="item-name grid-start-3 grid-span-3">
+              <div class="item-image">
+                <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
+              </div>
+              {{#if item.label}}
+              <h4>{{item.label}}</h4>
+              {{else}}
+              <h4>{{item.name}}</h4>
+              {{/if}}
+            </div>
+            <div class="grid-span-4">
+              <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
+            </div>
+            <div class="align-center grid grid-2col grid-start-10">
+              <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+              <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{#each this.children as |item id|}}
+            <li class="item grid grid-10col">
+              <div class="item-name grid-start-4 grid-span-3">
+                <div class="item-image">
+                  <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
+                </div>
+                {{#if item.label}}
+                <h4>{{item.label}}</h4>
+                {{else}}
+                <h4>{{item.name}}</h4>
+                {{/if}}
+              </div>
+              <div class="grid-span-3">
+                <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
+              </div>
+              <div class="align-center grid grid-2col grid-start-10">
+                <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
+              </div>
+            </li>
+          {{/each}}
+        {{/each}}
+      {{/each}}
+    {{/each}}
+  {{/each}}
+</ol>

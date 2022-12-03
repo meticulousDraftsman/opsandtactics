@@ -1,0 +1,78 @@
+{{#if system.gear.physical}}
+<ol class="items-list flex-group-center">
+    <li class="item items-header resource-label grid grid-5col">
+        <div>Quality</div>
+        <div>Size</div>
+        <div>Weight</div>
+        <div>Cost</div>
+        <div>Restriction</div>
+    </li>
+    <li class="grid grid-5col">
+        <div>
+            <input name="system.gear.quality" value="{{system.gear.quality}}" type="text" data-dtype="String"/>
+        </div>
+        <div>
+            <select name="system.gear.size" data-dtype="String">
+            {{#select system.gear.size}}
+                <option value="Fine">Fine</option>
+                <option value="Diminutive">Diminutive</option>
+                <option value="Tiny">Tiny</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="Huge">Huge</option>
+                <option value="Gargantuan">Gargantuan</option>
+                <option value="Colossal"></option>
+            {{/select}}
+            </select>
+        </div>
+        <div>
+            <input name="system.gear.weight" value="{{system.gear.weight}}" type="text" data-dtype="Number"/>
+        </div>
+        <div>
+            <input name="system.gear.cost" value="{{system.gear.cost}}" type="text" data-dtype="Number"/>
+        </div>
+        <div>
+            <input name="system.gear.restriction" value="{{system.gear.restriction}}" type="text" data-dtype="String"/>
+        </div>
+    </li>
+    <li class="item items-header resource-label grid grid-2col">
+        <div>Container</div>
+        <div>Location</div>
+    </li>
+    <li class="grid grid-2col">
+        <div>
+            <select name="system.gear.location.parent" data-dtype="String">
+                {{selectOptions containers selected=system.gear.location.parent nameAttr="id" labelAttr="name"}}
+            </select>
+        </div>
+        <div>
+            <input name="system.gear.location.note" value="{{system.gear.location.note}}" type="text" data-dtype="String" placeholder="Location"/>
+        </div>
+    </li>
+</ol>
+{{/if}}
+<ol class="items-list flex-group-center">
+    <li class="item items-header resource-label grid grid-10col">
+        <div class="grid-span-5">Resources</div>
+        <div class="grid-span-2">Value</div>
+        <div class="grid-span-2">Max</div>
+        <div>
+            <a class="item-control sub-create" data-target-name="resources" title="Add Resource"><i class="fas fa-plus"></i></a>
+        </div>
+    </li>
+    {{#each system.gear.resources}}
+    <li class="grid grid-10col">
+        <input class="grid-span-5" type="text" name="system.gear.resources.{{@index}}.name" value="{{this.name}}" data-dtype="String">
+        <input class="grid-span-2" type="text" name="system.gear.resources.{{@index}}.value" value="{{this.value}}" data-dtype="String">
+        <input class="grid-span-2" type="text" name="system.gear.resources.{{@index}}.max" value="{{this.max}}" data-dtype="String">
+        <div>
+            <a class="item-control sub-delete" data-target-name="resources" data-remove-target="{{@key}}" title="Remove Resource"><i class="fas fa-trash"></i></a>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+<hr>
+<div class="sheet-body tab">
+    {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+</div>

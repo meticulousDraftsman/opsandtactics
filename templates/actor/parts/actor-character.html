@@ -1,0 +1,110 @@
+<section class="grid grid-4col">
+  <aside class="sidebar">
+    {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+    use both the "grid" and "grid-Ncol" class where "N" can be any number
+    from 1 to 12 and will create that number of columns.  --}}
+    <div class="items-header resource-label flex-group-center">Ability Scores</div>
+    <div class="abilities flexcol">
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.str.value" class="resource-label rollable  " data-roll="3d6+@abilities.str.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.str'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.str"}}</label>
+        <input type="text" name="system.abilities.str.value" value="{{system.abilities.str.value}}" data-dtype="Number"/>
+        <span class=""></span>
+        <input type="text" name="system.abilities.str.mod" value="{{system.abilities.str.mod}}" data-dtype="Number" readonly/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.foc.mod" class="resource-label rollable  " data-roll="3d6+@abilities.foc.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.foc'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.foc"}}</label>
+        <input type="text" name="system.abilities.foc.mod" value="{{system.abilities.foc.mod}}" data-dtype="Number"/>
+        <label for="system.abilities.pow.mod" class="resource-label rollable  " data-roll="3d6+@abilities.pow.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.pow'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.pow"}}</label>
+        <input type="text" name="system.abilities.pow.mod" value="{{system.abilities.pow.mod}}" data-dtype="Number" readonly/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.dex.value" class="resource-label rollable  " data-roll="3d6+@abilities.dex.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.dex'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.dex"}}</label>
+        <input type="text" name="system.abilities.dex.value" value="{{system.abilities.dex.value}}" data-dtype="Number"/>
+        <span class=""></span>
+        <input type="text" name="system.abilities.dex.mod" value="{{system.abilities.dex.mod}}" data-dtype="Number" readonly/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.mrk.mod" class="resource-label rollable  " data-roll="3d6+@abilities.mrk.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.mrk'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.mrk"}}</label>
+        <input type="text" name="system.abilities.mrk.mod" value="{{system.abilities.mrk.mod}}" data-dtype="Number"/>
+        <label for="system.abilities.agi.mod" class="resource-label rollable  " data-roll="3d6+@abilities.agi.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.agi'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.agi"}}</label>
+        <input type="text" name="system.abilities.agi.mod" value="{{system.abilities.agi.mod}}" data-dtype="Number" readonly/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.con.value" class="resource-label rollable  " data-roll="3d6+@abilities.con.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.con'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.con"}}</label>
+        <input type="text" name="system.abilities.con.value" value="{{system.abilities.con.value}}" data-dtype="Number"/>
+        <span class=""></span>
+        <input type="text" name="system.abilities.con.mod" value="{{system.abilities.con.mod}}" data-dtype="Number" readonly/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.int.value" class="resource-label rollable  " data-roll="3d6+@abilities.int.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.int'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.int"}}</label>
+        <input type="text" name="system.abilities.int.value" value="{{system.abilities.int.value}}" data-dtype="Number"/>
+        <span class=""></span>
+        <input type="text" name="system.abilities.int.mod" value="{{system.abilities.int.mod}}" data-dtype="Number" readonly/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.wis.value" class="resource-label rollable  " data-roll="3d6+@abilities.wis.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.wis'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.wis"}}</label>
+        <input type="text" name="system.abilities.wis.value" value="{{system.abilities.wis.value}}" data-dtype="Number"/>
+        <span class=""></span>
+        <input type="text" name="system.abilities.wis.mod" value="{{system.abilities.wis.mod}}" data-dtype="Number" readonly/>
+      </div>
+      <div class="ability flexrow flex-group-center">
+        <label for="system.abilities.cha.value" class="resource-label rollable  " data-roll="3d6+@abilities.cha.mod" data-label="{{localize 'OATS.phrasing.rolling'}} {{localize 'OATS.abilities.cha'}} {{localize 'OATS.phrasing.check'}}">{{localize "OATS.abilityShort.cha"}}</label>
+        <input type="text" name="system.abilities.cha.value" value="{{system.abilities.cha.value}}" data-dtype="Number"/>
+        <span class=""></span>
+        <input type="text" name="system.abilities.cha.mod" value="{{system.abilities.cha.mod}}" data-dtype="Number" readonly/>
+      </div>
+    </div>
+
+    
+    
+    <div class="items-header resource-label flex-group-center">Saving Throws</div>
+    <div class="saves flex-group-center grid grid-4col">
+      {{#each system.saves as |save|}}
+      <a class="resource-label rollable grid-span-2" data-roll="3d6+{{save.value}}" data-label="{{@key}}">{{localize (concat "OATS.saves." @key)}}</a>
+      <input type="text" name="save.value" value="{{save.value}}" data-dtype="Number" readonly/>
+      <span></span>
+      <div>Base</div>
+      <input type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
+      <div>Misc</div>
+      <input type="text" name="system.save.{{@key}}.misc" value="{{save.misc}}" data-dtype="Number"/>
+      {{/each}}
+    </div>
+  </aside>
+
+  {{!-- For the main features list, span the right two columns --}}
+  <section class="main grid-span-3">
+    {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
+    <ol class="items-list flex-group-center">
+      <li class="item items-header resource-label grid grid-12col">
+        <div class="grid-span-3">Skill</div>
+        <div class="">Mod</div>
+        <div class="">{{localize "OATS.skills.ranks"}}</div>
+        <div class="">Abil</div>
+        <div class="">Equip</div>
+        <div class="">Syn</div>
+        <div class="">Occ</div>
+        <div class="">Arm</div>
+        <div class="">Misc</div>
+        <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
+      </li>
+      {{#each skills as |item id|}}
+      <li class="item grid grid-12col">
+          <h4 class="grid-span-3 resource-label rollable" data-roll="3d6+{{item.mods.total}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{localize 'OATS.phrasing.check'}}">{{item.name}}</h4>
+          <input class="" type="text" name="" value="{{item.mods.total}}" data-dtype="Number" readonly/>
+          <div class="">{{item.mods.ranks}}</div>
+          <div class="">{{item.mods.ability}}</div>
+          <div class="">{{item.mods.equip}}</div>
+          <div class="">{{item.mods.syn}}</div>
+          <div class="">{{item.mods.occ}}</div>
+          <div class="">{{../system.armorPenalty}}</div>
+          <div class="">{{item.mods.misc}}</div>
+          <div>
+            <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Skill Item"><i class="fas fa-edit"></i></a>
+          </div>
+          
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+
+</section>

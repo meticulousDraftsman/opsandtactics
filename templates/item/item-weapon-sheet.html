@@ -1,0 +1,246 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+          <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+        </div>
+    </header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">Statistics</a>
+        <a class="item" data-tab="attacks">Attacks</a>
+        <a class="item" data-tab="description">Description</a>
+      </nav>
+
+    <section class="sheet-body">
+        <div class="tab" data-group="primary" data-tab="stats">
+            <ol class="items-list flex-group-center">
+                <li class="item items-header resource-label grid grid-10col">
+                    <div class="grid-span-2">Mag Type</div>
+                    {{#if system.magazine.coolant}}
+                    <div class="grid-span-5">Coolant Pack</div>
+                    <div>Heat</div>
+                    {{else}}
+                    <div class="grid-span-5">Magazine</div>
+                    {{/if}}
+                    <div class="grid-start-9">Range</div>
+                    {{#if item.actor}}
+                    <div>Delete</div>
+                    {{/if}}
+                </li>
+                <li class="grid grid-10col">
+                    <div class="grid-span-2">
+                        <select name="system.magazine.type" data-dtype="String">
+                        {{#select system.magazine.type}}
+                            <option value="internal">Internal</option>
+                            <option value="external">External</option>
+                            <option value="coolant">Coolant</option>
+                        {{/select}}
+                        </select>
+                    </div>
+                    {{#if system.magazine.internal}}
+                    <div class="grid-start-4">
+                        <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number"/>
+                    </div>
+                    <div>/</div>
+                    <div>
+                        <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number"/>
+                    </div>
+                    {{else}}
+                    <div class="grid-span-5">
+                       <select class="drop-wide" name="system.magazine.loaded.source" data-dtype="String">
+                            {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
+                       </select>
+                    </div>
+                    {{/if}}
+                    {{#if system.magazine.coolant}}
+                    <div>
+                        <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number"/>
+                    </div>
+                    {{/if}}
+                    <div class="grid-start-9">
+                        <input name="system.range" value="{{system.range}}" type="text" data-dtype="String"/>
+                    </div>
+                    {{#if item.actor}}
+                    <div>
+                        <a class="item-control self-destruct" self="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                </li>
+            </ol>
+            <ol class="items-list flex-group-center">
+                <li class="item items-header resource-label grid grid-10col">
+                    <div class="grid-span-3">Modifier</div>
+                    <div>To-Hit</div>
+                    <div class="grid-span-3">Damage</div>
+                    <div>Recoil</div>
+                    <div>CP</div>
+                    <div>
+                        <a class="item-control sub-create" data-target-name="weaponMods" title="Add Weapon Modifier"><i class="fas fa-plus"></i></a>
+                    </div>
+                </li>
+                {{#each system.weaponMods}}
+                <li class="grid grid-10col">
+                    <div class="grid-span-3">
+                        <input name="system.weaponMods.{{@index}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
+                    </div>
+                    <div>
+                        <input name="system.weaponMods.{{@index}}.hit" type="text" value="{{this.hit}}" data-dtype="Number"/>
+                    </div>
+                    <div class="grid-span-3">
+                        <input name="system.weaponMods.{{@index}}.damage" type="text" value="{{this.damage}}" data-dtype="String"/>
+                    </div>
+                    <div>
+                        <input name="system.weaponMods.{{@index}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number"/>
+                    </div>
+                    <div>
+                        <input name="system.weaponMods.{{@index}}.cp" type="text" value="{{this.cp}}" data-dtype="Number"/>
+                    </div>
+                    <div>
+                        <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" title="Remove Modifier"><i class="fas fa-trash"></i></a>
+                    </div>
+                    <div class="grid-span-10 flex-group-left">
+                        <input name="system.weaponMods.{{@index}}.description" type="text" value="{{this.description}}" data-dtype="String"/>
+                    </div>
+                </li>
+                {{#if @last}}
+                {{else}}
+                <hr>
+                {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="description">
+            {{> "systems/opsandtactics/templates/item/parts/item-object.html"}}
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="attacks">
+            {{#each system.attacks}}
+            <ol class="items-list flex-group-center">
+                <li class="grid grid-12col">
+                    <div class="grid-span-3">
+                        <input name="system.attacks.{{@index}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
+                    </div>
+                    <div class="grid-span-2">
+                        <input value="Display" type="text" data-dtype="String" readonly>
+                    </div>
+                    <div>
+                        <input name="system.attacks.{{@index}}.display" type="checkbox" {{checked this.display}}/>
+                    </div>
+                    <div class="grid-span-2">
+                        {{#if @root.system.magazine.coolant}}
+                        <input value="Heat" type="text" data-dtype="String" readonly>
+                        {{else}}
+                        <input value="Ammo" type="text" data-dtype="String" readonly>
+                        {{/if}}
+                    </div>
+                    <div class="grid-span-2">
+                        <input name="system.attacks.{{@index}}.ammo" value = "{{this.ammo}}" type="text" data-dtype="Number">
+                    </div>
+                    <div class="grid-start-11 grid-span-2">
+                        {{#if @first}}
+                        <a class="item-control sub-create" data-target-name="attacks" title="Add Attack"><i class="fas fa-plus"></i></a>
+                        {{else}}
+                        <a class="item-control sub-delete" data-target-name="attacks" data-remove-target="{{@key}}" title="Remove Attack"><i class="fas fa-trash"></i></a>
+                        {{/if}}
+                    </div>
+                </li>
+                <li class="item items-header grid grid-12col">
+                    <div class="grid-span-3">
+                        Modifiers
+                    </div>
+
+                    <div class="grid-span-2">
+                        To-Hit
+                    </div>
+                    <div class="grid-span-3">
+                        Damage
+                    </div>
+                    <div class="grid-span-2">
+                        Recoil
+                    </div>
+                    <div class="grid-span-2">
+                        CP
+                    </div>
+                </li>
+                <li class="grid grid-12col">
+                    <div class="grid-span-3">
+                        <input type="text" value="Attack Type" data-dtype="String" readonly/>
+                    </div>
+                    <div class="grid-span-2">
+                        <input name="system.attacks.{{@index}}.inherent.hit" type="text" value="{{this.inherent.hit}}" data-dtype="Number"/>
+                    </div>
+                    <div class="grid-span-3">
+                        <input name="system.attacks.{{@index}}.inherent.damage" type="text" value="{{this.inherent.damage}}" data-dtype="String"/>
+                    </div>
+                    <div class="grid-span-2">
+                        <input name="system.attacks.{{@index}}.inherent.recoil" type="text" value="{{this.inherent.recoil}}" data-dtype="Number"/>
+                    </div>
+                    <div class="grid-span-2">
+                        <input name="system.attacks.{{@index}}.inherent.cp" type="text" value="{{this.inherent.cp}}" data-dtype="Number"/>
+                    </div>
+                </li>
+                <li class="grid grid-12col">
+                    <div class="grid-span-3">
+                        <input type="text" value="Ability Scores" data-dtype="String" readonly/>
+                    </div>
+                    <div class="grid-span-2">
+                        <select name="system.attacks.{{@index}}.abilities.hitAbility" data-dtype="String">
+                            {{#select this.abilities.hitAbility}}
+                              <option value=""></option>
+                              {{selectOptions @root.OATS.abilityShort selected=this.abilities.hitAbility localize=true}}
+                            {{/select}}
+                        </select>
+                    </div>
+                    <div class="grid-span-3">
+                        <select name="system.attacks.{{@index}}.abilities.damageAbility" data-dtype="String">
+                            {{#select this.abilities.damageAbility}}
+                              <option value=""></option>
+                              {{selectOptions @root.OATS.abilityShort selected=this.abilities.damageAbility localize=true}}
+                            {{/select}}
+                        </select>
+                    </div>
+                </li>
+                {{#each this.modSelection}}
+                <li class="grid grid-12col">
+                    <div class="grid-span-3">
+                        <input name="" type="text" value="{{this.name}}" data-dtype="String" readonly/>
+                    </div>
+                    <div class="grid grid-span-2">
+                        <div class="grid-2col">
+                            <input type="text" value="{{this.hit}}" data-dtype="Number" readonly/>
+                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.hitCheck" type="checkbox" {{checked this.hitCheck}}/>
+                        </div>
+                    </div>
+                    <div class="grid-span-3">
+                        <div class="grid grid-2col">
+                            <input type="text" value="{{this.damage}}" data-dtype="String" readonly/>
+                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.damageCheck" type="checkbox" {{checked this.damageCheck}}/>
+                        </div>
+                    </div>
+                    <div class="grid-span-2">
+                        <div class="grid grid-2col">
+                            <input type="text" value="{{this.recoil}}" data-dtype="Number" readonly/>
+                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.recoilCheck" type="checkbox" {{checked this.recoilCheck}}/>
+                        </div>
+                    </div>
+                    <div class="grid-span-2">
+                        <div class="grid grid-2col">
+                            <input type="text" value="{{this.cp}}" data-dtype="Number" readonly/>
+                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.cpCheck" type="checkbox" {{checked this.cpCheck}}/>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+                <li class="grid">
+                    <div class="flex-group-left grid-span-2">
+                        <input name="system.attacks.{{@index}}.description" type="text" value="{{this.description}}" data-dtype="String"/>
+                    </div>
+                </li>
+            </ol>
+            <hr>
+            {{/each}}
+        </div>
+    </section>
+</form>

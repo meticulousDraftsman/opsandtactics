@@ -1,0 +1,59 @@
+<ol class="items-list flex-group-center">
+    <li class="item grid grid-10col items-header resource-label">
+        <div class="grid-span-2">Weapon</div>
+        <div class="grid-start-9">Ammo</div>
+        <a class="grid-start-10 item-control item-create" title="Create Weapon" data-type="weapon"><i class="fas fa-plus"></i></a>
+    </li>
+    {{#each weapons as |item id|}}
+    <li class="item grid grid-10col items-header">
+        <div class="grid-span-2">
+            {{item.name}}
+        </div>
+        <div class="grid-span-2">Attacks <i class="fas fa-dice-d6"></i></div>
+        <div>To-Hit</div>
+        <div class="grid-span-2">Damage <i class="fas fa-dice-d6"></i></div>
+        <div>CP</div>
+        {{#if item.system.magazine.internal}}
+        <div>
+            <div class="flexrow">
+                <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item._id}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
+                <div class="flex0">/</div>
+                <input type="text" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
+            </div>
+        </div>
+        {{/if}}
+        {{#if item.system.magazine.external}}
+        <div>
+            <div class="flexrow">
+                <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
+                <div class="flex0">/</div>
+                <input type="text" value="{{item.system.magazine.loaded.max}}" data-dtype="Number" readonly/>
+            </div>
+        </div>
+        {{/if}}
+        {{#if item.system.magazine.coolant}}
+        <div>
+            <div class="flexrow">
+                <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
+                <div class="flex0">/</div>
+                <input type="text" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
+            </div>
+        </div>
+        {{/if}}
+        <div class="grid-start-10 ">
+            <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+        </div>
+    </li>
+    {{#each item.system.attacks}}
+    {{#if this.display}}
+    <li class="item grid grid-10col">
+        <a class="3d6-roll grid-start-3 grid-span-2" data-roll-type="attack" data-type="weaponattack" data-weapon="{{../_id}}" data-mag-type="{{../system.magazine.type}}" data-ammo="{{this.ammo}}" data-parts="{{this.totals.mod}}" data-title="{{item.name}} {{this.name}} attack roll" data-flavor="{{this.description}}">{{this.name}}</a>
+        <input class="" type="text"value="{{this.totals.mod}}" data-dtype="Number" readonly/>
+        <div class="rollable grid-span-2" data-roll="{{this.totals.damage}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{this.name}} damage!">{{this.totals.damage}}</div>
+        <div>{{this.totals.cp}}</div>
+        <div>{{this.ammo}}</div>
+    </li>
+    {{/if}}
+    {{/each}}
+    {{/each}}
+</ol>

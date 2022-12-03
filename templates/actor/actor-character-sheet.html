@@ -1,0 +1,141 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <div class="flexrow">
+      <div class="profile-img flex-group-center">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        <label for="system.level.value" class="">Level {{system.level.value}}</label>
+        <label for="system.level.xp.value" class="">{{system.level.xp.value}}/{{system.level.xp.need}}xp</label>
+      </div>
+      <div class="header-fields">
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+        {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+        use both the "grid" and "grid-Ncol" class where "N" can be any number
+        from 1 to 12 and will create that number of columns.  --}}
+        <div class="resource resource-label flex-group-center grid grid-8col">
+          <div class="grid-span-2">Extended HP</div>
+          <div>Temp HP</div>
+          <div class="grid-span-2">Combat Points</div>
+          <div>Temp CP</div>
+          <div>CP Loss</div>
+          <div>Defense</div>
+        </div>
+        <div class="resource flex-group-center grid grid-8col">
+          <div class="grid-span-2 flexrow">
+            <input type="text" name="system.health.xhp.value" value="{{system.health.xhp.value}}" data-dtype="Number"/>
+            <span class="flex0">/</span>
+            <input type="text" name="system.health.xhp.max" value="{{system.health.xhp.max}}" data-dtype="Number" readonly/>
+          </div>
+          <div>
+            <input type="text" name="system.health.temp" value="{{system.health.temp}}" data-dtype="Number"/>
+          </div>
+          <div class="grid-span-2 flexrow">
+            <input type="text" name="system.cp.value" value="{{system.cp.value}}" data-dtype="Number"/>
+            <span class="flex0">/</span>
+            <input type="text" name="system.cp.max" value="{{system.cp.max}}" data-dtype="Number"/>
+          </div>
+          <div>
+            <input type="text" name="system.cp.temp" value="{{system.cp.temp}}" data-dtype="Number"/>
+          </div>
+          <div>
+            <input type="text" value="{{system.cp.armor.total}}" data-dtype="Number" readonly/>
+          </div>
+          <div>
+            <input type="text" value="{{system.def.value}}" data-dtype="Number" readonly/>
+          </div>
+        </div>
+        <div class="resource resource-label flex-group-center grid grid-8col">
+          <div class="grid-span-2">Core Hit Points</div>
+          <div>Initiative</div>
+          <div class="grid-span-2">Mental Limit</div>
+          <div>Temp ML</div>
+          <div>Flatfooted</div>
+          <div>Touch</div>
+        </div>
+        <div class="resource flex-group-center grid grid-8col">
+          <div class="grid-span-2 flexrow">
+            <input type="text" name="system.health.chp.value" value="{{system.health.chp.value}}" data-dtype="Number"/>
+            <span class="flex0">/</span>
+            <input type="text" name="system.health.chp.max" value="{{system.health.chp.max}}" data-dtype="Number" readonly/>
+          </div>
+          <div>
+            <input type="text" value="{{system.init.value}}" data-dtype="Number" readonly/>
+          </div>
+          <div class="grid-span-2 flexrow">
+            <input type="text"value="{{system.ml.value}}" data-dtype="Number" readonly/>
+            <span class="flex0">/</span>
+            <input type="text" name="system.ml.max" value="{{system.ml.max}}" data-dtype="Number" readonly/>
+          </div>
+          <div>
+            <input type="text" value="{{system.ml.temp}}" data-dtype="Number"/>
+          </div>
+          <div>
+            <input type="text" value="{{system.def.flat}}" data-dtype="Number" readonly/>
+          </div>
+          <div>
+            <input type="text" value="{{system.def.touch}}" data-dtype="Number" readonly/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="character">Character</a>
+    <a class="item" data-tab="traits">Traits</a>
+    <a class="item" data-tab="offense">Offense</a>
+    <a class="item" data-tab="defense">Defense</a>
+    <a class="item" data-tab="gear">Gear</a>
+    <a class="item" data-tab="magic">Magic</a>
+    <a class="item" data-tab="biography">Biography</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Character Tab --}}
+    <div class="tab character" data-group="primary" data-tab="character">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-character.html"}}
+    </div>
+
+    {{!-- Traits Tab --}}
+    <div class="tab traits" data-group="primary" data-tab="traits">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-traits.html"}}
+    </div>
+
+    {{!-- Combat Tabs --}}
+    <div class="tab offense" data-group="primary" data-tab="offense">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-offense.html"}}
+    </div>
+
+    <div class="tab defense" data-group="primary" data-tab="defense">
+        {{> "systems/opsandtactics/templates/actor/parts/actor-defense.html"}}
+    </div>
+
+    {{!-- Gear Tab --}}
+    <div class="tab gear" data-group="primary" data-tab="gear">
+       {{> "systems/opsandtactics/templates/actor/parts/actor-items.html"}}
+    </div>
+
+    {{!-- Magic Tab --}}
+    <div class="tab magic" data-group="primary" data-tab="magic">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-magic.html"}}
+    </div>
+
+    {{!-- Biography Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="biography">
+          {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+          {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+        </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-effects.html"}}
+    </div>
+
+  </section>
+</form>
+

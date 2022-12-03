@@ -1,0 +1,118 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    <ol class="items-list flex-group-center">
+      
+      <li class="grid grid-10col">
+        <div class="grid-span-4">
+          <input name="" type="text" value="Ranks" data-dtype="String" readonly/>
+        </div>
+        <div class="grid-span-3">
+          <select name="system.focus" data-dtype="String">
+            {{#select system.focus}}
+            <option value="unfocus">{{localize "OATS.skills.unfocus"}}</option>
+            <option value="focus">{{localize "OATS.skills.focus"}}</option>
+            <option value="double">{{localize "OATS.skills.double"}}</option>
+            {{/select}}
+          </select>
+        </div>
+        <div>
+          <input name="system.ranks" type="text" value="{{system.ranks}}" data-dtype="Number"/>
+        </div>
+        {{#if item.actor}}
+        <div class="grid-start-10 items-header">Delete</div>
+         
+        {{/if}}
+      </li>
+      <li class="grid grid-10col">
+        <div class="grid-span-4">
+          <input name="" type="text" value="Ability Modifier" data-dtype="String" readonly/>
+        </div>
+        <div class="grid-span-3">
+          <select name="system.ability" data-dtype="String">
+            {{#select system.ability}}
+              <option value=""></option>
+              {{#each OATS.abilities as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+              {{/each}}
+            {{/select}}
+          </select>
+        </div>
+        <div>
+          <input name="" type="text" value="{{system.abilityMod}}" data-dtype="Number" readonly/>
+        </div>
+        {{#if item.actor}}
+        <div class="grid-start-10">
+           <a class="item-control self-destruct" self="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+        {{/if}}
+      </li>
+      <li class="grid grid-10col">
+        <div class="grid-span-4">
+          <input name="" type="text" value="Armor Penalty" data-dtype="String" readonly/>
+        </div>
+        <div class="grid-start-8">
+          <input name="" type="text" value="{{system.armorPenalty}}" data-dtype="Number" readonly/>
+        </div>
+        <div>
+          <input name="system.armor" type="checkbox" {{checked system.armor}}/>
+        </div>
+      </li>
+      <li class="item grid grid-10col items-header resource-label">
+        <div class="grid-span-4">
+          Modifier
+        </div>
+        <div class="grid-span-3">
+          Type
+        </div>
+        <div>
+          Value
+        </div>
+        <div>
+          Active
+        </div>
+        <div>
+          <a class="item-control sub-create" data-target-name="skillMods" title="Add Modifier"><i class="fas fa-plus"></i></a>
+        </div>
+      </li>
+      {{#each system.skillMods}}
+      <li class="grid grid-10col">
+        <div class="grid-span-4">
+          <input name="system.skillMods.{{@index}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
+        </div>
+        <div class="grid-span-3">
+          <select name="system.skillMods.{{@index}}.type" data-dtype="String">
+            {{#select this.type}}
+              <option value="misc">Miscellaneous</option>
+              <option value="equip">Equipment</option>
+              <option value="occ">Occupation</option>
+              <option value="syn">Synergy</option>
+            {{/select}}
+          </select>
+        </div>
+        <div>
+          <input name="system.skillMods.{{@index}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
+        </div>
+        <div>
+          <input name="system.skillMods.{{@index}}.active" type="checkbox" {{checked this.active}}/>
+        </div>
+        <div>
+          <a class="item-control sub-delete" data-target-name="skillMods" data-remove-target="{{@key}}" title="Remove Modifier"><i class="fas fa-trash"></i></a>
+        </div>
+      </li>
+      {{/each}}
+    </ol>
+    <hr>
+    <div class="sheet-body tab">
+      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+  </section>
+  
+</form>

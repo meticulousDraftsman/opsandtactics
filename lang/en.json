@@ -1,0 +1,70 @@
+{
+    "OATS":{
+        "abilities":{
+            "str": "Strength",
+            "foc": "Focus",
+            "pow": "Power",
+            "dex": "Dexterity",
+            "mrk": "Marksmanship",
+            "agi": "Agility",
+            "con": "Constitution",
+            "int": "Intelligence",
+            "wis": "Wisdom",
+            "cha": "Charisma"
+        },
+        "abilityShort":{
+            "str": "Str",
+            "foc": "Foc",
+            "pow": "Pow",
+            "dex": "Dex",
+            "mrk": "Mrk",
+            "agi": "Agi",
+            "con": "Con",
+            "int": "Int",
+            "wis": "Wis",
+            "cha": "Cha"
+        },
+        "saves":{
+            "fortitude":"Fortitude",
+            "reflex":"Reflex",
+            "will":"Will"
+        },
+        "labels":{
+            "fortitude": "Fortitude",
+            "reflex": "Reflex",
+            "will": "Will",
+            "base": "Base",
+            "misc": "Misc",
+            "extendedHP": "Extended HP",
+            "coreHP": "Core HP",
+            "tempHP": "Temp HP",
+            "bleed": "Bleed",
+            "initiative": "Initiative",
+            "combatPoints": "Combat Points",
+            "armor": "Armor",
+            "tempCP": "Temp CP",
+            "defense": "Defense",
+            "movement": "Movement",
+            "flat": "Flat",
+            "touch": "Touch",
+            "level": "Level",
+            "character": "Character",
+            "ability": "Ability"
+        },
+        "skills":{
+            "ranks": "Ranks",
+            "equipment": "Equipment",
+            "synergy": "Synergy",
+            "occupation": "Occupation",
+            "focus": "Focused",
+            "unfocus": "Unfocused",
+            "double": "Double-Focused"
+        },
+        "phrasing":{
+            "rolling": "Rolling a",
+            "check": "check!",
+            "save": "saving throw!",
+            "bleed": "Bleeding out..."
+        }
+    }
+}

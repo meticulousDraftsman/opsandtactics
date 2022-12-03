@@ -1,0 +1,102 @@
+<ol class="items-list flex-group-center">
+    <li class="item items-header resource-label grid grid-10col">
+        <div class="grid-span-3">
+            <div class="grid grid-5col">
+                <div class="grid-span-4">Core HP Formula</div>
+                <div>Misc</div>
+            </div>
+        </div>
+        <div class="grid-span-3">
+            <div class="grid grid-5col">
+                <div class="grid-span-4">Extended HP Formula</div>
+                <div>Misc</div>
+            </div>
+        </div>
+        <div class="grid-span-4">
+            <div class="grid grid-7col">
+                <div class="grid-span-5">Mental Limit Formula</div>
+                <div>Misc</div>
+                <div>Augs</div>
+            </div>
+        </div>
+    </li>
+    <li class="item grid grid-10col">
+        <div class="grid-span-3">
+            <div class="grid grid-10col">
+                <div class="grid-span-8">
+                    <input type="text" name="system.health.chp.formula" value="{{system.health.chp.formula}}" data-dtype="String">
+                </div>
+                <div class="grid-span-2">
+                    <input type="text" name="system.health.chp.misc" value="{{system.health.chp.misc}}" data-dtype="String">
+                </div>
+            </div>
+        </div>
+        <div class="grid-span-3">
+            <div class="grid grid-10col">
+                <div class="grid-span-8">
+                    <input type="text" name="system.health.xhp.formula" value="{{system.health.xhp.formula}}" data-dtype="String">
+                </div>
+                <div class="grid-span-2">
+                    <input type="text" name="system.health.xhp.misc" value="{{system.health.xhp.misc}}" data-dtype="String">
+                </div>
+            </div>
+        </div>
+        <div class="grid-span-4">
+            <div class="grid grid-7col">
+                <div class="grid-span-5">
+                    <input type="text" name="system.ml.formula" value="{{system.ml.formula}}" data-dtype="String">
+                </div>
+                <div>
+                    <input type="text" name="system.ml.misc" value="{{system.ml.misc}}" data-dtype="String">
+                </div>
+                <div>
+                    <input type="text" name="system.ml.aug" value="{{system.ml.aug}}" data-dtype="String">
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="item items-header resource-label grid grid-10col">
+        <div>Init Misc</div>
+        <div>XP</div>
+        <div>Level</div>
+        <div class="grid-span-2">Base Attack Bonus</div>
+        <div class="grid-span-2">Race</div>
+        <div>Size</div>
+        <div class="grid-span-2">Recoil Reduction</div>
+    </li>
+    <li class="item grid grid-10col">
+        <input type="text" name="system.init.misc" value="{{system.init.misc}}" data-dtype="Number">
+        <input type="text" name="system.level.xp.value" value="{{system.level.xp.value}}" data-dtype="Number">
+        <input type="text" name="system.level.value" value="{{system.level.value}}" data-dtype="Number">
+        <input type="text" name="system.bab.value" value="{{system.bab.value}}" data-dtype="Number" readonly>
+        <input type="text" name="system.bab.misc" value="{{system.bab.misc}}" data-dtype="Number">
+        <input class="grid-span-2" type="text" name="system.race" value="{{system.race}}" data-dtype="String">
+        <input type="text" name="system.size" value="{{system.size}}" data-dtype="String">
+        <input type="text" name="system.recoil.value" value="{{system.recoil.value}}" data-dtype="Number" readonly>
+        <input type="text" name="system.recoil.misc" value="{{system.recoil.misc}}" data-dtype="Number">
+    </li>
+    <li class="item items-header resource-label grid grid-10col">
+        <div class="grid-span-3">Traits</div>
+        <div class="grid-span-5">Description</div>
+        <div class="item-controls grid-span-2">
+            <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
+        </div>
+    </li>
+    {{#each traits as |item id|}}
+    <li class="item grid grid-10col" data-item-id="{{item._id}}">
+        <div class="item-name grid-span-3">
+            <div class="item-image">
+              <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
+            </div>
+            {{item.name}}
+        </div>
+        <span class="grid-span-5">
+            {{item.system.summary}}
+        </span>
+        <div class="item-controls grid-span-2">
+            <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Trait"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Trait"><i class="fas fa-trash"></i></a>
+        </div>
+    </li>
+    {{/each}}
+</ol>

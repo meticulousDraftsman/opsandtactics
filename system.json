@@ -1,0 +1,36 @@
+{
+    "id": "opsandtactics",
+    "title": "Ops and Tactics",
+    "description": "A FoundryVTT implementation of O&T",
+    "version": "0.0.0",
+    "compatibility": {
+        "minimum": 10,
+        "verified": "10.288",
+        "maximum": 10
+    },
+    "authors": [{
+        "name": "Conscript Gary"
+    }],
+    "esmodules":["module/opsandtactics.mjs"],
+    "styles":["css/opsandtactics.css"],
+    "scripts":[],
+    "packs":[],
+
+    "languages":[
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "health.xhp",
+    "secondaryTokenAttribute": "health.chp",
+    "url": "",
+    "manifest": "",
+    "download": "",
+    "license": "",
+    "changelog": ""
+}

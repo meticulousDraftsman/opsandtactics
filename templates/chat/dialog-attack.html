@@ -1,0 +1,99 @@
+<form>
+    <ol class="items-list flex-group-center">
+        <li class="grid grid-3col">
+            <input class="grid-span-2" type="text" name="sitBon" placeholder="Situational Modifier">
+            <input type="text" name="ammo" placeholder="Custom Ammo Amount">
+        </li>
+        <hr>
+        <li class="grid grid-3col">
+            <div>
+                <select name="atkType">
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                    <option value="message">None</option>
+                </select>
+            </div>
+            <div>
+                <div class="grid grid-5col">
+                    <label class="grid-span-4" for="atk-high">High Ground</label>
+                    <input type="checkbox" id="atk-high" name="atkHigh" value="false"/>
+                </div>
+            </div>
+            <div>
+                <div class="grid grid-5col">
+                    <label class="grid-span-4" for="atk-unseen">Attacker Unseen</label>
+                    <input  type="checkbox" id="atk-unseen" name="atkSeen" value="false"/>
+                </div>
+            </div>
+        </li>
+        <hr>
+        <li class="grid grid-3col">
+            <div>
+                <select name="atkFlank">
+                    <option value="0">Attacking from Front</option>
+                    <option value="2">Attacking from Flank</option>
+                    <option value="4">Attacking from Rear</option>
+                </select>
+            </div>
+            <div>
+                <select name="atkStance">
+                    <option value="0">Attacker Standing</option>
+                    <option value="2">Attacker Kneeling</option>
+                    <option value="4">Attacker Prone</option>
+                </select>
+            </div>
+            <div>
+                <select name="atkFace">
+                    <option value="0">Attacking into Front</option>
+                    <option value="5">Attacking into Flank</option>
+                    <option value="10">Attacking into Rear</option>
+                </select>
+            </div>
+        </li>
+        <hr>
+        <li class="grid grid-2col">
+            <div>
+                <select name="defStance">
+                    <option value="0">Defender Standing</option>
+                    <option value="2">Defender Kneeling</option>
+                    <option value="4">Defender Prone</option>
+                </select>
+            </div>
+            <div>
+                <select name="defCover">
+                    <option value="cov0">Defender has no Cover</option>
+                    <option value="cov1">Defender has 1/4 Cover</option>
+                    <option value="cov2">Defender has 1/2 Cover</option>
+                    <option value="cov3">Defender has 3/4 Cover</option>
+                    <option value="cov4">Defender has 9/10 Cover</option>
+                    <option value="10">Defender has 1/4 Concealment</option>
+                    <option value="20">Defender has 1/2 Concealment</option>
+                    <option value="30">Defender has 3/4 Concealment</option>
+                    <option value="40">Defender has 9/10 Concealment</option>
+                    <option value="50">Defender has Total Concealment</option>
+                </select>
+            </div>
+        </li>
+        <hr>
+        <li class="grid grid-3col">
+            <div>
+                <div class="grid grid-5col">
+                    <label class="grid-span-4" for="def-stun">Defender Stunned</label>
+                    <input  type="checkbox" id="def-stun" name="defStun" value="false"/>
+                </div>
+            </div>
+            <div>
+                <div class="grid grid-5col">
+                    <label class="grid-span-4" for="def-climb">Defender Climbing</label>
+                    <input  type="checkbox" id="def-climb" name="defClimb" value="false"/>
+                </div>
+            </div>
+            <div>
+                <div class="grid grid-5col">
+                    <label class="grid-span-4" for="def-pin">Defender Pinned</label>
+                    <input  type="checkbox" id="def-pin" name="defPin" value="false"/>
+                </div>
+            </div>
+        </li>
+    </ol>
+</form>

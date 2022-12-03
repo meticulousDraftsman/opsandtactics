@@ -1,0 +1,80 @@
+<ol class="items-list flex-group-center">
+    <li class="item items-header resource-label grid grid-4col">
+        <div>Psionic Focus</div>
+        <div>Incantation ML</div>
+        <div>Recipe Sets</div>
+        <div>Total ML Used</div>
+    </li>
+    <li class="grid grid-8col">
+        <div class="flexrow grid-span-2">
+            <input type="text" value="{{system.magic.psion}}" readonly>
+            <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
+        </div>
+        <div class="flexrow grid-span-2">
+            <input type="text" name="system.magic.incant" value="{{system.magic.incant}}" data-dtype="Number">
+            <a class="mental-limit" data-ml-cost="-{{system.ml.max}}"><i class="fas fa-recycle"></i></a>
+        </div>
+        <input type="text" value="{{system.magic.recipe}}" readonly>
+        <input type="text" name="system.magic.memorized" value="{{system.magic.memorized}}" data-dtype="Number">
+        <input class="grid-span-2" type="text" value="{{system.ml.value}}" readonly>
+    </li>
+    <li class="item items-header resource-label grid grid-12col">
+        <div class="grid-span-4">Magic</div>
+        <div class="grid-span-2">Action</div>
+        <div class="grid-span-2">Effect</div>
+        <div>CP</div>
+        <div>ML</div>
+        <div>Uses</div>
+        <div class="align-center">
+            <a class="item-control item-create" title="Create Magic" data-type="magic"><i class="fas fa-plus"></i></a>
+        </div>        
+    </li>
+    {{#each magic as |item id|}}
+    <li class="grid grid-12col">
+        <div class="flexrow grid-span-4">
+            {{#if item.system.active}}
+            <h4 class="">{{item.name}}</h4>
+            {{else}}
+            <i class="">{{item.name}}</i>
+            {{/if}}
+            <input class="item-checkbox" data-target-prop="system.active" data-target-id="{{item._id}}" data-value="{{item.system.active}}" {{checked item.system.active}} type="checkbox"/>
+        </div>
+        <div class="flexrow grid-span-2">
+            <input type="text" value="{{item.system.action.mods}}" data-dtype="String" readonly>
+            {{#if item.system.flags.passive}}
+            <a class="3d6-roll" data-roll-type="{{item.system.action.type}}" data-type="magicuse" data-weapon="{{item._id}}" data-mag-type="{{item.system.uses.type}}" data-ammo="1" data-parts="{{item.system.action.mods}}" data-title="{{item.name}} Action" data-flavor="{{item.system.action.flavor}}"><i class="fas fa-dice-d6"></i></a>
+            {{else}}
+            <a class="3d6-roll mental-limit" data-ml-cost="{{item.system.mlCost.value}}" data-roll-type="{{item.system.action.type}}" data-type="magicuse" data-weapon="{{item._id}}" data-mag-type="{{item.system.uses.type}}" data-ammo="1" data-parts="{{item.system.action.mods}}" data-title="{{item.name}} Action" data-flavor="{{item.system.action.flavor}}"><i class="fas fa-dice-d6"></i></a>
+            {{/if}}
+        </div>
+        <div class="flexrow grid-span-2">
+            <input type="text" value="{{item.system.effect.mods}}" data-dtype="String" readonly>
+            <a class="3d6-roll" data-roll-type="{{item.system.effect.type}}" data-type="magiceffect" data-weapon="{{item._id}}" data-ammo="0" data-parts="{{item.system.effect.mods}}" data-title="{{item.name}} Effect" data-flavor="{{item.system.effect.flavor}}"><i class="fas fa-dice-d6"></i></a>
+        </div>
+        <div>{{item.system.cp}}</div>
+        {{#if item.system.mlCost}}
+        <div>{{item.system.mlCost.value}}</div>
+        {{else}}
+        <div></div>
+        {{/if}}
+        {{#if item.system.flags.limited}}
+        <div class="flexrow">
+            {{#if item.system.flags.shared}}
+            <input type="text" class="item-input" data-target-prop="system.uses.value" data-target-id="{{item.system.uses.shared.source}}" value="{{item.system.uses.shared.value}}" data-dtype="Number">
+            <span class="flex0">/</span>
+            <input type="text" value="{{item.system.uses.shared.max}}" data-dtype="Number" readonly>
+            {{else}}
+            <input type="text" class="item-input" data-target-prop="system.uses.value" data-target-id="{{item._id}}" value="{{item.system.uses.value}}" data-dtype="Number">
+            <span class="flex0">/</span>
+            <input type="text" value="{{item.system.uses.max}}" readonly>
+            {{/if}}
+        </div>
+        {{else}}
+        <div></div>
+        {{/if}}
+        <div class="align-center">
+          <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+        </div>
+    </li>
+    {{/each}}
+</ol>
