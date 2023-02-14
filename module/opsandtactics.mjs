@@ -156,10 +156,12 @@ function rollItemMacro(itemUuid) {
 
 Hooks.on("canvasInit", gameCanvas => {
   SquareGrid.prototype.measureDistances = measureDistances;
+  //MeasuredTemplate.prototype.
 });
 
 function measureDistances(segments, options={}) {
   if ( !options.gridSpaces ) return BaseGrid.prototype.measureDistances.call(this, segments, options);
+  //console.debug(segments, options)
 
   // Track the total number of diagonals
   let nDiagonal = 0;

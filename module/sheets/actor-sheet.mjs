@@ -27,11 +27,13 @@ export class OpsActorSheet extends ActorSheet {
 
   /** @override */
   getData() {
+    console.debug('actor-sheet getData')
     // Retrieve the data structure from the base sheet. You can inspect or log
     // the context variable to see the structure, but some key properties for
     // sheets are the actor object, the data object, whether or not it's
     // editable, the items array, and the effects array.
     const context = super.getData();
+    console.debug('actor-sheet super.getData',context)
     const actorData = context.actor;
 
     // Add the actor's data to context.data for easier access, as well as flags.
@@ -70,6 +72,7 @@ export class OpsActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     const systemData = context.system;
+
     // Tally armor impacts
     systemData.def.equip.total = systemData.def.equip.misc;
     systemData.armorPenalty = 0;
@@ -90,10 +93,11 @@ export class OpsActorSheet extends ActorSheet {
       }
     }
     if (agiClamp) systemData.agiMax = Math.min(...maxAgis);
+
     // Tally skill modifiers
     for (let i of context.skills){
       i.mods = {total:0,ranks:i.system.ranks,ability:0,equip:0,syn:0,occ:0,armor:0,misc:0};
-      if (i.system.ability){
+      if (i.system.ability!=''){
         i.mods.ability = context.system.abilities[i.system.ability].mod;
       }
       if (i.system.focus == 'double') {
@@ -208,6 +212,7 @@ export class OpsActorSheet extends ActorSheet {
           i.system.magazine.internal = false;
           i.system.magazine.external = false;
           i.system.magazine.coolant = false;
+          i.system.magazine.none = false;
           i.system.magazine[i.system.magazine.type] = true;
           if(i.system.magazine.external || i.system.magazine.coolant){
             if(i.system.magazine.loaded.source){
@@ -275,13 +280,23 @@ export class OpsActorSheet extends ActorSheet {
           }         
           
         }
-        i.system.action.mods = "";
-        i.system.effect.mods = "";
+        if(i.system.action.type=='attack'){
+          i.system.action.mods = `${context.system.bab.value}`
+        }
+        else{
+          i.system.action.mods = "";
+        }
+        if(i.system.effect.type=='attack'){
+          i.system.effect.mods = `${context.system.bab.value}`
+        }
+        else{
+          i.system.effect.mods = "";
+        }
         if(i.system.action.ability!=""){
-          i.system.action.mods = context.system.abilities[i.system.action.ability].mod;
+          i.system.action.mods += '+' + context.system.abilities[i.system.action.ability].mod;
         }
         if(i.system.effect.ability!=""){
-          i.system.effect.mods = context.system.abilities[i.system.effect.ability].mod;
+          i.system.effect.mods += '+' + context.system.abilities[i.system.effect.ability].mod;
         }
         if(i.system.action.misc!=""){
           i.system.action.mods += '+' + i.system.action.misc;

@@ -7,18 +7,22 @@ export class OpsItem extends Item {
    * Augment the basic Item data model with additional dynamic data.
    */
   prepareData() {
+    
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
+    //console.debug('item prepareData',this)
   }
 
   prepareDerivedData(){
+    
     const itemData = this;
     const systemData = itemData.system;
     if (itemData.type === 'skill') this._prepareSkillData(itemData);
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'magazine') this._prepareMagazineData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
+    //console.debug('item prepareDerivedData',this)
   }
 
   _prepareSkillData(itemData){

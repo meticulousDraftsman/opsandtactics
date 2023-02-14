@@ -1,4 +1,5 @@
 import { Attack, Protection, SelectMod, SkillMod, WeaponMod } from "../schema/item-schema.mjs";
+import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -31,8 +32,11 @@ export class OpsItemSheet extends ItemSheet {
 
   /** @override */
   getData() {
+    console.debug('item-sheet getData')
     // Retrieve base data structure.
     const context = super.getData();
+    console.debug('item-sheet super.getData',context)
+    
 
     // Include config in context
     context.OATS = CONFIG.OATS;
@@ -46,6 +50,8 @@ export class OpsItemSheet extends ItemSheet {
     if (actor) {
       context.rollData = actor.getRollData();
     }
+
+    context.effects = prepareActiveEffectCategories(this.item.effects);
     
     //let abilityMod = 0;
     //if (actor) {
@@ -136,6 +142,8 @@ export class OpsItemSheet extends ItemSheet {
     });
     html.find('.sub-create').click(this._subCreation.bind(this));
     html.find('.sub-delete').click(this._subDeletion.bind(this));
+    // Active Effect management
+    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
   }
   _subCreation(event){
     event.preventDefault();

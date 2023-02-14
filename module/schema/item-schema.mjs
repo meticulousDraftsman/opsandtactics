@@ -46,7 +46,7 @@ export class SkillMod extends foundry.abstract.DataModel{
             active: new field.BooleanField({initial:true})
         }
     }
-}
+};
 export class OpsArmor extends foundry.abstract.DataModel{
     static defineSchema(){
         return{

@@ -35,23 +35,27 @@
                             <option value="internal">Internal</option>
                             <option value="external">External</option>
                             <option value="coolant">Coolant</option>
+                            <option value="none">None</option>
                         {{/select}}
                         </select>
                     </div>
-                    {{#if system.magazine.internal}}
-                    <div class="grid-start-4">
-                        <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number"/>
-                    </div>
-                    <div>/</div>
-                    <div>
-                        <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number"/>
-                    </div>
+                    {{#if system.magazine.none}}
                     {{else}}
-                    <div class="grid-span-5">
-                       <select class="drop-wide" name="system.magazine.loaded.source" data-dtype="String">
-                            {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
-                       </select>
-                    </div>
+                        {{#if system.magazine.internal}}
+                        <div class="grid-start-4">
+                            <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number"/>
+                        </div>
+                        <div>/</div>
+                        <div>
+                            <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number"/>
+                        </div>
+                        {{else}}
+                        <div class="grid-span-5">
+                        <select class="drop-wide" name="system.magazine.loaded.source" data-dtype="String">
+                                {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
+                        </select>
+                        </div>
+                        {{/if}}
                     {{/if}}
                     {{#if system.magazine.coolant}}
                     <div>

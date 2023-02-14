@@ -8,17 +8,21 @@ export class OpsActor extends Actor {
 
   /** @override */
   prepareData() {
+    
     // Prepare data for the actor. Calling the super version of this executes
     // the following, in order: data reset (to clear active effects),
     // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
     // prepareDerivedData().
     super.prepareData();
+    console.debug('actor prepareData',this)
   }
 
   /** @override */
   prepareBaseData() {
+    console.debug('actor prepareBaseData',this)
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
+    this._prepareCharacterBase(this);
   }
 
   /**
@@ -31,17 +35,23 @@ export class OpsActor extends Actor {
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
+    
     const flags = this.flags.opsandtactics || {};
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(this);
     this._prepareNpcData(this);
+    console.debug('actor prepareDerivedData',this)
   }
 
   /**
    * Prepare Character type specific data
    */
+  _prepareCharacterBase(actorBase){
+    if (actorBase.type !== 'character') return;
+    const systemBase = actorBase.system;
+  }
   _prepareCharacterData(actorData) {
     if (actorData.type !== 'character') return;
 
@@ -63,14 +73,15 @@ export class OpsActor extends Actor {
     // Calculate BAB
     systemData.bab.value = systemData.level.value + systemData.bab.misc;
     // Calculate Recoil Reduction
-    systemData.recoil.value = systemData.abilities.str.value - 10 + systemData.recoil.misc;
+    systemData.recoil.value = systemData.abilities.str.value - 10 + this.modSum(systemData.recoil);
     // Calculate Personal Capital    
     systemData.wealth.capital.personal.total = (5*(systemData.level.value+1))+systemData.abilities.cha.value;
     // Calculate Hit Points and Mental Limit
+    systemData.health.chp.max = systemData.abilities.con.value + this.modSum(systemData.health.chp.factors)
     const rollData = this.getRollData();
-    const chpFormula = `${systemData.health.chp.formula}+${systemData.health.chp.misc}`;
-    const chpRoll = new Roll(chpFormula,rollData).evaluate({async:false});
-    systemData.health.chp.max = chpRoll.total;
+    //const chpFormula = `${systemData.health.chp.formula}+${systemData.health.chp.misc}`;
+    //const chpRoll = new Roll(chpFormula,rollData).evaluate({async:false});
+    //systemData.health.chp.max = chpRoll.total;
     const xhpFormula = `${systemData.health.xhp.formula}+${systemData.health.xhp.misc}`;
     const xhpRoll = new Roll(xhpFormula,rollData).evaluate({async:false});
     systemData.health.xhp.max = xhpRoll.total;
@@ -94,6 +105,13 @@ export class OpsActor extends Actor {
     // Make modifications to data here. For example:
     const systemData = actorData.system;
     //systemData.xp = (systemData.cr * systemData.cr) * 100;
+  }
+
+  /**
+   * Sum the values inside an object
+   */
+  modSum(obj){
+    return Object.values(obj).reduce((a,b)=>a+b,0);
   }
 
   /**

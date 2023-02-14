@@ -40,7 +40,11 @@
             <input class="item-checkbox" data-target-prop="system.active" data-target-id="{{item._id}}" data-value="{{item.system.active}}" {{checked item.system.active}} type="checkbox"/>
         </div>
         <div class="flexrow grid-span-2">
-            <input type="text" value="{{item.system.action.mods}}" data-dtype="String" readonly>
+            {{#if item.system.action.mods}}
+            <input type="text" value="{{item.system.action.mods}}" title="{{item.system.action.flavor}}" data-dtype="String" readonly>
+            {{else}}
+            <input type="text" value="{{item.system.action.flavor}}" title="{{item.system.action.flavor}}" data-dtype="String" readonly>
+            {{/if}}
             {{#if item.system.flags.passive}}
             <a class="3d6-roll" data-roll-type="{{item.system.action.type}}" data-type="magicuse" data-weapon="{{item._id}}" data-mag-type="{{item.system.uses.type}}" data-ammo="1" data-parts="{{item.system.action.mods}}" data-title="{{item.name}} Action" data-flavor="{{item.system.action.flavor}}"><i class="fas fa-dice-d6"></i></a>
             {{else}}
@@ -48,8 +52,17 @@
             {{/if}}
         </div>
         <div class="flexrow grid-span-2">
-            <input type="text" value="{{item.system.effect.mods}}" data-dtype="String" readonly>
+            {{#if item.system.effect.mods}}
+            <input type="text" title="{{item.system.effect.flavor}}" value="{{item.system.effect.mods}}" data-dtype="String" readonly>
             <a class="3d6-roll" data-roll-type="{{item.system.effect.type}}" data-type="magiceffect" data-weapon="{{item._id}}" data-ammo="0" data-parts="{{item.system.effect.mods}}" data-title="{{item.name}} Effect" data-flavor="{{item.system.effect.flavor}}"><i class="fas fa-dice-d6"></i></a>
+            {{else}}
+                {{#if item.system.effect.flavor}}
+                <input type="text" title="{{item.system.effect.flavor}}" value="{{item.system.effect.flavor}}" data-dtype="String" readonly>
+                <a class="3d6-roll" data-roll-type="{{item.system.effect.type}}" data-type="magiceffect" data-weapon="{{item._id}}" data-ammo="0" data-parts="{{item.system.effect.mods}}" data-title="{{item.name}} Effect" data-flavor="{{item.system.effect.flavor}}"><i class="fas fa-dice-d6"></i></a>
+                {{else}}
+                <span></span><span></span>
+                {{/if}}
+            {{/if}}
         </div>
         <div>{{item.system.cp}}</div>
         {{#if item.system.mlCost}}

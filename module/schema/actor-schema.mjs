@@ -10,7 +10,6 @@ class AbilityScore extends foundry.abstract.DataModel {
 };
 class SavingThrow extends foundry.abstract.DataModel {
     static defineSchema(){
-        const field = foundry.data.fields;
         return{
             base: new field.NumberField({initial:0}),
             misc: new field.NumberField({initial:0})
@@ -34,8 +33,10 @@ class Health extends foundry.abstract.DataModel {
             }),
             chp: new field.SchemaField({
                 value: new field.NumberField({initial:12}),
-                formula: new field.StringField({initial:"@con.value+2"}),
-                misc: new field.NumberField({initial:0,nullable:false})
+                factors: new field.SchemaField({
+                    race: new field.NumberField({initial:2}),
+                    misc: new field.NumberField({initial:0})
+                })
             }),
             notes: new field.StringField({initial:""}),
             temp: new field.NumberField({initial:0}),
