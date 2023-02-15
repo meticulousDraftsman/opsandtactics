@@ -72,28 +72,7 @@ export class OpsActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     const systemData = context.system;
-
-    // Tally armor impacts
-    systemData.def.equip.total = systemData.def.equip.misc;
-    systemData.armorPenalty = 0;
-    systemData.cp.armor.total = 0;
-    const maxAgis = [];
-    let agiClamp = false;
-    systemData.agiMax = null;
-    for (let i=0;i<4;i++){
-      for(let j of context.armors[i]){
-        if (j.system.agiMax.active && j.system.active) {
-          systemData.abilities.agi.mod = Math.min(systemData.abilities.agi.mod,j.system.agiMax.value)
-          maxAgis.push(j.system.agiMax.value);
-          agiClamp = true;
-        }
-        if (j.system.def.active && j.system.active) systemData.def.equip.total += j.system.def.value;
-        if (j.system.penalty.active && j.system.active) systemData.armorPenalty += j.system.penalty.value;
-        if (j.system.cpLoss.active && j.system.active) systemData.cp.armor.total += j.system.cpLoss.value;
-      }
-    }
-    if (agiClamp) systemData.agiMax = Math.min(...maxAgis);
-
+    console.debug('break')
     // Tally skill modifiers
     for (let i of context.skills){
       i.mods = {total:0,ranks:i.system.ranks,ability:0,equip:0,syn:0,occ:0,armor:0,misc:0};
@@ -114,20 +93,13 @@ export class OpsActorSheet extends ActorSheet {
       i.mods.total = i.mods.ranks + i.mods.ability + i.mods.equip + i.mods.syn + i.mods.occ + i.mods.armor + i.mods.misc;      
     }
 
-    // Calculate Defense
-    systemData.def.value = 10 + systemData.def.equip.total + systemData.abilities.agi.mod + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge;
-    systemData.def.touch = 10 + systemData.abilities.agi.mod + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge;
-    systemData.def.flat = 10 + systemData.def.equip.total + systemData.def.size + systemData.def.move + systemData.def.misc;
-    // Calculate Saves
-    systemData.saves.reflex.value = systemData.saves.reflex.base + systemData.saves.reflex.misc + systemData.abilities.agi.mod;
-    systemData.saves.fortitude.value = systemData.saves.fortitude.base + systemData.saves.fortitude.misc + systemData.abilities.con.mod;
-    systemData.saves.will.value = systemData.saves.will.base + systemData.saves.will.misc + systemData.abilities.wis.mod;
-    //Calculate Initiative Modifier
-    systemData.init.value = systemData.init.misc + systemData.abilities.agi.mod;
+    
+    
+    
     // Calculate ML usage
     systemData.magic.psion=0;
-    if(systemData.magic.psionFocus) systemData.magic.psion = (2*systemData.level.value)+25;
-    systemData.magic.recipe = ((3*systemData.level.value)+3)*systemData.magic.memorized;
+    if(systemData.magic.psionFocus) systemData.magic.psion = (2*systemData.stats.level.value)+25;
+    systemData.magic.recipe = ((3*systemData.stats.level.value)+3)*systemData.magic.memorized;
     systemData.ml.value = systemData.magic.psion + systemData.magic.recipe + systemData.magic.incant;
     for (let i of context.magic){
       if(i.system.active && i.system.flags.passive) systemData.ml.value += i.system.mlCost.value;
@@ -178,19 +150,32 @@ export class OpsActorSheet extends ActorSheet {
       if (i.type === 'weapon') {
         for (let j of Object.keys(i.system.attacks)){
           let k = i.system.attacks[j];
-          if (k.abilities.hitAbility){
-            k.abilities.hit = context.system.abilities[k.abilities.hitAbility].mod;
+          switch (k.abilities.hitAbility){
+            case 'foc':
+            case 'pow':
+              k.abilities.hit = context.system.abilities.str[k.abilities.hitAbility];
+              break;
+            case 'mrk':
+            case 'agi':
+              k.abilities.hit = context.system.abilities.dex[k.abilities.hitAbility];
+              break;
+            default:
+              k.abilities.hit = 0;
           }
-          else{
-            k.abilities.hit = 0;
+          switch (k.abilities.damageAbility){
+            case 'foc':
+            case 'pow':
+              k.abilities.damage = context.system.abilities.str[k.abilities.hitAbility];
+              break;
+            case 'mrk':
+            case 'agi':
+              k.abilities.damage = context.system.abilities.dex[k.abilities.hitAbility];
+              break;
+            default:
+              k.abilities.damage = "";
           }
-          if (k.abilities.damageAbility){
-            k.abilities.damage = context.system.abilities[k.abilities.damageAbility].mod;
-          }
-          else{
-            k.abilities.damage = "";
-          }
-          k.abilities.recoil = context.system.recoil.value;
+
+          k.abilities.recoil = context.system.stats.recoil.value;
           k.totals = {hit:k.inherent.hit+k.abilities.hit,damage:k.inherent.damage,recoil:k.inherent.recoil+k.abilities.recoil,cp:k.inherent.cp};
           if (k.abilities.damage != ""){
             if (k.totals.damage !="") k.totals.damage += "+";
@@ -207,7 +192,7 @@ export class OpsActorSheet extends ActorSheet {
             if(n.recoilCheck) k.totals.recoil += o.recoil;
             if(n.cpCheck) k.totals.cp += o.cp;
           }
-          k.totals.mod = context.system.bab.value + k.totals.hit + Math.min(k.totals.recoil,0);
+          k.totals.mod = context.system.stats.bab.value + k.totals.hit + Math.min(k.totals.recoil,0);
           // Magazine Flags
           i.system.magazine.internal = false;
           i.system.magazine.external = false;
@@ -281,22 +266,42 @@ export class OpsActorSheet extends ActorSheet {
           
         }
         if(i.system.action.type=='attack'){
-          i.system.action.mods = `${context.system.bab.value}`
+          i.system.action.mods = `${context.system.stats.bab.value}`
         }
         else{
           i.system.action.mods = "";
         }
         if(i.system.effect.type=='attack'){
-          i.system.effect.mods = `${context.system.bab.value}`
+          i.system.effect.mods = `${context.system.stats.bab.value}`
         }
         else{
           i.system.effect.mods = "";
         }
-        if(i.system.action.ability!=""){
-          i.system.action.mods += '+' + context.system.abilities[i.system.action.ability].mod;
+        switch (i.system.action.ability){
+          case 'foc':
+          case 'pow':
+            i.system.action.mods += '+' + context.system.abilities.str[i.system.action.ability];
+            break;
+          case 'mrk':
+          case 'agi':
+            i.system.action.mods += '+' + context.system.abilities.dex[i.system.action.ability];
+          case '':
+            break;
+          default:
+            i.system.action.mods += '+' + context.system.abilities[i.system.action.ability].mod;  
         }
-        if(i.system.effect.ability!=""){
-          i.system.effect.mods += '+' + context.system.abilities[i.system.effect.ability].mod;
+        switch (i.system.effect.ability){
+          case 'foc':
+          case 'pow':
+            i.system.effect.mods += '+' + context.system.abilities.str[i.system.action.ability];
+            break;
+          case 'mrk':
+          case 'agi':
+            i.system.effect.mods += '+' + context.system.abilities.dex[i.system.action.ability];
+          case '':
+            break;
+          default:
+            i.system.effect.mods += '+' + context.system.abilities[i.system.action.ability].mod;  
         }
         if(i.system.action.misc!=""){
           i.system.action.mods += '+' + i.system.action.misc;

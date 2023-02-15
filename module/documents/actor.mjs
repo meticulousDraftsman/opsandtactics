@@ -19,7 +19,7 @@ export class OpsActor extends Actor {
 
   /** @override */
   prepareBaseData() {
-    console.debug('actor prepareBaseData',this)
+    //console.debug('actor prepareBaseData',this)
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
     this._prepareCharacterBase(this);
@@ -42,7 +42,7 @@ export class OpsActor extends Actor {
     // things organized.
     this._prepareCharacterData(this);
     this._prepareNpcData(this);
-    console.debug('actor prepareDerivedData',this)
+    //console.debug('actor prepareDerivedData',this)
   }
 
   /**
@@ -54,46 +54,92 @@ export class OpsActor extends Actor {
   }
   _prepareCharacterData(actorData) {
     if (actorData.type !== 'character') return;
-
     // Make modifications to data here. For example:
     const systemData = actorData.system;
-    //console.debug(systemData)
+    // Loop through equipped armor and determine impact
+    systemData.def.equip.value = systemData.def.equip.total;
+    systemData.stats.armorPenalty.value = systemData.stats.armorPenalty.total;
+    systemData.cp.armor.value = systemData.cp.armor.total;
+    systemData.stats.agiMax = null;
+    let agiClamp = false;
+
+    console.debug(this.items)
+
+    for (let i of this.items){
+      
+      if (i.type === 'armor' && i.system.active){
+        console.debug(i);
+        if (i.system.def.active) systemData.def.equip.value += i.system.def.value;
+        if (i.system.penalty.active) systemData.stats.armorPenalty.value += i.system.penalty.value;
+        if (i.system.cpLoss.active) systemData.cp.armor.value += i.system.cpLoss.value;
+        if (i.system.agiMax.active){
+          if (agiClamp){
+            systemData.stats.agiMax = Math.min(systemData.stats.agiMax,i.system.agiMax.value);
+          }
+          else {
+            agiClamp = true;
+            systemData.stats.agiMax = i.system.agiMax.value;
+          }
+        }
+      }
+    }
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(systemData.abilities)) {
-      // Calculate the modifier using d20 rules.
-      if (key != 'foc' && key != 'pow' && key != 'mrk' && key != 'agi') ability.mod = Math.floor((ability.value - 10) / 2) + ability.modMisc;
-      //console.debug(key,ability.mod)
+      ability.mod = Math.floor((ability.score-10)/2)+ability.modMods.total;
+      switch(key){
+        case 'str':
+            ability.pow = ability.mod - ability.foc;
+          break;
+        case 'dex':
+          ability.agi = ability.mod - ability.mrk;
+          if (agiClamp) ability.agi = Math.min(ability.agi,systemData.stats.agiMax);
+          break;
+      }
     }
-    // Calculate POW and AGI based in stat mod and FOC and MRK
-    systemData.abilities.pow.mod = systemData.abilities.str.mod-systemData.abilities.foc.mod;
-    systemData.abilities.agi.mod = systemData.abilities.dex.mod-systemData.abilities.mrk.mod;
-    // Calculate XP Needed to level
-    systemData.level.xp.need = 1500 * systemData.level.value * systemData.level.value;
+    // Calculate Defense
+    systemData.def.value = 10 + systemData.def.equip.value + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge;
+    systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge;
+    systemData.def.flat = 10 + systemData.def.equip.value + systemData.def.size + systemData.def.move + systemData.def.misc;
+    // Calculate Saves
+    systemData.saves.reflex.value = systemData.saves.reflex.base + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;
+    systemData.saves.fortitude.value = systemData.saves.fortitude.base + systemData.saves.fortitude.mods.total + systemData.abilities.con.mod;
+    systemData.saves.will.value = systemData.saves.will.base + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
+    //Calculate Initiative Modifier
+    systemData.stats.init.value = systemData.stats.init.total + systemData.abilities.dex.agi;
     // Calculate BAB
-    systemData.bab.value = systemData.level.value + systemData.bab.misc;
+    systemData.stats.bab.value = systemData.stats.level.value + systemData.stats.bab.total;
     // Calculate Recoil Reduction
-    systemData.recoil.value = systemData.abilities.str.value - 10 + this.modSum(systemData.recoil);
+    systemData.stats.recoil.value = systemData.abilities.str.score - 10 + systemData.stats.recoil.total;
     // Calculate Personal Capital    
-    systemData.wealth.capital.personal.total = (5*(systemData.level.value+1))+systemData.abilities.cha.value;
+    systemData.wealth.capital.personal.total = (5*(systemData.stats.level.value+1))+systemData.abilities.cha.score;
     // Calculate Hit Points and Mental Limit
-    systemData.health.chp.max = systemData.abilities.con.value + this.modSum(systemData.health.chp.factors)
-    const rollData = this.getRollData();
-    //const chpFormula = `${systemData.health.chp.formula}+${systemData.health.chp.misc}`;
-    //const chpRoll = new Roll(chpFormula,rollData).evaluate({async:false});
-    //systemData.health.chp.max = chpRoll.total;
-    const xhpFormula = `${systemData.health.xhp.formula}+${systemData.health.xhp.misc}`;
-    const xhpRoll = new Roll(xhpFormula,rollData).evaluate({async:false});
-    systemData.health.xhp.max = xhpRoll.total;
-    const mlMaxFormula = `${systemData.ml.formula}+${systemData.ml.misc}+${systemData.ml.aug}`;
-    const mlMaxRoll = new Roll(mlMaxFormula,rollData).evaluate({async:false});
-    systemData.ml.max = mlMaxRoll.total;
+    const rollData = this.getRollData({deterministic:true});
+    try{
+      systemData.health.chp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.chp.formula,rollData)) + systemData.health.chp.mods.total;
+    }
+    catch(err){
+      systemData.health.chp.max = 0;  
+    }
+    try{
+      systemData.health.xhp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.xhp.formula,rollData)) + systemData.health.xhp.mods.total;
+    }
+    catch{
+      systemData.health.xhp.max = 0;
+    }
+    try{
+      systemData.ml.max = Roll.safeEval(Roll.replaceFormulaData(systemData.ml.formula,rollData)) + systemData.ml.mods.total;
+    }
+    catch{
+      systemData.ml.max = 0;
+    }
     // Calculate Carrying Capacity
-    const carryFormula = systemData.carrying.capacity;
-    const carryRoll = new Roll(carryFormula,rollData).evaluate({async:false});
-    systemData.carrying.light = carryRoll.total;
-    systemData.carrying.medium = carryRoll.total*2;
-    systemData.carrying.heavy = carryRoll.total*3;
+    try{
+      systemData.stats.carrying.light = Roll.safeEval(Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData))
+    }
+    catch{
+      systemData.stats.carrying.light = 0;
+    }
   }
 
   /**
@@ -142,8 +188,8 @@ export class OpsActor extends Actor {
     }
 
     // Add level for easier access, or fall back to 0.
-    if (data.level) {
-      data.lvl = data.level.value ?? 1;
+    if (data.stats.level) {
+      data.lvl = data.stats.level.value ?? 1;
     }
   }
 
