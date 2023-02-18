@@ -17,7 +17,7 @@
             <ol class="items-list flex-group-center">
                 <li class="item items-header resource-label grid grid-10col">
                     <div class="grid-span-2">Mag Type</div>
-                    {{#if system.magazine.coolant}}
+                    {{#if (eq system.magazine.type "coolant")}}
                     <div class="grid-span-5">Coolant Pack</div>
                     <div>Heat</div>
                     {{else}}
@@ -39,9 +39,9 @@
                         {{/select}}
                         </select>
                     </div>
-                    {{#if system.magazine.none}}
+                    {{#if (eq system.magazine.type "none")}}
                     {{else}}
-                        {{#if system.magazine.internal}}
+                        {{#if (eq system.magazine.type "internal")}}
                         <div class="grid-start-4">
                             <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number"/>
                         </div>
@@ -57,7 +57,7 @@
                         </div>
                         {{/if}}
                     {{/if}}
-                    {{#if system.magazine.coolant}}
+                    {{#if (eq system.magazine.type "coolant")}}
                     <div>
                         <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number"/>
                     </div>
@@ -87,6 +87,7 @@
                 <li class="grid grid-10col">
                     <div class="grid-span-3">
                         <input name="system.weaponMods.{{@index}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
+                        <input name="system.weaponMods.{{@index}}.id" type="text" value="{{this.id}}" data-dtype="String" hidden/>
                     </div>
                     <div>
                         <input name="system.weaponMods.{{@index}}.hit" type="text" value="{{this.hit}}" data-dtype="Number"/>
@@ -120,6 +121,9 @@
         </div>
 
         <div class="tab" data-group="primary" data-tab="attacks">
+            <select class="drop-wide" name="system.selectMod" data-dtype="String">
+                            {{selectOptions system.weaponMods selected=system.selectMod nameAttr="id" labelAttr="name"}}
+                        </select>
             {{#each system.attacks}}
             <ol class="items-list flex-group-center">
                 <li class="grid grid-12col">
@@ -150,97 +154,85 @@
                         {{/if}}
                     </div>
                 </li>
-                <li class="item items-header grid grid-12col">
-                    <div class="grid-span-3">
-                        Modifiers
+                <li class="item flex-group-center grid grid-4col">
+                    <div class="flexrow items-header">
+                        <span>To-Hit: {{this.hit.total}} </span>
+                        <a class="item-control sub-create grid-span-4" data-target-name="hit" data-pre-target="{{@key}}" title="Add To-Hit Modifier"><i class="fas fa-plus"></i></a>
                     </div>
-
-                    <div class="grid-span-2">
-                        To-Hit
+                    <div class="">
+                        <input name="system.attacks.{{@key}}.hit.attack" value="{{this.hit.attack}}" type="text" data-dtype="Number" placeholder="From Attack">
                     </div>
-                    <div class="grid-span-3">
-                        Damage
+                    <select name="system.attacks.{{@key}}.hit.ability" data-dtype="String">
+                        {{#select this.hit.ability}}
+                          <option value=""></option>
+                          {{selectOptions @root.OATS.abilityShort selected=this.hit.ability localize=true}}
+                        {{/select}}
+                    </select>
+                    {{#each this.hit.mods}}
+                    <input name="system.attacks.{{@../key}}.hit.mods.{{@key}}.sourceID" value="{{this.sourceID}}" hidden>
+                    <div class="flexrow flex-group-center items-header">
+                        <span>{{this.name}}: {{this.value}}</span>
+                        <a class="flex0 item-control sub-delete" data-target-name="hit" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove To-Hit Modifier"><i class="fas fa-trash"></i></a>
                     </div>
-                    <div class="grid-span-2">
-                        Recoil
-                    </div>
-                    <div class="grid-span-2">
-                        CP
-                    </div>
+                    {{/each}}
                 </li>
-                <li class="grid grid-12col">
-                    <div class="grid-span-3">
-                        <input type="text" value="Attack Type" data-dtype="String" readonly/>
+                <li class="item flex-group-center grid grid-4col">
+                    <div class="flexrow items-header">
+                        <span>Damage</span>
+                        <a class="item-control sub-create grid-span-4" data-target-name="damage" data-pre-target="{{@key}}" title="Add Damage Modifier"><i class="fas fa-plus"></i></a>
                     </div>
-                    <div class="grid-span-2">
-                        <input name="system.attacks.{{@index}}.inherent.hit" type="text" value="{{this.inherent.hit}}" data-dtype="Number"/>
+                    <div class="">
+                        <input name="system.attacks.{{@key}}.damage.attack" value="{{this.damage.attack}}" type="text" data-dtype="String" placeholder="From Attack">
                     </div>
-                    <div class="grid-span-3">
-                        <input name="system.attacks.{{@index}}.inherent.damage" type="text" value="{{this.inherent.damage}}" data-dtype="String"/>
-                    </div>
-                    <div class="grid-span-2">
-                        <input name="system.attacks.{{@index}}.inherent.recoil" type="text" value="{{this.inherent.recoil}}" data-dtype="Number"/>
-                    </div>
-                    <div class="grid-span-2">
-                        <input name="system.attacks.{{@index}}.inherent.cp" type="text" value="{{this.inherent.cp}}" data-dtype="Number"/>
-                    </div>
-                </li>
-                <li class="grid grid-12col">
-                    <div class="grid-span-3">
-                        <input type="text" value="Ability Scores" data-dtype="String" readonly/>
-                    </div>
-                    <div class="grid-span-2">
-                        <select name="system.attacks.{{@index}}.abilities.hitAbility" data-dtype="String">
-                            {{#select this.abilities.hitAbility}}
-                              <option value=""></option>
-                              {{selectOptions @root.OATS.abilityShort selected=this.abilities.hitAbility localize=true}}
-                            {{/select}}
+                    <div class="flexrow grid-span-2">
+                        <select name="system.attacks.{{@key}}.damage.ability" data-dtype="String">
+                        {{#select this.damage.ability}}
+                          <option value=""></option>
+                          {{selectOptions @root.OATS.abilityShort selected=this.damage.ability localize=true}}
+                        {{/select}}
                         </select>
+                        <i class="fas fa-times"></i>
+                        <input name="system.attacks.{{@key}}.damage.scaleAbility" value="{{this.damage.scaleAbility}}" type="text" data-dtype="Number" placeholder="Multiplier">
                     </div>
-                    <div class="grid-span-3">
-                        <select name="system.attacks.{{@index}}.abilities.damageAbility" data-dtype="String">
-                            {{#select this.abilities.damageAbility}}
-                              <option value=""></option>
-                              {{selectOptions @root.OATS.abilityShort selected=this.abilities.damageAbility localize=true}}
-                            {{/select}}
-                        </select>
+                    {{#each this.damage.mods}}
+                    <input name="system.attacks.{{@../key}}.damage.mods.{{@key}}.sourceID" value="{{this.sourceID}}" hidden>
+                    <div class="flexrow flex-group-center items-header">
+                        <span>{{this.name}}: {{this.value}}</span>
+                        <a class="flex0 item-control sub-delete" data-target-name="damage" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Damage Modifier"><i class="fas fa-trash"></i></a>
                     </div>
+                    {{/each}}
                 </li>
-                {{#each this.modSelection}}
-                <li class="grid grid-12col">
-                    <div class="grid-span-3">
-                        <input name="" type="text" value="{{this.name}}" data-dtype="String" readonly/>
+                <li class="item flex-group-center grid grid-4col">
+                    <div class="flexrow items-header">
+                        <span>Recoil: {{this.recoil.total}} </span>
+                        <a class="item-control sub-create grid-span-4" data-target-name="recoil" data-pre-target="{{@key}}" title="Add Recoil Modifier"><i class="fas fa-plus"></i></a>
                     </div>
-                    <div class="grid grid-span-2">
-                        <div class="grid-2col">
-                            <input type="text" value="{{this.hit}}" data-dtype="Number" readonly/>
-                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.hitCheck" type="checkbox" {{checked this.hitCheck}}/>
-                        </div>
+                    <div class="">
+                        <input name="system.attacks.{{@key}}.recoil.attack" value="{{this.recoil.attack}}" type="text" data-dtype="Number" placeholder="From Attack">
                     </div>
-                    <div class="grid-span-3">
-                        <div class="grid grid-2col">
-                            <input type="text" value="{{this.damage}}" data-dtype="String" readonly/>
-                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.damageCheck" type="checkbox" {{checked this.damageCheck}}/>
-                        </div>
+                    {{#each this.recoil.mods}}
+                    <input name="system.attacks.{{@../key}}.recoil.mods.{{@key}}.sourceID" value="{{this.sourceID}}" hidden>
+                    <div class="flexrow flex-group-center items-header">
+                        <span>{{this.name}}: {{this.value}}</span>
+                        <a class="flex0 item-control sub-delete" data-target-name="recoil" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Recoil Modifier"><i class="fas fa-trash"></i></a>
                     </div>
-                    <div class="grid-span-2">
-                        <div class="grid grid-2col">
-                            <input type="text" value="{{this.recoil}}" data-dtype="Number" readonly/>
-                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.recoilCheck" type="checkbox" {{checked this.recoilCheck}}/>
-                        </div>
-                    </div>
-                    <div class="grid-span-2">
-                        <div class="grid grid-2col">
-                            <input type="text" value="{{this.cp}}" data-dtype="Number" readonly/>
-                            <input name="system.attacks.{{@../index}}.modSelection.{{@index}}.cpCheck" type="checkbox" {{checked this.cpCheck}}/>
-                        </div>
-                    </div>
+                    {{/each}}
                 </li>
-                {{/each}}
-                <li class="grid">
-                    <div class="flex-group-left grid-span-2">
-                        <input name="system.attacks.{{@index}}.description" type="text" value="{{this.description}}" data-dtype="String"/>
+                <li class="item flex-group-center grid grid-4col">
+                    <div class="flexrow items-header">
+                        <span>Combat Points: {{this.cp.total}} </span>
+                        <a class="item-control sub-create grid-span-4" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Points Modifier"><i class="fas fa-plus"></i></a>
                     </div>
+                    <div class="">
+                        <input name="system.attacks.{{@key}}.cp.attack" value="{{this.cp.attack}}" type="text" data-dtype="Number" placeholder="From Attack">
+                    </div>
+                    {{#each this.cp.mods}}
+                    <input name="system.attacks.{{@../key}}.cp.mods.{{@key}}.sourceID" value="{{this.sourceID}}" hidden>
+                    <div class="flexrow flex-group-center items-header">
+                        <span>{{this.name}}: {{this.value}}</span>
+                        <a class="flex0 item-control sub-delete" data-target-name="cp" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Combat Point Modifier"><i class="fas fa-trash"></i></a>
+                    </div>
+                    {{/each}}
                 </li>
             </ol>
             <hr>

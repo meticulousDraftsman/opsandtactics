@@ -43,6 +43,7 @@ export class OpsItemSheet extends ItemSheet {
 
     // Use a safe clone of the item data for further operations.
     const itemData = context.item;
+    const systemData = itemData.system;
 
     // Retrieve the roll data for TinyMCE editors.
     context.rollData = {};
@@ -53,18 +54,22 @@ export class OpsItemSheet extends ItemSheet {
 
     context.effects = prepareActiveEffectCategories(this.item.effects);
     
-    //let abilityMod = 0;
-    //if (actor) {
-    //  abilityMod = actor.system.abilities[itemData.system.ability.type]["mod"] ?? 0;
-    //}
+    const abilityMods ={
+      str:0, foc:0, pow:0, dex:0, mrk:0, agi:0, con:0, int:0, wis:0, cha:0
+    }
+    if(actor){
+      abilityMods.str = actor.system.abilities.str.mod;
+      abilityMods.foc = actor.system.abilities.str.foc;
+      abilityMods.pow = actor.system.abilities.str.pow;
+      abilityMods.dex = actor.system.abilities.dex.mod;
+      abilityMods.mrk = actor.system.abilities.dex.mrk;
+      abilityMods.agi = actor.system.abilities.dex.agi;
+      abilityMods.con = actor.system.abilities.con.mod;
+      abilityMods.int = actor.system.abilities.int.mod;
+      abilityMods.wis = actor.system.abilities.wis.mod;
+      abilityMods.cha = actor.system.abilities.cha.mod;
+    }
 
-    //if (actor){
-    //  const actorAbilities = actor.system.abilities;
-    //  if (itemData.type == 'skill'){
-    //    const abilityMod = actorAbilities[itemData.system.ability.type]["mod"];
-    //    console.debug(abilityMod);
-    //  }
-    //}
     const magazines = [{label:"Unloaded",id:""}];
     if (itemData.type === 'weapon'){
       if(actor){
@@ -74,6 +79,26 @@ export class OpsItemSheet extends ItemSheet {
           }
         }
       }
+      for(let i of itemData.system.attacks){
+        i.hit.total = i.hit.attack;
+        if (i.hit.ability != '') i.hit.total += abilityMods[i.hit.ability];
+        for(let j of i.hit.mods){
+          i.hit.total += j.value;
+        }
+        i.recoil.total = i.recoil.attack;
+        for(let j of i.recoil.mods){
+          i.recoil.total += j.value;
+        }
+        if(i.recoil.total==0) i.recoil.total=null;
+        i.cp.total = i.cp.attack;
+        for(let j of i.cp.mods){
+          i.cp.total += j.value;
+        }
+      }
+      
+      //for(let i of itemData.system.weaponMods){
+      //  wepMods[i.id] = i;
+      //}
     }
     const sourceMagics = [{name:"None",id:""}];
     if (itemData.type==='magic'){
@@ -148,40 +173,45 @@ export class OpsItemSheet extends ItemSheet {
   _subCreation(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
+    console.debug(dataset)
     const target = dataset.targetName;
+    const preTarget = dataset?.preTarget;
     let systemData;
-    if(target==='resources'){
-      systemData = this.object.system.gear;
+    let subProperty;
+    switch(target){
+      case 'resources':
+        subProperty = this.object.system.gear[target];
+        break;
+      case 'hit':
+      case 'damage':
+      case 'recoil':
+      case 'cp':
+        subProperty = this.object.system.attacks;
+        break;
+      default:
+        subProperty = this.object.system[target];
+        break;
     }
-    else {
-      systemData = this.object.system;
-    }
-    const subProperty = systemData[target];
     const updateData = {};
     let mirrorLength;
     let mirrorProperty;
     switch(target){
       case 'attacks':
-        // Create a new attack with enough SelectMods to match the current number of WeaponMods
-        mirrorProperty = new Attack;
-        mirrorLength = Object.keys(systemData.weaponMods).length;
-        for (let i=0;i<mirrorLength;i++){
-          mirrorProperty.modSelection.push(new SelectMod);
-        }
-        subProperty.push(mirrorProperty);
+        subProperty.push(new Attack);
         updateData["system.attacks"] = subProperty;
         break;
       case 'weaponMods':
-        // Create a new SelectMod in every current Attack
-        subProperty.push(new WeaponMod);
-        updateData["system.weaponMods"] = subProperty;
-        mirrorLength = Object.keys(systemData.attacks).length;
-        for (let i=0;i<mirrorLength;i++){
-          mirrorProperty = systemData.attacks[i];
-          mirrorProperty.modSelection.push(new SelectMod);
-          let updateTarget = "system.attacks."+i;
-          updateData[updateTarget] = mirrorProperty;
-        }
+        let temp = new WeaponMod;
+        temp.id = randomID(8);
+        subProperty.push(temp)
+        updateData["system.weaponMods"]= subProperty;
+        break;
+        case 'hit':
+        case 'damage':
+        case 'recoil':
+        case 'cp':
+        subProperty[preTarget][target].mods.push({sourceID:this.object.system.selectMod})
+        updateData['system.attacks'] = subProperty;
         break;
       case 'skillMods':
         subProperty.push(new SkillMod);
@@ -202,35 +232,61 @@ export class OpsItemSheet extends ItemSheet {
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
     const target = dataset.targetName;
+    const preTarget = dataset?.preTarget;
     const removed = dataset.removeTarget;
     let systemData;
     let updateTarget;
-    if(target==='resources'){
-      systemData = this.object.system.gear;
-      updateTarget = "system.gear." + target;
+    let subProperty;
+    let subKeys;
+    switch(target){
+      case 'resources':
+        systemData = this.object.system.gear;
+        updateTarget = "system.gear." + target;
+        subProperty = systemData[target];
+        subKeys = Object.keys(subProperty);
+        break;
+      case 'hit':
+      case 'damage':
+      case 'recoil':
+      case 'cp':
+        subProperty = this.object.system.attacks
+        updateTarget = 'system.attacks';
+        subKeys = Object.keys(subProperty[preTarget][target].mods);
+        break;
+      default:
+        systemData = this.object.system;
+        updateTarget = "system." + target;
+        subProperty = systemData[target];
+        subKeys = Object.keys(subProperty);
+        break;
     }
-    else {
-      systemData = this.object.system;
-      updateTarget = "system." + target;
-    }
-    const subProperty = systemData[target];
-    const subKeys = Object.keys(subProperty);
     const subLength = subKeys.length;
     let mirrorLength;
     let newEntry = [];
     const updateData = {};
     switch(target){
-      case 'attacks':
       case 'skillMods':
+      case 'attacks':
       case 'protection':
       case 'resources':
+      case 'weaponMods':
         for(let i=0;i<subLength;i++){
           if(subKeys[i] != removed) newEntry.push(subProperty[subKeys[i]]);
         }
         updateData[updateTarget] = newEntry;
         if(target == 'protection') updateData["system.dr"] = 0;
         break;
-      case 'weaponMods':
+      case 'hit':
+      case 'damage':
+      case 'recoil':
+      case 'cp':
+        for(let i=0;i<subLength;i++){
+          if(subKeys[i] != removed) newEntry.push(subProperty[preTarget][target].mods[subKeys[i]]); 
+        }
+        subProperty[preTarget][target].mods = newEntry;
+        updateData[updateTarget] = subProperty;
+        break;
+      case 'oldweaponMods':
         // Have to remove matching SelectMod from every current attack
         for(let i=0;i<subLength;i++){
           if(subKeys[i] != removed) newEntry.push(subProperty[subKeys[i]]);
@@ -250,5 +306,6 @@ export class OpsItemSheet extends ItemSheet {
     }
 
     this.object.update(updateData);
+    console.debug(this.object)
   }
 }

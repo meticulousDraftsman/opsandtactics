@@ -41,22 +41,78 @@ export class OpsItem extends Item {
   }
   _prepareWeaponData(itemData){
     const systemData = itemData.system;
-    // Copy the values of each weapon mod to each attack for display
-    for(let i of systemData.attacks){
-      for(let j=0;j<systemData.weaponMods.length;j++){
-        let selectedMod = i.modSelection[j];
-        selectedMod.name = systemData.weaponMods[j].name;
-        selectedMod.hit = systemData.weaponMods[j].hit;
-        selectedMod.damage = systemData.weaponMods[j].damage;
-        selectedMod.recoil = systemData.weaponMods[j].recoil;
-        selectedMod.cp = systemData.weaponMods[j].cp;
+    // Map weapon mods values to attacks
+    for (let i of systemData.attacks){
+      for (let j of i.hit.mods){
+        let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
+        if (source === undefined){
+          j.name = 'Error';
+          j.value = 404;
+        }
+        else {
+          j.name = source.name;
+          j.value = source.hit;
+        }
+      }
+      for (let i of systemData.attacks){
+        for (let j of i.damage.mods){
+          let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
+          if (source === undefined){
+            j.name = 'Error';
+            j.value = '404';
+          }
+          else {
+            j.name = source.name;
+            j.value = source.damage;
+          }
+          
+        }
+      }
+      for (let i of systemData.attacks){
+        for (let j of i.recoil.mods){
+          let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
+          if (source === undefined){
+            j.name = 'Error';
+            j.value = 404;
+          }
+          else {
+            j.name = source.name;
+            j.value = source.recoil;
+          }
+          
+        }
+      }
+      for (let i of systemData.attacks){
+        for (let j of i.cp.mods){
+          let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
+          if (source === undefined){
+            j.name = 'Error';
+            j.value = 404;
+          }
+          else {
+            j.name = source.name;
+            j.value = source.cp;
+          }
+          
+        }
       }
     }
+    // Copy the values of each weapon mod to each attack for display
+    //for(let i of systemData.attacks){
+    //  for(let j=0;j<systemData.weaponMods.length;j++){
+    //    let selectedMod = i.modSelection[j];
+    //    selectedMod.name = systemData.weaponMods[j].name;
+    //    selectedMod.hit = systemData.weaponMods[j].hit;
+    //    selectedMod.damage = systemData.weaponMods[j].damage;
+    //    selectedMod.recoil = systemData.weaponMods[j].recoil;
+    //    selectedMod.cp = systemData.weaponMods[j].cp;
+    //  }
+    //}
     // Set flags for magazine type
-    systemData.magazine.internal = false;
-    systemData.magazine.external = false;
-    systemData.magazine.coolant = false;
-    systemData.magazine[systemData.magazine.type] = true;
+    //systemData.magazine.internal = false;
+    //systemData.magazine.external = false;
+    //systemData.magazine.coolant = false;
+    //systemData.magazine[systemData.magazine.type] = true;
   }
 
   _prepareMagazineData(itemData){
