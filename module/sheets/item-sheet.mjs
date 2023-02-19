@@ -85,6 +85,15 @@ export class OpsItemSheet extends ItemSheet {
         for(let j of i.hit.mods){
           i.hit.total += j.value;
         }
+        i.damage.total = i.damage.attack;
+        if (i.damage.ability != ''){
+          if (i.damage.total !='') i.damage.total += '+';
+          i.damage.total += Math.floor(abilityMods[i.damage.ability]*i.damage.scaleAbility);
+        }
+        for(let j of i.damage.mods){
+          if (i.damage.total !='') i.damage.total += '+'
+          i.damage.total += j.value;
+        }
         i.recoil.total = i.recoil.attack;
         for(let j of i.recoil.mods){
           i.recoil.total += j.value;
