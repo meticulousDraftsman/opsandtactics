@@ -149,7 +149,7 @@ export class Attack extends foundry.abstract.DataModel{
             display: new field.BooleanField({initial:true}),
             ammo: new field.NumberField({initial:0}),
             hit: new field.SchemaField({
-                attack: new field.NumberField({initial:0}),
+                attack: new field.NumberField(),
                 ability: new field.StringField({initial:"mrk"}),
                 mods: new field.ArrayField(
                     new field.SchemaField({

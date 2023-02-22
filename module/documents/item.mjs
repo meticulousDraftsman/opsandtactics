@@ -11,7 +11,7 @@ export class OpsItem extends Item {
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
-    //console.debug('item prepareData',this)
+    console.debug('item prepareData',this)
   }
 
   prepareDerivedData(){
@@ -22,7 +22,7 @@ export class OpsItem extends Item {
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'magazine') this._prepareMagazineData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
-    //console.debug('item prepareDerivedData',this)
+    console.debug('item prepareDerivedData',this)
   }
 
   _prepareSkillData(itemData){

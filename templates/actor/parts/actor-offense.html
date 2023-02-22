@@ -13,7 +13,7 @@
         <div>To-Hit</div>
         <div class="grid-span-2">Damage <i class="fas fa-dice-d6"></i></div>
         <div>CP</div>
-        {{#if item.system.magazine.internal}}
+        {{#if (eq item.system.magazine.type "internal")}}
         <div>
             <div class="flexrow">
                 <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item._id}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
@@ -22,7 +22,7 @@
             </div>
         </div>
         {{/if}}
-        {{#if item.system.magazine.external}}
+        {{#if (eq item.system.magazine.type "external")}}
         <div>
             <div class="flexrow">
                 <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
@@ -31,7 +31,7 @@
             </div>
         </div>
         {{/if}}
-        {{#if item.system.magazine.coolant}}
+        {{#if (eq item.system.magazine.type "coolant")}}
         <div>
             <div class="flexrow">
                 <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
@@ -47,10 +47,10 @@
     {{#each item.system.attacks}}
     {{#if this.display}}
     <li class="item grid grid-10col">
-        <a class="3d6-roll grid-start-3 grid-span-2" data-roll-type="attack" data-type="weaponattack" data-weapon="{{../_id}}" data-mag-type="{{../system.magazine.type}}" data-ammo="{{this.ammo}}" data-parts="{{this.totals.mod}}" data-title="{{item.name}} {{this.name}} attack roll" data-flavor="{{this.description}}">{{this.name}}</a>
-        <input class="" type="text"value="{{this.totals.mod}}" data-dtype="Number" readonly/>
-        <div class="rollable grid-span-2" data-roll="{{this.totals.damage}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{this.name}} damage!">{{this.totals.damage}}</div>
-        <div>{{this.totals.cp}}</div>
+        <a class="grid-start-3 grid-span-2">{{this.name}}</a>
+        <input class="" type="text"value="{{this.hit.total}}" data-dtype="Number" readonly/>
+        <div class="rollable grid-span-2" data-roll="{{this.damage.total}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{this.name}} damage!">{{this.damage.total}}</div>
+        <div>{{this.cp.total}}</div>
         <div>{{this.ammo}}</div>
     </li>
     {{/if}}

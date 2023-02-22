@@ -32,10 +32,10 @@ export class OpsItemSheet extends ItemSheet {
 
   /** @override */
   getData() {
-    console.debug('item-sheet getData')
+    //console.debug('item-sheet getData')
     // Retrieve base data structure.
     const context = super.getData();
-    console.debug('item-sheet super.getData',context)
+    //console.debug('item-sheet super.getData',context)
     
 
     // Include config in context
