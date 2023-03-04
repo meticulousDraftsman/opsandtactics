@@ -82,7 +82,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             details: new field.SchemaField({
                 biography: new field.StringField(),
                 size: new field.StringField({initial:"Medium"}),
-                race: new field.StringField({initial:"Human"})
+                race: new field.StringField()
             }),
             ml: new field.SchemaField({
                 formula: new field.StringField({initial:"((6+@wis.score)*@lvl)+40"}),

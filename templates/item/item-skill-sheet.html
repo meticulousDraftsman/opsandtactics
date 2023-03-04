@@ -59,10 +59,10 @@
           <input name="" type="text" value="Armor Penalty" data-dtype="String" readonly/>
         </div>
         <div class="grid-start-8">
-          <input name="" type="text" value="{{system.armorPenalty}}" data-dtype="Number" readonly/>
+          <input name="" type="text" value="{{system.armor.penalty}}" data-dtype="Number" readonly/>
         </div>
         <div>
-          <input name="system.armor" type="checkbox" {{checked system.armor}}/>
+          <input name="system.armor.active" type="checkbox" {{checked system.armor.active}}/>
         </div>
       </li>
       <li class="item grid grid-10col items-header resource-label">
@@ -82,13 +82,14 @@
           <a class="item-control sub-create" data-target-name="skillMods" title="Add Modifier"><i class="fas fa-plus"></i></a>
         </div>
       </li>
-      {{#each system.skillMods}}
+      {{#each system.mods}}
+      {{log @key}}
       <li class="grid grid-10col">
         <div class="grid-span-4">
-          <input name="system.skillMods.{{@index}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
+          <input name="system.mods.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String" placeholder="Source"/>
         </div>
         <div class="grid-span-3">
-          <select name="system.skillMods.{{@index}}.type" data-dtype="String">
+          <select name="system.mods.{{@key}}.type" data-dtype="String">
             {{#select this.type}}
               <option value="misc">Miscellaneous</option>
               <option value="equip">Equipment</option>
@@ -98,10 +99,10 @@
           </select>
         </div>
         <div>
-          <input name="system.skillMods.{{@index}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
+          <input name="system.mods.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number" placeholder="0"/>
         </div>
         <div>
-          <input name="system.skillMods.{{@index}}.active" type="checkbox" {{checked this.active}}/>
+          <input name="system.mods.{{@key}}.active" type="checkbox" {{checked this.active}}/>
         </div>
         <div>
           <a class="item-control sub-delete" data-target-name="skillMods" data-remove-target="{{@key}}" title="Remove Modifier"><i class="fas fa-trash"></i></a>

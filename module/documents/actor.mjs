@@ -14,7 +14,7 @@ export class OpsActor extends Actor {
     // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
     // prepareDerivedData().
     super.prepareData();
-    console.debug('actor prepareData',this)
+    //console.debug('actor prepareData',this)
   }
 
   /** @override */
@@ -45,6 +45,21 @@ export class OpsActor extends Actor {
     //console.debug('actor prepareDerivedData',this)
   }
 
+  abilityMod(source){
+    switch (source){
+      case '':
+          return 0;
+      case 'foc':
+      case 'pow':
+          return this.system.abilities.str[source] ?? 0;
+      case 'mrk':
+      case 'agi':
+          return this.system.abilities.dex[source] ?? 0;
+      default:
+          return this.system.abilities[source].mod ?? 0;
+  }  
+  }
+
   /**
    * Prepare Character type specific data
    */
@@ -56,35 +71,33 @@ export class OpsActor extends Actor {
     if (actorData.type !== 'character') return;
     // Make modifications to data here. For example:
     const systemData = actorData.system;
-    // Loop through equipped armor and determine impact
+
+    // Loop through equipped armor and determine impact before calculating ability modifiers
+    // Start with mods from active effects
     systemData.def.equip.value = systemData.def.equip.total;
     systemData.stats.armorPenalty.value = systemData.stats.armorPenalty.total;
     systemData.cp.armor.value = systemData.cp.armor.total;
+    // Initially no cap on agility
     systemData.stats.agiMax = null;
     let agiClamp = false;
-
-    console.debug(this.items)
-
     for (let i of this.items){
-      
       if (i.type === 'armor' && i.system.active){
-        console.debug(i);
-        if (i.system.def.active) systemData.def.equip.value += i.system.def.value;
-        if (i.system.penalty.active) systemData.stats.armorPenalty.value += i.system.penalty.value;
-        if (i.system.cpLoss.active) systemData.cp.armor.value += i.system.cpLoss.value;
-        if (i.system.agiMax.active){
+        systemData.def.equip.value += i.system.def;
+        systemData.stats.armorPenalty.value += i.system.penalty;
+        systemData.cp.armor.value += i.system.cpLoss;
+        if (i.system.agiMax != null){
           if (agiClamp){
-            systemData.stats.agiMax = Math.min(systemData.stats.agiMax,i.system.agiMax.value);
+            systemData.stats.agiMax = Math.min(systemData.stats.agiMax,i.system.agiMax);
           }
           else {
             agiClamp = true;
-            systemData.stats.agiMax = i.system.agiMax.value;
+            systemData.stats.agiMax = i.system.agiMax;
           }
         }
       }
     }
 
-    // Loop through ability scores, and add their modifiers to our sheet output.
+    // Loop through ability scores and calculate modifiers
     for (let [key, ability] of Object.entries(systemData.abilities)) {
       ability.mod = Math.floor((ability.score-10)/2)+ability.modMods.total;
       switch(key){
@@ -118,28 +131,20 @@ export class OpsActor extends Actor {
     try{
       systemData.health.chp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.chp.formula,rollData)) + systemData.health.chp.mods.total;
     }
-    catch(err){
-      systemData.health.chp.max = 0;  
-    }
+    catch{systemData.health.chp.max = 0;  }
     try{
       systemData.health.xhp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.xhp.formula,rollData)) + systemData.health.xhp.mods.total;
     }
-    catch{
-      systemData.health.xhp.max = 0;
-    }
+    catch{systemData.health.xhp.max = 0;}
     try{
       systemData.ml.max = Roll.safeEval(Roll.replaceFormulaData(systemData.ml.formula,rollData)) + systemData.ml.mods.total;
     }
-    catch{
-      systemData.ml.max = 0;
-    }
+    catch{systemData.ml.max = 0;}
     // Calculate Carrying Capacity
     try{
       systemData.stats.carrying.light = Roll.safeEval(Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData))
     }
-    catch{
-      systemData.stats.carrying.light = 0;
-    }
+    catch{systemData.stats.carrying.light = 0;}
   }
 
   /**

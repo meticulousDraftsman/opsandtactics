@@ -25,13 +25,13 @@
                 </li>
                 <li class="grid grid-6col">
                     <div>
-                        <select name="system.layer" data-dtype="Number">
+                        <select name="system.layer" data-dtype="String">
                         {{#select system.layer}}
-                            <option value="1">Worn</option>
-                            <option value="2">Plate</option>
-                            <option value="0">Other</option>
-                            <option value="3">Shield</option>
-                            <option value="4">Magic</option>
+                            <option value="worn">Worn</option>
+                            <option value="plate">Plate</option>
+                            <option value="other">Other</option>
+                            <option value="shield">Shield</option>
+                            <option value="magic">Magic</option>
                         {{/select}}
                         </select>
                     </div>
@@ -60,22 +60,10 @@
                     <div>CP Loss</div>
                 </li>
                 <li class="grid grid-4col">
-                    <div class="flexrow">
-                        <input name="system.def.value" type="text" value="{{system.def.value}}" data-dtype="Number"/>
-                        <input name="system.def.active" type="checkbox" {{checked system.def.active}}/>
-                    </div>
-                    <div class="flexrow">
-                        <input name="system.agiMax.value" type="text" value="{{system.agiMax.value}}" data-dtype="Number"/>
-                        <input name="system.agiMax.active" type="checkbox" {{checked system.agiMax.active}}/>
-                    </div>
-                    <div class="flexrow">
-                        <input name="system.penalty.value" type="text" value="{{system.penalty.value}}" data-dtype="Number"/>
-                        <input name="system.penalty.active" type="checkbox" {{checked system.penalty.active}}/>
-                    </div>
-                    <div class="flexrow">
-                        <input name="system.cpLoss.value" type="text" value="{{system.cpLoss.value}}" data-dtype="Number"/>
-                        <input name="system.cpLoss.active" type="checkbox" {{checked system.cpLoss.active}}/>
-                    </div>
+                        <input name="system.def" type="text" value="{{system.def}}" data-dtype="Number" placeholder="0"/>
+                        <input name="system.agiMax" type="text" value="{{system.agiMax}}" data-dtype="Number" placeholder="None"/>
+                        <input name="system.penalty" type="text" value="{{system.penalty}}" data-dtype="Number" placeholder="0"/>
+                        <input name="system.cpLoss" type="text" value="{{system.cpLoss}}" data-dtype="Number" placeholder="0"/>
                 </li>
             </ol>
             <ol class="items-list flex-group-center">
@@ -89,10 +77,10 @@
                 {{#each system.protection}}
                 <li class="grid grid-12col">
                     <div class="grid-span-7">
-                        <input name="system.protection.{{@index}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
+                        <input name="system.protection.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
                     </div>
                     <div class="grid-span-4">
-                        <input name="system.protection.{{@index}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
+                        <input name="system.protection.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
                     </div>
                     <div>
                         <a class="item-control sub-delete" data-target-name="protection" data-remove-target="{{@key}}" title="Remove Protection"><i class="fas fa-trash"></i></a>

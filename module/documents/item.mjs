@@ -11,7 +11,7 @@ export class OpsItem extends Item {
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
-    console.debug('item prepareData',this)
+    //console.debug('item prepareData',this)
   }
 
   prepareDerivedData(){
@@ -22,97 +22,33 @@ export class OpsItem extends Item {
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'magazine') this._prepareMagazineData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
-    console.debug('item prepareDerivedData',this)
+    //console.debug('item prepareDerivedData',this)
   }
 
   _prepareSkillData(itemData){
     const systemData = itemData.system;
-    // If no actor, mod is zero
-    //if(itemData.actor) {
-      //let temp = itemData.actor.system.abilities[systemData.ability.type];
-      //console.debug(temp.mod);
-     // systemData.ability.mod = itemData.actor.system.abilities[systemData.ability.type]["mod"];
-     // console.debug(systemData.ability.mod);
-    //}
-    //else{
-    //  systemData.ability.mod = 0;
-   // }
-    //systemData.formula = `3d6 + @${systemData.attribute}.mod + ${systemData.mod}`;
   }
   _prepareWeaponData(itemData){
     const systemData = itemData.system;
     // Map weapon mods values to attacks
-    for (let i of systemData.attacks){
-      for (let j of i.hit.mods){
-        let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
-        if (source === undefined){
-          j.name = 'Error';
-          j.value = 404;
-        }
-        else {
-          j.name = source.name;
-          j.value = source.hit;
-        }
+     for (let [,a] of Object.entries(systemData.attacks)){
+       for (let [key,entry] of Object.entries(a.hit.mods)){
+        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+        entry.value = systemData.weaponMods?.[key]?.hit ?? null;
+       }
+       for (let [key,entry] of Object.entries(a.damage.mods)){
+        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+        entry.value = systemData.weaponMods?.[key]?.damage ?? null;
+       }
+       for (let [key,entry] of Object.entries(a.recoil.mods)){
+        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+        entry.value = systemData.weaponMods?.[key]?.recoil ?? null;
+       }
+       for (let [key,entry] of Object.entries(a.cp.mods)){
+        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+        entry.value = systemData.weaponMods?.[key]?.cp ?? null;
+       }
       }
-      for (let i of systemData.attacks){
-        for (let j of i.damage.mods){
-          let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
-          if (source === undefined){
-            j.name = 'Error';
-            j.value = '404';
-          }
-          else {
-            j.name = source.name;
-            j.value = source.damage;
-          }
-          
-        }
-      }
-      for (let i of systemData.attacks){
-        for (let j of i.recoil.mods){
-          let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
-          if (source === undefined){
-            j.name = 'Error';
-            j.value = 404;
-          }
-          else {
-            j.name = source.name;
-            j.value = source.recoil;
-          }
-          
-        }
-      }
-      for (let i of systemData.attacks){
-        for (let j of i.cp.mods){
-          let source = systemData.weaponMods.find(mod=> mod.id === j.sourceID);
-          if (source === undefined){
-            j.name = 'Error';
-            j.value = 404;
-          }
-          else {
-            j.name = source.name;
-            j.value = source.cp;
-          }
-          
-        }
-      }
-    }
-    // Copy the values of each weapon mod to each attack for display
-    //for(let i of systemData.attacks){
-    //  for(let j=0;j<systemData.weaponMods.length;j++){
-    //    let selectedMod = i.modSelection[j];
-    //    selectedMod.name = systemData.weaponMods[j].name;
-    //    selectedMod.hit = systemData.weaponMods[j].hit;
-    //    selectedMod.damage = systemData.weaponMods[j].damage;
-    //    selectedMod.recoil = systemData.weaponMods[j].recoil;
-    //    selectedMod.cp = systemData.weaponMods[j].cp;
-    //  }
-    //}
-    // Set flags for magazine type
-    //systemData.magazine.internal = false;
-    //systemData.magazine.external = false;
-    //systemData.magazine.coolant = false;
-    //systemData.magazine[systemData.magazine.type] = true;
   }
 
   _prepareMagazineData(itemData){

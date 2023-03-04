@@ -72,30 +72,19 @@ export class OpsActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     const systemData = context.system;
-    console.debug('break')
+    //console.debug('break')
     // Tally skill modifiers
     for (let i of context.skills){
-      i.mods = {total:0,ranks:i.system.ranks,ability:0,equip:0,syn:0,occ:0,armor:0,misc:0};
-      if (i.system.ability!=''){
-        i.mods.ability = context.system.abilities[i.system.ability].mod;
+      i.mods = {equip: 0, syn:0, occ:0, armor:0, misc:0};
+      if (i.system.focus == 'double') i.mods.occ += 1;
+      if (i.system.armor.active) i.mods.armor = systemData.stats.armorPenalty.value;
+      for (let [,mod] of Object.entries(i.system.mods)){
+        if (mod.active) i.mods[mod.type] += mod.value;
       }
-      if (i.system.focus == 'double') {
-        i.mods.occ += 1;
-      }
-      for (let j=0; j<Object.keys(i.system.skillMods).length;j++){
-        if (i.system.skillMods[j].active){
-          i.mods[i.system.skillMods[j].type] += i.system.skillMods[j].value;
-        }
-      }
-      if (i.system.armor){
-        i.mods.armor = context.system.armorPenalty;
-      }
-      i.mods.total = i.mods.ranks + i.mods.ability + i.mods.equip + i.mods.syn + i.mods.occ + i.mods.armor + i.mods.misc;      
+      console.debug(i.system.ability)
+      i.mods.total = i.system.ranks + context.actor.abilityMod(i.system.ability) + i.mods.equip + i.mods.syn + i.mods.occ + i.mods.armor + i.mods.misc;
     }
 
-    
-    
-    
     // Calculate ML usage
     systemData.magic.psion=0;
     if(systemData.magic.psionFocus) systemData.magic.psion = (2*systemData.stats.level.value)+25;
@@ -104,8 +93,6 @@ export class OpsActorSheet extends ActorSheet {
     for (let i of context.magic){
       if(i.system.active && i.system.flags.passive) systemData.ml.value += i.system.mlCost.value;
     }
-
-    
   }
   
 
@@ -121,11 +108,36 @@ export class OpsActorSheet extends ActorSheet {
     // Initialize containers.
     const skills = [];
     const armors = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: []
+      magic: {
+        items: [],
+        label: 'Magical Protection',
+        icon: 'fas fa-hat-wizard'
+      },
+      shield: {
+        items: [],
+        label: 'Plasma Shielding',
+        icon: 'fas fa-shield'
+      },
+      plate: {
+        items: [],
+        label: 'Armor Plates',
+        icon: 'fas fa-box'
+      },
+      worn: {
+        items: [],
+        label: 'Worn Armor',
+        icon: 'fas fa-vest'
+      },
+      other: {
+        items: [],
+        label: 'Other Protection',
+        icon: 'fas fa-calculator'
+      },
+      inactive: {
+        items:[],
+        label: 'Inactive Protection',
+        icon: ''
+      }
     }
     const weapons = [];
     let gear = [];
@@ -143,60 +155,41 @@ export class OpsActorSheet extends ActorSheet {
       }
       // Append armor.
       if (i.type === 'armor') {
-        if (i.system.layer != undefined){
-          armors[i.system.layer].push(i);
+        if(i.system.active){
+          //console.debug(i.system)
+          armors[i.system.layer].items.push(i);
+        }
+        else{
+          armors.inactive.items.push(i);
         }
       }
       // Append weapons.
       if (i.type === 'weapon') {
-        for (let a of i.system.attacks){
+        for (let [,a] of Object.entries(i.system.attacks)){
           // Calculate item to hit
-          a.hit.total = a.hit.attack;
-          switch (a.hit.ability){
-            case '':
-              break;
-            case 'foc':
-            case 'pow':
-              a.hit.total += systemData.abilities.str[a.hit.ability];
-              break;
-            case 'mrk':
-            case 'agi':
-              a.hit.total += systemData.abilities.dex[a.hit.ability];
-              break;
-            default:
-              a.hit.total += systemData.abilities[a.hit.ability].mod;
-          }
-          for (let m of a.hit.mods){
-            a.hit.total += m.value;
+          a.hit.total = a.hit.attack + context.actor.abilityMod(a.hit.ability);
+          for (let [,h] of Object.entries(a.hit.mods)){
+            a.hit.total += h.value;
           }
           // Calculate item damage
           a.damage.total = a.damage.attack;
-          switch (a.damage.ability){
-            case '':
-              break;
-            case 'foc':
-            case 'pow':
-              a.damage.total += '+' + Math.floor(systemData.abilities.str[a.damage.ability]*a.damage.scaleAbility);
-              break;
-            case 'foc':
-            case 'pow':
-              a.damage.total += '+' + Math.floor(systemData.abilities.dex[a.damage.ability]*a.damage.scaleAbility);
-              break;
-            default:
-              a.damage.total += '+' + Math.floor(systemData.abilities[a.damage.ability].mod*a.damage.scaleAbility);
+          if(a.damage.total != '' && context.actor.abilityMod(a.damage.ability) != 0) {
+            if (context.actor.abilityMod(a.damage.ability) >0) a.damage.total += '+';
           }
-          for (let m of a.damage.mods){
-            a.damage.total += '+' + m.value;
+          if ((Math.floor(context.actor.abilityMod(a.damage.ability)*a.damage.scaleAbility)) >0)a.damage.total += Math.floor(context.actor.abilityMod(a.damage.ability)*a.damage.scaleAbility);
+          for (let [,d] of Object.entries(a.damage.mods)){
+            if (a.damage.total != '' && d.value != '' && !d.value.startsWith('-')) a.damage.total += '+';
+            a.damage.total += d.value;
           }
           // Calculate item recoil
           a.recoil.total = a.recoil.attack;
-          for (let m of a.recoil.mods){
-            a.recoil.total += m.value;
+          for (let [,r] of Object.entries(a.recoil.mods)){
+            a.recoil.total += r.value;
           }
           // Calculate item CP
           a.cp.total = a.cp.attack;
-          for (let m of a.cp.mods){
-            a.cp.total += m.value;
+          for (let [,c] of Object.entries(a.cp.mods)){
+            a.cp.total += c.value;
           }
           // Add BAB and recoil reduction
           a.hit.total += systemData.stats.bab.value;
@@ -409,7 +402,8 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-delete').click(this._onItemDelete.bind(this));
     // Edit an Item's values from the Actor Sheet
     html.find('.item-input').change(this._onItemInput.bind(this));
-    html.find('.item-checkbox').click(this._onItemCheckbox.bind(this));
+    html.find('.item-checkbox').change(this._onItemCheckbox.bind(this));
+    html.find('.item-toggle').click(this._onItemToggle.bind(this));
     // Apply Incoming Damage to Armor or Hit Points
     html.find('.apply-damage').click(this._onApplyDamage.bind(this));
     // Actor Sheet Rolls
@@ -486,9 +480,17 @@ export class OpsActorSheet extends ActorSheet {
     const dataset = event.currentTarget.dataset;
     const targetId = dataset.targetId;
     const targetProp = dataset.targetProp;
-    let value=true;
-    if(dataset.value=='true') value=false;
+    let value = (dataset.value === 'false');
     const item = this.actor.items.get(targetId);
+    await item.update({[targetProp]:value});
+  }
+  async _onItemToggle(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    const targetId = dataset.targetId;
+    const targetProp = dataset.targetProp;
+    const item = this.actor.items.get(targetId);
+    let value = !getProperty(item, targetProp);
     await item.update({[targetProp]:value});
   }
   async _onApplyDamage(event) {

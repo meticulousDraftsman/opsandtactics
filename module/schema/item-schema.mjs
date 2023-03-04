@@ -23,26 +23,27 @@ class Gear extends foundry.abstract.DataModel{
         }
     }
 };
+
 export class OpsSkill extends foundry.abstract.DataModel {
     static defineSchema(){
         return{
             description: new field.StringField(),
-            focus: new field.StringField({initial:"unfocus"}),
-            ability: new field.StringField({initial:"int"}),
             ranks: new field.NumberField({initial:0}),
-            armor: new field.BooleanField({initial:false}),
-            skillMods: new field.ArrayField(
-                new field.EmbeddedDataField(SkillMod)
-            )
+            ability: new field.StringField(),
+            focus: new field.StringField({initial:"unfocus"}),
+            armor: new field.SchemaField({
+                active: new field.BooleanField({initial:false}), 
+            }),
+            mods: new field.ObjectField({}),
         }
     };
 };
 export class SkillMod extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
-            name: new field.StringField({initial:"Source"}),
+            name: new field.StringField(),
             type: new field.StringField({initial:"misc"}),
-            value: new field.NumberField({initial:0,positive:false}),
+            value: new field.NumberField({positive:false}),
             active: new field.BooleanField({initial:true})
         }
     }
@@ -51,34 +52,19 @@ export class OpsArmor extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
             description: new field.StringField(),
-            layer: new field.NumberField({initial:1}),
+            layer: new field.StringField({initial:'worn'}),
             active: new field.BooleanField({initial:false}),
-            def: new field.SchemaField({
-                value: new field.NumberField({initial:0}),
-                active: new field.BooleanField({initial:true})
-            }),
-            agiMax: new field.SchemaField({
-                value: new field.NumberField({nullable:true,initial:null}),
-                active: new field.BooleanField({initial:true})
-            }),
-            penalty: new field.SchemaField({
-                value: new field.NumberField({initial:0}),
-                active: new field.BooleanField({initial:true})
-            }),
-            cpLoss: new field.SchemaField({
-                value: new field.NumberField({initial:0}),
-                active: new field.BooleanField({initial:true})
-            }),
-            protection: new field.ArrayField(
-                new field.EmbeddedDataField(Protection),
-                {initial:[]}
-            ),
-            dr: new field.NumberField({initial:0}),
+            def: new field.NumberField(),
+            agiMax: new field.NumberField(),
+            penalty: new field.NumberField(),
+            cpLoss: new field.NumberField(),
+            protection: new field.ObjectField(),
+            activeDR: new field.StringField(),
             ap: new field.SchemaField({
                 value: new field.NumberField({initial:0}),
                 max: new field.NumberField({initial:0})
             }),
-            proficient: new field.StringField({initial:"Untrained"}),
+            coolant: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear)
         }
     }
@@ -86,8 +72,8 @@ export class OpsArmor extends foundry.abstract.DataModel{
 export class Protection extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
-            name: new field.StringField({initial:"None"}),
-            value: new field.NumberField({initial:0})
+            name: new field.StringField(),
+            value: new field.NumberField()
         }
     }
 }
@@ -105,14 +91,8 @@ export class OpsWeapon extends foundry.abstract.DataModel{
                 max: new field.NumberField({initial:0})
             }),
             range: new field.StringField({initial:"5ft"}),
-            weaponMods: new field.ArrayField(
-                new field.EmbeddedDataField(WeaponMod),
-                {initial:[]}
-            ),
-            attacks: new field.ArrayField(
-                new field.EmbeddedDataField(Attack),
-                {initial:[new Attack]}
-            ),
+            weaponMods: new field.ObjectField(),
+            attacks: new field.ObjectField(),
             selectMod: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear)
         }
@@ -121,23 +101,12 @@ export class OpsWeapon extends foundry.abstract.DataModel{
 export class WeaponMod extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
-            id: new field.StringField(),
             name: new field.StringField({initial:"Source",nullable:false}),
             description: new field.StringField(),
             hit: new field.NumberField({initial:null,nullable:true}),
             damage: new field.StringField({initial:null,nullable:true}),
             recoil: new field.NumberField({initial:null,nullable:true}),
             cp: new field.NumberField({initial:null,nullable:true})
-        }
-    }
-}
-export class SelectMod extends foundry.abstract.DataModel{
-    static defineSchema(){
-        return{
-            hitCheck: new field.BooleanField({initial:false}),
-            damageCheck: new field.BooleanField({initial:false}),
-            recoilCheck: new field.BooleanField({initial:false}),
-            cpCheck: new field.BooleanField({initial:false})
         }
     }
 }
@@ -150,38 +119,22 @@ export class Attack extends foundry.abstract.DataModel{
             ammo: new field.NumberField({initial:0}),
             hit: new field.SchemaField({
                 attack: new field.NumberField(),
-                ability: new field.StringField({initial:"mrk"}),
-                mods: new field.ArrayField(
-                    new field.SchemaField({
-                        sourceID: new field.StringField()}),
-                    {initial:[]}
-                )
+                ability: new field.StringField(),
+                mods: new field.ObjectField()
             }),
             damage: new field.SchemaField({
                 attack: new field.StringField(),
                 ability: new field.StringField(),
                 scaleAbility: new field.NumberField({initial:1}),
-                mods: new field.ArrayField(
-                    new field.SchemaField({
-                        sourceID: new field.StringField()}),
-                    {initial:[]}
-                )
+                mods: new field.ObjectField()
             }),
             recoil: new field.SchemaField({
                 attack: new field.NumberField({initial:null,nullable:true}),
-                mods: new field.ArrayField(
-                    new field.SchemaField({
-                        sourceID: new field.StringField()}),
-                    {initial:[]}
-                )
+                mods: new field.ObjectField()
             }),
             cp: new field.SchemaField({
                 attack: new field.NumberField(),
-                mods: new field.ArrayField(
-                    new field.SchemaField({
-                        sourceID: new field.StringField()}),
-                    {initial:[]}
-                )
+                mods: new field.ObjectField()
             })
         }
     }

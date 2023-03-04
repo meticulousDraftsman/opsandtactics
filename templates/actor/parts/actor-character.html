@@ -58,12 +58,16 @@
       <li class="item grid grid-12col">
           <h4 class="grid-span-3 resource-label rollable" data-roll="3d6+{{item.mods.total}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{localize 'OATS.phrasing.check'}}">{{item.name}}</h4>
           <input class="" type="text" name="" value="{{item.mods.total}}" data-dtype="Number" readonly/>
-          <div class="">{{item.mods.ranks}}</div>
-          <div class="">{{item.mods.ability}}</div>
+          <div class="">{{item.system.ranks}}</div>
+          <div class="">{{item.system.ability.mod}}</div>
           <div class="">{{item.mods.equip}}</div>
           <div class="">{{item.mods.syn}}</div>
           <div class="">{{item.mods.occ}}</div>
-          <div class="">{{../system.armorPenalty}}</div>
+          <div class="">
+            {{#if item.system.armor.active}}
+              {{../system.stats.armorPenalty.value}}
+            {{/if}}
+          </div>  
           <div class="">{{item.mods.misc}}</div>
           <div>
             <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Skill Item"><i class="fas fa-edit"></i></a>
