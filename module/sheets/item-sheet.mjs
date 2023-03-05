@@ -153,7 +153,6 @@ export class OpsItemSheet extends ItemSheet {
   _subCreation(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
-    console.debug(this.object)
     const target = dataset.targetName;
     const preTarget = dataset?.preTarget;
     let systemData;
@@ -192,9 +191,7 @@ export class OpsItemSheet extends ItemSheet {
         updateData["system.gear.resources"] = subProperty;
         break;
     }
-    //console.debug(this.object)
     this.object.update(updateData);
-    console.debug(this.object)
   }
   _subDeletion(event){
     event.preventDefault();
@@ -263,6 +260,5 @@ export class OpsItemSheet extends ItemSheet {
     }
 
     this.object.update(updateData);
-    console.debug(this.object)
   }
 }

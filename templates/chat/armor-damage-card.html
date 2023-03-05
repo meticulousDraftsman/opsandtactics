@@ -1,16 +1,16 @@
 <div>
     <details>
-        {{#each damage}}
-        {{#if @first}}
         <summary class="grid grid-2col">
-            <span class="grid-span-2"><i class="fas fa-tasks"></i> {{this}}</span>
+            <span class="grid-span-2"><i class="fas fa-tasks"></i>Resolving {{title}} damage (x{{report.length}}).</span>
         </summary>
         <div>
-            <hr>
+            {{#each report}}
+            {{#if @last}}
+            </div>
+            </details>
+            {{this}}
             {{else}}
             {{this}}<br>
             {{/if}}
             {{/each}}
-        </div>
-    </details>
 </div>

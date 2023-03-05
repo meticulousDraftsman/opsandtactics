@@ -72,7 +72,6 @@ export class OpsActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     const systemData = context.system;
-    //console.debug('break')
     // Tally skill modifiers
     for (let i of context.skills){
       i.mods = {equip: 0, syn:0, occ:0, armor:0, misc:0};
@@ -81,7 +80,6 @@ export class OpsActorSheet extends ActorSheet {
       for (let [,mod] of Object.entries(i.system.mods)){
         if (mod.active) i.mods[mod.type] += mod.value;
       }
-      console.debug(i.system.ability)
       i.mods.total = i.system.ranks + context.actor.abilityMod(i.system.ability) + i.mods.equip + i.mods.syn + i.mods.occ + i.mods.armor + i.mods.misc;
     }
 
@@ -150,7 +148,7 @@ export class OpsActorSheet extends ActorSheet {
       i.img = i.img || DEFAULT_TOKEN;
       // Append skills.
       if (i.type === 'skill') {
-
+        i.system.abilityMod = context.actor.abilityMod(i.system.ability);
         skills.push(i);
       }
       // Append armor.
@@ -193,21 +191,16 @@ export class OpsActorSheet extends ActorSheet {
           }
           // Add BAB and recoil reduction
           a.hit.total += systemData.stats.bab.value;
-          a.recoil.total = Math.min(a.recoil.total+systemData.stats.recoil.value,0);
-          a.hit.total += a.recoil.total;
+          a.hit.total += Math.min(a.recoil.total+systemData.stats.recoil.value,0);
 
         }
-        
-          if(i.system.magazine.external || i.system.magazine.coolant){
-            if(i.system.magazine.loaded.source){
+        if(i.system.magazine.type != 'internal'){
+          if(i.system.magazine.loaded.source){
               let loadedMag = context.items.filter(item => item._id == i.system.magazine.loaded.source)[0];
               i.system.magazine.loaded.value = loadedMag.system.magazine.value;
               i.system.magazine.loaded.max = loadedMag.system.magazine.max;
-            }
-            else{
-              i.system.magazine.external=false;
-            }     
           }
+        }
         
         weapons.push(i);
       }
@@ -404,6 +397,8 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-input').change(this._onItemInput.bind(this));
     html.find('.item-checkbox').change(this._onItemCheckbox.bind(this));
     html.find('.item-toggle').click(this._onItemToggle.bind(this));
+    // Roll bleed dice and add them to incoming damage
+    html.find('.actor-bleed').click(this._onRollBleed.bind(this));
     // Apply Incoming Damage to Armor or Hit Points
     html.find('.apply-damage').click(this._onApplyDamage.bind(this));
     // Actor Sheet Rolls
@@ -493,123 +488,14 @@ export class OpsActorSheet extends ActorSheet {
     let value = !getProperty(item, targetProp);
     await item.update({[targetProp]:value});
   }
+  async _onRollBleed(event){
+    event.preventDefault();
+    this.actor.rollBleed();
+  }
   async _onApplyDamage(event) {
     event.preventDefault();
     const dataset = event.currentTarget.dataset 
-    const armorType = dataset.armorType;
-    const target = dataset.armorTarget;
-    const id = dataset.itemId;
-    let name=armorType;
-    if (armorType != 'xhp' && armorType != 'chp') {
-      name = this.actor.items.get(id).name || null;
-      if(!this.actor.items.get(id).system.active) return;
-    }
-    
-    const initial = dataset.armorValue;
-    const dr = dataset.armorDr;
-    let incoming = this.actor.system.health.incoming;
-    let damageReport = '';
-    const flavor = `Resolving ${incoming} incoming damage.`
-    let remaining = 0;
-    let reduce = 0;
-    if (incoming == 0) return;
-
-    if (armorType === 'shield'){
-      if (incoming <= dr){ // If DR meets or exceeds Plasma damage
-        damageReport = `${incoming} damage completely diffused by ${name}.`
-        incoming = 0; // Damage is nullified
-        remaining = initial; // Soak is unharmed
-      }
-      else{ // If plasma damage exceeds DR
-        damageReport = `${incoming} damage partially diffused,`;
-        incoming = incoming - dr; // reduce damage by DR
-        if(initial <= incoming){ // if remaining damage meets or exceeds soak
-          incoming = incoming - initial; // damage is reduced by remaining soak
-          remaining = 0; // soak is wiped out
-          damageReport = `${damageReport} ${name} is disabled with ${incoming} damage remaining.`
-        }
-        else{ // If soak exceeds plasma damage
-          remaining = initial - incoming; // soak is reduced by remaining damage
-          incoming = 0; // damage is expended
-          damageReport = `${damageReport} ${name} retains ${remaining} Soak.`
-        }
-      }
-    }
-
-    else if (armorType === 'chp'){ // No DR, no lower limit, all damage will be expended
-      remaining = initial - incoming; 
-      damageReport = `${incoming} damage suffered to core hit points, ${remaining} CHP remaining.`;
-      incoming = 0;
-    }
-    
-    else if (armorType === 'xhp'){ // No DR, can't go below zero
-      if (incoming <= initial){ // if damage is less than or equal to xhp
-        remaining = initial - incoming;
-        damageReport = `${incoming} damage suffered to extended hit points, ${remaining} XHP remaining.`;
-        incoming = 0;
-      }
-      else {
-        remaining = 0;
-        damageReport = `${incoming} damage empties extended hit points with`;
-        incoming = incoming - initial;
-        damageReport = `${damageReport} ${incoming} damage remaining.`;
-      }
-    }
-
-    else {
-      if(initial <= 0){ // If AP is completely empty
-        if (incoming <= dr){
-          damageReport = `${name} completely stops ${incoming} damage.`
-        }
-        else{
-          damageReport = `${name} reduces ${incoming} damage by ${Math.min(incoming,dr)}.`;
-        }
-        incoming = Math.max(0,incoming-dr); // simply apply dr to incoming damage
-      }
-      else { // If AP is nonzero
-        reduce = Math.min(dr,initial); // use lower of DR and AP for damage reduction
-        if (incoming <= reduce){ // If 'dr' meets or exceeds damage
-          remaining = initial - incoming; // ap is reduced by defeated damage
-          damageReport = `${incoming} damage stopped completely by ${name}, leaving ${remaining} AP.`;
-          incoming = 0; // no damage left
-        }
-        else{ //if damage exceeds effective dr
-          damageReport = `${name} reduces ${incoming} damage by ${reduce}, leaving`;
-          incoming = incoming - reduce; // damage is reduced by dr
-          remaining = initial - reduce; // ap is reduced by dr
-          damageReport = `${damageReport} ${remaining} AP and ${incoming} damage.`
-        }
-      }
-    }  
-  
-    if (id != null){ // if the DR is from an item
-      this.actor.items.get(id).update({[target]:remaining});
-    }
-    else { // If it was xhp or chp
-      this.actor.update({[target]:remaining});
-    }
-
-    const speaker = ChatMessage.getSpeaker({actor:this.actor});
-    const chatTemplate = "systems/opsandtactics/templates/chat/armor-damage-card.html";
-    if (this.actor.system.health.incomingReport.message=="" || this.actor.system.health.incomingReport.message!=ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id){
-      // If there's no existing chat message or existing chat message isn't most recent
-      const newReport = [flavor,damageReport];
-      const html = await renderTemplate(chatTemplate,{damage:newReport})
-      const chatReport = await ChatMessage.create({speaker:speaker,content:html})
-      await this.actor.update({"system.health.incomingReport.message":chatReport.id});
-      await this.actor.update({"system.health.incomingReport.log":newReport});
-    }
-    else {
-      // If there is an existing chat message
-      const newReport = this.actor.system.health.incomingReport.log
-      newReport.push(damageReport);
-      const chatReport = game.messages.get(this.actor.system.health.incomingReport.message)
-      const html = await renderTemplate(chatTemplate,{damage:newReport})
-      await chatReport.update({content:html});
-      await this.actor.update({"system.health.incomingReport.log":newReport});
-    }
-    if (incoming==0) await this.actor.update({"system.health.incomingReport.message":""})
-    await this.actor.update({"system.health.incoming":incoming});
+    const report = this.actor.applyDamage(dataset.target);
   };
   async _actorRoll(event){
     event.preventDefault();

@@ -27,12 +27,7 @@ class Health extends foundry.abstract.DataModel {
             notes: new field.StringField({initial:""}),
             bleed: new field.NumberField({initial:0}),
             incoming: new field.NumberField({initial:0}),
-            incomingReport: new field.SchemaField({
-                log: new field.ArrayField(
-                    new field.StringField({initial:""}),
-                    {initial:[]}),
-                message: new field.StringField({initial:""})
-            })
+            damageReport: new field.StringField({initial:""})
         }
     }
 };

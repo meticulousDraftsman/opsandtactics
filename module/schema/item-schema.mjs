@@ -62,7 +62,7 @@ export class OpsArmor extends foundry.abstract.DataModel{
             activeDR: new field.StringField(),
             ap: new field.SchemaField({
                 value: new field.NumberField({initial:0}),
-                max: new field.NumberField({initial:0})
+                max: new field.NumberField({initial:0,nullable:false})
             }),
             coolant: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear)
@@ -116,7 +116,8 @@ export class Attack extends foundry.abstract.DataModel{
             name: new field.StringField({initial:"Attack"}),
             description: new field.StringField(),
             display: new field.BooleanField({initial:true}),
-            ammo: new field.NumberField({initial:0}),
+            type: new field.StringField({initial:'ranged'}),
+            ammo: new field.NumberField(),
             hit: new field.SchemaField({
                 attack: new field.NumberField(),
                 ability: new field.StringField(),

@@ -46,7 +46,7 @@
     </li>
     {{#each item.system.attacks}}
     {{#if this.display}}
-    <li class="item grid grid-10col">
+    <li class="grid grid-10col">
         <a class="grid-start-3 grid-span-2">{{this.name}}</a>
         <input class="" type="text"value="{{this.hit.total}}" data-dtype="Number" readonly/>
         <div class="rollable grid-span-2" data-roll="{{this.damage.total}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{this.name}} damage!">{{this.damage.total}}</div>

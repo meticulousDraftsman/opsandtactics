@@ -45,20 +45,6 @@ export class OpsActor extends Actor {
     //console.debug('actor prepareDerivedData',this)
   }
 
-  abilityMod(source){
-    switch (source){
-      case '':
-          return 0;
-      case 'foc':
-      case 'pow':
-          return this.system.abilities.str[source] ?? 0;
-      case 'mrk':
-      case 'agi':
-          return this.system.abilities.dex[source] ?? 0;
-      default:
-          return this.system.abilities[source].mod ?? 0;
-  }  
-  }
 
   /**
    * Prepare Character type specific data
@@ -72,7 +58,7 @@ export class OpsActor extends Actor {
     // Make modifications to data here. For example:
     const systemData = actorData.system;
 
-    // Loop through equipped armor and determine impact before calculating ability modifiers
+    // Loop through active armor and determine impact before calculating ability modifiers
     // Start with mods from active effects
     systemData.def.equip.value = systemData.def.equip.total;
     systemData.stats.armorPenalty.value = systemData.stats.armorPenalty.total;
@@ -164,6 +150,176 @@ export class OpsActor extends Actor {
   modSum(obj){
     return Object.values(obj).reduce((a,b)=>a+b,0);
   }
+  /**
+   * Fetch a given ability modifier from the actor
+   * @param {String} source The desired ability
+   * @returns {Number} The ability's modifier
+   */
+  abilityMod(source){
+    switch (source){
+      case '':
+          return 0;
+      case 'foc':
+      case 'pow':
+          return this.system.abilities.str[source] ?? 0;
+      case 'mrk':
+      case 'agi':
+          return this.system.abilities.dex[source] ?? 0;
+      default:
+          return this.system.abilities[source].mod ?? 0;
+    }  
+  }
+  /**
+   * Roll a d3 for each bleed die on a character and add the result to the incoming damage.
+   */
+  async rollBleed(){
+    const updateData = {};
+    let r = await new Roll(`${this.system.health.bleed}d3`).evaluate({async:true})
+    r.toMessage({
+      speaker: ChatMessage.getSpeaker({actor: this.actor}),
+      flavor:'Bleeding out...',
+      rollMode: game.settings.get('core', 'rollMode')
+    })
+    updateData['system.health.incoming'] = this.system.health.incoming + r.total;
+    this.update(updateData);
+  }
+  /**
+   * Takes damage and applies it to the targeted protection
+   * @param {String} target item id or actor health pool to apply damage to
+   */
+  async applyDamage(target){
+    console.debug(this.system.health.damageReport)
+    console.debug(ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id)
+    let incoming = this.system.health.incoming;
+    const initial = incoming;
+    if (incoming == 0) return null;
+    const actorUpdateData = {};
+    const itemUpdateData = {};
+    const chatTemplate = "systems/opsandtactics/templates/chat/armor-damage-card.html";
+    let oldReport;
+    let chatReport;
+    let type = '';
+    let remaining = 0;
+    let dr = 0;
+    let reduced = 0;
+    let report = ``;
+    let max = -1;
+    let drItem;
+    // Gather dr and pool data from target
+    switch(target){
+      case 'xhp':
+      case 'chp':
+        remaining = this.system.health[target].value;
+        type = target;
+        break;
+      default:
+        if (this.items.get(target) == undefined) return null;
+        drItem = this.items.get(target);
+        remaining = drItem.system.ap.value;        
+        max = drItem.system.ap.max;
+        dr = drItem.system.protection[drItem.system.activeDR]?.value ?? 0;
+        if(dr==0) return;
+        type = drItem.system.layer;
+        break;
+    }
+    // Apply damage depending on protection type and generate message
+    switch(type){
+      case 'chp':
+        remaining -= incoming;
+        report = `Core hit points take ${incoming} damage, ${remaining} CHP remains.`
+        incoming = 0;
+        setProperty(actorUpdateData,'system.health.chp.value',remaining);
+        break;
+      case 'xhp':
+        if(remaining == 0) return null;
+        reduced = Math.min(incoming,remaining);
+        remaining -= reduced;
+        incoming -= reduced;
+        if(incoming >= 0){
+          report = `Extended hit points emptied by ${reduced} damage, ${incoming} damage remains.`;
+        }
+        else{
+          report = `Extended hit points take ${reduced} damage, ${remaining} XHP remains.`
+        }
+        setProperty(actorUpdateData,'system.health.xhp.value',remaining);
+        break;
+      case 'shield':
+        if (max == 0) break;
+        if(remaining == 0) return null;
+        if (incoming <= dr){
+          report = `${drItem.name} diffuses damage completely.`
+          incoming = 0;
+        }
+        else{
+          reduced = Math.min(incoming-dr,remaining);
+          remaining -= reduced;
+          incoming -= (reduced+dr);
+          if(remaining == 0){
+            report = `${drItem.name} reduces damage by${reduced+dr} and is disabled, ${incoming} damage remains.`
+          }
+          else{
+            report = `${drItem.name} reduces damage to nothing, ${remaining} soak remains.`
+          }
+          setProperty(itemUpdateData,'system.ap.value',remaining);
+        }
+        break;
+      default:
+        if (max == 0) break;
+        if(remaining == 0) return null;
+        reduced = Math.min(incoming,Math.min(dr,remaining));
+        remaining -= reduced;
+        incoming -= reduced;
+        if(remaining == 0){
+          report = `${drItem.name} reduces damage by ${reduced} and is depleted, ${incoming} damage remains.`
+        }
+        else{
+          report = `${drItem.name} reduces damage by ${reduced}, ${incoming} damage and ${remaining} AP remains`
+        }
+        setProperty(itemUpdateData,'system.ap.value',remaining);
+        break;
+    }
+    // Apply non-health protection without defined AP/Soak as pure DR
+    if (max == 0){
+      reduced = Math.min(incoming,dr);
+      incoming -= reduced;
+      if (incoming > 0){
+        report = `${drItem.name} reduces damage by ${reduced}, ${incoming} damage remains.`
+      }
+      else{
+        report = `${drItem.name} reduces damage to nothing.`;
+      }
+    }
+    setProperty(actorUpdateData,'system.health.incoming',incoming);
+    // Create a new message if there's no existing one or the existing one isn't the most recent
+    if (this.system.health.damageReport == '' || this.system.health.damageReport!=ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id){
+      const speaker = ChatMessage.getSpeaker({actor:this.actor});
+      const rollMode = game.settings.get('core', 'rollMode');
+      chatReport = await ChatMessage.create({speaker:speaker,rollMode:rollMode});
+      setProperty(actorUpdateData,'system.health.damageReport',chatReport.id);
+      await chatReport.setFlag('opsandtactics','report',{initial:initial,reports:[report]});
+    }
+    // If an existing message is most recent, add the new report to its list
+    else{
+      chatReport = game.messages.get(this.system.health.damageReport)
+      oldReport = await chatReport.getFlag('opsandtactics','report');
+      oldReport.reports.push(report);
+      await chatReport.setFlag('opsandtactics','report',oldReport);
+    }
+    console.debug(chatReport)
+    // Update the chat message based on its flags
+    let messReports = await chatReport.getFlag('opsandtactics','report');
+    const html = await renderTemplate(chatTemplate,{title:messReports.initial,report:messReports.reports})
+    console.debug(html)
+    await chatReport.update({content:html});
+    // Detach the chat message if all incoming damage is dealt with
+    if(incoming==0) setProperty(actorUpdateData,'system.health.damageReport','');
+    // Update target with new remaining value and actor with new incoming value
+    this.update(actorUpdateData);
+    if(!isEmpty(itemUpdateData)) drItem.update(itemUpdateData);
+    console.debug(report);
+    return report;
+  }
+  
 
   /**
    * Override getRollData() that's supplied to rolls.
