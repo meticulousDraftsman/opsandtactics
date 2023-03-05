@@ -5,8 +5,8 @@
     <div class="flexrow">
       <div class="profile-img flex-group-center">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
-        <label for="system.level.value" class="">Level {{system.level.value}}</label>
-        <label for="system.level.xp.value" class="">{{system.level.xp.value}}/{{system.level.xp.need}}xp</label>
+        <label for="system.level.value" class="">Level {{system.stats.level.value}}</label>
+        <label for="system.level.xp.value" class="">{{system.stats.level.xp.needed}}</label>
       </div>
       <div class="header-fields">
         <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>

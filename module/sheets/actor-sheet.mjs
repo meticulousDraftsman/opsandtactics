@@ -72,6 +72,8 @@ export class OpsActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     const systemData = context.system;
+    // Determine XP required for the next level
+    systemData.stats.level.xp.needed =`${Number(systemData.stats.level.xp.value).toLocaleString()}/${Number(systemData.stats.level.value*systemData.stats.level.value*1500).toLocaleString()}xp`;
     // Tally skill modifiers
     for (let i of context.skills){
       i.mods = {equip: 0, syn:0, occ:0, armor:0, misc:0};
@@ -134,7 +136,7 @@ export class OpsActorSheet extends ActorSheet {
       inactive: {
         items:[],
         label: 'Inactive Protection',
-        icon: ''
+        icon: 'fas fa-expand'
       }
     }
     const weapons = [];
@@ -201,7 +203,6 @@ export class OpsActorSheet extends ActorSheet {
               i.system.magazine.loaded.max = loadedMag.system.magazine.max;
           }
         }
-        
         weapons.push(i);
       }
       // Handle Magazines

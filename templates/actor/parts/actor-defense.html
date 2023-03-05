@@ -57,7 +57,7 @@
   {{#each armors}}
     {{#if (or this.items.length (eq @key 'worn'))}}
       <li class="item grid grid-12col items-header">
-        <div class="grid-span-4" title="Click to toggle active state">{{this.label}}</div>
+        <div class="grid-span-4" >{{this.label}}</div>
         <div class="grid-span-4">Damage Reduction</div>
         {{#if (eq @key 'shield')}}
         <div class="grid-span-2">Soak</div>
@@ -70,7 +70,7 @@
     {{/if}}
     {{#each this.items}}
       <li class="grid grid-12col">
-        <a class="grid-span-4 item-toggle" data-target-prop="system.active" data-target-id="{{this._id}}">{{this.name}}</a>
+        <h4 class="grid-span-4">{{this.name}}</h4>
         <select class="grid-span-4 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" value="{{this.activeDR}}" data-dtype="Number">
           {{#select this.system.activeDR}}
             <option value="None">None</option>

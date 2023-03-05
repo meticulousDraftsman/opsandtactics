@@ -190,7 +190,7 @@ export class OpsActor extends Actor {
   async applyDamage(target){
     console.debug(this.system.health.damageReport)
     console.debug(ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id)
-    let incoming = this.system.health.incoming;
+    let incoming = this.system.health.incoming ?? 0;
     const initial = incoming;
     if (incoming == 0) return null;
     const actorUpdateData = {};
@@ -255,7 +255,7 @@ export class OpsActor extends Actor {
           remaining -= reduced;
           incoming -= (reduced+dr);
           if(remaining == 0){
-            report = `${drItem.name} reduces damage by${reduced+dr} and is disabled, ${incoming} damage remains.`
+            report = `${drItem.name} reduces damage by ${reduced+dr} and is disabled, ${incoming} damage remains.`
           }
           else{
             report = `${drItem.name} reduces damage to nothing, ${remaining} soak remains.`
@@ -312,7 +312,10 @@ export class OpsActor extends Actor {
     console.debug(html)
     await chatReport.update({content:html});
     // Detach the chat message if all incoming damage is dealt with
-    if(incoming==0) setProperty(actorUpdateData,'system.health.damageReport','');
+    if(incoming==0){
+      setProperty(actorUpdateData,'system.health.damageReport','');
+      setProperty(actorUpdateData,'system.health.incoming',null);
+    }
     // Update target with new remaining value and actor with new incoming value
     this.update(actorUpdateData);
     if(!isEmpty(itemUpdateData)) drItem.update(itemUpdateData);
