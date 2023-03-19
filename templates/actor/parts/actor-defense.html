@@ -55,7 +55,6 @@
 
 <ol class="items-list flex-group-center">
   {{#each armors}}
-    {{#if (or this.items.length (eq @key 'worn'))}}
       <li class="item grid grid-12col items-header">
         <div class="grid-span-4" >{{this.label}}</div>
         <div class="grid-span-4">Damage Reduction</div>
@@ -67,7 +66,6 @@
         <div>Apply</div>
         <a class="item-control item-create" title="Create armor" data-type="armor" data-layer={{@key}} data-active="true"><i class="fas fa-plus"></i></a>
       </li>      
-    {{/if}}
     {{#each this.items}}
       <li class="grid grid-12col">
         <h4 class="grid-span-4">{{this.name}}</h4>

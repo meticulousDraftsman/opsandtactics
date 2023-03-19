@@ -314,6 +314,12 @@ export class OpsActorSheet extends ActorSheet {
         magic.push(i);
       }
     }
+
+    // Purge Empty Armor Layers
+    for (let [key,layer] of Object.entries(armors)){
+      if (layer.items.length==0 && key != 'worn') delete armors[key];
+    }    
+
     // Crazy Container Nesting
     const locations = ["Loose","Worn","Carried","Stored"];
     // Initialize children of layer 0 items
