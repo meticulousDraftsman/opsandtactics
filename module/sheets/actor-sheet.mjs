@@ -82,6 +82,17 @@ export class OpsActorSheet extends ActorSheet {
       for (let [,mod] of Object.entries(i.system.mods)){
         if (mod.active) i.mods[mod.type] += mod.value;
       }
+      let labelParts = [
+        (i.system.ranks ? `${i.system.ranks} Ranks` : 'null'),
+        (context.actor.abilityMod(i.system.ability) ? `${context.actor.abilityMod(i.system.ability)<0 ? '' : '+'}${context.actor.abilityMod(i.system.ability)} ${i.system.ability.toUpperCase()}` : 'null'),
+        (i.mods.equip ? `${i.mods.equip<0 ? '' : '+'}${i.mods.equip} Equipment` : 'null'),
+        (i.mods.syn ? `${i.mods.syn<0 ? '' : '+'}${i.mods.syn} Synergy` : 'null'),
+        (i.mods.occ ? `${i.mods.occ<0 ? '' : '+'}${i.mods.occ} Occupation` : 'null'),
+        (i.mods.armor ? `${i.mods.armor<0 ? '' : '+'}${i.mods.armor} Armor` : 'null'),
+        (i.mods.misc ? `${i.mods.misc<0 ? '' : '+'}${i.mods.misc} Misc.` : 'null'),
+      ]
+      labelParts = labelParts.filter(part => part != 'null');
+      i.mods.label = labelParts.join(', ') || 'No Modifiers';
       i.mods.total = i.system.ranks + context.actor.abilityMod(i.system.ability) + i.mods.equip + i.mods.syn + i.mods.occ + i.mods.armor + i.mods.misc;
     }
 
