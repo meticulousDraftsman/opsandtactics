@@ -67,7 +67,7 @@
         <a class="item-control item-create" title="Create armor" data-type="armor" data-layer={{@key}} data-active="true"><i class="fas fa-plus"></i></a>
       </li>      
     {{#each this.items}}
-      <li class="grid grid-12col">
+      <li class="item grid grid-12col" data-item-id="{{this._id}}">
         <h4 class="grid-span-4">{{this.name}}</h4>
         <select class="grid-span-4 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" value="{{this.activeDR}}" data-dtype="Number">
           {{#select this.system.activeDR}}

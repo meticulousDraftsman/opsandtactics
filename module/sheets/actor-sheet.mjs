@@ -146,7 +146,7 @@ export class OpsActorSheet extends ActorSheet {
     const magic = [];
 
     // Iterate through items, allocating to containers
-    for (let i of context.actor.items) {
+    for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append skills.
       if (i.type === 'skill') {

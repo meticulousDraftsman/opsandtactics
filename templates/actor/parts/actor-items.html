@@ -47,7 +47,7 @@
       {{/if}}
     </li>
     {{#each this as |item id|}}
-      <li class="item grid grid-10col">
+      <li class="item grid grid-10col" data-item-id="{{item._id}}">
         <div class="item-name grid-span-3">
           <div class="item-image">
             <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
@@ -67,7 +67,7 @@
         </div>
       </li>
       {{#each this.children as |item id|}}
-        <li class="item grid grid-10col">
+        <li class="item grid grid-10col" data-item-id="{{item._id}}">
           <div class="item-name grid-start-2 grid-span-3">
             <div class="item-image">
               <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
@@ -87,7 +87,7 @@
           </div>
         </li>
         {{#each this.children as |item id|}}
-          <li class="item grid grid-10col">
+          <li class="item grid grid-10col" data-item-id="{{item._id}}">
             <div class="item-name grid-start-3 grid-span-3">
               <div class="item-image">
                 <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
@@ -107,7 +107,7 @@
             </div>
           </li>
           {{#each this.children as |item id|}}
-            <li class="item grid grid-10col">
+            <li class="item grid grid-10col" data-item-id="{{item._id}}">
               <div class="item-name grid-start-4 grid-span-3">
                 <div class="item-image">
                   <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>

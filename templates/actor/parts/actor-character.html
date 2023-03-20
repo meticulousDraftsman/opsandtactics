@@ -3,39 +3,42 @@
     {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
     use both the "grid" and "grid-Ncol" class where "N" can be any number
     from 1 to 12 and will create that number of columns.  --}}
-    <div class="items-header resource-label flex-group-center">Ability Scores</div>
-    <div class="abilities flex-group-center grid grid-4col">
-      {{#each system.abilities as |ability|}}
-      <a class="resource-label rollable" data-roll="3d6+{{ability.mod}}" data-label="{{@key}}">{{localize (concat "OATS.abilityShort." @key)}}</a>
-      <input type="text" name="system.abilities.{{@key}}.score" value="{{ability.score}}" data-dtype="Number"/>
-      <input class="grid-start-4" type="text" name="system.abilities.{{@key}}.mod" value="{{ability.mod}}" data-dtype="Number" readonly/>
-      {{#if (eq @key "str")}}
-      <a class="resource-label rollable" data-roll="3d6+{{ability.foc}}" data-label="foc">{{localize "OATS.abilityShort.foc"}}</a>
-      <input type="text" name="system.abilities.str.foc" value="{{ability.foc}}" data-dtype="Number"/>
-      <a class="resource-label rollable" data-roll="3d6+{{ability.pow}}" data-label="pow">{{localize "OATS.abilityShort.pow"}}</a>
-      <input type="text" name="system.abilities.str.pow" value="{{ability.pow}}" data-dtype="Number" readonly/>
-      {{/if}}
-      {{#if (eq @key "dex")}}
-      <a class="resource-label rollable" data-roll="3d6+{{ability.mrk}}" data-label="mrk">{{localize "OATS.abilityShort.mrk"}}</a>
-      <input type="text" name="system.abilities.dex.mrk" value="{{ability.mrk}}" data-dtype="Number"/>
-      <a class="resource-label rollable" data-roll="3d6+{{ability.agi}}" data-label="agi">{{localize "OATS.abilityShort.agi"}}</a>
-      <input type="text" name="system.abilities.dex.agi" value="{{ability.agi}}" data-dtype="Number" readonly/>
-      {{/if}}
-      {{/each}}
-    </div>
-    
-    <div class="items-header resource-label flex-group-center">Saving Throws</div>
-    <div class="saves flex-group-center grid grid-4col">
-      {{#each system.saves as |save|}}
-      <a class="resource-label rollable grid-span-2" data-roll="3d6+{{save.value}}" data-label="{{@key}}">{{localize (concat "OATS.saves." @key)}}</a>
-      <input type="text" name="system.saves.{{@key}}.value" value="{{save.value}}" data-dtype="Number" readonly/>
-      <span></span>
-      <div>Base</div>
-      <input type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
-      <div>Misc</div>
-      <input type="text" name="system.saves.{{@key}}.mods.misc" value="{{save.mods.misc}}" data-dtype="Number"/>
-      {{/each}}
-    </div>
+    <fieldset>
+      <legend class="resource-label">Ability Scores</legend>
+      <div class="abilities flex-group-center grid grid-4col">
+        {{#each system.abilities as |ability|}}
+        <a class="resource-label rollable" data-roll="3d6+{{ability.mod}}" data-label="{{@key}}">{{localize (concat "OATS.abilityShort." @key)}}</a>
+        <input type="text" name="system.abilities.{{@key}}.score" value="{{ability.score}}" data-dtype="Number"/>
+        <input class="grid-start-4" type="text" name="system.abilities.{{@key}}.mod" value="{{ability.mod}}" data-dtype="Number" readonly/>
+        {{#if (eq @key "str")}}
+        <a class="resource-label rollable" data-roll="3d6+{{ability.foc}}" data-label="foc">{{localize "OATS.abilityShort.foc"}}</a>
+        <input type="text" name="system.abilities.str.foc" value="{{ability.foc}}" data-dtype="Number"/>
+        <a class="resource-label rollable" data-roll="3d6+{{ability.pow}}" data-label="pow">{{localize "OATS.abilityShort.pow"}}</a>
+        <input type="text" name="system.abilities.str.pow" value="{{ability.pow}}" data-dtype="Number" readonly/>
+        {{/if}}
+        {{#if (eq @key "dex")}}
+        <a class="resource-label rollable" data-roll="3d6+{{ability.mrk}}" data-label="mrk">{{localize "OATS.abilityShort.mrk"}}</a>
+        <input type="text" name="system.abilities.dex.mrk" value="{{ability.mrk}}" data-dtype="Number"/>
+        <a class="resource-label rollable" data-roll="3d6+{{ability.agi}}" data-label="agi">{{localize "OATS.abilityShort.agi"}}</a>
+        <input type="text" name="system.abilities.dex.agi" value="{{ability.agi}}" data-dtype="Number" readonly/>
+        {{/if}}
+        {{/each}}
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="resource-label">Saving Throws</legend>
+      <div class="saves flex-group-center grid grid-4col">
+        {{#each system.saves as |save|}}
+        <a class="resource-label rollable grid-span-2" data-roll="3d6+{{save.value}}" data-label="{{@key}}">{{localize (concat "OATS.saves." @key)}}</a>
+        <input type="text" name="system.saves.{{@key}}.value" value="{{save.value}}" data-dtype="Number" readonly/>
+        <span></span>
+        <div>Base</div>
+        <input type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
+        <div>Misc</div>
+        <input type="text" name="system.saves.{{@key}}.mods.misc" value="{{save.mods.misc}}" data-dtype="Number"/>
+        {{/each}}
+      </div>
+    </fieldset>
   </aside>
 
   {{!-- For the main features list, span the right two columns --}}
@@ -55,7 +58,7 @@
         <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
       </li>
       {{#each skills as |item id|}}
-      <li class="item grid grid-12col">
+      <li class="item grid grid-12col" data-item-id="{{item._id}}">
           <h4 class="grid-span-3 resource-label rollable" data-roll="3d6+{{item.mods.total}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{localize 'OATS.phrasing.check'}}">{{item.name}}</h4>
           <input class="" type="text" name="" value="{{item.mods.total}}" data-dtype="Number" readonly/>
           <div class="">{{item.system.ranks}}</div>
@@ -72,7 +75,6 @@
           <div>
             <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Skill Item"><i class="fas fa-edit"></i></a>
           </div>
-          
       </li>
       {{/each}}
     </ol>

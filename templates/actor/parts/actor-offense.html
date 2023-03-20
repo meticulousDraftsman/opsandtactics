@@ -5,7 +5,7 @@
         <a class="grid-start-10 item-control item-create" title="Create Weapon" data-type="weapon"><i class="fas fa-plus"></i></a>
     </li>
     {{#each weapons as |item id|}}
-    <li class="item grid grid-10col items-header">
+    <li class="item grid grid-10col items-header" data-item-id="{{item._id}}">
         <div class="grid-span-2">
             {{item.name}}
         </div>
