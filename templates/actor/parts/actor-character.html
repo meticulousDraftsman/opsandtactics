@@ -29,9 +29,7 @@
       <legend class="resource-label">Saving Throws</legend>
       <div class="saves flex-group-center grid grid-4col">
         {{#each system.saves as |save|}}
-        <a class="resource-label rollable grid-span-2" data-roll="3d6+{{save.value}}" data-label="{{@key}}">{{localize (concat "OATS.saves." @key)}}</a>
-        <input type="text" name="system.saves.{{@key}}.value" value="{{save.value}}" data-dtype="Number" readonly/>
-        <span></span>
+        <a class="resource-label rollable grid-span-4" data-roll="3d6+{{save.value}}" data-label="{{@key}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a>
         <div>Base</div>
         <input type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
         <div>Misc</div>
@@ -44,40 +42,18 @@
   {{!-- For the main features list, span the right two columns --}}
   <section class="main grid-span-3">
     {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
-    <ol class="items-list flex-group-center">
-      <li class="item items-header resource-label grid grid-12col">
-        <div class="grid-span-3">Skill</div>
-        <div class="">Mod</div>
-        <div class="">{{localize "OATS.skills.ranks"}}</div>
-        <div class="">Abil</div>
-        <div class="">Equip</div>
-        <div class="">Syn</div>
-        <div class="">Occ</div>
-        <div class="">Arm</div>
-        <div class="">Misc</div>
-        <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
-      </li>
-      {{#each skills as |item id|}}
-      <li class="item grid grid-12col" data-item-id="{{item._id}}">
-          <h4 class="grid-span-3 resource-label rollable" data-roll="3d6+{{item.mods.total}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{localize 'OATS.phrasing.check'}}">{{item.name}}</h4>
-          <input class="" type="text" name="" value="{{item.mods.total}}" data-dtype="Number" readonly/>
-          <div class="">{{item.system.ranks}}</div>
-          <div class="">{{item.system.abilityMod}}</div>
-          <div class="">{{item.mods.equip}}</div>
-          <div class="">{{item.mods.syn}}</div>
-          <div class="">{{item.mods.occ}}</div>
-          <div class="">
-            {{#if item.system.armor.active}}
-              {{../system.stats.armorPenalty.value}}
-            {{/if}}
-          </div>  
-          <div class="">{{item.mods.misc}}</div>
-          <div>
+    <fieldset>
+      <legend class="resource-label">Skills <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a></legend>
+      <ol>
+        {{#each skills as |item id|}}
+        <li class="item flex-group-center" style="display:inline-block;" data-item-id="{{item._id}}">
+          <fieldset>
+            <a class="rollable resource-label" title="{{item.mods.label}}">{{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}} {{item.name}}</a>
             <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Skill Item"><i class="fas fa-edit"></i></a>
-          </div>
-      </li>
-      {{/each}}
-    </ol>
+          </fieldset> 
+        </li>
+        {{/each}}     
+    </fieldset>
   </section>
 
 </section>
