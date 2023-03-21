@@ -235,12 +235,22 @@
   width:100%
 }
 
-select{
+.opsandtactics select{
   width:100%
 }
 
-input[readonly]{
+.opsandtactics input[readonly]{
   background:#dad8cc;
+}
+
+.opsandtactics .skill{
+  display: inline-block;
+}
+
+.opsandtactics .skill > fieldset{
+  background: rgba(0, 0, 0, 0.05);
+  border-style: outset;
+  border-radius: 3px;
 }
 
 .opsandtactics .item-form {

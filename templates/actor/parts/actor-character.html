@@ -29,7 +29,8 @@
       <legend class="resource-label">Saving Throws</legend>
       <div class="saves flex-group-center grid grid-4col">
         {{#each system.saves as |save|}}
-        <a class="resource-label rollable grid-span-4" data-roll="3d6+{{save.value}}" data-label="{{@key}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a>
+        <a class="resource-label rollable grid-span-3" data-roll="3d6{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" data-label="{{localize (concat 'OATS.saves.' @key)}}">{{localize (concat "OATS.saves." @key)}}</a>
+        <input type="text" value="{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" readonly/>
         <div>Base</div>
         <input type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
         <div>Misc</div>
@@ -46,9 +47,9 @@
       <legend class="resource-label">Skills <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a></legend>
       <ol>
         {{#each skills as |item id|}}
-        <li class="item flex-group-center" style="display:inline-block;" data-item-id="{{item._id}}">
+        <li class="item skill flex-group-center" data-item-id="{{item._id}}">
           <fieldset>
-            <a class="rollable resource-label" title="{{item.mods.label}}">{{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}} {{item.name}}</a>
+            <a class="rollable resource-label" data-roll="3d6{{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}}" data-label="{{item.name}}" title="{{item.mods.label}}">{{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}} {{item.name}}</a>
             <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Skill Item"><i class="fas fa-edit"></i></a>
           </fieldset> 
         </li>
