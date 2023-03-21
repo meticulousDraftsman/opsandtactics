@@ -83,6 +83,49 @@ export class OpsItem extends Item {
     }
   }
 
+  attackSum(sourceAttack){
+    const mods = {
+      hit: sourceAttack.hit.attack,
+      damageParts: [sourceAttack.damage.attack || null],
+      recoil: Math.min(sourceAttack.recoil.attack,0),
+      reduction: Math.max(sourceAttack.recoil.attack,0), //Just in case there's some weird attack that has inherent recoil reduction
+      cp: sourceAttack.cp.attack
+    };
+    if (this.actor){
+      mods.hit += this.actor.system.stats.bab.value + this.actor.abilityMod(sourceAttack.hit.ability);
+      mods.damageParts.push(Math.floor(this.actor.abilityMod(sourceAttack.damage.ability)*sourceAttack.damage.scaleAbility) ? `${Math.floor(this.actor.abilityMod(sourceAttack.damage.ability)*sourceAttack.damage.scaleAbility)>0 ? '+' : ''}${Math.floor(this.actor.abilityMod(sourceAttack.damage.ability)*sourceAttack.damage.scaleAbility)}` : null);
+      if (this.actor.system.stats.recoil.value>0){
+        mods.reduction += this.actor.system.stats.recoil.value;
+      }
+      else {
+        mods.recoil += this.actor.system.stats.recoil.value;
+      }
+    }
+    for (let [,h] of Object.entries(sourceAttack.hit.mods)){
+      mods.hit += h.value;
+    }
+    for (let [,d] of Object.entries(sourceAttack.damage.mods)){
+      mods.damageParts.push(d.value ? `${d.value>0 ? '+' : ''}${d.value}` : null);
+    }
+    for (let [,r] of Object.entries(sourceAttack.recoil.mods)){
+      if (r.value > 0){
+        mods.reduction += r.value;
+      }
+      else {
+        mods.recoil += r.value;
+      }
+    }
+    for (let [,c] of Object.entries(sourceAttack.cp.mods)){
+      mods.cp += c.value;
+    }
+    mods.hitTotal = mods.hit + Math.min(mods.recoil+mods.reduction,0);
+    mods.damageParts = mods.damageParts.filter(part => part != null);
+    mods.damageTotal = mods.damageParts.join('') || null;
+    if (mods.damageTotal.charAt(0) == '+') mods.damageTotal = mods.damageTotal.substring(1);
+    console.debug(mods)
+    return mods;
+  }
+
   /**
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private

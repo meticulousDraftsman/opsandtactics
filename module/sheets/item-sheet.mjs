@@ -65,27 +65,7 @@ export class OpsItemSheet extends ItemSheet {
       }
 
       for(let [,a] of Object.entries(itemData.system.attacks)){
-        a.hit.total = a.hit.attack + (actor?.abilityMod(a.hit.ability) ?? 0);
-        for (let [,h] of Object.entries(a.hit.mods)){
-          a.hit.total += h.value;
-        }
-        a.damage.total = a.damage.attack;
-        if(a.damage.total != '' && actor?.abilityMod(a.damage.ability) != 0) {
-          if (actor?.abilityMod(a.damage.ability) >0) a.damage.total += '+';
-        }
-        if ((Math.floor((actor?.abilityMod(a.damage.ability) ?? 0)*a.damage.scaleAbility)) > 0) a.damage.total += Math.floor((actor?.abilityMod(a.damage.ability) ?? 0)*a.damage.scaleAbility);
-        for (let [,d] of Object.entries(a.damage.mods)){
-          if (a.damage.total != '' && d.value != '' && !d.value.startsWith('-')) a.damage.total += '+';
-          a.damage.total += d.value;
-        }
-        a.recoil.total = a.recoil.attack;
-        for (let [,r] of Object.entries(a.recoil.mods)){
-          a.recoil.total += r.value;
-        }
-        a.cp.total = a.cp.attack;
-        for (let [,c] of Object.entries(a.cp.mods)){
-          a.cp.total += c.value;
-        }
+        a.mods = context.item.attackSum(a);
       }
     }
     const sourceMagics = [{name:"None",id:""}];

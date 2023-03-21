@@ -48,9 +48,9 @@
     {{#if this.display}}
     <li class="grid grid-10col">
         <a class="grid-start-3 grid-span-2">{{this.name}}</a>
-        <input class="" type="text"value="{{this.hit.total}}" data-dtype="Number" readonly/>
-        <div class="rollable grid-span-2" data-roll="{{this.damage.total}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{this.name}} damage!">{{this.damage.total}}</div>
-        <div>{{this.cp.total}}</div>
+        <input class="" type="text"value="{{this.mods.hitTotal}}" data-dtype="Number" readonly/>
+        <div class="rollable grid-span-2" data-roll="{{this.mods.damageTotal}}" data-label="{{localize 'OATS.phrasing.rolling'}} {{item.name}} {{this.name}} damage!">{{this.mods.damageTotal}}</div>
+        <div>{{this.mods.cp}}</div>
         <div>{{this.ammo}}</div>
     </li>
     {{/if}}

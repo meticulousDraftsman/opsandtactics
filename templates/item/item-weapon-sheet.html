@@ -156,10 +156,10 @@
                     <input name="system.attacks{{@key}}.description" value="{{this.description}}" type="text" data-dtype="String">
                 </li>
                 <li class="item grid grid-4col flex-group-center">
-                    <button class="item-control sub-create" data-target-name="hit" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.hit.total}}</button>
-                    <button class="item-control sub-create" data-target-name="damage" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage:{{this.damage.total}}</button>
-                    <button class="item-control sub-create" data-target-name="recoil" data-pre-target="{{@key}}" title="Add Recoil Modifier">Recoil: {{this.recoil.total}}</button>
-                    <button class="item-control sub-create" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.cp.total}}</button>
+                    <button class="item-control sub-create" data-target-name="hit" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.hitTotal}}</button>
+                    <button class="item-control sub-create" data-target-name="damage" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.damageTotal}}</button>
+                    <button class="item-control sub-create" data-target-name="recoil" data-pre-target="{{@key}}" title="Add Recoil Modifier">Recoil: {{this.mods.recoil}}{{#if (gt this.mods.reduction 0)}} vs +{{this.mods.reduction}}{{/if}}</button>
+                    <button class="item-control sub-create" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
                 </li>
                 {{#if this.display}}
                 <div>

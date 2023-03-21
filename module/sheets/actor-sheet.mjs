@@ -83,15 +83,15 @@ export class OpsActorSheet extends ActorSheet {
         if (mod.active) i.mods[mod.type] += mod.value;
       }
       let labelParts = [
-        (i.system.ranks ? `${i.system.ranks} Ranks` : 'null'),
-        (context.actor.abilityMod(i.system.ability) ? `${context.actor.abilityMod(i.system.ability)<0 ? '' : '+'}${context.actor.abilityMod(i.system.ability)} ${i.system.ability.toUpperCase()}` : 'null'),
-        (i.mods.equip ? `${i.mods.equip<0 ? '' : '+'}${i.mods.equip} Equipment` : 'null'),
-        (i.mods.syn ? `${i.mods.syn<0 ? '' : '+'}${i.mods.syn} Synergy` : 'null'),
-        (i.mods.occ ? `${i.mods.occ<0 ? '' : '+'}${i.mods.occ} Occupation` : 'null'),
-        (i.mods.armor ? `${i.mods.armor<0 ? '' : '+'}${i.mods.armor} Armor` : 'null'),
-        (i.mods.misc ? `${i.mods.misc<0 ? '' : '+'}${i.mods.misc} Misc.` : 'null'),
+        (i.system.ranks ? `${i.system.ranks} Ranks` : null),
+        (context.actor.abilityMod(i.system.ability) ? `${context.actor.abilityMod(i.system.ability)<0 ? '' : '+'}${context.actor.abilityMod(i.system.ability)} ${i.system.ability.toUpperCase()}` : null),
+        (i.mods.equip ? `${i.mods.equip<0 ? '' : '+'}${i.mods.equip} Equipment` : null),
+        (i.mods.syn ? `${i.mods.syn<0 ? '' : '+'}${i.mods.syn} Synergy` : null),
+        (i.mods.occ ? `${i.mods.occ<0 ? '' : '+'}${i.mods.occ} Occupation` : null),
+        (i.mods.armor ? `${i.mods.armor<0 ? '' : '+'}${i.mods.armor} Armor` : null),
+        (i.mods.misc ? `${i.mods.misc<0 ? '' : '+'}${i.mods.misc} Misc.` : null),
       ]
-      labelParts = labelParts.filter(part => part != 'null');
+      labelParts = labelParts.filter(part => part != null);
       i.mods.label = labelParts.join(', ') || 'No Modifiers';
       i.mods.total = i.system.ranks + context.actor.abilityMod(i.system.ability) + i.mods.equip + i.mods.syn + i.mods.occ + i.mods.armor + i.mods.misc;
     }
@@ -177,35 +177,7 @@ export class OpsActorSheet extends ActorSheet {
       // Append weapons.
       if (i.type === 'weapon') {
         for (let [,a] of Object.entries(i.system.attacks)){
-          // Calculate item to hit
-          a.hit.total = a.hit.attack + context.actor.abilityMod(a.hit.ability);
-          for (let [,h] of Object.entries(a.hit.mods)){
-            a.hit.total += h.value;
-          }
-          // Calculate item damage
-          a.damage.total = a.damage.attack;
-          if(a.damage.total != '' && context.actor.abilityMod(a.damage.ability) != 0) {
-            if (context.actor.abilityMod(a.damage.ability) >0) a.damage.total += '+';
-          }
-          if ((Math.floor(context.actor.abilityMod(a.damage.ability)*a.damage.scaleAbility)) >0)a.damage.total += Math.floor(context.actor.abilityMod(a.damage.ability)*a.damage.scaleAbility);
-          for (let [,d] of Object.entries(a.damage.mods)){
-            if (a.damage.total != '' && d.value != '' && !d.value.startsWith('-')) a.damage.total += '+';
-            a.damage.total += d.value;
-          }
-          // Calculate item recoil
-          a.recoil.total = a.recoil.attack;
-          for (let [,r] of Object.entries(a.recoil.mods)){
-            a.recoil.total += r.value;
-          }
-          // Calculate item CP
-          a.cp.total = a.cp.attack;
-          for (let [,c] of Object.entries(a.cp.mods)){
-            a.cp.total += c.value;
-          }
-          // Add BAB and recoil reduction
-          a.hit.total += systemData.stats.bab.value;
-          a.hit.total += Math.min(a.recoil.total+systemData.stats.recoil.value,0);
-
+          a.mods = context.actor.items.get(i._id).attackSum(a);
         }
         if(i.system.magazine.type != 'internal'){
           if(i.system.magazine.loaded.source){
