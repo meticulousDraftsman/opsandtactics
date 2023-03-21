@@ -9,7 +9,14 @@
   {{!-- Sheet Body --}}
   <section class="sheet-body">
     <ol class="items-list flex-group-center">
-      
+      <li class="grid grid-10col">
+        <div class="grid-span-4">
+          <input type="text" value="Total" readonly>
+        </div>
+        <div class="grid-start-8">
+          <input type="text" value="{{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}}" readonly>
+        </div>
+      </li>
       <li class="grid grid-10col">
         <div class="grid-span-4">
           <input name="" type="text" value="Ranks" data-dtype="String" readonly/>
@@ -46,7 +53,7 @@
           </select>
         </div>
         <div>
-          <input name="" type="text" value="{{system.abilityMod}}" data-dtype="Number" readonly/>
+          <input name="" type="text" value="{{item.mods.ability}}" data-dtype="Number" readonly/>
         </div>
         {{#if item.actor}}
         <div class="grid-start-10">
@@ -59,7 +66,7 @@
           <input name="" type="text" value="Armor Penalty" data-dtype="String" readonly/>
         </div>
         <div class="grid-start-8">
-          <input name="" type="text" value="{{system.armor.penalty}}" data-dtype="Number" readonly/>
+          <input name="" type="text" value="{{item.mods.armor}}" data-dtype="Number" readonly/>
         </div>
         <div>
           <input name="system.armor.active" type="checkbox" {{checked system.armor.active}}/>

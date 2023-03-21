@@ -131,6 +131,33 @@ export class OpsItem extends Item {
     return mods;
   }
 
+  skillSum(){
+    const mods = {
+      ability: (this?.actor ? this.actor.abilityMod(this.system.ability) : 0),
+      equip: 0,
+      syn: 0,
+      occ: (this.system.focus == 'double' ? 1 : 0),
+      armor: (this.system.armor.active ? (this?.actor ? this.actor.system.stats.armorPenalty.value : null) : null),
+      misc: 0
+    };
+    for (let [,mod] of Object.entries(this.system.mods)){
+      if (mod.active) mods[mod.type] += mod.value;
+    }
+    let labelParts = [
+      (this.system.ranks ? `${this.system.ranks} Ranks` : null),
+      (mods.ability ? `${mods.ability>=0 ? '+' : ''}${mods.ability} ${this.system.ability.toUpperCase()}` : null),
+      (mods.occ ? `${mods.occ>0 ? '+' : ''}${mods.occ} Occupation` : null),
+      (mods.equip ? `${mods.equip>0 ? '+' : ''}${mods.equip} Equipment` : null),
+      (mods.syn ? `${mods.syn>0 ? '+' : ''}${mods.syn} Synergy` : null),
+      (mods.armor ? `${mods.armor>0 ? '+' : ''}${mods.armor} Armor` : null),
+      (mods.misc ? `${mods.misc>0 ? '+' : ''}${mods.misc} Misc.` : null)
+    ]
+    labelParts = labelParts.filter(part => part != null);
+    mods.label = labelParts.join(', ') || 'No Modifiers';
+    mods.total = this.system.ranks + mods.ability + mods.occ + mods.equip + mods.syn + mods.armor + mods.misc;
+    return mods;    
+  }
+
   /**
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private
