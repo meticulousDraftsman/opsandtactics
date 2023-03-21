@@ -83,6 +83,11 @@ export class OpsItem extends Item {
     }
   }
 
+  /**
+   * Sums the impacts of an attack's modifiers, including factors from an actor if present
+   * @param {Object} sourceAttack The attack whose modifiers are being tallied
+   * @returns {Object} The total to-hit, hit modifier, damage terms, combined damage string, recoil penalty and reduction, and combat point cost
+   */
   attackSum(sourceAttack){
     const mods = {
       hit: sourceAttack.hit.attack,
@@ -122,7 +127,7 @@ export class OpsItem extends Item {
     mods.damageParts = mods.damageParts.filter(part => part != null);
     mods.damageTotal = mods.damageParts.join('') || null;
     if (mods.damageTotal.charAt(0) == '+') mods.damageTotal = mods.damageTotal.substring(1);
-    console.debug(mods)
+    //console.debug(mods)
     return mods;
   }
 
