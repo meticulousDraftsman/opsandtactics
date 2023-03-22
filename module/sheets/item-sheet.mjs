@@ -88,9 +88,13 @@ export class OpsItemSheet extends ItemSheet {
     }
 
     if (itemData.type === 'skill'){
-      // For display, armor penalty only exists if active and on an actor
-      if (systemData.armor.active) systemData.armor.penalty = actor?.system.stats.armorPenalty.value;
-      systemData.abilityMod = actor?.abilityMod(systemData.ability);
+      itemData.mods = itemData.skillSum();
+      itemData.mods.types = {
+        equip: 'Equipment',
+        misc: 'Miscellaneous',
+        occ: 'Occupational',
+        syn: 'Synergy'
+      }
     }
 
     // Add the actor's data to context.data for easier access, as well as flags.
@@ -155,7 +159,9 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,`system.attacks.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
         break;
       case 'skillMods':
-        setProperty(updateData,`system.mods.${randomID(4)}`,new SkillMod);
+        let newProp = new SkillMod;
+        newProp.type = preTarget;
+        setProperty(updateData,`system.mods.${randomID(4)}`,newProp);
         break;
       case 'protection':
         setProperty(updateData,`system.protection.${randomID(4)}`,new Protection);

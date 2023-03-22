@@ -8,119 +8,75 @@
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
-    <ol class="items-list flex-group-center">
-      <li class="grid grid-10col">
-        <div class="grid-span-4">
-          <input type="text" value="Total" readonly>
-        </div>
-        <div class="grid-start-8">
-          <input type="text" value="{{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}}" readonly>
-        </div>
-      </li>
-      <li class="grid grid-10col">
-        <div class="grid-span-4">
-          <input name="" type="text" value="Ranks" data-dtype="String" readonly/>
-        </div>
-        <div class="grid-span-3">
-          <select name="system.focus" data-dtype="String">
-            {{#select system.focus}}
-            <option value="unfocus">{{localize "OATS.skills.unfocus"}}</option>
-            <option value="focus">{{localize "OATS.skills.focus"}}</option>
-            <option value="double">{{localize "OATS.skills.double"}}</option>
-            {{/select}}
-          </select>
-        </div>
+    <fieldset>
+      <legend class="resource-label">
+        {{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}} Total Modifier {{#if item.actor}}<a class="item-control self-destruct" self="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+      </legend>
+      <div class="grid grid-2col flex-group-center">
         <div>
-          <input name="system.ranks" type="text" value="{{system.ranks}}" data-dtype="Number"/>
+          <div class="grid grid-4col flex-group-center resource-label">
+            <span>Focus</span>
+            <div class="grid-span-3">
+              <select name="system.focus" data-dtype="String">
+                {{#select system.focus}}
+                <option value="unfocus">{{localize "OATS.skills.unfocus"}}</option>
+                <option value="focus">{{localize "OATS.skills.focus"}}</option>
+                <option value="double">{{localize "OATS.skills.double"}}</option>
+                {{/select}}
+              </select>
+            </div>
+            <span>Ability</span>
+            <div class="grid-span-3">
+              <select name="system.ability" data-dtype="String">
+                {{#select system.ability}}
+                  <option value=""></option>
+                  {{#each OATS.abilities as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+            </div>
+            <span>Ranks</span>
+            <input name="system.ranks" type="text" value="{{system.ranks}}" data-dtype="Number"/>
+            <Span>Armor Penalty</Span>
+            <input name="system.armor.active" type="checkbox" {{checked system.armor.active}}/>
+          </div>
         </div>
-        {{#if item.actor}}
-        <div class="grid-start-10 items-header">Delete</div>
-         
-        {{/if}}
-      </li>
-      <li class="grid grid-10col">
-        <div class="grid-span-4">
-          <input name="" type="text" value="Ability Modifier" data-dtype="String" readonly/>
-        </div>
-        <div class="grid-span-3">
-          <select name="system.ability" data-dtype="String">
-            {{#select system.ability}}
-              <option value=""></option>
-              {{#each OATS.abilities as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-              {{/each}}
-            {{/select}}
-          </select>
-        </div>
-        <div>
-          <input name="" type="text" value="{{item.mods.ability}}" data-dtype="Number" readonly/>
-        </div>
-        {{#if item.actor}}
-        <div class="grid-start-10">
-           <a class="item-control self-destruct" self="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
-        {{/if}}
-      </li>
-      <li class="grid grid-10col">
-        <div class="grid-span-4">
-          <input name="" type="text" value="Armor Penalty" data-dtype="String" readonly/>
-        </div>
-        <div class="grid-start-8">
-          <input name="" type="text" value="{{item.mods.armor}}" data-dtype="Number" readonly/>
-        </div>
-        <div>
-          <input name="system.armor.active" type="checkbox" {{checked system.armor.active}}/>
-        </div>
-      </li>
-      <li class="item grid grid-10col items-header resource-label">
-        <div class="grid-span-4">
-          Modifier
-        </div>
-        <div class="grid-span-3">
-          Type
-        </div>
-        <div>
-          Value
-        </div>
-        <div>
-          Active
-        </div>
-        <div>
-          <a class="item-control sub-create" data-target-name="skillMods" title="Add Modifier"><i class="fas fa-plus"></i></a>
-        </div>
-      </li>
-      {{#each system.mods}}
-      {{log @key}}
-      <li class="grid grid-10col">
-        <div class="grid-span-4">
-          <input name="system.mods.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String" placeholder="Source"/>
-        </div>
-        <div class="grid-span-3">
-          <select name="system.mods.{{@key}}.type" data-dtype="String">
-            {{#select this.type}}
-              <option value="misc">Miscellaneous</option>
-              <option value="equip">Equipment</option>
-              <option value="occ">Occupation</option>
-              <option value="syn">Synergy</option>
-            {{/select}}
-          </select>
-        </div>
-        <div>
-          <input name="system.mods.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number" placeholder="0"/>
-        </div>
-        <div>
-          <input name="system.mods.{{@key}}.active" type="checkbox" {{checked this.active}}/>
-        </div>
-        <div>
+        <i>{{item.mods.label}}</i>
+      </div>
+      
+    </fieldset>
+    {{#each item.mods.types}}
+    <fieldset>
+      <legend class="resource-label">
+        {{this}} Modifiers <a class="item-control sub-create" data-target-name="skillMods" data-pre-target="{{@key}}" title="Add {{this}} Modifier"><i class="fas fa-plus"></i></a>
+      </legend>
+      <ol class="items-list">
+        {{#each @root.system.mods}}
+        {{#if (eq this.type @../key)}}
+        <li class="grid grid-12col flex-group-center">
+          <input class="grid-span-7" name="system.mods.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String" placeholder="Source"/>
+          <input class="grid-span-2" name="system.mods.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number" placeholder="0"/>
+          <div class="grid-span-2">
+            <input name="system.mods.{{@key}}.active" title="Active" type="checkbox" {{checked this.active}}/>
+          </div>
           <a class="item-control sub-delete" data-target-name="skillMods" data-remove-target="{{@key}}" title="Remove Modifier"><i class="fas fa-trash"></i></a>
-        </div>
-      </li>
-      {{/each}}
-    </ol>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ol>
+    </fieldset>
+    {{/each}}
+    <fieldset class="sheet-body tab">
+      <legend class="resource-label">
+        Description
+      </legend>
+      <div class="sheet-body tab">
+        {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      </div>
+    </fieldset>
     <hr>
-    <div class="sheet-body tab">
-      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
-    </div>
+
   </section>
   
 </form>
