@@ -27,14 +27,19 @@
     </fieldset>
     <fieldset>
       <legend class="resource-label">Saving Throws</legend>
-      <div class="saves flex-group-center grid grid-4col">
+      <div class="saves flex-group-center">
         {{#each system.saves as |save|}}
-        <a class="resource-label rollable grid-span-3" data-roll="3d6{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" data-label="{{localize (concat 'OATS.saves.' @key)}}">{{localize (concat "OATS.saves." @key)}}</a>
-        <input type="text" value="{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" readonly/>
-        <div>Base</div>
-        <input type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
-        <div>Misc</div>
-        <input type="text" name="system.saves.{{@key}}.mods.misc" value="{{save.mods.misc}}" data-dtype="Number"/>
+        <div class="skill flex-group-center">
+          <fieldset class="grid-span-4">
+            <a class="resource-label rollable grid-span-4" data-roll="3d6{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" data-label="{{localize (concat 'OATS.saves.' @key)}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a>
+          </fieldset>
+          <div class="grid grid-4col flex-group-center">
+            <div>Base</div>
+            <input type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
+            <div>Misc</div>
+            <input type="text" name="system.saves.{{@key}}.mods.misc" value="{{save.mods.misc}}" data-dtype="Number"/>
+          </div>
+        </div>
         {{/each}}
       </div>
     </fieldset>
