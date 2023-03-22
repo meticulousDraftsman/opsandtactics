@@ -1,102 +1,56 @@
-<ol class="items-list flex-group-center">
-    <li class="item items-header resource-label grid grid-10col">
-        <div class="grid-span-3">
-            <div class="grid grid-5col">
-                <div class="grid-span-4">Core HP Formula</div>
-                <div>Misc</div>
-            </div>
+<div class="grid grid-5col">
+    <fieldset class="grid-span-3">
+        <legend class="resource-label">
+            Formulae
+        </legend>
+        <div class="grid grid-6col flex-group-center">
+            <span class="grid-span-2">Core HP</span>
+            <input class="grid-span-3" type="text" name="system.health.chp.formula" value="{{system.health.chp.formula}}" data-dtype="String">
+            <input type="text" name="system.health.chp.mods.misc" value="{{system.health.chp.mods.misc}}" placeholder="Misc" data-dtype="String">
+            <span class="grid-span-2">Extended HP</span>
+            <input class="grid-span-3" type="text" name="system.health.xhp.formula" value="{{system.health.xhp.formula}}" data-dtype="String">
+            <input type="text" name="system.health.xhp.mods.misc" value="{{system.health.xhp.mods.misc}}" placeholder="Misc" data-dtype="String">
+            <span class="grid-span-2">Mental Limit</span>
+            <input class="grid-span-3" type="text" name="system.ml.formula" value="{{system.ml.formula}}" data-dtype="String">
+            <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" placeholder="Misc" data-dtype="String">
         </div>
-        <div class="grid-span-3">
-            <div class="grid grid-5col">
-                <div class="grid-span-4">Extended HP Formula</div>
-                <div>Misc</div>
-            </div>
+    </fieldset>
+    <fieldset class="grid-span-2">
+        <legend class="resource-label">
+            Modifiers
+        </legend>
+        <div class="grid grid-4col flex-group-center">
+            <span class="grid-span-2">Base Attack</span>
+            <input type="text" value="{{system.stats.bab.value}}" readonly>
+            <input type="text" name="system.stats.bab.misc" value="{{system.stats.bab.misc}}" placeholder="Misc" data-dtype="Number">
+            <span class="grid-span-2">Initiative</span>
+            <input type="text"value="{{system.stats.init.value}}" readonly>
+            <input type="text" name="system.stats.init.misc" value="{{system.stats.init.misc}}" placeholder="Misc" data-dtype="Number">
+            <span class="grid-span-2">Recoil</span>
+            <input type="text"value="{{system.stats.recoil.value}}" readonly>
+            <input type="text" name="system.stats.recoil.misc" value="{{system.stats.recoil.misc}}" placeholder="Misc" data-dtype="Number">
         </div>
-        <div class="grid-span-4">
-            <div class="grid grid-7col">
-                <div class="grid-span-5">Mental Limit Formula</div>
-                <div>Misc</div>
-                <div>Augs</div>
-            </div>
-        </div>
-    </li>
-    <li class="grid grid-10col">
-        <div class="grid-span-3">
-            <div class="grid grid-10col">
-                <div class="grid-span-8">
-                    <input type="text" name="system.health.chp.formula" value="{{system.health.chp.formula}}" data-dtype="String">
-                </div>
-                <div class="grid-span-2">
-                    <input type="text" name="system.health.chp.mods.misc" value="{{system.health.chp.mods.misc}}" data-dtype="String">
-                </div>
-            </div>
-        </div>
-        <div class="grid-span-3">
-            <div class="grid grid-10col">
-                <div class="grid-span-8">
-                    <input type="text" name="system.health.xhp.formula" value="{{system.health.xhp.formula}}" data-dtype="String">
-                </div>
-                <div class="grid-span-2">
-                    <input type="text" name="system.health.xhp.mods.misc" value="{{system.health.xhp.mods.misc}}" data-dtype="String">
-                </div>
-            </div>
-        </div>
-        <div class="grid-span-4">
-            <div class="grid grid-7col">
-                <div class="grid-span-5">
-                    <input type="text" name="system.ml.formula" value="{{system.ml.formula}}" data-dtype="String">
-                </div>
-                <div>
-                    <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" data-dtype="String">
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="item items-header resource-label grid grid-10col">
-        <div>Init Misc</div>
-        <div>XP</div>
-        <div>Level</div>
-        <div class="grid-span-2">Base Attack Bonus</div>
-        <div class="grid-span-2">Race</div>
-        <div>Size</div>
-        <div class="grid-span-2">Recoil Reduction</div>
-    </li>
-    <li class="grid grid-10col">
-        <input type="text" name="system.stats.init.misc" value="{{system.stats.init.misc}}" data-dtype="Number">
-        <input type="text" name="system.stats.level.xp.value" value="{{system.stats.level.xp.value}}" data-dtype="Number">
-        <input type="text" name="system.stats.level.value" value="{{system.stats.level.value}}" data-dtype="Number">
-        <input type="text" name="system.stats.bab.value" value="{{system.stats.bab.value}}" data-dtype="Number" readonly>
-        <input type="text" name="system.stats.bab.misc" value="{{system.stats.bab.misc}}" placeholder="Misc" data-dtype="Number">
-        <input class="grid-span-2" type="text" name="system.details.race" value="{{system.details.race}}" data-dtype="String" placeholder="Human">
-        <input type="text" name="system.details.size" value="{{system.details.size}}" data-dtype="String">
-        <input type="text" name="system.stats.recoil.value" value="{{system.stats.recoil.value}}" data-dtype="Number" readonly>
-        <input type="text" name="system.stats.recoil.misc" value="{{system.stats.recoil.misc}}" placeholder="Misc" data-dtype="Number">
-    </li>
-    <li class="item items-header resource-label grid grid-10col">
-        <div class="grid-span-3">Traits</div>
-        <div class="grid-span-5">Description</div>
-        <div class="item-controls grid-span-2">
-            <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
-        </div>
-    </li>
-    {{#each traits as |item id|}}
-    <li class="item grid grid-10col" data-item-id="{{item._id}}">
-        <div class="item-name grid-span-3">
+    </fieldset>
+</div>
+<fieldset>
+    <legend class="resource-label">
+        Traits <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
+    </legend>
+    <ol class="items-list flex-group-left">
+        {{#each traits as |item id|}}
+        <li class="item grid grid-12col" data-item-id="{{item._id}}">
             <div class="item-image">
-              <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
+                <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
             </div>
-            {{item.name}}
-        </div>
-        <span class="grid-span-5">
-            {{item.system.summary}}
-        </span>
-        <div class="item-controls grid-span-2">
-            <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Trait"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Trait"><i class="fas fa-trash"></i></a>
-        </div>
-    </li>
-    {{/each}}
-</ol>
+            <div class="grid-span-9 flexrow flex-group-left">
+                <span class="item-name">{{item.name}}</span>
+                <i>{{item.system.summary}}</i>
+            </div>
+            <div class="item-controls grid-span-2">
+                <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Trait"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Trait"><i class="fas fa-trash"></i></a>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+</fieldset>

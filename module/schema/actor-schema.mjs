@@ -3,7 +3,7 @@ const field = foundry.data.fields;
 class Mods extends foundry.abstract.DataModel {
     static defineSchema(){
         return{
-            misc: new field.NumberField()
+            misc: new field.NumberField({nullable:true})
         }
     }
     get total(){
