@@ -444,8 +444,8 @@ export class OpsActorSheet extends ActorSheet {
     const dataset = event.currentTarget.dataset;
     const targetId = dataset.targetId;
     const targetProp = dataset.targetProp;
-    let value = (dataset.value === 'false');
     const item = this.actor.items.get(targetId);
+    let value = !getProperty(item,targetProp);
     await item.update({[targetProp]:value});
   }
   async _onItemToggle(event){
