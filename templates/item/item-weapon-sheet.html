@@ -28,50 +28,47 @@
                     <div>Delete</div>
                     {{/if}}
                 </li>
-                <li class="grid grid-10col">
-                    <div class="grid-span-2">
-                        <select name="system.magazine.type" data-dtype="String">
-                        {{#select system.magazine.type}}
-                            <option value="internal">Internal</option>
-                            <option value="external">External</option>
-                            <option value="coolant">Coolant</option>
-                            <option value="none">None</option>
-                        {{/select}}
-                        </select>
-                    </div>
-                    {{#if (eq system.magazine.type "none")}}
-                    {{else}}
-                        {{#if (eq system.magazine.type "internal")}}
-                        <div class="grid-start-4">
-                            <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number"/>
-                        </div>
-                        <div>/</div>
-                        <div>
-                            <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number"/>
-                        </div>
-                        {{else}}
-                        <div class="grid-span-5">
-                        <select class="drop-wide" name="system.magazine.loaded.source" data-dtype="String">
-                                {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
-                        </select>
-                        </div>
-                        {{/if}}
-                    {{/if}}
-                    {{#if (eq system.magazine.type "coolant")}}
-                    <div>
-                        <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number"/>
-                    </div>
-                    {{/if}}
-                    <div class="grid-start-9">
-                        <input name="system.range" value="{{system.range}}" type="text" data-dtype="String"/>
-                    </div>
-                    {{#if item.actor}}
-                    <div>
-                        <a class="item-control self-destruct" self="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
-                    {{/if}}
-                </li>
             </ol>
+            <fieldset>
+                <legend class="resource-label">
+                    Weapon Statistics
+                </legend>
+                <div class="grid grid-12col resource-label flex-group-center">
+                    <select class="grid-span-4 flex-group-center" name="system.magazine.type" data-dtype="String">
+                    {{#select system.magazine.type}}
+                        <option value="internal">Internal Magazine</option>
+                        <option value="external">External Magazine</option>
+                        <option value="coolant">Energy Weapon</option>
+                        <option value="none">Ammunition n/A</option>
+                    {{/select}}
+                    </select>
+                    {{#unless (eq system.magazine.type "none")}}
+                        {{#if (eq system.magazine.type "internal")}}
+                            <span class="grid-span-2 resource-label">Loaded</span>
+                            <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number" placeholder="0"/>
+                            <span class="grid-span-2 resource-label">Capacity</span>
+                            <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
+                        {{else}}
+
+                            {{#if (eq system.magazine.type "coolant")}}
+                                <select class="grid-span-4 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
+                                    {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
+                                </select>
+                                <span class="grid-span-3 resource-label">Heat Capacity</span>
+                                <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
+                            {{/if}}
+                            {{#if (eq system.magazine.type "external")}}
+                                <select class="grid-span-5 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
+                                    {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
+                                </select>
+                                <a class=" chamber-round grid-span-2 resource-label" data-loaded="{{system.magazine.loaded.source}}" Title="Chamber a round from the loaded magazine">Chamber</a>
+                                <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number" placeholder="+0"/>
+                            {{/if}}
+                        {{/if}}
+                    {{/unless}}
+
+                </div>
+            </fieldset>
             <fieldset>
                 <legend class="resource-label">
                     Weapon Modifiers

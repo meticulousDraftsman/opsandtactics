@@ -88,13 +88,14 @@ export class OpsItemSheet extends ItemSheet {
       
       let tempMod = systemData.importMod.split(',');
       itemData.readyMod = {
-        name:(tempMod[0] ? tempMod[0] : 'New Mod'),
-        hit:(tempMod[1] ? tempMod[1] : null),
-        damage:(tempMod[2] ? tempMod[2] : null),
-        recoil:(tempMod[3] ? tempMod[3] : null),
-        cp:(tempMod[4] ? tempMod[4] : null),
-        description:(tempMod[5] ? tempMod[5] : null),
+        name:(tempMod[0] ? tempMod[0].trim() : 'New Mod'),
+        hit:(tempMod[1] ? tempMod[1].trim() : null),
+        damage:(tempMod[2] ? tempMod[2].trim() : null),
+        recoil:(tempMod[3] ? tempMod[3].trim() : null),
+        cp:(tempMod[4] ? tempMod[4].trim() : null),
+        description:(tempMod[5] ? tempMod[5].trim() : null),
       }
+
       for(let [,a] of Object.entries(itemData.system.attacks)){
         a.mods = context.item.attackSum(a);
       }
@@ -163,10 +164,31 @@ export class OpsItemSheet extends ItemSheet {
         this.actor.items.get(id).delete();
       }
     });
+    // Pull a bullet from a loaded magazine into the internal chamber
+    html.find('.chamber-round').click(this._onChamberRound.bind(this));
+    // Create/delete sub-properties
     html.find('.sub-create').click(this._subCreation.bind(this));
     html.find('.sub-delete').click(this._subDeletion.bind(this));
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
+  }
+
+  _onChamberRound(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    if (this.actor != null && dataset.loaded != ""){
+      const magazine = this.actor.items.get(dataset.loaded);
+      const magData = {};
+      const wepData = {};
+      if(magazine.system.magazine.value>0){
+        setProperty(magData,'system.magazine.value',magazine.system.magazine.value-1)
+        setProperty(wepData,'system.magazine.value',this.object.system.magazine.value+1)
+        magazine.update(magData);
+        this.object.update(wepData);
+      }
+    }
+    
+    
   }
 
   _subCreation(event){
