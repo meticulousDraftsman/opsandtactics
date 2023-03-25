@@ -45,7 +45,7 @@
         </div>
     </li>
     {{#each item.system.attacks}}
-    {{#if this.display}}
+    {{#if this.active}}
     <li class="grid grid-10col">
         <a class="grid-start-3 grid-span-2">{{this.name}}</a>
         <input class="" type="text"value="{{this.mods.hitTotal}}" data-dtype="Number" readonly/>

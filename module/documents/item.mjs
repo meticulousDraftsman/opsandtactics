@@ -53,14 +53,6 @@ export class OpsItem extends Item {
 
   _prepareMagazineData(itemData){
     const systemData = itemData.system;
-    if (systemData.magazine.type == 'coolant'){
-      itemData.label = itemData.name + " [" + systemData.coolant.hot + "]";
-    }
-    else {
-      itemData.label = itemData.name + " [" + systemData.magazine.value + "/" + systemData.magazine.max + "]";
-    }
-    itemData.system.coolant.flag = false;
-    if (itemData.system.magazine.type == 'coolant') itemData.system.coolant.flag = true;
   }
   _prepareMagicData(itemData){
     const systemData = itemData.system;
@@ -125,7 +117,7 @@ export class OpsItem extends Item {
     }
     mods.hitTotal = mods.hit + Math.min(mods.recoil+mods.reduction,0);
     mods.damageParts = mods.damageParts.filter(part => part != null);
-    mods.damageTotal = mods.damageParts.join('') || null;
+    mods.damageTotal = mods.damageParts.join('') || '0';
     if (mods.damageTotal.charAt(0) == '+') mods.damageTotal = mods.damageTotal.substring(1);
     //console.debug(mods)
     return mods;
@@ -156,6 +148,19 @@ export class OpsItem extends Item {
     mods.label = labelParts.join(', ') || 'No Modifiers';
     mods.total = this.system.ranks + mods.ability + mods.occ + mods.equip + mods.syn + mods.armor + mods.misc;
     return mods;    
+  }
+
+  labelMake(){
+    let label = this.name;
+    switch(this.type){
+      case 'magazine':
+        label = `${this.name} [${this.system.magazine.value}/${this.system.magazine.max}]`;
+        if (this.system.magazine.type==='coolant') label = `[${this.system.coolant.hot?'Hot':'Cool'}] ${this.name}`;
+        break;
+      default:
+        break;      
+    }
+    return label;
   }
 
   /**

@@ -161,20 +161,15 @@ export class OpsActorSheet extends ActorSheet {
         if(i.system.magazine.type != 'internal'){
           if(i.system.magazine.loaded.source){
               let loadedMag = context.items.filter(item => item._id == i.system.magazine.loaded.source)[0];
-              i.system.magazine.loaded.value = loadedMag.system.magazine.value;
-              i.system.magazine.loaded.max = loadedMag.system.magazine.max;
+              //i.system.magazine.loaded.value = loadedMag.system.magazine.value;
+              //i.system.magazine.loaded.max = loadedMag.system.magazine.max;
           }
         }
         weapons.push(i);
       }
       // Handle Magazines
       if (i.type === 'magazine'){
-        if (i.system.magazine.type=='coolant'){
-          i.label = `${i.name} [${i.system.coolant.hot}]`
-        }
-        else{
-          i.label = `${i.name} [${i.system.magazine.value}/${i.system.magazine.max}]`
-        }
+        i.label = context.actor.items.get(i._id).labelMake();
       }
 
       // Append to gear

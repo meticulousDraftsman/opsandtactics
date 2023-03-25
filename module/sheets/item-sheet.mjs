@@ -60,6 +60,7 @@ export class OpsItemSheet extends ItemSheet {
       if(actor){
         for(let i of actor.items){
           if(i.type === 'magazine' && i.system.magazine.type == itemData.system.magazine.type){
+            i.label = actor.items.get(i._id).labelMake();
             magazines.push(i);
           }
         }
@@ -166,6 +167,8 @@ export class OpsItemSheet extends ItemSheet {
     });
     // Pull a bullet from a loaded magazine into the internal chamber
     html.find('.chamber-round').click(this._onChamberRound.bind(this));
+    // Reset imported mod when changing source filter
+    html.find('.filter-select').change(this._onFilterSelect.bind(this));
     // Create/delete sub-properties
     html.find('.sub-create').click(this._subCreation.bind(this));
     html.find('.sub-delete').click(this._subDeletion.bind(this));
@@ -187,8 +190,11 @@ export class OpsItemSheet extends ItemSheet {
         this.object.update(wepData);
       }
     }
-    
-    
+  }
+
+  _onFilterSelect(event){
+    event.preventDefault();
+    this.object.update({'system.importMod':''});
   }
 
   _subCreation(event){
@@ -231,6 +237,7 @@ export class OpsItemSheet extends ItemSheet {
         newProp = duplicate(this.object.readyMod);
         console.debug(newProp)
         setProperty(updateData,`system.weaponMods.${randomID(4)}`,newProp);
+        setProperty(updateData,'system.importFilter','');
         setProperty(updateData,'system.importMod','');
         break;
       case 'resources':

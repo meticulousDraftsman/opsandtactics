@@ -94,6 +94,7 @@ export class OpsWeapon extends foundry.abstract.DataModel{
             weaponMods: new field.ObjectField(),
             attacks: new field.ObjectField(),
             selectMod: new field.StringField(),
+            importFilter: new field.StringField(),
             importMod: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear)
         }
@@ -116,6 +117,7 @@ export class Attack extends foundry.abstract.DataModel{
         return{
             name: new field.StringField({initial:"Attack"}),
             description: new field.StringField(),
+            active: new field.BooleanField({initial:true}),
             display: new field.BooleanField({initial:true}),
             type: new field.StringField({initial:'ranged'}),
             ammo: new field.NumberField(),
@@ -147,7 +149,7 @@ export class OpsMagazine extends foundry.abstract.DataModel{
             description: new field.StringField(),
             hasLabel: new field.BooleanField({initial:true}),
             coolant: new field.SchemaField({
-                hot: new field.StringField({initial:'Cool'})
+                hot: new field.BooleanField({initial:false})
             }),
             magazine: new field.SchemaField({
                 type: new field.StringField({initial:'external'}),

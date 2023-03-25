@@ -9,7 +9,7 @@
         <ol class="items-list flex-group-center">
             <li class="item items-header resource-label grid grid-5col">
                 <div class="grid-span-3">Type</div>
-                {{#if system.coolant.flag}}
+                {{#if (eq system.magazine.type "coolant")}}
                 <div>Heat Sunk</div>
                 <div>State</div>
                 {{else}}
@@ -30,12 +30,12 @@
                 <div>
                     <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number"/>
                 </div>
-                {{#if system.coolant.flag}}
+                {{#if (eq system.magazine.type "coolant")}}
                 <div>
                     <select name="system.coolant.hot" data-dtype="String">
                     {{#select system.coolant.hot}}
-                        <option value="Cool">Cool</option>
-                        <option value="Hot">Hot</option>
+                        <option value="false">Cool</option>
+                        <option value="true">Hot</option>
                     {{/select}}
                     </select>
                 </div>
