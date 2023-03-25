@@ -94,6 +94,7 @@ export class OpsWeapon extends foundry.abstract.DataModel{
             weaponMods: new field.ObjectField(),
             attacks: new field.ObjectField(),
             selectMod: new field.StringField(),
+            importMod: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear)
         }
     }
@@ -101,7 +102,7 @@ export class OpsWeapon extends foundry.abstract.DataModel{
 export class WeaponMod extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
-            name: new field.StringField({initial:"Source",nullable:false}),
+            name: new field.StringField({nullable:false}),
             description: new field.StringField(),
             hit: new field.NumberField({initial:null,nullable:true}),
             damage: new field.StringField({initial:null,nullable:true}),

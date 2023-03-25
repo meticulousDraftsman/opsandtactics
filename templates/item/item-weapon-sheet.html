@@ -72,47 +72,66 @@
                     {{/if}}
                 </li>
             </ol>
-            <ol class="items-list flex-group-center">
-                <li class="item items-header resource-label grid grid-10col">
-                    <div class="grid-span-3">Modifier</div>
-                    <div>To-Hit</div>
-                    <div class="grid-span-3">Damage</div>
-                    <div>Recoil</div>
-                    <div>CP</div>
-                    <div>
-                        <a class="item-control sub-create" data-target-name="weaponMods" title="Add Weapon Modifier"><i class="fas fa-plus"></i></a>
-                    </div>
-                </li>
-                {{#each system.weaponMods}}
-                <li class="grid grid-10col">
-                    <div class="grid-span-3">
-                        <input name="system.weaponMods.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
-                    </div>
-                    <div>
-                        <input name="system.weaponMods.{{@key}}.hit" type="text" value="{{this.hit}}" data-dtype="Number"/>
-                    </div>
-                    <div class="grid-span-3">
-                        <input name="system.weaponMods.{{@key}}.damage" type="text" value="{{this.damage}}" data-dtype="String"/>
-                    </div>
-                    <div>
-                        <input name="system.weaponMods.{{@key}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number"/>
-                    </div>
-                    <div>
-                        <input name="system.weaponMods.{{@key}}.cp" type="text" value="{{this.cp}}" data-dtype="Number"/>
-                    </div>
-                    <div>
-                        <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" title="Remove Modifier"><i class="fas fa-trash"></i></a>
-                    </div>
-                    <div class="grid-span-10 flex-group-left">
-                        <input name="system.weaponMods.{{@key}}.description" type="text" value="{{this.description}}" data-dtype="String"/>
-                    </div>
-                </li>
-                {{#if @last}}
-                {{else}}
+            <fieldset>
+                <legend class="resource-label">
+                    Weapon Modifiers
+                </legend>
+                <div class="grid grid-10col flex-group-center">
+                    <select class="grid-span-3" name="system.importMod" data-dtype="String">
+                    {{#select system.importMod}}
+                        <option value="">Create New</option>
+                    {{#each importableMods}}
+                        <optgroup label="{{@key}}">
+                            {{#each this.entries}}
+                                <option value="{{this.value}}">{{this.label}}</option>
+                            {{/each}}
+                        </optgroup>
+
+                    {{/each}}
+                    {{/select}}
+                    </select>
+                    {{#if (eq system.importMod "")}}
+                    <ol class="items-list flex-group-center grid-span-7">
+                        <li class="item items-header resource-label grid grid-7col">
+                            <div>To-Hit</div>
+                            <div class="grid-span-3">Damage</div>
+                            <div>Recoil</div>
+                            <div>CP</div>
+                            <a class="item-control sub-create" data-target-name="weaponMods" title="Add Weapon Modifier"><i class="fas fa-plus"></i></a>
+                        </li>
+                    </ol>
+                    {{else}}
+                    <input type="text" value="{{item.readyMod.hit}}" readonly>
+                    <input class="grid-span-3" type="text" value="{{item.readyMod.damage}}" readonly>
+                    <input type="text" value="{{item.readyMod.recoil}}" readonly>
+                    <input type="text" value="{{item.readyMod.cp}}" readonly>
+                    <ol class="items-list flex-group-center grid-start-10">
+                        <li class="item items-header resource-label">
+                            <a class="grid-start-10 item-control sub-create" data-target-name="weaponMods" title="Add Weapon Modifier"><i class="fas fa-plus"></i></a>
+                        </li>
+                    </ol>
+                    <i class="grid-span-10">{{item.readyMod.description}}</i>
+                    {{/if}}
+                </div>
                 <hr>
-                {{/if}}
-                {{/each}}
-            </ol>
+                <ol class="items-list flex-group-center">
+                    {{#each system.weaponMods}}
+                    <li class="grid grid-10col">
+                        <input class="grid-span-3" name="system.weaponMods.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String" placeholder="Source"/>
+                        <input name="system.weaponMods.{{@key}}.hit" type="text" value="{{this.hit}}" data-dtype="Number" placeholder="0"/>
+                        <input class="grid-span-3" name="system.weaponMods.{{@key}}.damage" type="text" value="{{this.damage}}" data-dtype="String" placeholder="0"/>
+                        <input name="system.weaponMods.{{@key}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number" placeholder="0"/>
+                        <input name="system.weaponMods.{{@key}}.cp" type="text" value="{{this.cp}}" data-dtype="Number" placeholder="0"/>
+                        <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" title="Remove Modifier"><i class="fas fa-trash"></i></a>
+                        <input class="grid-span-10 flex-group-left" name="system.weaponMods.{{@key}}.description" type="text" value="{{this.description}}" data-dtype="String" placeholder="Description"/>
+                    </li>
+                    {{#if @last}}
+                    {{else}}
+                    <hr>
+                    {{/if}}
+                    {{/each}}
+                </ol>
+            </fieldset>
         </div>
 
         <div class="tab" data-group="primary" data-tab="description">
@@ -176,7 +195,6 @@
                                 {{/select}}
                             </select>
                             {{#each this.hit.mods}}
-                            {{log @root}}
                             <div class="flexrow flex-group-center" style="border-style:groove;">
                                 <a class="item-control sub-delete" data-target-name="hit" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove To-Hit Modifier">{{this.name}}: {{this.value}}</a>
                             </div>

@@ -55,6 +55,7 @@ export class OpsItemSheet extends ItemSheet {
     context.effects = prepareActiveEffectCategories(this.item.effects);
     
     const magazines = [{label:"Unloaded",id:""}];
+    const importableMods = {};
     if (itemData.type === 'weapon'){
       if(actor){
         for(let i of actor.items){
@@ -64,6 +65,36 @@ export class OpsItemSheet extends ItemSheet {
         }
       }
 
+      let worldWepMods = game.journal.filter(entry => entry.name==='Weapon Mods');
+      for (let [,je] of worldWepMods.entries()){
+        for (let [,pe] of je.pages.entries()){
+          if (pe.type!=='text') continue;
+          let strip = pe.text.content.replaceAll('</p>','[split]');
+          let entries = [];
+          strip = strip.replace( /(<([^>]+)>)/ig, '');
+          strip = strip.split('[split]');
+          strip.pop();
+          for (let i of strip){
+            entries.push({label:i.split(',',1),value:i})
+          }
+          if (hasProperty(importableMods,`${pe.name}.entries`)){
+            importableMods[pe.name].entries.push(entries)
+          }
+          else {
+            setProperty(importableMods,`${pe.name}.entries`,entries);
+          }
+        }
+      }
+      
+      let tempMod = systemData.importMod.split(',');
+      itemData.readyMod = {
+        name:(tempMod[0] ? tempMod[0] : 'New Mod'),
+        hit:(tempMod[1] ? tempMod[1] : null),
+        damage:(tempMod[2] ? tempMod[2] : null),
+        recoil:(tempMod[3] ? tempMod[3] : null),
+        cp:(tempMod[4] ? tempMod[4] : null),
+        description:(tempMod[5] ? tempMod[5] : null),
+      }
       for(let [,a] of Object.entries(itemData.system.attacks)){
         a.mods = context.item.attackSum(a);
       }
@@ -101,8 +132,12 @@ export class OpsItemSheet extends ItemSheet {
     context.system = itemData.system;
     context.flags = itemData.flags;
     context.containers = containers;
-    context.magazines = magazines;
-    context.sourceMagics = sourceMagics;
+    if (itemData.type === 'weapon'){
+      context.magazines = magazines;
+      context.importableMods = importableMods;
+      //console.debug(importableMods)
+    } 
+    if (itemData.type === 'magic') context.sourceMagics = sourceMagics;
     //context.otherSkills = otherSkills;
     //context.abilityMod = abilityMod;
 
@@ -151,6 +186,7 @@ export class OpsItemSheet extends ItemSheet {
     const updateData = {};
     let mirrorLength;
     let mirrorProperty;
+    let newProp;
     switch(target){
         case 'hit':
         case 'damage':
@@ -159,7 +195,7 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,`system.attacks.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
         break;
       case 'skillMods':
-        let newProp = new SkillMod;
+        newProp = new SkillMod;
         newProp.type = preTarget;
         setProperty(updateData,`system.mods.${randomID(4)}`,newProp);
         break;
@@ -170,7 +206,10 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,`system.attacks.${randomID(4)}`,new Attack);
         break;
       case 'weaponMods':
-        setProperty(updateData,`system.weaponMods.${randomID(4)}`,new WeaponMod);
+        newProp = duplicate(this.object.readyMod);
+        console.debug(newProp)
+        setProperty(updateData,`system.weaponMods.${randomID(4)}`,newProp);
+        setProperty(updateData,'system.importMod','');
         break;
       case 'resources':
         subProperty.push({name:null,value:null,max:null});
