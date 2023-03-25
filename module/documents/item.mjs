@@ -110,7 +110,7 @@ export class OpsItem extends Item {
       mods.hit += h.value;
     }
     for (let [,d] of Object.entries(sourceAttack.damage.mods)){
-      mods.damageParts.push(d.value ? `${d.value>0 ? '+' : ''}${d.value}` : null);
+      mods.damageParts.push(d.value ? `${d.value>=0 ? '+' : ''}${d.value}` : null);
     }
     for (let [,r] of Object.entries(sourceAttack.recoil.mods)){
       if (r.value > 0){
