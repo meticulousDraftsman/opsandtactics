@@ -31,7 +31,7 @@ export class OpsItemSheet extends ItemSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
+  async getData() {
     //console.debug('item-sheet getData')
     // Retrieve base data structure.
     const context = super.getData();
@@ -66,12 +66,15 @@ export class OpsItemSheet extends ItemSheet {
         }
       }
 
-      let worldWepMods = game.journal.filter(entry => entry.name==='Weapon Mods');
+      let worldWepMods = game.journal.filter(entry => entry.name.includes('Weapon Mods'));
+      let strip;
+      let entries;
+      let fromPack;
       for (let [,je] of worldWepMods.entries()){
         for (let [,pe] of je.pages.entries()){
           if (pe.type!=='text') continue;
-          let strip = pe.text.content.replaceAll('</p>','[split]');
-          let entries = [];
+          strip = pe.text.content.replaceAll('</p>','[split]');
+          entries = [];
           strip = strip.replace( /(<([^>]+)>)/ig, '');
           strip = strip.split('[split]');
           strip.pop();
@@ -83,6 +86,31 @@ export class OpsItemSheet extends ItemSheet {
           }
           else {
             setProperty(importableMods,`${pe.name}.entries`,entries);
+          }
+        }
+      }
+      let journalPacks = game.packs.filter(entry => entry.metadata.type==='JournalEntry');
+      for (let jp of journalPacks){
+        for (let je of jp.index){
+          if (je.name.includes('Weapon Mods')){
+            let jeGot = await jp.getDocument(je._id);
+            for (let [,pe] of jeGot.pages.entries()){
+              if (pe.type!=='text') continue;
+              strip = pe.text.content.replaceAll('</p>','[split]');
+              entries = [];
+              strip = strip.replace( /(<([^>]+)>)/ig, '');
+              strip = strip.split('[split]');
+              strip.pop();
+              for (let i of strip){
+                entries.push({label:i.split(',',1),value:i})
+              }
+              if (hasProperty(importableMods,`${pe.name}.entries`)){
+                importableMods[pe.name].entries.push(entries)
+              }
+              else {
+                setProperty(importableMods,`${pe.name}.entries`,entries);
+              }
+            }
           }
         }
       }
@@ -159,12 +187,13 @@ export class OpsItemSheet extends ItemSheet {
 
     // Roll handlers, click handlers, etc. would go here.
     // Delete Self
-    html.find('.self-destruct').click(ev=>{
-      const id = $(ev.currentTarget).attr("self");
-      if (this.actor != null){
-        this.actor.items.get(id).delete();
-      }
-    });
+    html.find('.self-destruct').click(this._selfDestruct.bind(this));
+    // (ev=>{
+    //   const id = $(ev.currentTarget).attr("self");
+    //   if (this.actor != null){
+    //     this.actor.items.get(id).delete();
+    //   }
+    // });
     // Pull a bullet from a loaded magazine into the internal chamber
     html.find('.chamber-round').click(this._onChamberRound.bind(this));
     // Reset imported mod when changing source filter
@@ -174,6 +203,17 @@ export class OpsItemSheet extends ItemSheet {
     html.find('.sub-delete').click(this._subDeletion.bind(this));
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
+  }
+
+  _selfDestruct(event){
+    event.preventDefault();
+    Dialog.confirm({
+      title: "Delete Confirmation",
+      content: "Delete item from owning Actor?",
+      yes: () => {this.object.delete()},
+      no: () => {},
+      defaultYes: true
+    });
   }
 
   _onChamberRound(event){
