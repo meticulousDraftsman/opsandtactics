@@ -16,9 +16,15 @@
         <div class="tab" data-group="primary" data-tab="stats">
             <fieldset>
                 <legend class="resource-label">
-                    Weapon Statistics
+                    Weapon Statistics {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
                 </legend>
                 <div class="grid grid-12col resource-label flex-group-center">
+                    <span class="grid-span-3 resource-label">Weapon Range</span>
+                    <input name="system.range" value="{{system.range}}" type="text" data-dtype="String" placeholder="ft">
+                    <span class="grid-span-3 resource-label">Critical Range</span>
+                    <input name="system.crit" value="{{system.crit}}" type="text" data-dtype="Number" placeholder="-">
+                    <span class="grid-span-3 resource-label">Error Range %</span>
+                    <input name="system.error" value="{{system.error}}" type="text" data-dtype="Number" placeholder="%">
                     <select class="grid-span-4 flex-group-center" name="system.magazine.type" data-dtype="String">
                     {{#select system.magazine.type}}
                         <option value="internal">Internal Magazine</option>

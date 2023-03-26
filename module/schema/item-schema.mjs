@@ -91,6 +91,8 @@ export class OpsWeapon extends foundry.abstract.DataModel{
                 max: new field.NumberField({initial:0})
             }),
             range: new field.StringField({initial:"5ft"}),
+            crit: new field.NumberField({initial:16}),
+            error: new field.NumberField({initial:0}),
             weaponMods: new field.ObjectField(),
             attacks: new field.ObjectField(),
             selectMod: new field.StringField(),
