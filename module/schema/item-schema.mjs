@@ -3,15 +3,16 @@ const field = foundry.data.fields;
 class Gear extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
+            quantity: new field.NumberField({initial:1}),
             size: new field.StringField({initial:""}),
-            weight: new field.NumberField({initial:0}),
-            cost: new field.NumberField({initial:0}),
-            quality: new field.StringField({initial:""}),
-            restriction: new field.StringField({initial:""}),
+            weight: new field.NumberField(),
+            cost: new field.NumberField(),
+            quality: new field.StringField(),
+            restriction: new field.StringField(),
             physical: new field.BooleanField({initial:true}),
             location: new field.SchemaField({
                 parent: new field.StringField({initial:"Loose"}),
-                note: new field.StringField({initial:""})
+                note: new field.StringField()
             }),
             resources: new field.ArrayField(
                 new field.SchemaField({
