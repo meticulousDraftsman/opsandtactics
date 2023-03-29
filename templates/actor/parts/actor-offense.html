@@ -25,7 +25,7 @@
         {{#if (eq item.system.magazine.type "external")}}
         <div>
             <div class="flexrow">
-                <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
+                <input type="text" class="item-input" data-target-prop="value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
                 <div class="flex0">/</div>
                 <input type="text" value="{{item.system.magazine.loaded.max}}" data-dtype="Number" readonly/>
             </div>
@@ -34,7 +34,7 @@
         {{#if (eq item.system.magazine.type "coolant")}}
         <div>
             <div class="flexrow">
-                <input type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
+                <input type="text" class="item-input" data-target-prop="value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
                 <div class="flex0">/</div>
                 <input type="text" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
             </div>

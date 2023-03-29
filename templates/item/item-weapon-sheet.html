@@ -25,12 +25,12 @@
                     <input name="system.crit" value="{{system.crit}}" type="text" data-dtype="Number" placeholder="-">
                     <span class="grid-span-3 resource-label">Error Range %</span>
                     <input name="system.error" value="{{system.error}}" type="text" data-dtype="Number" placeholder="%">
-                    <select class="grid-span-4 flex-group-center" name="system.magazine.type" data-dtype="String">
+                    <select class="grid-span-3 flex-group-center" name="system.magazine.type" data-dtype="String">
                     {{#select system.magazine.type}}
-                        <option value="internal">Internal Magazine</option>
-                        <option value="external">External Magazine</option>
-                        <option value="coolant">Energy Weapon</option>
-                        <option value="none">Ammunition n/A</option>
+                        <option value="internal">Internal</option>
+                        <option value="external">External</option>
+                        <option value="coolant">Fusion</option>
+                        <option value="none">Ammo n/A</option>
                     {{/select}}
                     </select>
                     {{#unless (eq system.magazine.type "none")}}
@@ -41,14 +41,14 @@
                             <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
                         {{else}}
                             {{#if (eq system.magazine.type "coolant")}}
-                                <select class="grid-span-4 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
+                                <select class="grid-span-5 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
                                     {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}                              
                                 </select>
                                 <span class="grid-span-3 resource-label">Heat Capacity</span>
                                 <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
                             {{/if}}
                             {{#if (eq system.magazine.type "external")}}
-                                <select class="grid-span-5 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
+                                <select class="grid-span-6 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
                                     {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
                                 </select>
                                 <a class=" chamber-round grid-span-2 resource-label" data-loaded="{{system.magazine.loaded.source}}" Title="Chamber a round from the loaded magazine">Chamber</a>

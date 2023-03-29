@@ -160,9 +160,17 @@ export class OpsActorSheet extends ActorSheet {
         }
         if(i.system.magazine.type != 'internal'){
           if(i.system.magazine.loaded.source){
-              let loadedMag = context.items.filter(item => item._id == i.system.magazine.loaded.source)[0];
-              //i.system.magazine.loaded.value = loadedMag.system.magazine.value;
-              //i.system.magazine.loaded.max = loadedMag.system.magazine.max;
+              let dualID = i.system.magazine.loaded.source.split(',')
+              let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
+              if (dualID[1]==='quantity'){
+                i.system.magazine.loaded.value = getProperty(loadedMag,'system.gear.quantity');
+              }
+              else {
+                i.system.magazine.loaded.value = getProperty(loadedMag,`system.gear.resources.${dualID[1]}.value`);
+                i.system.magazine.loaded.max = getProperty(loadedMag,`system.gear.resources.${dualID[1]}.max`);
+              }
+              
+              
           }
         }
         weapons.push(i);
@@ -174,7 +182,7 @@ export class OpsActorSheet extends ActorSheet {
 
       // Append to gear
       if(i.system.gear?.physical){
-        // If parent ID is invalide and not one of the predefined containers, set it to loose
+        // If parent ID is invalid and not one of the predefined containers, set it to loose
         if (!context.actor.items.get(i.system.gear.location.parent) && i.system.gear.location.parent != "Loose" && i.system.gear.location.parent != "Worn" && i.system.gear.location.parent != "Carried" && i.system.gear.location.parent != "Stored"){
           //console.debug(i, "dropped")
           context.actor.items.get(i._id).update({"system.gear.location.parent": "Loose"});
@@ -431,8 +439,21 @@ export class OpsActorSheet extends ActorSheet {
     const targetId = dataset.targetId;
     const targetProp = dataset.targetProp;
     const value = event.target.value;
-    const item = this.actor.items.get(targetId);
-    await item.update({[targetProp]:value});
+    if (targetId.includes(',')){
+      const dualID = targetId.split(',');
+      const item = this.actor.items.get(dualID[0]);
+      if (dualID[1]==='quantity'){
+        await item.update({['system.gear.quantity']:value});
+      }
+      else{
+        await item.update({[`system.gear.resources.${dualID[1]}.${targetProp}`]:value});
+      }
+    }
+    else {
+      const item = this.actor.items.get(targetId);
+      await item.update({[targetProp]:value});
+    }
+
   }
   async _onItemCheckbox(event){
     event.preventDefault();
