@@ -59,11 +59,29 @@ export class OpsItemSheet extends ItemSheet {
     if (itemData.type === 'weapon'){
       if(actor){
         for(let i of actor.items){
-          if(i.type === 'magazine' && i.system.magazine.type == itemData.system.magazine.type){
-            i.label = actor.items.get(i._id).labelMake();
-            magazines.push(i);
+          // if(i.type === 'magazine' && i.system.magazine.type == itemData.system.magazine.type){
+          //   i.label = actor.items.get(i._id).labelMake();
+          //   magazines.push(i);
+          // }
+          switch (itemData.system.magazine.type){
+            case 'coolant':
+              if (getProperty(i,'system.gear.resources')){
+                for (let [key,r] of Object.entries(i.system.gear.resources)){
+                  if (r.type==='coolant') magazines.push({label:`${r.cool?'Cool':'Hot'} ${r.name?r.name:i.name}${r.value?` [${r.value}]`:''}`,id:`${i.id},${key}`});
+                }
+              }
+              break;
+            case 'external':
+              if (getProperty(i,'system.gear.available')) magazines.push({label:`${i.system.gear.quantity}x ${i.name}`,id:`${i.id},quantity`});
+              if (getProperty(i,'system.gear.resources')){
+                for (let [key,r] of Object.entries(i.system.gear.resources)){
+                  if (r.type==='consumable' && r.available) magazines.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},${key}`});
+                }
+              }
+              break;
           }
         }
+        console.debug(magazines)
       }
 
       let worldWepMods = game.journal.filter(entry => entry.name.includes('Weapon Mods'));
@@ -220,11 +238,19 @@ export class OpsItemSheet extends ItemSheet {
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
     if (this.actor != null && dataset.loaded != ""){
-      const magazine = this.actor.items.get(dataset.loaded);
+      const dualID = dataset.loaded.split(',');
+      const magazine = this.actor.items.get(dualID[0]);
+      let targetPath;
+      if (dualID[1]==='quantity'){
+        targetPath = 'system.gear.quantity';
+      }
+      else{
+        targetPath = `system.gear.resources.${dualID[1].value}`;
+      }
       const magData = {};
       const wepData = {};
-      if(magazine.system.magazine.value>0){
-        setProperty(magData,'system.magazine.value',magazine.system.magazine.value-1)
+      if(getProperty(magazine,targetPath)>0){
+        setProperty(magData,targetPath,getProperty(magazine,targetPath)-1)
         setProperty(wepData,'system.magazine.value',this.object.system.magazine.value+1)
         magazine.update(magData);
         this.object.update(wepData);
@@ -265,24 +291,29 @@ export class OpsItemSheet extends ItemSheet {
       case 'skillMods':
         newProp = new SkillMod;
         newProp.type = preTarget;
-        setProperty(updateData,`system.mods.${randomID(4)}`,newProp);
+        setProperty(updateData,`system.mods.${randomID(8)}`,newProp);
         break;
       case 'protection':
-        setProperty(updateData,`system.protection.${randomID(4)}`,new Protection);
+        setProperty(updateData,`system.protection.${randomID(8)}`,new Protection);
         break;
       case 'attacks':
-        setProperty(updateData,`system.attacks.${randomID(4)}`,new Attack);
+        setProperty(updateData,`system.attacks.${randomID(8)}`,new Attack);
         break;
       case 'weaponMods':
         newProp = duplicate(this.object.readyMod);
-        console.debug(newProp)
-        setProperty(updateData,`system.weaponMods.${randomID(4)}`,newProp);
+        setProperty(updateData,`system.weaponMods.${randomID(8)}`,newProp);
         setProperty(updateData,'system.importFilter','');
         setProperty(updateData,'system.importMod','');
         break;
-      case 'resources':
-        subProperty.push({name:null,value:null,max:null});
-        updateData["system.gear.resources"] = subProperty;
+      case 'consumable':
+      case 'coolant':
+      case 'magic':
+      case 'resource':
+        newProp = {name:null, type:target, value:null, max:null};
+        if (target==='consumable') newProp.available = true;
+        if (target==='coolant') newProp.cool = true;
+        if (target==='magic') newProp.ml = null;
+        setProperty(updateData,`system.gear.resources.${randomID(8)}`,newProp);
         break;
     }
     this.object.update(updateData);
@@ -293,66 +324,20 @@ export class OpsItemSheet extends ItemSheet {
     const target = dataset.targetName;
     const preTarget = dataset?.preTarget;
     const removed = dataset.removeTarget;
-    let systemData;
+    const updateData = {};
     let updateTarget;
-    let subProperty;
-    let subKeys;
     switch(target){
-      case 'resources':
-        systemData = this.object.system.gear;
-        updateTarget = "system.gear." + target;
-        subProperty = systemData[target];
-        subKeys = Object.keys(subProperty);
-        break;
       case 'hit':
       case 'damage':
       case 'recoil':
       case 'cp':
         updateTarget = `system.attacks.${preTarget}.${target}.mods.-=${removed}`;
         break;
-      case 'skillMods':
-        updateTarget = `system.mods.-=${removed}`;
-        break;
-      case 'protection':
-        updateTarget = `system.protection.-=${removed}`;
-        break;
-      case 'attacks':
-        updateTarget = `system.attacks.-=${removed}`;
-        break;
-      case 'weaponMods':
-        updateTarget = `system.weaponMods.-=${removed}`;
-        break;
       default:
-        systemData = this.object.system;
-        updateTarget = "system." + target;
-        subProperty = systemData[target];
-        subKeys = Object.keys(subProperty);
+        updateTarget = `system.${target}.-=${removed}`;
         break;
     }
-    const subLength = subKeys?.length;
-    let mirrorLength;
-    let newEntry = [];
-    const updateData = {};
-    switch(target){
-      case 'skillMods':
-      case 'protection':  
-      case 'attacks':
-      case 'weaponMods':  
-      case 'hit':
-      case 'damage':
-      case 'recoil':
-      case 'cp':
-        updateData[updateTarget] = null;
-        break;
-      case 'resources':
-        for(let i=0;i<subLength;i++){
-          if(subKeys[i] != removed) newEntry.push(subProperty[subKeys[i]]);
-        }
-        updateData[updateTarget] = newEntry;
-        if(target == 'protection') updateData["system.dr"] = 0;
-        break;
-    }
-
+    updateData[updateTarget] = null;
     this.object.update(updateData);
   }
 }
