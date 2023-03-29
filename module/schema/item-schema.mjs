@@ -4,6 +4,7 @@ class Gear extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
             quantity: new field.NumberField({initial:1}),
+            available: new field.BooleanField({initial:false}),
             size: new field.StringField({initial:""}),
             weight: new field.NumberField(),
             cost: new field.NumberField(),
@@ -14,13 +15,7 @@ class Gear extends foundry.abstract.DataModel{
                 parent: new field.StringField({initial:"Loose"}),
                 note: new field.StringField()
             }),
-            resources: new field.ArrayField(
-                new field.SchemaField({
-                    name: new field.StringField(),
-                    value: new field.StringField(),
-                    max: new field.StringField()
-                })
-            )
+            resources: new field.ObjectField({initial:{uses:{name:'Uses',type:'consumable',value:null,max:null,available:false}}})
         }
     }
 };
