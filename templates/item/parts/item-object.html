@@ -41,15 +41,53 @@
 {{/if}}
 <fieldset>
     <legend class="resource-label">
-        Object Resources <a class="item-control sub-create" data-target-name="resources" title="Add Resource"><i class="fas fa-plus"></i></a>
+        Object Resources - <a class="item-control sub-create" data-target-name="consumable" title="Add Consumable"><i class="fas fa-boxes"></i></a> - <a class="item-control sub-create" data-target-name="coolant" title="Add Coolant"><i class="fas fa-snowflake"></i></a> - <a class="item-control sub-create" data-target-name="magic" title="Add Magic"><i class="fas fa-scroll"></i></a> - <a class="item-control sub-create" data-target-name="resource" title="Add Generic Resource"><i class="fas fa-plus"></i></a> 
     </legend>
     <ol class="items-list flex-group-center">
+        <li class="grid grid-10col flex-group-center resource-label">
+            <input class="grid-span-3" type="text" value="Quantity" readonly>
+            <input class="grid-span-2" type="text"  value="{{system.gear.quantity}}" readonly>
+            <span class="grid-start-7 grid-span-2">Available</span>
+            <div>
+                <input name="system.gear.available" title="Available" type="checkbox" {{checked system.gear.available}}/>
+            </div>
+        </li>
         {{#each system.gear.resources}}
-        <li class="grid grid-7col flex-group-center">
-            <input class="grid-span-4" type="text" name="system.gear.resources.{{@key}}.name" value="{{this.name}}" data-dtype="String" placeholder="Resource Name">
-            <input type="text" name="system.gear.resources.{{@index}}.value" value="{{this.value}}" data-dtype="String" placeholder="Value">
-            <input type="text" name="system.gear.resources.{{@index}}.max" value="{{this.max}}" data-dtype="String" placeholder="Max">
-            <a class="item-control sub-delete" data-target-name="resources" data-remove-target="{{@key}}" title="Remove Resource"><i class="fas fa-trash"></i></a>
+        <li class="grid grid-10col flex-group-center resource-label">
+            <input class="grid-span-3" type="text" name="system.gear.resources.{{@key}}.name" value="{{this.name}}" data-dtype="String" placeholder="{{this.type}}">
+            {{#if (eq this.type "resource")}}
+            <div class="flexrow grid-span-6 resource-label flex-group-center">
+                <input class="flex3" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="String" placeholder="Value">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.gear.resources.{{@key}}.max" value="{{this.max}}" data-dtype="String" placeholder="Max">
+            </div>
+            {{else}}
+            {{#unless (eq this.type "coolant")}}
+            <div class="flexrow grid-span-3 resource-label flex-group-center">
+                <input class="flex3" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="Number" placeholder="Value">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.gear.resources.{{@key}}.max" value="{{this.max}}" data-dtype="Number" placeholder="Max">
+            </div>
+            {{/unless}}
+            {{/if}}
+            {{#if (eq this.type "consumable")}}
+            <span class="grid-span-2">Available</span>
+            <div>
+                <input name="system.gear.resources.{{@key}}.available" title="Available" type="checkbox" {{checked this.available}}/>
+            </div>
+            {{/if}}
+            {{#if (eq this.type "coolant")}}
+            <input class="grid-span-2" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="Number" placeholder="Value">
+            <span class="grid-start-7 grid-span-2">Cool</span>
+            <div>
+                <input name="system.gear.resources.{{@key}}.cool" title="Cool" type="checkbox" {{checked this.cool}}/>
+            </div>
+            {{/if}}
+            {{#if (eq this.type "magic")}}
+            <span class="grid-span-2">Mental Limit</span>
+            <input type="text" name="system.gear.resources.{{@key}}.ml" value="{{this.ml}}" data-dtype="Number" placeholder="ML">
+            {{/if}}
+            <a class="item-control sub-delete grid-start-10" data-target-name="gear.resources" data-remove-target="{{@key}}" title="Remove Resource"><i class="fas fa-trash"></i></a>
         </li>
         {{/each}}
     </ol>
