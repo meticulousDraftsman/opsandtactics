@@ -52,43 +52,40 @@
     </div>
   </li>
 </ol>
-
-<ol class="items-list flex-group-center">
-  {{#each armors}}
-      <li class="item grid grid-12col items-header">
-        <div class="grid-span-4" >{{this.label}}</div>
-        <div class="grid-span-4">Damage Reduction</div>
-        {{#if (eq @key 'shield')}}
-        <div class="grid-span-2">Soak</div>
-        {{else}}
-        <div class="grid-span-2">Armor Points</div>
-        {{/if}}
-        <div>Apply</div>
-        <a class="item-control item-create" title="Create armor" data-type="armor" data-layer={{@key}} data-active="true"><i class="fas fa-plus"></i></a>
-      </li>      
+{{#each armors}}
+<fieldset>
+  <legend class="resource-label">
+    {{this.label}} <a class="item-control item-create" data-tooltip="Create {{this.label}}" data-type="armor" data-layer={{@key}} data-active="true"><i class="fas fa-plus"></i></a>
+  </legend>
+  <ol class="items-list flex-group-center">
     {{#each this.items}}
-      <li class="item grid grid-12col" data-item-id="{{this._id}}">
-        <h4 class="grid-span-4">{{this.name}}</h4>
-        <select class="grid-span-4 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" value="{{this.activeDR}}" data-dtype="Number">
-          {{#select this.system.activeDR}}
-            <option value="None">None</option>
-            {{#each this.system.protection}}
-            <option value="{{@key}}">{{this.value}}/ {{this.name}}</option>
-            {{/each}}
-          {{/select}}
-        </select>
-        <div class="grid-span-2 flexrow">
-          {{#if this.system.ap.max}}
-          <input type="text" class="item-input" data-target-prop="system.ap.value" data-target-id="{{this._id}}" value="{{this.system.ap.value}}" data-dtype="Number"/>
-          <span class="flex0">/</span>
-          <input type="text" name="this.system.ap.max" value="{{this.system.ap.max}}" data-dtype="Number" readonly/>
-          {{else}}
-          <span>n/A</span>
-          {{/if}}
-        </div>
-        <a class="item-control apply-damage" title="Apply Damage" data-target="{{this._id}}"><i class="{{../icon}}"></i></a>
-        <a class="flex1 item-control item-edit" data-item-id="{{this._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
-      </li>
+    <li class="item grid grid-8col">
+      <a class="grid-span-2 item-control item-edit" data-item-id="{{this._id}}" data-tooltip="Edit Item">{{this.name}} <i class="fas fa-edit"></i></a>
+      <select class="grid-span-3 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" data-tooltip="Select Damage Reduction" value="{{this.activeDR}}" data-dtype="Number">
+        {{#select this.system.activeDR}}
+          <option value="None">None</option>
+          {{#each this.system.protection}}
+          <option value="{{@key}}">{{this.value}}/ {{this.name}}</option>
+          {{/each}}
+        {{/select}}        
+      </select>
+      {{#if (eq @../key "shield")}}
+      <span class=>Soak</span>
+      {{else}}
+      <span class=>AP</span>
+      {{/if}}
+      {{#if this.system.ap.max}}
+      <div class="grid-span-1 flexrow flex-group-center resource-label">
+        <input type="text" class="item-input flex3" data-target-prop="system.ap.value" data-target-id="{{this._id}}" value="{{this.system.ap.value}}" data-dtype="Number"/>
+        <span>/</span>
+        <input type="text" class="flex3" name="this.system.ap.max" value="{{this.system.ap.max}}" data-dtype="Number" readonly/>          
+      </div>
+      {{else}}
+      <input class="grid-span-1" type="text" value="n/A" readonly>
+      {{/if}}
+      <a class="grid-start-8 item-control apply-damage" data-tooltip="Apply Damage" data-target="{{this._id}}"><i class="{{../icon}}"></i></a>
+    </li>
     {{/each}}
-  {{/each}}
-</ol>
+  </ol>
+</fieldset>
+{{/each}}
