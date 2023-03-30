@@ -67,15 +67,15 @@ export class OpsItemSheet extends ItemSheet {
             case 'coolant':
               if (getProperty(i,'system.gear.resources')){
                 for (let [key,r] of Object.entries(i.system.gear.resources)){
-                  if (r.type==='coolant') magazines.push({label:`${r.cool?'Cool':'Hot'} ${r.name?r.name:i.name}${r.value?` [${r.value}]`:''}`,id:`${i.id},${key}`});
+                  if (r.type==='coolant') magazines.push({label:`${r.cool?'Cool':'Hot'} ${r.name?r.name:i.name}${r.value?` [${r.value}]`:''}`,id:`${i.id},system.gear.resources.${key}`});
                 }
               }
               break;
             case 'external':
-              if (getProperty(i,'system.gear.available')) magazines.push({label:`${i.system.gear.quantity}x ${i.name}`,id:`${i.id},quantity`});
+              if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.system.gear.quantity.value}x ${i.name}`,id:`${i.id},system.gear.quantity`});
               if (getProperty(i,'system.gear.resources')){
                 for (let [key,r] of Object.entries(i.system.gear.resources)){
-                  if (r.type==='consumable' && r.available) magazines.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},${key}`});
+                  if (r.type==='consumable' && r.available) magazines.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},system.gear.resources.${key}`});
                 }
               }
               break;
@@ -206,12 +206,6 @@ export class OpsItemSheet extends ItemSheet {
     // Roll handlers, click handlers, etc. would go here.
     // Delete Self
     html.find('.self-destruct').click(this._selfDestruct.bind(this));
-    // (ev=>{
-    //   const id = $(ev.currentTarget).attr("self");
-    //   if (this.actor != null){
-    //     this.actor.items.get(id).delete();
-    //   }
-    // });
     // Pull a bullet from a loaded magazine into the internal chamber
     html.find('.chamber-round').click(this._onChamberRound.bind(this));
     // Reset imported mod when changing source filter
@@ -240,13 +234,7 @@ export class OpsItemSheet extends ItemSheet {
     if (this.actor != null && dataset.loaded != ""){
       const dualID = dataset.loaded.split(',');
       const magazine = this.actor.items.get(dualID[0]);
-      let targetPath;
-      if (dualID[1]==='quantity'){
-        targetPath = 'system.gear.quantity';
-      }
-      else{
-        targetPath = `system.gear.resources.${dualID[1].value}`;
-      }
+      let targetPath = `${dualID[1]}.value`;
       const magData = {};
       const wepData = {};
       if(getProperty(magazine,targetPath)>0){

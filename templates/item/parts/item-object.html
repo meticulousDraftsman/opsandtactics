@@ -5,7 +5,7 @@
     </legend>
     <div class="resource-label grid grid-7col flex-group-center">
         <span>Quantity</span>
-        <input name="system.gear.quantity" value="{{system.gear.quantity}}" type="text" data-dtype="Number" placeholder="#">
+        <input name="system.gear.quantity.value" value="{{system.gear.quantity.value}}" type="text" data-dtype="Number" placeholder="#">
         <span>Size</span>
         <select class="grid-span-2 flex-group-center" name="system.gear.size" data-dtype="String">
             {{#select system.gear.size}}
@@ -46,10 +46,10 @@
     <ol class="items-list flex-group-center">
         <li class="grid grid-10col flex-group-center resource-label">
             <input class="grid-span-3" type="text" value="Quantity" readonly>
-            <input class="grid-span-2" type="text"  value="{{system.gear.quantity}}" readonly>
+            <input class="grid-span-2" type="text"  value="{{system.gear.quantity.value}}" readonly>
             <span class="grid-start-7 grid-span-2">Available</span>
             <div>
-                <input name="system.gear.available" title="Available" type="checkbox" {{checked system.gear.available}}/>
+                <input name="system.gear.quantity.available" title="Available" type="checkbox" {{checked system.gear.quantity.available}}/>
             </div>
         </li>
         {{#each system.gear.resources}}

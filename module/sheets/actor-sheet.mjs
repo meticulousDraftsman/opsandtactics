@@ -162,15 +162,8 @@ export class OpsActorSheet extends ActorSheet {
           if(i.system.magazine.loaded.source){
               let dualID = i.system.magazine.loaded.source.split(',')
               let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
-              if (dualID[1]==='quantity'){
-                i.system.magazine.loaded.value = getProperty(loadedMag,'system.gear.quantity');
-              }
-              else {
-                i.system.magazine.loaded.value = getProperty(loadedMag,`system.gear.resources.${dualID[1]}.value`);
-                i.system.magazine.loaded.max = getProperty(loadedMag,`system.gear.resources.${dualID[1]}.max`);
-              }
-              
-              
+              i.system.magazine.loaded.value = getProperty(loadedMag,`${dualID[1]}.value`);
+              i.system.magazine.loaded.max = getProperty(loadedMag,`${dualID[1]}.max`);  
           }
         }
         weapons.push(i);
@@ -442,18 +435,12 @@ export class OpsActorSheet extends ActorSheet {
     if (targetId.includes(',')){
       const dualID = targetId.split(',');
       const item = this.actor.items.get(dualID[0]);
-      if (dualID[1]==='quantity'){
-        await item.update({['system.gear.quantity']:value});
-      }
-      else{
-        await item.update({[`system.gear.resources.${dualID[1]}.${targetProp}`]:value});
-      }
+      await item.update({[`${dualID[1]}.${targetProp}`]:value});
     }
     else {
       const item = this.actor.items.get(targetId);
       await item.update({[targetProp]:value});
     }
-
   }
   async _onItemCheckbox(event){
     event.preventDefault();
