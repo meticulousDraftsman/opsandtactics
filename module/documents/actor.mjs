@@ -174,6 +174,7 @@ export class OpsActor extends Actor {
    */
   async rollBleed(){
     const updateData = {};
+    if (this.system.health.bleed === null) return;
     let r = await new Roll(`${this.system.health.bleed}d3`).evaluate({async:true})
     r.toMessage({
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
@@ -235,7 +236,7 @@ export class OpsActor extends Actor {
         reduced = Math.min(incoming,remaining);
         remaining -= reduced;
         incoming -= reduced;
-        if(incoming >= 0){
+        if(incoming > 0 || remaining == 0){
           report = `Extended hit points emptied by ${reduced} damage, ${incoming} damage remains.`;
         }
         else{
@@ -305,11 +306,11 @@ export class OpsActor extends Actor {
       oldReport.reports.push(report);
       await chatReport.setFlag('opsandtactics','report',oldReport);
     }
-    console.debug(chatReport)
+    //console.debug(chatReport)
     // Update the chat message based on its flags
     let messReports = await chatReport.getFlag('opsandtactics','report');
     const html = await renderTemplate(chatTemplate,{title:messReports.initial,report:messReports.reports})
-    console.debug(html)
+    //console.debug(html)
     await chatReport.update({content:html});
     // Detach the chat message if all incoming damage is dealt with
     if(incoming==0){
@@ -319,7 +320,7 @@ export class OpsActor extends Actor {
     // Update target with new remaining value and actor with new incoming value
     this.update(actorUpdateData);
     if(!isEmpty(itemUpdateData)) drItem.update(itemUpdateData);
-    console.debug(report);
+    //console.debug(report);
     return report;
   }
   
