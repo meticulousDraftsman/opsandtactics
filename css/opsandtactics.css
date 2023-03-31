@@ -247,11 +247,13 @@
   display: inline-block;
 }
 
-.opsandtactics .skill > fieldset{
+.opsandtactics .skill > fieldset,
+.opsandtactics .save{
   background: rgba(0, 0, 0, 0.05);
   border-style: outset;
   border-radius: 3px;
 }
+
 
 .opsandtactics .item-form {
   font-family: "Roboto", sans-serif;

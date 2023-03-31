@@ -101,13 +101,13 @@ export class OpsActor extends Actor {
     systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge;
     systemData.def.flat = 10 + systemData.def.equip.value + systemData.def.size + systemData.def.move + systemData.def.misc;
     // Calculate Saves
-    systemData.saves.reflex.value = systemData.saves.reflex.base + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;
-    systemData.saves.fortitude.value = systemData.saves.fortitude.base + systemData.saves.fortitude.mods.total + systemData.abilities.con.mod;
-    systemData.saves.will.value = systemData.saves.will.base + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
+    systemData.saves.reflex.value = Math.floor(systemData.saves.reflex.base * systemData.saves.reflex.mult) + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;
+    systemData.saves.fortitude.value = Math.floor(systemData.saves.fortitude.base * systemData.saves.fortitude.mult) + systemData.saves.fortitude.mods.total + systemData.abilities.con.mod;
+    systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
     //Calculate Initiative Modifier
-    systemData.stats.init.value = systemData.stats.init.total + systemData.abilities.dex.agi;
+    systemData.stats.init.value = systemData.stats.init.total + systemData.abilities.dex.agi +systemData.stats.wager;
     // Calculate BAB
-    systemData.stats.bab.value = systemData.stats.level.value + systemData.stats.bab.total;
+    systemData.stats.bab.value = systemData.stats.level.value + systemData.stats.bab.total + this.wagerPenalty();
     // Calculate Recoil Reduction
     systemData.stats.recoil.value = systemData.abilities.str.score - 10 + systemData.stats.recoil.total;
     // Calculate Personal Capital    
@@ -168,6 +168,22 @@ export class OpsActor extends Actor {
       default:
           return this.system.abilities[source].mod ?? 0;
     }  
+  }
+  wagerPenalty(){
+    switch (this.system.stats.wager){
+      case 1:
+        return -1;
+      case 2:
+        return -3;
+      case 3:
+        return -6;
+      case 4:
+        return -10;
+      case 5:
+        return -15
+      default:
+        return 0;
+    }
   }
   /**
    * Roll a d3 for each bleed die on a character and add the result to the incoming damage.
@@ -334,7 +350,7 @@ export class OpsActor extends Actor {
     // Prepare character roll data.
     this._getCharacterRollData(data);
     this._getNpcRollData(data);
-
+    console.debug(data)
     return data;
   }
 
@@ -351,10 +367,16 @@ export class OpsActor extends Actor {
         data[k] = foundry.utils.deepClone(v);
       }
     }
-
     // Add level for easier access, or fall back to 0.
     if (data.stats.level) {
       data.lvl = data.stats.level.value ?? 1;
+    }
+    // Add BAB and Initiative
+    if (data.stats.init){
+      data.init = data.stats.init.value ?? 0;
+    }
+    if (data.stats.bab){
+      data.bab = data.stats.bab.value ?? 0;
     }
   }
 

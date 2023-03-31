@@ -62,6 +62,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                 init: new field.EmbeddedDataField(Mods),
                 bab: new field.EmbeddedDataField(Mods),
                 recoil: new field.EmbeddedDataField(Mods),
+                wager: new field.NumberField({initial:0}),
                 armorPenalty: new field.EmbeddedDataField(Mods),
                 level: new field.SchemaField({
                     value: new field.NumberField({initial:1}),
@@ -120,14 +121,17 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             saves: new field.SchemaField({
                 fortitude: new field.SchemaField({
                     base: new field.NumberField({initial:10}),
+                    mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 }),
                 reflex: new field.SchemaField({
                     base: new field.NumberField({initial:10}),
+                    mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 }),
                 will: new field.SchemaField({
                     base: new field.NumberField({initial:10}),
+                    mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 })
             }),

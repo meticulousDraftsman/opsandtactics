@@ -13,6 +13,9 @@
             <span class="grid-span-2">Mental Limit</span>
             <input class="grid-span-3" type="text" name="system.ml.formula" value="{{system.ml.formula}}" data-dtype="String">
             <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" placeholder="Misc" data-dtype="String">
+            <span class="grid-span-2">Encumberance</span>
+            <input class="grid-span-3" type="text" name="system.stats.carrying.formula" value="{{system.stats.carrying.formula}}" data-dtype="String">
+            <input type="text" name="system.stats.carrying.mods.misc" value="{{system.stats.carrying.mods.misc}}" placeholder="Misc" data-dtype="String">
         </div>
     </fieldset>
     <fieldset class="grid-span-2">
@@ -26,6 +29,9 @@
             <span class="grid-span-2">Initiative</span>
             <input type="text"value="{{system.stats.init.value}}" readonly>
             <input type="text" name="system.stats.init.misc" value="{{system.stats.init.misc}}" placeholder="Misc" data-dtype="Number">
+            <select class="grid-span-4 flex-group-center" name="system.stats.wager" data-dtype="Number">
+                {{selectOptions wagers selected=system.stats.wager nameAttr="value" labelAttr="label"}}
+            </select>
             <span class="grid-span-2">Recoil</span>
             <input type="text"value="{{system.stats.recoil.value}}" readonly>
             <input type="text" name="system.stats.recoil.misc" value="{{system.stats.recoil.misc}}" placeholder="Misc" data-dtype="Number">

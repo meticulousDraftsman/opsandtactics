@@ -74,7 +74,15 @@ export class OpsActorSheet extends ActorSheet {
     const systemData = context.system;
     // Determine XP required for the next level
     systemData.stats.level.xp.needed =`${Number(systemData.stats.level.xp.value).toLocaleString()}/${Number(systemData.stats.level.value*systemData.stats.level.value*1500).toLocaleString()}xp`;
-
+    // Initiative Wagering Options
+    context.wagers = [
+      {value:0,label:'Initiative Wagering'},
+      {value:1,label:'+1 Init, -1 CP and Atk'},
+      {value:2,label:'+2 Init, -3 CP and Atk'},
+      {value:3,label:'+3 Init, -6 CP and Atk'},
+      {value:4,label:'+4 Init, -10 CP and Atk'},
+      {value:5,label:'+5 Init, -15 CP and Atk'}
+    ]
     // Calculate ML usage
     systemData.magic.psion=0;
     if(systemData.magic.psionFocus) systemData.magic.psion = (2*systemData.stats.level.value)+25;

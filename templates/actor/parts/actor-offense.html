@@ -26,21 +26,21 @@
                             {{/if}}
                             {{/unless}}
                             {{#if (eq item.system.magazine.type "internal")}}
-                            <div class="grid-span-2 flexrow resource-label">
+                            <div class="grid-span-2 flexrow flex-group-center">
                                 <input class="flex3" type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item._id}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
                                 <span>/</span>
                                 <input class="flex3" type="text" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
                             </div>
                             {{/if}}
                             {{#if (eq item.system.magazine.type "external")}}
-                            <div class="grid-span-2 flexrow resource-label">
+                            <div class="grid-span-2 flexrow flex-group-center">
                                 <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
-                                <span>/</span>
+                                <span>{{#if (gt item.system.magazine.value 0)}}+{{item.system.magazine.value}}{{/if}}/</span>
                                 <input type="text" class="flex3" value="{{item.system.magazine.loaded.max}}" data-dtype="Number" readonly/>
                             </div>
                             {{/if}}
                             {{#if (eq item.system.magazine.type "coolant")}}
-                            <div class="grid-span-2 flexrow resource-label">
+                            <div class="grid-span-2 flexrow flex-group-center">
                                 <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
                                 <span>/</span>
                                 <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
