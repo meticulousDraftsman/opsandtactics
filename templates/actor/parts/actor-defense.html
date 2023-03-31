@@ -28,8 +28,8 @@
     Damage and Hit Points
   </legend>
   <ol class="items-list flex-group-center">
-    <li class="grid grid-8col flex-group-center resource-label">
-      <a class="actor-bleed" data-tooltip="Roll Bleed Dice and add to incoming damage">Bleed <i class="fas fa-tint"></i></a>
+    <li class="grid grid-8col flex-group-center">
+      <a class="actor-bleed resource-label" data-tooltip="Roll Bleed Dice and add to incoming damage">Bleed <i class="fas fa-tint"></i></a>
       <input type="text" name="system.health.bleed" value="{{system.health.bleed}}" data-dtype="Number"/>
       <span>Incoming</span>
       <input class="grid-span-2" type="text" name="system.health.incoming" value="{{system.health.incoming}}" data-dtype="Number" placeholder="Damage"/>
@@ -37,7 +37,7 @@
       <input type="text" value="{{system.health.xhp.value}}/{{system.health.xhp.max}}" readonly>
       <a class="item-control apply-damage" data-tooltip="Apply Damage to Extended Hit Points" data-target="xhp"><i class="fas fa-prescription-bottle-alt"></i></a>
     </li>
-    <li class="grid grid-8col flex-group-center resource-label">
+    <li class="grid grid-8col flex-group-center">
       <input class="grid-span-5" type="text" name="system.health.notes" value="{{system.health.notes}}" data-dtype="String" placeholder="Medical Notes"/>
       <span>CHP</span>
       <input type="text" value="{{system.health.chp.value}}/{{system.health.chp.max}}" readonly>
