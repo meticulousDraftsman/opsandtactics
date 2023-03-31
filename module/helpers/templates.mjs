@@ -9,7 +9,7 @@
     // Actor partials.
     "systems/opsandtactics/templates/actor/parts/actor-character.html",
     "systems/opsandtactics/templates/actor/parts/actor-items.html",
-    "systems/opsandtactics/templates/actor/parts/actor-magic.html",
+    "systems/opsandtactics/templates/actor/parts/actor-utility.html",
     "systems/opsandtactics/templates/actor/parts/actor-effects.html",
     "systems/opsandtactics/templates/actor/parts/actor-defense.html",
     "systems/opsandtactics/templates/actor/parts/actor-offense.html",

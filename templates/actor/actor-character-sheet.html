@@ -88,8 +88,8 @@
     <a class="item" data-tab="traits">Traits</a>
     <a class="item" data-tab="offense">Offense</a>
     <a class="item" data-tab="defense">Defense</a>
+    <a class="item" data-tab="utility">Utility</a>
     <a class="item" data-tab="gear">Gear</a>
-    <a class="item" data-tab="magic">Magic</a>
     <a class="item" data-tab="biography">Biography</a>
     <a class="item" data-tab="effects">Active Effects</a>
   </nav>
@@ -116,14 +116,14 @@
         {{> "systems/opsandtactics/templates/actor/parts/actor-defense.html"}}
     </div>
 
+    {{!-- Utility Tab --}}
+    <div class="tab utility" data-group="primary" data-tab="utility">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-utility.html"}}
+    </div>
+
     {{!-- Gear Tab --}}
     <div class="tab gear" data-group="primary" data-tab="gear">
        {{> "systems/opsandtactics/templates/actor/parts/actor-items.html"}}
-    </div>
-
-    {{!-- Magic Tab --}}
-    <div class="tab magic" data-group="primary" data-tab="magic">
-      {{> "systems/opsandtactics/templates/actor/parts/actor-magic.html"}}
     </div>
 
     {{!-- Biography Tab --}}
