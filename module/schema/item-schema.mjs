@@ -17,7 +17,7 @@ class Gear extends foundry.abstract.DataModel{
                 parent: new field.StringField({initial:"Loose"}),
                 note: new field.StringField()
             }),
-            resources: new field.ObjectField({initial:{uses:{name:'Uses',type:'consumable',value:null,max:null,available:false}}})
+            resources: new field.ObjectField()
         }
     }
 };
