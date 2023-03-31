@@ -1,57 +1,50 @@
-<ol class="items-list flex-group-center">
-  <li class="item items-header grid grid-8col">
-    <div>Equip DEF</div>
-    <div>Max AGI</div>
-    <div>Size</div>
-    <div>Movement</div>
-    <div>Misc</div>
-    <div>Dodge</div>
-    <div>Armor Penalty</div>
-    <div>CP Loss</div>
-  </li>
-  <li class="grid grid-8col">
-    <div class="flexrow">
-      <input type="text" value="{{system.def.equip.value}}" data-dtype="Number" readonly/>
-      <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number"/>
-    </div>
+<fieldset>
+  <legend class="resource-label">
+    Defense Modifiers
+  </legend>
+  <div class="grid grid-6col flex-group-center">
+    <span>Max Agility</span>
     <input type="text" value="{{system.stats.agiMax}}" data-dtype="Number" placeholder="n/A" readonly/>
-    <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number"/>
-    <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number"/>
-    <input type="text" name="system.def.misc" value="{{system.def.misc}}" data-dtype="Number"/>
-    <input type="text" name="system.def.dodge" value="{{system.def.dodge}}" data-dtype="Number"/>
+    <span>Armor Penalty</span>
     <input type="text" value="{{system.stats.armorPenalty.value}}" data-dtype="Number" readonly/>
+    <span>CP Loss</span>
     <input type="text" value="{{system.cp.armor.value}}" data-dtype="Number" readonly/>
-  </li>
-</ol>
-<ol class="items-list flex-group-center">
-  <li class="item items-header grid grid-12col">
-    <div class="grid-span-6">Medical Notes</div>
-    <div class="grid-span-2">Incoming Damage</div>
-    <div class="grid-span-2">Bleed</div>
-    <div>XHP</div>
-    <div>CHP</div>
-  </li>
-  <li class="grid grid-12col">
-    <div class="grid-span-6">
-      <input type="text" name="system.health.notes" value="{{system.health.notes}}" data-dtype="String"/>
-    </div>
-    <div class="grid-span-2">
-      <input type="text" name="system.health.incoming" value="{{system.health.incoming}}" data-dtype="Number"/>
-    </div>
-    <div>
+    <span>Movement</span>
+    <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number"/>
+    <span>Dodge</span>
+    <input type="text" name="system.def.dodge" value="{{system.def.dodge}}" data-dtype="Number"/>
+    <span>Miscellaneous</span>
+    <input type="text" name="system.def.misc" value="{{system.def.misc}}" data-dtype="Number"/>
+    <span>Size</span>
+    <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number"/>
+    <span>Equipment</span>
+    <input type="text" value="{{system.def.equip.value}}" data-dtype="Number" readonly/>
+    <span>Equip Misc</span>
+    <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number"/>
+  </div>
+</fieldset>
+<fieldset>
+  <legend class="resource-label">
+    Damage and Hit Points
+  </legend>
+  <ol class="items-list flex-group-center">
+    <li class="grid grid-8col flex-group-center resource-label">
+      <a class="actor-bleed" data-tooltip="Roll Bleed Dice and add to incoming damage">Bleed <i class="fas fa-tint"></i></a>
       <input type="text" name="system.health.bleed" value="{{system.health.bleed}}" data-dtype="Number"/>
-    </div>
-    <div>
-      <a class="actor-bleed"><i class="fas fa-tint"></i></a>
-    </div>
-    <div>
-      <a class="item-control apply-damage" title="Apply Damage to XHP" data-target="xhp"><i class="fas fa-prescription-bottle-alt"></i></a>
-    </div>
-    <div>
-      <a class="item-control apply-damage" title="Apply Damage to CHP" data-target="chp"><i class="fas fa-heartbeat"></i></a>
-    </div>
-  </li>
-</ol>
+      <span>Incoming</span>
+      <input class="grid-span-2" type="text" name="system.health.incoming" value="{{system.health.incoming}}" data-dtype="Number" placeholder="Damage"/>
+      <span>XHP</span>
+      <input type="text" value="{{system.health.xhp.value}}/{{system.health.xhp.max}}" readonly>
+      <a class="item-control apply-damage" data-tooltip="Apply Damage to Extended Hit Points" data-target="xhp"><i class="fas fa-prescription-bottle-alt"></i></a>
+    </li>
+    <li class="grid grid-8col flex-group-center resource-label">
+      <input class="grid-span-5" type="text" name="system.health.notes" value="{{system.health.notes}}" data-dtype="String" placeholder="Medical Notes"/>
+      <span>CHP</span>
+      <input type="text" value="{{system.health.chp.value}}/{{system.health.chp.max}}" readonly>
+      <a class="item-control apply-damage" data-tooltip="Apply Damage to Core Hit Points" data-target="chp"><i class="fas fa-heartbeat"></i></a>
+    </li>
+  </ol>
+</fieldset>
 {{#each armors}}
 <fieldset>
   <legend class="resource-label">
@@ -59,9 +52,14 @@
   </legend>
   <ol class="items-list flex-group-center">
     {{#each this.items}}
-    <li class="item grid grid-8col">
-      <a class="grid-span-2 item-control item-edit" data-item-id="{{this._id}}" data-tooltip="Edit Item">{{this.name}} <i class="fas fa-edit"></i></a>
-      <select class="grid-span-3 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" data-tooltip="Select Damage Reduction" value="{{this.activeDR}}" data-dtype="Number">
+    <li class="item grid grid-8col flex-group-center">
+      <div class="grid-span-2">
+        <div class="grid grid-10col flex-group-center">
+          <span class="grid-span-9">{{this.name}}</span>
+          <a class="item-control item-edit" data-item-id="{{this._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i></a>
+        </div>
+      </div>
+      <select class="grid-span-4 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" data-tooltip="Select Damage Reduction" value="{{this.activeDR}}" data-dtype="Number">
         {{#select this.system.activeDR}}
           <option value="None">None</option>
           {{#each this.system.protection}}
@@ -69,19 +67,14 @@
           {{/each}}
         {{/select}}        
       </select>
-      {{#if (eq @../key "shield")}}
-      <span class=>Soak</span>
-      {{else}}
-      <span class=>AP</span>
-      {{/if}}
       {{#if this.system.ap.max}}
-      <div class="grid-span-1 flexrow flex-group-center resource-label">
+      <div class="flexrow flex-group-center resource-label" {{#if (eq @../key "shield")}}data-tooltip="Shield Soak"{{else}}data-tooltip="Armor Points"{{/if}}>
         <input type="text" class="item-input flex3" data-target-prop="system.ap.value" data-target-id="{{this._id}}" value="{{this.system.ap.value}}" data-dtype="Number"/>
         <span>/</span>
         <input type="text" class="flex3" name="this.system.ap.max" value="{{this.system.ap.max}}" data-dtype="Number" readonly/>          
       </div>
       {{else}}
-      <input class="grid-span-1" type="text" value="n/A" readonly>
+      <input  type="text" value="n/A" data-tooltip="Flat Reduction" readonly>
       {{/if}}
       <a class="grid-start-8 item-control apply-damage" data-tooltip="Apply Damage" data-target="{{this._id}}"><i class="{{../icon}}"></i></a>
     </li>
