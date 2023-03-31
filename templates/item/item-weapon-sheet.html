@@ -127,11 +127,19 @@
 
         <div class="tab" data-group="primary" data-tab="attacks">
             <div class="flexrow">
-                <select class="drop-wide" name="system.selectMod" data-dtype="String">
-                    {{selectOptions system.weaponMods selected=system.selectMod labelAttr="name"}}
-                </select>
-                <a class="item-control sub-create" data-target-name="attacks" title="Add Attack"><i class="fas fa-plus"></i></a>
+
+                
             </div>
+            <fieldset>
+                <legend class="resource-label">
+                    Mod Selection for Attacks <a class="item-control sub-create" data-target-name="attacks" title="Add Attack"><i class="fas fa-plus"></i></a>
+                </legend>
+                <div>
+                    <select class="flex-group-center" name="system.selectMod" data-dtype="String">
+                        {{selectOptions system.weaponMods selected=system.selectMod labelAttr="name"}}
+                    </select>
+                </div>
+            </fieldset>
             {{#each system.attacks}}
             <fieldset>
                 <legend>
