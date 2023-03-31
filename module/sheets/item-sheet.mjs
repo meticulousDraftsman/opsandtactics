@@ -256,18 +256,7 @@ export class OpsItemSheet extends ItemSheet {
     const dataset = event.currentTarget.dataset;
     const target = dataset.targetName;
     const preTarget = dataset?.preTarget;
-    let systemData;
-    let subProperty;
-    switch(target){
-      case 'resources':
-        subProperty = this.object.system.gear[target];
-        break;
-      default:
-        break;
-    }
     const updateData = {};
-    let mirrorLength;
-    let mirrorProperty;
     let newProp;
     switch(target){
         case 'hit':
