@@ -126,6 +126,6 @@
     }
   },
   "Item": {
-    "types": ["weapon","armor","skill","object","magazine","feature","magic"]
+    "types": ["weapon","armor","skill","object","feature","magic"]
   }
 }
