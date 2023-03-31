@@ -212,7 +212,7 @@ export class OpsActor extends Actor {
     if (incoming == 0) return null;
     const actorUpdateData = {};
     const itemUpdateData = {};
-    const chatTemplate = "systems/opsandtactics/templates/chat/armor-damage-card.html";
+    const chatTemplate = "systems/opsandtactics/templates/interface/armor-damage-card.html";
     let oldReport;
     let chatReport;
     let type = '';
