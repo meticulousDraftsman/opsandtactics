@@ -1,23 +1,56 @@
+<fieldset>
+    <legend class="resource-label">
+        Object Resources
+    </legend>
+    {{#each resObjects}}
+    <fieldset>
+        <legend>{{this.label}}</legend>
+        <ol class="items-list">
+        {{#each this.entries}}
+            <li class="grid grid-10col flex-group-center">
+                <span class="grid-span-5">{{this.name}}</span>
+                {{#if (eq this.type "consumable")}}
+                <div class="grid-span-2 flexrow flex-group-center">
+                    <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
+                    <span>/</span>
+                    <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.id}}" value="{{this.max}}" data-dtype="Number" placeholder="Max">
+                </div>
+                <span class="grid-span-2">Available</span>
+                <div>
+                    <input class="flex3 item-checkbox" type="checkbox" data-target-prop="available" data-target-id="{{this.id}}" {{checked this.available}}>
+                </div>
+                {{/if}}
+                {{#if (eq this.type "coolant")}}
+                <input class="grid-span-2 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
+                <span class="grid-span-2">Cool</span>
+                <div>
+                    <input class="flex3 item-checkbox" type="checkbox" data-target-prop="available" data-target-id="{{this.id}}" {{checked this.available}}>
+                </div>
+                {{/if}}
+                {{#if (eq this.type "magic")}}
+                <div class="grid-span-2 flexrow flex-group-center">
+                    <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
+                    <span>/</span>
+                    <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.id}}" value="{{this.max}}" data-dtype="Number" placeholder="Max">
+                </div>
+                <span class="grid-span-2">Mental Limit</span>
+                <input class="item-input" type="text" data-target-prop="ml" data-target-id="{{this.id}}" value="{{this.ml}}" data-dtype="Number" placeholder="ML">
+                {{/if}}
+                {{#if (eq this.type "resource")}}
+                <div class="grid-span-5 flexrow flex-group-center">
+                    <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="String" placeholder="Value">
+                    <span>/</span>
+                    <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.id}}" value="{{this.max}}" data-dtype="String" placeholder="Max">
+                </div>
+                {{/if}}
+            </li>
+        {{/each}}
+        </ol>
+    </fieldset>
+    {{/each}}
+</fieldset>
+
 <ol class="items-list flex-group-center">
-    <li class="item items-header resource-label grid grid-4col">
-        <div>Psionic Focus</div>
-        <div>Incantation ML</div>
-        <div>Recipe Sets</div>
-        <div>Total ML Used</div>
-    </li>
-    <li class="grid grid-8col">
-        <div class="flexrow grid-span-2">
-            <input type="text" value="{{system.magic.psion}}" readonly>
-            <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
-        </div>
-        <div class="flexrow grid-span-2">
-            <input type="text" name="system.magic.incant" value="{{system.magic.incant}}" data-dtype="Number">
-            <a class="mental-limit" data-ml-cost="-{{system.ml.max}}"><i class="fas fa-recycle"></i></a>
-        </div>
-        <input type="text" value="{{system.magic.recipe}}" readonly>
-        <input type="text" name="system.magic.memorized" value="{{system.magic.memorized}}" data-dtype="Number">
-        <input class="grid-span-2" type="text" value="{{system.ml.value}}" readonly>
-    </li>
     <li class="item items-header resource-label grid grid-12col">
         <div class="grid-span-4">Magic</div>
         <div class="grid-span-2">Action</div>

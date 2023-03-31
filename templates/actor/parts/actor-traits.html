@@ -40,6 +40,27 @@
 </div>
 <fieldset>
     <legend class="resource-label">
+        Mental Limit
+    </legend>
+    <div class="grid grid-8col flex-group-center">
+        <span class="grid-span-2">Psionically Focused</span>
+        <div>
+            <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
+        </div>
+        <input type="text" value="{{system.magic.psion}}" readonly>
+        <span class="grid-span-2">Object Mental Limit</span>
+        <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" data-dtype="Number" placeholder="Misc">
+        <input type="text" value="{{system.ml.object}}" readonly>
+        <span class="grid-span-2">Recipe Sets Memorized</span>
+        <input type="text" name="system.magic.memorized" value="{{system.magic.memorized}}" data-dtype="Number">
+        <input type="text" value="{{system.magic.recipe}}" readonly>
+        <span class="grid-span-2">Incantation Use</span>
+        <a class="mental-limit" data-ml-cost="-{{system.ml.max}}"><i class="fas fa-recycle" data-tooltip="Regain Mental Limit spent by Invoking"></i></a>
+        <input type="text" name="system.magic.incant" value="{{system.magic.incant}}" data-dtype="Number">
+    </div>
+</fieldset>
+<fieldset>
+    <legend class="resource-label">
         Traits <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
     </legend>
     <ol class="items-list flex-group-left">
