@@ -72,7 +72,7 @@ export class OpsItemSheet extends ItemSheet {
               }
               break;
             case 'external':
-              if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.system.gear.quantity.value}x ${i.name}`,id:`${i.id},system.gear.quantity`});
+              if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
               if (getProperty(i,'system.gear.resources')){
                 for (let [key,r] of Object.entries(i.system.gear.resources)){
                   if (r.type==='consumable' && r.available) magazines.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},system.gear.resources.${key}`});
@@ -81,7 +81,7 @@ export class OpsItemSheet extends ItemSheet {
               break;
           }
         }
-        console.debug(magazines)
+        //console.debug(magazines)
       }
 
       let worldWepMods = game.journal.filter(entry => entry.name.includes('Weapon Mods'));
