@@ -142,6 +142,24 @@ export class OpsActorSheet extends ActorSheet {
     let gearFail = [];
     const traits = [];
     const magic = [];
+    const resObjects = {
+      consumable: {
+        label: 'Consumable',
+        entries: []
+      },
+      coolant: {
+        label: 'Coolant',
+        entries: []
+      },
+      magic:  {
+        label: 'Magic',
+        entries: []
+      },
+      resource: {
+        label: 'General',
+        entries: []
+      }
+    };
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -175,10 +193,6 @@ export class OpsActorSheet extends ActorSheet {
           }
         }
         weapons.push(i);
-      }
-      // Handle Magazines
-      if (i.type === 'magazine'){
-        i.label = context.actor.items.get(i._id).labelMake();
       }
 
       // Append to gear
@@ -279,6 +293,16 @@ export class OpsActorSheet extends ActorSheet {
         //if(i.system.effect.misc!="") i.system.effect.mods = `${i.system.effect.mods}+${i.system.effect.misc}`;
         magic.push(i);
       }
+
+      // Append to objects-with-resources
+      if(!isEmpty(getProperty(i,'system.gear.resources'))){
+        for (let [key,res] of Object.entries(i.system.gear.resources)){
+          let tempRes = res;
+          tempRes.name = `${i.name}${res.name?`: ${res.name}`:''}`
+          tempRes.id = `${i._id},system.gear.resources.${key}`
+          resObjects[res.type].entries.push(tempRes)
+        }
+      }
     }
 
     // Purge Empty Armor Layers
@@ -348,6 +372,7 @@ export class OpsActorSheet extends ActorSheet {
     context.nestedGear = nestedGear;
     context.traits = traits;
     context.magic = magic;
+    context.resObjects = resObjects;
     //console.debug(context);
   }
 
@@ -455,9 +480,15 @@ export class OpsActorSheet extends ActorSheet {
     const dataset = event.currentTarget.dataset;
     const targetId = dataset.targetId;
     const targetProp = dataset.targetProp;
-    const item = this.actor.items.get(targetId);
-    let value = !getProperty(item,targetProp);
-    await item.update({[targetProp]:value});
+    if (targetId.includes(',')){
+      const dualID = targetId.split(',');
+      const item = this.actor.items.get(dualID[0]);
+      await item.update({[`${dualID[1]}.${targetProp}`]:!getProperty(item,`${dualID[1]}.${targetProp}`)})
+    }
+    else{
+      const item = this.actor.items.get(targetId);
+      await item.update({[targetProp]:!getProperty(item,targetProp)});
+    }
   }
   async _onItemToggle(event){
     event.preventDefault();
