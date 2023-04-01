@@ -26,29 +26,26 @@
       </div>
     </fieldset>
     <fieldset>
-      <legend class="resource-label">Saving Throws</legend>
-      <div class="flex-group-center">
+      <legend class="resource-label">
+        Saving Throws
+      </legend>
         {{#each system.saves as |save|}}
-          <fieldset class="save grid-span-4">
-            <a class="resource-label rollable" data-roll="3d6{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" data-tooltip="Roll {{localize (concat 'OATS.saves.' @key)}}" data-label="{{localize (concat 'OATS.saves.' @key)}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a>
-            <details>
-              <summary class="grid grid-2col">
-                <span class="grid-span-2"><i class="fas fa-list"></i> Modifiers</span>
-              </summary>
-              <div class="grid grid-2col flex-group-center">
+          <fieldset class="save flex-group-center collapse-parent">
+            <a class="resource-label rollable" data-roll="3d6{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" data-tooltip="Roll {{localize (concat 'OATS.saves.' @key)}}" data-label="{{localize (concat 'OATS.saves.' @key)}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a> <i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i>
+            <div class="{{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
+              <div class="grid grid-3col flex-group-center">
                 <span>Base</span>
-                <div class="flexrow flex-group-center">
+                <div class="grid-span-2 flexrow flex-group-center">
                   <input class="flex3" type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
                   <span>x</span>
                   <input class="flex3" type="text" name="system.saves.{{@key}}.mult" value="{{save.mult}}" data-dtype="Number"/>
                 </div>
                 <span>Misc</span>
-                <input type="text" name="system.saves.{{@key}}.mods.misc" value="{{save.mods.misc}}" data-dtype="Number"/>
+                <input class="grid-span-2" type="text" name="system.saves.{{@key}}.mods.misc" value="{{save.mods.misc}}" data-dtype="Number"/>
               </div>
-            </details>
+            </div>
           </fieldset>
         {{/each}}
-      </div>
     </fieldset>
   </aside>
 
