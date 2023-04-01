@@ -18,12 +18,12 @@
                 <legend class="resource-label">
                     Weapon Statistics {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
                 </legend>
-                <div class="grid grid-12col resource-label flex-group-center">
-                    <span class="grid-span-3 resource-label">Weapon Range</span>
+                <div class="grid grid-12col flex-group-center">
+                    <span class="grid-span-3">Weapon Range</span>
                     <input name="system.range" value="{{system.range}}" type="text" data-dtype="String" placeholder="ft">
-                    <span class="grid-span-3 resource-label">Critical Range</span>
+                    <span class="grid-span-3">Critical Range</span>
                     <input name="system.crit" value="{{system.crit}}" type="text" data-dtype="Number" placeholder="-">
-                    <span class="grid-span-3 resource-label">Error Range %</span>
+                    <span class="grid-span-3">Error Range %</span>
                     <input name="system.error" value="{{system.error}}" type="text" data-dtype="Number" placeholder="%">
                     <select class="grid-span-3 flex-group-center" name="system.magazine.type" data-dtype="String">
                     {{#select system.magazine.type}}
@@ -35,23 +35,23 @@
                     </select>
                     {{#unless (eq system.magazine.type "none")}}
                         {{#if (eq system.magazine.type "internal")}}
-                            <span class="grid-span-2 resource-label">Loaded</span>
+                            <span class="grid-span-2">Loaded</span>
                             <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number" placeholder="0"/>
-                            <span class="grid-span-2 resource-label">Capacity</span>
+                            <span class="grid-span-2">Capacity</span>
                             <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
                         {{else}}
                             {{#if (eq system.magazine.type "coolant")}}
                                 <select class="grid-span-5 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
                                     {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}                              
                                 </select>
-                                <span class="grid-span-3 resource-label">Heat Capacity</span>
+                                <span class="grid-span-3">Heat Capacity</span>
                                 <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
                             {{/if}}
                             {{#if (eq system.magazine.type "external")}}
                                 <select class="grid-span-6 flex-group-center" name="system.magazine.loaded.source" data-dtype="String">
                                     {{selectOptions magazines selected=system.magazine.loaded.source nameAttr="id" labelAttr="label"}}
                                 </select>
-                                <a class=" chamber-round grid-span-2 resource-label" data-loaded="{{system.magazine.loaded.source}}" Title="Chamber a round from the loaded magazine">Chamber</a>
+                                <a class=" chamber-round grid-span-2" data-loaded="{{system.magazine.loaded.source}}" Title="Chamber a round from the loaded magazine">Chamber</a>
                                 <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number" placeholder="+0"/>
                             {{/if}}
                         {{/if}}
@@ -146,11 +146,11 @@
                     <input name="system.attacks.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
                 </legend>
                 <div class="grid grid-10col flex-group-center">
-                    <span class="resource-label">Active</span>
+                    <span>Active</span>
                     <div>
                         <input name="system.attacks.{{@key}}.active" type="checkbox" {{checked this.active}}/>
                     </div>
-                    <span class="resource-label">Display</span>
+                    <span>Display</span>
                     <div>
                         <input name="system.attacks.{{@key}}.display" type="checkbox" {{checked this.display}}/>
                     </div>
@@ -161,7 +161,7 @@
                         <option value="none">No Roll</option>
                     {{/select}}
                     </select>
-                    <span class="resource-label grid-span-2">Ammo Used</span>
+                    <span class=" grid-span-2">Ammo Used</span>
                     <input name="system.attacks.{{@key}}.ammo" value = "{{this.ammo}}" type="text" data-dtype="Number">
                     <a class="item-control sub-delete" data-target-name="attacks" data-remove-target="{{@key}}" title="Remove Attack"><i class="fas fa-trash"></i></a>
                     

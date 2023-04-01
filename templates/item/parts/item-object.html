@@ -3,7 +3,7 @@
     <legend class="resource-label">
         Object Properties
     </legend>
-    <div class="resource-label grid grid-7col flex-group-center">
+    <div class="grid grid-7col flex-group-center">
         <span>Quantity</span>
         <input name="system.gear.quantity.value" value="{{system.gear.quantity.value}}" type="text" data-dtype="Number" placeholder="#">
         <span>Size</span>
@@ -29,7 +29,7 @@
         <span>License</span>
         <input name="system.gear.restriction" value="{{system.gear.restriction}}" type="text" data-dtype="String" placeholder="None">
     </div>
-    <div class="grid grid-7col flex-group-center resource-label">
+    <div class="grid grid-7col flex-group-center">
         <span>Container</span>
         <select class="grid-span-6 flex-group-center" name="system.gear.location.parent" data-dtype="String">
             {{selectOptions containers selected=system.gear.location.parent nameAttr="id" labelAttr="name"}}
@@ -44,7 +44,7 @@
         Object Resources - <a class="item-control sub-create" data-target-name="consumable" title="Add Consumable"><i class="fas fa-boxes"></i></a> - <a class="item-control sub-create" data-target-name="coolant" title="Add Coolant"><i class="fas fa-snowflake"></i></a> - <a class="item-control sub-create" data-target-name="magic" title="Add Magic"><i class="fas fa-scroll"></i></a> - <a class="item-control sub-create" data-target-name="resource" title="Add Generic Resource"><i class="fas fa-plus"></i></a> 
     </legend>
     <ol class="items-list flex-group-center">
-        <li class="grid grid-10col flex-group-center resource-label">
+        <li class="grid grid-10col flex-group-center">
             <input class="grid-span-3" type="text" value="Quantity" readonly>
             <input class="grid-span-2" type="text"  value="{{system.gear.quantity.value}}" readonly>
             <span class="grid-start-7 grid-span-2">Available</span>
@@ -53,17 +53,17 @@
             </div>
         </li>
         {{#each system.gear.resources}}
-        <li class="grid grid-10col flex-group-center resource-label">
+        <li class="grid grid-10col flex-group-center">
             <input class="grid-span-3" type="text" name="system.gear.resources.{{@key}}.name" value="{{this.name}}" data-dtype="String" placeholder="{{this.type}}">
             {{#if (eq this.type "resource")}}
-            <div class="flexrow grid-span-6 resource-label flex-group-center">
+            <div class="flexrow grid-span-6 flex-group-center">
                 <input class="flex3" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="String" placeholder="Value">
                 <span>/</span>
                 <input class="flex3" type="text" name="system.gear.resources.{{@key}}.max" value="{{this.max}}" data-dtype="String" placeholder="Max">
             </div>
             {{else}}
             {{#unless (eq this.type "coolant")}}
-            <div class="flexrow grid-span-3 resource-label flex-group-center">
+            <div class="flexrow grid-span-3 flex-group-center">
                 <input class="flex3" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="Number" placeholder="Value">
                 <span>/</span>
                 <input class="flex3" type="text" name="system.gear.resources.{{@key}}.max" value="{{this.max}}" data-dtype="Number" placeholder="Max">
