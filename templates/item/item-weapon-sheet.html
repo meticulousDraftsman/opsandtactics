@@ -155,9 +155,11 @@
                         <input name="system.attacks.{{@key}}.display" type="checkbox" {{checked this.display}}/>
                     </div>
                     <select class="grid-span-2" name="system.attacks.{{@key}}.type">
+                    {{#select this.type}}
                         <option value="range">Ranged</option>
                         <option value="melee">Melee</option>
                         <option value="none">No Roll</option>
+                    {{/select}}
                     </select>
                     <span class="resource-label grid-span-2">Ammo Used</span>
                     <input name="system.attacks.{{@key}}.ammo" value = "{{this.ammo}}" type="text" data-dtype="Number">
