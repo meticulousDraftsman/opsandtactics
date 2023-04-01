@@ -205,8 +205,8 @@ export class OpsActor extends Actor {
    * @param {String} target item id or actor health pool to apply damage to
    */
   async applyDamage(target){
-    console.debug(this.system.health.damageReport)
-    console.debug(ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id)
+    //console.debug(this.system.health.damageReport)
+    //console.debug(ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id)
     let incoming = this.system.health.incoming ?? 0;
     const initial = incoming;
     if (incoming == 0) return null;
@@ -350,7 +350,7 @@ export class OpsActor extends Actor {
     // Prepare character roll data.
     this._getCharacterRollData(data);
     this._getNpcRollData(data);
-    console.debug(data)
+    //console.debug(data)
     return data;
   }
 
