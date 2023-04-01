@@ -25,6 +25,14 @@ export class OpsActorSheet extends ActorSheet {
 
   /* -------------------------------------------- */
 
+  collapseStates = {
+    fortitude: true,
+    reflex: true,
+    will: true,
+    weapons: false,
+    resources: false
+  }
+
   /** @override */
   getData() {
     //console.debug('actor-sheet getData')
@@ -52,6 +60,8 @@ export class OpsActorSheet extends ActorSheet {
     if (actorData.type == 'npc') {
       this._prepareItems(context);
     }
+
+    context.collapses = this.collapseStates;
 
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
@@ -395,6 +405,8 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-input').change(this._onItemInput.bind(this));
     html.find('.item-checkbox').change(this._onItemCheckbox.bind(this));
     html.find('.item-toggle').click(this._onItemToggle.bind(this));
+    // Toggle visibility of a collapsible element
+    html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
     // Roll bleed dice and add them to incoming damage
     html.find('.actor-bleed').click(this._onRollBleed.bind(this));
     // Apply Incoming Damage to Armor or Hit Points
@@ -498,6 +510,28 @@ export class OpsActorSheet extends ActorSheet {
     const item = this.actor.items.get(targetId);
     let value = !getProperty(item, targetProp);
     await item.update({[targetProp]:value});
+  }
+  _onToggleCollapse(event){
+    event.preventDefault();
+    const collapseTarget = event.currentTarget.dataset.collapse;
+    const wrapper = $(event.currentTarget).parents(`.collapse-parent`);
+    const collapser = wrapper.children(`.${collapseTarget}`);
+    this._collapse(collapser,collapseTarget)
+  }
+  _collapse(collapser,collapseTarget){
+    const collapseCheck = this.collapseStates[collapseTarget];
+    if(collapseCheck){
+      collapser.slideDown(250, () =>{
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = false;
+      });
+    }
+    else {
+      collapser.slideUp(250, () => {
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = true;
+      });
+    }
   }
   async _onRollBleed(event){
     event.preventDefault();

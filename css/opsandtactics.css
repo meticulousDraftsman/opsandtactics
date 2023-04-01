@@ -231,10 +231,6 @@
   /* Example style for Boilerplate (can be removed if not needed) */
 }
 
-.opsandtactics .drop-wide{
-  width:100%
-}
-
 .opsandtactics select{
   width:100%
 }
@@ -252,6 +248,10 @@
   background: rgba(0, 0, 0, 0.05);
   border-style: outset;
   border-radius: 3px;
+}
+
+.opsandtactics .collapse{
+  display: none;
 }
 
 
