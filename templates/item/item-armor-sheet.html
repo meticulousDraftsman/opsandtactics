@@ -13,19 +13,13 @@
     
     <section class="sheet-body">
         <div class="tab" data-group="primary" data-tab="stats">
-            <ol class="items-list flex-group-center">
-                <li class="item items-header resource-label grid grid-6col">
-                    <div>Layer</div>
-                    <div class="grid-span-2">AP</div>                    
-                    <div>Physical</div>
-                    <div>Active</div>
-                    {{#if item.actor}}
-                    <div>Delete</div>
-                    {{/if}}
-                </li>
-                <li class="grid grid-6col">
-                    <div>
-                        <select name="system.layer" data-dtype="String">
+            <fieldset>
+                <legend class="resource-label">
+                    Armor Statistics {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+                </legend>
+                <div class="grid grid-4col flex-group-center">
+                    <span>Layer</span>
+                    <select class="flex-group-center" name="system.layer" data-dtype="String">
                         {{#select system.layer}}
                             <option value="worn">Worn</option>
                             <option value="plate">Plate</option>
@@ -33,61 +27,49 @@
                             <option value="shield">Shield</option>
                             <option value="magic">Magic</option>
                         {{/select}}
-                        </select>
-                    </div>
-                    <div class="grid-span-2 flexrow">
-                        <input name="system.ap.value" type="text" value="{{system.ap.value}}" data-dtype="Number"/>
-                        <span class="flex0">/</span>
-                        <input name="system.ap.max" type="text" value="{{system.ap.max}}" data-dtype="Number"/>
-                    </div>
-
-                    <div>
-                        <input name="system.gear.physical" type="checkbox" {{checked system.gear.physical}}/>
-                    </div>
+                    </select>
+                    <span>Active</span>
                     <div>
                         <input name="system.active" type="checkbox" {{checked system.active}}/>
                     </div>
-                    {{#if item.actor}}
-                    <div>
-                        <a class="item-control self-destruct" self="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
+                    {{#if (eq system.layer "shield")}}
+                    <span>Shield Soak</span>
+                    {{else}}
+                    <span>Armor Points</span>
                     {{/if}}
-                </li>
-                <li class="item items-header resource-label grid grid-4col">
-                    <div>DEF Bonus</div>
-                    <div>Max AGI</div>
-                    <div>Armor Penalty</div>
-                    <div>CP Loss</div>
-                </li>
-                <li class="grid grid-4col">
-                        <input name="system.def" type="text" value="{{system.def}}" data-dtype="Number" placeholder="0"/>
-                        <input name="system.agiMax" type="text" value="{{system.agiMax}}" data-dtype="Number" placeholder="None"/>
-                        <input name="system.penalty" type="text" value="{{system.penalty}}" data-dtype="Number" placeholder="0"/>
-                        <input name="system.cpLoss" type="text" value="{{system.cpLoss}}" data-dtype="Number" placeholder="0"/>
-                </li>
-            </ol>
-            <ol class="items-list flex-group-center">
-                <li class="item items-header resource-label grid grid-12col">
-                    <div class="grid-span-7">Damage Protected</div>
-                    <div class="grid-span-4">Damage Reduction</div>
+                    <div class="flexrow">
+                        <input class="flex3" name="system.ap.value" type="text" value="{{system.ap.value}}" data-dtype="Number"/>
+                        <span>/</span>
+                        <input class="flex3" name="system.ap.max" type="text" value="{{system.ap.max}}" data-dtype="Number"/>
+                    </div>
+                    <span>Physical</span>
                     <div>
-                        <a class="item-control sub-create" data-target-name="protection" title="Add Protection"><i class="fas fa-plus"></i></a>
+                        <input name="system.gear.physical" type="checkbox" {{checked system.gear.physical}}/>
                     </div>
-                </li>
-                {{#each system.protection}}
-                <li class="grid grid-12col">
-                    <div class="grid-span-7">
-                        <input name="system.protection.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"/>
-                    </div>
-                    <div class="grid-span-4">
-                        <input name="system.protection.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
-                    </div>
-                    <div>
+                    <span>Defense Bonus</span>
+                    <input name="system.def" type="text" value="{{system.def}}" data-dtype="Number" placeholder="0"/>
+                    <span>Max Agility</span>
+                    <input name="system.agiMax" type="text" value="{{system.agiMax}}" data-dtype="Number" placeholder="None"/>
+                    <span>Armor Penalty</span>
+                    <input name="system.penalty" type="text" value="{{system.penalty}}" data-dtype="Number" placeholder="0"/>
+                    <span>CP Loss</span>
+                    <input name="system.cpLoss" type="text" value="{{system.cpLoss}}" data-dtype="Number" placeholder="0"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend class="resource-label">
+                    Protection <a class="item-control sub-create" data-target-name="protection" title="Add Protection"><i class="fas fa-plus"></i></a>
+                </legend>
+                <ol class="items-list flex-group-center">
+                    {{#each system.protection}}
+                    <li class="grid grid-10col">
+                        <input class="grid-span-6" name="system.protection.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String" placeholder="Damages Protected Against"/>
+                        <input class="grid-span-3" name="system.protection.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number" placeholder="DR"/>
                         <a class="item-control sub-delete" data-target-name="protection" data-remove-target="{{@key}}" title="Remove Protection"><i class="fas fa-trash"></i></a>
-                    </div>
-                </li>
-                {{/each}}
-            </ol>
+                    </li>
+                    {{/each}}
+                </ol>
+            </fieldset>
         </div>
         <div class="tab" data-group="primary" data-tab="description">
             {{> "systems/opsandtactics/templates/item/parts/item-object.html"}}
