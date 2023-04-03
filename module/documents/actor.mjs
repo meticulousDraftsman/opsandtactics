@@ -128,9 +128,11 @@ export class OpsActor extends Actor {
     catch{systemData.ml.max = 0;}
     // Calculate Carrying Capacity
     try{
-      systemData.stats.carrying.light = Roll.safeEval(Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData))
+      systemData.stats.carrying.light = Roll.safeEval(Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData)) + systemData.stats.carrying.mods.total;
     }
     catch{systemData.stats.carrying.light = 0;}
+    systemData.stats.carrying.medium = systemData.stats.carrying.light*2;
+    systemData.stats.carrying.heavy = systemData.stats.carrying.light*3;
   }
 
   /**
