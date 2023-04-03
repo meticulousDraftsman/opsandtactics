@@ -1,41 +1,49 @@
-<div class="grid grid-3col">
-  <ol class="items-list flex-group-center">
-    <li class="item items-header">Wealth Points</li>
-    <li class="item grid grid-4col">
-      <div>Money</div>
-      <input name="system.wealth.wp" value="{{system.wealth.wp}}" type="text" dats-dstring="Number">
-      <input class="grid-span-2" name="system.wealth.notes" value="{{system.wealth.notes}}" type="text" dats-dstring="String" placeholder="Notes">
-      <a class="rollable" data-roll="{{system.wealth.income}}" data-label="Payday">Income</a>
-      <input class="grid-span-3" name="system.wealth.income" value="{{system.wealth.income}}" type="text" dats-dstring="String">
-    </li>
-  </ol>
-  <ol class="items-list flex-group-center">
-    <li class="item items-header">Capital</li>
-    <li class="item grid grid-4col">
-      <div>Personal</div>
-      <input name="system.wealth.capital.personal.total" value="{{system.wealth.capital.personal.total}}" type="text" dats-dstring="Number" readonly>
-      <div>External</div>
-      <input name="system.wealth.capital.external.total" value="{{system.wealth.capital.external.total}}" type="text" dats-dstring="Number">      
-      <div>Hard</div>
-      <input name="system.wealth.capital.personal.hard" value="{{system.wealth.capital.personal.hard}}" type="text" dats-dstring="Number">
-      <div>Hard</div>
-      <input name="system.wealth.capital.external.hard" value="{{system.wealth.capital.external.hard}}" type="text" dats-dstring="Number">
-    </li>
-  </ol>
-  <ol class="items-list flex-group-center">
-    <li class="item items-header">Carrying Capacity</li>
-    <li class="item grid grid-4col">
-      <div>Light</div>
-      <input class="grid-span-2" type="text" name="system.carrying.capacity" value="{{system.carrying.capacity}}" data-dtype="String">
-      <input type="text" value="{{system.carrying.light}}" readonly>
-      <div>Medium</div>
-      <input type="text" value="{{system.carrying.medium}}" readonly>
-      <div>Heavy</div>
-      <input type="text" value="{{system.carrying.heavy}}" readonly>
-    </li>
-  </ol>
+<div class="grid grid-4col">
+  <fieldset class="grid-span-2">
+    <legend class="resource-label">
+      Money
+    </legend>
+    <div class="grid grid-9col flex-group-center">
+      <span class="grid-span-3">Wealth Points</span>
+      <input class="grid-span-2" name="system.wealth.wp.cash" value="{{system.wealth.wp.cash}}" type="text" data-dtype="Number" placeholder="Cash">
+      <input class="grid-span-2" name="system.wealth.wp.credit" value="{{system.wealth.wp.credit}}" type="text" data-dtype="Number" placeholder="Credit">
+      <input class="grid-span-2" name="system.wealth.wp.misc" value="{{system.wealth.wp.misc}}" type="text" data-dtype="Number" placeholder="Other">
+      <a class="grid-span-3 rollable resource-label" data-roll="{{system.wealth.income}}" data-label="Payday" data-tooltip="Roll Paycheck">Income <i class="fas fa-money-check-alt"></i></a>
+      <input class="grid-span-6" name="system.wealth.income" value="{{system.wealth.income}}" type="text" data-dtype="String">
+      <input class="grid-span-9" name="system.wealth.notes" value="{{system.wealth.notes}}" type="text" data-dtype="String" placeholder="Notes">
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend class="resource-label">
+      Encumberance
+    </legend>
+    <div class="grid grid-2col flex-group-center">
+      <span>Light</span>
+      <input type="text" value="{{system.stats.carrying.light}} lbs" readonly>
+      <span>Medium</span>
+      <input type="text" value="{{system.stats.carrying.medium}} lbs" readonly>
+      <span>Heavy</span>
+      <input type="text" value="{{system.stats.carrying.heavy}} lbs" readonly>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend class="resource-label">
+      Capital
+    </legend>
+    <div class="grid grid-2col flex-group-center">
+      <span>Personal</span>
+      <input value="{{system.wealth.capital.personal.total}}" type="text" data-dtype="Number" readonly>
+      <span>External</span>
+      <input name="system.wealth.capital.external.total" value="{{system.wealth.capital.external.total}}" type="text" data-dtype="Number" placeholder="Total">
+      <span>Hard</span>
+      <div class="flexrow">
+        <input type="text" name="system.wealth.capital.personal.hard" value="{{system.wealth.capital.personal.hard}}" data-dtype="Number" placeholder="Per">
+        <input type="text" name="system.wealth.capital.external.hard" value="{{system.wealth.capital.external.hard}}" data-dtype="Number" placeholder="Ext">
+      </div>
+    </div>
+  </fieldset>
 </div>
-
+<br>
 <ol class="items-list flex-group-center">
   {{#each nestedGear}}
     <li class="item items-header grid grid-10col">
