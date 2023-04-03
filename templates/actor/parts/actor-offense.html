@@ -1,6 +1,6 @@
 <fieldset class=collapse-parent>
     <legend class="resource-label">
-        Weapons <a class="grid-start-10 item-control item-create" title="Create Weapon" data-type="weapon"><i class="fas fa-plus"></i></a> <i class="fas fa-list collapse-toggle" data-collapse="weapons"></i>
+        Weapons <a class="grid-start-10 item-control item-create" data-tooltip="Create Weapon" data-type="weapon"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Weapons List Display"><i class="fas fa-list collapse-toggle" data-collapse="weapons"></i></a>
     </legend>
     <ol class="items-list weapons {{#if collapses.weapons}}collapse{{/if}}">
         {{#each weapons as |item id|}}

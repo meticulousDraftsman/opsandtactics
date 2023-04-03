@@ -31,7 +31,7 @@
       </legend>
         {{#each system.saves as |save|}}
           <fieldset class="save flex-group-center collapse-parent">
-            <a class="resource-label rollable" data-roll="3d6{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" data-tooltip="Roll {{localize (concat 'OATS.saves.' @key)}}" data-label="{{localize (concat 'OATS.saves.' @key)}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a> <i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i>
+            <a class="resource-label rollable" data-roll="3d6{{#if (gte save.value 0)}}+{{/if}}{{save.value}}" data-tooltip="Roll {{localize (concat 'OATS.saves.' @key)}}" data-label="{{localize (concat 'OATS.saves.' @key)}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a> <a data-tooltip="Toggle Modifier Display"><i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i></a>
             <div class="{{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
               <div class="grid grid-3col flex-group-center">
                 <span>Base</span>
