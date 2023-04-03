@@ -6,16 +6,16 @@
         <div class="grid grid-6col flex-group-center">
             <span class="grid-span-2">Core HP</span>
             <input class="grid-span-3" type="text" name="system.health.chp.formula" value="{{system.health.chp.formula}}" data-dtype="String">
-            <input type="text" name="system.health.chp.mods.misc" value="{{system.health.chp.mods.misc}}" placeholder="Misc" data-dtype="String">
+            <input type="text" name="system.health.chp.mods.misc" value="{{system.health.chp.mods.misc}}" placeholder="Misc" data-dtype="Number">
             <span class="grid-span-2">Extended HP</span>
             <input class="grid-span-3" type="text" name="system.health.xhp.formula" value="{{system.health.xhp.formula}}" data-dtype="String">
-            <input type="text" name="system.health.xhp.mods.misc" value="{{system.health.xhp.mods.misc}}" placeholder="Misc" data-dtype="String">
+            <input type="text" name="system.health.xhp.mods.misc" value="{{system.health.xhp.mods.misc}}" placeholder="Misc" data-dtype="Number">
             <span class="grid-span-2">Mental Limit</span>
             <input class="grid-span-3" type="text" name="system.ml.formula" value="{{system.ml.formula}}" data-dtype="String">
-            <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" placeholder="Misc" data-dtype="String">
+            <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" placeholder="Misc" data-dtype="Number">
             <span class="grid-span-2">Encumberance</span>
             <input class="grid-span-3" type="text" name="system.stats.carrying.formula" value="{{system.stats.carrying.formula}}" data-dtype="String">
-            <input type="text" name="system.stats.carrying.mods.misc" value="{{system.stats.carrying.mods.misc}}" placeholder="Misc" data-dtype="String">
+            <input type="text" name="system.stats.carrying.mods.misc" value="{{system.stats.carrying.mods.misc}}" placeholder="Misc" data-dtype="Number">
         </div>
     </fieldset>
     <fieldset class="grid-span-2">
@@ -52,11 +52,11 @@
         <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" data-dtype="Number" placeholder="Misc">
         <input type="text" value="{{system.ml.object}}" readonly>
         <span class="grid-span-2">Recipe Sets Memorized</span>
-        <input type="text" name="system.magic.memorized" value="{{system.magic.memorized}}" data-dtype="Number">
+        <input type="text" name="system.magic.memorized" value="{{system.magic.memorized}}" data-dtype="Number" placeholder="Sets">
         <input type="text" value="{{system.magic.recipe}}" readonly>
         <span class="grid-span-2">Incantation Use</span>
         <a class="mental-limit" data-ml-cost="-{{system.ml.max}}"><i class="fas fa-recycle" data-tooltip="Regain Mental Limit spent by Invoking"></i></a>
-        <input type="text" name="system.magic.incant" value="{{system.magic.incant}}" data-dtype="Number">
+        <input type="text" name="system.magic.incant" value="{{system.magic.incant}}" data-dtype="Number" placeholder="Spent">
     </div>
 </fieldset>
 <fieldset>
