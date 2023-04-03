@@ -136,16 +136,20 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                 })
             }),
             wealth: new field.SchemaField({
-                wp: new field.NumberField({initial:0}),
-                income: new field.StringField({initial:"(@cha.mod)*5"}),
+                wp: new field.SchemaField({
+                    cash: new field.NumberField({nullable:true}),
+                    credit: new field.NumberField({nullable:true}),
+                    misc: new field.NumberField({nullable:true})
+                }),
+                income: new field.StringField({initial:"(@cha.mod*5)"}),
                 notes: new field.StringField(),
                 capital: new field.SchemaField({
                     personal: new field.SchemaField({
-                        hard: new field.NumberField({initial:0})
+                        hard: new field.NumberField({nullable:true})
                     }),
                     external: new field.SchemaField({
-                        total: new field.NumberField({initial:0}),
-                        hard: new field.NumberField({initial:0})
+                        total: new field.NumberField({nullable:true}),
+                        hard: new field.NumberField({nullable:true})
                     }),
                 })
             })
