@@ -1,7 +1,7 @@
 {{#if system.gear.physical}}
 <fieldset>
     <legend class="resource-label">
-        Object Properties
+        Object Properties {{#if item.actor}}{{#if (eq item.type "object")}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}{{/if}}
     </legend>
     <div class="grid grid-7col flex-group-center">
         <span>Quantity</span>
