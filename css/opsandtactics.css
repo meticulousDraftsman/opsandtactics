@@ -224,12 +224,12 @@
 }
 
 /* Styles limited to opsandtactics sheets */
-.opsandtactics {
+/*.opsandtactics {*/
   /* ----------------------------------------- */
   /*  Items Lists                              */
   /* ----------------------------------------- */
   /* Example style for Boilerplate (can be removed if not needed) */
-}
+/*}*/
 
 .opsandtactics select{
   width:100%
