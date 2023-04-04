@@ -78,7 +78,8 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             details: new field.SchemaField({
                 biography: new field.StringField(),
                 size: new field.StringField({initial:"Medium"}),
-                race: new field.StringField()
+                race: new field.StringField(),
+                occupation: new field.StringField()
             }),
             ml: new field.SchemaField({
                 formula: new field.StringField({initial:"((6+@wis.score)*@lvl)+40"}),
@@ -136,13 +137,14 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                 })
             }),
             wealth: new field.SchemaField({
+                description: new field.StringField(),
                 wp: new field.SchemaField({
+                    income: new field.StringField({initial:"(@cha.mod*5)"}),
+                    notes: new field.StringField(),
                     cash: new field.NumberField({nullable:true}),
                     credit: new field.NumberField({nullable:true}),
                     check: new field.NumberField({nullable:true})
                 }),
-                income: new field.StringField({initial:"(@cha.mod*5)"}),
-                notes: new field.StringField(),
                 capital: new field.SchemaField({
                     personal: new field.SchemaField({
                         hard: new field.NumberField({nullable:true})

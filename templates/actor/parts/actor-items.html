@@ -8,9 +8,9 @@
       <input class="grid-span-2" name="system.wealth.wp.cash" value="{{system.wealth.wp.cash}}" type="text" data-dtype="Number" placeholder="Cash">
       <input class="grid-span-2" name="system.wealth.wp.credit" value="{{system.wealth.wp.credit}}" type="text" data-dtype="Number" placeholder="Credit">
       <input class="grid-span-2" name="system.wealth.wp.misc" value="{{system.wealth.wp.check}}" type="text" data-dtype="Number" placeholder="Check">
-      <a class="grid-span-3 rollable resource-label" data-roll="{{system.wealth.income}}" data-label="Payday" data-tooltip="Roll Paycheck">Income <i class="fas fa-money-check-alt"></i></a>
-      <input class="grid-span-6" name="system.wealth.income" value="{{system.wealth.income}}" type="text" data-dtype="String">
-      <input class="grid-span-9" name="system.wealth.notes" value="{{system.wealth.notes}}" type="text" data-dtype="String" placeholder="Notes">
+      <a class="grid-span-3 rollable resource-label" data-roll="{{system.wealth.wp.income}}" data-label="Payday" data-tooltip="Roll Paycheck">Income <i class="fas fa-money-check-alt"></i></a>
+      <input class="grid-span-6" name="system.wealth.wp.income" value="{{system.wealth.wp.income}}" type="text" data-dtype="String">
+      <input class="grid-span-9" name="system.wealth.wp.notes" value="{{system.wealth.wp.notes}}" type="text" data-dtype="String" placeholder="Notes">
     </div>
   </fieldset>
   <fieldset>
@@ -50,7 +50,7 @@
   </legend>
   <ol class="items-list flex-group-left {{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
     {{#each this as |item id|}}
-    <li class="item grid grid-9col" data-item-id="{{item._id}}">
+    <li class="item grid grid-9col flex-group-left" data-item-id="{{item._id}}">
       <div class="grid-span-3 item-name flexrow">
         <img class="item-image" src="{{item.img}}">
         <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
@@ -60,7 +60,7 @@
       <fieldset class="grid-start-2 grid-span-8">
         <ol class="items-list flex-group-left">
           {{#each item.children as |item id|}}
-          <li class="grid grid-9col">
+          <li class="item grid grid-9col flex-group-left">
             <div class="grid-span-3 item-name flexrow">
               <img class="item-image" src="{{item.img}}">
               <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
@@ -70,7 +70,7 @@
             <fieldset class="grid-start-2 grid-span-8">
               <ol class="items-list flex-group-left">
                 {{#each item.children as |item id|}}
-                <li class="grid grid-9col">
+                <li class="item grid grid-9col flex-group-left">
                   <div class="grid-span-3 item-name flexrow">
                     <img class="item-image" src="{{item.img}}">
                     <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
@@ -80,7 +80,7 @@
                   <fieldset class="grid-start-2 grid-span-8">
                     <ol class="items-list flex-group-left">
                       {{#each item.children as |item id|}}
-                      <li class="grid grid-9col">
+                      <li class="item grid grid-9col flex-group-left">
                         <div class="grid-span-3 item-name flexrow">
                           <img class="item-image" src="{{item.img}}">
                           <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
@@ -106,3 +106,11 @@
   </ol>
 </fieldset>
 {{/each}}
+<fieldset class="sheet-body tab">
+  <legend class="resource-label">
+    Asset Notes
+  </legend>
+  <div class="sheet-body tab">
+    {{editor system.wealth.description target="system.wealth.description" rollData=rollData button=true owner=owner editable=editable}}
+  </div>
+</fieldset>

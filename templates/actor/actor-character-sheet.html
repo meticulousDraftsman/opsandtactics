@@ -128,13 +128,7 @@
 
     {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="biography">
-          {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-          {{#if (and (lte system.cp.value system.cp.max) (eq system.race "Human"))}}
-          yeet
-          {{else}}
-          yote
-          {{/if}}
-          {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+          {{> "systems/opsandtactics/templates/actor/parts/actor-biography.html"}}
         </div>
 
     {{!-- Active Effects Tab --}}

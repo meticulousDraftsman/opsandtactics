@@ -14,6 +14,7 @@
     "systems/opsandtactics/templates/actor/parts/actor-defense.html",
     "systems/opsandtactics/templates/actor/parts/actor-offense.html",
     "systems/opsandtactics/templates/actor/parts/actor-traits.html",
+    "systems/opsandtactics/templates/actor/parts/actor-biography.html",
     // Item partials.
     "systems/opsandtactics/templates/item/parts/item-object.html"
   ]);

@@ -1,0 +1,25 @@
+<fieldset>
+    <legend class="resource-label">
+        Character Details
+    </legend>
+    <div class="grid grid-8col flex-group-center">
+        <span>Race</span>
+        <input class="grid-span-3" type="text" name="system.details.race" value="{{system.details.race}}" data-dtype="String">
+        <span>Size</span>
+        <input type="text" name="system.details.size" value="{{system.details.size}}" data-dtype="String" placeholder="Medium">
+        <span>Level</span>
+        <input type="text" name="system.stats.level.value" value="{{system.stats.level.value}}" data-dtype="Number">
+        <span>Occupation</span>
+        <input class="grid-span-5" type="text" name="system.details.occupation" value="{{system.details.occupation}}" data-dtype="String">
+        <span>Experience</span>
+        <input type="text" name="system.stats.level.xp.value" value="{{system.stats.level.xp.value}}" data-dtype="String" placeholder="0">
+    </div>
+</fieldset>
+<fieldset class="sheet-body tab">
+    <legend class="resource-label">
+      Biography
+    </legend>
+    <div class="sheet-body tab">
+        {{editor system.details.biography target="system.details.biography" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+  </fieldset>

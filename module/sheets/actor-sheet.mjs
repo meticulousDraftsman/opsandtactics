@@ -87,7 +87,7 @@ export class OpsActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     const systemData = context.system;
     // Determine XP required for the next level
-    systemData.stats.level.xp.needed =`${Number(systemData.stats.level.xp.value).toLocaleString()}/${Number(systemData.stats.level.value*systemData.stats.level.value*1500).toLocaleString()}xp`;
+    systemData.stats.level.xp.needed =`${Number(systemData.stats.level.xp.value).toLocaleString()} / ${Number(systemData.stats.level.value*systemData.stats.level.value*1500).toLocaleString()}xp`;
     // Initiative Wagering Options
     context.wagers = [
       {value:0,label:'Initiative Wagering'},
