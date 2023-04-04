@@ -30,7 +30,11 @@ export class OpsActorSheet extends ActorSheet {
     reflex: true,
     will: true,
     weapons: false,
-    resources: false
+    resources: true,
+    Loose: false,
+    Worn: false,
+    Carried: false,
+    Stored: false
   }
 
   /** @override */
@@ -373,6 +377,11 @@ export class OpsActorSheet extends ActorSheet {
         nestedGear.Loose.push(i);
       }
     }
+
+    // Purge Empty Gear Layers
+    for (let [key,layer] of Object.entries(nestedGear)){
+      if (layer.length == 0 && key != 'Loose') delete nestedGear[key];
+    }       
 
     // Assign and return
     context.skills = skills;

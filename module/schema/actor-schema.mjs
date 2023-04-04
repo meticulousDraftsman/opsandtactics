@@ -139,7 +139,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                 wp: new field.SchemaField({
                     cash: new field.NumberField({nullable:true}),
                     credit: new field.NumberField({nullable:true}),
-                    misc: new field.NumberField({nullable:true})
+                    check: new field.NumberField({nullable:true})
                 }),
                 income: new field.StringField({initial:"(@cha.mod*5)"}),
                 notes: new field.StringField(),

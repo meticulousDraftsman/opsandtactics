@@ -7,7 +7,7 @@
       <span class="grid-span-3">Wealth Points</span>
       <input class="grid-span-2" name="system.wealth.wp.cash" value="{{system.wealth.wp.cash}}" type="text" data-dtype="Number" placeholder="Cash">
       <input class="grid-span-2" name="system.wealth.wp.credit" value="{{system.wealth.wp.credit}}" type="text" data-dtype="Number" placeholder="Credit">
-      <input class="grid-span-2" name="system.wealth.wp.misc" value="{{system.wealth.wp.misc}}" type="text" data-dtype="Number" placeholder="Other">
+      <input class="grid-span-2" name="system.wealth.wp.misc" value="{{system.wealth.wp.check}}" type="text" data-dtype="Number" placeholder="Check">
       <a class="grid-span-3 rollable resource-label" data-roll="{{system.wealth.income}}" data-label="Payday" data-tooltip="Roll Paycheck">Income <i class="fas fa-money-check-alt"></i></a>
       <input class="grid-span-6" name="system.wealth.income" value="{{system.wealth.income}}" type="text" data-dtype="String">
       <input class="grid-span-9" name="system.wealth.notes" value="{{system.wealth.notes}}" type="text" data-dtype="String" placeholder="Notes">
@@ -15,7 +15,7 @@
   </fieldset>
   <fieldset>
     <legend class="resource-label">
-      Encumberance
+      Encumbrance
     </legend>
     <div class="grid grid-2col flex-group-center">
       <span>Light</span>
@@ -43,100 +43,70 @@
     </div>
   </fieldset>
 </div>
-<br>
-<ol class="items-list flex-group-center">
-  {{#each nestedGear}}
-    <li class="item items-header grid grid-10col">
-      <div class="align-center item-name grid-span-4 grid-start-4">{{@key}} Items</div>
-      {{#if @first}}
-      <div class="align-center grid-start-10">
-        <a class="item-control item-create" title="Create item" data-type="object"><i class="fas fa-plus"></i></a>
+{{#each nestedGear}}
+<fieldset class="collapse-parent">
+  <legend class="resource-label">
+    {{@key}} Items {{#if @first}}<a class="item-control item-create" data-tooltip="Create {{@key}} item" data-type="object"><i class="fas fa-plus"></i></a>{{/if}} <a data-tooltip="Toggle {{@key}} Item Display"><i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i></a>
+  </legend>
+  <ol class="items-list flex-group-left {{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
+    {{#each this as |item id|}}
+    <li class="item grid grid-12col" data-item-id="{{item._id}}">
+      <div class="item-image">
+        <img src="{{item.img}}" width="24" height="24">
       </div>
+      <span class="grid-span-4">{{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</span>
+      <i class="grid-span-6">{{item.system.gear.location.note}}</i>
+      <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+      {{#if item.children.length}}
+      <fieldset class="grid-start-2 grid-span-11">
+        <ol class="items-list flex-group-left">
+          {{#each item.children as |item id|}}
+          <li class="grid grid-12col">
+            <div class="item-image">
+              <img src="{{item.img}}" width="24" height="24">
+            </div>
+            <span class="grid-span-4">{{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</span>
+            <i class="grid-span-6">{{item.system.gear.location.note}}</i>
+            <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+            {{#if item.children.length}}
+            <fieldset class="grid-start-2 grid-span-11">
+              <ol class="items-list flex-group-left">
+                {{#each item.children as |item id|}}
+                <li class="grid grid-12col">
+                  <div class="item-image">
+                    <img src="{{item.img}}" width="24" height="24">
+                  </div>
+                  <span class="grid-span-4">{{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</span>
+                  <i class="grid-span-6">{{item.system.gear.location.note}}</i>
+                  <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+                  {{#if item.children.length}}
+                  <fieldset class="grid-start-2 grid-span-11">
+                    <ol class="items-list flex-group-left">
+                      {{#each item.children as |item id|}}
+                      <li class="grid grid-12col">
+                        <div class="item-image">
+                          <img src="{{item.img}}" width="24" height="24">
+                        </div>
+                        <span class="grid-span-4">{{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</span>
+                        <i class="grid-span-6">{{item.system.gear.location.note}}</i>
+                        <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
+                      </li>
+                      {{/each}}
+                    </ol>
+                  </fieldset>
+                  {{/if}}
+                </li>
+                {{/each}}
+              </ol>
+            </fieldset>
+            {{/if}}
+          </li>
+          {{/each}}
+        </ol>
+      </fieldset>
       {{/if}}
     </li>
-    {{#each this as |item id|}}
-      <li class="item grid grid-10col" data-item-id="{{item._id}}">
-        <div class="item-name grid-span-3">
-          <div class="item-image">
-            <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
-          </div>
-          {{#if item.label}}
-          <h4>{{item.label}}</h4>
-          {{else}}
-          <h4>{{item.name}}</h4>
-          {{/if}}
-        </div>
-        <div class="grid-span-6">
-          <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
-        </div>
-        <div class="align-center grid grid-2col grid-start-10">
-          <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
-          <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
-      </li>
-      {{#each this.children as |item id|}}
-        <li class="item grid grid-10col" data-item-id="{{item._id}}">
-          <div class="item-name grid-start-2 grid-span-3">
-            <div class="item-image">
-              <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
-            </div>
-            {{#if item.label}}
-            <h4>{{item.label}}</h4>
-            {{else}}
-            <h4>{{item.name}}</h4>
-            {{/if}}
-          </div>
-          <div class="grid-span-5">
-            <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
-          </div>
-          <div class="align-center grid grid-2col grid-start-10">
-            <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{#each this.children as |item id|}}
-          <li class="item grid grid-10col" data-item-id="{{item._id}}">
-            <div class="item-name grid-start-3 grid-span-3">
-              <div class="item-image">
-                <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
-              </div>
-              {{#if item.label}}
-              <h4>{{item.label}}</h4>
-              {{else}}
-              <h4>{{item.name}}</h4>
-              {{/if}}
-            </div>
-            <div class="grid-span-4">
-              <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
-            </div>
-            <div class="align-center grid grid-2col grid-start-10">
-              <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
-              <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-            </div>
-          </li>
-          {{#each this.children as |item id|}}
-            <li class="item grid grid-10col" data-item-id="{{item._id}}">
-              <div class="item-name grid-start-4 grid-span-3">
-                <div class="item-image">
-                  <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
-                </div>
-                {{#if item.label}}
-                <h4>{{item.label}}</h4>
-                {{else}}
-                <h4>{{item.name}}</h4>
-                {{/if}}
-              </div>
-              <div class="grid-span-3">
-                <input type="text" class="item-input" data-target-prop="system.gear.location.note" data-target-id="{{item._id}}" value="{{item.system.gear.location.note}}" data-dtype="Number" placeholder="Location"/>
-              </div>
-              <div class="align-center grid grid-2col grid-start-10">
-                <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-              </div>
-            </li>
-          {{/each}}
-        {{/each}}
-      {{/each}}
     {{/each}}
-  {{/each}}
-</ol>
+  </ol>
+</fieldset>
+{{/each}}
