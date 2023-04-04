@@ -63,20 +63,14 @@
     <legend class="resource-label">
         Traits <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
     </legend>
-    <ol class="items-list flex-group-left">
+    <ol class="items-list item-list">
         {{#each traits as |item id|}}
-        <li class="item grid grid-12col" data-item-id="{{item._id}}">
-            <div class="item-image">
-                <a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a>
+        <li class="item grid grid-3col flex-group-left" data-item-id="{{item._id}}">
+            <div class="item-name flexrow">
+                <img class="item-image" src="{{item.img}}">
+                <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Trait"><i class="fas fa-edit"></i> {{item.name}}</a>
             </div>
-            <div class="grid-span-9 flexrow flex-group-left">
-                <span class="item-name">{{item.name}}</span>
-                <i>{{item.system.summary}}</i>
-            </div>
-            <div class="item-controls grid-span-2">
-                <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Trait"><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" data-item-id="{{item._id}}" title="Delete Trait"><i class="fas fa-trash"></i></a>
-            </div>
+            <i class="grid-span-2">{{item.system.summary}}</i>
         </li>
         {{/each}}
     </ol>
