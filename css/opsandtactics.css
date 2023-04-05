@@ -254,6 +254,15 @@
   display: none;
 }
 
+.opsandtactics .mod-list{
+  flex-flow:row wrap;
+}
+
+.opsandtactics .attack-mod{
+  border-style:groove;
+  flex-basis:content;
+}
+
 
 .opsandtactics .item-form {
   font-family: "Roboto", sans-serif;

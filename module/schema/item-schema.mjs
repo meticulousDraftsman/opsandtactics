@@ -152,7 +152,7 @@ export class OpsAction  extends foundry.abstract.DataModel{
                 flavor: new field.StringField(),
                 type: new field.StringField(), // melee,ranged,otherAttack vs skill,generic,otherUtility
                 source: new field.StringField(),
-                inherent: new field.StringField(),
+                inherent: new field.NumberField(),
                 ability: new field.StringField()
             }),
             effect: new field.SchemaField({
@@ -170,15 +170,27 @@ export class OpsAction  extends foundry.abstract.DataModel{
 export class WeaponAttack extends OpsAction{
     static defineSchema(){
         const schema = super.defineSchema();
-        schema.display = new field.BooleanField({initial:true})
-        schema.check.mods = new field.ObjectField();
-        schema.effect.scaleAbility = new field.NumberField({initial:1});
-        schema.effect.mods = new field.ObjectField();
+        schema.display = new field.BooleanField({initial:true});
+        schema.check.fields = mergeObject(
+            schema.check.fields,{
+                mods: new field.ObjectField()
+            }
+        );
+        schema.effect.fields = mergeObject(
+            schema.check.fields,{
+                mods: new field.ObjectField(),
+                scaleAbility: new field.NumberField({initial:1})
+            }
+        );
         schema.recoil = new field.SchemaField({
             inherent: new field.NumberField({initial:null, nullable:true}),
             mods: new field.ObjectField()
         });
-        schema.cp.mods = new field.ObjectField();
+        schema.cp.fields = mergeObject(
+            schema.cp.fields,{
+                mods: new field.ObjectField()
+            }
+        );
         return schema;
     }
 }

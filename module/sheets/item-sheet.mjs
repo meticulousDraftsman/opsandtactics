@@ -1,4 +1,4 @@
-import { Attack, OpsAction, Protection, SkillMod, WeaponMod } from "../schema/item-schema.mjs";
+import { Attack, OpsAction, Protection, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -213,6 +213,8 @@ export class OpsItemSheet extends ItemSheet {
     if (!this.isEditable) return;
 
     // Roll handlers, click handlers, etc. would go here.
+    // Toggle bool on click
+    html.find('.toggle-value').click(this._onToggleValue.bind(this));
     // Delete Self
     html.find('.self-destruct').click(this._selfDestruct.bind(this));
     // Pull a bullet from a loaded magazine into the internal chamber
@@ -224,6 +226,13 @@ export class OpsItemSheet extends ItemSheet {
     html.find('.sub-delete').click(this._subDeletion.bind(this));
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
+  }
+
+  _onToggleValue(event){
+    event.preventDefault();
+    const target = event.currentTarget.dataset.target;
+    const updateData = {[target]:!getProperty(this.object,target)}
+    this.object.update(updateData);
   }
 
   _selfDestruct(event){
@@ -268,8 +277,8 @@ export class OpsItemSheet extends ItemSheet {
     const updateData = {};
     let newProp;
     switch(target){
-        case 'hit':
-        case 'damage':
+        case 'check':
+        case 'effect':
         case 'recoil':
         case 'cp':
         setProperty(updateData,`system.attacks.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
@@ -283,7 +292,11 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,`system.protection.${randomID(8)}`,new Protection);
         break;
       case 'attacks':
-        setProperty(updateData,`system.attacks.${randomID(8)}`,new Attack);
+        newProp = new WeaponAttack;
+        newProp.name = 'New Attack';
+        newProp.check.type = 'ranged';
+        setProperty(updateData,`system.attacks.${randomID(8)}`,newProp);
+        console.debug(newProp);
         break;
       case 'weaponMods':
         newProp = duplicate(this.object.readyMod);
@@ -321,8 +334,8 @@ export class OpsItemSheet extends ItemSheet {
     const updateData = {};
     let updateTarget;
     switch(target){
-      case 'hit':
-      case 'damage':
+      case 'check':
+      case 'effect':
       case 'recoil':
       case 'cp':
         updateTarget = `system.attacks.${preTarget}.${target}.mods.-=${removed}`;

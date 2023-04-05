@@ -56,6 +56,7 @@
               <option value="skill">Skill Check</option>
               <option value="generic">Generic Check</option>
               <option value="otherUtility">Other Roll (Utility)</option>
+              <option value="none">No Check</option>
             {{/select}}
             </select>
             <span>CP</span>
@@ -63,6 +64,7 @@
             <span>Cost</span>
             <input name="system.actions.{{@key}}.ammo" type="text" value="{{this.ammo}}" data-dtype="Number" placeholder="0">            
           </li>
+          {{#unless (eq this.check.type "none")}}
           <li class="item grid grid-9col flex-group-center">
             {{#if (eq this.check.type "skill")}}
             <select class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.source">
@@ -70,7 +72,7 @@
             </select>
             {{else}}
             <span class="grid-span-2">Check Modifier</span>
-            <input class="grid-span-4" type="text" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" data-dtype="String" placeholder="Inherent">
+            <input class="grid-span-4" type="text" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" data-dtype="Number" placeholder="Inherent">
             <select class="grid-span-3 flex-group-center">
             {{#select this.check.ability}}
               <option value="">Ability Modifier</option>
@@ -80,6 +82,7 @@
             {{/if}}
             <input class="grid-span-9" type="text" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" data-dtype="String" placeholder="Check roll flavor">
           </li>
+          {{/unless}}
           <li class="item grid grid-9col flex-group-center">
             <span class="grid-span-2">Effect Roll</span>
             <input class="grid-span-4" type="text" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" data-dtype="String" placeholder="Inherent">

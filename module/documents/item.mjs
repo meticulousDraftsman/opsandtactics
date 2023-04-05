@@ -20,7 +20,6 @@ export class OpsItem extends Item {
     const systemData = itemData.system;
     if (itemData.type === 'skill') this._prepareSkillData(itemData);
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
-    if (itemData.type === 'magazine') this._prepareMagazineData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
     //console.debug('item prepareDerivedData',this)
   }
@@ -32,11 +31,11 @@ export class OpsItem extends Item {
     const systemData = itemData.system;
     // Map weapon mods values to attacks
      for (let [,a] of Object.entries(systemData.attacks)){
-       for (let [key,entry] of Object.entries(a.hit.mods)){
+       for (let [key,entry] of Object.entries(a.check.mods)){
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
         entry.value = systemData.weaponMods?.[key]?.hit ?? null;
        }
-       for (let [key,entry] of Object.entries(a.damage.mods)){
+       for (let [key,entry] of Object.entries(a.effect.mods)){
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
         entry.value = systemData.weaponMods?.[key]?.damage ?? null;
        }
@@ -49,10 +48,6 @@ export class OpsItem extends Item {
         entry.value = systemData.weaponMods?.[key]?.cp ?? null;
        }
       }
-  }
-
-  _prepareMagazineData(itemData){
-    const systemData = itemData.system;
   }
   _prepareMagicData(itemData){
     const systemData = itemData.system;
@@ -82,15 +77,15 @@ export class OpsItem extends Item {
    */
   attackSum(sourceAttack){
     const mods = {
-      hit: sourceAttack.hit.attack,
-      damageParts: [sourceAttack.damage.attack || null],
-      recoil: Math.min(sourceAttack.recoil.attack,0),
-      reduction: Math.max(sourceAttack.recoil.attack,0), //Just in case there's some weird attack that has inherent recoil reduction
-      cp: sourceAttack.cp.attack
+      hit: sourceAttack.check.inherent,
+      damageParts: [sourceAttack.effect.inherent || null],
+      recoil: Math.min(sourceAttack.recoil.inherent,0),
+      reduction: Math.max(sourceAttack.recoil.inherent,0), //Just in case there's some weird attack that has inherent recoil reduction
+      cp: sourceAttack.cp.inherent
     };
     if (this.actor){
-      mods.hit += this.actor.system.stats.bab.value + this.actor.abilityMod(sourceAttack.hit.ability);
-      mods.damageParts.push(Math.floor(this.actor.abilityMod(sourceAttack.damage.ability)*sourceAttack.damage.scaleAbility) ? `${Math.floor(this.actor.abilityMod(sourceAttack.damage.ability)*sourceAttack.damage.scaleAbility)>0 ? '+' : ''}${Math.floor(this.actor.abilityMod(sourceAttack.damage.ability)*sourceAttack.damage.scaleAbility)}` : null);
+      mods.hit += this.actor.system.stats.bab.value + this.actor.abilityMod(sourceAttack.check.ability);
+      mods.damageParts.push(Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*sourceAttack.effect.scaleAbility) ? `${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*sourceAttack.effect.scaleAbility)>0 ? '+' : ''}${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*sourceAttack.effect.scaleAbility)}` : null);
       if (this.actor.system.stats.recoil.value>0){
         mods.reduction += this.actor.system.stats.recoil.value;
       }
@@ -98,11 +93,11 @@ export class OpsItem extends Item {
         mods.recoil += this.actor.system.stats.recoil.value;
       }
     }
-    for (let [,h] of Object.entries(sourceAttack.hit.mods)){
+    for (let [,h] of Object.entries(sourceAttack.check.mods)){
       mods.hit += h.value;
     }
-    for (let [,d] of Object.entries(sourceAttack.damage.mods)){
-      mods.damageParts.push(d.value ? `${d.value>=0 ? '+' : ''}${d.value}` : null);
+    for (let [,d] of Object.entries(sourceAttack.effect.mods)){
+      mods.damageParts.push(d.value ? `${d.value.charAt(0) != '-' ? '+' : ''}${d.value}` : null);
     }
     for (let [,r] of Object.entries(sourceAttack.recoil.mods)){
       if (r.value > 0){
