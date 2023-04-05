@@ -1,4 +1,4 @@
-import { Attack, Protection, SkillMod, WeaponMod } from "../schema/item-schema.mjs";
+import { Attack, OpsAction, Protection, SkillMod, WeaponMod } from "../schema/item-schema.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -147,6 +147,14 @@ export class OpsItemSheet extends ItemSheet {
         a.mods = context.item.attackSum(a);
       }
     }
+    const sourceSkills = [{label:"None",id:""}];
+    if (itemData.type === 'object'){
+      if(actor){
+        for (let i of actor.items){
+          if (i.type==='skill') sourceSkills.push({label:i.name,id:i.id})
+        }
+      }
+    }
     const sourceMagics = [{name:"None",id:""}];
     if (itemData.type==='magic'){
       if(actor){
@@ -185,6 +193,7 @@ export class OpsItemSheet extends ItemSheet {
       context.importableMods = importableMods;
       //console.debug(importableMods)
     } 
+    if (itemData.type === 'object') context.sourceSkills = sourceSkills;
     if (itemData.type === 'magic') context.sourceMagics = sourceMagics;
     //context.otherSkills = otherSkills;
     //context.abilityMod = abilityMod;
@@ -281,6 +290,14 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,`system.weaponMods.${randomID(8)}`,newProp);
         setProperty(updateData,'system.importFilter','');
         setProperty(updateData,'system.importMod','');
+        break;
+      case 'action':
+        newProp = new OpsAction;
+        if (this.object.type==='object'){
+          newProp.name = 'New Action';
+          newProp.check.type = 'otherUtility';
+          setProperty(updateData,`system.actions.${randomID(8)}`,newProp)
+        }
         break;
       case 'consumable':
       case 'coolant':
