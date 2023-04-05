@@ -6,7 +6,7 @@ import { OpsActorSheet } from "./sheets/actor-sheet.mjs";
 import { OpsItemSheet } from "./sheets/item-sheet.mjs";
 // Import DataModels.
 import { OpsCharacter} from "./schema/actor-schema.mjs";
-import {OpsSkill, OpsArmor, OpsWeapon, OpsMagazine, OpsObject, OpsFeature, OpsMagic} from "./schema/item-schema.mjs"
+import {OpsSkill, OpsArmor, OpsWeapon, OpsObject, OpsFeature, OpsMagic} from "./schema/item-schema.mjs"
 
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
@@ -47,7 +47,6 @@ Hooks.once('init', async function() {
   CONFIG.Item.systemDataModels['skill'] = OpsSkill;
   CONFIG.Item.systemDataModels['armor'] = OpsArmor;
   CONFIG.Item.systemDataModels['weapon'] = OpsWeapon;
-  CONFIG.Item.systemDataModels['magazine'] = OpsMagazine;
   CONFIG.Item.systemDataModels['object'] = OpsObject;
   CONFIG.Item.systemDataModels['feature'] = OpsFeature;
   CONFIG.Item.systemDataModels['magic'] = OpsMagic;
