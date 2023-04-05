@@ -150,13 +150,13 @@ export class OpsAction  extends foundry.abstract.DataModel{
             active: new field.BooleanField({initial:true}),
             check: new field.SchemaField({
                 flavor: new field.StringField(),
-                type: new field.StringField(),
+                type: new field.StringField(), // melee,ranged,otherAttack vs skill,generic,otherUtility
+                source: new field.StringField(),
                 inherent: new field.StringField(),
                 ability: new field.StringField()
             }),
             effect: new field.SchemaField({
                 flavor: new field.StringField(),
-                type: new field.StringField(),
                 inherent: new field.StringField(),
                 ability: new field.StringField()
             }),
@@ -187,27 +187,10 @@ export class OpsObject extends foundry.abstract.DataModel{
         return{
             description: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear),
-            action: new field.SchemaField({
-                label: new field.StringField(),
-                active: new field.BooleanField({initial:false}),
-                type: new field.StringField({initial:'other'}),
-                uses: new field.SchemaField({
-                    loaded: new field.SchemaField({
-                        source: new field.StringField()
-                    }),
-                    type: new field.StringField({initial:'unlimited'})
-                }),
-                hit: new field.SchemaField({
-                    action: new field.NumberField(),
-                    ability: new field.StringField()
-                }),
-                effect:  new field.SchemaField({
-                    action: new field.NumberField(),
-                    ability: new field.StringField(),
-                    scaleAbility: new field.NumberField({initial:1})
-                }),
-                cp: new field.NumberField(),
-                ammo: new field.NumberField()
+            actions: new field.ObjectField(),
+            magazine: new field.SchemaField({
+                type: new field.StringField({initial:'unlimited'}),
+                source: new field.StringField()
             })
         }
     }
