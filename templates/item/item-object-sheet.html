@@ -6,27 +6,94 @@
       </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="stats">Statistics</a>
+    <a class="item" data-tab="actions">Actions</a>
+  </nav>
+
   <section class="sheet-body">
-    <fieldset>
-      <legend class="resource-label">
-        Object Action {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
-      </legend>
-      <div class="grid grid-10col flex-group-center">
-        <span>Active</span>
-        <div class="flex-group-center">
-          <input name="system.action.active" type="checkbox" {{checked system.action.active}}>
+    <div class="tab" data-group="primary" data-tab="stats">
+      {{> "systems/opsandtactics/templates/item/parts/item-object.html"}}
+    </div>
+    <div class="tab" data-group="primary" data-tab="actions">
+      <fieldset>
+        <legend class="resource-label">
+          Object Actions <a class="item-control sub-create" data-target-name="action" title="Add Action"><i class="fas fa-plus"></i></a>
+        </legend>
+        <div class="grid grid-3col flex-group-center">
+          <select class="flex-group-center" name="system.magazine.type" data-dtype="String">
+          {{#select system.magazine.type}}
+            <option value="unlimited">Unlimited Use</opton>
+            <option value="internal">Internal Uses</option>
+            <option value="external">External Uses</option>
+          {{/select}}
+          </select>
+          {{#unless (eq system.magazine.type "unlimited")}}
+          <select class="flex-group-center" name="system.magazine.source" data-dtype="String">
+            {{selectOptions magazines selected=system.magazine.source nameAttr="id" labelAttr="label"}}
+          </select>
+          {{/unless}}
         </div>
-        <span>Type</span>
-        <select class="grid-span-2 flex-group-center" name="system.action.type" data-dtype="String">
-        {{#select system.action.type}}
-          <option value="utility">Utility</option>
-          <option value="ranged">Ranged</option>
-          <option value="melee">Melee</option>
-          <option value="none">No Roll</option>
-        {{/select}}  
-        </select>
-      </div>
-    </fieldset>
-    {{> "systems/opsandtactics/templates/item/parts/item-object.html"}}
+      </fieldset>
+      {{#each system.actions}}
+      <fieldset>
+        <legend>
+          <div class="flexrow flex-group-center">
+            <input name="system.actions.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"> <a class="item-control sub-delete flex0" data-target-name="actions" data-remove-target="{{@key}}" title="Remove Action"> <i class="fas fa-trash"></i></a>
+          </div>
+        </legend>
+        <ol class="items-list">
+          <li class="item grid grid-9col flex-group-center">
+            <span>Active</span>
+            <div>
+              <input name="system.actions.{{@key}}.active" type=checkbox {{checked this.active}}>
+            </div>
+            <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.type">
+            {{#select this.check.type}}
+              <option value="melee">Melee Attack</option>
+              <option value="ranged">Ranged Attack</option>
+              <option value="otherAttack">Other Roll (Attack)</option>
+              <option value="skill">Skill Check</option>
+              <option value="generic">Generic Check</option>
+              <option value="otherUtility">Other Roll (Utility)</option>
+            {{/select}}
+            </select>
+            <span>CP</span>
+            <input name="system.actions.{{@key}}.cp.inherent" type="text" value="{{this.cp.inherent}}" data-dtype="Number" placeholder="0">
+            <span>Cost</span>
+            <input name="system.actions.{{@key}}.ammo" type="text" value="{{this.ammo}}" data-dtype="Number" placeholder="0">            
+          </li>
+          <li class="item grid grid-9col flex-group-center">
+            {{#if (eq this.check.type "skill")}}
+            <select class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.source">
+              {{selectOptions @root.sourceSkills selected=this.check.source nameAttr="id" labelAttr="label"}}
+            </select>
+            {{else}}
+            <span class="grid-span-2">Check Modifier</span>
+            <input class="grid-span-4" type="text" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" data-dtype="String" placeholder="Inherent">
+            <select class="grid-span-3 flex-group-center">
+            {{#select this.check.ability}}
+              <option value="">Ability Modifier</option>
+              {{selectOptions @root.OATS.abilities selected=this.check.ability localize=true}}
+            {{/select}}
+            </select>          
+            {{/if}}
+            <input class="grid-span-9" type="text" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" data-dtype="String" placeholder="Check roll flavor">
+          </li>
+          <li class="item grid grid-9col flex-group-center">
+            <span class="grid-span-2">Effect Roll</span>
+            <input class="grid-span-4" type="text" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" data-dtype="String" placeholder="Inherent">
+            <select class="grid-span-3 flex-group-center">
+            {{#select this.check.ability}}
+              <option value="">Ability Modifier</option>
+              {{selectOptions @root.OATS.abilities selected=this.effect.ability localize=true}}
+            {{/select}}
+            </select>  
+            <input class="grid-span-9" type="text" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" data-dtype="String" placeholder="Effect roll flavor">
+          </li>
+        </ol>
+      </fieldset>
+      {{/each}}
+    </div>
   </section>
 </form>
