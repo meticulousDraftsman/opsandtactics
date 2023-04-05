@@ -7,6 +7,26 @@
   </header>
 
   <section class="sheet-body">
+    <fieldset>
+      <legend class="resource-label">
+        Object Action {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+      </legend>
+      <div class="grid grid-10col flex-group-center">
+        <span>Active</span>
+        <div class="flex-group-center">
+          <input name="system.action.active" type="checkbox" {{checked system.action.active}}>
+        </div>
+        <span>Type</span>
+        <select class="grid-span-2 flex-group-center" name="system.action.type" data-dtype="String">
+        {{#select system.action.type}}
+          <option value="utility">Utility</option>
+          <option value="ranged">Ranged</option>
+          <option value="melee">Melee</option>
+          <option value="none">No Roll</option>
+        {{/select}}  
+        </select>
+      </div>
+    </fieldset>
     {{> "systems/opsandtactics/templates/item/parts/item-object.html"}}
   </section>
 </form>

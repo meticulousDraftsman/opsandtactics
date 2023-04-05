@@ -164,7 +164,29 @@ export class OpsObject extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
             description: new field.StringField(),
-            gear: new field.EmbeddedDataField(Gear)
+            gear: new field.EmbeddedDataField(Gear),
+            action: new field.SchemaField({
+                label: new field.StringField(),
+                active: new field.BooleanField({initial:false}),
+                type: new field.StringField({initial:'other'}),
+                uses: new field.SchemaField({
+                    loaded: new field.SchemaField({
+                        source: new field.StringField()
+                    }),
+                    type: new field.StringField({initial:'unlimited'})
+                }),
+                hit: new field.SchemaField({
+                    action: new field.NumberField(),
+                    ability: new field.StringField()
+                }),
+                effect:  new field.SchemaField({
+                    action: new field.NumberField(),
+                    ability: new field.StringField(),
+                    scaleAbility: new field.NumberField({initial:1})
+                }),
+                cp: new field.NumberField(),
+                ammo: new field.NumberField()
+            })
         }
     }
 }
