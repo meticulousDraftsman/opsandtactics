@@ -1,28 +1,38 @@
-<fieldset>
-  <legend class="resource-label">
-    Defense Modifiers
-  </legend>
-  <div class="grid grid-6col flex-group-center">
-    <span>Max Agility</span>
-    <input type="text" value="{{system.stats.agiMax}}" data-dtype="Number" placeholder="n/A" readonly/>
-    <span>Armor Penalty</span>
-    <input type="text" value="{{system.stats.armorPenalty.value}}" data-dtype="Number" readonly/>
-    <span>CP Loss</span>
-    <input type="text" value="{{system.cp.armor.value}}" data-dtype="Number" readonly/>
-    <span>Movement</span>
-    <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number"/>
-    <span>Dodge</span>
-    <input type="text" name="system.def.dodge" value="{{system.def.dodge}}" data-dtype="Number"/>
-    <span>Miscellaneous</span>
-    <input type="text" name="system.def.misc" value="{{system.def.misc}}" data-dtype="Number"/>
-    <span>Size</span>
-    <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number"/>
-    <span>Equipment</span>
-    <input type="text" value="{{system.def.equip.value}}" data-dtype="Number" readonly/>
-    <span>Equip Misc</span>
-    <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number"/>
-  </div>
-</fieldset>
+<div class="grid grid-3col">
+  <fieldset class="grid-span-2">
+    <legend class="resource-label">
+      Defense Modifiers
+    </legend>
+    <div class="grid grid-4col flex-group-center">
+      <span>Movement</span>
+      <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number"/>
+      <span>Dodge</span>
+      <input type="text" name="system.def.dodge" value="{{system.def.dodge}}" data-dtype="Number"/>
+      <span>Miscellaneous</span>
+      <input type="text" name="system.def.misc" value="{{system.def.misc}}" data-dtype="Number"/>
+      <span>Size</span>
+      <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number"/>
+      <span>Equipment</span>
+      <input type="text" value="{{system.def.equip.value}}" data-dtype="Number" readonly/>
+      <span>Equip Misc</span>
+      <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number"/>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend class="resource-label">
+      Defense Impacts
+    </legend>
+    <div class="grid grid-2col flex-group-center">
+      <span>Max Agility</span>
+      <input type="text" value="{{system.stats.agiMax}}" data-dtype="Number" placeholder="n/A" readonly/>
+      <span>Armor Penalty</span>
+      <input type="text" value="{{system.stats.armorPenalty.value}}" data-dtype="Number" readonly/>
+      <span>CP Loss</span>
+      <input type="text" value="{{system.cp.armor.value}}" data-dtype="Number" readonly/>
+    </div>
+  </fieldset>
+</div>
+
 <fieldset>
   <legend class="resource-label">
     Damage and Hit Points
@@ -68,7 +78,7 @@
         {{/select}}        
       </select>
       {{#if this.system.ap.max}}
-      <div class="flexrow flex-group-center resource-label" {{#if (eq @../key "shield")}}data-tooltip="Shield Soak"{{else}}data-tooltip="Armor Points"{{/if}}>
+      <div class="flexrow flex-group-center resource-label" data-tooltip="{{#if (eq @../key 'shield')}}Shield Soak{{else}}Armor Points{{/if}}">
         <input type="text" class="item-input flex3" data-target-prop="system.ap.value" data-target-id="{{this._id}}" value="{{this.system.ap.value}}" data-dtype="Number"/>
         <span>/</span>
         <input type="text" class="flex3" name="this.system.ap.max" value="{{this.system.ap.max}}" data-dtype="Number" readonly/>          
