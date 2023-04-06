@@ -64,8 +64,8 @@
             <span>Cost</span>
             <input name="system.actions.{{@key}}.ammo" type="text" value="{{this.ammo}}" data-dtype="Number" placeholder="0">            
           </li>
-          {{#unless (eq this.check.type "none")}}
           <li class="item grid grid-9col flex-group-center">
+            {{#unless (eq this.check.type "none")}}
             {{#if (eq this.check.type "skill")}}
             <select class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.source">
               {{selectOptions @root.sourceSkills selected=this.check.source nameAttr="id" labelAttr="label"}}
@@ -80,9 +80,9 @@
             {{/select}}
             </select>          
             {{/if}}
+            {{/unless}}
             <input class="grid-span-9" type="text" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" data-dtype="String" placeholder="Check roll flavor">
           </li>
-          {{/unless}}
           <li class="item grid grid-9col flex-group-center">
             <span class="grid-span-2">Effect Roll</span>
             <input class="grid-span-4" type="text" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" data-dtype="String" placeholder="Inherent">
