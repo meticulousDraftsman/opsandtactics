@@ -12,12 +12,8 @@
                 <div class="grid grid-5col">
                     <div class="grid-span-2">
                         <div class="grid grid-5col flex-group-center">
-                            <span>Range</span>
-                            <input type="text" value="{{item.system.range}}" readonly>
                             <span>Crit</span>
-                            <input class="grid-span-2" type="text" value="{{item.system.crit}}-18" readonly>
-                            <span>Error</span>
-                            <input type="text" value="{{item.system.error}}%" readonly>
+                            <input type="text" value="{{item.system.crit}}-18" readonly>
                             {{#unless (eq this.system.magazine.type "none")}}
                             {{#if (eq this.system.magazine.type "coolant")}}
                             <span>Heat</span>
@@ -46,6 +42,10 @@
                                 <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
                             </div>
                             {{/if}}
+                            <span>Error</span>
+                            <input type="text" value="{{item.system.error}}%" readonly>
+                            <span>Range</span>
+                            <input class="grid-span-2" type="text" value="{{item.system.range}}" readonly>
                         </div>
                     </div>
                     <ol class="grid-span-3 items-list flex-group-center">
@@ -61,6 +61,57 @@
                     </ol>
                 </div>
             </fieldset>
+        </li>
+        {{/each}}
+    </ol>
+</fieldset>
+<fieldset class="collapse-parent">
+    <legend class="resource-label">
+        Objects <a data-tooltip="Toggle Object Attack List Display"><i class="fas fa-list collapse-toggle" data-collapse="objectAttacks"></i></a>
+    </legend>
+    <ol class="items-list objectAttacks {{#if collapses.objectAttacks}}collapse{{/if}}">
+        {{#each attackObjects as |item id|}}
+        <li class="item" data-item-id="{{item._id}}">
+            <fieldset>
+                <legend>
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item">{{item.name}} <i class="fas fa-edit"></i></a>
+                </legend>
+                <div class="grid grid-5col">
+                    <div class="grid-span-2">
+                        <div class="grid grid-5col flex-group-center">
+                            <span>Crit</span>
+                            <input type="text" value="{{item.system.crit}}-18" readonly>
+                            <span>Uses</span>
+                            {{#if (eq item.system.magazine.type "unlimited")}}
+                            <div class="grid-span-2 flexrow flex-group-center">
+                                <i class="flex3 fas fa-infinity"></i>
+                                <span>/</span>
+                                <i class="flex3 fas fa-infinity"></i>
+                            </div>
+                            {{else}}
+                            <div class="grid-span-2 flexrow flex-group-center">
+                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
+                                <span>/</span>
+                                <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <ol class="grid-span-3 items-list flex-group-center">
+                        {{#each item.system.actions}}
+                        {{#if this.active}}
+                        {{#if (eq this.type "attack")}}
+                        <li class="item flexrow">
+                            <a class="rollable resource-label" data-roll="3d6+{{this.mods.hitTotal}}" data-label="{{../name}} {{this.name}} attack roll" data-tooltip="Attack Roll">{{#if (gt this.mods.hitTotal 0)}}+{{/if}}{{this.mods.hitTotal}} {{this.name}}</a>
+                            <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.damageTotal}}" data-label="{{../name}} {{this.name}} damage roll" data-tooltip="Damage Roll">{{this.mods.damageTotal}}</a>
+                            <span>{{this.mods.cpAmmoLabel}}</span>
+                        </li>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </fieldset>            
         </li>
         {{/each}}
     </ol>

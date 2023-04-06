@@ -20,6 +20,7 @@ export class OpsItem extends Item {
     const systemData = itemData.system;
     if (itemData.type === 'skill') this._prepareSkillData(itemData);
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
+    if (itemData.type === 'object') this._prepareObjectData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
     //console.debug('item prepareDerivedData',this)
   }
@@ -48,6 +49,26 @@ export class OpsItem extends Item {
         entry.value = systemData.weaponMods?.[key]?.cp ?? null;
        }
       }
+  }
+  _prepareObjectData(itemData){
+    const systemData = itemData.system;
+    // Flag actions as either attack or utility
+    for (let [,a] of Object.entries(systemData.actions)){
+      switch (a.check.type){
+        case 'melee':
+        case 'ranged':
+        case 'otherAttack':
+        case 'noneAttack':
+          a.type = 'attack'
+          break;
+        case 'skill':
+        case 'generic':
+        case 'otherUtility':
+        case 'noneUtility':
+          a.type='utility';
+          break;
+      }
+    }
   }
   _prepareMagicData(itemData){
     const systemData = itemData.system;
@@ -79,38 +100,47 @@ export class OpsItem extends Item {
     const mods = {
       hit: sourceAttack.check.inherent,
       damageParts: [sourceAttack.effect.inherent || null],
-      recoil: Math.min(sourceAttack.recoil.inherent,0),
-      reduction: Math.max(sourceAttack.recoil.inherent,0), //Just in case there's some weird attack that has inherent recoil reduction
+      recoil: null,
+      reduction: null,
       cp: sourceAttack.cp.inherent
     };
     if (this.actor){
+      let abilityScale = sourceAttack.effect?.scaleAbility || 1;
       mods.hit += this.actor.system.stats.bab.value + this.actor.abilityMod(sourceAttack.check.ability);
-      mods.damageParts.push(Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*sourceAttack.effect.scaleAbility) ? `${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*sourceAttack.effect.scaleAbility)>0 ? '+' : ''}${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*sourceAttack.effect.scaleAbility)}` : null);
-      if (this.actor.system.stats.recoil.value>0){
-        mods.reduction += this.actor.system.stats.recoil.value;
+      mods.damageParts.push(Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale) ? `${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale)>0 ? '+' : ''}${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale)}` : null);
+    }
+    if (hasProperty(sourceAttack,'recoil')){
+      for (let [,h] of Object.entries(sourceAttack.check.mods)){
+        mods.hit += h.value;
       }
-      else {
-        mods.recoil += this.actor.system.stats.recoil.value;
+      for (let [,d] of Object.entries(sourceAttack.effect.mods)){
+        mods.damageParts.push(d.value ? `${d.value.charAt(0) != '-' ? '+' : ''}${d.value}` : null);
+      }
+      if (sourceAttack.recoil.inherent!=null){
+        mods.recoil = Math.min(sourceAttack?.recoil.inherent,0)
+        mods.reduction = Math.max(sourceAttack?.recoil.inherent,0) //Just in case there's some weird attack that has inherent recoil reduction
+      }
+      for (let [,r] of Object.entries(sourceAttack.recoil.mods)){
+        if (r.value > 0){
+          mods.reduction += r.value?r.value:null;
+        }
+        else {
+          mods.recoil += r.value?r.value:null;
+        }
+      }
+      if (this.actor && mods.reduction!=null && mods.recoil!=null){
+        if (this.actor.system.stats.recoil.value>0){
+          mods.reduction += this.actor.system.stats.recoil.value;
+        }
+        else {
+          mods.recoil += this.actor.system.stats.recoil.value;
+        }
+      }
+      for (let [,c] of Object.entries(sourceAttack.cp.mods)){
+        mods.cp += c.value;
       }
     }
-    for (let [,h] of Object.entries(sourceAttack.check.mods)){
-      mods.hit += h.value;
-    }
-    for (let [,d] of Object.entries(sourceAttack.effect.mods)){
-      mods.damageParts.push(d.value ? `${d.value.charAt(0) != '-' ? '+' : ''}${d.value}` : null);
-    }
-    for (let [,r] of Object.entries(sourceAttack.recoil.mods)){
-      if (r.value > 0){
-        mods.reduction += r.value;
-      }
-      else {
-        mods.recoil += r.value;
-      }
-    }
-    for (let [,c] of Object.entries(sourceAttack.cp.mods)){
-      mods.cp += c.value;
-    }
-    if (sourceAttack.check.type === 'none'){
+    if (sourceAttack.check.type === 'noneAttack'){
       mods.hitTotal = null;
     }
     else{
@@ -119,7 +149,24 @@ export class OpsItem extends Item {
     mods.damageParts = mods.damageParts.filter(part => part != null);
     mods.damageTotal = mods.damageParts.join('') || '0';
     if (mods.damageTotal.charAt(0) == '+') mods.damageTotal = mods.damageTotal.substring(1);
-    mods.cpAmmoLabel = [(mods.cp?`${mods.cp} CP`:null),(sourceAttack.ammo?`${sourceAttack.ammo} Ammo`:null)].filter(part => part != null).join(', ');
+    let ammoLabel;
+    switch (this.type){
+      case 'weapon':
+        if (this.system.magazine.type==='coolant'){
+          ammoLabel = 'Heat';
+        }
+        else{
+          ammoLabel = 'Ammo';
+        }
+        break;
+      case 'object':
+        ammoLabel = 'Uses';
+        break;
+      case 'magic':
+        ammoLabel = 'Charges';
+        break;
+    }
+    mods.cpAmmoLabel = [(mods.cp?`${mods.cp} CP`:null),(sourceAttack.ammo?`${sourceAttack.ammo} ${ammoLabel}`:null)].filter(part => part != null).join(', ');
     return mods;
   }
 
