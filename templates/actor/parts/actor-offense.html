@@ -14,13 +14,11 @@
                         <div class="grid grid-5col flex-group-center">
                             <span>Crit</span>
                             <input type="text" value="{{item.system.crit}}-18" readonly>
-                            {{#unless (eq this.system.magazine.type "none")}}
                             {{#if (eq this.system.magazine.type "coolant")}}
                             <span>Heat</span>
                             {{else}}
                             <span>Ammo</span>
                             {{/if}}
-                            {{/unless}}
                             {{#if (eq item.system.magazine.type "internal")}}
                             <div class="grid-span-2 flexrow flex-group-center">
                                 <input class="flex3" type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item._id}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
@@ -40,6 +38,13 @@
                                 <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
                                 <span>/</span>
                                 <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
+                            </div>
+                            {{/if}}
+                            {{#if (eq item.system.magazine.type "unlimited")}}
+                            <div class="grid-span-2 flexrow flex-group-center">
+                                <i class="flex3 fas fa-infinity"></i>
+                                <span>/</span>
+                                <i class="flex3 fas fa-infinity"></i>
                             </div>
                             {{/if}}
                             <span>Error</span>

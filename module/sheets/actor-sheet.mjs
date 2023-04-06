@@ -31,6 +31,7 @@ export class OpsActorSheet extends ActorSheet {
     will: true,
     weapons: false,
     objectAttacks: false,
+    objectUtility: false,
     resources: true,
     Loose: false,
     Worn: false,
