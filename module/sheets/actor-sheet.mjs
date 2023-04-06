@@ -30,6 +30,7 @@ export class OpsActorSheet extends ActorSheet {
     reflex: true,
     will: true,
     weapons: false,
+    objectAttacks: false,
     resources: true,
     Loose: false,
     Worn: false,
@@ -174,6 +175,8 @@ export class OpsActorSheet extends ActorSheet {
         entries: []
       }
     };
+    const attackObjects = [];
+    const utilityObjects = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -317,6 +320,21 @@ export class OpsActorSheet extends ActorSheet {
           resObjects[res.type].entries.push(tempRes)
         }
       }
+      // Append to objects-with-attacks and objects-with utility
+      if(!isEmpty(getProperty(i,'system.actions'))){
+        let attackFlag = false;
+        let utilityFlag = false;
+        for (let [,a] of Object.entries(i.system.actions)){
+          if (a.type==='attack'){
+            attackFlag = true;
+            a.mods = context.actor.items.get(i._id).attackSum(a);
+          }
+          if (a.type==='utility') utilityFlag = true;
+        }
+        if (attackFlag) attackObjects.push(i);
+        if (utilityFlag) utilityObjects.push(i);
+      }
+      
     }
 
     // Purge Empty Armor Layers
@@ -392,7 +410,9 @@ export class OpsActorSheet extends ActorSheet {
     context.traits = traits;
     context.magic = magic;
     context.resObjects = resObjects;
-    //console.debug(context);
+    context.attackObjects = attackObjects;
+    context.utilityObjects = utilityObjects;
+    console.debug(context);
   }
 
   /* -------------------------------------------- */
