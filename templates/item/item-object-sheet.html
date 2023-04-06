@@ -20,8 +20,10 @@
         <legend class="resource-label">
           Object Actions <a class="item-control sub-create" data-target-name="action" title="Add Action"><i class="fas fa-plus"></i></a>
         </legend>
-        <div class="grid grid-3col flex-group-center">
-          <select class="flex-group-center" name="system.magazine.type" data-dtype="String">
+        <div class="grid grid-9col flex-group-center">
+          <span>Crit</span>
+          <input type="text" name="system.crit" value="{{system.crit}}" data-dtype="Number">
+          <select class="grid-span-3 flex-group-center" name="system.magazine.type" data-dtype="String">
           {{#select system.magazine.type}}
             <option value="unlimited">Unlimited Use</opton>
             <option value="internal">Internal Uses</option>
@@ -53,10 +55,11 @@
               <option value="melee">Melee Attack</option>
               <option value="ranged">Ranged Attack</option>
               <option value="otherAttack">Other Roll (Attack)</option>
+              <option value="noneAttack">Message (Attack)</option>
               <option value="skill">Skill Check</option>
               <option value="generic">Generic Check</option>
               <option value="otherUtility">Other Roll (Utility)</option>
-              <option value="none">No Check</option>
+              <option value="noneUtility">Message (Utility)</option>
             {{/select}}
             </select>
             <span>CP</span>
@@ -65,7 +68,7 @@
             <input name="system.actions.{{@key}}.ammo" type="text" value="{{this.ammo}}" data-dtype="Number" placeholder="0">            
           </li>
           <li class="item grid grid-9col flex-group-center">
-            {{#unless (eq this.check.type "none")}}
+            {{#unless (or (eq this.check.type "noneAttack") (eq this.check.type "noneUtility"))}}
             {{#if (eq this.check.type "skill")}}
             <select class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.source">
               {{selectOptions @root.sourceSkills selected=this.check.source nameAttr="id" labelAttr="label"}}
@@ -73,7 +76,7 @@
             {{else}}
             <span class="grid-span-2">Check Modifier</span>
             <input class="grid-span-4" type="text" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" data-dtype="Number" placeholder="Inherent">
-            <select class="grid-span-3 flex-group-center">
+            <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.ability" data-dtype="String">
             {{#select this.check.ability}}
               <option value="">Ability Modifier</option>
               {{selectOptions @root.OATS.abilities selected=this.check.ability localize=true}}
@@ -86,8 +89,8 @@
           <li class="item grid grid-9col flex-group-center">
             <span class="grid-span-2">Effect Roll</span>
             <input class="grid-span-4" type="text" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" data-dtype="String" placeholder="Inherent">
-            <select class="grid-span-3 flex-group-center">
-            {{#select this.check.ability}}
+            <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.effect.ability" data-dtype="String">
+            {{#select this.effect.ability}}
               <option value="">Ability Modifier</option>
               {{selectOptions @root.OATS.abilities selected=this.effect.ability localize=true}}
             {{/select}}
