@@ -203,7 +203,8 @@ export class OpsObject extends foundry.abstract.DataModel{
             magazine: new field.SchemaField({
                 type: new field.StringField({initial:'unlimited'}),
                 source: new field.StringField()
-            })
+            }),
+            crit: new field.NumberField({initial:16})
         }
     }
 }
