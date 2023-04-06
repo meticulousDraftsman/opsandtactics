@@ -90,11 +90,7 @@
                         <div class="grid grid-3col flex-group-center">
                             <span>Uses</span>
                             {{#if (eq item.system.magazine.type "unlimited")}}
-                            <div class="grid-span-2 flexrow flex-group-center">
-                                <i class="flex3 fas fa-infinity"></i>
-                                <span>/</span>
-                                <i class="flex3 fas fa-infinity"></i>
-                            </div>
+                            <i class="grid-span-2 fas fa-infinity"></i>
                             {{else}}
                             <div class="grid-span-2 flexrow flex-group-center">
                                 <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>

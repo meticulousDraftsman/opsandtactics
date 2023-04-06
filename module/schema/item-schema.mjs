@@ -105,7 +105,7 @@ export class WeaponMod extends foundry.abstract.DataModel{
         return{
             name: new field.StringField({nullable:false}),
             description: new field.StringField(),
-            hit: new field.NumberField({initial:null,nullable:true}),
+            hit: new field.StringField({initial:null,nullable:true}),
             damage: new field.StringField({initial:null,nullable:true}),
             recoil: new field.NumberField({initial:null,nullable:true}),
             cp: new field.NumberField({initial:null,nullable:true})
@@ -152,7 +152,7 @@ export class OpsAction  extends foundry.abstract.DataModel{
                 flavor: new field.StringField(),
                 type: new field.StringField(), // melee,ranged,otherAttack vs skill,generic,otherUtility
                 source: new field.StringField(),
-                inherent: new field.NumberField(),
+                inherent: new field.StringField(),
                 ability: new field.StringField()
             }),
             effect: new field.SchemaField({

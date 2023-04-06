@@ -98,7 +98,8 @@ export class OpsItem extends Item {
    */
   attackSum(sourceAttack){
     const mods = {
-      hit: sourceAttack.check.inherent,
+      hitNum: Number(sourceAttack.check.inherent)?Number(sourceAttack.check.inherent):0,
+      hitParts: [Number(sourceAttack.check.inherent)?null:sourceAttack.check.inherent],
       damageParts: [sourceAttack.effect.inherent || null],
       recoil: null,
       reduction: null,
@@ -106,12 +107,17 @@ export class OpsItem extends Item {
     };
     if (this.actor){
       let abilityScale = sourceAttack.effect?.scaleAbility || 1;
-      mods.hit += this.actor.system.stats.bab.value + this.actor.abilityMod(sourceAttack.check.ability);
+      mods.hitNum += this.actor.system.stats.bab.value + this.actor.abilityMod(sourceAttack.check.ability);
       mods.damageParts.push(Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale) ? `${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale)>0 ? '+' : ''}${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale)}` : null);
     }
     if (hasProperty(sourceAttack,'recoil')){
       for (let [,h] of Object.entries(sourceAttack.check.mods)){
-        mods.hit += h.value;
+        if(Number.isNaN(Number(h.value))){
+          mods.hitParts.push(h.value ? `${h.value.charAt(0) != '-' ? '+' : ''}${h.value}`: null);
+        }
+        else {
+          mods.hitNum += Number(h.value);
+        }
       }
       for (let [,d] of Object.entries(sourceAttack.effect.mods)){
         mods.damageParts.push(d.value ? `${d.value.charAt(0) != '-' ? '+' : ''}${d.value}` : null);
@@ -144,7 +150,11 @@ export class OpsItem extends Item {
       mods.hitTotal = null;
     }
     else{
-      mods.hitTotal = mods.hit + Math.min(mods.recoil+mods.reduction,0);
+      mods.hitNum += Math.min(mods.recoil+mods.reduction,0);
+      mods.hitParts = mods.hitParts.filter(part => part != null);
+      mods.hitParts = mods.hitParts.join('') || null;
+      if(mods.hitParts!=null && mods.hitParts.charAt(0) != '+' && mods.hitParts.charAt(0) != '-') mods.hitParts = `+${mods.hitParts}`;
+      mods.hitTotal = `${mods.hitNum>=0?'+':''}${mods.hitNum}${mods.hitParts?mods.hitParts:''}`;
     }
     mods.damageParts = mods.damageParts.filter(part => part != null);
     mods.damageTotal = mods.damageParts.join('') || '0';
