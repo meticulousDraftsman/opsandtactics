@@ -110,11 +110,16 @@ export class OpsItem extends Item {
     for (let [,c] of Object.entries(sourceAttack.cp.mods)){
       mods.cp += c.value;
     }
-    mods.hitTotal = mods.hit + Math.min(mods.recoil+mods.reduction,0);
+    if (sourceAttack.check.type === 'none'){
+      mods.hitTotal = null;
+    }
+    else{
+      mods.hitTotal = mods.hit + Math.min(mods.recoil+mods.reduction,0);
+    }
     mods.damageParts = mods.damageParts.filter(part => part != null);
     mods.damageTotal = mods.damageParts.join('') || '0';
     if (mods.damageTotal.charAt(0) == '+') mods.damageTotal = mods.damageTotal.substring(1);
-    //console.debug(mods)
+    mods.cpAmmoLabel = [(mods.cp?`${mods.cp} CP`:null),(sourceAttack.ammo?`${sourceAttack.ammo} Ammo`:null)].filter(part => part != null).join(', ');
     return mods;
   }
 

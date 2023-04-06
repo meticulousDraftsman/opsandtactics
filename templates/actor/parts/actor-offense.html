@@ -54,7 +54,7 @@
                         <li class="item flexrow">
                             <a class="rollable resource-label" data-roll="3d6+{{this.mods.hitTotal}}" data-label="{{../name}} {{this.name}} attack roll" data-tooltip="Attack Roll">{{#if (gt this.mods.hitTotal 0)}}+{{/if}}{{this.mods.hitTotal}} {{this.name}}</a>
                             <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.damageTotal}}" data-label="{{../name}} {{this.name}} damage roll" data-tooltip="Damage Roll">{{this.mods.damageTotal}}</a>
-                            <span>{{this.mods.cp}} CP{{#if (gt this.ammo 0)}}, {{this.ammo}} Ammo{{/if}}</span>
+                            <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
                         {{/if}}
                         {{/each}}
