@@ -16,140 +16,97 @@
   <section class="sheet-body">
     {{!-- Statistics Tab--}}
     <div class="tab" data-group="primary" data-tab="stats">
-      <ol class="items-list flex-group-center">
-        <li class="item items-header resource-label grid grid-9col">
-          <div class="grid-span-2">Usage Limits</div>
-          {{#if system.flags.shared}}
-          <div class="grid-span-2">Source</div>
-          {{else}}
-            {{#if system.flags.limited}}
-          <div>Uses</div>
-          <div>Max</div>
-            {{else}}
-          <span></span>
-          <span></span>
-            {{/if}}
+      <fieldset>
+        <legend class="resource-label">
+          Magic Properties {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}} <a class="item-control sub-create" data-target-name="action" title="Add Action"><i class="fas fa-plus"></i></a>
+        </legend>
+        <div class="grid grid-3col flex-group-center">
+          <select class="flex-group-center" name="system.magazine.type" data-dtype="String">
+          {{#select system.magazine.type}}
+            <option value="external">External Charges</option>
+            <option value="unlimited">Unlimited Use</option>
+            <option value="mental">Mental Limit on Use</option>
+          {{/select}}
+          </select>
+          {{#if (eq system.magazine.type "external")}}
+          <select class="grid-span-2 flex-group-center" name="system.magazine.source" data-dtype="String">
+            {{selectOptions sourceMagics selected=system.magazine.source nameAttr="id" labelAttr="label"}}
+          </select>
           {{/if}}
-          <div class="grid-span-2">Mental Limit</div>
-          <div>Cost</div>
-          {{#if item.actor}}
-          <div class="grid-start-9">Delete</div>
-          {{/if}}
-        </li>
-        <li class="grid grid-9col">
-          <div class="grid-span-2">
-            <select name="system.uses.type" data-dtype="String">
-            {{#select system.uses.type}}
-              <option value="limited">Limited</option>
-              <option value="unlimited">Unlimited</option>
-              <option value="shared">Shared</option>
+        </div>
+      </fieldset>
+      {{#each system.actions}}
+      <fieldset>
+        <legend>
+          <div class="flexrow flex-group-center">
+            <input name="system.actions.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"> <a class="item-control sub-delete flex0" data-target-name="actions" data-remove-target="{{@key}}" title="Remove Action"> <i class="fas fa-trash"></i></a>
+          </div>
+        </legend>
+        <ol class="items-list">
+          <li class="item grid grid-9col flex-group-center">
+            <span>Active</span>
+            <div>
+              <input name="system.actions.{{@key}}.active" type=checkbox {{checked this.active}}>
+            </div>
+            <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.type">
+              {{#select this.check.type}}
+                <option value="melee">Melee Attack</option>
+                <option value="ranged">Ranged Attack</option>
+                <option value="otherAttack">Other Roll (Attack)</option>
+                <option value="noneAttack">Message (Attack)</option>
+                <option value="generic">Generic Check</option>
+                <option value="otherUtility">Other Roll (Utility)</option>
+                <option value="noneUtility">Message (Utility)</option>
+              {{/select}}
+              </select>
+              <span>CP</span>
+              <input name="system.actions.{{@key}}.cp.inherent" type="text" value="{{this.cp.inherent}}" data-dtype="Number" placeholder="0">
+              {{#if (eq ../system.magazine.type "mental")}}
+              <span>ML</span>
+              {{else}}
+              <span>Cost</span>
+              {{/if}}
+              <input name="system.actions.{{@key}}.ammo" type="text" value="{{this.ammo}}" data-dtype="Number" placeholder="0">   
+          </li>
+          <li class="item grid grid-9col flex-group-center">
+            {{#unless (or (eq this.check.type "noneAttack") (eq this.check.type "noneUtility"))}}
+            <span class="grid-span-2">Check Modifier</span>
+            <input class="grid-span-4" type="text" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" data-dtype="String" placeholder="Inherent">
+            <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.ability" data-dtype="String">
+            {{#select this.check.ability}}
+              <option value="">Ability Modifier</option>
+              {{selectOptions @root.OATS.abilities selected=this.check.ability localize=true}}
             {{/select}}
-            </select>
-          </div>
-          {{#if system.flags.shared}}
-          <div class="grid-span-2">
-            <select name="system.uses.shared.source" data-dtype="String">
-              {{selectOptions sourceMagics selected=system.uses.source nameAttr="id" labelAttr="name"}}
-            </select>
-          </div>
-          {{else}}
-            {{#if system.flags.limited}}
-          <input type="text" name="system.uses.value" value="{{system.uses.value}}" data-dtype="Number">
-          <input type="text" name="system.uses.max" value="{{system.uses.max}}" data-dtype="Number">
-            {{else}}
-          <span></span>
-          <span></span>
-            {{/if}}
-          {{/if}}
-          <div class="grid-span-2">
-            <select name="system.mlCost.type" data-dtype="String">
-            {{#select system.mlCost.type}}
-              <option value="passive">Passive</option>
-              <option value="activation">Per Use</option>
+            </select>          
+            {{/unless}}
+            <input class="grid-span-9" type="text" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" data-dtype="String" placeholder="Check roll flavor">
+          </li>
+          <li class="item grid grid-9col flex-group-center">
+            <span class="grid-span-2">Effect Roll</span>
+            <input class="grid-span-4" type="text" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" data-dtype="String" placeholder="Inherent">
+            <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.effect.ability" data-dtype="String">
+            {{#select this.effect.ability}}
+              <option value="">Ability Modifier</option>
+              {{selectOptions @root.OATS.abilities selected=this.effect.ability localize=true}}
             {{/select}}
-            </select>
-          </div>
-          <input type="text" name="system.mlCost.value" value="{{system.mlCost.value}}" data-dtype="Number">
-          {{#if item.actor}}
-          <div class="grid-start-9">
-              <a class="item-control self-destruct" self="{{item._id}}" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-          {{/if}}
-        </li>   
-        <li class="item items-header resource-label grid grid-9col">
-          <div>Range</div>
-          <div class="grid-span-5">Notes</div>
-          <div>CP</div>
-          <div>Active</div>
-          <div>Physical</div>
-        </li>
-        <li class="grid grid-9col">
-          <input type="text" name="system.range" value="{{system.range}}" data-dtype="String">
-          <input class="grid-span-5" type="text" name="system.notes" value="{{system.notes}}" data-dtype="String">
-          <input type="text" name="system.cp" value="{{system.cp}}" data-dtype="Number">
-          <div>
-            <input name="system.active" type="checkbox" {{checked system.active}}/>
-          </div>
-          <div>
-            <input name="system.gear.physical" type="checkbox" {{checked system.gear.physical}}/>
-          </div>
-        </li>
-
-        <li class="item items-header resource-label grid grid-2col">
-          <div class="grid-span-2">Usage Action</div>
-        </li>     
-        <li class="grid grid-8col">
-          <div class="grid-span-2">
-            <select name="system.action.type">
-            {{#select system.action.type}}
-              <option value="attack">Attack Roll</option>
-              <option value="other">Other Roll</option>
-              <option value="message">Message</option>
-            {{/select}}
-            </select>
-          </div>
-          <div>
-            <select name="system.action.ability" data-dtype="String">
-                {{#select system.action.ability}}
-                  <option value=""></option>
-                  {{selectOptions OATS.abilityShort selected=system.action.ability localize=true}}
-                {{/select}}
-            </select>
-          </div>
-          <input class="grid-span-5" type="text" name="system.action.misc" value="{{system.action.misc}}" data-dtype="String" placeholder="Modifiers">
-          <input class="grid-span-8" type="text" name="system.action.flavor" value="{{system.action.flavor}}" data-dtype="String" placeholder="Flavor">
-        </li>
-        <li class="item items-header resource-label grid grid-2col">
-          <div class="grid-span-2">Usage Effect</div>
-        </li>     
-        <li class="grid grid-8col">
-          <div class="grid-span-2">
-            <select name="system.effect.type">
-            {{#select system.effect.type}}
-              <option value="attack">Attack Roll</option>
-              <option value="other">Other Roll</option>
-              <option value="message">Message</option>
-            {{/select}}
-            </select>
-          </div>
-          <div>
-            <select name="system.effect.ability" data-dtype="String">
-                {{#select system.effect.ability}}
-                  <option value=""></option>
-                  {{selectOptions OATS.abilityShort selected=system.effect.ability localize=true}}
-                {{/select}}
-            </select>
-          </div>
-          <input class="grid-span-5" type="text" name="system.effect.misc" value="{{system.effect.misc}}" data-dtype="String" placeholder="Modifiers">
-          <input class="grid-span-8" type="text" name="system.effect.flavor" value="{{system.effect.flavor}}" data-dtype="String" placeholder="Flavor">
-        </li>
-      </ol>
+            </select>  
+            <input class="grid-span-9" type="text" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" data-dtype="String" placeholder="Effect roll flavor">
+          </li>
+        </ol>
+      </fieldset>
+      {{/each}}
     </div>
-
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">
-      {{> "systems/opsandtactics/templates/item/parts/item-object.html"}}
+      <fieldset class="sheet-body tab">
+        <legend class="resource-label">
+          Description
+        </legend>
+        <div class="sheet-body tab">
+          {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+        </div>
+      </fieldset>
     </div>
   </section>
 </form>

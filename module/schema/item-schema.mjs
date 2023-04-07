@@ -112,41 +112,10 @@ export class WeaponMod extends foundry.abstract.DataModel{
         }
     }
 }
-export class Attack extends foundry.abstract.DataModel{
-    static defineSchema(){
-        return{
-            name: new field.StringField({initial:"Attack"}),
-            description: new field.StringField(),
-            active: new field.BooleanField({initial:true}),
-            display: new field.BooleanField({initial:true}),
-            type: new field.StringField({initial:'ranged'}),
-            ammo: new field.NumberField(),
-            hit: new field.SchemaField({
-                attack: new field.NumberField(),
-                ability: new field.StringField(),
-                mods: new field.ObjectField()
-            }),
-            damage: new field.SchemaField({
-                attack: new field.StringField(),
-                ability: new field.StringField(),
-                scaleAbility: new field.NumberField({initial:1}),
-                mods: new field.ObjectField()
-            }),
-            recoil: new field.SchemaField({
-                attack: new field.NumberField({initial:null,nullable:true}),
-                mods: new field.ObjectField()
-            }),
-            cp: new field.SchemaField({
-                attack: new field.NumberField(),
-                mods: new field.ObjectField()
-            })
-        }
-    }
-}
 export class OpsAction  extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
-            name: new field.StringField(),
+            name: new field.StringField({initial:'New Action'}),
             active: new field.BooleanField({initial:true}),
             check: new field.SchemaField({
                 flavor: new field.StringField(),
@@ -220,36 +189,11 @@ export class OpsMagic extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
             description: new field.StringField(),
-            flags: new field.SchemaField({}),
-            uses: new field.SchemaField({
-                type: new field.StringField({initial:"limited"}),
-                value: new field.NumberField({initial:0}),
-                max: new field.NumberField({initial:0}),
-                shared: new field.SchemaField({
-                    source: new field.StringField(),
-                })
-            }),
-            mlCost: new field.SchemaField({
-                type: new field.StringField({initial:"passive"}),
-                value: new field.NumberField({initial:0})
-            }),
-            active: new field.BooleanField({initial:true}),
-            cp: new field.NumberField({initial:7}),
-            notes: new field.StringField(),
-            range: new field.StringField(),
-            action: new field.SchemaField({
-                type: new field.StringField({initial:"attack"}),
-                ability: new field.StringField(),
-                misc: new field.StringField(),
-                flavor: new field.StringField()
-            }),
-            effect: new field.SchemaField({
-                type: new field.StringField({initial:"other"}),
-                ability: new field.StringField(),
-                misc: new field.StringField(),
-                flavor: new field.StringField()
-            }),
-            gear: new field.EmbeddedDataField(Gear)
+            actions: new field.ObjectField(),
+            magazine: new field.SchemaField({
+                type: new field.StringField({initial:'external'}),
+                source: new field.StringField()
+            })
         }
     }
 }

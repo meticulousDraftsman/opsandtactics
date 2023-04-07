@@ -1,4 +1,4 @@
-import { Attack, OpsAction, Protection, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
+import {OpsAction, Protection, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -168,10 +168,12 @@ export class OpsItemSheet extends ItemSheet {
     }
     const sourceMagics = [{name:"None",id:""}];
     if (itemData.type==='magic'){
-      if(actor){
+      if(actor && itemData.system.magazine.type==='external'){
         for(let i of actor.items){
-          if(i.type==='magic' && i.system.uses.type==='limited'){
-            sourceMagics.push(i);
+          if(getProperty(i,'system.gear.resources')){
+            for (let [key,r] of Object.entries(i.system.gear.resources)){
+              if (r.type==='magic') sourceMagics.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},system.gear.resources.${key}`});
+            }
           }
         }
       }
@@ -319,11 +321,9 @@ export class OpsItemSheet extends ItemSheet {
         break;
       case 'action':
         newProp = new OpsAction;
-        if (this.object.type==='object'){
-          newProp.name = 'New Action';
-          newProp.check.type = 'otherUtility';
-          setProperty(updateData,`system.actions.${randomID(8)}`,newProp)
-        }
+        if (this.object.type==='object') newProp.check.type = 'otherUtility';
+        if (this.object.type==='magic') newProp.check.type = 'ranged';
+        setProperty(updateData,`system.actions.${randomID(8)}`,newProp)
         break;
       case 'consumable':
       case 'coolant':

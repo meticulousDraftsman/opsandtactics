@@ -7,13 +7,13 @@
         <div>
             <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
         </div>
-        <input type="text" value="{{system.magic.psion}}" readonly>
+        <input type="text" value="{{system.ml.psion}}" readonly>
         <span class="grid-span-2">Object Mental Limit</span>
         <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" data-dtype="Number" placeholder="Misc">
         <input type="text" value="{{system.ml.object}}" readonly>
         <span class="grid-span-2">Recipe Sets Memorized</span>
         <input type="text" name="system.magic.memorized" value="{{system.magic.memorized}}" data-dtype="Number" placeholder="Sets">
-        <input type="text" value="{{system.magic.recipe}}" readonly>
+        <input type="text" value="{{system.ml.recipe}}" readonly>
         <span class="grid-span-2">Incantation Use</span>
         <a class="mental-limit" data-ml-cost="-{{system.ml.max}}"><i class="fas fa-recycle" data-tooltip="Regain Mental Limit spent by Invoking"></i></a>
         <input type="text" name="system.magic.incant" value="{{system.magic.incant}}" data-dtype="Number" placeholder="Spent">
@@ -31,7 +31,7 @@
             <ol class="items-list">  
             {{#each this.entries}}
                 <li class="grid grid-10col flex-group-center">
-                    <span class="grid-span-5">{{this.name}}</span>
+                    <a class="item-control item-edit grid-span-5" data-item-id="{{this.itemId}}">{{this.name}} <i class="fas fa-edit"></i></a>
                     {{#if (eq this.type "consumable")}}
                     <div class="grid-span-2 flexrow flex-group-center">
                         <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
@@ -119,77 +119,60 @@
         {{/each}}
     </ol>    
 </fieldset>
-<ol class="items-list flex-group-center">
-    <li class="item items-header resource-label grid grid-12col">
-        <div class="grid-span-4">Magic</div>
-        <div class="grid-span-2">Action</div>
-        <div class="grid-span-2">Effect</div>
-        <div>CP</div>
-        <div>ML</div>
-        <div>Uses</div>
-        <div class="align-center">
-            <a class="item-control item-create" title="Create Magic" data-type="magic"><i class="fas fa-plus"></i></a>
-        </div>        
-    </li>
-    {{#each magic as |item id|}}
-    <li class="grid grid-12col">
-        <div class="flexrow grid-span-4">
-            {{#if item.system.active}}
-            <h4 class="">{{item.name}}</h4>
-            {{else}}
-            <i class="">{{item.name}}</i>
-            {{/if}}
-            <input class="item-checkbox" data-target-prop="system.active" data-target-id="{{item._id}}" data-value="{{item.system.active}}" {{checked item.system.active}} type="checkbox"/>
-        </div>
-        <div class="flexrow grid-span-2">
-            {{#if item.system.action.mods}}
-            <input type="text" value="{{item.system.action.mods}}" title="{{item.system.action.flavor}}" data-dtype="String" readonly>
-            {{else}}
-            <input type="text" value="{{item.system.action.flavor}}" title="{{item.system.action.flavor}}" data-dtype="String" readonly>
-            {{/if}}
-            {{#if item.system.flags.passive}}
-            <a class="3d6-roll" data-roll-type="{{item.system.action.type}}" data-type="magicuse" data-weapon="{{item._id}}" data-mag-type="{{item.system.uses.type}}" data-ammo="1" data-parts="{{item.system.action.mods}}" data-title="{{item.name}} Action" data-flavor="{{item.system.action.flavor}}"><i class="fas fa-dice-d6"></i></a>
-            {{else}}
-            <a class="3d6-roll mental-limit" data-ml-cost="{{item.system.mlCost.value}}" data-roll-type="{{item.system.action.type}}" data-type="magicuse" data-weapon="{{item._id}}" data-mag-type="{{item.system.uses.type}}" data-ammo="1" data-parts="{{item.system.action.mods}}" data-title="{{item.name}} Action" data-flavor="{{item.system.action.flavor}}"><i class="fas fa-dice-d6"></i></a>
-            {{/if}}
-        </div>
-        <div class="flexrow grid-span-2">
-            {{#if item.system.effect.mods}}
-            <input type="text" title="{{item.system.effect.flavor}}" value="{{item.system.effect.mods}}" data-dtype="String" readonly>
-            <a class="3d6-roll" data-roll-type="{{item.system.effect.type}}" data-type="magiceffect" data-weapon="{{item._id}}" data-ammo="0" data-parts="{{item.system.effect.mods}}" data-title="{{item.name}} Effect" data-flavor="{{item.system.effect.flavor}}"><i class="fas fa-dice-d6"></i></a>
-            {{else}}
-                {{#if item.system.effect.flavor}}
-                <input type="text" title="{{item.system.effect.flavor}}" value="{{item.system.effect.flavor}}" data-dtype="String" readonly>
-                <a class="3d6-roll" data-roll-type="{{item.system.effect.type}}" data-type="magiceffect" data-weapon="{{item._id}}" data-ammo="0" data-parts="{{item.system.effect.mods}}" data-title="{{item.name}} Effect" data-flavor="{{item.system.effect.flavor}}"><i class="fas fa-dice-d6"></i></a>
-                {{else}}
-                <span></span><span></span>
-                {{/if}}
-            {{/if}}
-        </div>
-        <div>{{item.system.cp}}</div>
-        {{#if item.system.mlCost}}
-        <div>{{item.system.mlCost.value}}</div>
-        {{else}}
-        <div></div>
-        {{/if}}
-        {{#if item.system.flags.limited}}
-        <div class="flexrow">
-            {{#if item.system.flags.shared}}
-            <input type="text" class="item-input" data-target-prop="system.uses.value" data-target-id="{{item.system.uses.shared.source}}" value="{{item.system.uses.shared.value}}" data-dtype="Number">
-            <span class="flex0">/</span>
-            <input type="text" value="{{item.system.uses.shared.max}}" data-dtype="Number" readonly>
-            {{else}}
-            <input type="text" class="item-input" data-target-prop="system.uses.value" data-target-id="{{item._id}}" value="{{item.system.uses.value}}" data-dtype="Number">
-            <span class="flex0">/</span>
-            <input type="text" value="{{item.system.uses.max}}" readonly>
-            {{/if}}
-        </div>
-        {{else}}
-        <div></div>
-        {{/if}}
-        <div class="align-center">
-          <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Item"><i class="fas fa-edit"></i></a>
-        </div>
-    </li>
-    {{/each}}
-</ol>
+<fieldset class="collapse-parent">
+    <legend class="resource-label">
+        Magic <a data-tooltip="Toggle Magic List Display"><i class="fas fa-list collapse-toggle" data-collapse="magicUtility"></i></a>
+    </legend>
+    <ol class="items-list magicUtility {{#if collapses.magicUtility}}collapse{{/if}}">
+        {{#each utilityMagic as |item id|}}
+        <li class="item" data-item-id="{{item._id}}">
+            <fieldset>
+                <legend>
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item">{{item.name}} <i class="fas fa-edit"></i></a>
+                </legend>
+                <div class="grid grid-10col">
+                    <div class="grid-span-3">
+                        <div class="grid grid-3col flex-group-center">
+                            {{#unless (eq item.system.magazine.type "mental")}}
+                            <span>Charges</span>
+                            {{else}}
+                            <span>Incant</span>
+                            {{/unless}}
+                            {{#if (eq item.system.magazine.type "unlimited")}}
+                            <i class="grid-span-2 fas fa-infinity"></i>
+                            {{/if}}
+                            {{#if (eq item.system.magazine.type "external")}}
+                            <div class="grid-span-2 flexrow flex-group-center">
+                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
+                                <span>/</span>
+                                <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
+                            </div>
+                            {{/if}}
+                            {{#if (eq system.magazine.type "mental")}}
+                            <div class="grid-span-2 flexrow flex-group-center">
+                                <input type="text" class="flex3" value="{{@root.system.ml.value}}" data-dtype="Number" readonly/>
+                                <span>/</span>
+                                <input type="text" class="flex3" value="{{@root.system.ml.max}}" data-dtype="Number" readonly/>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <ol class="grid-span-7 items-list flex-group-center">
+                        {{#each item.system.actions}}
+                        {{#if this.active}}
+                        {{#if (eq this.type "utility")}}
+                        <li class="item flexrow">
+                            <a class="rollable resource-label" data-roll="3d6{{this.mods.checkTotal}}" data-label="{{../name}}, {{this.name}} Check: {{this.check.flavor}}" data-tooltip="Attack Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}}, {{this.name}} Check: {{this.effect.flavor}} damage roll" data-tooltip="Damage Roll">{{this.mods.effectTotal}}</a>
+                            <span>{{this.mods.cpAmmoLabel}}</span>
+                        </li>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </fieldset>            
+        </li>
+        {{/each}}
+    </ol>    
+</fieldset>

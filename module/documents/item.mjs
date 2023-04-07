@@ -73,22 +73,22 @@ export class OpsItem extends Item {
   }
   _prepareMagicData(itemData){
     const systemData = itemData.system;
-    systemData.flags.shared=false;
-    systemData.flags.limited=false;
-    systemData.flags.passive=false;
-    switch(systemData.uses.type){
-      case 'shared':
-        systemData.flags.shared=true;
-        systemData.flags.limited=true;
-        break;
-      case 'unlimited':
-        break;
-      case 'limited':
-        systemData.flags.limited=true;
-        break;
-    }
-    if(systemData.mlCost.type=='passive'){
-      systemData.flags.passive=true;
+    // Flag actions as either attack or utility
+    for (let [,a] of Object.entries(systemData.actions)){
+      switch (a.check.type){
+        case 'melee':
+        case 'ranged':
+        case 'otherAttack':
+        case 'noneAttack':
+          a.type = 'attack'
+          break;
+        case 'skill':
+        case 'generic':
+        case 'otherUtility':
+        case 'noneUtility':
+          a.type='utility';
+          break;
+      }
     }
   }
 
@@ -141,7 +141,7 @@ export class OpsItem extends Item {
           ammoLabel = 'ML';
         }
         else{
-          ammoLabel = `Charge${mods.ammo!=0?'s':''}`;
+          ammoLabel = `Charge${mods.ammo!=1?'s':''}`;
         }
         break;
     }

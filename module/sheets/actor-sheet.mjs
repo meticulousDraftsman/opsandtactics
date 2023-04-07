@@ -31,7 +31,9 @@ export class OpsActorSheet extends ActorSheet {
     will: true,
     weapons: false,
     objectAttacks: false,
+    magicAttacks:false,
     objectUtility: false,
+    magicUtility:false,
     resources: true,
     Loose: false,
     Worn: false,
@@ -101,13 +103,18 @@ export class OpsActorSheet extends ActorSheet {
       {value:5,label:'+5 Init, -15 CP and Atk'}
     ]
     // Calculate ML usage
-    systemData.magic.psion=0;
-    if(systemData.magic.psionFocus) systemData.magic.psion = (2*systemData.stats.level.value)+25;
-    systemData.magic.recipe = ((3*systemData.stats.level.value)+3)*systemData.magic.memorized;
-    systemData.ml.value = systemData.magic.psion + systemData.magic.recipe + systemData.magic.incant;
-    for (let i of context.magic){
-      if(i.system.active && i.system.flags.passive) systemData.ml.value += i.system.mlCost.value;
+    systemData.ml.psion=0;
+    if(systemData.magic.psionFocus) systemData.ml.psion = (2*systemData.stats.level.value)+25;
+    systemData.ml.recipe = ((3*systemData.stats.level.value)+3)*systemData.magic.memorized;
+    systemData.ml.object = 0;
+    for (let i of context.items){
+      if (hasProperty(i,'system.gear.resources')){
+        for (let [,r] of Object.entries(i.system.gear.resources)){
+          if (r.type==='magic' && r.value>0) systemData.ml.object += r.ml;
+        }
+      }
     }
+    systemData.ml.value = systemData.ml.psion + systemData.ml.recipe +systemData.ml.object + systemData.magic.incant;
   }
   
 
@@ -158,7 +165,8 @@ export class OpsActorSheet extends ActorSheet {
     let gear = [];
     let gearFail = [];
     const traits = [];
-    const magic = [];
+    const attackMagic = [];
+    const utilityMagic = [];
     const resObjects = {
       consumable: {
         label: 'Consumable',
@@ -229,88 +237,23 @@ export class OpsActorSheet extends ActorSheet {
       if (i.type === 'feature') {
         traits.push(i);
       }
-      // Append to magic.
+      // Append to magics.
       if (i.type === 'magic') {
-        i.system.flags.shared=false;
-        i.system.flags.limited=false;
-        i.system.flags.passive=false;
-        switch(i.system.uses.type){
-          case 'shared':
-            i.system.flags.shared=true;
-            i.system.flags.limited=true;
-            break;
-          case 'unlimited':
-            break;
-          case 'limited':
-            i.system.flags.limited=true;
-            break;
+        if (i.system.magazine.type==='external' && i.system.magazine.source){
+          let dualID = i.system.magazine.source.split(',')
+          let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
+          i.system.magazine.value = getProperty(loadedMag,`${dualID[1]}.value`);
+          i.system.magazine.max = getProperty(loadedMag,`${dualID[1]}.max`);  
         }
-        if(i.system.mlCost.type=='passive'){
-          i.system.flags.passive=true;
+        if(!isEmpty(getProperty(i,'system.actions'))){
+          let attackFlag = false;
+          for (let [,a] of Object.entries(i.system.actions)){
+            a.mods = context.actor.items.get(i._id).actionSum(a);
+            if (a.type==='attack' && a.active) attackFlag = true;
+          }
+          if (attackFlag) attackMagic.push(i);
         }
-
-        if(i.system.flags.shared){
-          if(i.system.uses.shared.source){
-            let usageSource = context.items.filter(item => item._id == i.system.uses.shared.source)[0];
-            i.system.uses.shared.value = usageSource.system.uses.value;
-            i.system.uses.shared.max = usageSource.system.uses.max;
-          }         
-          
-        }
-        if(i.system.action.type=='attack'){
-          i.system.action.mods = `${context.system.stats.bab.value}`
-        }
-        else{
-          i.system.action.mods = "";
-        }
-        if(i.system.effect.type=='attack'){
-          i.system.effect.mods = `${context.system.stats.bab.value}`
-        }
-        else{
-          i.system.effect.mods = "";
-        }
-        switch (i.system.action.ability){
-          case 'foc':
-          case 'pow':
-            i.system.action.mods += '+' + context.system.abilities.str[i.system.action.ability];
-            break;
-          case 'mrk':
-          case 'agi':
-            i.system.action.mods += '+' + context.system.abilities.dex[i.system.action.ability];
-          case '':
-            break;
-          default:
-            i.system.action.mods += '+' + context.system.abilities[i.system.action.ability].mod;  
-        }
-        switch (i.system.effect.ability){
-          case 'foc':
-          case 'pow':
-            i.system.effect.mods += '+' + context.system.abilities.str[i.system.action.ability];
-            break;
-          case 'mrk':
-          case 'agi':
-            i.system.effect.mods += '+' + context.system.abilities.dex[i.system.action.ability];
-          case '':
-            break;
-          default:
-            i.system.effect.mods += '+' + context.system.abilities[i.system.action.ability].mod;  
-        }
-        if(i.system.action.misc!=""){
-          i.system.action.mods += '+' + i.system.action.misc;
-        }
-        if(i.system.effect.misc!=""){
-          i.system.effect.mods += '+' + i.system.effect.misc;
-        }
-
-
-        //console.debug(i);
-        //i.system.action.mods = ""
-        //if(i.system.action.ability!="") i.system.action.mods = context.system.abilites[i.system.action.ability].mod
-        //if(i.system.action.misc!="") i.system.action.mods = `${i.system.action.mods}+${i.system.action.misc}`;
-        //i.system.effect.mods = ""
-        //if(i.system.effect.ability!="") i.system.effect.mods = context.system.abilites[i.system.effect.ability].mod
-        //if(i.system.effect.misc!="") i.system.effect.mods = `${i.system.effect.mods}+${i.system.effect.misc}`;
-        magic.push(i);
+        utilityMagic.push(i);
       }
 
       // Append to objects-with-resources
@@ -319,11 +262,12 @@ export class OpsActorSheet extends ActorSheet {
           let tempRes = res;
           tempRes.name = `${i.name}${res.name?`: ${res.name}`:''}`
           tempRes.id = `${i._id},system.gear.resources.${key}`
+          tempRes.itemId = i._id;
           resObjects[res.type].entries.push(tempRes)
         }
       }
       // Append to objects-with-attacks and objects-with utility
-      if(!isEmpty(getProperty(i,'system.actions'))){
+      if(!isEmpty(getProperty(i,'system.actions')) && i.type==='object'){
         if (i.system.magazine.type != 'unlimited'){
           if(i.system.magazine.source){
             let dualID = i.system.magazine.source.split(',')
@@ -333,16 +277,13 @@ export class OpsActorSheet extends ActorSheet {
           }
         }
         let attackFlag = false;
-        let utilityFlag = false;
         for (let [,a] of Object.entries(i.system.actions)){
           a.mods = context.actor.items.get(i._id).actionSum(a);
-          if (a.type==='attack') attackFlag = true;
-          if (a.type==='utility') utilityFlag = true;
+          if (a.type==='attack' && a.active) attackFlag = true;
         }
         if (attackFlag) attackObjects.push(i);
-        if (utilityFlag) utilityObjects.push(i);
+        utilityObjects.push(i);
       }
-      
     }
 
     // Purge Empty Armor Layers
@@ -416,7 +357,8 @@ export class OpsActorSheet extends ActorSheet {
     context.gear = gear;
     context.nestedGear = nestedGear;
     context.traits = traits;
-    context.magic = magic;
+    context.utilityMagic = utilityMagic;
+    context.attackMagic = attackMagic;
     context.resObjects = resObjects;
     context.attackObjects = attackObjects;
     context.utilityObjects = utilityObjects;
