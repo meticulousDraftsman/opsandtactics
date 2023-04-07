@@ -17,13 +17,13 @@ class Health extends foundry.abstract.DataModel {
                 value: new field.NumberField({initial:6,min:0}),
                 formula: new field.StringField({initial:"(3+@con.mod)*(@lvl+1)"}),
                 mods: new field.EmbeddedDataField(Mods),
-                temp: new field.NumberField({initial:0})
             }),
             chp: new field.SchemaField({
                 value: new field.NumberField({initial:12}),
                 formula: new field.StringField({initial:"@con.score+2"}),
                 mods: new field.EmbeddedDataField(Mods)
             }),
+            temp: new field.NumberField({initial:0}),
             notes: new field.StringField({initial:""}),
             bleed: new field.NumberField({initial:0}),
             incoming: new field.NumberField({initial:0}),

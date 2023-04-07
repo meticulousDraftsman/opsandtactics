@@ -5,77 +5,57 @@
     <div class="flexrow">
       <div class="profile-img flex-group-center">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
-        <label for="system.level.value" class="">Level {{system.stats.level.value}}</label>
-        <label for="system.level.xp.value" class="">{{system.stats.level.xp.needed}}</label>
+        <div>Level {{system.stats.level.value}}</div>
+        <span>{{system.stats.level.xp.needed}}</span>
       </div>
       <div class="header-fields">
         <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
         {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
         use both the "grid" and "grid-Ncol" class where "N" can be any number
         from 1 to 12 and will create that number of columns.  --}}
-        <div class="resource resource-label flex-group-center grid grid-8col">
-          <div class="grid-span-2">Extended HP</div>
-          <div>Temp HP</div>
-          <div class="grid-span-2">Combat Points</div>
-          <div>Temp CP</div>
-          <div>CP Loss</div>
-          <div>Defense</div>
-        </div>
-        <div class="resource flex-group-center grid grid-8col">
-          <div class="grid-span-2 flexrow">
-            <input type="text" name="system.health.xhp.value" value="{{system.health.xhp.value}}" data-dtype="Number"/>
-            <span class="flex0">/</span>
-            <input type="text" name="system.health.xhp.max" value="{{system.health.xhp.max}}" data-dtype="Number" readonly/>
-          </div>
-          <div>
-            <input type="text" name="system.health.xhp.temp" value="{{system.health.xhp.temp}}" data-dtype="Number"/>
-          </div>
-          <div class="grid-span-2 flexrow">
-            <input type="text" name="system.cp.value" value="{{system.cp.value}}" data-dtype="Number"/>
-            <span class="flex0">/</span>
-            <input type="text" name="system.cp.max" value="{{system.cp.max}}" data-dtype="Number"/>
-          </div>
-          <div>
-            <input type="text" name="system.cp.temp" value="{{system.cp.temp}}" data-dtype="Number"/>
-          </div>
-          <div>
-            <input type="text" value="{{system.cp.armor.value}}" data-dtype="Number" readonly/>
-          </div>
-          <div>
-            <input type="text" value="{{system.def.value}}" data-dtype="Number" readonly/>
-          </div>
-        </div>
-        <div class="resource resource-label flex-group-center grid grid-8col">
-          <div class="grid-span-2">Core Hit Points</div>
-          <div>Initiative</div>
-          <div class="grid-span-2">Mental Limit</div>
-          <div>Temp ML</div>
-          <div>Flatfooted</div>
-          <div>Touch</div>
-        </div>
-        <div class="resource flex-group-center grid grid-8col">
-          <div class="grid-span-2 flexrow">
-            <input type="text" name="system.health.chp.value" value="{{system.health.chp.value}}" data-dtype="Number"/>
-            <span class="flex0">/</span>
-            <input type="text" name="system.health.chp.max" value="{{system.health.chp.max}}" data-dtype="Number" readonly/>
-          </div>
-          <div>
-            <input type="text" value="{{system.stats.init.value}}" data-dtype="Number" readonly/>
-          </div>
-          <div class="grid-span-2 flexrow">
-            <input type="text"value="{{system.ml.value}}" data-dtype="Number" readonly/>
-            <span class="flex0">/</span>
-            <input type="text" name="system.ml.max" value="{{system.ml.max}}" data-dtype="Number" readonly/>
-          </div>
-          <div>
-            <input type="text" value="{{system.ml.temp}}" data-dtype="Number"/>
-          </div>
-          <div>
-            <input type="text" value="{{system.def.flat}}" data-dtype="Number" readonly/>
-          </div>
-          <div>
-            <input type="text" value="{{system.def.touch}}" data-dtype="Number" readonly/>
-          </div>
+        <div class="grid grid-3col">
+          <fieldset>
+            <div class="grid grid-3col flex-group-center">
+              <span>XHP</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3" type="text" name="system.health.xhp.value" value="{{system.health.xhp.value}}" data-dtype="Number">
+                <span>/</span>
+                <input class="flex3" type="text" value="{{system.health.xhp.max}}" readonly/>
+              </div>
+              <span>CHP</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3" type="text" name="system.health.chp.value" value="{{system.health.chp.value}}" data-dtype="Number">
+                <span>/</span>
+                <input class="flex3" type="text" value="{{system.health.chp.max}}" readonly/>
+              </div>
+              <span>Temp</span>
+              <input class="grid-span-2" type="text" name="system.health.temp" value="{{system.health.temp}}" data-dtype="Number">
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid grid-3col flex-group-center">
+              <span>CP</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3" type="text" name="system.cp.value" value="{{system.cp.value}}" data-dtype="Number">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.cp.max" value="{{system.cp.max}}" data-dtype="Number">
+              </div>
+              <span>Temp</span>
+              <input class="grid-span-2" type="text" name="system.cp.temp" value="{{system.cp.temp}}" data-dtype="Number">              
+              <span>Loss</span>
+              <input class="grid-span-2" type="text" value="{{system.cp.armor.value}} CP to move" readonly>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid grid-3col flex-group-center">
+              <span class="grid-span-2">Defense</span>
+              <input type="text" value="{{system.def.value}}" readonly>
+              <span class="grid-span-2">Flat-Footed</span>
+              <input type="text" value="{{system.def.flat}}" readonly>
+              <span class="grid-span-2">Touch</span>
+              <input type="text" value="{{system.def.touch}}" readonly>
+            </div>
+          </fieldset>
         </div>
       </div>
     </div>
