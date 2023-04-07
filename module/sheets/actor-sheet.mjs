@@ -324,6 +324,14 @@ export class OpsActorSheet extends ActorSheet {
       }
       // Append to objects-with-attacks and objects-with utility
       if(!isEmpty(getProperty(i,'system.actions'))){
+        if (i.system.magazine.type != 'unlimited'){
+          if(i.system.magazine.source){
+            let dualID = i.system.magazine.source.split(',')
+            let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
+            i.system.magazine.value = getProperty(loadedMag,`${dualID[1]}.value`);
+            i.system.magazine.max = getProperty(loadedMag,`${dualID[1]}.max`);  
+          }
+        }
         let attackFlag = false;
         let utilityFlag = false;
         for (let [,a] of Object.entries(i.system.actions)){

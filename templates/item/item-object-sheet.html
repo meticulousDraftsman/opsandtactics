@@ -31,7 +31,7 @@
           {{/select}}
           </select>
           {{#unless (eq system.magazine.type "unlimited")}}
-          <select class="flex-group-center" name="system.magazine.source" data-dtype="String">
+          <select class="flex-group-center grid-span-4" name="system.magazine.source" data-dtype="String">
             {{selectOptions magazines selected=system.magazine.source nameAttr="id" labelAttr="label"}}
           </select>
           {{/unless}}

@@ -147,6 +147,22 @@ export class OpsItemSheet extends ItemSheet {
       if(actor){
         for (let i of actor.items){
           if (i.type==='skill') sourceSkills.push({label:i.name,id:i.id})
+          if (itemData.system.magazine.type === 'external'){
+            if (i.id!=itemData.id){
+              if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
+              if (getProperty(i,'system.gear.resources')){
+                for (let [key,r] of Object.entries(i.system.gear.resources)){
+                  if (r.type==='consumable' && r.available) magazines.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},system.gear.resources.${key}`});
+                }
+              }
+            }
+          }
+        }
+      }
+      if (itemData.system.magazine.type === 'internal'){
+        magazines.push({label:`${itemData.name} x${itemData.system.gear.quantity.value}`,id:`${itemData.id},system.gear.quantity`});
+        for (let [key,r] of Object.entries(itemData.system.gear.resources)){
+          if (r.type==='consumable') magazines.push({label:`${r.name?r.name:itemData.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${itemData.id},system.gear.resources.${key}`});
         }
       }
     }
@@ -186,9 +202,11 @@ export class OpsItemSheet extends ItemSheet {
     if (itemData.type === 'weapon'){
       context.magazines = magazines;
       context.importableMods = importableMods;
-      //console.debug(importableMods)
     } 
-    if (itemData.type === 'object') context.sourceSkills = sourceSkills;
+    if (itemData.type === 'object'){
+      context.sourceSkills = sourceSkills;
+      context.magazines = magazines;
+    }
     if (itemData.type === 'magic') context.sourceMagics = sourceMagics;
     //context.otherSkills = otherSkills;
     //context.abilityMod = abilityMod;
