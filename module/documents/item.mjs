@@ -134,14 +134,14 @@ export class OpsItem extends Item {
         }
         break;
       case 'object':
-        ammoLabel = 'Uses';
+        ammoLabel = `Use${mods.ammo!=1?'s':''}`;
         break;
       case 'magic':
         if (this.system.magazine.type==='mental'){
           ammoLabel = 'ML';
         }
         else{
-          ammoLabel = 'Charges';
+          ammoLabel = `Charge${mods.ammo!=0?'s':''}`;
         }
         break;
     }
