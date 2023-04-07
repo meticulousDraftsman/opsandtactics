@@ -4,10 +4,10 @@
     </legend>
     <ol class="items-list weapons {{#if collapses.weapons}}collapse{{/if}}">
         {{#each weapons as |item id|}}
-        <li class="item" data-item-id="{{item._id}}">
-            <fieldset>
-                <legend>
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item">{{item.name}} <i class="fas fa-edit"></i></a>
+        <li class="item " data-item-id="{{item._id}}">
+            <fieldset class="action-item">
+                <legend class="action-legend">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                 </legend>
                 <div class="grid grid-5col">
                     <div class="grid-span-2">
@@ -73,9 +73,9 @@
     <ol class="items-list objectAttacks {{#if collapses.objectAttacks}}collapse{{/if}}">
         {{#each attackObjects as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
-            <fieldset>
-                <legend>
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item">{{item.name}} <i class="fas fa-edit"></i></a>
+            <fieldset class="action-item">
+                <legend class="action-legend">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                 </legend>
                 <div class="grid grid-5col">
                     <div class="grid-span-2">
@@ -120,9 +120,9 @@
     <ol class="items-list magicAttacks {{#if collapses.magicAttacks}}collapse{{/if}}">
         {{#each attackMagic as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
-            <fieldset>
-                <legend>
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item">{{item.name}} <i class="fas fa-edit"></i></a>
+            <fieldset class="action-item">
+                <legend class="action-legend">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                 </legend>
                 <div class="grid grid-5col">
                     <div class="grid-span-2">

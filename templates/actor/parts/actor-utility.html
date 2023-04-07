@@ -37,11 +37,13 @@
         {{#each resObjects}}
         {{#if this.entries.length}}
         <fieldset>
-            <legend>{{this.label}} </legend>
+            <legend>
+                {{this.label}} 
+            </legend>
             <ol class="items-list">  
             {{#each this.entries}}
                 <li class="grid grid-10col flex-group-center">
-                    <a class="item-control item-edit grid-span-5" data-item-id="{{this.itemId}}">{{this.name}} <i class="fas fa-edit"></i></a>
+                    <a class="item-control item-edit grid-span-5 flex-group-left" data-item-id="{{this.itemId}}"><i class="fas fa-edit"></i> {{this.name}}</a>
                     {{#if (eq this.type "consumable")}}
                     <div class="grid-span-2 flexrow flex-group-center">
                         <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
@@ -91,9 +93,9 @@
     <ol class="items-list objectUtility {{#if collapses.objectUtility}}collapse{{/if}}">
         {{#each utilityObjects as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
-            <fieldset>
-                <legend>
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item">{{item.name}} <i class="fas fa-edit"></i></a>
+            <fieldset class="action-item">
+                <legend class="action-legend">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                 </legend>
                 <div class="grid grid-10col">
                     <div class="grid-span-3">
@@ -136,9 +138,9 @@
     <ol class="items-list magicUtility {{#if collapses.magicUtility}}collapse{{/if}}">
         {{#each utilityMagic as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
-            <fieldset>
-                <legend>
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item">{{item.name}} <i class="fas fa-edit"></i></a>
+            <fieldset class="action-item">
+                <legend class="action-legend">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                 </legend>
                 <div class="grid grid-10col">
                     <div class="grid-span-3">

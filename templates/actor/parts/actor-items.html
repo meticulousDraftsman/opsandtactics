@@ -57,7 +57,7 @@
       </div>
       <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
       {{#if item.children.length}}
-      <fieldset class="grid-start-2 grid-span-8">
+      <fieldset class="nested-container grid-start-2 grid-span-8">
         <ol class="items-list flex-group-left">
           {{#each item.children as |item id|}}
           <li class="item grid grid-9col flex-group-left">
@@ -67,7 +67,7 @@
             </div>
             <i class="grid-span-6">{{item.system.gear.location.note}}</i>            
             {{#if item.children.length}}
-            <fieldset class="grid-start-2 grid-span-8">
+            <fieldset class="nested-container grid-start-2 grid-span-8">
               <ol class="items-list flex-group-left">
                 {{#each item.children as |item id|}}
                 <li class="item grid grid-9col flex-group-left">
@@ -77,7 +77,7 @@
                   </div>
                   <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
                   {{#if item.children.length}}
-                  <fieldset class="grid-start-2 grid-span-8">
+                  <fieldset class="nested-container grid-start-2 grid-span-8">
                     <ol class="items-list flex-group-left">
                       {{#each item.children as |item id|}}
                       <li class="item grid grid-9col flex-group-left">

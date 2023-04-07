@@ -244,10 +244,20 @@
 }
 
 .opsandtactics .skill > fieldset,
-.opsandtactics .save{
+.opsandtactics .save,
+.opsandtactics .action-item{
   background: rgba(0, 0, 0, 0.05);
   border-style: outset;
   border-radius: 3px;
+}
+
+.opsandtactics .action-legend{
+  background:#dad8cc;
+  border-style:groove;
+}
+
+.opsandtactics .nested-container{
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .opsandtactics .collapse{

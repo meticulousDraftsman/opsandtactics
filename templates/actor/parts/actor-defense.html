@@ -5,17 +5,17 @@
     </legend>
     <div class="grid grid-4col flex-group-center">
       <span>Movement</span>
-      <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number"/>
+      <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number" placeholder="+1/5' over 20'"/>
       <span>Dodge</span>
-      <input type="text" name="system.def.dodge" value="{{system.def.dodge}}" data-dtype="Number"/>
+      <input type="text" name="system.def.dodge" value="{{system.def.dodge}}" data-dtype="Number" placeholder="0"/>
       <span>Miscellaneous</span>
-      <input type="text" name="system.def.misc" value="{{system.def.misc}}" data-dtype="Number"/>
+      <input type="text" name="system.def.misc" value="{{system.def.misc}}" data-dtype="Number" placeholder="0"/>
       <span>Size</span>
-      <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number"/>
+      <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number" placeholder="0"/>
       <span>Equipment</span>
       <input type="text" value="{{system.def.equip.value}}" data-dtype="Number" readonly/>
       <span>Equip Misc</span>
-      <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number"/>
+      <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number" placeholder="0"/>
     </div>
   </fieldset>
   <fieldset>
@@ -63,11 +63,8 @@
   <ol class="items-list flex-group-center">
     {{#each this.items}}
     <li class="item grid grid-8col flex-group-center">
-      <div class="grid-span-2">
-        <div class="grid grid-10col flex-group-center">
-          <span class="grid-span-9">{{this.name}}</span>
-          <a class="item-control item-edit" data-item-id="{{this._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i></a>
-        </div>
+      <div class="grid-span-2 flex-group-left">
+          <a class="item-control item-edit" data-item-id="{{this._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{this.name}}</a>
       </div>
       <select class="grid-span-4 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" data-tooltip="Select Damage Reduction" value="{{this.activeDR}}" data-dtype="Number">
         {{#select this.system.activeDR}}

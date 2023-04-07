@@ -18,6 +18,7 @@ export class OpsItem extends Item {
     
     const itemData = this;
     const systemData = itemData.system;
+    console.debug(itemData)
     if (itemData.type === 'skill') this._prepareSkillData(itemData);
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'object') this._prepareObjectData(itemData);
