@@ -200,7 +200,7 @@ export class OpsActorSheet extends ActorSheet {
       // Append weapons.
       if (i.type === 'weapon') {
         for (let [,a] of Object.entries(i.system.attacks)){
-          a.mods = context.actor.items.get(i._id).attackSum(a);
+          a.mods = context.actor.items.get(i._id).actionSum(a);
         }
         if(i.system.magazine.type != 'internal'){
           if(i.system.magazine.loaded.source){
@@ -326,10 +326,8 @@ export class OpsActorSheet extends ActorSheet {
         let attackFlag = false;
         let utilityFlag = false;
         for (let [,a] of Object.entries(i.system.actions)){
-          if (a.type==='attack'){
-            attackFlag = true;
-            a.mods = context.actor.items.get(i._id).attackSum(a);
-          }
+          a.mods = context.actor.items.get(i._id).actionSum(a);
+          if (a.type==='attack') attackFlag = true;
           if (a.type==='utility') utilityFlag = true;
         }
         if (attackFlag) attackObjects.push(i);

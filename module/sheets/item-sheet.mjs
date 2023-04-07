@@ -59,10 +59,6 @@ export class OpsItemSheet extends ItemSheet {
     if (itemData.type === 'weapon'){
       if(actor){
         for(let i of actor.items){
-          // if(i.type === 'magazine' && i.system.magazine.type == itemData.system.magazine.type){
-          //   i.label = actor.items.get(i._id).labelMake();
-          //   magazines.push(i);
-          // }
           switch (itemData.system.magazine.type){
             case 'coolant':
               if (getProperty(i,'system.gear.resources')){
@@ -81,7 +77,6 @@ export class OpsItemSheet extends ItemSheet {
               break;
           }
         }
-        //console.debug(magazines)
       }
 
       let worldWepMods = game.journal.filter(entry => entry.name.includes('Weapon Mods'));
@@ -144,7 +139,7 @@ export class OpsItemSheet extends ItemSheet {
       }
 
       for(let [,a] of Object.entries(itemData.system.attacks)){
-        a.mods = context.item.attackSum(a);
+        a.mods = context.item.actionSum(a);
       }
     }
     const sourceSkills = [{label:"None",id:""}];

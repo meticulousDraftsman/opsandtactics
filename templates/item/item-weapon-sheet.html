@@ -126,10 +126,6 @@
         </div>
 
         <div class="tab" data-group="primary" data-tab="attacks">
-            <div class="flexrow">
-
-                
-            </div>
             <fieldset>
                 <legend class="resource-label">
                     Mod Selection for Attacks <a class="item-control sub-create" data-target-name="attacks" title="Add Attack"><i class="fas fa-plus"></i></a>
@@ -168,7 +164,7 @@
                     {{#if this.display}}
                     <li class="item grid grid-9col flex-group-center">
                         {{#unless (eq this.check.type "noneAttack")}}    
-                        <button class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.hitTotal}}</button>
+                        <button class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.checkTotal}}</button>
                         <input class="grid-span-3" name="system.attacks.{{@key}}.check.inherent" value="{{this.check.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
                         <select class="grid-span-3 flex-group-center" name="system.attacks.{{@key}}.check.ability" data-dtype="String">
                             {{#select this.check.ability}}
@@ -205,7 +201,7 @@
                         <input class="grid-span-9 flex-group-center" name="system.attacks{{@key}}.check.flavor" value="{{this.check.flavor}}" type="text" data-dtype="String" placeholder="Attack roll flavor">
                     </li>
                     <li class="item grid grid-9col flex-group-center">
-                        <button class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.damageTotal}}</button>
+                        <button class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.effectTotal}}</button>
                         <input class="grid-span-3" name="system.attacks.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
                         <div class="grid-span-3 flexrow flex-group-center">
                             <select class="flex3 flex-group-center" name="system.attacks.{{@key}}.effect.ability" data-dtype="String">

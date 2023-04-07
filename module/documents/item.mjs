@@ -32,6 +32,7 @@ export class OpsItem extends Item {
     const systemData = itemData.system;
     // Map weapon mods values to attacks
      for (let [,a] of Object.entries(systemData.attacks)){
+      a.type = 'attack';
        for (let [key,entry] of Object.entries(a.check.mods)){
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
         entry.value = systemData.weaponMods?.[key]?.hit ?? null;
@@ -91,74 +92,37 @@ export class OpsItem extends Item {
     }
   }
 
-  /**
-   * Sums the impacts of an attack's modifiers, including factors from an actor if present
-   * @param {Object} sourceAttack The attack whose modifiers are being tallied
-   * @returns {Object} The total to-hit, hit modifier, damage terms, combined damage string, recoil penalty and reduction, and combat point cost
-   */
-  attackSum(sourceAttack){
+  actionSum(sourceAction){
     const mods = {
-      hitNum: Number(sourceAttack.check.inherent)?Number(sourceAttack.check.inherent):0,
-      hitParts: [Number(sourceAttack.check.inherent)?null:sourceAttack.check.inherent],
-      damageParts: [sourceAttack.effect.inherent || null],
-      recoil: null,
-      reduction: null,
-      cp: sourceAttack.cp.inherent
+      checkNum: 0,
+      checkParts: [],
+      effectParts: [],
+      cp: null,
+      ammo: null
     };
+    // Handle Effect
+    mods.effectParts.push(sourceAction.effect.inherent?sourceAction.effect.inherent:null);
     if (this.actor){
-      let abilityScale = sourceAttack.effect?.scaleAbility || 1;
-      mods.hitNum += this.actor.system.stats.bab.value + this.actor.abilityMod(sourceAttack.check.ability);
-      mods.damageParts.push(Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale) ? `${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale)>0 ? '+' : ''}${Math.floor(this.actor.abilityMod(sourceAttack.effect.ability)*abilityScale)}` : null);
+      let abilityScale = sourceAction.effect?.scaleAbility || 1;
+      let scaledAbility = Math.floor(this.actor.abilityMod(sourceAction.effect.ability) * abilityScale);
+      mods.effectParts.push(scaledAbility ? (scaledAbility>=0 ? `+${scaledAbility}` : `${scaledAbility}`) : null);
     }
-    if (hasProperty(sourceAttack,'recoil')){
-      for (let [,h] of Object.entries(sourceAttack.check.mods)){
-        if(Number.isNaN(Number(h.value))){
-          mods.hitParts.push(h.value ? `${h.value.charAt(0) != '-' ? '+' : ''}${h.value}`: null);
-        }
-        else {
-          mods.hitNum += Number(h.value);
-        }
-      }
-      for (let [,d] of Object.entries(sourceAttack.effect.mods)){
-        mods.damageParts.push(d.value ? `${d.value.charAt(0) != '-' ? '+' : ''}${d.value}` : null);
-      }
-      if (sourceAttack.recoil.inherent!=null){
-        mods.recoil = Math.min(sourceAttack?.recoil.inherent,0)
-        mods.reduction = Math.max(sourceAttack?.recoil.inherent,0) //Just in case there's some weird attack that has inherent recoil reduction
-      }
-      for (let [,r] of Object.entries(sourceAttack.recoil.mods)){
-        if (r.value > 0){
-          mods.reduction += r.value?r.value:null;
-        }
-        else {
-          mods.recoil += r.value?r.value:null;
-        }
-      }
-      if (this.actor && mods.reduction!=null && mods.recoil!=null){
-        if (this.actor.system.stats.recoil.value>0){
-          mods.reduction += this.actor.system.stats.recoil.value;
-        }
-        else {
-          mods.recoil += this.actor.system.stats.recoil.value;
-        }
-      }
-      for (let [,c] of Object.entries(sourceAttack.cp.mods)){
-        mods.cp += c.value;
+    if (hasProperty(sourceAction,'effect.mods')){
+      for (let [,e] of Object.entries(sourceAction.effect.mods)){
+        mods.effectParts.push(e.value ? (e.value != '-' ? `+${e.value}` : e.value) : null);
       }
     }
-    if (sourceAttack.check.type === 'noneAttack'){
-      mods.hitTotal = null;
+    mods.effectTotal = mods.effectParts.filter(part => part != null).join('') || '0';
+    if (mods.effectTotal.charAt(0) == '+') mods.effectTotal = mods.effectTotal.substring(1);
+    // Handle CP
+    mods.cp = sourceAction.cp.inherent?sourceAction.cp.inherent:null;
+    if (hasProperty(sourceAction,'cp.mods')){
+      for (let [,p] of Object.entries(sourceAction.cp.mods)){
+        mods.cp += p.value;
+      }
     }
-    else{
-      mods.hitNum += Math.min(mods.recoil+mods.reduction,0);
-      mods.hitParts = mods.hitParts.filter(part => part != null);
-      mods.hitParts = mods.hitParts.join('') || null;
-      if(mods.hitParts!=null && mods.hitParts.charAt(0) != '+' && mods.hitParts.charAt(0) != '-') mods.hitParts = `+${mods.hitParts}`;
-      mods.hitTotal = `${mods.hitNum>=0?'+':''}${mods.hitNum}${mods.hitParts?mods.hitParts:''}`;
-    }
-    mods.damageParts = mods.damageParts.filter(part => part != null);
-    mods.damageTotal = mods.damageParts.join('') || '0';
-    if (mods.damageTotal.charAt(0) == '+') mods.damageTotal = mods.damageTotal.substring(1);
+    // Handle Ammo and CP/Ammo Label
+    mods.ammo = sourceAction.ammo?sourceAction.ammo:null;
     let ammoLabel;
     switch (this.type){
       case 'weapon':
@@ -173,10 +137,91 @@ export class OpsItem extends Item {
         ammoLabel = 'Uses';
         break;
       case 'magic':
-        ammoLabel = 'Charges';
+        if (this.system.magazine.type==='mental'){
+          ammoLabel = 'ML';
+        }
+        else{
+          ammoLabel = 'Charges';
+        }
         break;
     }
-    mods.cpAmmoLabel = [(mods.cp?`${mods.cp} CP`:null),(sourceAttack.ammo?`${sourceAttack.ammo} ${ammoLabel}`:null)].filter(part => part != null).join(', ');
+    mods.cpAmmoLabel = [(mods.cp?`${mods.cp} CP`:null),(mods.ammo?`${mods.ammo} ${ammoLabel}`:null)].filter(part => part != null).join(', ');
+    // Handle Recoil
+    if (hasProperty(sourceAction,'recoil')){
+      mods.recoil = null;
+      mods.reduction = null;
+      if (sourceAction.recoil.inherent != null){
+        mods.recoil = Math.min(sourceAction.recoil.inherent,0);
+        mods.reduction = Math.max(sourceAction.recoil.inherent,0);
+      }
+      for (let [,r] of Object.entries(sourceAction.recoil.mods)){
+        if (r.value > 0){
+          mods.reduction += r.value?r.value:null;
+        }
+        else if (r.value < 0){
+          mods.recoil += r.value?r.value:null;
+        }
+      }
+      if (this.actor && (mods.recoil!=null || mods.reduction!=null)){
+        if (this.actor.system.stats.recoil.value>0){
+          mods.reduction += this.actor.system.stats.recoil.value;
+        }
+        else if (this.actor.system.stats.recoil.value<0){
+          mods.recoil += this.actor.system.stats.recoil.value;
+        }
+      }
+    }
+    // Handle Check (general)
+    mods.checkNum = Number.isNaN(Number(sourceAction.check.inherent))?0:Number(sourceAction.check.inherent)
+    mods.checkParts.push(Number.isNaN(Number(sourceAction.check.inherent))?sourceAction.check.inherent:null)
+    if (this.actor) mods.checkNum += this.actor.abilityMod(sourceAction.check.ability);
+    if (hasProperty(sourceAction,'check.mods')){
+      for (let [,c] of Object.entries(sourceAction.check.mods)){
+        if (Number.isNaN(Number(c.value))){
+          mods.checkParts.push(c.value?(c.value.charAt(0) != '-'? `+${c.value}`:`${c.value}`):null);
+        }
+        else {
+          mods.checkNum += Number(c.value);
+        }
+      }
+    }
+    // Attacks add BAB, and recoil if present
+    if (sourceAction.check.type==='melee' || sourceAction.check.type==='ranged' || sourceAction.check.type==='otherAttack'){
+      if (this.actor) mods.checkNum += this.actor.system.stats.bab.value;
+      if (hasProperty(sourceAction,'recoil')) mods.checkNum += Math.min(mods.recoil+mods.reduction,0);
+    }
+    //Totals
+    // Message Cards have no check modifier
+    if (sourceAction.check.type==='noneAttack' || sourceAction.check.type==='noneUtility'){
+      mods.checkTotal = null;
+    }    
+    // Skill rolls just pull the skill modifier
+    else if (sourceAction.check.type==='skill'){
+      if (sourceAction.check.source==''){
+        mods.checkTotal = '+0';
+      }
+      else{
+        let skillMod = this?.actor.items.get(sourceAction.check.source)?.skillSum().total;
+        mods.checkTotal = !Number.isNaN(skillMod)?`${skillMod>=0?'+':''}${skillMod}`:'-404';
+      }
+    }
+    // Utility Rolls add nothing else
+    else {
+      mods.checkParts = mods.checkParts.filter(part => part!= null).join('') || null;
+      if (mods.checkParts!=null && mods.checkParts.charAt(0) != '+' && mods.checkParts.charAt(0) != '-') mods.checkParts = `+${mods.checkParts}`;
+      // If no parts, fall back to number
+      if (mods.checkParts===null){
+        mods.checkTotal = `${mods.checkNum>=0?'+':''}${mods.checkNum}`
+      }
+      // If parts and no number, just use parts
+      else if (mods.checkNum==0){
+        mods.checkTotal = mods.checkParts;
+      }
+      // otherwise combine both
+      else {
+        mods.checkTotal = `${mods.checkNum>=0?'+':''}${mods.checkNum}${mods.checkParts}`;
+      }
+    }
     return mods;
   }
 
