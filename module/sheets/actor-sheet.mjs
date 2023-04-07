@@ -379,9 +379,9 @@ export class OpsActorSheet extends ActorSheet {
     // Apply Incoming Damage to Armor or Hit Points
     html.find('.apply-damage').click(this._onApplyDamage.bind(this));
     // Actor Sheet Rolls
-    html.find('.3d6-roll').click(this._actorRoll.bind(this));   
+    html.find('.ops-roll').click(this._actorRoll.bind(this));   
     // Incantation Mental Limit
-    html.find('.mental-limit').click(this._mentalLimit.bind(this)); 
+    html.find('.incant-regain').click(this._incantRegain.bind(this)); 
      // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
     // Rollable abilities.
@@ -576,14 +576,10 @@ export class OpsActorSheet extends ActorSheet {
     targetProp -= cost;
     await magazine.update({[updateTarget]:targetProp});  
   }
-  async _mentalLimit(event){
+  async _incantRegain(event){
     event.preventDefault();
-    const dataset=event.currentTarget.dataset;
-    let cost = Number(dataset.mlCost);
-    if(cost<0) cost = Math.floor(cost/10);
-    let mlTarget = this.actor.system.magic.incant;
-    mlTarget = Math.max(0,mlTarget+cost);
-    this.actor.update({"system.magic.incant":mlTarget});
+    const updateData = {['system.magic.mlCant']:Math.max((this.actor.system.magic.mlCant - Math.ceil(this.actor.system.ml.max / 10)),0)}
+    this.actor.update(updateData);
   }
 
   /**
