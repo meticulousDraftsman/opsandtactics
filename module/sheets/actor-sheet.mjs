@@ -36,7 +36,8 @@ export class OpsActorSheet extends ActorSheet {
     Loose: false,
     Worn: false,
     Carried: false,
-    Stored: false
+    Stored: false,
+    unfiltered: true
   }
 
   /** @override */
