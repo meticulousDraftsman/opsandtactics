@@ -84,12 +84,13 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             ml: new field.SchemaField({
                 formula: new field.StringField({initial:"((6+@wis.score)*@lvl)+40"}),
                 mods: new field.EmbeddedDataField(Mods),
-                temp: new field.NumberField({initial:0,nullable:false}),
+                temp: new field.NumberField({initial:0}),
             }),
             magic: new field.SchemaField({
                 psionFocus: new field.BooleanField({initial:false}),
-                memorized: new field.NumberField({initial:0}),
-                incant: new field.NumberField({initial:0})
+                memorizedSets: new field.NumberField({initial:0}),
+                mlCant: new field.NumberField({initial:0}),
+                mods: new field.EmbeddedDataField(Mods),
             }),
             abilities: new field.SchemaField({
                 str: new field.SchemaField({

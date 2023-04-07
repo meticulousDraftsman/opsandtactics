@@ -32,9 +32,10 @@ export class OpsActorSheet extends ActorSheet {
     weapons: false,
     objectAttacks: false,
     magicAttacks:false,
+    mental:true,
+    resources: true,    
     objectUtility: false,
     magicUtility:false,
-    resources: true,
     Loose: false,
     Worn: false,
     Carried: false,
@@ -102,19 +103,6 @@ export class OpsActorSheet extends ActorSheet {
       {value:4,label:'+4 Init, -10 CP and Atk'},
       {value:5,label:'+5 Init, -15 CP and Atk'}
     ]
-    // Calculate ML usage
-    systemData.ml.psion=0;
-    if(systemData.magic.psionFocus) systemData.ml.psion = (2*systemData.stats.level.value)+25;
-    systemData.ml.recipe = ((3*systemData.stats.level.value)+3)*systemData.magic.memorized;
-    systemData.ml.object = 0;
-    for (let i of context.items){
-      if (hasProperty(i,'system.gear.resources')){
-        for (let [,r] of Object.entries(i.system.gear.resources)){
-          if (r.type==='magic' && r.value>0) systemData.ml.object += r.ml;
-        }
-      }
-    }
-    systemData.ml.value = systemData.ml.psion + systemData.ml.recipe +systemData.ml.object + systemData.magic.incant;
   }
   
 

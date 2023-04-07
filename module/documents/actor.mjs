@@ -112,7 +112,7 @@ export class OpsActor extends Actor {
     systemData.stats.recoil.value = systemData.abilities.str.score - 10 + systemData.stats.recoil.total;
     // Calculate Personal Capital    
     systemData.wealth.capital.personal.total = (5*(systemData.stats.level.value+1))+systemData.abilities.cha.score;
-    // Calculate Hit Points and Mental Limit
+    // Calculate Hit Points
     const rollData = this.getRollData({deterministic:true});
     try{
       systemData.health.chp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.chp.formula,rollData)) + systemData.health.chp.mods.total;
@@ -122,10 +122,6 @@ export class OpsActor extends Actor {
       systemData.health.xhp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.xhp.formula,rollData)) + systemData.health.xhp.mods.total;
     }
     catch{systemData.health.xhp.max = 0;}
-    try{
-      systemData.ml.max = Roll.safeEval(Roll.replaceFormulaData(systemData.ml.formula,rollData)) + systemData.ml.mods.total;
-    }
-    catch{systemData.ml.max = 0;}
     // Calculate Carrying Capacity
     try{
       systemData.stats.carrying.light = Roll.safeEval(Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData)) + systemData.stats.carrying.mods.total;
@@ -133,6 +129,23 @@ export class OpsActor extends Actor {
     catch{systemData.stats.carrying.light = 0;}
     systemData.stats.carrying.medium = systemData.stats.carrying.light*2;
     systemData.stats.carrying.heavy = systemData.stats.carrying.light*3;
+    // Calculate Mental Limit
+    try{
+      systemData.ml.max = Roll.safeEval(Roll.replaceFormulaData(systemData.ml.formula,rollData)) + systemData.ml.mods.total + systemData.ml.temp;
+    }
+    catch{systemData.ml.max = 0;}
+    systemData.magic.mlPsion = systemData.magic.psionFocus?((2*systemData.stats.level.value)+25):0;
+    systemData.magic.mlRecipe = ((3*systemData.stats.level.value)+3)*systemData.magic.memorizedSets;
+    systemData.magic.mlObject = 0;
+    for (let i of this.items){
+      if (hasProperty(i,'system.gear.resources')){
+        for (let [,r] of Object.entries(i.system.gear.resources)){
+          if (r.type==='magic' && r.value>0) systemData.magic.mlObject += r.ml;
+        }
+      }
+    }
+    systemData.magic.mlMisc = systemData.magic.mods.total
+    systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + +systemData.magic.mlCant + systemData.magic.mlMisc;
   }
 
   /**

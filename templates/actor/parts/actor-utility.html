@@ -1,22 +1,32 @@
-<fieldset>
+<fieldset class="collapse-parent">
     <legend class="resource-label">
-        Mental Limit
+        Mental Limit <a data-tooltip="Toggle Mental Limit Display"><i class="fas fa-list collapse-toggle" data-collapse="mental"></i></a>
     </legend>
-    <div class="grid grid-8col flex-group-center">
-        <span class="grid-span-2">Psionically Focused</span>
-        <div>
-            <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
+    <div class="mental {{#if collapses.mental}}collapse{{/if}}">
+        <div class="grid grid-8col flex-group-center">
+            <span class="grid-span-2">Psionically Focused</span>
+            <div>
+                <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
+            </div>
+            <input type="text" value="{{system.magic.mlPsion}}" readonly>
+            <span class="grid-span-3">Mental Limit Capacity</span>
+            <input type="text" value="{{system.ml.max}}" readonly>
+            <span class="grid-span-2">Recipe Sets Memorized</span>
+            <input type="text" name="system.magic.memorizedSets" value="{{system.magic.memorizedSets}}" data-dtype="Number" placeholder="Sets">
+            <input type="text" value="{{system.magic.mlRecipe}}" readonly>
+            <span class="grid-span-3">Total Mental Limit Used</span>
+            <input type="text" value="{{system.magic.mlUsed}}" readonly>
+            <span class="grid-span-2">Incantation Use</span>
+            <a class="mental-limit" data-ml-cost="-{{system.ml.max}}"><i class="fas fa-recycle" data-tooltip="Regain Mental Limit spent by Invoking"></i></a>
+            <input type="text" name="system.magic.mlCant" value="{{system.magic.mlCant}}" data-dtype="Number" placeholder="Spent">
+            <span class="grid-span-3">Temporary Mental Limit</span>
+            <input type="text" name="system.ml.temp" value="{{system.ml.temp}}" data-dtype="Number" placeholder="0">
+            <span class="grid-span-2">Misc Used Mental Limit</span>
+            <input type="text" name="system.magic.mods.misc" value="{{system.magic.mods.misc}}" data-dtype="Number" placeholder="Misc">
+            <input type="text" value="{{system.magic.mlMisc}}" readonly>
+            <span class="grid-span-3">Object Used Mental Limit</span>
+            <input type="text" value="{{system.magic.mlObject}}" readonly>
         </div>
-        <input type="text" value="{{system.ml.psion}}" readonly>
-        <span class="grid-span-2">Object Mental Limit</span>
-        <input type="text" name="system.ml.mods.misc" value="{{system.ml.mods.misc}}" data-dtype="Number" placeholder="Misc">
-        <input type="text" value="{{system.ml.object}}" readonly>
-        <span class="grid-span-2">Recipe Sets Memorized</span>
-        <input type="text" name="system.magic.memorized" value="{{system.magic.memorized}}" data-dtype="Number" placeholder="Sets">
-        <input type="text" value="{{system.ml.recipe}}" readonly>
-        <span class="grid-span-2">Incantation Use</span>
-        <a class="mental-limit" data-ml-cost="-{{system.ml.max}}"><i class="fas fa-recycle" data-tooltip="Regain Mental Limit spent by Invoking"></i></a>
-        <input type="text" name="system.magic.incant" value="{{system.magic.incant}}" data-dtype="Number" placeholder="Spent">
     </div>
 </fieldset>
 <fieldset class="collapse-parent">
@@ -121,7 +131,7 @@
 </fieldset>
 <fieldset class="collapse-parent">
     <legend class="resource-label">
-        Magic <a data-tooltip="Toggle Magic List Display"><i class="fas fa-list collapse-toggle" data-collapse="magicUtility"></i></a>
+        Magic <a class="item-control item-create" data-tooltip="Create Magic" data-type="magic"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Magic List Display"><i class="fas fa-list collapse-toggle" data-collapse="magicUtility"></i></a>
     </legend>
     <ol class="items-list magicUtility {{#if collapses.magicUtility}}collapse{{/if}}">
         {{#each utilityMagic as |item id|}}
