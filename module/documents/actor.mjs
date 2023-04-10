@@ -145,7 +145,7 @@ export class OpsActor extends Actor {
       }
     }
     systemData.magic.mlMisc = systemData.magic.mods.total
-    systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + +systemData.magic.mlCant + systemData.magic.mlMisc;
+    systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + systemData.magic.mlCant + systemData.magic.mlMisc;
   }
 
   /**

@@ -1,4 +1,4 @@
-import {OpsAction, Protection, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
+import {OpsAction, Protection, ResourceConsumable, ResourceCoolant, ResourceMagic, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -138,7 +138,7 @@ export class OpsItemSheet extends ItemSheet {
         description:(tempMod[5] ? tempMod[5].trim() : null),
       }
 
-      for(let [,a] of Object.entries(itemData.system.attacks)){
+      for(let [,a] of Object.entries(itemData.system.actions)){
         a.mods = context.item.actionSum(a);
       }
     }
@@ -296,7 +296,7 @@ export class OpsItemSheet extends ItemSheet {
         case 'effect':
         case 'recoil':
         case 'cp':
-        setProperty(updateData,`system.attacks.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
+        setProperty(updateData,`system.actions.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
         break;
       case 'skillMods':
         newProp = new SkillMod;
@@ -310,7 +310,7 @@ export class OpsItemSheet extends ItemSheet {
         newProp = new WeaponAttack;
         newProp.name = 'New Attack';
         newProp.check.type = 'ranged';
-        setProperty(updateData,`system.attacks.${randomID(8)}`,newProp);
+        setProperty(updateData,`system.actions.${randomID(8)}`,newProp);
         console.debug(newProp);
         break;
       case 'weaponMods':
@@ -326,14 +326,16 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,`system.actions.${randomID(8)}`,newProp)
         break;
       case 'consumable':
+        setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceConsumable);
+        break;
       case 'coolant':
+        setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceCoolant);
+        break;
       case 'magic':
+        setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceMagic);
+        break;
       case 'resource':
-        newProp = {name:null, type:target, value:null, max:null};
-        if (target==='consumable') newProp.available = true;
-        if (target==='coolant') newProp.cool = true;
-        if (target==='magic') newProp.ml = null;
-        setProperty(updateData,`system.gear.resources.${randomID(8)}`,newProp);
+        setProperty(updateData,`system.gear.resources.${randomID(8)}`,{name:null, type:'resource', value:null, max:null});
         break;
     }
     this.object.update(updateData);
@@ -351,7 +353,7 @@ export class OpsItemSheet extends ItemSheet {
       case 'effect':
       case 'recoil':
       case 'cp':
-        updateTarget = `system.attacks.${preTarget}.${target}.mods.-=${removed}`;
+        updateTarget = `system.actions.${preTarget}.${target}.mods.-=${removed}`;
         break;
       default:
         updateTarget = `system.${target}.-=${removed}`;

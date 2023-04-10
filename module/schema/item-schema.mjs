@@ -82,9 +82,9 @@ export class OpsWeapon extends foundry.abstract.DataModel{
             type: new field.StringField(),
             magazine: new field.SchemaField({
                 loaded: new field.SchemaField({
-                    source: new field.StringField(),
                 }),
                 type: new field.StringField({initial:"internal"}),
+                source: new field.StringField(),
                 value: new field.NumberField({initial:0}),
                 max: new field.NumberField({initial:0})
             }),
@@ -92,7 +92,7 @@ export class OpsWeapon extends foundry.abstract.DataModel{
             crit: new field.NumberField({initial:16}),
             error: new field.NumberField({initial:0}),
             weaponMods: new field.ObjectField(),
-            attacks: new field.ObjectField(),
+            actions: new field.ObjectField(),
             selectMod: new field.StringField(),
             importFilter: new field.StringField(),
             importMod: new field.StringField(),
@@ -161,6 +161,38 @@ export class WeaponAttack extends OpsAction{
             }
         );
         return schema;
+    }
+}
+export class ResourceConsumable extends foundry.abstract.DataModel{
+    static defineSchema(){
+        return{
+            name: new field.StringField(),
+            type: new field.StringField({initial:'consumable'}),
+            value: new field.NumberField(),
+            max: new field.NumberField(),
+            available: new field.BooleanField({initial:true})
+        }
+    }
+}
+export class ResourceCoolant extends foundry.abstract.DataModel{
+    static defineSchema(){
+        return{
+            name: new field.StringField(),
+            type: new field.StringField({initial:'coolant'}),
+            value: new field.NumberField(),
+            cool: new field.BooleanField({initial:true})
+        }
+    }
+}
+export class ResourceMagic extends foundry.abstract.DataModel{
+    static defineSchema(){
+        return{
+            name: new field.StringField(),
+            type: new field.StringField({initial:'magic'}),
+            value: new field.NumberField(),
+            max: new field.NumberField(),
+            ml: new field.NumberField()
+        }
     }
 }
 export class OpsObject extends foundry.abstract.DataModel{

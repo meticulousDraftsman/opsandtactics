@@ -21,21 +21,21 @@
                             {{/if}}
                             {{#if (eq item.system.magazine.type "internal")}}
                             <div class="grid-span-2 flexrow flex-group-center">
-                                <input class="flex3" type="text" class="item-input" data-target-prop="system.magazine.value" data-target-id="{{item._id}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
+                                <input class="flex3 item-input" type="text" data-target-prop="system.magazine.value" data-target-id="{{item._id}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
                                 <span>/</span>
                                 <input class="flex3" type="text" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
                             </div>
                             {{/if}}
                             {{#if (eq item.system.magazine.type "external")}}
                             <div class="grid-span-2 flexrow flex-group-center">
-                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
+                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
                                 <span>{{#if (gt item.system.magazine.value 0)}}+{{item.system.magazine.value}}{{/if}}/</span>
                                 <input type="text" class="flex3" value="{{item.system.magazine.loaded.max}}" data-dtype="Number" readonly/>
                             </div>
                             {{/if}}
                             {{#if (eq item.system.magazine.type "coolant")}}
                             <div class="grid-span-2 flexrow flex-group-center">
-                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.loaded.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
+                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
                                 <span>/</span>
                                 <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
                             </div>
@@ -50,10 +50,10 @@
                         </div>
                     </div>
                     <ol class="grid-span-3 items-list flex-group-center">
-                        {{#each item.system.attacks}}
+                        {{#each item.system.actions}}
                         {{#if this.active}}
                         <li class="item flexrow">
-                            <a class="rollable resource-label" data-roll="3d6{{this.mods.checkTotal}}" data-label="{{../name}} {{this.name}} attack roll" data-tooltip="Attack Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="item-check resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Attack Roll">{{this.mods.checkTotal}} {{this.name}}</a>
                             <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} {{this.name}} damage roll" data-tooltip="Damage Roll">{{this.mods.effectTotal}}</a>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
@@ -99,7 +99,7 @@
                         {{#if this.active}}
                         {{#if (eq this.type "attack")}}
                         <li class="item flexrow">
-                            <a class="rollable resource-label" data-roll="3d6{{this.mods.checkTotal}}" data-label="{{../name}} {{this.name}} attack roll" data-tooltip="Attack Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="item-check resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Attack Roll">{{this.mods.checkTotal}} {{this.name}}</a>
                             <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} {{this.name}} damage roll" data-tooltip="Damage Roll">{{this.mods.effectTotal}}</a>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
@@ -131,7 +131,7 @@
                             {{#unless (eq item.system.magazine.type "mental")}}
                             <span class="grid-start-2 grid-span-2">Charges</span>
                             {{else}}
-                            <span class="grid-start-2 grid-span-2">Incant</span>
+                            <span class="grid-start-2 grid-span-2">Mental Limit</span>
                             {{/unless}}
                             {{#if (eq item.system.magazine.type "unlimited")}}
                             <i class="grid-span-2 fas fa-infinity"></i>
@@ -157,7 +157,7 @@
                         {{#if this.active}}
                         {{#if (eq this.type "attack")}}
                         <li class="item flexrow">
-                            <a class="rollable resource-label" data-roll="3d6{{this.mods.checkTotal}}" data-label="{{../name}}, {{this.name}} Check: {{this.check.flavor}}" data-tooltip="Attack Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="item-check resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Attack Roll">{{this.mods.checkTotal}} {{this.name}}</a>
                             <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}}, {{this.name}} Check: {{this.effect.flavor}} damage roll" data-tooltip="Damage Roll">{{this.mods.effectTotal}}</a>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>

@@ -196,12 +196,12 @@ export class OpsActorSheet extends ActorSheet {
       }
       // Append weapons.
       if (i.type === 'weapon') {
-        for (let [,a] of Object.entries(i.system.attacks)){
+        for (let [,a] of Object.entries(i.system.actions)){
           a.mods = context.actor.items.get(i._id).actionSum(a);
         }
         if(i.system.magazine.type != 'internal'){
-          if(i.system.magazine.loaded.source){
-              let dualID = i.system.magazine.loaded.source.split(',')
+          if(i.system.magazine.source){
+              let dualID = i.system.magazine.source.split(',')
               let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
               i.system.magazine.loaded.value = getProperty(loadedMag,`${dualID[1]}.value`);
               i.system.magazine.loaded.max = getProperty(loadedMag,`${dualID[1]}.max`);  
@@ -350,7 +350,7 @@ export class OpsActorSheet extends ActorSheet {
     context.resObjects = resObjects;
     context.attackObjects = attackObjects;
     context.utilityObjects = utilityObjects;
-    console.debug(context);
+    //console.debug(context);
   }
 
   /* -------------------------------------------- */
@@ -378,13 +378,13 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.actor-bleed').click(this._onRollBleed.bind(this));
     // Apply Incoming Damage to Armor or Hit Points
     html.find('.apply-damage').click(this._onApplyDamage.bind(this));
-    // Actor Sheet Rolls
-    html.find('.ops-roll').click(this._actorRoll.bind(this));   
     // Incantation Mental Limit
-    html.find('.incant-regain').click(this._incantRegain.bind(this)); 
+    html.find('.incant-regain').click(this._incantRegain.bind(this));     
+    // Actor Sheet Rolls
+    html.find('.item-check').click(this._itemCheck.bind(this));   
      // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
-    // Rollable abilities.
+    // Generic Rollables
     html.find('.rollable').click(this._onRoll.bind(this));
     // Drag events for macros.
     if (this.actor.isOwner) {
@@ -443,7 +443,8 @@ export class OpsActorSheet extends ActorSheet {
     const dataset = event.currentTarget.dataset;
     const targetId = dataset.targetId;
     const targetProp = dataset.targetProp;
-    const value = event.target.value;
+    let value = event.target.value;
+    if (dataset.dtype==='Number') value = Number(value);    
     if (targetId.includes(',')){
       const dualID = targetId.split(',');
       const item = this.actor.items.get(dualID[0]);
@@ -509,6 +510,18 @@ export class OpsActorSheet extends ActorSheet {
     const dataset = event.currentTarget.dataset 
     const report = this.actor.applyDamage(dataset.target);
   };
+  async _incantRegain(event){
+    event.preventDefault();
+    const updateData = {['system.magic.mlCant']:Math.max((this.actor.system.magic.mlCant - Math.ceil(this.actor.system.ml.max / 10)),0)}
+    this.actor.update(updateData);
+  }
+  _itemCheck(event){
+    event.preventDefault();
+    const itemID = event.currentTarget.dataset.itemId;
+    const actionID = event.currentTarget.dataset.actionId;
+    const item = this.actor.items.get(itemID);
+    item.rollCheck(actionID);
+  }
   async _actorRoll(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset 
@@ -575,11 +588,6 @@ export class OpsActorSheet extends ActorSheet {
     }
     targetProp -= cost;
     await magazine.update({[updateTarget]:targetProp});  
-  }
-  async _incantRegain(event){
-    event.preventDefault();
-    const updateData = {['system.magic.mlCant']:Math.max((this.actor.system.magic.mlCant - Math.ceil(this.actor.system.ml.max / 10)),0)}
-    this.actor.update(updateData);
   }
 
   /**

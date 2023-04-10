@@ -18,7 +18,7 @@ export class OpsItem extends Item {
     
     const itemData = this;
     const systemData = itemData.system;
-    console.debug(itemData)
+    //console.debug(itemData)
     if (itemData.type === 'skill') this._prepareSkillData(itemData);
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'object') this._prepareObjectData(itemData);
@@ -32,7 +32,7 @@ export class OpsItem extends Item {
   _prepareWeaponData(itemData){
     const systemData = itemData.system;
     // Map weapon mods values to attacks
-     for (let [,a] of Object.entries(systemData.attacks)){
+     for (let [,a] of Object.entries(systemData.actions)){
       a.type = 'attack';
        for (let [key,entry] of Object.entries(a.check.mods)){
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
@@ -56,40 +56,163 @@ export class OpsItem extends Item {
     const systemData = itemData.system;
     // Flag actions as either attack or utility
     for (let [,a] of Object.entries(systemData.actions)){
-      switch (a.check.type){
-        case 'melee':
-        case 'ranged':
-        case 'otherAttack':
-        case 'noneAttack':
-          a.type = 'attack'
-          break;
-        case 'skill':
-        case 'generic':
-        case 'otherUtility':
-        case 'noneUtility':
-          a.type='utility';
-          break;
-      }
+      a.type = this.checkType(a.check.type);
     }
   }
   _prepareMagicData(itemData){
     const systemData = itemData.system;
     // Flag actions as either attack or utility
     for (let [,a] of Object.entries(systemData.actions)){
-      switch (a.check.type){
-        case 'melee':
-        case 'ranged':
-        case 'otherAttack':
-        case 'noneAttack':
-          a.type = 'attack'
-          break;
-        case 'skill':
-        case 'generic':
-        case 'otherUtility':
-        case 'noneUtility':
-          a.type='utility';
-          break;
-      }
+      a.type = this.checkType(a.check.type);
+    }
+  }
+
+  async rollCheck(actionID){
+    // Check resource consumption and override
+    let ammoCheck = this.resourceAvailableCheck(getProperty(this,`system.actions.${actionID}.ammo`))
+    if (!ammoCheck){
+      await Dialog.confirm({
+        title: "Insufficient Resources",
+        content: "Perform check despite not having enough ammo?",
+        yes: () => {ammoCheck = true},
+        no: () => {},
+        defaultYes:true
+      });
+    }
+    if(!ammoCheck) return;
+    
+    // Prep data for roll
+    const rollData = this.actor.getRollData();
+    const rollConfig = {
+      mod: this.actionSum(this.system.actions[actionID]).checkTotal,
+      actor: this.actor,
+      data: rollData,
+      critical: getProperty(this,'system.crit'),
+      title: `${this.name} - ${this.system.actions[actionID].name}`,
+      flavor: getProperty(this,`system.actions.${actionID}.check.flavor`),
+      checkType: getProperty(this,`system.actions.${actionID}.check.type`),
+      speaker: ChatMessage.getSpeaker({actor: this.actor})
+    }
+
+    // Execute roll
+    console.debug(rollConfig)
+    //const roll = await opsCheck(rollConfig);
+    //if (roll==null) return null;
+
+    // Perform resource consumption
+    await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`))
+    //return roll;
+  }
+  // Returns true if resource consumption is legal
+  resourceAvailableCheck(cost){
+    let loadedMag;
+    let dualID;
+    switch (this.system.magazine.type){
+      case 'unlimited':
+        return true;
+      case 'mental':
+        return ((this.actor.system.magic.mlUsed+cost) <= this.actor.system.ml.max);
+      case 'coolant':
+        if (!this.system.magazine.source) return false;
+        dualID = this.system.magazine.source.split(',');
+        loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
+        return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.max);
+      case 'external':
+        if (!this.system.magazine.source) return false;
+        dualID = this.system.magazine.source.split(',');
+        loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
+        if (this.type==='weapon'){
+          return ((getProperty(loadedMag,`${dualID[1]}.value`)+this.system.magazine.value-cost) >= 0);
+        }
+        else {
+          return ((getProperty(loadedMag,`${dualID[1]}.value`)-cost) >= 0);
+        }
+      case 'internal':
+        if (this.type==='weapon'){
+          return ((this.system.magazine.value-cost) >= 0);
+        }
+        else {
+          if (!this.system.magazine.source) return false;
+          dualID = this.system.magazine.source.split(',');
+          loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
+          return ((getProperty(loadedMag,`${dualID[1]}.value`)-cost) >= 0);
+        }
+    }
+  }
+  async resourceConsume(cost){
+    if (Number(cost)==0) return;
+    let loadedMag;
+    let dualID;
+    switch (this.system.magazine.type){
+      case 'unlimited':
+        break;
+      case 'mental':
+        await this.actor.update({['system.magic.mlCant']:(this.actor.system.magic.mlCant+cost)});
+        break;
+      case 'coolant':
+        if (!this.system.magazine.source) return;
+        dualID = this.system.magazine.source.split(',');
+        loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
+        const coolUpdate = {[`${dualID[1]}.cool`]:false}
+        coolUpdate[`${dualID[1]}.value`] = getProperty(loadedMag,`${dualID[1]}.value`)+cost;
+        await loadedMag.update(coolUpdate);
+        break;
+      case 'external':
+        if (!this.system.magazine.source) return;
+        dualID = this.system.magazine.source.split(',');
+        loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
+        if (this.type==='weapon'){
+          const magOld = getProperty(loadedMag,`${dualID[1]}.value`);
+          let magNew = magOld;
+          const chamberOld = this.system.magazine.value;
+          let chamberNew = chamberOld;
+          let reduce;
+          // Deduct cost from loaded value until zero
+          if (magNew > 0){
+            reduce = Math.min(cost, magNew);
+            magNew -= reduce;
+            cost -= reduce;
+          }
+          // Deduct any remaining cost from chamber value until zero
+          if (cost > 0 && chamberNew > 0){
+            reduce = Math.min(cost,chamberNew);
+            chamberNew -= reduce;
+            cost -= reduce;
+          }
+          // Deduct any remaining cost from loaded value even below zero
+          if (cost > 0) magNew -= cost;
+          await loadedMag.update({[`${dualID[1]}.value`]:magNew});
+          if (chamberNew != chamberOld) await this.update({['system.magazine.value']:chamberNew});
+        }
+        else {
+          await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-cost)});
+        }
+        break;
+      case 'internal':
+        if (this.type==='weapon'){
+          await this.update({['system.magazine.value']:(this.system.magazine.value-cost)});
+        }
+        else {
+          if (!this.system.magazine.source) return;
+          dualID = this.system.magazine.source.split(',');
+          loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
+          await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-cost)});
+        }
+        break;
+    }
+  }
+
+  checkType(checkType){
+    switch (checkType){
+      case 'melee':
+      case 'ranged':
+      case 'noneAttack':
+        return 'attack';
+      case 'skill':
+      case 'generic':
+      case 'otherUtility':
+      case 'noneUtility':
+        return 'utility';
     }
   }
 
