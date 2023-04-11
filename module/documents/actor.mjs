@@ -1,4 +1,4 @@
-import { roll3d6 } from "../dice/3d6-roll.mjs";
+import { opsCheck } from "../opsandtactics.mjs";
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -157,6 +157,42 @@ export class OpsActor extends Actor {
     // Make modifications to data here. For example:
     const systemData = actorData.system;
     //systemData.xp = (systemData.cr * systemData.cr) * 100;
+  }
+  
+  async rollActorCheck(checkID){
+    const rollData = this.getRollData();
+    const rollConfig = {
+      actor: this,
+      data: rollData,
+      flavor: null,
+      speaker: ChatMessage.getSpeaker({actor: this}),
+      rollMode: game.settings.get('core', 'rollMode')
+    }
+    switch (checkID){
+      case 'fortitude':
+        rollConfig.title = 'Fortitude Save';
+        rollConfig.checkType = 'generic';
+        rollConfig.mod = this.system.saves[checkID].value;
+        break;
+      case 'reflex':
+        rollConfig.title = 'Reflex Save';
+        rollConfig.checkType = 'reflex';
+        rollConfig.mod = this.system.saves[checkID].value;
+        break;
+      case 'will':
+        rollConfig.title = 'Will Save';
+        rollConfig.checkType = 'generic';
+        rollConfig.mod = this.system.saves[checkID].value;
+        break;
+      default:
+        rollConfig.title = `${game.i18n.localize(CONFIG.OATS.abilities[checkID])} Check`;
+        rollConfig.checkType = 'generic';
+        rollConfig.mod = this.abilityMod(checkID)
+    }
+    rollConfig.mod = rollConfig.mod>=0?`+${rollConfig.mod}`:rollConfig.mod;
+    const roll = await opsCheck(rollConfig);
+    if (roll==null) return null;
+    return roll;
   }
 
   /**

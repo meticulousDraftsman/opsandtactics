@@ -381,7 +381,9 @@ export class OpsActorSheet extends ActorSheet {
     // Incantation Mental Limit
     html.find('.incant-regain').click(this._incantRegain.bind(this));     
     // Actor Sheet Rolls
-    html.find('.item-check').click(this._itemCheck.bind(this));   
+    html.find('.item-check').click(this._actionCheck.bind(this));   
+    html.find('.skill-check').click(this._skillCheck.bind(this));   
+    html.find('.actor-check').click(this._actorCheck.bind(this));
      // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
     // Generic Rollables
@@ -515,12 +517,23 @@ export class OpsActorSheet extends ActorSheet {
     const updateData = {['system.magic.mlCant']:Math.max((this.actor.system.magic.mlCant - Math.ceil(this.actor.system.ml.max / 10)),0)}
     this.actor.update(updateData);
   }
-  _itemCheck(event){
+  _actionCheck(event){
     event.preventDefault();
     const itemID = event.currentTarget.dataset.itemId;
     const actionID = event.currentTarget.dataset.actionId;
     const item = this.actor.items.get(itemID);
-    item.rollCheck(actionID);
+    item.rollActionCheck(actionID);
+  }
+  _skillCheck(event){
+    event.preventDefault();
+    const itemID = event.currentTarget.dataset.itemId;
+    const item = this.actor.items.get(itemID);
+    item.rollSkillCheck();
+  }
+  _actorCheck(event){
+    event.preventDefault();
+    const checkID = event.currentTarget.dataset.checkId;
+    this.actor.rollActorCheck(checkID)
   }
   async _actorRoll(event){
     event.preventDefault();

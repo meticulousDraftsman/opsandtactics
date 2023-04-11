@@ -69,7 +69,7 @@ export class OpsItem extends Item {
     }
   }
 
-  async rollCheck(actionID){
+  async rollActionCheck(actionID){
     // Check resource consumption and override
     let ammoCheck = this.resourceAvailableCheck(getProperty(this,`system.actions.${actionID}.ammo`))
     if (!ammoCheck){
@@ -94,17 +94,33 @@ export class OpsItem extends Item {
       flavor: getProperty(this,`system.actions.${actionID}.check.flavor`),
       checkType: getProperty(this,`system.actions.${actionID}.check.type`),
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
-      rollMode: game.settings.get('core', 'rollMode'),
+      rollMode: game.settings.get('core', 'rollMode')
     }
 
     // Execute roll
-    console.debug(rollConfig)
     const roll = await opsCheck(rollConfig);
     if (roll==null) return null;
 
     // Perform resource consumption
     await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`))
-    //return roll;
+    return roll;
+  }
+  async rollSkillCheck(){
+    const rollData = this.actor.getRollData();
+    const rollConfig = {
+      mod: this.skillSum().total,
+      actor: this.actor,
+      data: rollData,
+      title: this.name,
+      flavor: null,
+      checkType: 'skill',
+      speaker: ChatMessage.getSpeaker({actor: this.actor}),
+      rollMode: game.settings.get('core', 'rollMode')
+    }
+    const roll = await opsCheck(rollConfig);
+    if (roll==null) return null;
+    return roll;
+
   }
   // Returns true if resource consumption is legal
   resourceAvailableCheck(cost){
@@ -329,7 +345,7 @@ export class OpsItem extends Item {
       }
       else{
         let skillMod = this?.actor.items.get(sourceAction.check.source)?.skillSum().total;
-        mods.checkTotal = !Number.isNaN(skillMod)?`${skillMod>=0?'+':''}${skillMod}`:'-404';
+        mods.checkTotal = !Number.isNaN(skillMod)?skillMod:'-404';
       }
     }
     // Utility Rolls add nothing else
@@ -376,6 +392,7 @@ export class OpsItem extends Item {
     labelParts = labelParts.filter(part => part != null);
     mods.label = labelParts.join(', ') || 'No Modifiers';
     mods.total = this.system.ranks + mods.ability + mods.occ + mods.equip + mods.syn + mods.armor + mods.misc;
+    mods.total = mods.total>=0?`+${mods.total}`:mods.total;
     return mods;    
   }
 

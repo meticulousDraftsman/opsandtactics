@@ -179,8 +179,11 @@ export class OpsRoll extends Roll{
           atkType: data.checkType,
         }
         break;
-      case 'save':
-        console.debug('need to implement')
+      case 'reflex':
+        template = 'systems/opsandtactics/templates/interface/dialog-save.html';
+        templateData = {
+          formula: this.formula
+        }
         break;
       default:
         template = 'systems/opsandtactics/templates/interface/dialog-utility.html';
@@ -257,7 +260,18 @@ export class OpsRoll extends Roll{
         }
         this._formula = this.constructor.getFormula(this.terms);
         break;
-      case 'save':
+      case 'reflex':
+        let refBon = 0;
+        refBon += Number(form.refCover.value);
+        if (form.sitBon.value){
+          const situation = new Roll(form.sitBon.value,this.data);
+          if(!(situation.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
+          this.terms = this.terms.concat(situation.terms);
+        }
+        if (refBon != 0){
+          const evader = new Roll(`+(${refBon})`,this.data);
+          this.terms = this.terms.concat(evader.terms);
+        }
         break;
       default:
         if (form.sitBon.value){
