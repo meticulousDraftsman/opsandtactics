@@ -61,6 +61,7 @@ export class OpsActor extends Actor {
     // Loop through active armor and determine impact before calculating ability modifiers
     // Start with mods from active effects
     systemData.def.equip.value = systemData.def.equip.total;
+    systemData.def.dodge.value = systemData.def.dodge.total;
     systemData.stats.armorPenalty.value = systemData.stats.armorPenalty.total;
     systemData.cp.armor.value = systemData.cp.armor.total;
     // Initially no cap on agility
@@ -97,8 +98,8 @@ export class OpsActor extends Actor {
       }
     }
     // Calculate Defense
-    systemData.def.value = 10 + systemData.def.equip.value + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge;
-    systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge;
+    systemData.def.value = 10 + systemData.def.equip.value + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge.value;
+    systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge.value;
     systemData.def.flat = 10 + systemData.def.equip.value + systemData.def.size + systemData.def.move + systemData.def.misc;
     // Calculate Saves
     systemData.saves.reflex.value = Math.floor(systemData.saves.reflex.base * systemData.saves.reflex.mult) + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;

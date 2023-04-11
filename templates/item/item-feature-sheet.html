@@ -9,7 +9,7 @@
   <section class="sheet-body">
     <fieldset>
       <legend class="resource-label">
-        Active Effects {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+        Active Effects 
       </legend>
       <ol class="items-list effects-list">
         {{#each effects as |section sid|}}
@@ -40,7 +40,7 @@
     </fieldset>
     <fieldset class="sheet-body tab">
       <legend class="resource-label">
-        Summary and Description
+        Summary and Description {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
       </legend>
       <input class="flex-group-center" type="text" name="system.summary" value="{{system.summary}}" data-dtype="String" placeholder="Summary">
       <div class="sheet-body tab">

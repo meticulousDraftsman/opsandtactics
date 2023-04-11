@@ -48,7 +48,7 @@ class Defense extends foundry.abstract.DataModel {
             size: new field.NumberField({initial:0}),
             move: new field.NumberField({initial:0}),
             misc: new field.NumberField({initial:0}),
-            dodge: new field.NumberField({initial:0})
+            dodge: new field.EmbeddedDataField(Mods)
         }
     }
 };
