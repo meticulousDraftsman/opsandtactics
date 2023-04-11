@@ -119,7 +119,7 @@ export class OpsAction  extends foundry.abstract.DataModel{
             active: new field.BooleanField({initial:true}),
             check: new field.SchemaField({
                 flavor: new field.StringField(),
-                type: new field.StringField(), // melee,ranged,otherAttack vs skill,generic,otherUtility
+                type: new field.StringField(), // melee,ranged vs skill,generic,otherUtility
                 source: new field.StringField(),
                 inherent: new field.StringField(),
                 ability: new field.StringField()

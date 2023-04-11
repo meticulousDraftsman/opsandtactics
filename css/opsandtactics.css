@@ -273,6 +273,9 @@
   flex-basis:content;
 }
 
+.opsandtactics .critical{
+  color: green;
+}
 
 .opsandtactics .item-form {
   font-family: "Roboto", sans-serif;

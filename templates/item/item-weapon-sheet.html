@@ -197,7 +197,7 @@
                             {{/each}}
                         </div>
                         {{/unless}}    
-                        <input class="grid-span-9 flex-group-center" name="system.actions{{@key}}.check.flavor" value="{{this.check.flavor}}" type="text" data-dtype="String" placeholder="Attack roll flavor">
+                        <input class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" type="text" data-dtype="String" placeholder="Attack roll flavor">
                     </li>
                     <li class="item grid grid-9col flex-group-center">
                         <button class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.effectTotal}}</button>
@@ -219,7 +219,7 @@
                             </div>
                             {{/each}}
                         </div>
-                        <input class="grid-span-9 flex-group-center" name="system.actions{{@key}}.effect.flavor" value="{{this.effect.flavor}}" type="text" data-dtype="String" placeholder="Damage roll flavor">
+                        <input class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" type="text" data-dtype="String" placeholder="Damage roll flavor">
                     </li>
                     {{/if}}
                 </ol>

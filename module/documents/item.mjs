@@ -1,3 +1,5 @@
+import { opsCheck } from "../opsandtactics.mjs";
+
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
@@ -91,13 +93,14 @@ export class OpsItem extends Item {
       title: `${this.name} - ${this.system.actions[actionID].name}`,
       flavor: getProperty(this,`system.actions.${actionID}.check.flavor`),
       checkType: getProperty(this,`system.actions.${actionID}.check.type`),
-      speaker: ChatMessage.getSpeaker({actor: this.actor})
+      speaker: ChatMessage.getSpeaker({actor: this.actor}),
+      rollMode: game.settings.get('core', 'rollMode'),
     }
 
     // Execute roll
     console.debug(rollConfig)
-    //const roll = await opsCheck(rollConfig);
-    //if (roll==null) return null;
+    const roll = await opsCheck(rollConfig);
+    if (roll==null) return null;
 
     // Perform resource consumption
     await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`))

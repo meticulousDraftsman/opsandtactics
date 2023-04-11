@@ -1,99 +1,117 @@
-<form>
-    <ol class="items-list flex-group-center">
-        <li class="grid grid-3col">
-            <input class="grid-span-2" type="text" name="sitBon" placeholder="Situational Modifier">
-            <input type="text" name="ammo" placeholder="Custom Ammo Amount">
-        </li>
-        <hr>
-        <li class="grid grid-3col">
+<form class="opsandtactics">
+    <fieldset>
+        <legend class="resource-label">
+            Situational Modifiers
+        </legend>
+        <div class="grid grid-2col flex-group-center">
+            <input type="text" value="{{formula}}" readonly>
+            <input type="text" name="sitBon" placeholder="Modifiers">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend class="resource-label">
+            {{#if (eq atkType "melee")}}Melee{{else}}Ranged{{/if}} Attack Modifiers
+        </legend>
+        <div class="grid grid-4col flex-group-center">
+            {{#if (eq atkType 'ranged')}}
+            <s>High Ground</s>
             <div>
-                <select name="atkType">
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                    <option value="message">None</option>
-                </select>
+                <input type="checkbox" id="atk-high" name="atkHigh" disabled>
             </div>
+            {{else}}
+            <label for="atk-high">High Ground</label>
             <div>
-                <div class="grid grid-5col">
-                    <label class="grid-span-4" for="atk-high">High Ground</label>
-                    <input type="checkbox" id="atk-high" name="atkHigh" value="false"/>
-                </div>
+                <input type="checkbox" id="atk-high" name="atkHigh" value="+1" data-tooltip="+1">
             </div>
+            {{/if}}
+            <label for="atk-unseen">Attacker Unseen</label>
             <div>
-                <div class="grid grid-5col">
-                    <label class="grid-span-4" for="atk-unseen">Attacker Unseen</label>
-                    <input  type="checkbox" id="atk-unseen" name="atkSeen" value="false"/>
-                </div>
+                <input  type="checkbox" id="atk-unseen" name="atkSeen" value="+2" data-tooltip="+2"/>
             </div>
-        </li>
-        <hr>
-        <li class="grid grid-3col">
+        </div>
+        <div class="grid grid-2col flex-group-center">
+            <span>Attacking into Defender's...</span>
+            <select class="flex-group-center" name="atkFlank">
+                <option value="+0">Front</option>
+                <option value="+2">Flanks (+2)</option>
+                <option value="+4">Rear (+4)</option>
+            </select>
+            <span>Attacker's Stance is...</span>
+            <select class="flex-group-center" name="atkStance">
+                <option value="+0">Standing</option>
+                {{#if (eq atkType "melee")}}
+                <option value="-2">Kneeling (-2)</option>
+                <option value="-4">Prone (-4)</option>
+                {{else}}
+                <option value="+1">Kneeling (+1)</option>
+                <option value="+2">Prone (+2)</option>
+                {{/if}}
+            </select>
+            <span> Attacking from Attacker's...</span>
+            <select class="flex-group-center" name="atkFace">
+                <option value="-0">Front</option>
+                <option value="-5">Flanks (-5)</option>
+                <option value="-10">Rear (-10)</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend class="resource-label">
+            {{#if (eq atkType "melee")}}Melee{{else}}Ranged{{/if}} Defense Modifiers
+        </legend>
+        <div class="grid grid-12col flex-group-center">
+            <label class="grid-span-3" for="def-stunned">Defender Stunned</label>
             <div>
-                <select name="atkFlank">
-                    <option value="0">Attacking from Front</option>
-                    <option value="2">Attacking from Flank</option>
-                    <option value="4">Attacking from Rear</option>
-                </select>
+                <input  type="checkbox" id="def-stunned" name="defStun" value="-2" data-tooltip="-2"/>
             </div>
+            <label class="grid-span-3" for="def-climb">Defender Climbing</label>
             <div>
-                <select name="atkStance">
-                    <option value="0">Attacker Standing</option>
-                    <option value="2">Attacker Kneeling</option>
-                    <option value="4">Attacker Prone</option>
-                </select>
+                <input  type="checkbox" id="def-climb" name="defClimb" value="-2" data-tooltip="-2"/>
             </div>
+            {{#if (eq atkType 'ranged')}}
+            <s class="grid-span-3">Defender Pinned</s>
             <div>
-                <select name="atkFace">
-                    <option value="0">Attacking into Front</option>
-                    <option value="5">Attacking into Flank</option>
-                    <option value="10">Attacking into Rear</option>
-                </select>
+                <input type="checkbox" id="def-pin" name="defPin" disabled>
             </div>
-        </li>
-        <hr>
-        <li class="grid grid-2col">
+            {{else}}
+            <label class="grid-span-3" for="def-pin">Defender Pinned</label>
             <div>
-                <select name="defStance">
-                    <option value="0">Defender Standing</option>
-                    <option value="2">Defender Kneeling</option>
-                    <option value="4">Defender Prone</option>
-                </select>
+                <input type="checkbox" id="def-pin" name="defPin" value="-4" data-tooltip="-4">
             </div>
-            <div>
-                <select name="defCover">
-                    <option value="cov0">Defender has no Cover</option>
-                    <option value="cov1">Defender has 1/4 Cover</option>
-                    <option value="cov2">Defender has 1/2 Cover</option>
-                    <option value="cov3">Defender has 3/4 Cover</option>
-                    <option value="cov4">Defender has 9/10 Cover</option>
-                    <option value="10">Defender has 1/4 Concealment</option>
-                    <option value="20">Defender has 1/2 Concealment</option>
-                    <option value="30">Defender has 3/4 Concealment</option>
-                    <option value="40">Defender has 9/10 Concealment</option>
-                    <option value="50">Defender has Total Concealment</option>
-                </select>
-            </div>
-        </li>
-        <hr>
-        <li class="grid grid-3col">
-            <div>
-                <div class="grid grid-5col">
-                    <label class="grid-span-4" for="def-stun">Defender Stunned</label>
-                    <input  type="checkbox" id="def-stun" name="defStun" value="false"/>
-                </div>
-            </div>
-            <div>
-                <div class="grid grid-5col">
-                    <label class="grid-span-4" for="def-climb">Defender Climbing</label>
-                    <input  type="checkbox" id="def-climb" name="defClimb" value="false"/>
-                </div>
-            </div>
-            <div>
-                <div class="grid grid-5col">
-                    <label class="grid-span-4" for="def-pin">Defender Pinned</label>
-                    <input  type="checkbox" id="def-pin" name="defPin" value="false"/>
-                </div>
-            </div>
-        </li>
-    </ol>
+            {{/if}}
+        </div>
+        <div class="grid grid-2col flex-group-center">
+            <span>Defender's Stance is...</span>
+            <select class="flex-group-center" name="defStance">
+                <option value="+0">Standing</option>
+                {{#if (eq atkType "melee")}}
+                <option value="-4">Kneeling (-4)</option>
+                <option value="-2">Prone (-2)</option>
+                {{else}}
+                <option value="+2">Kneeling (+2)</option>
+                <option value="+4">Prone (+4)</option>
+                {{/if}}
+            </select>
+        </div>
+        <div class="grid grid-4col flex-group-center">
+            <span>Defender Behind...</span>
+            <select class="grid-span-3 flex-group-center" name="defCover">
+                <option value="cov0">No Cover</option>
+                <option value="cov1">1/4 Cover (+3)</option>
+                <option value="cov2">1/2 Cover (+6, 10%)</option>
+                <option value="cov3">3/4 Cover (+9, 20%)</option>
+                <option value="cov4">9/10 Cover (+15, 30%)</option>
+            </select>
+            <span>Defender has...</span>
+            <select class="grid-span-3 flex-group-center" name="defConceal">
+                <option value="0">No Concealment</option>
+                <option value="10">1/4 Concealment (10%)</option>
+                <option value="20">1/2 Concealment (20%)</option>
+                <option value="30">3/4 Concealment (30%)</option>
+                <option value="40">9/10 Concealment (40%)</option>
+                <option value="50">Total Concealment (50%)</option>
+            </select>
+        </div>
+    </fieldset>
+
 </form>

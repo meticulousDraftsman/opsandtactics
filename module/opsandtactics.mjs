@@ -90,6 +90,189 @@ Hooks.once("ready", async function() {
 });
 
 /* -------------------------------------------- */
+/*  Core Check Handling                         */
+/* -------------------------------------------- */
+
+export async function opsCheck(data){
+  // Create the appropriate formula
+  let formula;
+  const messageData = {
+    type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+    from: game.user._id,
+    speaker: data.speaker,
+  }
+  switch (data.checkType){
+    case 'noneAttack':
+    case 'noneUtility':
+      // Just create the chat message and return
+      messageData.content = `<h4>${data.title}</h4><p>${data.flavor}</p>`
+      ChatMessage.create(messageData, {rollMode: data.rollMode})
+      return true;
+    case 'otherUtility':
+      // Don't staple a 3d6 to the start of this roll
+      formula = data.mod;
+      break;
+    case 'ranged':
+    case 'melee':
+      formula = '3d6' + (data.critical ? `[${data.critical}+]` : '') + data.mod;
+      break;
+    default:
+      formula = '3d6' + data.mod;
+      break;
+  }
+  // Create the roll and apply any situational modifiers
+  const roll = new OpsRoll(formula,data);
+  const poppedRoll = await roll.situationalPopup(data);
+  if (poppedRoll===null) return null;
+  // Evaluate Roll and prepare for message creation
+  await poppedRoll.evaluate({async:true});
+  data.critResult = poppedRoll.isCritical;
+  const concealResult = await poppedRoll.concealRoll();
+  messageData.rolls = [poppedRoll];
+  if (concealResult){
+    data.concealResult = concealResult.result;
+    data.concealTip = await concealResult.getTooltip();
+    messageData.rolls.push(concealResult);
+  }
+  else{
+    data.concealResult = null;
+    data.concealTip = null;
+  }
+  data.tooltip = await poppedRoll.getTooltip();
+  data.formula = poppedRoll.formula;
+  data.total = poppedRoll.total;
+  messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/check-roll-card.html',data);
+  ChatMessage.create(messageData, {rollMode: data.rollMode})
+}
+
+export class OpsRoll extends Roll{
+  static get name() {return "Roll"}
+  get isCritical(){
+    if (!this._evaluated) return undefined;
+    if ((this.terms[0] instanceof Die) && (this.terms[0].number==3) && (this.terms[0].faces==6)){
+      return (this.dice[0].total >= this.data.critical)
+    }
+    else {
+      return undefined;
+    }
+  }
+
+  async concealRoll(){
+    if (this.data?.missChance > 0){
+      const missRoll = await new Roll(`1d100cs>${this.data.missChance}`).evaluate({async:true});
+      return missRoll;
+    }
+    else {
+      return null;
+    }
+  }
+
+  async situationalPopup(data){
+    let template;
+    let templateData;
+    switch (data.checkType){
+      case 'ranged':
+      case 'melee':
+        template = 'systems/opsandtactics/templates/interface/dialog-attack.html';
+        templateData = {
+          formula: this.formula,
+          atkType: data.checkType,
+        }
+        break;
+      case 'save':
+        console.debug('need to implement')
+        break;
+      default:
+        template = 'systems/opsandtactics/templates/interface/dialog-utility.html';
+        templateData = {
+          formula: this.formula
+        }
+        break;
+    }
+    const content = await renderTemplate(template,templateData);
+    return new Promise(resolve => {
+      new Dialog({
+        title: data.title,
+        content,
+        buttons: {
+          roll: {
+            label: "Roll",
+            callback: html => resolve(this._submitPopup(html,data))
+          }
+        },
+        close: () => resolve(null)
+      }).render(true,{width:520});
+    });
+  }
+
+  async _submitPopup(html,data){
+    const form = html[0].querySelector("form");
+    switch (data.checkType){
+      case 'ranged':
+      case 'melee':
+        let atkBon = 0;
+        atkBon += form.atkHigh.checked?Number(form.atkHigh.value):0;
+        atkBon += form.atkSeen.checked?Number(form.atkSeen.value):0;
+        atkBon += Number(form.atkFlank.value);
+        atkBon += Number(form.atkStance.value);
+        atkBon += Number(form.atkFace.value);
+        let defBon = 0;
+        defBon += form.defStun.checked?Number(form.defStun.value):0;
+        defBon += form.defClimb.checked?Number(form.defClimb.value):0;
+        defBon += form.defPin.checked?Number(form.defPin.value):0;
+        defBon += Number(form.defStance.value);
+        let missChance = 0;
+        switch (form.defCover.value){
+          case 'cov0':
+            break;
+          case 'cov1':
+            defBon += 3;
+            break;
+          case 'cov2':
+            defBon += 6;
+            missChance = 10;
+            break;
+          case 'cov3':
+            defBon += 9;
+            missChance = 20;
+            break;
+          case 'cov4':
+            defBon += 15;
+            missChance = 30;
+            break;
+        }
+        data.missChance = Math.max(missChance, Number(form.defConceal.value));
+        if (form.sitBon.value){
+          const situation = new Roll(form.sitBon.value,this.data);
+          if(!(situation.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
+          this.terms = this.terms.concat(situation.terms);
+        }
+        if (atkBon != 0){
+          const attacker = new Roll(`+(${atkBon})`,this.data);
+          this.terms = this.terms.concat(attacker.terms);
+        }
+        if (defBon != 0){
+          const defender = new Roll(`-(${defBon})`,this.data);
+          this.terms = this.terms.concat(defender.terms);
+        }
+        this._formula = this.constructor.getFormula(this.terms);
+        break;
+      case 'save':
+        break;
+      default:
+        if (form.sitBon.value){
+          const situation = new Roll(form.sitBon.value,this.data);
+          if(!(situation.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
+          this.terms = this.terms.concat(situation.terms);
+        }
+        this._formula = this.constructor.getFormula(this.terms);
+        break;  
+    }
+    return this;
+  }
+}
+
+/* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
