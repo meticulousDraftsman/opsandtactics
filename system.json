@@ -9,12 +9,43 @@
         "maximum": 10
     },
     "authors": [{
-        "name": "Conscript Gary"
+        "name": "Conscript Gary aka meticulousDraftsman"
     }],
     "esmodules":["module/opsandtactics.mjs"],
     "styles":["css/opsandtactics.css"],
     "scripts":[],
-    "packs":[],
+    "packs":[
+        {
+            "name": "system-reference",
+            "label": "System Reference",
+            "path": "packs/system-reference.db",
+            "type": "JournalEntry"
+        },
+        {
+            "name": "core-feats",
+            "label": "Core Feats",
+            "path": "packs/core-feats.db",
+            "type": "Item"
+        },
+        {
+            "name": "core-weapons",
+            "label": "Core Weapons",
+            "path": "packs/core-weapons.db",
+            "type": "Item"
+        },
+        {
+            "name": "mm-races",
+            "label": "MM Races",
+            "path": "packs/mm-races.db",
+            "type": "Item"
+        },
+        {
+            "name": "aa-races",
+            "label": "AA Races",
+            "path": "packs/aa-races.db",
+            "type": "Item"
+        }
+    ],
 
     "languages":[
         {
@@ -27,8 +58,8 @@
     "gridUnits": "ft",
     "primaryTokenAttribute": "health.xhp",
     "secondaryTokenAttribute": "health.chp",
-    "url": "",
-    "manifest": "",
+    "url": "https://github.com/meticulousDraftsman/opsandtactics",
+    "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
     "download": "",
     "license": "",
     "changelog": ""
