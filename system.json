@@ -59,8 +59,8 @@
     "primaryTokenAttribute": "health.xhp",
     "secondaryTokenAttribute": "health.chp",
     "url": "https://github.com/meticulousDraftsman/opsandtactics",
-    "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "https://github.com/meticulousDraftsman/opsandtactics/releases/latest/download/latest.zip",
+    "manifest": "https://github.com/meticulousDraftsman/opsandtactics/releases/latest/module.json",
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/releases/latest/download/latest/module.zip",
     "license": "",
     "changelog": ""
 }
