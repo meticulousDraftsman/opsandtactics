@@ -60,7 +60,7 @@
     "secondaryTokenAttribute": "health.chp",
     "url": "https://github.com/meticulousDraftsman/opsandtactics",
     "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "",
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/latest.zip",
     "license": "",
     "changelog": ""
 }
