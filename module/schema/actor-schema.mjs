@@ -20,7 +20,7 @@ class Health extends foundry.abstract.DataModel {
             }),
             chp: new field.SchemaField({
                 value: new field.NumberField({initial:12}),
-                formula: new field.StringField({initial:"@con.score+2"}),
+                formula: new field.StringField({initial:"(@con.score)+2"}),
                 mods: new field.EmbeddedDataField(Mods)
             }),
             temp: new field.NumberField({initial:0}),
@@ -71,7 +71,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                     })
                 }),
                 carrying: new field.SchemaField({
-                    formula: new field.StringField({initial:"@str.score*4"}),
+                    formula: new field.StringField({initial:"(@str.score)*4"}),
                     mods: new field.EmbeddedDataField(Mods),
                 })
             }),

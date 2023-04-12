@@ -115,26 +115,18 @@ export class OpsActor extends Actor {
     systemData.wealth.capital.personal.total = (5*(systemData.stats.level.value+1))+systemData.abilities.cha.score;
     // Calculate Hit Points
     const rollData = this.getRollData({deterministic:true});
-    try{
-      systemData.health.chp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.chp.formula,rollData)) + systemData.health.chp.mods.total;
-    }
-    catch{systemData.health.chp.max = 0;  }
-    try{
-      systemData.health.xhp.max = Roll.safeEval(Roll.replaceFormulaData(systemData.health.xhp.formula,rollData)) + systemData.health.xhp.mods.total;
-    }
-    catch{systemData.health.xhp.max = 0;}
+    const chpRoll = new Roll(systemData.health.chp.formula,rollData);
+    systemData.health.chp.max = chpRoll.isDeterministic ? chpRoll.evaluate({async:false}).total + systemData.health.chp.mods.total : 0;
+    const xhpRoll = new Roll(systemData.health.xhp.formula,rollData);
+    systemData.health.xhp.max = xhpRoll.isDeterministic ? xhpRoll.evaluate({async:false}).total + systemData.health.xhp.mods.total : 0;
     // Calculate Carrying Capacity
-    try{
-      systemData.stats.carrying.light = Roll.safeEval(Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData)) + systemData.stats.carrying.mods.total;
-    }
-    catch{systemData.stats.carrying.light = 0;}
+    const carryRoll = new Roll(systemData.stats.carrying.formula,rollData);
+    systemData.stats.carrying.light = carryRoll.isDeterministic ? carryRoll.evaluate({async:false}).total + systemData.stats.carrying.mods.total : 0;
     systemData.stats.carrying.medium = systemData.stats.carrying.light*2;
     systemData.stats.carrying.heavy = systemData.stats.carrying.light*3;
     // Calculate Mental Limit
-    try{
-      systemData.ml.max = Roll.safeEval(Roll.replaceFormulaData(systemData.ml.formula,rollData)) + systemData.ml.mods.total + systemData.ml.temp;
-    }
-    catch{systemData.ml.max = 0;}
+    const mlRoll = new Roll(systemData.ml.formula,rollData);
+    systemData.ml.max = mlRoll.isDeterministic ? mlRoll.evaluate({async:false}).total + systemData.ml.mods.total + systemData.ml.temp : 0;
     systemData.magic.mlPsion = systemData.magic.psionFocus?((2*systemData.stats.level.value)+25):0;
     systemData.magic.mlRecipe = ((3*systemData.stats.level.value)+3)*systemData.magic.memorizedSets;
     systemData.magic.mlObject = 0;
