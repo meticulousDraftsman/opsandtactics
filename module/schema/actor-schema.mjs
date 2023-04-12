@@ -122,17 +122,17 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             }),
             saves: new field.SchemaField({
                 fortitude: new field.SchemaField({
-                    base: new field.NumberField({initial:10}),
+                    base: new field.NumberField({initial:0}),
                     mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 }),
                 reflex: new field.SchemaField({
-                    base: new field.NumberField({initial:10}),
+                    base: new field.NumberField({initial:0}),
                     mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 }),
                 will: new field.SchemaField({
-                    base: new field.NumberField({initial:10}),
+                    base: new field.NumberField({initial:0}),
                     mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 })
