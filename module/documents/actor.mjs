@@ -152,14 +152,15 @@ export class OpsActor extends Actor {
     //systemData.xp = (systemData.cr * systemData.cr) * 100;
   }
   
-  async rollActorCheck(checkID){
+  async rollActorCheck(checkID,event=undefined){
     const rollData = this.getRollData();
     const rollConfig = {
       actor: this,
       data: rollData,
       flavor: null,
       speaker: ChatMessage.getSpeaker({actor: this}),
-      rollMode: game.settings.get('core', 'rollMode')
+      rollMode: game.settings.get('core', 'rollMode'),
+      popupSkip: (event && event.shiftKey)
     }
     switch (checkID){
       case 'fortitude':

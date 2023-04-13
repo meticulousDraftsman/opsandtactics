@@ -522,18 +522,18 @@ export class OpsActorSheet extends ActorSheet {
     const itemID = event.currentTarget.dataset.itemId;
     const actionID = event.currentTarget.dataset.actionId;
     const item = this.actor.items.get(itemID);
-    item.rollActionCheck(actionID);
+    item.rollActionCheck(actionID,event);
   }
   _skillCheck(event){
     event.preventDefault();
     const itemID = event.currentTarget.dataset.itemId;
     const item = this.actor.items.get(itemID);
-    item.rollSkillCheck();
+    item.rollSkillCheck(event);
   }
   _actorCheck(event){
     event.preventDefault();
     const checkID = event.currentTarget.dataset.checkId;
-    this.actor.rollActorCheck(checkID)
+    this.actor.rollActorCheck(checkID,event)
   }
   async _actorRoll(event){
     event.preventDefault();

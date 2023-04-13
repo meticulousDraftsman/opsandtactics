@@ -69,7 +69,7 @@ export class OpsItem extends Item {
     }
   }
 
-  async rollActionCheck(actionID){
+  async rollActionCheck(actionID,event=undefined){
     // Check resource consumption and override
     let ammoCheck = this.resourceAvailableCheck(getProperty(this,`system.actions.${actionID}.ammo`))
     if (!ammoCheck){
@@ -94,7 +94,8 @@ export class OpsItem extends Item {
       flavor: getProperty(this,`system.actions.${actionID}.check.flavor`),
       checkType: getProperty(this,`system.actions.${actionID}.check.type`),
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
-      rollMode: game.settings.get('core', 'rollMode')
+      rollMode: game.settings.get('core', 'rollMode'),
+      popupSkip: (event && event.shiftKey)
     }
 
     // Execute roll
@@ -105,7 +106,7 @@ export class OpsItem extends Item {
     await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`))
     return roll;
   }
-  async rollSkillCheck(){
+  async rollSkillCheck(event=undefined){
     const rollData = this.actor.getRollData();
     const rollConfig = {
       mod: this.skillSum().total,
@@ -115,7 +116,8 @@ export class OpsItem extends Item {
       flavor: null,
       checkType: 'skill',
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
-      rollMode: game.settings.get('core', 'rollMode')
+      rollMode: game.settings.get('core', 'rollMode'),
+      popupSkip: (event && event.shiftKey)
     }
     const roll = await opsCheck(rollConfig);
     if (roll==null) return null;

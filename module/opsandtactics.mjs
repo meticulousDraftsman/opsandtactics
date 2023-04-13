@@ -122,8 +122,14 @@ export async function opsCheck(data){
   }
   // Create the roll and apply any situational modifiers
   const roll = new OpsRoll(formula,data);
-  const poppedRoll = await roll.situationalPopup(data);
-  if (poppedRoll===null) return null;
+  let poppedRoll;
+  if (data.popupSkip){
+    poppedRoll = roll;
+  }
+  else {
+    poppedRoll = await roll.situationalPopup(data);
+    if (poppedRoll===null) return null;
+  }
   // Evaluate Roll and prepare for message creation
   await poppedRoll.evaluate({async:true});
   data.critResult = poppedRoll.isCritical;
