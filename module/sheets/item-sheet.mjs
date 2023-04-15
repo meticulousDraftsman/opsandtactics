@@ -57,6 +57,7 @@ export class OpsItemSheet extends ItemSheet {
     const magazines = [{label:"Unloaded",id:""}];
     const importableMods = {};
     if (itemData.type === 'weapon'){
+      // Build list of usable object resources for weapons
       if(actor){
         for(let i of actor.items){
           switch (itemData.system.magazine.type){
@@ -78,11 +79,10 @@ export class OpsItemSheet extends ItemSheet {
           }
         }
       }
-
+      // Parse weapon mods from journal entries in the world
       let worldWepMods = game.journal.filter(entry => entry.name.includes('Weapon Mods'));
       let strip;
       let entries;
-      let fromPack;
       for (let [,je] of worldWepMods.entries()){
         for (let [,pe] of je.pages.entries()){
           if (pe.type!=='text') continue;
@@ -102,6 +102,7 @@ export class OpsItemSheet extends ItemSheet {
           }
         }
       }
+      // Parse weapon mods from journal entries in compendiums
       let journalPacks = game.packs.filter(entry => entry.metadata.type==='JournalEntry');
       for (let jp of journalPacks){
         for (let je of jp.index){
@@ -127,23 +128,24 @@ export class OpsItemSheet extends ItemSheet {
           }
         }
       }
-      
+      // Prep data for addition to the weapon based on the currently-selected mod
       let tempMod = systemData.importMod.split(',');
       itemData.readyMod = {
         name:(tempMod[0] ? tempMod[0].trim() : 'New Mod'),
-        hit:(tempMod[1] ? tempMod[1].trim() : null),
-        damage:(tempMod[2] ? tempMod[2].trim() : null),
+        check:(tempMod[1] ? tempMod[1].trim() : null),
+        effect:(tempMod[2] ? tempMod[2].trim() : null),
         recoil:(tempMod[3] ? tempMod[3].trim() : null),
         cp:(tempMod[4] ? tempMod[4].trim() : null),
         description:(tempMod[5] ? tempMod[5].trim() : null),
       }
-
+      // Tally modifiers for each attack
       for(let [,a] of Object.entries(itemData.system.actions)){
         a.mods = context.item.actionSum(a);
       }
     }
     const sourceSkills = [{label:"None",id:""}];
     if (itemData.type === 'object'){
+      // Build list of usable object resources or skill items for objects
       if(actor){
         for (let i of actor.items){
           if (i.type==='skill') sourceSkills.push({label:i.name,id:i.id})
@@ -168,6 +170,7 @@ export class OpsItemSheet extends ItemSheet {
     }
     const sourceMagics = [{name:"None",id:""}];
     if (itemData.type==='magic'){
+      // Build list of usable object resources for magic
       if(actor && itemData.system.magazine.type==='external'){
         for(let i of actor.items){
           if(getProperty(i,'system.gear.resources')){
@@ -180,6 +183,7 @@ export class OpsItemSheet extends ItemSheet {
     }
     const containers = [{name:"Loose",id:"Loose"},{name:"Worn",id:"Worn"},{name:"Carried",id:"Carried"},{name:"Stored",id:"Stored"}];
     if (actor){
+      // Build list of potential parent containers for a physical item
       for (let i of actor.items){
         if (i.system.gear?.physical && i._id != this.object._id) {
           containers.push(i);
@@ -284,7 +288,7 @@ export class OpsItemSheet extends ItemSheet {
     this.object.update({'system.importMod':''});
   }
 
-  _subCreation(event){
+  async _subCreation(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
     const target = dataset.targetName;
@@ -292,11 +296,13 @@ export class OpsItemSheet extends ItemSheet {
     const updateData = {};
     let newProp;
     switch(target){
-        case 'check':
-        case 'effect':
-        case 'recoil':
-        case 'cp':
-        setProperty(updateData,`system.actions.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
+      case 'check':
+      case 'effect':
+      case 'recoil':
+      case 'cp':
+        if (isEmpty(this.object.system.weaponMods)) return null;
+        await this._addAttackMod(updateData,preTarget, target);
+        //setProperty(updateData,`system.actions.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
         break;
       case 'skillMods':
         newProp = new SkillMod;
@@ -339,6 +345,47 @@ export class OpsItemSheet extends ItemSheet {
         break;
     }
     this.object.update(updateData);
+  }
+  async _addAttackMod(updateData,preTarget,target){
+    const template = 'systems/opsandtactics/templates/interface/dialog-wepmod-select.html';
+    const content = await renderTemplate(template,{
+      type: target,
+      wepmods: this.object.system.weaponMods
+    });
+    let flavor;
+    switch (target){
+      case 'check':
+        flavor = 'to-hit';
+        break;
+      case 'effect':
+        flavor = 'damage';
+        break;
+      case 'recoil':
+        flavor = 'recoil';
+        break;
+      case 'cp':
+        flavor = 'combat point';
+        break;        
+    }
+    const title = `Add ${flavor} mod for ${this.object.system.actions[preTarget].name}`;
+    return new Promise(resolve => {
+      new Dialog({
+        title: title,
+        content,
+        buttons: {
+          add: {
+            label: "Add Selected",
+            callback: html => resolve(this._submitAttackMod(html,updateData,preTarget,target))
+          }
+        },
+        close: () => resolve(null)
+      }).render(true,{width:520});
+    });
+  }
+  async _submitAttackMod(html,updateData,preTarget,target){
+    const form = html[0].querySelector("form");
+    if (form.chooseMod.value==="null") return null;
+    setProperty(updateData,`system.actions.${preTarget}.${target}.mods.${form.chooseMod.value}`,{});
   }
   _subDeletion(event){
     event.preventDefault();

@@ -38,11 +38,11 @@ export class OpsItem extends Item {
       a.type = 'attack';
        for (let [key,entry] of Object.entries(a.check.mods)){
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
-        entry.value = systemData.weaponMods?.[key]?.hit ?? null;
+        entry.value = systemData.weaponMods?.[key]?.check ?? null;
        }
        for (let [key,entry] of Object.entries(a.effect.mods)){
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
-        entry.value = systemData.weaponMods?.[key]?.damage ?? null;
+        entry.value = systemData.weaponMods?.[key]?.effect ?? null;
        }
        for (let [key,entry] of Object.entries(a.recoil.mods)){
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
@@ -263,7 +263,7 @@ export class OpsItem extends Item {
     mods.cp = sourceAction.cp.inherent?sourceAction.cp.inherent:null;
     if (hasProperty(sourceAction,'cp.mods')){
       for (let [,p] of Object.entries(sourceAction.cp.mods)){
-        mods.cp += p.value;
+        mods.cp += p.value || 0;
       }
     }
     // Handle Ammo and CP/Ammo Label
@@ -398,19 +398,6 @@ export class OpsItem extends Item {
     return mods;    
   }
 
-  labelMake(){
-    let label = this.name;
-    switch(this.type){
-      case 'magazine':
-        label = `${this.name} [${this.system.magazine.value}/${this.system.magazine.max}]`;
-        if (this.system.magazine.type==='coolant') label = `[${this.system.coolant.hot?'Hot':'Cool'}] ${this.name}`;
-        break;
-      default:
-        break;      
-    }
-    return label;
-  }
-
   /**
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private
@@ -479,9 +466,6 @@ export class OpsItem extends Item {
         break;
       case 'skill':
         updates["img"] = "icons/sundries/books/book-stack.webp";
-        break;
-      case 'magazine':
-        updates["img"] = "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp";
         break;
       case 'feature':
         updates["img"] = "icons/skills/trades/gaming-gambling-dice-gray.webp";

@@ -105,8 +105,8 @@ export class WeaponMod extends foundry.abstract.DataModel{
         return{
             name: new field.StringField({nullable:false}),
             description: new field.StringField(),
-            hit: new field.StringField({initial:null,nullable:true}),
-            damage: new field.StringField({initial:null,nullable:true}),
+            check: new field.StringField({initial:null,nullable:true}),
+            effect: new field.StringField({initial:null,nullable:true}),
             recoil: new field.NumberField({initial:null,nullable:true}),
             cp: new field.NumberField({initial:null,nullable:true})
         }

@@ -1,0 +1,7 @@
+<form class="opsandtactics">
+    <select class="flex-group-center" name="chooseMod">
+        {{#each wepmods}}
+        <option value="{{@key}}">{{this.name}}: {{lookup this @root.type}}</option>
+        {{/each}}
+    </select>
+</form>
