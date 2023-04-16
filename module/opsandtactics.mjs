@@ -149,6 +149,7 @@ export async function opsCheck(data){
   data.total = poppedRoll.total;
   messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/check-roll-card.html',data);
   ChatMessage.create(messageData, {rollMode: data.rollMode})
+  return poppedRoll;
 }
 
 export class OpsRoll extends Roll{
