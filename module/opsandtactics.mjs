@@ -88,6 +88,7 @@ Hooks.once("ready", async function() {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
 });
+Hooks.on("getChatLogEntryContext", addChatContext);
 
 /* -------------------------------------------- */
 /*  Core Check Handling                         */
@@ -292,6 +293,40 @@ export class OpsRoll extends Roll{
     return this;
   }
 }
+
+// Taken from 5e
+function addChatContext(html, options){
+  let canApply = li => {
+    const message = game.messages.get(li.data("messageId"));
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length;
+  };
+  options.push(
+    {
+      name: 'Add to incoming damage',
+      icon: '<i class="fas fa-heart-broken"></i>',
+      condition: canApply,
+      callback: li => applyChatDamage(li, 1)
+    },
+    {
+      name: 'Add half to incoming damage',
+      icon: '<i class="fas fa-heart"></i>',
+      condition: canApply,
+      callback: li => applyChatDamage(li, 0.5)
+    }
+  );
+  return options;
+}
+function applyChatDamage(li, multiplier) {
+  const message = game.messages.get(li.data("messageId"));
+  const roll = message.rolls[0];
+  return Promise.all(canvas.tokens.controlled.map(t => {
+    const a = t.actor;
+    if (!a.isOwner) return a;
+    const updateData = {['system.health.incoming']:getProperty(a,'system.health.incoming')+Math.floor(Number(roll.total)*multiplier)};
+    return a.update(updateData);
+  }));
+}
+
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
