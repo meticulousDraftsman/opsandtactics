@@ -70,7 +70,7 @@
       <div class="grid-span-2 flex-group-left">
           <a class="item-control item-edit" data-item-id="{{this._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{this.name}}</a>
       </div>
-      <select class="grid-span-4 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" data-tooltip="Select Damage Reduction" value="{{this.activeDR}}" data-dtype="Number">
+      <select class="grid-span-4 item-input" data-target-prop="system.activeDR" data-target-id="{{this._id}}" data-tooltip="Select Damage Reduction" value="{{this.system.activeDR}}" data-dtype="String">
         {{#select this.system.activeDR}}
           <option value="None">None</option>
           {{#each this.system.protection}}
