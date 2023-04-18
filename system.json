@@ -28,9 +28,15 @@
             "type": "Item"
         },
         {
-            "name": "core-weapons",
-            "label": "Core Weapons",
-            "path": "packs/core-weapons.db",
+            "name": "core-ranged-weapons",
+            "label": "Core Ranged Weapons",
+            "path": "packs/core-ranged-weapons.db",
+            "type": "Item"
+        },
+        {
+            "name": "core-armors",
+            "label": "Core Armors",
+            "path": "packs/core-armors.db",
             "type": "Item"
         },
         {
@@ -40,9 +46,21 @@
             "type": "Item"
         },
         {
+            "name": "mm-armors",
+            "label": "MM Armors",
+            "path": "packs/mm-armors.db",
+            "type": "Item"
+        },
+        {
             "name": "aa-races",
             "label": "AA Races",
             "path": "packs/aa-races.db",
+            "type": "Item"
+        },
+        {
+            "name": "aa-armors",
+            "label": "AA Armors",
+            "path": "packs/aa-armors.db",
             "type": "Item"
         }
     ],
