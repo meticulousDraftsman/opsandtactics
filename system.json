@@ -2,7 +2,7 @@
     "id": "opsandtactics",
     "title": "Ops and Tactics",
     "description": "A FoundryVTT implementation of O&T",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "compatibility": {
         "minimum": 10,
         "verified": "10.291",
@@ -34,6 +34,24 @@
             "type": "Item"
         },
         {
+            "name": "core-melee-weapons",
+            "label": "Core Melee Weapons",
+            "path": "packs/core-melee-weapons.db",
+            "type": "Item"
+        },
+        {
+            "name": "core-archaic-weapons",
+            "label": "Core Archaic Melee Weapons",
+            "path": "packs/core-archaic-weapons.db",
+            "type": "Item"
+        },
+        {
+            "name": "core-firearms",
+            "label": "Core Firearms",
+            "path": "packs/core-firearms.db",
+            "type": "Item"
+        },
+        {
             "name": "core-armors",
             "label": "Core Armors",
             "path": "packs/core-armors.db",
@@ -43,6 +61,12 @@
             "name": "mm-races",
             "label": "MM Races",
             "path": "packs/mm-races.db",
+            "type": "Item"
+        },
+        {
+            "name": "mm-melee-weapons",
+            "label": "MM Melee Weapons",
+            "path": "packs/mm-melee-weapons.db",
             "type": "Item"
         },
         {
@@ -58,9 +82,21 @@
             "type": "Item"
         },
         {
+            "name": "aa-melee-weapons",
+            "label": "AA Melee Weapons",
+            "path": "packs/aa-melee-weapons.db",
+            "type": "Item"
+        },
+        {
             "name": "aa-armors",
             "label": "AA Armors",
             "path": "packs/aa-armors.db",
+            "type": "Item"
+        },
+        {
+            "name": "weapon-templates",
+            "label": "Weapon Templates",
+            "path": "packs/weapon-templates.db",
             "type": "Item"
         }
     ],
@@ -78,7 +114,7 @@
     "secondaryTokenAttribute": "health.chp",
     "url": "https://github.com/meticulousDraftsman/opsandtactics",
     "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.2.zip",
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.3.zip",
     "license": "",
     "changelog": ""
 }
