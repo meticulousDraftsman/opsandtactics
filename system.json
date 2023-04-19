@@ -9,7 +9,8 @@
         "maximum": 10
     },
     "authors": [{
-        "name": "Conscript Gary aka meticulousDraftsman"
+        "name": "Draft",
+        "url": "https://foundryvtt.com/community/draftsman"
     }],
     "esmodules":["module/opsandtactics.mjs"],
     "styles":["css/opsandtactics.css"],
@@ -114,7 +115,5 @@
     "secondaryTokenAttribute": "health.chp",
     "url": "https://github.com/meticulousDraftsman/opsandtactics",
     "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.3.zip",
-    "license": "",
-    "changelog": ""
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.3.zip"
 }
