@@ -249,7 +249,7 @@ export class OpsActor extends Actor {
    * Takes damage and applies it to the targeted protection
    * @param {String} target item id or actor health pool to apply damage to
    */
-  async applyDamage(target){
+  async applyDamage(target,event=null){
     //console.debug(this.system.health.damageReport)
     //console.debug(ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id)
     let incoming = this.system.health.incoming ?? 0;
@@ -267,6 +267,7 @@ export class OpsActor extends Actor {
     let report = ``;
     let max = -1;
     let drItem;
+    let offenseResult;
     // Gather dr and pool data from target
     switch(target){
       case 'xhp':
@@ -308,14 +309,27 @@ export class OpsActor extends Actor {
       case 'shield':
         if (max == 0) break;
         if(remaining == 0) return null;
+        if (!event?.shiftKey){
+          offenseResult = await this.bladePopup();
+        }
+        else {
+          offenseResult = 0;
+        }
+        if (offenseResult==-1) return null;
+        if (offenseResult==0){
+          offenseResult = 1;
+        }
+        else {
+          dr=0;
+        }
         if (incoming <= dr){
           report = `${drItem.name} diffuses damage completely.`
           incoming = 0;
         }
         else{
-          reduced = Math.min(incoming-dr,remaining);
+          reduced = Math.min((incoming-dr)*offenseResult,remaining);
           remaining -= reduced;
-          incoming -= (reduced+dr);
+          incoming -= Math.ceil((reduced+dr)/offenseResult);
           if(remaining == 0){
             report = `${drItem.name} reduces damage by ${reduced+dr} and is disabled, ${incoming} damage remains.`
           }
@@ -328,9 +342,18 @@ export class OpsActor extends Actor {
       default:
         if (max == 0) break;
         if(remaining == 0) return null;
-        reduced = Math.min(incoming,Math.min(dr,remaining));
+        if (!event?.shiftKey) {
+          offenseResult = await this.maulPopup();
+        }
+        else {
+          offenseResult = {ignore:0,mult:1};
+        }
+        if (offenseResult==-1) return null;
+        const ignore = offenseResult.ignore;
+        const mult = offenseResult.mult;
+        reduced = Math.min(incoming*mult,Math.min((dr-ignore)*mult,remaining));
         remaining -= reduced;
-        incoming -= reduced;
+        incoming -= Math.ceil(reduced/mult);
         if(remaining == 0){
           report = `${drItem.name} reduces damage by ${reduced} and is depleted, ${incoming} damage remains.`
         }
@@ -385,6 +408,38 @@ export class OpsActor extends Actor {
     return report;
   }
   
+  async bladePopup(){
+    const content = await renderTemplate('systems/opsandtactics/templates/interface/dialog-blades.html');
+    return new Promise(resolve => {
+      new Dialog({
+        title: "Skilled Plas- or Psibladist?",
+        content,
+        buttons: {
+          apply: {
+            label: "Apply Form",
+            callback: html => resolve(Number(html[0].querySelector("form").bladeForm.value))
+          }
+        },
+        close: () => resolve(-1)
+      }).render(true,{width:260});
+    });
+  }
+  async maulPopup(){
+    const content = await renderTemplate('systems/opsandtactics/templates/interface/dialog-mauls.html');
+    return new Promise(resolve => {
+      new Dialog({
+        title: "Extra Armor Destruction?",
+        content,
+        buttons: {
+          apply: {
+            label: "Apply Impact",
+            callback: html => resolve({ignore:Number(html[0].querySelector("form").drIgnore.value),mult:Number(html[0].querySelector("form").apMult.value)})
+          }
+        },
+        close: () => resolve(-1)
+      }).render(true,{width:260});
+    });
+  }
 
   /**
    * Override getRollData() that's supplied to rolls.

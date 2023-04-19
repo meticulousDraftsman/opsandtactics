@@ -517,7 +517,7 @@ export class OpsActorSheet extends ActorSheet {
   async _onApplyDamage(event) {
     event.preventDefault();
     const dataset = event.currentTarget.dataset 
-    const report = this.actor.applyDamage(dataset.target);
+    const report = this.actor.applyDamage(dataset.target,event);
   };
   async _incantRegain(event){
     event.preventDefault();
