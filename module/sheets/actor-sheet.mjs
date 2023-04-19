@@ -282,31 +282,34 @@ export class OpsActorSheet extends ActorSheet {
     // Crazy Container Nesting
     const locations = ["Loose","Worn","Carried","Stored"];
     // Initialize children of layer 0 items
-    const nestedGear = {Loose:[],Worn:[],Carried:[],Stored:[]}
+    const nestedGear = {Loose:{children:[],weight:null},Worn:{children:[],weight:null},Carried:{children:[],weight:null},Stored:{children:[],weight:null}};
     for (let layer0 of locations){
       for (let i = 0; i < gear.length; i++){
         if (gear[i].system.gear.location.parent == layer0){
-          nestedGear[layer0].push(gear[i]);
+          nestedGear[layer0].children.push(gear[i]);
+          nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
           gearFail[i]=undefined;
         }
       }
     }
     for (let layer0 of locations){
-      for (let layer1 of nestedGear[layer0]){
+      for (let layer1 of nestedGear[layer0].children){
         for (let i = 0; i < gear.length; i++){
           if (gear[i].system.gear.location.parent == layer1._id){
             layer1.children.push(gear[i]);
+            nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
             gearFail[i]=undefined;
           }
         }
       }
     }
     for (let layer0 of locations){
-      for (let layer1 of nestedGear[layer0]){
+      for (let layer1 of nestedGear[layer0].children){
         for (let layer2 of layer1.children){
           for (let i = 0; i < gear.length; i++){
             if (gear[i].system.gear.location.parent == layer2._id){
               layer2.children.push(gear[i]);
+              nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
               gearFail[i]=undefined;
             }
           }
@@ -314,12 +317,13 @@ export class OpsActorSheet extends ActorSheet {
       }
     }
     for (let layer0 of locations){
-      for (let layer1 of nestedGear[layer0]){
+      for (let layer1 of nestedGear[layer0].children){
         for (let layer2 of layer1.children){
           for (let layer3 of layer2.children){
             for (let i = 0; i < gear.length; i++){
               if (gear[i].system.gear.location.parent == layer3._id){
                 layer3.children.push(gear[i]);
+                nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
                 gearFail[i]=undefined;
               }
             }
@@ -329,13 +333,14 @@ export class OpsActorSheet extends ActorSheet {
     }
     for (let i of gearFail){
       if (i != undefined){
-        nestedGear.Loose.push(i);
+        nestedGear.Loose.children.push(i);
+        nestedGear.Loose.weight += Math.max((i.system.gear.quantity.value * i.system.gear.weight),0);
       }
     }
 
     // Purge Empty Gear Layers
     for (let [key,layer] of Object.entries(nestedGear)){
-      if (layer.length == 0 && key != 'Loose') delete nestedGear[key];
+      if (layer.children.length == 0 && key != 'Loose') delete nestedGear[key];
     }       
 
     // Assign and return
