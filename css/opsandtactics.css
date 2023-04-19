@@ -282,6 +282,11 @@
   color: green;
 }
 
+.opsandtactics .agi-limited{
+  color:maroon;
+  border-color:maroon;
+}
+
 .opsandtactics .item-form {
   font-family: "Roboto", sans-serif;
 }

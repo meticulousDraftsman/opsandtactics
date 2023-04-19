@@ -102,7 +102,9 @@ export class OpsActorSheet extends ActorSheet {
       {value:3,label:'+3 Init, -6 CP and Atk'},
       {value:4,label:'+4 Init, -10 CP and Atk'},
       {value:5,label:'+5 Init, -15 CP and Atk'}
-    ]
+    ];
+    // Check if agility is being limited by armor
+    context.agiLimited = ((systemData.abilities.dex.mrk + systemData.abilities.dex.agi)<systemData.abilities.dex.mod)?'agi-limited':'';
   }
   
 
