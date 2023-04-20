@@ -54,7 +54,7 @@ export class OpsItemSheet extends ItemSheet {
 
     context.effects = prepareActiveEffectCategories(this.item.effects);
     // Enrich description text
-    context.enrichDescription = TextEditor.enrichHTML(systemData.description);
+    context.enrichDescription = await TextEditor.enrichHTML(systemData.description,{async:true});
     
     const magazines = [{label:"Unloaded",id:""}];
     const importableMods = {};

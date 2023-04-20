@@ -8,8 +8,9 @@
             <fieldset class="action-item">
                 <legend class="action-legend">
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
+                    <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-5col">
+                <div class="grid grid-5col {{#if item.system.minimized}}collapse{{/if}}">
                     <div class="grid-span-2">
                         <div class="grid grid-5col flex-group-center">
                             <span>Crit</span>
@@ -76,8 +77,9 @@
             <fieldset class="action-item">
                 <legend class="action-legend">
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
+                    <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-5col">
+                <div class="grid grid-5col {{#if item.system.minimized}}collapse{{/if}}">
                     <div class="grid-span-2">
                         <div class="grid grid-5col flex-group-center">
                             <span>Crit</span>
@@ -123,8 +125,9 @@
             <fieldset class="action-item">
                 <legend class="action-legend">
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
+                    <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-5col">
+                <div class="grid grid-5col {{#if item.system.minimized}}collapse{{/if}}">
                     <div class="grid-span-2">
                         <div class="grid grid-5col flex-group-center">
 

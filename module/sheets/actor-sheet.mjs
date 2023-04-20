@@ -44,7 +44,7 @@ export class OpsActorSheet extends ActorSheet {
   }
 
   /** @override */
-  getData() {
+  async getData() {
     //console.debug('actor-sheet getData')
     // Retrieve the data structure from the base sheet. You can inspect or log
     // the context variable to see the structure, but some key properties for
@@ -90,7 +90,7 @@ export class OpsActorSheet extends ActorSheet {
    *
    * @return {undefined}
    */
-  _prepareCharacterData(context) {
+  async _prepareCharacterData(context) {
     const systemData = context.system;
     // Determine XP required for the next level
     systemData.stats.level.xp.needed =`${Number(systemData.stats.level.xp.value).toLocaleString()} / ${Number(systemData.stats.level.value*systemData.stats.level.value*1500).toLocaleString()}xp`;
@@ -106,8 +106,8 @@ export class OpsActorSheet extends ActorSheet {
     // Check if agility is being limited by armor
     context.agiLimited = ((systemData.abilities.dex.mrk + systemData.abilities.dex.agi)<systemData.abilities.dex.mod)?'agi-limited':'';
     // Enrich Asset Notes and Biography
-    context.enrichGear = TextEditor.enrichHTML(systemData.wealth.description);
-    context.enrichBio = TextEditor.enrichHTML(systemData.details.biography);
+    context.enrichGear = await TextEditor.enrichHTML(systemData.wealth.description,{async:true});
+    context.enrichBio = await TextEditor.enrichHTML(systemData.details.biography,{async:true});
   }
   
 
@@ -488,8 +488,7 @@ export class OpsActorSheet extends ActorSheet {
     const targetId = dataset.targetId;
     const targetProp = dataset.targetProp;
     const item = this.actor.items.get(targetId);
-    let value = !getProperty(item, targetProp);
-    await item.update({[targetProp]:value});
+    await item.update({[targetProp]:!getProperty(item,targetProp)});
   }
   _onToggleCollapse(event){
     event.preventDefault();

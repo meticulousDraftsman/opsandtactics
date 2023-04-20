@@ -78,6 +78,7 @@ export class Protection extends foundry.abstract.DataModel{
 export class OpsWeapon extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
+            minimized: new field.BooleanField({initial:false}),
             description: new field.StringField(),
             type: new field.StringField(),
             magazine: new field.SchemaField({
@@ -198,6 +199,7 @@ export class ResourceMagic extends foundry.abstract.DataModel{
 export class OpsObject extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
+            minimized: new field.BooleanField({initial:false}),
             description: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear),
             actions: new field.ObjectField(),
@@ -220,6 +222,7 @@ export class OpsFeature extends foundry.abstract.DataModel{
 export class OpsMagic extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
+            minimized: new field.BooleanField({initial:false}),
             description: new field.StringField(),
             actions: new field.ObjectField(),
             magazine: new field.SchemaField({

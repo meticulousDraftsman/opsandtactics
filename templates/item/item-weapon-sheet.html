@@ -150,7 +150,7 @@
                                     <option value="noneAttack">Message</option>
                                 {{/select}}
                             </select>
-                            <a class="resource-label toggle-value grid-span-2" data-target="system.actions.{{@key}}.display">Details {{#if this.display}}<i class="fas fa-eye-slash"></i>{{else}}<i class="fas fa-eye"></i>{{/if}}</a>
+                            <a class="resource-label toggle-value grid-span-2" data-target="system.actions.{{@key}}.display">Details <i class="{{#if this.display}}fas fa-eye-slash{{else}}fas fa-eye{{/if}}"></i></a>
                             <span>Ammo</span>
                             <input name="system.actions.{{@key}}.ammo" value = "{{this.ammo}}" type="text" data-dtype="Number">
                         </li>
