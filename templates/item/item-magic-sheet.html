@@ -98,12 +98,12 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">
-      <fieldset class="sheet-body tab">
+      <fieldset>
         <legend class="resource-label">
           Description
         </legend>
-        <div class="sheet-body tab">
-          {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+        <div>
+          {{editor enrichDescription target="system.description" rollData=rollData button=true owner=owner editable=editable}}
         </div>
       </fieldset>
     </div>

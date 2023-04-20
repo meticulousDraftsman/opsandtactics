@@ -105,6 +105,9 @@ export class OpsActorSheet extends ActorSheet {
     ];
     // Check if agility is being limited by armor
     context.agiLimited = ((systemData.abilities.dex.mrk + systemData.abilities.dex.agi)<systemData.abilities.dex.mod)?'agi-limited':'';
+    // Enrich Asset Notes and Biography
+    context.enrichGear = TextEditor.enrichHTML(systemData.wealth.description);
+    context.enrichBio = TextEditor.enrichHTML(systemData.details.biography);
   }
   
 

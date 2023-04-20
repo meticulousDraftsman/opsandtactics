@@ -38,13 +38,13 @@
         {{/each}}
       </ol>
     </fieldset>
-    <fieldset class="sheet-body tab">
+    <fieldset>
       <legend class="resource-label">
         Summary and Description {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
       </legend>
       <input class="flex-group-center" type="text" name="system.summary" value="{{system.summary}}" data-dtype="String" placeholder="Summary">
-      <div class="sheet-body tab">
-        {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      <div>
+        {{editor enrichDescription target="system.description" rollData=rollData button=true owner=owner editable=editable}}
       </div>
     </fieldset>
   </section>

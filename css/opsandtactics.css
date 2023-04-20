@@ -345,9 +345,13 @@
   flex: 0;
 }
 .opsandtactics .sheet-body,
-.opsandtactics .sheet-body .tab,
-.opsandtactics .sheet-body .tab .editor {
+.opsandtactics .sheet-body .tab
+{
   height: 100%;
+  
+}
+.opsandtactics .editor {
+  min-height: 260px;
 }
 .opsandtactics .tox .tox-editor-container {
   background: #dad8cc;

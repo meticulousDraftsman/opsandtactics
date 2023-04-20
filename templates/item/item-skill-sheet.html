@@ -10,7 +10,7 @@
   <section class="sheet-body">
     <fieldset>
       <legend class="resource-label">
-        {{#if (gte item.mods.total 0)}}+{{/if}}{{item.mods.total}} Total Modifier {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+        {{item.mods.total}} Total Modifier {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
       </legend>
       <div class="grid grid-2col flex-group-center">
         <div>
@@ -67,12 +67,12 @@
       </ol>
     </fieldset>
     {{/each}}
-    <fieldset class="sheet-body tab">
+    <fieldset>
       <legend class="resource-label">
         Description
       </legend>
-      <div class="sheet-body tab">
-        {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      <div>
+        {{editor enrichDescription target="system.description" rollData=rollData button=true owner=owner editable=editable}}
       </div>
     </fieldset>
   </section>

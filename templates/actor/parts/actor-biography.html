@@ -15,11 +15,11 @@
         <input type="text" name="system.stats.level.xp.value" value="{{system.stats.level.xp.value}}" data-dtype="String" placeholder="0">
     </div>
 </fieldset>
-<fieldset class="sheet-body tab">
+<fieldset>
     <legend class="resource-label">
       Biography
     </legend>
-    <div class="sheet-body tab">
-        {{editor system.details.biography target="system.details.biography" rollData=rollData button=true owner=owner editable=editable}}
+    <div>
+        {{editor enrichBio target="system.details.biography" rollData=rollData button=true owner=owner editable=editable}}
     </div>
   </fieldset>

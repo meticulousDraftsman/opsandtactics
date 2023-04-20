@@ -53,6 +53,8 @@ export class OpsItemSheet extends ItemSheet {
     }
 
     context.effects = prepareActiveEffectCategories(this.item.effects);
+    // Enrich description text
+    context.enrichDescription = TextEditor.enrichHTML(systemData.description);
     
     const magazines = [{label:"Unloaded",id:""}];
     const importableMods = {};
