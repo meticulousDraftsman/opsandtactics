@@ -227,6 +227,7 @@ export class OpsRoll extends Roll{
         atkBon += Number(form.atkFlank.value);
         atkBon += Number(form.atkStance.value);
         atkBon += Number(form.atkFace.value);
+        atkBon -= Math.floor(Number(form.rangeNum.value)*2*Number(form.rangeMult.value));
         let defBon = 0;
         defBon += form.defStun.checked?Number(form.defStun.value):0;
         defBon += form.defClimb.checked?Number(form.defClimb.value):0;

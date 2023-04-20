@@ -54,6 +54,12 @@
                 <option value="-10">Rear (-10)</option>
             </select>
         </div>
+        <div class="grid grid-6col flex-group-center {{#if (eq atkType 'melee')}}collapse{{/if}}">
+            <span class="grid-span-2">Full Range Increments</span>
+            <input type="text" name="rangeNum" placeholder="0">
+            <span class="grid-span-2">Range Penalty Multiplier</span>
+            <input type="text" name="rangeMult" value="1" placeholder="0?">
+        </div>        
     </fieldset>
     <fieldset>
         <legend class="resource-label">
@@ -105,10 +111,15 @@
             <span>Defender has...</span>
             <select class="grid-span-3 flex-group-center" name="defConceal">
                 <option value="0">No Concealment</option>
+                <option value="5">(5%)</option>
                 <option value="10">1/4 Concealment (10%)</option>
+                <option value="15">(15%)</option>
                 <option value="20">1/2 Concealment (20%)</option>
+                <option value="25">(25%)</option>
                 <option value="30">3/4 Concealment (30%)</option>
+                <option value="35">(35%)</option>
                 <option value="40">9/10 Concealment (40%)</option>
+                <option value="45">(45%)</option>
                 <option value="50">Total Concealment (50%)</option>
             </select>
         </div>
