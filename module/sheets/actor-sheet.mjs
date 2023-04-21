@@ -394,6 +394,8 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-check').click(this._actionCheck.bind(this));   
     html.find('.skill-check').click(this._skillCheck.bind(this));   
     html.find('.actor-check').click(this._actorCheck.bind(this));
+    // Context Menu
+    html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
      // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
     // Generic Rollables
@@ -544,72 +546,29 @@ export class OpsActorSheet extends ActorSheet {
     const checkID = event.currentTarget.dataset.checkId;
     this.actor.rollActorCheck(checkID,event)
   }
-  async _actorRoll(event){
+  _itemContextMenu(event){
     event.preventDefault();
-    const dataset = event.currentTarget.dataset 
-    //console.debug(dataset)
-    const data= this.actor.getRollData();
-    const options={};
-    data.flavor = dataset.title;
-    if(data.sourceType=='message'){
-      data.content=dataset.flavor;
-    }
-    else{
-      if (dataset.flavor!="") data.flavor = `${data.flavor}<br>${dataset.flavor}`
-    }
-    data.parts = dataset.parts;
-    data.sourceType=dataset.type;
-    data.rollType = dataset.rollType;
-    data.speaker = ChatMessage.getSpeaker({ actor: this.actor });
-    options.rollMode = game.settings.get('core', 'rollMode');
-    data.type = CONST.CHAT_MESSAGE_TYPES.ROLL;
-    const rolled = await roll3d6(data);
-    if(rolled!=null && rolled?.ammo!=0){
-      switch(data.sourceType){
-        case 'weaponattack':
-        case 'magicuse':
-          await this._attackAmmo(dataset,rolled);
-      }
-    }
-  }
-  async _attackAmmo(dataset,rolled){
-    const weapon = this.actor.items.get(dataset.weapon);
-    let magazine = weapon;
-    let updateTarget;
-    let targetProp;
-    if(weapon.type==='weapon'){
-      if(dataset.magType!="internal"){
-        if(weapon.system.magazine.loaded.source!=""){
-          magazine = this.actor.items.get(weapon.system.magazine.loaded.source);
-        }
-        else {
-          return;
-        }
-      }
-      updateTarget = "system.magazine.value";
-      targetProp = magazine.system.magazine.value;
-    }
-    if(weapon.type==='magic'){
-      switch(weapon.system.uses.type){
-        case 'unlimited':
-          return;
-        case 'shared':
-          if(weapon.system.uses.shared.source!=""){
-            magazine=this.actor.items.get(weapon.system.uses.shared.source);
-            break;
+    const item = this.actor.items.get(event.currentTarget.dataset.itemId)
+    const dupe = new Dialog({
+      title: `Extra options for ${item.name}`,
+      content: null,
+      buttons:{
+        internal :{
+          icon: '<i class="fas fa-clone"></i>',
+          label: 'Copy in Actor',
+          callback: () => {
+            Item.createDocuments([item.toObject()],{parent:this.actor});
           }
+        },
+        external:{
+          icon: '<i class="fas fa-file-export"></i>',
+          label: 'Copy to World',
+          callback: () => {
+            Item.createDocuments([item.toObject()]);
+          }
+        }
       }
-      updateTarget="system.uses.value";
-      targetProp = magazine.system.uses.value;
-    }
-    let cost = dataset.ammo;
-    if(!isNaN(rolled.ammo)) cost = rolled.ammo;
-    if(dataset.magType=="coolant") {
-      cost = -(cost);
-      await magazine.update({"system.coolant.hot":"Hot"});
-    }
-    targetProp -= cost;
-    await magazine.update({[updateTarget]:targetProp});  
+    }).render(true);
   }
 
   /**
