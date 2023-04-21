@@ -441,6 +441,22 @@ export class OpsActor extends Actor {
     });
   }
 
+  // Scrolling bar text
+  async modifyTokenAttribute(attribute, value, isDelta, isBar){
+    const tokens = this.isToken ? [this.token?.object] : this.getActiveTokens(true);
+    for (const t of tokens) {
+      canvas.interface.createScrollingText(t.center,(isDelta? value.signedString() : value),{
+        anchor: CONST.TEXT_ANCHOR_POINTS.TOP,
+        fonstSize: 32,
+        fill: value>0 ? 0xFFFFFF : 0x000000,
+        stroke: value<0 ? 0xFFFFFF : 0x000000,
+        strokeThickness: 4,
+        jitter: 0.25
+      });
+    }
+    return super.modifyTokenAttribute(attribute,value,isDelta,isBar);
+  }
+
   /**
    * Override getRollData() that's supplied to rolls.
    */

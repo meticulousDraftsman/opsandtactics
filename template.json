@@ -1,127 +1,20 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
-    "templates": {
-      "base": {
-        "health": {
-          "xhp": {
-            "value":6,
-            "max":6
-          },
-          "chp":{
-            "value":12,
-            "max": 12
-          },
-          "temp":0,
-          "bleed":0,
-          "incoming":0
+    "types": ["character"],
+    "character": {
+      "health": {
+        "xhp": {
+          "value": 6,
+          "max": 0
         },
-        "cp":{
-          "value":15,
-          "max":15,
-          "temp":0,
-          "armor":0
-        },
-        "def":{
-          "equip":0,
-          "size":0,
-          "move":0,
-          "misc":0,
-          "dodge":0
-        },
-        "init":{
-          "misc":0
-        },
-        "biography": "",
-        "size":""
-      },
-      "creature":{
-        "level":{
-          "value":1,
-          "xp":{
-            "value":0
-          }
-        },
-        "bab":{
-          "misc":0
-        },
-        "recoil":{
-          "misc":0
-        },
-        "ml":{
-          "value":56,
-          "max":56,
-          "temp":0,
-          "cyber":0
-        },
-        "abilities":{
-          "str":{
-            "value":10,
-            "modMisc":0
-          },
-          "foc":{
-            "mod":0
-          },
-          "pow":{
-          },
-          "dex":{
-            "value":10,
-            "modMisc":0
-          },
-          "mrk":{
-            "mod":0
-          },
-          "agi":{
-          },
-          "con":{
-            "value":10,
-            "modMisc":0
-          },
-          "int":{
-            "value":10,
-            "modMisc":0
-          },
-          "wis":{
-            "value":10,
-            "modMisc":0
-          },
-          "cha":{
-            "value":10,
-            "modMisc":0
-          }
-        },
-        "saves":{
-          "reflex":{
-            "base":0,
-            "misc":0
-          },
-          "fortitude":{
-            "base":0,
-            "misc":0
-          },
-          "will":{
-            "base":0,
-            "misc":0
-          }
-        }        
-      }
-    },
-    "npc": {
-      "templates": ["base"],
-      "bv": 0,
-      "bab":{
-        "value":1
-      },
-      "saves":{
-        "reflex":{
-          "value":0
-        },
-        "fortitude":{
-          "value":0
-        },
-        "will":{
-          "value":0
+        "chp": {
+          "value": 12,
+          "max": 0
         }
+      },
+      "cp": {
+        "value": 15,
+        "max": 15
       }
     }
   },

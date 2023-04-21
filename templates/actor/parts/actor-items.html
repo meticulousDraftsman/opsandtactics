@@ -5,9 +5,9 @@
     </legend>
     <div class="grid grid-9col flex-group-center">
       <span class="grid-span-3">Wealth Points</span>
-      <input class="grid-span-2" name="system.wealth.wp.cash" value="{{system.wealth.wp.cash}}" type="text" data-dtype="Number" placeholder="Cash">
-      <input class="grid-span-2" name="system.wealth.wp.credit" value="{{system.wealth.wp.credit}}" type="text" data-dtype="Number" placeholder="Credit">
-      <input class="grid-span-2" name="system.wealth.wp.misc" value="{{system.wealth.wp.check}}" type="text" data-dtype="Number" placeholder="Check">
+      <input class="grid-span-2 resource-delta" data-target="system.wealth.wp.cash" value="{{system.wealth.wp.cash}}" type="text" data-dtype="String" placeholder="Cash">
+      <input class="grid-span-2 resource-delta" data-target="system.wealth.wp.credit" value="{{system.wealth.wp.credit}}" type="text" data-dtype="String" placeholder="Credit">
+      <input class="grid-span-2 resource-delta" data-target="system.wealth.wp.misc" value="{{system.wealth.wp.check}}" type="text" data-dtype="String" placeholder="Check">
       <a class="grid-span-3 rollable resource-label" data-roll="{{system.wealth.wp.income}}" data-label="Payday" data-tooltip="Roll Paycheck">Income <i class="fas fa-money-check-alt"></i></a>
       <input class="grid-span-6" name="system.wealth.wp.income" value="{{system.wealth.wp.income}}" type="text" data-dtype="String">
       <input class="grid-span-9" name="system.wealth.wp.notes" value="{{system.wealth.wp.notes}}" type="text" data-dtype="String" placeholder="Notes">

@@ -46,7 +46,7 @@
       <a class="actor-bleed resource-label" data-tooltip="Roll Bleed Dice and add to incoming damage">Bleed <i class="fas fa-tint"></i></a>
       <input type="text" name="system.health.bleed" value="{{system.health.bleed}}" data-dtype="Number"/>
       <span>Incoming</span>
-      <input class="grid-span-2" type="text" name="system.health.incoming" value="{{system.health.incoming}}" data-dtype="Number" placeholder="Damage"/>
+      <input class="grid-span-2 resource-delta" type="text" data-target="system.health.incoming" value="{{system.health.incoming}}" data-dtype="String" placeholder="Damage"/>
       <span>XHP</span>
       <input type="text" value="{{system.health.xhp.value}}/{{system.health.xhp.max}}" readonly>
       <a class="item-control apply-damage" data-tooltip="Apply Damage to Extended Hit Points" data-target="xhp"><i class="fas fa-prescription-bottle-alt"></i></a>

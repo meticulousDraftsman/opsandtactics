@@ -313,6 +313,12 @@ function addChatContext(html, options){
       icon: '<i class="fas fa-heart"></i>',
       condition: canApply,
       callback: li => applyChatDamage(li, 0.5)
+    },
+    {
+      name: 'Add quarter to incoming damage',
+      icon: '<i class="fas fa-hand-holding-heart"></i>',
+      condition: canApply,
+      callback: li => applyChatDamage(li, 0.25)
     }
   );
   return options;

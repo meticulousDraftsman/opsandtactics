@@ -389,7 +389,13 @@ export class OpsActorSheet extends ActorSheet {
     // Apply Incoming Damage to Armor or Hit Points
     html.find('.apply-damage').click(this._onApplyDamage.bind(this));
     // Incantation Mental Limit
-    html.find('.incant-regain').click(this._incantRegain.bind(this));     
+    html.find('.incant-regain').click(this._incantRegain.bind(this));
+    // Resource Delta Edits
+    html.find('.resource-delta').focus(ev =>{
+      ev.preventDefault();
+      ev.currentTarget.select();
+    });
+    html.find('.resource-delta').change(this._onResourceDelta.bind(this));
     // Actor Sheet Rolls
     html.find('.item-check').click(this._actionCheck.bind(this));   
     html.find('.skill-check').click(this._skillCheck.bind(this));   
@@ -527,6 +533,24 @@ export class OpsActorSheet extends ActorSheet {
     event.preventDefault();
     const updateData = {['system.magic.mlCant']:Math.max((this.actor.system.magic.mlCant - Math.ceil(this.actor.system.ml.max / 10)),0)}
     this.actor.update(updateData);
+  }
+ async _onResourceDelta(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    console.debug(dataset,(event.target.value.charAt(0)))
+    if (!Number.isNumeric(event.target.value)){
+      this.render()
+      return;
+    } 
+    const updateData = {};
+    if (event.target.value.charAt(0)=='+' || event.target.value.charAt(0)=='-'){
+      setProperty(updateData,dataset.target,getProperty(this.actor,dataset.target)+Number(event.target.value));
+    }
+    else {
+      setProperty(updateData,dataset.target,Number(event.target.value));
+    }
+    console.debug(updateData)
+    await this.actor.update(updateData);
   }
   _actionCheck(event){
     event.preventDefault();

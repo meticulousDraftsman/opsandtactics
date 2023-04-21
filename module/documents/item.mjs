@@ -71,17 +71,21 @@ export class OpsItem extends Item {
 
   async rollActionCheck(actionID,event=undefined){
     // Check resource consumption and override
-    let ammoCheck = this.resourceAvailableCheck(getProperty(this,`system.actions.${actionID}.ammo`))
-    if (!ammoCheck){
+    let ammoCheck = (event && (event.ctrlKey || event.altKey))? true : this.resourceAvailableCheck(getProperty(this,`system.actions.${actionID}.ammo`));
+    let cpCheck = (event && (event.ctrlKey || event.altKey))? true : this.cpAvailableCheck(this.actionSum(this.system.actions[actionID]).cp);
+    if (!ammoCheck || !cpCheck){
       await Dialog.confirm({
         title: "Insufficient Resources",
-        content: "Perform check despite not having enough ammo?",
-        yes: () => {ammoCheck = true},
+        content: `Perform check despite not having enough ${!ammoCheck?'ammo':''}${(!ammoCheck&&!cpCheck)?' or ':''}${!cpCheck?'combat points':''}?`,
+        yes: () => {
+          ammoCheck = true;
+          cpCheck = true;
+        },
         no: () => {},
         defaultYes:true
       });
     }
-    if(!ammoCheck) return;
+    if(!ammoCheck || !cpCheck) return;
     
     // Prep data for roll
     const rollData = this.actor.getRollData();
@@ -103,7 +107,11 @@ export class OpsItem extends Item {
     if (roll==null) return null;
 
     // Perform resource consumption
-    await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`))
+    if (!(event && event.altKey)){
+      await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`));
+      await this.cpConsume(this.actionSum(this.system.actions[actionID]).cp);
+    }
+
     return roll;
   }
   async rollSkillCheck(event=undefined){
@@ -222,6 +230,13 @@ export class OpsItem extends Item {
         break;
     }
   }
+  cpAvailableCheck(cost){
+    return (this.actor.system.cp.value-cost >= -this.actor.system.cp.temp)
+  }
+  async cpConsume(cost){
+    if (Number(cost)==0) return;
+    await this.actor.update({['system.cp.value']:(this.actor.system.cp.value-cost)});
+  }
 
   checkType(checkType){
     switch (checkType){
@@ -250,11 +265,11 @@ export class OpsItem extends Item {
     if (this.actor){
       let abilityScale = sourceAction.effect?.scaleAbility || 1;
       let scaledAbility = Math.floor(this.actor.abilityMod(sourceAction.effect.ability) * abilityScale);
-      mods.effectParts.push(scaledAbility ? (scaledAbility>=0 ? `+${scaledAbility}` : `${scaledAbility}`) : null);
+      mods.effectParts.push(scaledAbility ? scaledAbility.signedString() : null);
     }
     if (hasProperty(sourceAction,'effect.mods')){
       for (let [,e] of Object.entries(sourceAction.effect.mods)){
-        mods.effectParts.push(e.value ? (e.value != '-' ? `+${e.value}` : e.value) : null);
+        mods.effectParts.push(e.value ? (e.value.charAt(0) != '-' ? `+${e.value}` : e.value) : null);
       }
     }
     mods.effectTotal = mods.effectParts.filter(part => part != null).join('') || '0';
