@@ -377,9 +377,13 @@ export class OpsActor extends Actor {
     setProperty(actorUpdateData,'system.health.incoming',incoming);
     // Create a new message if there's no existing one or the existing one isn't the most recent
     if (this.system.health.damageReport == '' || this.system.health.damageReport!=ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id){
-      const speaker = ChatMessage.getSpeaker({actor:this.actor});
-      const rollMode = game.settings.get('core', 'rollMode');
-      chatReport = await ChatMessage.create({speaker:speaker,rollMode:rollMode});
+      const messageData = {
+        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        from: game.user._id,
+        speaker: ChatMessage.getSpeaker({actor:this}),
+        content: ''
+      }
+      chatReport = await ChatMessage.create(messageData,{rollMode: game.settings.get('core', 'rollMode')});
       setProperty(actorUpdateData,'system.health.damageReport',chatReport.id);
       await chatReport.setFlag('opsandtactics','report',{initial:initial,reports:[report]});
     }
