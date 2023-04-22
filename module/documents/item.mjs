@@ -477,29 +477,34 @@ export class OpsItem extends Item {
     }
   }
 
+  
+
   // Pre-creation
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
+    const weaponIcons = ['ak47','bayonet','colt-m1911','fn-fal','glock','mac-10','mp5','revolver','tec-9','famas','steyr-aug','lee-enfield','p90','thompson-m1928','walther-ppk','winchester-rifle','gun-stock','panzerfaust','sawed-off-shotgun','zat-gun','baton','gladius','switchblade','crossbow','pocket-bow','hatchet','fire-axe','light-saber']
+    const armorIcons = ['kevlar-vest','metal-scales','fish-scales'];
+    const objectIcons = ['backpack','batteries','black-book','book-cover','cardboard-box-closed','cannister','compact-disc','cooler','disc','flashlight','laptop','medicine-pills','papers','pc','quiver','rolling-suitcase','school-bag','screwdriver','shotgun-rounds','machine-gun-magazine','smartphone','suitcase','tablet','toolbox','usb-key','walkie-talkie'];
     // Assign default image based on type
     const updates = {};
     switch(this.type){
       case 'weapon':
-        updates["img"] = "icons/weapons/guns/gun-pistol-flintlock.webp";
+        updates["img"] = `systems/opsandtactics/icons/svg/${weaponIcons[Math.floor(Math.random()*weaponIcons.length)]}.svg`;
         break;
       case 'armor':
-        updates["img"] = "icons/commodities/tech/metal-panel.webp";
+        updates["img"] = `systems/opsandtactics/icons/svg/${armorIcons[Math.floor(Math.random()*armorIcons.length)]}.svg`;
         break;
       case 'skill':
-        updates["img"] = "icons/sundries/books/book-stack.webp";
+        updates["img"] = `systems/opsandtactics/icons/svg/bookshelf.svg`;
         break;
       case 'feature':
-        updates["img"] = "icons/skills/trades/gaming-gambling-dice-gray.webp";
+        updates["img"] = `systems/opsandtactics/icons/svg/notebook.svg`;
         break;
       case 'magic':
-        updates["img"] = "icons/sundries/documents/paper-plain-white.webp";
+        updates["img"] = `systems/opsandtactics/icons/svg/sparkles.svg`;
         break;
       default:
-        updates["img"] = "icons/consumables/grains/sack-oats-glowing-white.webp";
+        updates["img"] = `systems/opsandtactics/icons/svg/${objectIcons[Math.floor(Math.random()*objectIcons.length)]}.svg`;;
         break;
 
     }
