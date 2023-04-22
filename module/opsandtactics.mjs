@@ -308,12 +308,21 @@ function _manageOpsStatusEffects(){
   )
 }
 
-// Taken from 5e
+// Partially taken from 5e
 function addChatContext(html, options){
   let canApply = li => {
     const message = game.messages.get(li.data("messageId"));
-    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length;
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0;
   };
+  let checkShip = li => {
+    const message = game.messages.get(li.data("messageId"));
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker.actor).type==='spacecraft' && canvas.tokens.controlled[0].actor.type==='character';
+  }
+  let checkPerson = li => {
+    const message = game.messages.get(li.data("messageId"));
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker.actor).type==='character' && canvas.tokens.controlled[0].actor.type==='spacecraft';
+  }
+  console.debug(canApply,checkShip)
   options.push(
     {
       name: 'Add to incoming damage',
@@ -332,6 +341,18 @@ function addChatContext(html, options){
       icon: '<i class="fas fa-hand-holding-heart"></i>',
       condition: canApply,
       callback: li => applyChatDamage(li, 0.25)
+    },
+    {
+      name: 'Add tenfold to incoming damage',
+      icon: '<i class="fas fa-rocket"></i>',
+      condition: (checkShip),
+      callback: li => applyChatDamage(li, 10)
+    },
+    {
+      name: 'Add fifth to incoming damage',
+      icon: '<i class="fas fa-rocket"></i>',
+      condition: (checkPerson),
+      callback: li => applyChatDamage(li, .2)
     }
   );
   return options;
