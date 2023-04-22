@@ -299,11 +299,17 @@ export class OpsRoll extends Roll{
 }
 
 function _manageOpsStatusEffects(){
-  CONFIG.statusEffects.push(
+  CONFIG.statusEffects.splice(CONFIG.statusEffects.findIndex(e => e.id === 'prone'),1);
+  CONFIG.statusEffects.unshift(
     {
       "id":"kneeling",
       "label":"Kneeling",
-      "icon":"icons/sundries/misc/horseshoe-iron.webp"
+      "icon":"systems/opsandtactics/icons/svg/kneeling.svg"
+    },
+    {
+      "id":"prone",
+      "label":"Prone",
+      "icon":"systems/opsandtactics/icons/svg/prone.svg"
     }
   )
 }
