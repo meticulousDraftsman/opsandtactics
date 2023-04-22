@@ -77,7 +77,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             }),
             details: new field.SchemaField({
                 biography: new field.StringField(),
-                size: new field.StringField({initial:"Medium"}),
+                size: new field.StringField(),
                 race: new field.StringField(),
                 occupation: new field.StringField()
             }),
@@ -159,3 +159,9 @@ export class OpsCharacter extends foundry.abstract.DataModel {
         };
     };
 };
+export class OpsSpacecraft extends foundry.abstract.DataModel {
+    static defineSchema(){
+        return {
+        }
+    }
+}

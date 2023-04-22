@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": ["character","spacecraft"],
     "character": {
       "health": {
         "xhp": {
