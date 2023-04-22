@@ -148,6 +148,7 @@
                                     <option value="melee">Melee Attack</option>
                                     <option value="ranged">Ranged Attack</option>
                                     <option value="noneAttack">Message</option>
+                                    <option value="noChatAttack">Resources Only</option>
                                 {{/select}}
                             </select>
                             <a class="resource-label toggle-value grid-span-2" data-target="system.actions.{{@key}}.display">Details <i class="{{#if this.display}}fas fa-eye-slash{{else}}fas fa-eye{{/if}}"></i></a>
@@ -156,7 +157,17 @@
                         </li>
                         {{#if this.display}}
                         <li class="item grid grid-9col flex-group-center">
-                            {{#unless (eq this.check.type "noneAttack")}}    
+                            {{#if (or (eq this.check.type "noneAttack") (eq this.check.type "noChatAttack"))}}
+                            <button class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
+                            <input class="grid-span-2" name="system.actions.{{@key}}.cp.inherent" value="{{this.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" title="From Attack">
+                            <div class="mod-list grid-span-5 flexrow">
+                                {{#each this.cp.mods}}
+                                <div class="attack-mod flex-group-center">
+                                    <a class="item-control sub-delete" data-target-name="cp" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Combat Point Modifier">{{this.name}}: {{this.value}}</a>
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{else}}
                             <button class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.checkTotal}}</button>
                             <input class="grid-span-3" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
                             <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.ability" data-dtype="String">
@@ -190,9 +201,10 @@
                                 </div>
                                 {{/each}}
                             </div>
-                            {{/unless}}    
+                            {{/if}}    
                             <input class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" type="text" data-dtype="String" placeholder="Attack roll flavor">
                         </li>
+                        {{#unless (eq this.check.type 'noChatAttack')}}
                         <li class="item grid grid-9col flex-group-center">
                             <button class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.effectTotal}}</button>
                             <input class="grid-span-3" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
@@ -215,6 +227,7 @@
                             </div>
                             <input class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" type="text" data-dtype="String" placeholder="Damage roll flavor">
                         </li>
+                        {{/unless}}
                         {{/if}}
                     </ol>
                 </fieldset>

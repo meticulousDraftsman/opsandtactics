@@ -55,10 +55,12 @@
               <option value="melee">Melee Attack</option>
               <option value="ranged">Ranged Attack</option>
               <option value="noneAttack">Message (Attack)</option>
+              <option value="noChatAttack">Resources (Attack)</option>
               <option value="skill">Skill Check</option>
               <option value="generic">Generic Check</option>
               <option value="otherUtility">Other Roll</option>
               <option value="noneUtility">Message (Utility)</option>
+              <option value="noChatUtility">Resources (Utility)</option>
             {{/select}}
             </select>
             <span>CP</span>
@@ -67,7 +69,7 @@
             <input name="system.actions.{{@key}}.ammo" type="text" value="{{this.ammo}}" data-dtype="Number" placeholder="0">            
           </li>
           <li class="item grid grid-9col flex-group-center">
-            {{#unless (or (eq this.check.type "noneAttack") (eq this.check.type "noneUtility"))}}
+            {{#unless (or (eq this.check.type "noneAttack") (eq this.check.type "noneUtility") (eq this.check.type "noChatAttack") (eq this.check.type "noChatUtility"))}}
             {{#if (eq this.check.type "skill")}}
             <select class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.source">
               {{selectOptions @root.sourceSkills selected=this.check.source nameAttr="id" labelAttr="label"}}
@@ -85,6 +87,7 @@
             {{/unless}}
             <input class="grid-span-9" type="text" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" data-dtype="String" placeholder="Check roll flavor">
           </li>
+          {{#unless (or (eq this.check.type "noChatAttack") (eq this.check.type "noChatUtility"))}}
           <li class="item grid grid-9col flex-group-center">
             <span class="grid-span-2">Effect Roll</span>
             <input class="grid-span-4" type="text" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" data-dtype="String" placeholder="Inherent">
@@ -96,6 +99,7 @@
             </select>  
             <input class="grid-span-9" type="text" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" data-dtype="String" placeholder="Effect roll flavor">
           </li>
+          {{/unless}}
         </ol>
       </fieldset>
       {{/each}}

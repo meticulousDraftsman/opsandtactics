@@ -104,6 +104,9 @@ export async function opsCheck(data){
     speaker: data.speaker,
   }
   switch (data.checkType){
+    case 'noChatAttack':
+    case 'noChatUtility':
+      return true;
     case 'noneAttack':
     case 'noneUtility':
       // Just create the chat message and return

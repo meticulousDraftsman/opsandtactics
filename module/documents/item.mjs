@@ -246,11 +246,13 @@ export class OpsItem extends Item {
       case 'melee':
       case 'ranged':
       case 'noneAttack':
+      case 'noChatAttack':
         return 'attack';
       case 'skill':
       case 'generic':
       case 'otherUtility':
       case 'noneUtility':
+      case 'noChatUtility':
         return 'utility';
     }
   }
@@ -264,19 +266,24 @@ export class OpsItem extends Item {
       ammo: null
     };
     // Handle Effect
-    mods.effectParts.push(sourceAction.effect.inherent?sourceAction.effect.inherent:null);
-    if (this.actor){
-      let abilityScale = sourceAction.effect?.scaleAbility || 1;
-      let scaledAbility = Math.floor(this.actor.abilityMod(sourceAction.effect.ability) * abilityScale);
-      mods.effectParts.push(scaledAbility ? scaledAbility.signedString() : null);
+    if (sourceAction.check.type==='noChatAttack' || sourceAction.check.type==='noChatUtility'){
+      mods.effectTotal = null;
     }
-    if (hasProperty(sourceAction,'effect.mods')){
-      for (let [,e] of Object.entries(sourceAction.effect.mods)){
-        mods.effectParts.push(e.value ? (e.value.charAt(0) != '-' ? `+${e.value}` : e.value) : null);
+    else {
+      mods.effectParts.push(sourceAction.effect.inherent?sourceAction.effect.inherent:null);
+      if (this.actor){
+        let abilityScale = sourceAction.effect?.scaleAbility || 1;
+        let scaledAbility = Math.floor(this.actor.abilityMod(sourceAction.effect.ability) * abilityScale);
+        mods.effectParts.push(scaledAbility ? scaledAbility.signedString() : null);
       }
+      if (hasProperty(sourceAction,'effect.mods')){
+        for (let [,e] of Object.entries(sourceAction.effect.mods)){
+          mods.effectParts.push(e.value ? (e.value.charAt(0) != '-' ? `+${e.value}` : e.value) : null);
+        }
+      }
+      mods.effectTotal = mods.effectParts.filter(part => part != null).join('') || '0';
+      if (mods.effectTotal.charAt(0) == '+') mods.effectTotal = mods.effectTotal.substring(1);
     }
-    mods.effectTotal = mods.effectParts.filter(part => part != null).join('') || '0';
-    if (mods.effectTotal.charAt(0) == '+') mods.effectTotal = mods.effectTotal.substring(1);
     // Handle CP
     mods.cp = sourceAction.cp.inherent?sourceAction.cp.inherent:null;
     if (hasProperty(sourceAction,'cp.mods')){
@@ -354,8 +361,8 @@ export class OpsItem extends Item {
       if (hasProperty(sourceAction,'recoil')) mods.checkNum += Math.min(mods.recoil+mods.reduction,0);
     }
     //Totals
-    // Message Cards have no check modifier
-    if (sourceAction.check.type==='noneAttack' || sourceAction.check.type==='noneUtility'){
+    // Message Cards and No-Chats have no check modifier
+    if (sourceAction.check.type==='noneAttack' || sourceAction.check.type==='noneUtility' || sourceAction.check.type==='noChatUtility' || sourceAction.check.type==='noChatAttack'){
       mods.checkTotal = null;
     }    
     // Skill rolls just pull the skill modifier
