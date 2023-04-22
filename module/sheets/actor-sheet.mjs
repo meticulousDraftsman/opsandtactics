@@ -64,11 +64,7 @@ export class OpsActorSheet extends ActorSheet {
       //console.debug(context);
       this._prepareItems(context);
       this._prepareCharacterData(context);
-    }
-
-    // Prepare NPC data and items.
-    if (actorData.type == 'npc') {
-      this._prepareItems(context);
+      
     }
 
     context.collapses = this.collapseStates;
@@ -78,8 +74,7 @@ export class OpsActorSheet extends ActorSheet {
 
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
-
-    
+    console.debug(this.actor?.effects.find(e => e.getFlag("core", "statusId") === 'kneeling'))
     return context;
   }
 

@@ -40,11 +40,11 @@
             <select class="flex-group-center" name="atkStance">
                 <option value="+0">Standing</option>
                 {{#if (eq atkType "melee")}}
-                <option value="-2">Kneeling (-2)</option>
-                <option value="-4">Prone (-4)</option>
+                <option value="-2" {{#if (eq stanceAttack 'kneeling')}}selected{{/if}}>Kneeling (-2)</option>
+                <option value="-4" {{#if (eq stanceAttack 'prone')}}selected{{/if}}>Prone (-4)</option>
                 {{else}}
-                <option value="+1">Kneeling (+1)</option>
-                <option value="+2">Prone (+2)</option>
+                <option value="+1" {{#if (eq stanceAttack 'kneeling')}}selected{{/if}}>Kneeling (+1)</option>
+                <option value="+2" {{#if (eq stanceAttack 'prone')}}selected{{/if}}>Prone (+2)</option>
                 {{/if}}
             </select>
             <span> Attacking from Attacker's...</span>
@@ -91,11 +91,11 @@
             <select class="flex-group-center" name="defStance">
                 <option value="+0">Standing</option>
                 {{#if (eq atkType "melee")}}
-                <option value="-4">Kneeling (-4)</option>
-                <option value="-2">Prone (-2)</option>
+                <option value="-4" {{#if (eq stanceDefend 'kneeling')}}selected{{/if}}>Kneeling (-4)</option>
+                <option value="-2" {{#if (eq stanceDefend 'prone')}}selected{{/if}}>Prone (-2)</option>
                 {{else}}
-                <option value="+2">Kneeling (+2)</option>
-                <option value="+4">Prone (+4)</option>
+                <option value="+2" {{#if (eq stanceDefend 'kneeling')}}selected{{/if}}>Kneeling (+2)</option>
+                <option value="+4" {{#if (eq stanceDefend 'prone')}}selected{{/if}}>Prone (+4)</option>
                 {{/if}}
             </select>
         </div>

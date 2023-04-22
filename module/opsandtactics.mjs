@@ -87,6 +87,7 @@ Handlebars.registerHelper('toLowerCase', function(str) {
 Hooks.once("ready", async function() {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
+  _manageOpsStatusEffects();
 });
 Hooks.on("getChatLogEntryContext", addChatContext);
 
@@ -185,6 +186,8 @@ export class OpsRoll extends Roll{
         templateData = {
           formula: this.formula,
           atkType: data.checkType,
+          stanceAttack: data.attackStance,
+          stanceDefend: data.targetStance
         }
         break;
       case 'reflex':
@@ -293,6 +296,16 @@ export class OpsRoll extends Roll{
     }
     return this;
   }
+}
+
+function _manageOpsStatusEffects(){
+  CONFIG.statusEffects.push(
+    {
+      "id":"kneeling",
+      "label":"Kneeling",
+      "icon":"icons/sundries/misc/horseshoe-iron.webp"
+    }
+  )
 }
 
 // Taken from 5e

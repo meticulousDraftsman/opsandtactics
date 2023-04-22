@@ -14,12 +14,10 @@ export class OpsActor extends Actor {
     // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
     // prepareDerivedData().
     super.prepareData();
-    //console.debug('actor prepareData',this)
   }
 
   /** @override */
   prepareBaseData() {
-    //console.debug('actor prepareBaseData',this)
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
     this._prepareCharacterBase(this);
@@ -41,8 +39,6 @@ export class OpsActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(this);
-    this._prepareNpcData(this);
-    //console.debug('actor prepareDerivedData',this)
   }
 
 
@@ -139,17 +135,6 @@ export class OpsActor extends Actor {
     }
     systemData.magic.mlMisc = systemData.magic.mods.total
     systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + systemData.magic.mlCant + systemData.magic.mlMisc;
-  }
-
-  /**
-   * Prepare NPC type specific data.
-   */
-  _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
-
-    // Make modifications to data here. For example:
-    const systemData = actorData.system;
-    //systemData.xp = (systemData.cr * systemData.cr) * 100;
   }
   
   async rollActorCheck(checkID,event=undefined){
@@ -250,8 +235,6 @@ export class OpsActor extends Actor {
    * @param {String} target item id or actor health pool to apply damage to
    */
   async applyDamage(target,event=null){
-    //console.debug(this.system.health.damageReport)
-    //console.debug(ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id)
     let incoming = this.system.health.incoming ?? 0;
     const initial = incoming;
     if (incoming == 0) return null;
@@ -394,11 +377,9 @@ export class OpsActor extends Actor {
       oldReport.reports.push(report);
       await chatReport.setFlag('opsandtactics','report',oldReport);
     }
-    //console.debug(chatReport)
     // Update the chat message based on its flags
     let messReports = await chatReport.getFlag('opsandtactics','report');
     const html = await renderTemplate(chatTemplate,{title:messReports.initial,report:messReports.reports})
-    //console.debug(html)
     await chatReport.update({content:html});
     // Detach the chat message if all incoming damage is dealt with
     if(incoming==0){
@@ -408,7 +389,6 @@ export class OpsActor extends Actor {
     // Update target with new remaining value and actor with new incoming value
     this.update(actorUpdateData);
     if(!isEmpty(itemUpdateData)) drItem.update(itemUpdateData);
-    //console.debug(report);
     return report;
   }
   
@@ -469,8 +449,6 @@ export class OpsActor extends Actor {
 
     // Prepare character roll data.
     this._getCharacterRollData(data);
-    this._getNpcRollData(data);
-    //console.debug(data)
     return data;
   }
 
@@ -498,15 +476,6 @@ export class OpsActor extends Actor {
     if (data.stats.bab){
       data.bab = data.stats.bab.value ?? 0;
     }
-  }
-
-  /**
-   * Prepare NPC roll data.
-   */
-  _getNpcRollData(data) {
-    if (this.type !== 'npc') return;
-
-    // Process additional NPC data here.
   }
 
 }

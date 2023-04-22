@@ -89,6 +89,7 @@ export class OpsItem extends Item {
     
     // Prep data for roll
     const rollData = this.actor.getRollData();
+    const mainTarget = Array.from(game.user.targets)[0] || undefined;
     const rollConfig = {
       mod: this.actionSum(this.system.actions[actionID]).checkTotal,
       actor: this.actor,
@@ -99,9 +100,11 @@ export class OpsItem extends Item {
       checkType: getProperty(this,`system.actions.${actionID}.check.type`),
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
       rollMode: game.settings.get('core', 'rollMode'),
-      popupSkip: (event && event.shiftKey)
+      popupSkip: (event && event.shiftKey),
+      attackStance: this.actor.effects.find(e => e.getFlag("core", "statusId") === 'prone') ? 'prone' : this.actor?.effects.find(e => e.getFlag("core", "statusId") === 'kneeling') ? 'kneeling' : undefined,
+      targetStance: undefined
     }
-
+    if (mainTarget) rollConfig.targetStance = mainTarget.actor.effects.find(e => e.getFlag("core", "statusId") === 'prone') ? 'prone' : mainTarget.actor?.effects.find(e => e.getFlag("core", "statusId") === 'kneeling') ? 'kneeling' : undefined;
     // Execute roll
     const roll = await opsCheck(rollConfig);
     if (roll==null) return null;
