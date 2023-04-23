@@ -75,6 +75,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                     mods: new field.EmbeddedDataField(Mods),
                 })
             }),
+            actions: new field.ObjectField(),
             details: new field.SchemaField({
                 biography: new field.StringField(),
                 size: new field.StringField(),

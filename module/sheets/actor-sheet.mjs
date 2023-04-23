@@ -34,6 +34,7 @@ export class OpsActorSheet extends ActorSheet {
     magicAttacks:false,
     mental:true,
     resources: true,    
+    characterActions: true,
     objectUtility: false,
     magicUtility:false,
     Loose: false,
@@ -395,6 +396,10 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-check').click(this._actionCheck.bind(this));   
     html.find('.skill-check').click(this._skillCheck.bind(this));   
     html.find('.actor-check').click(this._actorCheck.bind(this));
+    // Character Actions
+    html.find('.action-spend').click(this._actionSpend.bind(this));
+    html.find('.action-create').click(this._actionCreate.bind(this));
+    html.find('.action-delete').click(this._actionDelete.bind(this));
     // Context Menu
     html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
      // Active Effect management
@@ -563,7 +568,23 @@ export class OpsActorSheet extends ActorSheet {
   _actorCheck(event){
     event.preventDefault();
     const checkID = event.currentTarget.dataset.checkId;
-    this.actor.rollActorCheck(checkID,event)
+    this.actor.rollActorCheck(checkID,event);
+  }
+  _actionSpend(event){
+    event.preventDefault();
+    this.actor.actorAction(event.currentTarget.dataset.checkId,event);
+  }
+  async _actionCreate(event){
+    event.preventDefault();
+    const updateData = {};
+    updateData[`system.actions.${randomID(8)}`] = {name:null,cost:null,quantity:1};
+    await this.actor.update(updateData);
+  }
+  async _actionDelete(event){
+    event.preventDefault();
+    const updateData = {};
+    updateData[`system.actions.-=${event.currentTarget.dataset.target}`] = null;
+    await this.actor.update(updateData);
   }
   _itemContextMenu(event){
     event.preventDefault();
