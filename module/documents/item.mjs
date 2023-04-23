@@ -489,27 +489,27 @@ export class OpsItem extends Item {
     const updates = {};
     switch(this.type){
       case 'weapon':
-        updates["name"] = this.name.replace('Item','Weapon')
-        updates["img"] = `systems/opsandtactics/icons/svg/${weaponIcons[Math.floor(Math.random()*weaponIcons.length)]}.svg`;
+        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Weapon')
+        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/${weaponIcons[Math.floor(Math.random()*weaponIcons.length)]}.svg`;
         break;
       case 'armor':
-        updates["name"] = this.name.replace('Item','Armor')
-        updates["img"] = `systems/opsandtactics/icons/svg/${armorIcons[Math.floor(Math.random()*armorIcons.length)]}.svg`;
+        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Armor')
+        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/${armorIcons[Math.floor(Math.random()*armorIcons.length)]}.svg`;
         break;
       case 'skill':
-        updates["name"] = this.name.replace('Item','Skill')
-        updates["img"] = `systems/opsandtactics/icons/svg/bookshelf.svg`;
+        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Skill')
+        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/bookshelf.svg`;
         break;
       case 'feature':
-        updates["name"] = this.name.replace('Item','Feature')
-        updates["img"] = `systems/opsandtactics/icons/svg/notebook.svg`;
+        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Feature')
+        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/notebook.svg`;
         break;
       case 'magic':
-        updates["name"] = this.name.replace('Item','Magic')
-        updates["img"] = `systems/opsandtactics/icons/svg/sparkles.svg`;
+        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Magic')
+        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/sparkles.svg`;
         break;
       default:
-        updates["img"] = `systems/opsandtactics/icons/svg/${objectIcons[Math.floor(Math.random()*objectIcons.length)]}.svg`;;
+        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/${objectIcons[Math.floor(Math.random()*objectIcons.length)]}.svg`;;
         break;
 
     }

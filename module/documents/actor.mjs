@@ -501,6 +501,7 @@ export class OpsActor extends Actor {
   // Pre-creation
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
+    console.debug(data,options,user)
     const characterActions = {
       walking: {
         name: 'Walking and Running (per 5ft)',
@@ -636,7 +637,7 @@ export class OpsActor extends Actor {
     const updates = {};
     switch (this.type){
       case 'character':
-        updates['system.actions'] = characterActions;
+        if (!hasProperty(data,'system')) updates['system.actions'] = characterActions;
         break;
     }
     if(updates) return this.updateSource(updates);
