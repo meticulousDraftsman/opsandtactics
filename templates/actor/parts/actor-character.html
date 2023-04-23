@@ -9,18 +9,18 @@
         {{#each system.abilities as |ability|}}
         <a class="resource-label actor-check" data-check-id="{{@key}}">{{localize (concat "OATS.abilityShort." @key)}}</a>
         <input type="text" name="system.abilities.{{@key}}.score" value="{{ability.score}}" data-dtype="Number"/>
-        <input class="grid-start-4" type="text" name="system.abilities.{{@key}}.mod" value="{{ability.mod}}" data-dtype="Number" readonly/>
+        <input class="grid-start-4" type="text" name="system.abilities.{{@key}}.mod" value="{{numberFormat ability.mod sign=true}}" data-dtype="Number" readonly/>
         {{#if (eq @key "str")}}
         <a class="resource-label actor-check" data-check-id="foc">{{localize "OATS.abilityShort.foc"}}</a>
-        <input type="text" name="system.abilities.str.foc" value="{{ability.foc}}" data-dtype="Number"/>
+        <input type="text" name="system.abilities.str.foc" value="{{numberFormat ability.foc sign=true}}" data-dtype="Number"/>
         <a class="resource-label actor-check" data-check-id="pow">{{localize "OATS.abilityShort.pow"}}</a>
-        <input type="text" name="system.abilities.str.pow" value="{{ability.pow}}" data-dtype="Number" readonly/>
+        <input type="text" name="system.abilities.str.pow" value="{{numberFormat ability.pow sign=true}}" data-dtype="Number" readonly/>
         {{/if}}
         {{#if (eq @key "dex")}}
         <a class="resource-label actor-check" data-check-id="mrk">{{localize "OATS.abilityShort.mrk"}}</a>
-        <input type="text" name="system.abilities.dex.mrk" value="{{ability.mrk}}" data-dtype="Number"/>
+        <input type="text" name="system.abilities.dex.mrk" value="{{numberFormat ability.mrk sign=true}}" data-dtype="Number"/>
         <a class="resource-label actor-check" data-check-id="agi">{{localize "OATS.abilityShort.agi"}}</a>
-        <input type="text" class="{{@root.agiLimited}}" name="system.abilities.dex.agi" value="{{ability.agi}}" data-dtype="Number" readonly data-tooltip="{{#if (eq @root.agiLimited 'agi-limited')}}Reduced by active armor{{/if}}"/>
+        <input type="text" class="{{@root.agiLimited}}" name="system.abilities.dex.agi" value="{{numberFormat ability.agi sign=true}}" data-dtype="Number" readonly data-tooltip="{{#if (eq @root.agiLimited 'agi-limited')}}Reduced by active armor{{/if}}"/>
         {{/if}}
         {{/each}}
       </div>
@@ -31,7 +31,7 @@
       </legend>
         {{#each system.saves as |save|}}
           <fieldset class="save flex-group-center collapse-parent">
-            <a class="resource-label actor-check" data-check-id="{{@key}}" data-tooltip="Roll {{localize (concat 'OATS.saves.' @key)}}">{{#if (gte save.value 0)}}+{{/if}}{{save.value}} {{localize (concat "OATS.saves." @key)}}</a> <a data-tooltip="Toggle Modifier Display"><i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i></a>
+            <a class="resource-label actor-check" data-check-id="{{@key}}" data-tooltip="Roll {{localize (concat 'OATS.saves.' @key)}}">{{numberFormat save.value sign=true}} {{localize (concat "OATS.saves." @key)}}</a> <a data-tooltip="Toggle Modifier Display"><i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i></a>
             <div class="{{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
               <div class="grid grid-3col flex-group-center">
                 <span>Base</span>

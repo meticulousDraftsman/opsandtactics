@@ -8,7 +8,7 @@
       <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number" placeholder="+1/5' over 20'"/>
       <span>Dodge</span>
       <div class="flexrow">
-        <input type="text" value="{{system.def.dodge.value}}" readonly>
+        <input type="text" value="{{numberFormat system.def.dodge.value sign=true}}" readonly>
         <input type="text" name="system.def.dodge.misc" value="{{system.def.dodge.misc}}" data-dtype="Number" placeholder="0"/>
       </div>
       <span>Miscellaneous</span>
@@ -17,7 +17,7 @@
       <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number" placeholder="0"/>
       <span>Equipment</span>
       <div class="flexrow">
-        <input type="text" value="{{system.def.equip.value}}" data-dtype="Number" readonly/>
+        <input type="text" value="{{numberFormat system.def.equip.value sign=true}}" data-dtype="Number" readonly/>
         <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number" placeholder="0"/>
       </div>
     </div>
@@ -28,11 +28,11 @@
     </legend>
     <div class="grid grid-2col flex-group-center">
       <span>Max Agility</span>
-      <input type="text" value="{{system.stats.agiMax}}" data-dtype="Number" placeholder="n/A" readonly/>
+      <input type="text" value="{{numberFormat system.stats.agiMax sign=true}}" data-dtype="Number" placeholder="n/A" readonly/>
       <span>Armor Penalty</span>
-      <input type="text" value="{{system.stats.armorPenalty.value}}" data-dtype="Number" readonly/>
+      <input type="text" value="{{numberFormat system.stats.armorPenalty.value sign=true}}" data-dtype="Number" readonly/>
       <span>CP Loss</span>
-      <input type="text" value="{{system.cp.armor.value}}" data-dtype="Number" readonly/>
+      <input type="text" value="{{system.cp.armor.value}} CP to move" data-dtype="Number" readonly/>
     </div>
   </fieldset>
 </div>

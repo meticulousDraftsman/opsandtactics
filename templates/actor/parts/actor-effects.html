@@ -13,7 +13,7 @@
       <li class="item effect grid grid-9col flex-group-left" data-effect-id="{{effect.id}}">
         <div class="item-name effect-name flexrow grid-span-8">
           <img class="item-image" src="{{effect.icon}}"/>
-          <h4>{{effect.label}} {{#unless (eq @root.actor.uuid effect.origin)}}<i>from {{effect.sourceName}}</i>{{/unless}}</h4>
+          <h4>{{effect.label}} {{#unless (eq @root.actor.uuid effect.origin)}}{{#if effect.origin}}<i>from {{effect.sourceName}}</i>{{/if}}{{/unless}}</h4>
         </div>
         <div class="flexrow flex-group-center">
           <a class="effect-control" data-action="toggle" data-tooltip="Toggle Effect"><i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i></a>

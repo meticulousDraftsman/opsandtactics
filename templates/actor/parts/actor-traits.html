@@ -24,16 +24,16 @@
         </legend>
         <div class="grid grid-4col flex-group-center">
             <span class="grid-span-2">Base Attack</span>
-            <input type="text" value="{{system.stats.bab.value}}" readonly>
+            <input type="text" value="{{numberFormat system.stats.bab.value sign=true}}" readonly>
             <input type="text" name="system.stats.bab.misc" value="{{system.stats.bab.misc}}" placeholder="Misc" data-dtype="Number">
             <span class="grid-span-2">Initiative</span>
-            <input type="text"value="{{system.stats.init.value}}" readonly>
+            <input type="text"value="{{numberFormat system.stats.init.value sign=true}}" readonly>
             <input type="text" name="system.stats.init.misc" value="{{system.stats.init.misc}}" placeholder="Misc" data-dtype="Number">
             <select class="grid-span-4 flex-group-center" name="system.stats.wager" data-dtype="Number">
                 {{selectOptions wagers selected=system.stats.wager nameAttr="value" labelAttr="label"}}
             </select>
             <span class="grid-span-2">Recoil</span>
-            <input type="text"value="{{system.stats.recoil.value}}" readonly>
+            <input type="text"value="{{numberFormat system.stats.recoil.value sign=true}}" readonly>
             <input type="text" name="system.stats.recoil.misc" value="{{system.stats.recoil.misc}}" placeholder="Misc" data-dtype="Number">
         </div>
     </fieldset>
