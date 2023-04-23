@@ -2,7 +2,7 @@
     "id": "opsandtactics",
     "title": "Ops and Tactics",
     "description": "A FoundryVTT implementation of O&T",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "compatibility": {
         "minimum": 10,
         "verified": "10.291",
@@ -115,5 +115,5 @@
     "secondaryTokenAttribute": "health.xhp",
     "url": "https://github.com/meticulousDraftsman/opsandtactics",
     "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.5.zip"
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.6.zip"
 }
