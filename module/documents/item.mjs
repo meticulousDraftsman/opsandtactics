@@ -482,36 +482,49 @@ export class OpsItem extends Item {
   // Pre-creation
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
-    const weaponIcons = ['ak47','bayonet','colt-m1911','fn-fal','glock','mac-10','mp5','revolver','tec-9','famas','steyr-aug','lee-enfield','p90','thompson-m1928','walther-ppk','winchester-rifle','gun-stock','panzerfaust','sawed-off-shotgun','zat-gun','baton','gladius','switchblade','crossbow','pocket-bow','hatchet','fire-axe','light-saber']
-    const armorIcons = ['kevlar-vest','metal-scales','fish-scales'];
-    const objectIcons = ['backpack','batteries','black-book','book-cover','cardboard-box-closed','cannister','compact-disc','cooler','disc','flashlight','laptop','medicine-pills','papers','pc','quiver','rolling-suitcase','school-bag','screwdriver','shotgun-rounds','machine-gun-magazine','smartphone','suitcase','tablet','toolbox','usb-key','walkie-talkie'];
     // Assign default image based on type
+    console.debug(data)
     const updates = {};
-    switch(this.type){
-      case 'weapon':
-        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Weapon')
-        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/${weaponIcons[Math.floor(Math.random()*weaponIcons.length)]}.svg`;
-        break;
-      case 'armor':
-        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Armor')
-        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/${armorIcons[Math.floor(Math.random()*armorIcons.length)]}.svg`;
-        break;
-      case 'skill':
-        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Skill')
-        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/bookshelf.svg`;
-        break;
-      case 'feature':
-        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Feature')
-        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/notebook.svg`;
-        break;
-      case 'magic':
-        if (!hasProperty(data,'name')) updates["name"] = this.name.replace('Item','Magic')
-        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/sparkles.svg`;
-        break;
-      default:
-        if (!hasProperty(data,'img')) updates["img"] = `systems/opsandtactics/icons/svg/${objectIcons[Math.floor(Math.random()*objectIcons.length)]}.svg`;;
-        break;
-
+    if (!hasProperty(data,'system')){
+      switch(this.type){
+        case 'weapon':
+          updates["name"] = this.name.replace('Item','Weapon')
+          break;
+        case 'armor':
+          updates["name"] = this.name.replace('Item','Armor')
+          break;
+        case 'skill':
+          updates["name"] = this.name.replace('Item','Skill')
+          break;
+        case 'feature':
+          updates["name"] = this.name.replace('Item','Feature')
+          break;
+        case 'magic':
+          updates["name"] = this.name.replace('Item','Magic')
+          break;
+      }
+    }
+    if (!hasProperty(data,'img')){
+      switch(this.type){
+        case 'weapon':
+          updates["img"] = CONFIG.OATS.weaponIcons[Math.floor(Math.random()*CONFIG.OATS.weaponIcons.length)];
+          break;
+        case 'armor':
+          updates["img"] = CONFIG.OATS.armorIcons[Math.floor(Math.random()*CONFIG.OATS.armorIcons.length)];
+          break;
+        case 'skill':
+          updates["img"] = `systems/opsandtactics/icons/svg/bookshelf.svg`;
+          break;
+        case 'feature':
+          updates["img"] = `systems/opsandtactics/icons/svg/notebook.svg`;
+          break;
+        case 'magic':
+          updates["img"] = `systems/opsandtactics/icons/svg/sparkles.svg`;
+          break;
+        default:
+          updates["img"] = CONFIG.OATS.objectIcons[Math.floor(Math.random()*CONFIG.OATS.objectIcons.length)];
+          break;
+      }
     }
     if(updates) return this.updateSource(updates);
   }

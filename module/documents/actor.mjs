@@ -501,144 +501,14 @@ export class OpsActor extends Actor {
   // Pre-creation
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
-    console.debug(data,options,user)
-    const characterActions = {
-      walking: {
-        name: 'Walking and Running (per 5ft)',
-        cost: 1,
-        quantity: 1
-      },
-      crouchmove: {
-        name: 'Moving while Crouched (per 5ft)',
-        cost: 2,
-        quantity: 1
-      },
-      proneclimb: {
-        name: 'Moving while Prone; Accelerated Climbing (per 5ft)',
-        cost: 3,
-        quantity: 1
-      },
-      fastclimb: {
-        name: 'Climbing (per 5ft)',
-        cost: 4,
-        quantity: 1
-      },
-      swimming: {
-        name: 'Swimming (per 5ft)',
-        cost: 5,
-        quantity: 1
-      },
-      unholster: {
-        name: 'Draw a weapon from a holster or sheath',
-        cost: 3,
-        quantity: 1
-      },
-      unsling: {
-        name: 'Unsling or resling a weapon',
-        cost: 5,
-        quantity: 1
-      },
-      waistband: {
-        name: 'Draw a weapon from Waistband carry',
-        cost: 6,
-        quantity: 1
-      },
-      holster: {
-        name: 'Holster a weapon',
-        cost: 4,
-        quantity: 1
-      },
-      bagging: {
-        name: 'Retrieve or store an item in a pocket, bag, or pouch',
-        cost: 4,
-        quantity: 1
-      },
-      mollelbe: {
-        name: 'Retrieve or store an item in a pocket, bag, or pouch',
-        cost: 3,
-        quantity: 1
-      },
-      pickmanip: {
-        name: 'Pick up or manipulate an object within reach',
-        cost: 3,
-        quantity: 1
-      },
-      dropdrop: {
-        name: 'Drop an item or drop to kneeling, sitting, or prone',
-        cost: 0,
-        quantity: 0
-      },
-      cyclebow: {
-        name: 'Cycle a weapon or reload a bow',
-        cost: 1,
-        quantity: 1
-      },
-      standup: {
-        name: 'Stand up from kneeling, prone, or sitting',
-        cost: 6,
-        quantity: 1
-      },
-      clearjam: {
-        name: 'Clear a jammed firearm',
-        cost: 12,
-        quantity: 1
-      },
-      crossbow: {
-        name: 'Reload a crossbow or speargun',
-        cost: 2,
-        quantity: 1
-      },
-      slingtase: {
-        name: 'Reload a slingshot, Taser, paintball hopper, or pistol crossbow',
-        cost: 3,
-        quantity: 1
-      },
-      tranqload: {
-        name: 'Reload a tranquilizer gun',
-        cost: 9,
-        quantity: 1
-      },
-      handload: {
-        name: 'Reload or unload a weapon, magazine, speedloader, or clip by hand (per round)',
-        cost: 3,
-        quantity: 1
-      },
-      magload: {
-        name: 'Reload a firearm using a new magazine, speedloader, or clip',
-        cost: 4,
-        quantity: 1
-      },
-      beltfed: {
-        name: 'Reload a link fed weapon with a new link',
-        cost: 6,
-        quantity: 1
-      },
-      clipazine: {
-        name: 'Reload a magazine using a clip',
-        cost: 3,
-        quantity: 1
-      },
-      blackpowder: {
-        name: 'Reload a black powder weapon (per barrel or chamber)',
-        cost: 12,
-        quantity: 1
-      },
-      plasdraw: {
-        name: 'Draw a plasma blade or psiblade',
-        cost: 6,
-        quantity: 1
-      },
-      coolant: {
-        name: 'Reload a plasarm, lasarm, elarm, or plasma blade',
-        cost: 4,
-        quantity: 1
-      }
-    }
     const updates = {};
     switch (this.type){
       case 'character':
-        if (!hasProperty(data,'system')) updates['system.actions'] = characterActions;
+        if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.characterActions;
+        if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)];
         break;
+      case 'spacecraft':
+        if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)];
     }
     if(updates) return this.updateSource(updates);
   }
