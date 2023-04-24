@@ -94,7 +94,7 @@
         {{#each system.actions}}
         <li class="item grid grid-12col flex-group-center">
             <input class="grid-span-8" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" data-dtype="String" placeholder="Character Action">
-            <a class="action-spend resource-label"><i class="fas fa-stopwatch"></i> CP</a>
+            <a class="action-spend resource-label" data-check-id="{{@key}}"><i class="fas fa-stopwatch"></i> CP</a>
             <div class="grid-span-2 flexrow flex-group-center">
                 <input class="flex3" type="text" name="system.actions.{{@key}}.cost" value="{{this.cost}}" data-dtype="Number" placeholder="0">
                 <i class="fas fa-times"></i>

@@ -175,8 +175,10 @@ export class OpsActor extends Actor {
   }
 
   async actorAction(checkID, event=undefined){
-    if (((getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`)))==0) return;
-    let cpCheck = (event && event.ctrlKey)? true : ((this.system.cp.value-(getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`))) >= -this.system.cp.temp);
+    const cpCost = getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`);
+    console.debug(cpCost)
+    if (cpCost==0) return;
+    let cpCheck = (event && event.ctrlKey)? true : ((this.system.cp.value-cpCost) >= -this.system.cp.temp);
     if (!cpCheck){
       await Dialog.confirm({
         title: "Not Enough Combat Points!",
@@ -190,7 +192,7 @@ export class OpsActor extends Actor {
     }
     if (!cpCheck) return;
     const updateData = {};
-    updateData['system.cp.value'] = (this.system.cp.value-(getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`)));
+    updateData['system.cp.value'] = (this.system.cp.value-cpCost);
     await this.update(updateData);
   }
 
