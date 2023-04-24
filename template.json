@@ -16,6 +16,18 @@
         "value": 15,
         "max": 15
       }
+    },
+    "spacecraft": {
+      "health": {
+        "hull": {
+          "value": 20,
+          "max": 0
+        },
+        "shield": {
+          "value": 0,
+          "max": 0
+        }
+      }
     }
   },
   "Item": {

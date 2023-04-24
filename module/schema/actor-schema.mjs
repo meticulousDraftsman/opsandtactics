@@ -163,6 +163,17 @@ export class OpsCharacter extends foundry.abstract.DataModel {
 export class OpsSpacecraft extends foundry.abstract.DataModel {
     static defineSchema(){
         return {
+            health: new field.SchemaField({
+                hull: new field.SchemaField({
+                    value: new field.NumberField()
+                }),
+                shield: new field.SchemaField({
+                    value: new field.NumberField()
+                })
+            }),
+            stats: new field.SchemaField({
+                size: new field.StringField()
+            })
         }
     }
 }
