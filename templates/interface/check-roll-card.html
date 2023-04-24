@@ -6,7 +6,7 @@
     <div class="dice-result">
         <div class="dice-formula">{{formula}}</div>
         {{{tooltip}}}
-        <h4 class="dice-total {{#if critResult}}critical{{/if}}">{{total}}</h4>
+        <h4 class="dice-total {{#if (and critResult jamResult)}}critical-jam{{else}}{{#if critResult}}critical{{/if}}{{#if jamResult}}jammed{{/if}}{{/if}}">{{total}}</h4>
     </div>
 </div>
 {{#if concealTip}}

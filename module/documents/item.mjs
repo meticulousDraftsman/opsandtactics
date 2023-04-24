@@ -95,6 +95,7 @@ export class OpsItem extends Item {
       actor: this.actor,
       data: rollData,
       critical: getProperty(this,'system.crit'),
+      error: getProperty(this,'system.error'),
       title: `${this.name} - ${this.system.actions[actionID].name}`,
       flavor: getProperty(this,`system.actions.${actionID}.check.flavor`),
       checkType: getProperty(this,`system.actions.${actionID}.check.type`),
@@ -483,7 +484,6 @@ export class OpsItem extends Item {
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
     // Assign default image based on type
-    console.debug(data)
     const updates = {};
     if (!hasProperty(data,'system')){
       switch(this.type){

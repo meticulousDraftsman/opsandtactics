@@ -127,17 +127,12 @@ export async function opsCheck(data){
   }
   // Create the roll and apply any situational modifiers
   const roll = new OpsRoll(formula,data);
-  let poppedRoll;
-  if (data.popupSkip){
-    poppedRoll = roll;
-  }
-  else {
-    poppedRoll = await roll.situationalPopup(data);
-    if (poppedRoll===null) return null;
-  }
+  const poppedRoll = await roll.situationalPopup(data);
+  if (poppedRoll===null) return null;
   // Evaluate Roll and prepare for message creation
   await poppedRoll.evaluate({async:true});
   data.critResult = poppedRoll.isCritical;
+  data.jamResult = poppedRoll.isJam;
   const concealResult = await poppedRoll.concealRoll();
   messageData.rolls = [poppedRoll];
   if (concealResult){
@@ -169,6 +164,45 @@ export class OpsRoll extends Roll{
     }
   }
 
+  get isJam(){
+    if (!this._evaluated) return undefined;
+    if ((this.terms[0] instanceof Die) && (this.terms[0].number==3) && (this.terms[0].faces==6)){
+      switch (true){
+        case this.data.error<=15:
+          return (this.dice[0].total <= 3);
+        case this.data.error<=20:
+          return (this.dice[0].total <= 4);
+        case this.data.error<=25:
+          return (this.dice[0].total <= 5);
+        case this.data.error<=30:
+          return (this.dice[0].total <= 6);
+        case this.data.error<=35:
+          return (this.dice[0].total <= 7);
+        case this.data.error<=40:
+          return (this.dice[0].total <= 8);
+        case this.data.error<=45:
+          return (this.dice[0].total <= 9);
+        case this.data.error<=50:
+          return (this.dice[0].total <= 10);
+        case this.data.error<=55:
+          return (this.dice[0].total <= 11);
+        case this.data.error<=60:
+          return (this.dice[0].total <= 12);
+        case this.data.error<=65:
+          return (this.dice[0].total <= 13);
+        case this.data.error<=70:
+          return (this.dice[0].total <= 14);
+        case this.data.error<=75:
+          return (this.dice[0].total <= 16);
+        case this.data.error>75:
+          return true;
+      }
+    }
+    else {
+      return undefined;
+    }
+  }
+
   async concealRoll(){
     if (this.data?.missChance > 0){
       const missRoll = await new Roll(`1d100cs>${this.data.missChance}`).evaluate({async:true});
@@ -180,6 +214,34 @@ export class OpsRoll extends Roll{
   }
 
   async situationalPopup(data){
+    if (data.popupSkip){
+      let atkBon = 0;
+      let defBon = 0;
+      switch (data.checkType){
+        case 'ranged':
+          if (data.attackStance==='kneeling') atkBon +=1;
+          if (data.attackStance==='prone') atkBon +=2;
+          if (data.targetStance==='kneeling') defBon +=2;
+          if (data.targetStance==='prone') defBon +=4;
+          break;
+        case 'melee':
+          if (data.attackStance==='kneeling') atkBon -=2;
+          if (data.attackStance==='prone') atkBon -=4;
+          if (data.targetStance==='kneeling') defBon -=4;
+          if (data.targetStance==='prone') defBon -=2;
+          break;
+      }
+      if (atkBon != 0){
+        const attacker = new Roll(`+(${atkBon})`,this.data);
+        this.terms = this.terms.concat(attacker.terms);
+      }
+      if (defBon != 0){
+        const defender = new Roll(`-(${defBon})`,this.data);
+        this.terms = this.terms.concat(defender.terms);
+      }
+      this._formula = this.constructor.getFormula(this.terms);
+      return this;
+    }
     let template;
     let templateData;
     switch (data.checkType){

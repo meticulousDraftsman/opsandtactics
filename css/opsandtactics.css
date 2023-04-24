@@ -282,6 +282,14 @@
   color: green;
 }
 
+.opsandtactics .jammed{
+  color: red;
+}
+
+.opsandtactics .critical-jam{
+  color: brown;
+}
+
 .opsandtactics .agi-limited{
   color:maroon;
   border-color:maroon;

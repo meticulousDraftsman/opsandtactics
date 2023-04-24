@@ -44,10 +44,10 @@
                             {{#if (eq item.system.magazine.type "unlimited")}}
                             <i class="grid-span-2 fas fa-infinity"></i>
                             {{/if}}
-                            <span>Error</span>
-                            <input type="text" value="{{item.system.error}}%" readonly>
+                            <a class="resource-label rollable" data-roll="1d100" data-label="{{this.name}} {{item.system.error}}% Error Range">Error %</a>
+                            <input type="text" class="item-input" data-target-prop="system.error" data-target-id="{{item._id}}" value="{{item.system.error}}" data-dtype="Number">
                             <span>Range</span>
-                            <input class="grid-span-2" type="text" value="{{item.system.range}}" readonly>
+                            <input class="grid-span-2 item-input" type="text" data-target-prop="system.range" data-target-id="{{item._id}}" value="{{item.system.range}}" data-dtype="Number">
                         </div>
                     </div>
                     <ol class="grid-span-3 items-list flex-group-center">

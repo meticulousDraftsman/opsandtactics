@@ -75,7 +75,6 @@ export class OpsActorSheet extends ActorSheet {
 
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
-    console.debug(this.actor?.effects.find(e => e.getFlag("core", "statusId") === 'kneeling'))
     return context;
   }
 
@@ -283,7 +282,7 @@ export class OpsActorSheet extends ActorSheet {
     // Crazy Container Nesting
     const locations = ["Loose","Worn","Carried","Stored"];
     // Initialize children of layer 0 items
-    const nestedGear = {Loose:{children:[],weight:null},Worn:{children:[],weight:null},Carried:{children:[],weight:null},Stored:{children:[],weight:null}};
+    const nestedGear = {Loose:{children:[],weight:0},Worn:{children:[],weight:0},Carried:{children:[],weight:0},Stored:{children:[],weight:0}};
     for (let layer0 of locations){
       for (let i = 0; i < gear.length; i++){
         if (gear[i].system.gear.location.parent == layer0){
@@ -339,8 +338,9 @@ export class OpsActorSheet extends ActorSheet {
       }
     }
 
-    // Purge Empty Gear Layers
+    // Clean up floating point weight and Purge Empty Gear Layers
     for (let [key,layer] of Object.entries(nestedGear)){
+      layer.weight = Number(parseFloat(layer.weight).toPrecision(12));
       if (layer.children.length == 0 && key != 'Loose') delete nestedGear[key];
     }       
 
@@ -380,6 +380,8 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-toggle').click(this._onItemToggle.bind(this));
     // Toggle visibility of a collapsible element
     html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
+    // Toggle an actor property
+    html.find('.actor-toggle').click(this._onActorToggle.bind(this));
     // Roll bleed dice and add them to incoming damage
     html.find('.actor-bleed').click(this._onRollBleed.bind(this));
     // Apply Incoming Damage to Armor or Hit Points
@@ -520,6 +522,12 @@ export class OpsActorSheet extends ActorSheet {
       });
     }
   }
+  async _onActorToggle(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    const targetProp = dataset.targetProp;
+    await this.actor.update({[targetProp]:!getProperty(this.actor,targetProp)});
+  }
   async _onRollBleed(event){
     event.preventDefault();
     this.actor.rollBleed();
@@ -537,7 +545,6 @@ export class OpsActorSheet extends ActorSheet {
  async _onResourceDelta(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
-    console.debug(dataset,(event.target.value.charAt(0)))
     if (!Number.isNumeric(event.target.value)){
       this.render()
       return;
@@ -549,7 +556,6 @@ export class OpsActorSheet extends ActorSheet {
     else {
       setProperty(updateData,dataset.target,Number(event.target.value));
     }
-    console.debug(updateData)
     await this.actor.update(updateData);
   }
   _actionCheck(event){
