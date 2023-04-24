@@ -23,6 +23,18 @@ class Health extends foundry.abstract.DataModel {
                 formula: new field.StringField({initial:"(@con.score)+2"}),
                 mods: new field.EmbeddedDataField(Mods)
             }),
+            extremity: new field.SchemaField({
+                head: new field.BooleanField(),
+                leftArm: new field.BooleanField(),
+                rightArm: new field.BooleanField(),
+                leftHand: new field.BooleanField(),
+                rightHand: new field.BooleanField(),
+                leftLeg: new field.BooleanField(),
+                rightLeg: new field.BooleanField(),
+                leftFoot: new field.BooleanField(),
+                rightFoot: new field.BooleanField(),
+                other: new field.BooleanField()
+            }),
             temp: new field.NumberField({initial:0}),
             notes: new field.StringField({initial:""}),
             bleed: new field.NumberField({initial:0}),

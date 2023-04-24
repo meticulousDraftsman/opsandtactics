@@ -40,6 +40,23 @@
 </div>
 <fieldset>
     <legend class="resource-label">
+        Extremity Damage
+    </legend>
+    <div class="grid grid-10col flex-group-center">
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.head">Head <i class="fas fa-user{{#if system.health.extremity.head}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftArm">L Arm <i class="fas fa-user{{#if system.health.extremity.leftArm}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftHand">L Hand <i class="fas fa-user{{#if system.health.extremity.leftHand}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightArm">R Arm <i class="fas fa-user{{#if system.health.extremity.rightArm}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightHand">R Hand <i class="fas fa-user{{#if system.health.extremity.rightHand}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftLeg">L Leg <i class="fas fa-user{{#if system.health.extremity.leftLeg}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftFoot">L Foot <i class="fas fa-user{{#if system.health.extremity.leftFoot}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightLeg">R Leg <i class="fas fa-user{{#if system.health.extremity.rightLeg}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightFoot">R Foot <i class="fas fa-user{{#if system.health.extremity.rightFoot}}-injured{{/if}}"></i></a>
+        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.other">Other <i class="fas fa-user{{#if system.health.extremity.other}}-injured{{/if}}"></i></a>
+    </div>
+</fieldset>
+<fieldset>
+    <legend class="resource-label">
         Traits <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
     </legend>
     <ol class="items-list item-list">
