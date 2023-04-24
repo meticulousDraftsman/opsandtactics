@@ -386,7 +386,8 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.actor-bleed').click(this._onRollBleed.bind(this));
     // Apply Incoming Damage to Armor or Hit Points
     html.find('.apply-damage').click(this._onApplyDamage.bind(this));
-    // Incantation Mental Limit
+    // Incantation Mental Limit and CP armor loss
+    html.find('.property-change').click(this._onPropertyChange.bind(this));
     html.find('.incant-regain').click(this._incantRegain.bind(this));
     // Resource Delta Edits
     html.find('.resource-delta').focus(ev =>{
@@ -402,6 +403,7 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.action-spend').click(this._actionSpend.bind(this));
     html.find('.action-create').click(this._actionCreate.bind(this));
     html.find('.action-delete').click(this._actionDelete.bind(this));
+    
     // Context Menu
     html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
      // Active Effect management
@@ -537,10 +539,18 @@ export class OpsActorSheet extends ActorSheet {
     const dataset = event.currentTarget.dataset 
     const report = this.actor.applyDamage(dataset.target,event);
   };
+  async _onPropertyChange(event){
+    event.preventDefault()
+    const updateData = {};
+    const targetProp = event.currentTarget.dataset.targetProp;
+    const change = Number(event.currentTarget.dataset.change);
+    updateData[targetProp] = getProperty(this.actor,targetProp)+change;
+    await this.actor.update(updateData);
+  }
   async _incantRegain(event){
     event.preventDefault();
     const updateData = {['system.magic.mlCant']:Math.max((this.actor.system.magic.mlCant - Math.ceil(this.actor.system.ml.max / 10)),0)}
-    this.actor.update(updateData);
+    await this.actor.update(updateData);
   }
  async _onResourceDelta(event){
     event.preventDefault();
