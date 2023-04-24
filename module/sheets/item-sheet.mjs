@@ -267,21 +267,12 @@ export class OpsItemSheet extends ItemSheet {
     });
   }
 
-  _onChamberRound(event){
+  async _onChamberRound(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
-    if (this.actor != null && dataset.loaded != ""){
-      const dualID = dataset.loaded.split(',');
-      const magazine = this.actor.items.get(dualID[0]);
-      let targetPath = `${dualID[1]}.value`;
-      const magData = {};
-      const wepData = {};
-      if(getProperty(magazine,targetPath)>0){
-        setProperty(magData,targetPath,getProperty(magazine,targetPath)-1)
-        setProperty(wepData,'system.magazine.value',this.object.system.magazine.value+1)
-        magazine.update(magData);
-        this.object.update(wepData);
-      }
+    if (this.object.resourceAvailableCheck(1)){
+      await this.object.resourceConsume(1);
+      await this.object.update({['system.magazine.value']:(getProperty(this.object,'system.magazine.value')+1)});
     }
   }
 
@@ -319,7 +310,6 @@ export class OpsItemSheet extends ItemSheet {
         newProp.name = 'New Attack';
         newProp.check.type = 'ranged';
         setProperty(updateData,`system.actions.${randomID(8)}`,newProp);
-        console.debug(newProp);
         break;
       case 'weaponMods':
         newProp = duplicate(this.object.readyMod);
