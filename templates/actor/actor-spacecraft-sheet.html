@@ -1,0 +1,130 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <div class="flexrow">
+      <div class="profile-img flex-group-center">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        <fieldset>
+          <div class="grid grid-2col flex-group-center">
+            <span>DEF</span>
+            <input type="text" value="{{0}}" readonly/>
+          </div>
+        </fieldset>
+      </div>
+      <div class="header-fields">
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+        {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+        use both the "grid" and "grid-Ncol" class where "N" can be any number
+        from 1 to 12 and will create that number of columns.  --}}
+        <div class="grid grid-2col">
+          <fieldset>
+            <div class="grid grid-5col flex-group-center">
+              <span>Hull</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3 resource-delta" type="text" data-target="" value="{{0}}">
+                <span>/</span>
+                <input class="flex3" type="text" value="{{0}}" readonly/>
+              </div>
+              <span>HRD</span>
+              <input type="text" value="{{0}}"  readonly>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid grid-5col flex-group-center">
+              <span>Soak</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3 resource-delta" type="text" data-target="" value="{{0}}">
+                <span>/</span>
+                <input class="flex3" type="text" value="{{0}}" readonly/>
+              </div>
+              <span>DEF</span>
+              <input type="text" value="{{0}}" readonly/>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid grid-5col flex-group-center">
+              <span>CP</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3 resource-delta" type="text" data-target="" value="{{0}}">
+                <span>/</span>
+                <input class="flex3" type="text"value="{{0}}" readonly>
+              </div>
+              <span>MOV</span>
+              <input type="text" value="{{0}}" readonly>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid grid-5col flex-group-center">
+              <span>UEG</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3 resource-delta" type="text" data-target="" value="{{0}}">
+                <span>/</span>
+                <input class="flex3" type="text" value="{{0}}" readonly/>
+              </div>
+              <span>RGN</span>
+              <input type="text" value="{{0}}" readonly>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="spacecraft">Spacecraft</a>
+    <a class="item" data-tab="components">Components</a>
+    <a class="item" data-tab="offense">Offense</a>
+    <a class="item" data-tab="defense">Defense</a>
+    <a class="item" data-tab="utility">Utility</a>
+    <a class="item" data-tab="cargo">Cargo</a>
+    <a class="item" data-tab="registry">Registry</a>
+    <a class="item" data-tab="effects">Active Effects</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Character Tab --}}
+    <div class="tab spacecraft" data-group="primary" data-tab="spacecraft">
+
+    </div>
+
+    {{!-- Traits Tab --}}
+    <div class="tab components" data-group="primary" data-tab="components">
+
+    </div>
+
+    {{!-- Combat Tabs --}}
+    <div class="tab offense" data-group="primary" data-tab="offense">
+
+    </div>
+
+    <div class="tab defense" data-group="primary" data-tab="defense">
+
+    </div>
+
+    {{!-- Utility Tab --}}
+    <div class="tab utility" data-group="primary" data-tab="utility">
+
+    </div>
+
+    {{!-- Gear Tab --}}
+    <div class="tab cargo" data-group="primary" data-tab="cargo">
+
+    </div>
+
+    {{!-- Biography Tab --}}
+        <div class="tab registry" data-group="primary" data-tab="registry">
+
+        </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+
+    </div>
+  </section>
+</form>
+
