@@ -28,7 +28,7 @@
     </legend>
     <div class="grid grid-2col flex-group-center">
       <span>Max Agility</span>
-      <input type="text" value="{{numberFormat system.stats.agiMax sign=true}}" data-dtype="Number" placeholder="n/A" readonly/>
+      <input type="text" value="{{#if system.stats.agiMax includeZero=true}}{{numberFormat system.stats.agiMax sign=true}}{{/if}}" data-dtype="Number" placeholder="n/A" readonly/>
       <span>Armor Penalty</span>
       <input type="text" value="{{numberFormat system.stats.armorPenalty.value sign=true}}" data-dtype="Number" readonly/>
       <span>CP Loss</span>
