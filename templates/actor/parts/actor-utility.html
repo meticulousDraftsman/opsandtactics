@@ -119,7 +119,7 @@
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-10col {{#if item.system.minimized}}collapse{{/if}}">
+                <div class="grid grid-10col action-pane {{#if item.system.minimized}}collapse{{/if}}">
                     <div class="grid-span-3">
                         <div class="grid grid-3col flex-group-center">
                             <span>Uses</span>
@@ -139,8 +139,8 @@
                         {{#if this.active}}
                         {{#if (eq this.type "utility")}}
                         <li class="item flexrow">
-                            <a class="item-check resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Check Roll">{{this.mods.checkTotal}} {{this.name}}</a>
-                            <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Effect Roll">{{this.mods.effectTotal}}</a>
+                            <a class="item-check resource-label flex-group-left {{#if (eq this.check.type 'noChatUtility')}}flex2{{/if}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Check Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="rollable grid-span-2 resource-label {{#if (eq this.check.type 'noChatUtility')}}collapse{{/if}}" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Effect Roll">{{this.mods.effectTotal}}</a>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
                         {{/if}}
@@ -165,7 +165,7 @@
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-10col {{#if item.system.minimized}}collapse{{/if}}">
+                <div class="grid grid-10col action-pane {{#if item.system.minimized}}collapse{{/if}}">
                     <div class="grid-span-3">
                         <div class="grid grid-3col flex-group-center">
                             {{#unless (eq item.system.magazine.type "mental")}}
@@ -197,8 +197,8 @@
                         {{#if this.active}}
                         {{#if (eq this.type "utility")}}
                         <li class="item flexrow">
-                            <a class="item-check resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Check Roll">{{this.mods.checkTotal}} {{this.name}}</a>
-                            <a class="rollable grid-span-2 resource-label" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Effect Roll">{{this.mods.effectTotal}}</a>
+                            <a class="item-check resource-label flex-group-left {{#if (eq this.check.type 'noChatUtility')}}flex2{{/if}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Check Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="rollable grid-span-2 resource-label {{#if (eq this.check.type 'noChatUtility')}}collapse{{/if}}" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Effect Roll">{{this.mods.effectTotal}}</a>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
                         {{/if}}

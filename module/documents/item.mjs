@@ -289,7 +289,7 @@ export class OpsItem extends Item {
     mods.cp = sourceAction.cp.inherent?sourceAction.cp.inherent:null;
     if (hasProperty(sourceAction,'cp.mods')){
       for (let [,p] of Object.entries(sourceAction.cp.mods)){
-        mods.cp += p.value || 0;
+        mods.cp += Number(p.value) || 0;
       }
     }
     // Handle Ammo and CP/Ammo Label

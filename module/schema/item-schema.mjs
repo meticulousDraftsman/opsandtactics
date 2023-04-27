@@ -26,7 +26,7 @@ export class OpsSkill extends foundry.abstract.DataModel {
     static defineSchema(){
         return{
             description: new field.StringField(),
-            ranks: new field.NumberField({initial:0}),
+            ranks: new field.NumberField(),
             ability: new field.StringField(),
             focus: new field.StringField({initial:"unfocus"}),
             armor: new field.SchemaField({

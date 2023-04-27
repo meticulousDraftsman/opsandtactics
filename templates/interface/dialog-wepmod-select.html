@@ -1,7 +1,7 @@
 <form class="opsandtactics flex-group-center">
     {{#each wepmods}}
     <div>
-        <label for="{{@key}}">{{this.name}}: {{#if (gt (lookup this @root.type) 0)}}+{{/if}}{{lookup this @root.type}}</label>
+        <label for="{{@key}}">{{this.name}}: {{lookup this @root.type}}</label>
         <input type="radio" id="{{@key}}" name="chooseMod" value="{{@key}}" {{#if @first}}checked{{/if}}>
     </div>
     {{/each}}

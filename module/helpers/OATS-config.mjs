@@ -88,7 +88,7 @@ OATS.characterActions = {
   waistband: {name: 'Draw a weapon from Waistband carry', cost: 6, quantity: 1},
   holster: {name: 'Holster a weapon', cost: 4, quantity: 1},
   bagging: {name: 'Retrieve or store an item in a pocket, bag, or pouch', cost: 4, quantity: 1},
-  mollelbe: {name: 'Retrieve or store an item in a pocket, bag, or pouch', cost: 3, quantity: 1},
+  mollelbe: {name: 'Retrieve or store an item in MOLLE or LBE', cost: 3, quantity: 1},
   pickmanip: {name: 'Pick up or manipulate an object within reach', cost: 3, quantity: 1},
   dropdrop: {name: 'Drop an item or drop to kneeling, sitting, or prone', cost: 0, quantity: 0},
   cyclebow: {name: 'Cycle a weapon or reload a bow', cost: 1, quantity: 1},
