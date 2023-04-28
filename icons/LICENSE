@@ -4,107 +4,172 @@ SVG Icons from Game-Icons.net
 
 The opsandtactics system for Foundry Virtual Tabletop includes icon artwork licensed from Game-icons.net under the Creative Commons license. These icons are packaged with and provided for use in the dnd5e system under their respective licenses, as noted below.
 
-/svg/prone.svg - "Half body crawling" by Delapouite under CC BY 3.0
-/svg/kneeling.svg - "Coronation" by Delapouite under CC BY 3.0
+/svg/transparent/astronaut-helmet.svg - "Astronaut helmet" by Delapouite under CC BY 3.0
+/svg/transparent/balaclave.svg - "Balaclava" by Skoll under CC BY 3.0
+/svg/transparent/bandit.svg - "Bandit" by Delapouite under CC BY 3.0
+/svg/transparent/cowled.svg - "Cowled" by Lorc under CC BY 3.0
+/svg/transparent/hoodie.svg - "Hoodie" by Delapouite under CC BY 3.0
+/svg/transparent/mustache.svg - "Mustache" by Delapouite under CC BY 3.0
+/svg/transparent/police-officer-head.svg - "Police officer head" by Delapouite under CC BY 3.0
+/svg/transparent/spy.svg - "Spy" by Delapouite under CC BY 3.0
+
+/svg/transparent/defense-satellite.svg - "Defense Satellite" by Delapouite under CC BY 3.0
+/svg/transparent/interceptor-ship.svg - "Interceptor ship" by Delapouite under CC BY 3.0
+/svg/transparent/rocket.svg - "Rocket" by Lorc under CC BY 3.0
+/svg/transparent/scout-ship.svg - "Scout ship" by Delapouite under CC BY 3.0
+/svg/transparent/spaceship.svg - "Spaceship" by Delapouite under CC BY 3.0
+/svg/transparent/space-shuttle.svg - "Space shuttle" by Delapouite under CC BY 3.0
+/svg/transparent/starfighter.svg - "Starfighter" by Delapouite under CC BY 3.0
+/svg/transparent/ufo.svg - "UFO" by Delapouite under CC BY 3.0
+
+/svg/transparent/kneeling.svg - "Coronation" by Delapouite under CC BY 3.0
+/svg/transparent/prone.svg - "Half body crawling" by Delapouite under CC BY 3.0
+
+/svg/3d-hammer.svg - "3D Hammer" by Delapouite under CC BY 3.0
 /svg/ak47.svg - "AK47" by Skoll under CC BY 3.0
+/svg/baseball-bat.svg - "Baseball bat" by Delapouite under CC BY 3.0
+/svg/bat-leth.svg - "Bat'leth" by Delapouite under CC BY 3.0
+/svg/baton.svg - "Baton" by Skoll under CC BY 3.0
+/svg/battle-axe.svg - "Battle axe" by Lorc under CC BY 3.0
 /svg/bayonet.svg - "Bayonet" by Skoll under CC BY 3.0
+/svg/bo.svg - "Bo" by Delapouite under CC BY 3.0
+/svg/bordered-shield.svg - "Bordered shield" by Lorc under CC BY 3.0
+/svg/bowie-knife.svg - "Bowie knife" by Lorc under CC BY 3.0
+/svg/brass-knuckles.svg - "Brass knuckles" by Delapouite under CC BY 3.0
+/svg/broadhead-arrow.svg - "Broadhead arrow" by Lorc under CC BY 3.0
+/svg/chainsaw.svg - "Chainsaw" by Delapouite under CC BY 3.0
+/svg/claw-hammer.svg - "Claw hammer" by Lorc under CC BY 3.0
 /svg/colt-m1911.svg - "Colt M1911" by Skoll under CC BY 3.0
+/svg/crossbow.svg - "Crossbow" by Carl Olsen under CC BY 3.0
+/svg/crossed-chains.svg - "Crossed chains" by Lorc under CC BY 3.0
+/svg/famas.svg - "Famas" by Skoll under CC BY 3.0
+/svg/fire-axe.svg - "Fire axe" by Lorc under CC BY 3.0
+/svg/flail.svg - "Flail" by Delapouite under CC BY 3.0
+/svg/gun-stock.svg - "Gun stock" by Delapouite under CC BY 3.0
+/svg/flanged-mace.svg - "Flanged mace" by Delapouite under CC BY 3.0
+/svg/flat-hammer.svg - "Flat hammer" by Lorc under CC BY 3.0
 /svg/fn-fal.svg - "FN FAL" by Skoll under CC BY 3.0
+/svg/fountain-pen.svg - "Fountain pen" by Lorc under CC BY 3.0
+/svg/gladius.svg - "Gladius" by Skoll under CC BY 3.0
 /svg/glock.svg - "Glock" by Skoll under CC BY 3.0
+/svg/gun-stock.svg - "Gun stock" by Delapouite under CC BY 3.0
+/svg/hatchet.svg - "Hatchet" by Delapouite under CC BY 3.0
+/svg/katana.svg - "Katana" by Delapouite under CC BY 3.0
+/svg/laser-blast.svg - "Laser blast" by Lorc under CC BY 3.0
+/svg/lee-enfield.svg - "Lee Enfield" by Skoll under CC BY 3.0
+/svg/lightning-arc.svg - "Lightning arc" by Lorc under CC BY 3.0
+/svg/light-saber.svg - "Light Sabers" by Delapouite under CC BY 3.0
 /svg/mac-10.svg - "Mac 10" by Skoll under CC BY 3.0
 /svg/mp5.svg - "MP5" by Skoll under CC BY 3.0
-/svg/revolver.svg - "Revolver" by Skoll under CC BY 3.0
-/svg/tec-9.svg - "TEC 9" by Skoll under CC BY 3.0
-/svg/famas.svg - "Famas" by Skoll under CC BY 3.0
-/svg/steyr-aug.svg - "Steyr AUG" by Skoll under CC BY 3.0
-/svg/lee-enfield.svg - "Lee Enfield" by Skoll under CC BY 3.0
 /svg/p90.svg - "P90" by Skoll under CC BY 3.0
-/svg/thompson-m1928.svg - "Thompson M1928" by Skoll under CC BY 3.0
-/svg/walther-ppk.svg - "Walther PPK" by Skoll under CC BY 3.0
-/svg/winchester-rifle.svg - "Winchester rifle" by Skoll under CC BY 3.0
-/svg/gun-stock.svg - "Gun stock" by Delapouite under CC BY 3.0
-/svg/machine-gun-magazine.svg - "Machine gun magazine" by Delapouite under CC BY 3.0
 /svg/panzerfaust.svg - "Panzerfaust" by Delapouite under CC BY 3.0
+/svg/pocket-bow.svg - "Pocket bow" by Lorc under CC BY 3.0
+/svg/punch.svg - "Punch" by Lorc under CC BY 3.0
+/svg/revolver.svg - "Revolver" by Skoll under CC BY 3.0
+/svg/riot-shield.svg - "Riot shield" by Lorc under CC BY 3.0
+/svg/round-shield.svg - "Round shield" by Willdabeast under CC BY 3.0
+/svg/sabre.svg - "Crossed sabers" by Lorc under CC BY 3.0
 /svg/sawed-off-shotgun.svg - "Sawed-off shotgun" by Delapouite under CC BY 3.0
-/svg/shotgun-rounds.svg - "Shotgun rounds" by Delapouite under CC BY 3.0
+/svg/sai.svg - "Sai" by Delapouite under CC BY 3.0
+/svg/shuriken.svg - "Shuriken" by Lorc under CC BY 3.0
+/svg/steyr-aug.svg - "Steyr AUG" by Skoll under CC BY 3.0
+/svg/switchblade.svg - "Switchblade" by Skoll under CC BY 3.0
+/svg/tec-9.svg - "TEC 9" by Skoll under CC BY 3.0
+/svg/telescopic-baton.svg - "Telescopic baton" by Skoll under CC BY 3.0
+/svg/thompson-m1928.svg - "Thompson M1928" by Skoll under CC BY 3.0
+/svg/two-handed-sword.svg - "Two handed sword" by Delapouite under CC BY 3.0
+/svg/walther-ppk.svg - "Walther PPK" by Skoll under CC BY 3.0
+/svg/war-pick.svg - "War pick" by Delapouite under CC BY 3.0
+/svg/whip.svg - "Whip" by Lorc under CC BY 3.0
+/svg/winchester-rifle.svg - "Winchester rifle" by Skoll under CC BY 3.0
 /svg/zat-gun.svg - "Zat gun" by Delapouite under CC BY 3.0
-/svg/baton.svg - "Baton" by Skoll under CC BY 3.0
+
+/svg/dynamite.svg - "Dynamite" by Delapouite under CC BY 3.0
+/svg/fertilizer-bag.svg - "Fertilizer bag" by Delapouite under CC BY 3.0
 /svg/flash-grenade.svg - "Flash grenade" by Lorc under CC BY 3.0
 /svg/grenade.svg - "Grenade" by Lorc under CC BY 3.0
-/svg/quiver.svg - "Quiver" by Delapouite under CC BY 3.0
-/svg/gladius.svg - "Gladius" by Skoll under CC BY 3.0
-/svg/switchblade.svg - "Switchblade" by Skoll under CC BY 3.0
-/svg/crossbow.svg - "Crossbow" by Carl Olsen under CC BY 3.0
-/svg/pocket-bow.svg - "Pocket bow" by Lorc under CC BY 3.0
-/svg/oil-drum.svg - "Oil Drum" by Skoll under CC BY 3.0
-/svg/canister.svg - "Canister" by Lorc under CC BY 3.0
-/svg/cardboard-box-closed.svg - "Cardboard box closed" by Delapouite under CC BY 3.0
-/svg/jerrycan.svg - "Jerrycan" by Delapouite under CC BY 3.0
-/svg/cargo-crate.svg - "Cargo crate" by Delapouite under CC BY 3.0
-/svg/cooler.svg - "Cooler" by Delapouite under CC BY 3.0
-/svg/hatchet.svg - "Hatchet" by Delapouite under CC BY 3.0
-/svg/fire-axe.svg - "Fire axe" by Lorc under CC BY 3.0
-/svg/stun-grenade.svg - "Stun grenade" by Delapouite under CC BY 3.0
 /svg/molotov.svg - "Molotov" by Lorc under CC BY 3.0
-/svg/dynamite.svg - "Dynamite" by Delapouite under CC BY 3.0
-/svg/riot-shield.svg - "Riot shield" by Lorc under CC BY 3.0
-/svg/space-shuttle.svg - "Space shuttle" by Delapouite under CC BY 3.0
-/svg/spaceship.svg - "Spaceship" by Delapouite under CC BY 3.0
-/svg/starfighter.svg - "Starfighter" by Delapouite under CC BY 3.0
-/svg/ufo.svg - "UFO" by Delapouite under CC BY 3.0
-/svg/interceptor-ship.svg - "Interceptor ship" by Delapouite under CC BY 3.0
-/svg/defense-satellite.svg - "Defense Satellite" by Delapouite under CC BY 3.0
-/svg/scout-ship.svg - "Scout ship" by Delapouite under CC BY 3.0
-/svg/rocket.svg - "Rocket" by Lorc under CC BY 3.0
-/svg/kevlar-vest.svg - "Kevlar vest" by Skoll under CC BY 3.0
-/svg/metal-scales.svg - "Metal scales" by Lorc under CC BY 3.0
-/svg/light-saber.svg - "Light Sabers" by Delapouite under CC BY 3.0
-/svg/medicine-pills.svg - "Medicine Pills" by Delapouite under CC BY 3.0
-/svg/drink-me.svg - "Drink me" by Lorc under CC BY 3.0
-/svg/smartphone.svg - "Smartphone" by Skoll under CC BY 3.0
-/svg/tablet.svg - "Tablet" by Skoll under CC BY 3.0
-/svg/pc.svg - "PC" by Skoll under CC BY 3.0
-/svg/disc.svg - "Disc" by Lorc under CC BY 3.0
-/svg/compact-disc.svg - "Compact Disc" by Delapouite under CC BY 3.0
-/svg/flashlight.svg - "Flashlight" by Delapouite under CC BY 3.0
-/svg/usb-key.svg - "USB key" by Delapouite under CC BY 3.0
-/svg/laptop.svg - "Laptop" by Delapouite under CC BY 3.0
-/svg/screwdriver.svg - "Screwdriver" by Lorc under CC BY 3.0
-/svg/walkie-talkie.svg - "Walkie Talkie" by Delapouite under CC BY 3.0
-/svg/batteries.svg - "Batteries" by Lorc under CC BY 3.0
-/svg/toolbox.svg - "Toolbox" by Delapouite under CC BY 3.0
-/svg/fish-scales.svg - "Fish scales" by Delapouite under CC BY 3.0
-/svg/bookshelf.svg - "Bookshelf" by Delapouite under CC BY 3.0
-/svg/notebook.svg - "Notebook" by Delapouite under CC BY 3.0
-/svg/foundtain-pen.svg - "Fountain pen" by Lorc under CC BY 3.0
-/svg/quill-ink.svg - "Quill and ink" by Lorc under CC BY 3.0
-/svg/white-book.svg - "White book" by Willdabeast under CC BY 3.0
-/svg/black-book.svg - "Black book" by Willdabeast under CC BY 3.0
-/svg/papers.svg - "Papers" by Lorc under CC BY 3.0
-/svg/book-cover.svg - "Book cover" by Lorc under CC BY 3.0
-/svg/secret-book.svg - "Secret Book" by Delapouite under CC BY 3.0
-/svg/rolling-suitcase.svg - "Rolling suitcase" by Caro Asercion under CC BY 3.0
-/svg/backpack.svg - "Backpack" by Delapouite under CC BY 3.0
-/svg/suitcase.svg - "Suitcase" by Delapouite under CC BY 3.0
-/svg/school-bag.svg - "School bag" by Delapouite under CC BY 3.0
-/svg/sparkles.svg - "Sparkles" by Delapouite under CC BY 3.0
-/svg/shieldcomb.svg - "Shieldcomb" by Lorc under CC BY 3.0
-/svg/space-suit.svg - "Space suit" by Lorc under CC BY 3.0
-/svg/balaclave.svg - "Balaclava" by Skoll under CC BY 3.0
-/svg/bandit.svg - "Bandit" by Delapouite under CC BY 3.0
-/svg/police-officer-head.svg - "Police officer head" by Delapouite under CC BY 3.0
+/svg/stun-grenade.svg - "Stun grenade" by Delapouite under CC BY 3.0
+
+/svg/abdominal-armor.svg - "Abdominal armor" by Delapouite under CC BY 3.0
+/svg/armor-vest.svg - "Armor vest" by Lorc under CC BY 3.0
 /svg/brodie-helmet.svg - "Brodie helmet" by Skoll under CC BY 3.0
-/svg/stalhelm.svg - "Stalhelm" by Skoll under CC BY 3.0
-/svg/full-motorcycle-helmet.svg - "Full motorcycle helmet" by Delapouite under CC BY 3.0
-/svg/astronaut-helmet.svg - "Astronaut helmet" by Delapouite under CC BY 3.0
-/svg/mustache.svg - "Mustache" by Delapouite under CC BY 3.0
-/svg/samus-helmet.svg - "Samus helmet" by Delapouite under CC BY 3.0
-/svg/plastron.svg - "Plastron" by Lorc under CC BY 3.0
-/svg/trench-body-armor.svg - "Trench body armor" by Skoll under CC BY 3.0
 /svg/chain-mail.svg - "Chain mail" by Willdabeast under CC BY 3.0
+/svg/fish-scales.svg - "Fish scales" by Delapouite under CC BY 3.0
+/svg/flat-platform.svg - "Flat platform" by Delapouite under CC BY 3.0
+/svg/full-motorcycle-helmet.svg - "Full motorcycle helmet" by Delapouite under CC BY 3.0
+/svg/kevlar-vest.svg - "Kevlar vest" by Skoll under CC BY 3.0
+/svg/knee-pad.svg - "Knee pad" by Delapouite under CC BY 3.0
+/svg/metal-scales.svg - "Metal scales" by Lorc under CC BY 3.0
+/svg/plastron.svg - "Plastron" by Lorc under CC BY 3.
+/svg/samus-helmet.svg - "Samus helmet" by Delapouite under CC BY 3.0
+/svg/shieldcomb.svg - "Shieldcomb" by Lorc under CC BY 3.0
 /svg/sleeveless-jacket.svg - "Sleeveless jacket" by Delapouite under CC BY 3.0
+/svg/space-suit.svg - "Space suit" by Lorc under CC BY 3.0
+/svg/stalhelm.svg - "Stalhelm" by Skoll under CC BY 3.0
+/svg/trench-body-armor.svg - "Trench body armor" by Skoll under CC BY 3.0
+
+/svg/backpack.svg - "Backpack" by Delapouite under CC BY 3.0
+/svg/cannister.svg - "Cannister" by Lorc under CC BY 3.0
+/svg/cardboard-box-closed.svg - "Cardboard box closed" by Delapouite under CC BY 3.0
+/svg/cargo-crate.svg - "Cargo crate" by Delapouite under CC BY 3.0
+/svg/compact-disc.svg - "Compact Disc" by Delapouite under CC BY 3.0
+/svg/disc.svg - "Disc" by Lorc under CC BY 3.0
 /svg/dna2.svg - "DNA 2" by Lorc under CC BY 3.0
-/svg/chaingun.svg - "Chaingun" by sbed under CC BY 3.0
 /svg/duffel-bag.svg - "Duffel bag" by Delapouite under CC BY 3.0
 /svg/gym-bag.svg - "Gym bag" by Delapouite under CC BY 3.0
-/svg/fertilizer-bag.svg - "Fertilizer bag" by Delapouite under CC BY 3.0
+/svg/jerrycan.svg - "Jerrycan" by Delapouite under CC BY 3.0
+/svg/oil-drum.svg - "Oil Drum" by Skoll under CC BY 3.0
+/svg/rolling-suitcase.svg - "Rolling suitcase" by Caro Asercion under CC BY 3.0
+/svg/school-bag.svg - "School bag" by Delapouite under CC BY 3.0
+/svg/suitcase.svg - "Suitcase" by Delapouite under CC BY 3.0
+/svg/toolbox.svg - "Toolbox" by Delapouite under CC BY 3.0
+/svg/usb-key.svg - "USB key" by Delapouite under CC BY 3.0
+/svg/water-flask.svg - "Water flask" by Delapouite under CC BY 3.0
+
+/svg/batteries.svg - "Batteries" by Lorc under CC BY 3.0
+/svg/cooler.svg - "Cooler" by Delapouite under CC BY 3.0
+/svg/cylinder.svg - "Chaingun" by sbed under CC BY 3.0
+/svg/drink-me.svg - "Drink me" by Lorc under CC BY 3.0
+/svg/magazine.svg - "Machine gun magazine" by Delapouite under CC BY 3.0
+/svg/medicine-pills.svg - "Medicine Pills" by Delapouite under CC BY 3.0
+/svg/quill-ink.svg - "Quill and ink" by Lorc under CC BY 3.0
+/svg/quiver.svg - "Quiver" by Delapouite under CC BY 3.0
+/svg/shotgun-rounds.svg - "Shotgun rounds" by Delapouite under CC BY 3.0
+/svg/sticking-plaster.svg - "Sticking plaster" by Lorc under CC BY 3.0
+
+/svg/black-book.svg - "Black book" by Willdabeast under CC BY 3.0
+/svg/book-cover.svg - "Book cover" by Lorc under CC BY 3.0
+/svg/bookshelf.svg - "Bookshelf" by Delapouite under CC BY 3.0
+/svg/cigar.svg - "Cigar" by Delapouite under CC BY 3.0
+/svg/cigarette.svg - "Cigarette" by Delapouite under CC BY 3.0
+/svg/cube.svg - "Cube" by Delapouite under CC BY 3.0
+/svg/flashlight.svg - "Flashlight" by Delapouite under CC BY 3.0
+/svg/laptop.svg - "Laptop" by Delapouite under CC BY 3.0
+/svg/metal-bar.svg - "Metal bar" by Lorc under CC BY 3.0
+/svg/notebook.svg - "Notebook" by Delapouite under CC BY 3.0
+/svg/papers.svg - "Papers" by Lorc under CC BY 3.0
+/svg/passport.svg - "Passport" by Delapouite under CC BY 3.0
+/svg/pc.svg - "PC" by Skoll under CC BY 3.0
+/svg/screwdriver.svg - "Screwdriver" by Lorc under CC BY 3.0
+/svg/secret-book.svg - "Secret Book" by Delapouite under CC BY 3.0
+/svg/smartphone.svg - "Smartphone" by Skoll under CC BY 3.0
+/svg/tablet.svg - "Tablet" by Skoll under CC BY 3.0
+/svg/walkie-talkie.svg - "Walkie Talkie" by Delapouite under CC BY 3.0
+/svg/white-book.svg - "White book" by Willdabeast under CC BY 3.0
+
+/svg/all-seeing-eye.svg - "All seeing eye" by Delapouite under CC BY 3.0
+/svg/chemical-bolt.svg - "Chemical bolt" by Lorc under CC BY 3.0
+/svg/crystalize.svg - "Crystalize" by Lorc under CC BY 3.0
+/svg/death-note.svg - "Death note" by Lorc under CC BY 3.0
+/svg/defilibrate.svg - "Defilibrate" by Lorc under CC BY 3.0
+/svg/explosion-rays.svg - "Explosion rays" by Lorc under CC BY 3.0
+/svg/flame.svg - "Flame" by Carl Olsen under CC BY 3.0
+/svg/ice-cube.svg - "Ice Cube" by Lorc under CC BY 3.0
+/svg/lightning-branches.svg - "Lightning branches" by Lorc under CC BY 3.0
+/svg/shadow-follower.svg - "Shadow follower" by Lorc under CC BY 3.0
+/svg/shadow-grasp.svg - "Shadow grasp" by Lorc under CC BY 3.0
+/svg/smoking-orb.svg - "Smoking orb" by Lorc under CC BY 3.0
+/svg/sparkles.svg - "Sparkles" by Delapouite under CC BY 3.0
+/svg/splashy-stream.svg - "Splashy stream" by Lorc under CC BY 3.0
+/svg/static.svg - "Static" by Lorc under CC BY 3.0

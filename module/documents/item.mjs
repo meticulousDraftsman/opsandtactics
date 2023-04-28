@@ -519,7 +519,7 @@ export class OpsItem extends Item {
           updates["img"] = `systems/opsandtactics/icons/svg/notebook.svg`;
           break;
         case 'magic':
-          updates["img"] = `systems/opsandtactics/icons/svg/sparkles.svg`;
+          updates["img"] = CONFIG.OATS.magicIcons[Math.floor(Math.random()*CONFIG.OATS.magicIcons.length)];
           break;
         default:
           updates["img"] = CONFIG.OATS.objectIcons[Math.floor(Math.random()*CONFIG.OATS.objectIcons.length)];
