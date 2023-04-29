@@ -158,7 +158,7 @@
                         {{#if this.display}}
                         <li class="item grid grid-9col flex-group-center">
                             {{#if (or (eq this.check.type "noneAttack") (eq this.check.type "noChatAttack"))}}
-                            <button class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
+                            <button type="button" class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
                             <input class="grid-span-2" name="system.actions.{{@key}}.cp.inherent" value="{{this.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" title="From Attack">
                             <div class="mod-list grid-span-5 flexrow">
                                 {{#each this.cp.mods}}
@@ -168,7 +168,7 @@
                                 {{/each}}
                             </div>
                             {{else}}
-                            <button class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.checkTotal}}</button>
+                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.checkTotal}}</button>
                             <input class="grid-span-3" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
                             <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.ability" data-dtype="String">
                                 {{#select this.check.ability}}
@@ -183,9 +183,9 @@
                                 </div>
                                 {{/each}}
                             </div>
-                            <button class="item-control sub-create grid-span-3" data-target-name="recoil" data-pre-target="{{@key}}" title="Add Recoil Modifier">Recoil: {{#if this.mods.recoil}}{{this.mods.recoil}}{{#if (gt this.mods.reduction 0)}} vs +{{this.mods.reduction}}{{/if}}{{else}}None{{/if}}</button>
+                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="recoil" data-pre-target="{{@key}}" title="Add Recoil Modifier">Recoil: {{#if this.mods.recoil}}{{this.mods.recoil}}{{#if (gt this.mods.reduction 0)}} vs +{{this.mods.reduction}}{{/if}}{{else}}None{{/if}}</button>
                             <input class="grid-span-2" name="system.actions.{{@key}}.recoil.inherent" value="{{this.recoil.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" title="From Attack">
-                            <button class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
+                            <button type="button" class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
                             <input class="grid-span-2" name="system.actions.{{@key}}.cp.inherent" value="{{this.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" title="From Attack">
                             <div class="mod-list grid-span-5 flexrow">
                                 {{#each this.recoil.mods}}
@@ -206,7 +206,7 @@
                         </li>
                         {{#unless (eq this.check.type 'noChatAttack')}}
                         <li class="item grid grid-9col flex-group-center">
-                            <button class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.effectTotal}}</button>
+                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.effectTotal}}</button>
                             <input class="grid-span-3" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
                             <div class="grid-span-3 flexrow flex-group-center">
                                 <select class="flex3 flex-group-center" name="system.actions.{{@key}}.effect.ability" data-dtype="String">
@@ -233,7 +233,6 @@
                 </fieldset>
                 {{/each}}
             </fieldset>
-
         </div>
     </section>
 </form>

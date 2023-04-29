@@ -322,15 +322,15 @@ export class OpsItem extends Item {
       mods.recoil = null;
       mods.reduction = null;
       if (sourceAction.recoil.inherent != null){
-        mods.recoil = Math.min(sourceAction.recoil.inherent,0);
-        mods.reduction = Math.max(sourceAction.recoil.inherent,0);
+        mods.recoil = Number(Math.min(sourceAction.recoil.inherent,0));
+        mods.reduction = Number(Math.max(sourceAction.recoil.inherent,0));
       }
       for (let [,r] of Object.entries(sourceAction.recoil.mods)){
         if (r.value > 0){
-          mods.reduction += r.value?r.value:null;
+          mods.reduction += r.value?Number(r.value):null;
         }
         else if (r.value < 0){
-          mods.recoil += r.value?r.value:null;
+          mods.recoil += r.value?Number(r.value):null;
         }
       }
       if (this.actor && (mods.recoil!=null || mods.reduction!=null)){

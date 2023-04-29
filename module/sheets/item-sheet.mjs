@@ -61,6 +61,10 @@ export class OpsItemSheet extends ItemSheet {
     if (itemData.type === 'weapon'){
       // Build list of usable object resources for weapons
       if(actor){
+        magazines.push({label:`Self x${itemData.system.gear.quantity.value}`,id:`${itemData.id},system.gear.quantity`});
+        for (let [key,r] of Object.entries(itemData.system.gear.resources)){
+          if (r.type==='consumable') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?r.value:0}${r.max?('/'+r.max):''}]`,id:`${itemData.id},system.gear.resources.${key}`});
+        }
         for(let i of actor.items){
           switch (itemData.system.magazine.type){
             case 'coolant':
@@ -71,6 +75,7 @@ export class OpsItemSheet extends ItemSheet {
               }
               break;
             case 'external':
+              if (objectsEqual(itemData.system, i.system)) break;
               if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
               if (getProperty(i,'system.gear.resources')){
                 for (let [key,r] of Object.entries(i.system.gear.resources)){
@@ -89,6 +94,7 @@ export class OpsItemSheet extends ItemSheet {
         for (let [,pe] of je.pages.entries()){
           if (pe.type!=='text') continue;
           strip = pe.text.content.replaceAll('</p>','[split]');
+          strip = strip.replaceAll('&amp;','&');
           entries = [];
           strip = strip.replace( /(<([^>]+)>)/ig, '');
           strip = strip.split('[split]');
@@ -113,6 +119,7 @@ export class OpsItemSheet extends ItemSheet {
             for (let [,pe] of jeGot.pages.entries()){
               if (pe.type!=='text') continue;
               strip = pe.text.content.replaceAll('</p>','[split]');
+              strip = strip.replaceAll('&amp;','&');
               entries = [];
               strip = strip.replace( /(<([^>]+)>)/ig, '');
               strip = strip.split('[split]');
@@ -295,7 +302,6 @@ export class OpsItemSheet extends ItemSheet {
       case 'cp':
         if (isEmpty(this.object.system.weaponMods)) return null;
         await this._addAttackMod(updateData,preTarget, target);
-        //setProperty(updateData,`system.actions.${preTarget}.${target}.mods.${this.object.system.selectMod}`,{});
         break;
       case 'skillMods':
         newProp = new SkillMod;
