@@ -152,7 +152,7 @@
                                 {{/select}}
                             </select>
                             <a class="resource-label toggle-value grid-span-2" data-target="system.actions.{{@key}}.display">Details <i class="{{#if this.display}}fas fa-eye-slash{{else}}fas fa-eye{{/if}}"></i></a>
-                            <span>Ammo</span>
+                            <span>{{#if (eq @root.system.magazine.type "coolant")}}Heat{{else}}Ammo{{/if}}</span>
                             <input name="system.actions.{{@key}}.ammo" value = "{{this.ammo}}" type="text" data-dtype="Number">
                         </li>
                         {{#if this.display}}

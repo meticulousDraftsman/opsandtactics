@@ -61,21 +61,30 @@ export class OpsItemSheet extends ItemSheet {
     if (itemData.type === 'weapon'){
       // Build list of usable object resources for weapons
       if(actor){
-        magazines.push({label:`Self x${itemData.system.gear.quantity.value}`,id:`${itemData.id},system.gear.quantity`});
-        for (let [key,r] of Object.entries(itemData.system.gear.resources)){
-          if (r.type==='consumable') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?r.value:0}${r.max?('/'+r.max):''}]`,id:`${itemData.id},system.gear.resources.${key}`});
+        switch (itemData.system.magazine.type){
+          case 'coolant':
+            for (let [key,r] of Object.entries(itemData.system.gear.resources)){
+              if (r.type==='coolant') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?`${r.value}:`:''}${r.cool?'Cool':'Hot'}]`,id:`${itemData.id},system.gear.resources.${key}`});
+            }
+            break;
+          case 'external':
+            magazines.push({label:`Self x${itemData.system.gear.quantity.value}`,id:`${itemData.id},system.gear.quantity`});
+            for (let [key,r] of Object.entries(itemData.system.gear.resources)){
+              if (r.type==='consumable') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?r.value:0}${r.max?('/'+r.max):''}]`,id:`${itemData.id},system.gear.resources.${key}`});
+            }
+            break;
         }
         for(let i of actor.items){
+          if (objectsEqual(itemData.system, i.system)) continue;
           switch (itemData.system.magazine.type){
             case 'coolant':
               if (getProperty(i,'system.gear.resources')){
                 for (let [key,r] of Object.entries(i.system.gear.resources)){
-                  if (r.type==='coolant') magazines.push({label:`${r.cool?'Cool':'Hot'} ${r.name?r.name:i.name}${r.value?` [${r.value}]`:''}`,id:`${i.id},system.gear.resources.${key}`});
+                  if (r.type==='coolant') magazines.push({label:`${r.name?r.name:i.name} [${r.value?`${r.value}:`:''}${r.cool?'Cool':'Hot'}]`,id:`${i.id},system.gear.resources.${key}`});
                 }
               }
               break;
             case 'external':
-              if (objectsEqual(itemData.system, i.system)) break;
               if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
               if (getProperty(i,'system.gear.resources')){
                 for (let [key,r] of Object.entries(i.system.gear.resources)){
