@@ -282,8 +282,8 @@ export class OpsItem extends Item {
           mods.effectParts.push(e.value ? (e.value.charAt(0) != '-' ? `+${e.value}` : e.value) : null);
         }
       }
-      mods.effectTotal = mods.effectParts.filter(part => part != null).join('') || '0';
-      if (mods.effectTotal.charAt(0) == '+') mods.effectTotal = mods.effectTotal.substring(1);
+      mods.effectTotal = mods.effectParts.filter(part => part != null).join('') || null;
+      if (mods.effectTotal && mods.effectTotal.charAt(0) == '+') mods.effectTotal = mods.effectTotal.substring(1);
     }
     // Handle CP
     mods.cp = sourceAction.cp.inherent?sourceAction.cp.inherent:null;

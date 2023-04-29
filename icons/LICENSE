@@ -27,6 +27,7 @@ The opsandtactics system for Foundry Virtual Tabletop includes icon artwork lice
 
 /svg/3d-hammer.svg - "3D Hammer" by Delapouite under CC BY 3.0
 /svg/ak47.svg - "AK47" by Skoll under CC BY 3.0
+/svg/ak47u.svg - "AK47u" by Skoll under CC BY 3.0
 /svg/baseball-bat.svg - "Baseball bat" by Delapouite under CC BY 3.0
 /svg/bat-leth.svg - "Bat'leth" by Delapouite under CC BY 3.0
 /svg/baton.svg - "Baton" by Skoll under CC BY 3.0
@@ -37,11 +38,15 @@ The opsandtactics system for Foundry Virtual Tabletop includes icon artwork lice
 /svg/bowie-knife.svg - "Bowie knife" by Lorc under CC BY 3.0
 /svg/brass-knuckles.svg - "Brass knuckles" by Delapouite under CC BY 3.0
 /svg/broadhead-arrow.svg - "Broadhead arrow" by Lorc under CC BY 3.0
+/svg/c96.svg - "C96" by Skoll under CC BY 3.0
+/svg/cannon-ball.svg - "Cannon ball" by Lorc under CC BY 3.0
 /svg/chainsaw.svg - "Chainsaw" by Delapouite under CC BY 3.0
 /svg/claw-hammer.svg - "Claw hammer" by Lorc under CC BY 3.0
 /svg/colt-m1911.svg - "Colt M1911" by Skoll under CC BY 3.0
 /svg/crossbow.svg - "Crossbow" by Carl Olsen under CC BY 3.0
 /svg/crossed-chains.svg - "Crossed chains" by Lorc under CC BY 3.0
+/svg/cz-skorpion.svg - "CZ Skorpion" by Skoll under CC BY 3.0
+/svg/desert-eagle.svg - "Desert Eagle" by Skoll under CC BY 3.0
 /svg/famas.svg - "Famas" by Skoll under CC BY 3.0
 /svg/fire-axe.svg - "Fire axe" by Lorc under CC BY 3.0
 /svg/flail.svg - "Flail" by Delapouite under CC BY 3.0
@@ -52,15 +57,22 @@ The opsandtactics system for Foundry Virtual Tabletop includes icon artwork lice
 /svg/fountain-pen.svg - "Fountain pen" by Lorc under CC BY 3.0
 /svg/gladius.svg - "Gladius" by Skoll under CC BY 3.0
 /svg/glock.svg - "Glock" by Skoll under CC BY 3.0
+/svg/gunshot.svg - "Gunshot" by Lorc under CC BY 3.0
 /svg/gun-stock.svg - "Gun stock" by Delapouite under CC BY 3.0
 /svg/hatchet.svg - "Hatchet" by Delapouite under CC BY 3.0
 /svg/katana.svg - "Katana" by Delapouite under CC BY 3.0
 /svg/laser-blast.svg - "Laser blast" by Lorc under CC BY 3.0
+/svg/lead-pipe.svg - "Lead pipe" by Delapouite under CC BY 3.0
 /svg/lee-enfield.svg - "Lee Enfield" by Skoll under CC BY 3.0
 /svg/lightning-arc.svg - "Lightning arc" by Lorc under CC BY 3.0
 /svg/light-saber.svg - "Light Sabers" by Delapouite under CC BY 3.0
+/svg/luger.svg - "Luger" by Skoll under CC BY 3.0
+/svg/m3-grease-gun.svg - "M3 Grease Gun" by Skoll under CC BY 3.0
 /svg/mac-10.svg - "Mac 10" by Skoll under CC BY 3.0
+/svg/mp-40.svg - "MP40" by Skoll under CC BY 3.0
 /svg/mp5.svg - "MP5" by Skoll under CC BY 3.0
+/svg/mp5k.svg - "MP5K" by Skoll under CC BY 3.0
+/svg/musket.svg - "Musket" by Skoll under CC BY 3.0
 /svg/p90.svg - "P90" by Skoll under CC BY 3.0
 /svg/panzerfaust.svg - "Panzerfaust" by Delapouite under CC BY 3.0
 /svg/pocket-bow.svg - "Pocket bow" by Lorc under CC BY 3.0
@@ -72,6 +84,7 @@ The opsandtactics system for Foundry Virtual Tabletop includes icon artwork lice
 /svg/sawed-off-shotgun.svg - "Sawed-off shotgun" by Delapouite under CC BY 3.0
 /svg/sai.svg - "Sai" by Delapouite under CC BY 3.0
 /svg/shuriken.svg - "Shuriken" by Lorc under CC BY 3.0
+/svg/spectre-m4.svg - "Spectre M4" by Skoll under CC BY 3.0
 /svg/steyr-aug.svg - "Steyr AUG" by Skoll under CC BY 3.0
 /svg/switchblade.svg - "Switchblade" by Skoll under CC BY 3.0
 /svg/tec-9.svg - "TEC 9" by Skoll under CC BY 3.0
@@ -82,8 +95,10 @@ The opsandtactics system for Foundry Virtual Tabletop includes icon artwork lice
 /svg/war-pick.svg - "War pick" by Delapouite under CC BY 3.0
 /svg/whip.svg - "Whip" by Lorc under CC BY 3.0
 /svg/winchester-rifle.svg - "Winchester rifle" by Skoll under CC BY 3.0
+/svg/wizard-staff.svg - "Wizard staff" by Lorc under CC BY 3.0
 /svg/zat-gun.svg - "Zat gun" by Delapouite under CC BY 3.0
 
+/svg/artillery-shell.svg - "Artillery shell" by Quoting under CC BY 3.0
 /svg/dynamite.svg - "Dynamite" by Delapouite under CC BY 3.0
 /svg/fertilizer-bag.svg - "Fertilizer bag" by Delapouite under CC BY 3.0
 /svg/flash-grenade.svg - "Flash grenade" by Lorc under CC BY 3.0
@@ -128,6 +143,7 @@ The opsandtactics system for Foundry Virtual Tabletop includes icon artwork lice
 /svg/water-flask.svg - "Water flask" by Delapouite under CC BY 3.0
 
 /svg/batteries.svg - "Batteries" by Lorc under CC BY 3.0
+/svg/bullets.svg - "Bullets" by Lorc under CC BY 3.0
 /svg/cooler.svg - "Cooler" by Delapouite under CC BY 3.0
 /svg/cylinder.svg - "Chaingun" by sbed under CC BY 3.0
 /svg/drink-me.svg - "Drink me" by Lorc under CC BY 3.0
