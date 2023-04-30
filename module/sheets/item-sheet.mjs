@@ -56,45 +56,10 @@ export class OpsItemSheet extends ItemSheet {
     // Enrich description text
     context.enrichDescription = await TextEditor.enrichHTML(systemData.description,{async:true});
     
-    const magazines = [{label:"Unloaded",id:""}];
+    let  magazines;
     const importableMods = {};
     if (itemData.type === 'weapon'){
-      // Build list of usable object resources for weapons
-      if(actor){
-        switch (itemData.system.magazine.type){
-          case 'coolant':
-            for (let [key,r] of Object.entries(itemData.system.gear.resources)){
-              if (r.type==='coolant') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?`${r.value}:`:''}${r.cool?'Cool':'Hot'}]`,id:`${itemData.id},system.gear.resources.${key}`});
-            }
-            break;
-          case 'external':
-            magazines.push({label:`Self x${itemData.system.gear.quantity.value}`,id:`${itemData.id},system.gear.quantity`});
-            for (let [key,r] of Object.entries(itemData.system.gear.resources)){
-              if (r.type==='consumable') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?r.value:0}${r.max?('/'+r.max):''}]`,id:`${itemData.id},system.gear.resources.${key}`});
-            }
-            break;
-        }
-        for(let i of actor.items){
-          if (objectsEqual(itemData.system, i.system)) continue;
-          switch (itemData.system.magazine.type){
-            case 'coolant':
-              if (getProperty(i,'system.gear.resources')){
-                for (let [key,r] of Object.entries(i.system.gear.resources)){
-                  if (r.type==='coolant') magazines.push({label:`${r.name?r.name:i.name} [${r.value?`${r.value}:`:''}${r.cool?'Cool':'Hot'}]`,id:`${i.id},system.gear.resources.${key}`});
-                }
-              }
-              break;
-            case 'external':
-              if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
-              if (getProperty(i,'system.gear.resources')){
-                for (let [key,r] of Object.entries(i.system.gear.resources)){
-                  if (r.type==='consumable' && r.available) magazines.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},system.gear.resources.${key}`});
-                }
-              }
-              break;
-          }
-        }
-      }
+      magazines = itemData.listMagazines();
       // Parse weapon mods from journal entries in the world
       let worldWepMods = game.journal.filter(entry => entry.name.includes('Weapon Mods'));
       let strip;
@@ -164,6 +129,7 @@ export class OpsItemSheet extends ItemSheet {
     const sourceSkills = [{label:"None",id:""}];
     if (itemData.type === 'object'){
       // Build list of usable object resources or skill items for objects
+      magazines = [{label:"Unloaded",id:""}];
       if(actor){
         for (let i of actor.items){
           if (i.type==='skill') sourceSkills.push({label:i.name,id:i.id})
@@ -254,6 +220,8 @@ export class OpsItemSheet extends ItemSheet {
     html.find('.toggle-value').click(this._onToggleValue.bind(this));
     // Delete Self
     html.find('.self-destruct').click(this._selfDestruct.bind(this));
+    // Transfer bullets to/from internal magazines
+    html.find('.mag-load').click(this._onMagLoad.bind(this));
     // Pull a bullet from a loaded magazine into the internal chamber
     html.find('.chamber-round').click(this._onChamberRound.bind(this));
     // Reset imported mod when changing source filter
@@ -283,12 +251,45 @@ export class OpsItemSheet extends ItemSheet {
     });
   }
 
+  async _onMagLoad(event){
+    event.preventDefault();
+    const template = 'systems/opsandtactics/templates/interface/dialog-load-internal.html';
+    const content = await renderTemplate(template,{
+      magazines: this.object.listMagazines().slice(2)
+    });
+    const title = `Transfer ammunition from available resources`
+    return new Promise(resolve => {
+      new Dialog({
+        title: title,
+        content,
+        buttons: {
+          transfer: {
+            label: "Load this amount from selected resource into weapon",
+            callback: html => resolve(this._submitMagLoad(html))
+          }
+        },
+        close: () => resolve(null)
+      }).render(true,{width:520});
+    });
+  }
+  async _submitMagLoad(html){
+    const form = html[0].querySelector("form");
+    if (form.amount.value==="null") return null;
+    if (form.chooseMag.value==="") return null;
+    if (Number.isNaN(Number(form.amount.value))) return undefined;
+    const dualID = form.chooseMag.value.split(',');
+    const loadedMag = this.object.actor.items.filter(item => item._id == dualID[0])[0];
+    await this.object.update({['system.magazine.value']:(getProperty(this.object,'system.magazine.value')+Number(form.amount.value))});
+    await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-Number(form.amount.value))});
+  }
+
   async _onChamberRound(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
-    if (this.object.resourceAvailableCheck(1)){
-      await this.object.resourceConsume(1);
-      await this.object.update({['system.magazine.value']:(getProperty(this.object,'system.magazine.value')+1)});
+    const value = event.shiftKey?-1:1;
+    if (this.object.resourceAvailableCheck(value)){
+      await this.object.resourceConsume(value);
+      await this.object.update({['system.magazine.value']:(getProperty(this.object,'system.magazine.value')+value)});
     }
   }
 

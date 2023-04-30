@@ -39,6 +39,7 @@
                             <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number" placeholder="0"/>
                             <span class="grid-span-2">Capacity</span>
                             <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
+                            <a class="mag-load resource-label grid-span-3">Load/Unload <i class="fas fa-exchange-alt"></i></a>
                         {{else}}
                             {{#if (eq system.magazine.type "coolant")}}
                                 <select class="grid-span-5 flex-group-center" name="system.magazine.source" data-dtype="String">

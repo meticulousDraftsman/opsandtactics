@@ -212,8 +212,8 @@ export class OpsItem extends Item {
             chamberNew -= reduce;
             cost -= reduce;
           }
-          // Deduct any remaining cost from loaded value even below zero
-          if (cost > 0) magNew -= cost;
+          // Deduct any remaining cost from loaded value even below zero, or add negative cost
+          magNew -= cost;
           await loadedMag.update({[`${dualID[1]}.value`]:magNew});
           if (chamberNew != chamberOld) await this.update({['system.magazine.value']:chamberNew});
         }
@@ -422,6 +422,49 @@ export class OpsItem extends Item {
     mods.total = this.system.ranks + mods.ability + mods.occ + mods.equip + mods.syn + mods.armor + mods.misc;
     mods.total = mods.total>=0?`+${mods.total}`:mods.total;
     return mods;    
+  }
+
+  listMagazines(){
+    const magazines = [{label:"Unloaded",id:""}];
+    // Build list of usable object resources for weapons
+    if(this.actor){
+      switch (this.system.magazine.type){
+        case 'coolant':
+          for (let [key,r] of Object.entries(this.system.gear.resources)){
+            if (r.type==='coolant') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?`${r.value}:`:''}${r.cool?'Cool':'Hot'}]`,id:`${this.id},system.gear.resources.${key}`});
+          }
+          break;
+        case 'external':
+        case 'internal':
+          magazines.push({label:`Self x${this.system.gear.quantity.value}`,id:`${this.id},system.gear.quantity`});
+          for (let [key,r] of Object.entries(this.system.gear.resources)){
+            if (r.type==='consumable') magazines.push({label:`Self: ${r.name?r.name:''} [${r.value?r.value:0}${r.max?('/'+r.max):''}]`,id:`${this.id},system.gear.resources.${key}`});
+          }
+          break;
+      }
+      for(let i of this.actor.items){
+        if (objectsEqual(this.system, i.system)) continue;
+        switch (this.system.magazine.type){
+          case 'coolant':
+            if (getProperty(i,'system.gear.resources')){
+              for (let [key,r] of Object.entries(i.system.gear.resources)){
+                if (r.type==='coolant') magazines.push({label:`${i.name}: ${r.name?r.name:''} [${r.value?`${r.value}:`:''}${r.cool?'Cool':'Hot'}]`,id:`${i.id},system.gear.resources.${key}`});
+              }
+            }
+            break;
+          case 'external':
+          case 'internal':
+            if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
+            if (getProperty(i,'system.gear.resources')){
+              for (let [key,r] of Object.entries(i.system.gear.resources)){
+                if (r.type==='consumable' && r.available) magazines.push({label:`${i.name}: ${r.name?r.name:''} [${r.value?r.value:0}${r.max?('/'+r.max):''}]`,id:`${i.id},system.gear.resources.${key}`});
+              }
+            }
+            break;
+        }
+      }
+    }    
+    return magazines;
   }
 
   /**
