@@ -54,7 +54,7 @@
     {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
     <fieldset>
       <legend class="resource-label">
-        Skills <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
+        Skills [{{system.stats.skills.spent}}/#] <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
       </legend>
       <ol>
         {{#each skills as |item id|}}

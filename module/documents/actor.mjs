@@ -135,6 +135,13 @@ export class OpsActor extends Actor {
     }
     systemData.magic.mlMisc = systemData.magic.mods.total
     systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + systemData.magic.mlCant + systemData.magic.mlMisc;
+    // Tally spent skill points
+    systemData.stats.skills.spent = 0;
+    for (let i of this.items){
+      if (i.type==='skill'){
+        systemData.stats.skills.spent += i.system.ranks * (i.system.focus==='unfocus'?2:1);
+      }
+    }
   }
   
   async rollActorCheck(checkID,event=undefined){
