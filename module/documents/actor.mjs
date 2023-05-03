@@ -97,10 +97,7 @@ export class OpsActor extends Actor {
     systemData.def.value = 10 + systemData.def.equip.value + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge.value;
     systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge.value;
     systemData.def.flat = 10 + systemData.def.equip.value + systemData.def.size + systemData.def.move + systemData.def.misc;
-    // Calculate Saves
-    systemData.saves.reflex.value = Math.floor(systemData.saves.reflex.base * systemData.saves.reflex.mult) + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;
-    systemData.saves.fortitude.value = Math.floor(systemData.saves.fortitude.base * systemData.saves.fortitude.mult) + systemData.saves.fortitude.mods.total + systemData.abilities.con.mod;
-    systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
+
     //Calculate Initiative Modifier
     systemData.stats.init.value = systemData.stats.init.total + systemData.abilities.dex.agi +systemData.stats.wager;
     // Calculate BAB
@@ -135,6 +132,19 @@ export class OpsActor extends Actor {
     }
     systemData.magic.mlMisc = systemData.magic.mods.total
     systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + systemData.magic.mlCant + systemData.magic.mlMisc;
+    // Calculate Skill Points
+    systemData.stats.skills.points = (3 + systemData.abilities.int.mod) * (systemData.stats.level.value + 4);
+    // Tally Character Option Impacts
+    systemData.saves.fortitude.base = 0;
+    systemData.saves.reflex.base = 0;
+    systemData.saves.will.base = 0;
+    for (let cop of systemData.cops){
+      systemData.health.xhp.max += cop.xhp;
+      systemData.saves.fortitude.base += cop.fortitude;
+      systemData.saves.reflex.base += cop.reflex;
+      systemData.saves.will.base += cop.will;
+      systemData.stats.skills.points += cop.skills;
+    }
     // Tally spent skill points
     systemData.stats.skills.spent = 0;
     for (let i of this.items){
@@ -142,6 +152,10 @@ export class OpsActor extends Actor {
         systemData.stats.skills.spent += i.system.ranks * (i.system.focus==='unfocus'?2:1);
       }
     }
+    // Calculate Saves
+    systemData.saves.reflex.value = Math.floor(systemData.saves.reflex.base * systemData.saves.reflex.mult) + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;
+    systemData.saves.fortitude.value = Math.floor(systemData.saves.fortitude.base * systemData.saves.fortitude.mult) + systemData.saves.fortitude.mods.total + systemData.abilities.con.mod;
+    systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
   }
   
   async rollActorCheck(checkID,event=undefined){

@@ -29,6 +29,7 @@ export class OpsActorSheet extends ActorSheet {
     fortitude: true,
     reflex: true,
     will: true,
+    cops:false,
     weapons: false,
     objectAttacks: false,
     magicAttacks:false,
@@ -403,7 +404,9 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.action-spend').click(this._actionSpend.bind(this));
     html.find('.action-create').click(this._actionCreate.bind(this));
     html.find('.action-delete').click(this._actionDelete.bind(this));
-    
+    // Character Option Points
+    html.find('.create-cop').click(this._copCreate.bind(this));    
+    html.find('.delete-cop').click(this._copDelete.bind(this));
     // Context Menu
     html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
      // Active Effect management
@@ -600,6 +603,20 @@ export class OpsActorSheet extends ActorSheet {
     event.preventDefault();
     const updateData = {};
     updateData[`system.actions.-=${event.currentTarget.dataset.target}`] = null;
+    await this.actor.update(updateData);
+  }
+  async _copCreate(event){
+    event.preventDefault();
+    const updateData = {};
+    updateData['system.cops'] = getProperty(this.actor,'system.cops')
+    updateData['system.cops'].push({label:`Level ${updateData['system.cops'].length+1}`});
+    await this.actor.update(updateData);
+  }
+  async _copDelete(event){
+    event.preventDefault();
+    const updateData = {};
+    updateData['system.cops'] = getProperty(this.actor,'system.cops')
+    updateData['system.cops'].splice(event.currentTarget.dataset.target,1);
     await this.actor.update(updateData);
   }
   _itemContextMenu(event){

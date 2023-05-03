@@ -36,7 +36,7 @@
               <div class="grid grid-3col flex-group-center">
                 <span>Base</span>
                 <div class="grid-span-2 flexrow flex-group-center">
-                  <input class="flex3" type="text" name="system.saves.{{@key}}.base" value="{{save.base}}" data-dtype="Number"/>
+                  <input class="flex3" type="text" value="{{save.base}}" readonly/>
                   <span>x</span>
                   <input class="flex3" type="text" name="system.saves.{{@key}}.mult" value="{{save.mult}}" data-dtype="Number"/>
                 </div>
@@ -54,7 +54,7 @@
     {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
     <fieldset>
       <legend class="resource-label">
-        Skills [{{system.stats.skills.spent}}/#] <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
+        Skills [{{system.stats.skills.spent}}/{{system.stats.skills.points}}] <a class="item-control item-create" title="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
       </legend>
       <ol>
         {{#each skills as |item id|}}

@@ -38,26 +38,38 @@
         </div>
     </fieldset>
 </div>
-<fieldset>
+<fieldset class="collapse-parent">
     <legend class="resource-label">
-        Extremity Damage
+        Character Options <a class="create-cop" title="Spend COPs"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Character Option Point Display"><i class="fas fa-list collapse-toggle" data-collapse="cops"></i></a>
     </legend>
-    <div class="grid grid-10col flex-group-center">
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.head">Head <i class="fas fa-user{{#if system.health.extremity.head}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftArm">L Arm <i class="fas fa-user{{#if system.health.extremity.leftArm}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftHand">L Hand <i class="fas fa-user{{#if system.health.extremity.leftHand}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightArm">R Arm <i class="fas fa-user{{#if system.health.extremity.rightArm}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightHand">R Hand <i class="fas fa-user{{#if system.health.extremity.rightHand}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftLeg">L Leg <i class="fas fa-user{{#if system.health.extremity.leftLeg}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.leftFoot">L Foot <i class="fas fa-user{{#if system.health.extremity.leftFoot}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightLeg">R Leg <i class="fas fa-user{{#if system.health.extremity.rightLeg}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rightFoot">R Foot <i class="fas fa-user{{#if system.health.extremity.rightFoot}}-injured jammed{{/if}}"></i></a>
-        <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.other">Other <i class="fas fa-user{{#if system.health.extremity.other}}-injured jammed{{/if}}"></i></a>
-    </div>
+    <ol class="items-list item-list flex-group-center cops {{#if collapses.cops}}collapse{{/if}}">
+        {{#each system.cops}}
+        <li class="item grid grid-12col flex-group-center">
+            <input class="grid-span-2" type="text" name="system.cops.{{@index}}.label" value="{{this.label}}" data-dtype="String" placeholder="Level">
+            <div class="grid-span-9 flex-group-center">
+                <div class="grid grid-10col flex-group-center">
+                    <span>XHP</span>
+                    <input type="text" name="system.cops.{{@index}}.xhp" value="{{this.xhp}}" data-dtype="Number" placeholder="0">
+                    <span>Fort</span>
+                    <input type="text" name="system.cops.{{@index}}.fortitude" value="{{this.fortitude}}" data-dtype="Number" placeholder="0">
+                    <span>Reflex</span>
+                    <input type="text" name="system.cops.{{@index}}.reflex" value="{{this.reflex}}" data-dtype="Number" placeholder="0">
+                    <span>Will</span>
+                    <input type="text" name="system.cops.{{@index}}.will" value="{{this.will}}" data-dtype="Number" placeholder="0">
+                    <span>Skill</span>
+                    <input type="text" name="system.cops.{{@index}}.skills" value="{{this.skills}}" data-dtype="Number" placeholder="0">
+                </div>
+            </div>          
+            <div class="flex-group-center">
+                <a class="delete-cop" data-target="{{@index}}"><i class="fas fa-trash"></i></a>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
 </fieldset>
 <fieldset>
     <legend class="resource-label">
-        Traits <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
+        Traits and Feats <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
     </legend>
     <ol class="items-list item-list">
         {{#each traits as |item id|}}

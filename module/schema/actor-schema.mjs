@@ -89,6 +89,14 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                     mods: new field.EmbeddedDataField(Mods),
                 })
             }),
+            cops: new field.ArrayField(new field.SchemaField({
+                label: new field.StringField(),
+                xhp: new field.NumberField(),
+                fortitude: new field.NumberField(),
+                reflex: new field.NumberField(),
+                will: new field.NumberField(),
+                skills: new field.NumberField()
+            })),
             actions: new field.ObjectField(),
             details: new field.SchemaField({
                 biography: new field.StringField(),
@@ -137,17 +145,14 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             }),
             saves: new field.SchemaField({
                 fortitude: new field.SchemaField({
-                    base: new field.NumberField({initial:0}),
                     mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 }),
                 reflex: new field.SchemaField({
-                    base: new field.NumberField({initial:0}),
                     mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 }),
                 will: new field.SchemaField({
-                    base: new field.NumberField({initial:0}),
                     mult: new field.NumberField({initial:1}),
                     mods: new field.EmbeddedDataField(Mods),
                 })
