@@ -533,7 +533,21 @@ export class OpsActor extends Actor {
       case 'spacecraft':
         if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)];
     }
-    if(updates) return this.updateSource(updates);
+    if(!isEmpty(updates)) return this.updateSource(updates);
+  }
+  // Pre-updation
+  async _preUpdate(changed,options,user){
+    await super._preUpdate(changed,options,user);
+    const updates= {};
+    switch (this.type){
+      case 'character':
+        if (hasProperty(changed,'img') && CONFIG.OATS.characterIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
+        break;
+      case 'spacecraft':
+        if (hasProperty(changed,'img') && CONFIG.OATS.spacecraftIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
+        break;
+    }
+    if(!isEmpty(updates)) return this.updateSource(updates);
   }
 
 }
