@@ -121,12 +121,12 @@ export class OpsActor extends Actor {
     const mlRoll = new Roll(systemData.ml.formula,rollData);
     systemData.ml.max = mlRoll.isDeterministic ? mlRoll.evaluate({async:false}).total + systemData.ml.mods.total + systemData.ml.temp : 0;
     systemData.magic.mlPsion = systemData.magic.psionFocus?((2*systemData.stats.level.value)+25):0;
-    systemData.magic.mlRecipe = ((3*systemData.stats.level.value)+3)*systemData.magic.memorizedSets;
+    systemData.magic.mlRecipe = systemData.magic.invokerMemorize?((3*systemData.stats.level.value)+3):0;
     systemData.magic.mlObject = 0;
     for (let i of this.items){
       if (hasProperty(i,'system.gear.resources')){
         for (let [,r] of Object.entries(i.system.gear.resources)){
-          if (r.type==='magic' && r.value>0) systemData.magic.mlObject += r.ml;
+          if (r.type==='magic' && r.value!=0) systemData.magic.mlObject += r.ml;
         }
       }
     }

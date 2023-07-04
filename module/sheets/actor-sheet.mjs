@@ -90,6 +90,8 @@ export class OpsActorSheet extends ActorSheet {
     const systemData = context.system;
     // Determine XP required for the next level
     systemData.stats.level.xp.needed =`${Number(systemData.stats.level.xp.value).toLocaleString()} / ${Number(systemData.stats.level.value*systemData.stats.level.value*1500).toLocaleString()}xp`;
+    // Determine number of Incantation Recipes are memorized
+    systemData.magic.numRecipes = systemData.magic.invokerMemorize?((3+systemData.abilities.cha.mod)*systemData.stats.level.value):0;
     // Initiative Wagering Options
     context.wagers = [
       {value:0,label:'Initiative Wagering'},

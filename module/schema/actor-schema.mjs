@@ -111,7 +111,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
             }),
             magic: new field.SchemaField({
                 psionFocus: new field.BooleanField({initial:false}),
-                memorizedSets: new field.NumberField({initial:0}),
+                invokerMemorize: new field.BooleanField({initial:false}),
                 mlCant: new field.NumberField({initial:0}),
                 mods: new field.EmbeddedDataField(Mods),
             }),

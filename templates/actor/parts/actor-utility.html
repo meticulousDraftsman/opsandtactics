@@ -4,28 +4,33 @@
     </legend>
     <div class="mental {{#if collapses.mental}}collapse{{/if}}">
         <div class="grid grid-8col flex-group-center">
+            <span class="grid-span-2">Total Mental Limit Used</span>
+            <input class="grid-start-4" type="text" value="{{system.magic.mlUsed}}" readonly>   
+            <span class="grid-span-3">Total Mental Limit Capacity</span>
+            <input type="text" value="{{system.ml.max}}" readonly>       
+            <span class="grid-span-2">Misc Mental Limit Costs</span>
+            <input type="text" name="system.magic.mods.misc" value="{{system.magic.mods.misc}}" data-dtype="Number" placeholder="Misc">    
+            <input type="text" value="{{system.magic.mlMisc}}" readonly>                
+            <span class="grid-span-3">Temporary Mental Limit Capacity</span>
+            <input type="text" name="system.ml.temp" value="{{system.ml.temp}}" data-dtype="Number" placeholder="0">                              
             <span class="grid-span-2">Psionically Focused</span>
             <div>
                 <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
             </div>
             <input type="text" value="{{system.magic.mlPsion}}" readonly>
-            <span class="grid-span-3">Mental Limit Capacity</span>
-            <input type="text" value="{{system.ml.max}}" readonly>
-            <span class="grid-span-2">Recipe Sets Memorized</span>
-            <input type="text" name="system.magic.memorizedSets" value="{{system.magic.memorizedSets}}" data-dtype="Number" placeholder="Sets">
+            <span class="grid-span-3">Mental Limit Spent from Objects</span>
+            <input type="text" value="{{system.magic.mlObject}}" readonly>    
+            <span class="grid-span-2">{{system.magic.numRecipes}} Recipes Memorized</span>
+            <div>
+                <input name="system.magic.invokerMemorize" type="checkbox" {{checked system.magic.invokerMemorize}}/>
+            </div>
             <input type="text" value="{{system.magic.mlRecipe}}" readonly>
-            <span class="grid-span-3">Total Mental Limit Used</span>
-            <input type="text" value="{{system.magic.mlUsed}}" readonly>
-            <span class="grid-span-2">Incantation Use</span>
-            <a class="incant-regain"><i class="fas fa-recycle" data-tooltip="Regain Mental Limit spent by Invoking"></i></a>
+            <a class="grid-span-3 resource-label incant-regain" data-tooltip="Regain Mental Limit spent by Invoking">Mental Limit Spent Invoking <i class="fas fa-recycle"></i></a>
             <input type="text" name="system.magic.mlCant" value="{{system.magic.mlCant}}" data-dtype="Number" placeholder="Spent">
-            <span class="grid-span-3">Temporary Mental Limit</span>
-            <input type="text" name="system.ml.temp" value="{{system.ml.temp}}" data-dtype="Number" placeholder="0">
-            <span class="grid-span-2">Misc Used Mental Limit</span>
-            <input type="text" name="system.magic.mods.misc" value="{{system.magic.mods.misc}}" data-dtype="Number" placeholder="Misc">
-            <input type="text" value="{{system.magic.mlMisc}}" readonly>
-            <span class="grid-span-3">Object Used Mental Limit</span>
-            <input type="text" value="{{system.magic.mlObject}}" readonly>
+
+
+
+
         </div>
     </div>
 </fieldset>
