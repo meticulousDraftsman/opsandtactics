@@ -76,6 +76,11 @@ export class OpsActorSheet extends ActorSheet {
 
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
+    
+    // Enrich HTML for editors
+    if (hasProperty(context,'system.wealth.description')) context.enrichGear = await TextEditor.enrichHTML(context.system.wealth.description,{async:true});
+    if (hasProperty(context,'system.details.biography')) context.enrichBio = await TextEditor.enrichHTML(context.system.details.biography,{async:true});
+
     return context;
   }
 
@@ -103,9 +108,6 @@ export class OpsActorSheet extends ActorSheet {
     ];
     // Check if agility is being limited by armor
     context.agiLimited = ((systemData.abilities.dex.mrk + systemData.abilities.dex.agi)<systemData.abilities.dex.mod)?'agi-limited':'';
-    // Enrich Asset Notes and Biography
-    context.enrichGear = await TextEditor.enrichHTML(systemData.wealth.description,{async:true});
-    context.enrichBio = await TextEditor.enrichHTML(systemData.details.biography,{async:true});
   }
   
 
