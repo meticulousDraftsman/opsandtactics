@@ -106,6 +106,7 @@ export async function opsCheck(data){
   switch (data.checkType){
     case 'noChatAttack':
     case 'noChatUtility':
+      // Just return with no chat message
       return true;
     case 'noneAttack':
     case 'noneUtility':
@@ -117,37 +118,25 @@ export async function opsCheck(data){
       // Don't staple a 3d6 to the start of this roll
       formula = data.mod;
       break;
-    case 'ranged':
-    case 'melee':
-      formula = '3d6' + (data.critical ? `[${data.critical}+]` : '') + data.mod;
-      break;
     default:
       formula = '3d6' + data.mod;
       break;
   }
   // Create the roll and apply any situational modifiers
   const roll = new OpsRoll(formula,data);
-  const poppedRoll = await roll.situationalPopup(data);
+  const poppedRoll = await roll.situationalMods(data);
   if (poppedRoll===null) return null;
   // Evaluate Roll and prepare for message creation
   await poppedRoll.evaluate({async:true});
-  data.critResult = poppedRoll.isCritical;
-  data.jamResult = poppedRoll.isJam;
-  const concealResult = await poppedRoll.concealRoll();
   messageData.rolls = [poppedRoll];
-  if (concealResult){
-    data.concealResult = concealResult.result;
-    data.concealTip = await concealResult.getTooltip();
-    messageData.rolls.push(concealResult);
+  // Add the miss chance roll if necessary
+  if (data?.missChance > 0){
+    poppedRoll.missRoll = await new Roll('1d100').evaluate({async:true});
+    poppedRoll.missRoll.tooltip = await poppedRoll.missRoll.getTooltip();
+    messageData.rolls.push(poppedRoll.missRoll);
   }
-  else{
-    data.concealResult = null;
-    data.concealTip = null;
-  }
-  data.tooltip = await poppedRoll.getTooltip();
-  data.formula = poppedRoll.formula;
-  data.total = poppedRoll.total;
-  messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/check-roll-card.html',data);
+  poppedRoll.tooltip = await poppedRoll.getTooltip();
+  messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/check-roll-card.html',poppedRoll);
   ChatMessage.create(messageData, {rollMode: data.rollMode})
   return poppedRoll;
 }
@@ -164,202 +153,206 @@ export class OpsRoll extends Roll{
     }
   }
 
+  jamBar(){
+    switch (true){
+      case this.data.error<=15:
+        return (3);
+      case this.data.error<=20:
+        return (4);
+      case this.data.error<=25:
+        return (5);
+      case this.data.error<=30:
+        return (6);
+      case this.data.error<=35:
+        return (7);
+      case this.data.error<=40:
+        return (8);
+      case this.data.error<=45:
+        return (9);
+      case this.data.error<=50:
+        return (10);
+      case this.data.error<=55:
+        return (11);
+      case this.data.error<=60:
+        return (12);
+      case this.data.error<=65:
+        return (13);
+      case this.data.error<=70:
+        return (14);
+      case this.data.error<=75:
+        return (16);
+      case this.data.error>75:
+        return (18);
+    }
+  }
+
   get isJam(){
     if (!this._evaluated) return undefined;
     if ((this.terms[0] instanceof Die) && (this.terms[0].number==3) && (this.terms[0].faces==6)){
-      switch (true){
-        case this.data.error<=15:
-          return (this.dice[0].total <= 3);
-        case this.data.error<=20:
-          return (this.dice[0].total <= 4);
-        case this.data.error<=25:
-          return (this.dice[0].total <= 5);
-        case this.data.error<=30:
-          return (this.dice[0].total <= 6);
-        case this.data.error<=35:
-          return (this.dice[0].total <= 7);
-        case this.data.error<=40:
-          return (this.dice[0].total <= 8);
-        case this.data.error<=45:
-          return (this.dice[0].total <= 9);
-        case this.data.error<=50:
-          return (this.dice[0].total <= 10);
-        case this.data.error<=55:
-          return (this.dice[0].total <= 11);
-        case this.data.error<=60:
-          return (this.dice[0].total <= 12);
-        case this.data.error<=65:
-          return (this.dice[0].total <= 13);
-        case this.data.error<=70:
-          return (this.dice[0].total <= 14);
-        case this.data.error<=75:
-          return (this.dice[0].total <= 16);
-        case this.data.error>75:
-          return true;
-      }
+      return (this.dice[0].total <= this.jamBar());
     }
     else {
       return undefined;
     }
   }
 
-  async concealRoll(){
-    if (this.data?.missChance > 0){
-      const missRoll = await new Roll(`1d100cs>${this.data.missChance}`).evaluate({async:true});
-      return missRoll;
+  get isClear(){
+    if (!this._evaluated) return undefined;
+    if (this.missRoll){
+      return (this.missRoll.total > this.data.missChance);
     }
     else {
-      return null;
+      return undefined;
     }
   }
 
-  async situationalPopup(data){
+  async situationalMods(data){
+    const sitMods = {
+      close: true,
+      sitBon: '',
+      refBon: 0,
+      atkHigh: 0,
+      atkSeen: 0,
+      atkFlank: 0,
+      atkStance: 0,
+      atkFace: 0,
+      atkRange: 0,
+      defStun: 0,
+      defClimb: 0,
+      defPin: 0,
+      defStance: 0,
+      defCover: 0
+    }
     if (data.popupSkip){
-      let atkBon = 0;
-      let defBon = 0;
+      sitMods.close = false;
       switch (data.checkType){
         case 'ranged':
-          if (data.attackStance==='kneeling') atkBon +=1;
-          if (data.attackStance==='prone') atkBon +=2;
-          if (data.targetStance==='kneeling') defBon +=2;
-          if (data.targetStance==='prone') defBon +=4;
+          if (data.attackStance==='kneeling') sitMods.atkStance = 1;
+          if (data.attackStance==='prone') sitMods.atkStance = 2;
+          if (data.targetStance==='kneeling') sitMods.defStance = 2;
+          if (data.targetStance==='prone') sitMods.defStance = 4;
           break;
         case 'melee':
-          if (data.attackStance==='kneeling') atkBon -=2;
-          if (data.attackStance==='prone') atkBon -=4;
-          if (data.targetStance==='kneeling') defBon -=4;
-          if (data.targetStance==='prone') defBon -=2;
+          if (data.attackStance==='kneeling') sitMods.atkStance = -2;
+          if (data.attackStance==='prone') sitMods.atkStance = -4;
+          if (data.targetStance==='kneeling') sitMods.defStance =- 4;
+          if (data.targetStance==='prone') sitMods.defStance = -2;
           break;
       }
-      if (atkBon != 0){
-        const attacker = new Roll(`+(${atkBon})`,this.data);
-        this.terms = this.terms.concat(attacker.terms);
-      }
-      if (defBon != 0){
-        const defender = new Roll(`-(${defBon})`,this.data);
-        this.terms = this.terms.concat(defender.terms);
-      }
-      this._formula = this.constructor.getFormula(this.terms);
-      return this;
     }
-    let template;
-    let templateData;
-    switch (data.checkType){
-      case 'ranged':
-      case 'melee':
-        template = 'systems/opsandtactics/templates/interface/dialog-attack.html';
-        templateData = {
-          formula: this.formula,
-          atkType: data.checkType,
-          stanceAttack: data.attackStance,
-          stanceDefend: data.targetStance
-        }
-        break;
-      case 'reflex':
-        template = 'systems/opsandtactics/templates/interface/dialog-save.html';
-        templateData = {
-          formula: this.formula
-        }
-        break;
-      default:
-        template = 'systems/opsandtactics/templates/interface/dialog-utility.html';
-        templateData = {
-          formula: this.formula
-        }
-        break;
-    }
-    const content = await renderTemplate(template,templateData);
-    return new Promise(resolve => {
-      new Dialog({
-        title: data.title,
-        content,
-        buttons: {
-          roll: {
-            label: "Roll",
-            callback: html => resolve(this._submitPopup(html,data))
+    else{
+      let template;
+      let templateData;
+      switch (data.checkType){
+        case 'ranged':
+        case 'melee':
+          template = 'systems/opsandtactics/templates/interface/dialog-attack.html';
+          templateData = {
+            formula: this.formula,
+            atkType: data.checkType,
+            stanceAttack: data.attackStance,
+            stanceDefend: data.targetStance
           }
-        },
-        close: () => resolve(null)
-      }).render(true,{width:520});
-    });
+          break;
+        case 'reflex':
+          template = 'systems/opsandtactics/templates/interface/dialog-save.html';
+          templateData = {
+            formula: this.formula
+          }
+          break;
+        default:
+          template = 'systems/opsandtactics/templates/interface/dialog-utility.html';
+          templateData = {
+            formula: this.formula
+          }
+          break;
+      }
+      const content = await renderTemplate(template,templateData);
+      await new Promise(resolve => {
+        new Dialog({
+          title: data.title,
+          content,
+          buttons: {
+            roll: {
+              label: "Roll",
+              callback: html => resolve(this._submitPopup(html,data,sitMods))
+            }
+          },
+          close: () => resolve(null)
+        }).render(true,{width:520});
+      });
+    }
+    if (sitMods.close) return null;
+    sitMods.atkBon = sitMods.atkHigh + sitMods.atkSeen + sitMods.atkFlank + sitMods.atkStance + sitMods.atkFace + sitMods.atkRange;
+    sitMods.defBon = -sitMods.defStun - sitMods.defClimb - sitMods.defPin - sitMods.defStance - sitMods.defCover;
+    if (sitMods.sitBon){
+      const situation = new Roll(sitMods.sitBon,data);
+      if(!(situation.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
+      this.terms = this.terms.concat(situation.terms);
+    }
+    if (sitMods.atkBon != 0){
+      const attacker = new Roll(`${sitMods.atkBon}`,data);
+      if(!(attacker.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
+      this.terms = this.terms.concat(attacker.terms);
+    }
+    if (sitMods.defBon != 0){
+      const defender = new Roll(`${sitMods.defBon}`,data);
+      if(!(defender.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
+      this.terms = this.terms.concat(defender.terms);
+    }
+    if (sitMods.refBon != 0){
+      const saver = new Roll(`${sitMods.refBon}`,data);
+      if(!(saver.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
+      this.terms = this.terms.concat(saver.terms);
+    }
+    this._formula = this.constructor.getFormula(this.terms);
+    return this;
   }
 
-  async _submitPopup(html,data){
+  async _submitPopup(html,data,sitMods){
+    sitMods.close = false;
     const form = html[0].querySelector("form");
     switch (data.checkType){
       case 'ranged':
       case 'melee':
-        let atkBon = 0;
-        atkBon += form.atkHigh.checked?Number(form.atkHigh.value):0;
-        atkBon += form.atkSeen.checked?Number(form.atkSeen.value):0;
-        atkBon += Number(form.atkFlank.value);
-        atkBon += Number(form.atkStance.value);
-        atkBon += Number(form.atkFace.value);
-        atkBon -= Math.floor(Number(form.rangeNum.value)*2*Number(form.rangeMult.value));
-        let defBon = 0;
-        defBon += form.defStun.checked?Number(form.defStun.value):0;
-        defBon += form.defClimb.checked?Number(form.defClimb.value):0;
-        defBon += form.defPin.checked?Number(form.defPin.value):0;
-        defBon += Number(form.defStance.value);
-        let missChance = 0;
+        sitMods.sitBon = form.sitBon.value;
+        sitMods.atkHigh = form.atkHigh.checked?Number(form.atkHigh.value):0;
+        sitMods.atkSeen = form.atkSeen.checked?Number(form.atkSeen.value):0;
+        sitMods.atkFlank = Number(form.atkFlank.value);
+        sitMods.atkStance = Number(form.atkStance.value);
+        sitMods.atkFace = Number(form.atkFace.value);
+        sitMods.atkRange = -Math.floor(Number(form.rangeNum.value)*2*Number(form.rangeMult.value));
+        sitMods.defStun = form.defStun.checked?Number(form.defStun.value):0;
+        sitMods.defClimb = form.defClimb.checked?Number(form.defClimb.value):0;
+        sitMods.defPin = form.defPin.checked?Number(form.defPin.value):0;
+        sitMods.defStance = Number(form.defStance.value);
+        data.missChance = 0;
         switch (form.defCover.value){
           case 'cov0':
             break;
           case 'cov1':
-            defBon += 3;
+            sitMods.defCover = 3;
             break;
           case 'cov2':
-            defBon += 6;
-            missChance = 10;
+            sitMods.defCover += 6;
+            data.missChance = 10;
             break;
           case 'cov3':
-            defBon += 9;
-            missChance = 20;
+            sitMods.defCover += 9;
+            data.missChance = 20;
             break;
           case 'cov4':
-            defBon += 15;
-            missChance = 30;
+            sitMods.defCover += 15;
+            data.missChance = 30;
             break;
         }
-        data.missChance = Math.max(missChance, Number(form.defConceal.value));
-        if (form.sitBon.value){
-          const situation = new Roll(form.sitBon.value,this.data);
-          if(!(situation.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
-          this.terms = this.terms.concat(situation.terms);
-        }
-        if (atkBon != 0){
-          const attacker = new Roll(`+(${atkBon})`,this.data);
-          this.terms = this.terms.concat(attacker.terms);
-        }
-        if (defBon != 0){
-          const defender = new Roll(`-(${defBon})`,this.data);
-          this.terms = this.terms.concat(defender.terms);
-        }
-        this._formula = this.constructor.getFormula(this.terms);
+        data.missChance = Math.max(data.missChance, Number(form.defConceal.value));
         break;
       case 'reflex':
-        let refBon = 0;
-        refBon += Number(form.refCover.value);
-        if (form.sitBon.value){
-          const situation = new Roll(form.sitBon.value,this.data);
-          if(!(situation.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
-          this.terms = this.terms.concat(situation.terms);
-        }
-        if (refBon != 0){
-          const evader = new Roll(`+(${refBon})`,this.data);
-          this.terms = this.terms.concat(evader.terms);
-        }
+        sitMods.refBonus = Number(form.refCover.value);
         break;
-      default:
-        if (form.sitBon.value){
-          const situation = new Roll(form.sitBon.value,this.data);
-          if(!(situation.terms[0] instanceof OperatorTerm)) this.terms.push(new OperatorTerm({operator:"+"}));
-          this.terms = this.terms.concat(situation.terms);
-        }
-        this._formula = this.constructor.getFormula(this.terms);
-        break;  
     }
-    return this;
+    return;
   }
 }
 

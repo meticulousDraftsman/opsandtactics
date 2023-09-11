@@ -1,21 +1,22 @@
-<h4>{{title}}</h4>
+<h4>{{data.title}}</h4>
 <div class="dice-roll opsandtactics">
-    {{#if flavor}}
-    <div>{{flavor}}</div>
+    {{#if data.flavor}}
+    <div>{{data.flavor}}</div>
     {{/if}}
     <div class="dice-result">
         <div class="dice-formula">{{formula}}</div>
+        <div class="dice-tooltip">{{#if data.critical}}{{data.critical}}-18 Critical Strike{{/if}}{{#if (and data.critical data.error)}}, {{/if}}{{#if data.error}}3-{{jamBar}} Jam Chance{{/if}}</div>
         {{{tooltip}}}
-        <h4 class="dice-total {{#if (and critResult jamResult)}}critical-jam{{else}}{{#if critResult}}critical{{/if}}{{#if jamResult}}jammed{{/if}}{{/if}}">{{total}}</h4>
+        <h4 class="dice-total {{#if (and isCritical isJam)}}critical-jam{{else}}{{#if isCritical}}critical{{/if}}{{#if isJam}}jammed{{/if}}{{/if}}">{{total}}</h4>
     </div>
 </div>
-{{#if concealTip}}
+{{#if missRoll}}
 <div class="dice-roll">
     <div class="dice-result">
         <div class="dice-formula">
-            {{missChance}}% Miss Chance: {{#if concealResult}}Clear{{else}}Missed{{/if}}
+            {{data.missChance}}% Miss Chance: {{#if isClear}}Clear{{else}}Missed{{/if}}
         </div>
-        {{{concealTip}}}
+        {{{missRoll.tooltip}}}
     </div>
 </div>
 {{/if}}
