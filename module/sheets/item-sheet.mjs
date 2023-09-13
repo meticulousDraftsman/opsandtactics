@@ -61,7 +61,7 @@ export class OpsItemSheet extends ItemSheet {
     if (itemData.type === 'weapon'){
       magazines = itemData.listMagazines();
       // Parse weapon mods from journal entries in the world
-      let worldWepMods = game.journal.filter(entry => entry.name.includes('Weapon Mods'));
+      let worldWepMods = await game.journal.filter(entry => entry.getFlag('opsandtactics','wepMods')==true);
       let strip;
       let entries;
       for (let [,je] of worldWepMods.entries()){
@@ -87,8 +87,11 @@ export class OpsItemSheet extends ItemSheet {
       // Parse weapon mods from journal entries in compendiums
       let journalPacks = game.packs.filter(entry => entry.metadata.type==='JournalEntry');
       for (let jp of journalPacks){
+        await jp.getIndex({fields: ['flags']})
+        console.debug(jp.index)
         for (let je of jp.index){
-          if (je.name.includes('Weapon Mods')){
+          if (getProperty(je,'flags.opsandtactics.wepMods')){
+            console.debug(je)
             let jeGot = await jp.getDocument(je._id);
             for (let [,pe] of jeGot.pages.entries()){
               if (pe.type!=='text') continue;

@@ -90,6 +90,8 @@ Hooks.once("ready", async function() {
   _manageOpsStatusEffects();
 });
 Hooks.on("getChatLogEntryContext", addChatContext);
+Hooks.on("getJournalDirectoryEntryContext", addJournalContext);
+Hooks.on("getCompendiumEntryContext", addCompendiumContext);
 
 /* -------------------------------------------- */
 /*  Core Check Handling                         */
@@ -380,11 +382,11 @@ function addChatContext(html, options){
   };
   let checkShip = li => {
     const message = game.messages.get(li.data("messageId"));
-    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker.actor).type==='spacecraft' && canvas.tokens.controlled[0].actor.type==='character';
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker?.actor)?.type==='spacecraft' && canvas.tokens.controlled[0].actor.type==='character';
   }
   let checkPerson = li => {
     const message = game.messages.get(li.data("messageId"));
-    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker.actor).type==='character' && canvas.tokens.controlled[0].actor.type==='spacecraft';
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker?.actor)?.type==='character' && canvas.tokens.controlled[0].actor.type==='spacecraft';
   }
   console.debug(canApply,checkShip)
   options.push(
@@ -431,7 +433,72 @@ function applyChatDamage(li, multiplier) {
     return a.update(updateData);
   }));
 }
+function addJournalContext(html, options){
+  options.push(
+    {
+      name: 'Check if source of Weapon Mods',
+      icon: '<i class="fas fa-magnifying-glass"></i>',
+      condition: () => game.user.isGM,
+      callback: li => handleWeaponMod(li,'check')
+    },
+    {
+      name: 'Toggle as source of Weapon Mods',
+      icon: '<i class="fas fa-scanner-gun"></i>',
+      condition: () => game.user.isGM,
+      callback: li => handleWeaponMod(li,'toggle')
+    }
+  )
+  return options;
+}
+function addCompendiumContext(html, options){
+  let canApply = li => {
+    const sourcePack = game.packs.get(li.closest('div').data("pack"))
+    return game.user.isGM && !sourcePack.locked && (sourcePack.metadata.type == 'JournalEntry');
+  }
+  options.push(
+    {
+      name: 'Check if source of Weapon Mods',
+      icon: '<i class="fas fa-magnifying-glass"></i>',
+      condition: () => game.user.isGM,
+      callback: li => handleWeaponMod(li,'check')
+    },
+    {
+      name: 'Toggle as source of Weapon Mods',
+      icon: '<i class="fas fa-scanner-gun"></i>',
+      condition: canApply,
+      callback: li => handleWeaponMod(li,'toggle')
+    }
+  )
+  return options;
+}
 
+async function handleWeaponMod(li,op){
+  let target;
+  if (li.closest('div').hasClass('compendium')){
+    target = await game.packs.get(li.closest('div').data("pack")).getDocument(li.data("documentId"))
+  }
+  else {
+    target = await game.journal.get(li.data("documentId"));
+  }
+  const messageData = {
+    type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
+    whisper: game.user._id
+  }
+  const checkFlag = await target.getFlag('opsandtactics','wepMods')
+  if (op=='check'){
+    messageData.content = `${target.name} is${checkFlag? '' : ' not'} a source of Weapon Mods.`
+  }
+  else {
+    messageData.content = `${target.name} is ${checkFlag? 'no longer' : 'now'} a source of Weapon Mods. Refresh client.`;
+    if (checkFlag){
+      await target.unsetFlag('opsandtactics','wepMods');
+    }
+    else {
+      await target.setFlag('opsandtactics','wepMods', true);
+    }
+  }
+  await ChatMessage.create(messageData);
+}
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
