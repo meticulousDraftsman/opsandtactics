@@ -117,6 +117,26 @@ OATS.characterIcons = [
   'systems/opsandtactics/icons/svg/transparent/spy.svg'
 ]
 
+OATS.vehicleIcons = [
+  'systems/opsandtactics/icons/svg/transparent/airplane.svg',
+  'systems/opsandtactics/icons/svg/transparent/ambulance.svg',
+  'systems/opsandtactics/icons/svg/transparent/apc.svg',
+  'systems/opsandtactics/icons/svg/transparent/bus.svg',
+  'systems/opsandtactics/icons/svg/transparent/caravan.svg',
+  'systems/opsandtactics/icons/svg/transparent/city-car.svg',
+  'systems/opsandtactics/icons/svg/transparent/bike.svg',
+  'systems/opsandtactics/icons/svg/transparent/flatbed.svg',
+  'systems/opsandtactics/icons/svg/transparent/flatbed-covered.svg',
+  'systems/opsandtactics/icons/svg/transparent/helicopter.svg',
+  'systems/opsandtactics/icons/svg/transparent/jeep.svg',
+  'systems/opsandtactics/icons/svg/transparent/jet-fighter.svg',
+  'systems/opsandtactics/icons/svg/transparent/race-car.svg',
+  'systems/opsandtactics/icons/svg/transparent/scooter.svg',
+  'systems/opsandtactics/icons/svg/transparent/surfer-van.svg',
+  'systems/opsandtactics/icons/svg/transparent/tank.svg',
+  'systems/opsandtactics/icons/svg/transparent/truck.svg'
+]
+
 OATS.spacecraftIcons = [
   'systems/opsandtactics/icons/svg/transparent/defense-satellite.svg',
   'systems/opsandtactics/icons/svg/transparent/interceptor-ship.svg',

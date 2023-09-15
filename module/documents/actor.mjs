@@ -530,8 +530,12 @@ export class OpsActor extends Actor {
         if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.characterActions;
         if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)];
         break;
+      case 'vehicle':
+        if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.vehicleIcons[Math.floor(Math.random()*CONFIG.OATS.vehicleIcons.length)];
+        break;
       case 'spacecraft':
         if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)];
+        break;
     }
     if(!isEmpty(updates)) return this.updateSource(updates);
   }
@@ -542,6 +546,9 @@ export class OpsActor extends Actor {
     switch (this.type){
       case 'character':
         if (hasProperty(changed,'img') && CONFIG.OATS.characterIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
+        break;
+      case 'vehicle':
+        if (hasProperty(changed,'img') && CONFIG.OATS.vehicleIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
         break;
       case 'spacecraft':
         if (hasProperty(changed,'img') && CONFIG.OATS.spacecraftIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
