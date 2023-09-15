@@ -562,17 +562,22 @@ export class OpsActorSheet extends ActorSheet {
  async _onResourceDelta(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
-    if (!Number.isNumeric(event.target.value)){
+    const updateData = {};
+    let newVal;
+    if (event.target.value.charAt(0)=='='){
+      newVal = Number(event.target.value.substr(1));
+    }
+    else if (event.target.value.charAt(0)=='+' || event.target.value.charAt(0)=='-'){
+      newVal = Number(getProperty(this.actor,dataset.target))+Number(event.target.value);
+    }
+    else {
+      newVal = Number(event.target.value)
+    }
+    if (!Number.isNumeric(newVal)){
       this.render()
       return;
     } 
-    const updateData = {};
-    if (event.target.value.charAt(0)=='+' || event.target.value.charAt(0)=='-'){
-      setProperty(updateData,dataset.target,getProperty(this.actor,dataset.target)+Number(event.target.value));
-    }
-    else {
-      setProperty(updateData,dataset.target,Number(event.target.value));
-    }
+    setProperty(updateData,dataset.target,Number(newVal));
     await this.actor.update(updateData);
   }
   _actionCheck(event){
