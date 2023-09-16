@@ -179,6 +179,47 @@ export class OpsCharacter extends foundry.abstract.DataModel {
         };
     };
 };
+export class OpsVehicle extends foundry.abstract.DataModel {
+    static defineSchema(){
+        return {
+            vehicle: new field.SchemaField({
+                crew: new field.SchemaField({
+                    amount: new field.NumberField(),
+                    members: new field.ObjectField()
+                }),
+                passengers: new field.SchemaField({
+                    amount: new field.NumberField(),
+                    members: new field.ObjectField()
+                }),
+                carge: new field.NumberField(),
+                initMod: new field.NumberField(),
+                manMod: new field.NumberField(),
+                speed: new field.SchemaField({
+                    top: new field.NumberField(),
+                    current: new field.NumberField()
+                }),
+                size: new field.StringField(),
+                cost: new field.SchemaField({
+                    innate: new field.NumberField(),
+                    upgrades: new field.NumberField()
+                })
+            }),
+            def: new field.SchemaField({
+                innate: new field.NumberField(),
+                misc: new field.NumberField(),
+                hardness: new field.NumberField()
+            }),
+            health: new field.SchemaField({
+                hp: new field.SchemaField({
+                    value: new field.NumberField(),
+                    max: new field.NumberField()
+                }),
+                notes: new field.StringField(),
+                incoming: new field.NumberField()
+            })
+        }
+    }
+}
 export class OpsSpacecraft extends foundry.abstract.DataModel {
     static defineSchema(){
         return {
