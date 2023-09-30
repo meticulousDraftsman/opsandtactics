@@ -172,10 +172,7 @@
                             <button type="button" class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.checkTotal}}</button>
                             <input class="grid-span-3" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
                             <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.ability" data-dtype="String">
-                                {{#select this.check.ability}}
-                                  <option value="">Ability Modifier</option>
-                                  {{selectOptions @root.OATS.abilities selected=this.check.ability localize=true}}
-                                {{/select}}
+                                  {{selectOptions @root.OATS.abilities selected=this.check.ability localize=true blank="Ability Modifier"}}
                             </select>
                             <div class="mod-list grid-span-9 flexrow">
                                 {{#each this.check.mods}}
@@ -211,10 +208,7 @@
                             <input class="grid-span-3" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
                             <div class="grid-span-3 flexrow flex-group-center">
                                 <select class="flex3 flex-group-center" name="system.actions.{{@key}}.effect.ability" data-dtype="String">
-                                {{#select this.effect.ability}}
-                                    <option value="">Ability</option>
-                                    {{selectOptions @root.OATS.abilityShort selected=this.effect.ability localize=true}}
-                                {{/select}}
+                                    {{selectOptions @root.OATS.abilityShort selected=this.effect.ability localize=true blank="Ability"}}
                                 </select>
                                 <i class="fas fa-times flex1"></i>
                                 <input class="flex2" name="system.actions.{{@key}}.effect.scaleAbility" value="{{this.effect.scaleAbility}}" type="text" data-dtype="Number" placeholder="Mult">

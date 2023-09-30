@@ -191,14 +191,7 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                         }
                     }
                 }),
-                passengers: new field.ObjectField({
-                    initial:{
-                        generic: {
-                            amount: null,
-                            label: null
-                        }
-                    }
-                }),
+                passengers: new field.StringField(),
                 speed: new field.NumberField()
             }),
             stats: new field.SchemaField({

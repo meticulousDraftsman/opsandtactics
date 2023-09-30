@@ -59,6 +59,7 @@ export class OpsActorSheet extends ActorSheet {
     context.system = actorData.system;
     
     context.flags = actorData.flags;
+    context.OATS = CONFIG.OATS;
 
     // Prepare character data and items.
     if (actorData.type == 'character') {
@@ -82,6 +83,7 @@ export class OpsActorSheet extends ActorSheet {
     // Enrich HTML for editors
     if (hasProperty(context,'system.wealth.description')) context.enrichGear = await TextEditor.enrichHTML(context.system.wealth.description,{async:true});
     if (hasProperty(context,'system.details.biography')) context.enrichBio = await TextEditor.enrichHTML(context.system.details.biography,{async:true});
+    if (hasProperty(context,'system.vehicle.passengers')) context.enrichPassengers = await TextEditor.enrichHTML(context.system.vehicle.passengers,{async:true});
 
     return context;
   }
@@ -389,6 +391,23 @@ export class OpsActorSheet extends ActorSheet {
       {value: 6, label: 'Top: Highway'},
       {value: 7, label: 'Top: All Out'}
     ]
+    // Parse linked crew members
+    context.drivers = {
+      plain: [],
+      init: []
+    };
+    for (let [key, entry] of Object.entries(systemData.vehicle.crew)) {
+      if (key == 'generic') continue;
+      let crewDoc = fromUuidSync(entry.uuid);
+      entry.name = crewDoc.name;
+      entry.attackTotal = crewDoc.system.stats.bab.value + crewDoc.abilityMod(entry.attackAbility) + entry.attackMisc;
+      entry.listSkills = [];
+      for (let i of crewDoc.items){
+        if (i.type=='skill') entry.listSkills.push({value:i._id,label:`${i.name} (${i.skillSum().total})`})
+      }
+    context.drivrs.plain.push({value:entry.uuid, label:entry.name});
+    context.drivers.init.push({value:entry.uuid, label: `${entry.name} (${crewDoc.system.stats.init.value>=0?'+':''}${crewDoc.system.stats.init.value})`})
+    }
     console.debug(context)
   }
 
@@ -404,6 +423,7 @@ export class OpsActorSheet extends ActorSheet {
 
     // Render the item sheet for viewing/editing prior to the editable check.
     html.find('.item-edit').click(this._onItemEdit.bind(this));
+    html.find('.actor-edit').click(this._onActorEdit.bind(this));
     // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
@@ -445,6 +465,9 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.delete-cop').click(this._copDelete.bind(this));
     // Context Menu
     html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
+    // Vehicle Crew Linking
+    html.find('.crew-link').click(this._onLinkCrew.bind(this));
+    html.find('.crew-unlink').click(this._crewUnlink.bind(this));
      // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
     // Generic Rollables
@@ -467,6 +490,12 @@ export class OpsActorSheet extends ActorSheet {
     const id = dataset.itemId;
     const item = this.actor.items.get(id);
     item.sheet.render(true);
+  }
+  async _onActorEdit(event){
+    const dataset = event.currentTarget.dataset 
+    const uuid = dataset.actorUuid;
+    const actor = await fromUuid(uuid);
+    actor.sheet.render(true);
   }
   /**
    * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
@@ -683,6 +712,52 @@ export class OpsActorSheet extends ActorSheet {
         }
       }
     }).render(true);
+  }
+
+  async _onLinkCrew(event) {
+    event.preventDefault();
+    const template = 'systems/opsandtactics/templates/interface/dialog-document-link.html';
+    const content = await renderTemplate(template);
+    const title = 'Paste actor UUID to link them as vehicle crew';
+    return new Promise(resolve => {
+      new Dialog({
+        title: title,
+        content,
+        buttons:{
+          link:{
+            label: 'Add actor link to crew list',
+            callback: html => resolve(this._submitLinkCrew(html))
+          }
+        },
+        close: () => resolve(null)
+      }).render(true,{width:520});
+    });
+  }
+  async _submitLinkCrew(html){
+    const form = html[0].querySelector("form");
+    const checkLink = await fromUuid(form.idLink.value);
+    if (checkLink && checkLink.type=='character'){
+      const updateData = {};
+      updateData[`system.vehicle.crew.${randomID(8)}`] = {uuid:form.idLink.value, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
+      await this.actor.update(updateData);
+    }
+    else {
+      return null;
+    }
+  }
+  async _crewUnlink(event){
+    event.preventDefault();
+    Dialog.confirm({
+      title: "Unlink Confirmation",
+      content: "Remove linked Actor from crew list?",
+      yes: () => {
+        const updateData = {};
+        updateData[`system.vehicle.crew.-=${event.currentTarget.dataset.target}`] = null;
+        this.actor.update(updateData);
+      },
+      no: () => {return null},
+      defaultYes: true
+    });
   }
 
   /**

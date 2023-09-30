@@ -162,7 +162,6 @@ export class OpsActor extends Actor {
   _prepareVehicleData(actorData) {
     if (actorData.type !== 'vehicle') return;
     const systemData = actorData.system;
-    console.debug('heehee vehicle derived update')
     // Calculate impacts of speed
     switch (systemData.vehicle.speed){
       case 2:
@@ -197,6 +196,8 @@ export class OpsActor extends Actor {
     systemData.def.total = systemData.def.innate + systemData.def.misc + systemData.def.speed;
     systemData.stats.maneuver.total = systemData.stats.maneuver.innate + systemData.stats.maneuver.misc + systemData.stats.maneuver.speed;
     systemData.details.cost.total = systemData.details.cost.innate + systemData.details.cost.misc
+    // Calculate total initiative
+    systemData.stats.init.total = systemData.stats.init.innate + fromUuidSync(systemData.stats.init.driver)?.system.stats.init.value;
   }
 
   async rollActorCheck(checkID,event=undefined){
@@ -533,6 +534,7 @@ export class OpsActor extends Actor {
 
     // Prepare character roll data.
     this._getCharacterRollData(data);
+    this._getVehicleRollData(data);
     return data;
   }
 
@@ -560,6 +562,12 @@ export class OpsActor extends Actor {
     if (data.stats.bab){
       data.bab = data.stats.bab.value ?? 0;
     }
+  }
+
+  _getVehicleRollData(data) {
+    if (this.type !== 'vehicle') return;
+    // Bring initiative up for combat tracker
+    data.init = data.stats.init.total ?? 0;
   }
 
   // Pre-creation

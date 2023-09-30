@@ -100,50 +100,40 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="vehicle">Vehicle</a>
-    <a class="item" data-tab="traits">Traits</a>
-    <a class="item" data-tab="offense">Offense</a>
-    <a class="item" data-tab="defense">Defense</a>
-    <a class="item" data-tab="utility">Utility</a>
-    <a class="item" data-tab="gear">Gear</a>
-    <a class="item" data-tab="biography">Biography</a>
+    <a class="item" data-tab="actions">Actions</a>
+    <a class="item" data-tab="cargo">Cargo</a>
+    <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="effects">Active Effects</a>
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
-    {{!-- Character Tab --}}
+    {{!-- Vehicle Tab --}}
     <div class="tab vehicle" data-group="primary" data-tab="vehicle">
       {{> "systems/opsandtactics/templates/actor/parts/actor-vehicle.html"}}
     </div>
 
-    {{!-- Traits Tab --}}
-    <div class="tab traits" data-group="primary" data-tab="traits">
+    {{!-- Actions Tab --}}
+    <div class="tab actions" data-group="primary" data-tab="actions">
 
     </div>
 
-    {{!-- Combat Tabs --}}
-    <div class="tab offense" data-group="primary" data-tab="offense">
+    {{!-- Cargo Tabs --}}
+    <div class="tab cargo" data-group="primary" data-tab="cargo">
 
     </div>
 
-    <div class="tab defense" data-group="primary" data-tab="defense">
-
-    </div>
-
-    {{!-- Utility Tab --}}
-    <div class="tab utility" data-group="primary" data-tab="utility">
-
-    </div>
-
-    {{!-- Gear Tab --}}
-    <div class="tab gear" data-group="primary" data-tab="gear">
-
-    </div>
-
-    {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="biography">
-
+    {{!-- Description Tab --}}
+        <div class="tab description" data-group="primary" data-tab="description">
+          <fieldset>
+            <legend class="resource-label">
+              Description
+            </legend>
+            <div>
+                {{editor enrichBio target="system.details.biography" rollData=rollData button=true owner=owner editable=editable engine="prosemirror"}}
+            </div>
+          </fieldset>
         </div>
 
     {{!-- Active Effects Tab --}}
