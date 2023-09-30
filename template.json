@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character","spacecraft"],
+    "types": ["character","vehicle","spacecraft"],
     "character": {
       "health": {
         "xhp": {
@@ -15,6 +15,14 @@
       "cp": {
         "value": 15,
         "max": 15
+      }
+    },
+    "vehicle":{
+      "health": {
+        "hp": {
+          "value": 5,
+          "max": 5
+        }
       }
     },
     "spacecraft": {

@@ -1,4 +1,3 @@
-import { roll3d6 } from "../dice/3d6-roll.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -64,9 +63,12 @@ export class OpsActorSheet extends ActorSheet {
     // Prepare character data and items.
     if (actorData.type == 'character') {
       //console.debug(context);
-      this._prepareItems(context);
+      this._prepareCharacterItems(context);
       this._prepareCharacterData(context);
-      
+    }
+    if (actorData.type == 'vehicle') {
+      this._prepareVehicleItems(context);
+      this._prepareVehicleData(context);
     }
 
     context.collapses = this.collapseStates;
@@ -118,7 +120,7 @@ export class OpsActorSheet extends ActorSheet {
    *
    * @return {undefined}
    */
-  _prepareItems(context) {
+  _prepareCharacterItems(context) {
     const systemData = context.system;
     // Initialize containers.
     const skills = [];
@@ -362,6 +364,36 @@ export class OpsActorSheet extends ActorSheet {
     context.attackObjects = attackObjects;
     context.utilityObjects = utilityObjects;
     //console.debug(context);
+  }
+
+  _prepareVehicleData(context) {
+    const systemData = context.system;
+    // Speed Options
+    context.speedList = [
+      {value: 0, label: 'Stationary: 0 MPH, +0 / -0'},
+      {value: 1, label: 'Observing: 0-15 MPH, +0 / +0'},
+      {value: 2, label: 'Cruising: 15-30 MPH, +1 / +0'},
+      {value: 3, label: 'Alley: 30-45 MPH, +1 / -1'},
+      {value: 4, label: 'Avenue: 45-60 MPH, +2 / -2'},
+      {value: 5, label: 'Street: 60-75 MPH, +3 / -4'},
+      {value: 6, label: 'Highway: 75-90 MPH, +5 / -6'},
+      {value: 7, label: 'All Out: 90-110+ MPH, +7 / -8'}
+    ]
+    context.topSpeeds = [
+      {value: 0, label: 'Top: Stationary'},
+      {value: 1, label: 'Top: Observing'},
+      {value: 2, label: 'Top: Cruising'},
+      {value: 3, label: 'Top: Alley'},
+      {value: 4, label: 'Top: Avenue'},
+      {value: 5, label: 'Top: Street'},
+      {value: 6, label: 'Top: Highway'},
+      {value: 7, label: 'Top: All Out'}
+    ]
+    console.debug(context)
+  }
+
+  _prepareVehicleItems(context) {
+
   }
 
   /* -------------------------------------------- */

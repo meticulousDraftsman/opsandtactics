@@ -5,7 +5,7 @@ import { OpsItem } from "./documents/item.mjs";
 import { OpsActorSheet } from "./sheets/actor-sheet.mjs";
 import { OpsItemSheet } from "./sheets/item-sheet.mjs";
 // Import DataModels.
-import { OpsCharacter} from "./schema/actor-schema.mjs";
+import { OpsCharacter, OpsVehicle} from "./schema/actor-schema.mjs";
 import {OpsSkill, OpsArmor, OpsWeapon, OpsObject, OpsFeature, OpsMagic} from "./schema/item-schema.mjs"
 
 // Import helper/utility classes and constants.
@@ -44,6 +44,7 @@ Hooks.once('init', async function() {
 
   // Assign custom DataModels
   CONFIG.Actor.systemDataModels['character'] = OpsCharacter;
+  CONFIG.Actor.systemDataModels['vehicle'] = OpsVehicle;
   CONFIG.Item.systemDataModels['skill'] = OpsSkill;
   CONFIG.Item.systemDataModels['armor'] = OpsArmor;
   CONFIG.Item.systemDataModels['weapon'] = OpsWeapon;

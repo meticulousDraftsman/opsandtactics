@@ -39,6 +39,7 @@ export class OpsActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(this);
+    this._prepareVehicleData(this);
   }
 
 
@@ -158,6 +159,46 @@ export class OpsActor extends Actor {
     systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
   }
   
+  _prepareVehicleData(actorData) {
+    if (actorData.type !== 'vehicle') return;
+    const systemData = actorData.system;
+    console.debug('heehee vehicle derived update')
+    // Calculate impacts of speed
+    switch (systemData.vehicle.speed){
+      case 2:
+        systemData.stats.maneuver.speed = 0;
+        systemData.def.speed = 1;
+        break;
+      case 3:
+        systemData.stats.maneuver.speed = -1;
+        systemData.def.speed = 1;
+        break;
+      case 4:
+        systemData.stats.maneuver.speed = -2;
+        systemData.def.speed = 2;
+        break;
+      case 5:
+        systemData.stats.maneuver.speed = -4;
+        systemData.def.speed = 3;
+        break;
+      case 6:
+        systemData.stats.maneuver.speed = -6;
+        systemData.def.speed = 5;
+        break;
+      case 7:
+        systemData.stats.maneuver.speed = -8;
+        systemData.def.speed = 7;
+        break;
+      default:
+        systemData.stats.maneuver.speed = 0;
+        systemData.def.speed = 0;
+    }
+    // Calculate total defense, maneuever, and cost
+    systemData.def.total = systemData.def.innate + systemData.def.misc + systemData.def.speed;
+    systemData.stats.maneuver.total = systemData.stats.maneuver.innate + systemData.stats.maneuver.misc + systemData.stats.maneuver.speed;
+    systemData.details.cost.total = systemData.details.cost.innate + systemData.details.cost.misc
+  }
+
   async rollActorCheck(checkID,event=undefined){
     const rollData = this.getRollData();
     const rollConfig = {

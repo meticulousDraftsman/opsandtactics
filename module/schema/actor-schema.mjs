@@ -183,30 +183,56 @@ export class OpsVehicle extends foundry.abstract.DataModel {
     static defineSchema(){
         return {
             vehicle: new field.SchemaField({
-                crew: new field.SchemaField({
-                    amount: new field.NumberField(),
-                    members: new field.ObjectField()
+                crew: new field.ObjectField({
+                    initial:{
+                        generic: {
+                            skill: 0,
+                            attack: 0
+                        }
+                    }
                 }),
-                passengers: new field.SchemaField({
-                    amount: new field.NumberField(),
-                    members: new field.ObjectField()
+                passengers: new field.ObjectField({
+                    initial:{
+                        generic: {
+                            amount: null,
+                            label: null
+                        }
+                    }
                 }),
-                carge: new field.NumberField(),
-                initMod: new field.NumberField(),
-                manMod: new field.NumberField(),
-                speed: new field.SchemaField({
-                    top: new field.NumberField(),
-                    current: new field.NumberField()
+                speed: new field.NumberField()
+            }),
+            stats: new field.SchemaField({
+                crew: new field.NumberField(),
+                passengers: new field.NumberField(),
+                cargo: new field.NumberField(),
+                init: new field.SchemaField({
+                    innate: new field.NumberField(),
+                    driver: new field.StringField()
+                    // total:
                 }),
+                maneuver: new field.SchemaField({
+                    innate: new field.NumberField(),
+                    misc: new field.NumberField()
+                    // speed:
+                    // total:
+                }),
+                topSpeed: new field.NumberField()
+            }),
+            details: new field.SchemaField({
+                biography: new field.StringField(),
                 size: new field.StringField(),
+                chassis: new field.StringField(),
                 cost: new field.SchemaField({
                     innate: new field.NumberField(),
-                    upgrades: new field.NumberField()
+                    misc: new field.NumberField()
+                    // total:
                 })
             }),
             def: new field.SchemaField({
                 innate: new field.NumberField(),
                 misc: new field.NumberField(),
+                // speed:
+                // total:
                 hardness: new field.NumberField()
             }),
             health: new field.SchemaField({
@@ -214,9 +240,18 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                     value: new field.NumberField(),
                     max: new field.NumberField()
                 }),
+                extremity: new field.SchemaField({
+                    frontLeft: new field.BooleanField(),
+                    frontRight: new field.BooleanField(),
+                    rearLeft: new field.BooleanField(),
+                    rearRight: new field.BooleanField(),
+                    engine: new field.BooleanField(),
+                    other: new field.BooleanField()
+                }),
                 notes: new field.StringField(),
                 incoming: new field.NumberField()
-            })
+            }),
+            actions: new field.ObjectField()
         }
     }
 }

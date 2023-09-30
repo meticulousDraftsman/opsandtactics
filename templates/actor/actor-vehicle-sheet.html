@@ -1,0 +1,156 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <div class="flexrow">
+      <div class="profile-img flex-group-center">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        <div class="grid grid-3col flex-group-center">
+          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.frontLeft">
+            {{#if system.health.extremity.frontLeft}}
+            <i class="fas fa-burst jammed"></i>
+            {{else}}
+            <i class="fas fa-compact-disc"></i>
+            {{/if}}
+          </a>
+          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.engine">
+            {{#if system.health.extremity.engine}}
+            <i class="fas fa-oil-can jammed"></i>
+            {{else}}
+            <i class="fas fa-oil-can"></i>
+            {{/if}}
+          </a>
+          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.frontRight">
+            {{#if system.health.extremity.frontRight}}
+            <i class="fas fa-burst jammed"></i>
+            {{else}}
+            <i class="fas fa-compact-disc"></i>
+            {{/if}}
+          </a>
+          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rearLeft">
+            {{#if system.health.extremity.rearLeft}}
+            <i class="fas fa-burst jammed"></i>
+            {{else}}
+            <i class="fas fa-compact-disc"></i>
+            {{/if}}
+          </a>
+          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.other">
+            {{#if system.health.extremity.other}}
+            <i class="fas fa-gauge-high jammed"></i>
+            {{else}}
+            <i class="fas fa-gauge"></i>
+            {{/if}}
+          </a>
+          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rearRight">
+            {{#if system.health.extremity.rearRight}}
+            <i class="fas fa-burst jammed"></i>
+            {{else}}
+            <i class="fas fa-compact-disc"></i>
+            {{/if}}
+          </a>
+        </div>
+      </div>
+      <div class="header-fields">
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+        {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+        use both the "grid" and "grid-Ncol" class where "N" can be any number
+        from 1 to 12 and will create that number of columns.  --}}
+        <div class="grid grid-2col">
+          <fieldset>
+            <div class="grid grid-5col flex-group-center">
+              <span>HP</span>
+              <div class="grid-span-2 flexrow flex-group-center">
+                <input class="flex3 resource-delta" type="text" data-target="system.health.hp.value" value="{{system.health.hp.value}}" data-dtype="String">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.health.hp.max" value="{{system.health.hp.max}}" data-dtype="Number">
+              </div>
+              <span>HRD</span>
+              <input type="text" name="system.def.hardness" value="{{system.def.hardness}}" placeholder="0" data-dtype="Number">
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="grid grid-5col flex-group-center">
+              <span>DEF</span>
+              <input type="text" name="system.def.innate" value="{{system.def.innate}}" placeholder="Base" data-dtype="Number">
+              <input type="text" name="system.def.misc" value="{{system.def.misc}}" placeholder="Misc" data-dtype="Number">
+              <span>Total</span>
+              <input type="text" value="{{system.def.total}}" readonly>
+            </div>
+          </fieldset>
+          <fieldset>
+            <select name="system.vehicle.speed" class="flex-group-center">
+              {{selectOptions speedList selected=system.vehicle.speed nameAttr="value" labelAttr="label"}}
+            </select>
+          </fieldset>
+          <fieldset>
+            <div class="grid grid-5col flex-group-center">
+              <span>MAN</span>
+              <input type="text" name="system.stats.maneuver.innate" value="{{system.stats.maneuver.innate}}" placeholder="Base" data-dtype="Number">
+              <input type="text" name="system.stats.maneuver.misc" value="{{system.stats.maneuver.misc}}" placeholder="Misc" data-dtype="Number">
+              <span>Total</span>
+              <input type="text" value="{{system.stats.maneuver.total}}" readonly>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="vehicle">Vehicle</a>
+    <a class="item" data-tab="traits">Traits</a>
+    <a class="item" data-tab="offense">Offense</a>
+    <a class="item" data-tab="defense">Defense</a>
+    <a class="item" data-tab="utility">Utility</a>
+    <a class="item" data-tab="gear">Gear</a>
+    <a class="item" data-tab="biography">Biography</a>
+    <a class="item" data-tab="effects">Active Effects</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Character Tab --}}
+    <div class="tab vehicle" data-group="primary" data-tab="vehicle">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-vehicle.html"}}
+    </div>
+
+    {{!-- Traits Tab --}}
+    <div class="tab traits" data-group="primary" data-tab="traits">
+
+    </div>
+
+    {{!-- Combat Tabs --}}
+    <div class="tab offense" data-group="primary" data-tab="offense">
+
+    </div>
+
+    <div class="tab defense" data-group="primary" data-tab="defense">
+
+    </div>
+
+    {{!-- Utility Tab --}}
+    <div class="tab utility" data-group="primary" data-tab="utility">
+
+    </div>
+
+    {{!-- Gear Tab --}}
+    <div class="tab gear" data-group="primary" data-tab="gear">
+
+    </div>
+
+    {{!-- Biography Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="biography">
+
+        </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/opsandtactics/templates/actor/parts/actor-effects.html"}}
+    </div>
+
+  </section>
+</form>
+

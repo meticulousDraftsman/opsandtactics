@@ -1,0 +1,52 @@
+<section class="grid grid-4col">
+    <aside class="sidebar">
+        <fieldset>
+            <legend class="resource-label">Vehicle Statistics</legend>
+            <div class="grid grid-5col flex-group-center">
+                <input type="text" class="grid-span-5 flex-group-center" name="system.details.chassis" value="{{system.details.chassis}}" placeholder="Chassis" data-dtype="String">
+                <span class="grid-span-3">Crew</span>
+                <input type="text" class="grid-span-2" name="system.stats.crew" value="{{system.stats.crew}}" placeholder="0" data-dtype="Number">
+                <span class="grid-span-3">Passengers</span>
+                <input type="text" class="grid-span-2" name="system.stats.passengers" value="{{system.stats.passengers}}" placeholder="0" data-dtype="Number">
+                <span class="grid-span-3">Cargo</span>
+                <input type="text" class="grid-span-2" name="system.stats.cargo" value="{{system.stats.cargo}}" placeholder="0 lbs" data-dtype="Number">
+                <input type="text" class="grid-span-5 flex-group-center" name="system.details.size" value="{{system.details.size}}" placeholder="Size" data-dtype="String">
+                <select class="grid-span-5 flex-group-center" name="system.stats.topSpeed">
+                    {{selectOptions topSpeeds selected=system.stats.topSpeed nameAttr="value" labelAttr="label"}}
+                </select>
+                <span class="grid-span-3">Initiative</span>
+                <input type="text" class="grid-span-2" name="system.stats.init.innate" value="{{system.stats.init.innate}}" placeholder="Base" data-dtype="Number">
+                <select class="grid-span-5 flex-group-center" name="system.stats.init.driver">
+
+                </select>
+                <span class="grid-span-3">Cost</span>
+                <input type="text" class="grid-span-2" value="{{system.details.cost.total}}" readonly>
+                <input type="text" class="grid-span-2" name="system.details.cost.innate" value="{{system.details.cost.innate}}" placeholder="Base" data-dtype="Number">
+                <input type="text" class="grid-span-2" name="system.details.cost.misc" value="{{system.details.cost.misc}}" placeholder="Misc" data-dtype="Number">
+            </div>
+        </fieldset>
+    </aside>
+
+    <section class="main grid-span-3">
+        <fieldset>
+            <legend class="resource-label">
+                Crew <a class="crew-link"><i class="fas fa-link"></i></a>
+            </legend>
+            <ol class="items-list">
+                {{#each system.vehicle.crew}}
+                {{#if @first}}
+                <li class="item grid grid-6col flex-group-center">
+                    <span class="grid-span-2">NPC Crew</span>
+                    <span>Check Modifier</span>
+                    <input type="text" name="system.vehicle.crew.{{@key}}.skill" value="{{this.skill}}" data-dtype="Number">
+                    <span>Attack Bonus</span>
+                    <input type="text" name="system.vehicle.crew.{{@key}}.attack" value="{{this.attack}}" data-dtype="Number">
+                </li>
+                {{else}}
+                {{/if}}
+                {{/each}}
+            </ol>
+            
+        </fieldset>
+    </section>
+</section>
