@@ -1,0 +1,127 @@
+<fieldset>
+    <legend class="resource-label">
+        Skill Checks <a class="action-create"><i class="fas fa-plus"></i></a> <a class="actor-refresh" data-tooltip="Refresh vehicle to reflect crew updates"><i class="fas fa-rotate-right"></i></a>
+    </legend>
+    <ol class="items-list">
+        {{#each system.actions}}
+        {{#if (eq this.check.type "skill")}}
+        <li class="item grid grid-12col flex-group-center">
+            <input class="grid-span-3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
+            <select name="system.actions.{{@key}}.check.type" class="flex-group-center grid-span-2">
+            {{#select this.check.type}}
+                <option value="skill">Skill</option>
+                <option value="attack">Attack</option>
+                <option value="message">Message</option>
+            {{/select}}
+            </select>
+            <span>Cost</span>
+            <div class="flexrow flex-group-center grid-span-3">
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.cost" value="{{this.ammo.cost}}" placeholder="0" data-dtype="Number">
+                <span>:</span>
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.value" value="{{this.ammo.value}}" placeholder="0" data-dtype="Number">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="0" data-dtype="Number">
+            </div>
+            <span>CP</span>
+            <input type="text" name="system.actions.{{@key}}.cp" value="{{this.cp}}" placeholder="0" data-dtype="Number">            
+            <div class="flex-group-center">
+                <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
+            </div>
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}.check"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
+            <select name="system.actions.{{@key}}.source" class="grid-span-3 flex-group-center">
+                {{selectOptions @root.crew selected=this.source nameAttr="value" labelAttr="label"}}
+            </select>
+            <input type="text" value="{{this.check.mid}}" readonly>
+            <input type="text" class="grid-span-2" name="system.actions.{{@key}}.check.misc" value="{{this.check.misc}}" placeholder="Misc" data-dtype="String">
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}.effect"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
+            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" data-dtype="String">
+            </li>
+        {{/if}}
+        {{/each}}
+    </ol>
+</fieldset>
+<fieldset>
+    <legend class="resource-label">
+        Attacks
+    </legend>
+    <ol class="items-list">
+        {{#each system.actions}}
+        {{#if (eq this.check.type "attack")}}
+        <li class="item grid grid-12col flex-group-center">
+            <input class="grid-span-3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
+            <select name="system.actions.{{@key}}.check.type" class="flex-group-center grid-span-2">
+            {{#select this.check.type}}
+                <option value="skill">Skill</option>
+                <option value="attack">Attack</option>
+                <option value="message">Message</option>
+            {{/select}}
+            </select>
+            <span>Cost</span>
+            <div class="flexrow flex-group-center grid-span-3">
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.cost" value="{{this.ammo.cost}}" placeholder="0" data-dtype="Number">
+                <span>:</span>
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.value" value="{{this.ammo.value}}" placeholder="0" data-dtype="Number">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="0" data-dtype="Number">
+            </div>
+            <span>CP</span>
+            <input type="text" name="system.actions.{{@key}}.cp" value="{{this.cp}}" placeholder="0" data-dtype="Number">            
+            <div class="flex-group-center">
+                <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
+            </div>
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}.check"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
+            <select name="system.actions.{{@key}}.source" class="grid-span-3 flex-group-center">
+                {{selectOptions @root.crew selected=this.source nameAttr="value" labelAttr="label"}}
+            </select>
+            <input type="text" value="{{this.check.mid}}" readonly>
+            <input type="text" class="grid-span-2" name="system.actions.{{@key}}.check.misc" value="{{this.check.misc}}" placeholder="Misc" data-dtype="String">
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}.effect"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
+            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" data-dtype="String">
+        </li>
+        {{/if}}
+        {{/each}}
+    </ol>
+</fieldset>
+<fieldset>
+    <legend class="resource-label">
+        Utility
+    </legend>
+    <ol class="items-list">
+        {{#each system.actions}}
+        {{#if (eq this.check.type "message")}}
+        <li class="item grid grid-12col flex-group-center">
+            <input class="grid-span-3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
+            <select name="system.actions.{{@key}}.check.type" class="flex-group-center grid-span-2">
+            {{#select this.check.type}}
+                <option value="skill">Skill</option>
+                <option value="attack">Attack</option>
+                <option value="message">Message</option>
+            {{/select}}
+            </select>
+            <span>Cost</span>
+            <div class="flexrow flex-group-center grid-span-3">
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.cost" value="{{this.ammo.cost}}" placeholder="0" data-dtype="Number">
+                <span>:</span>
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.value" value="{{this.ammo.value}}" placeholder="0" data-dtype="Number">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="0" data-dtype="Number">
+            </div>
+            <span>CP</span>
+            <input type="text" name="system.actions.{{@key}}.cp" value="{{this.cp}}" placeholder="0" data-dtype="Number">            
+            <div class="flex-group-center">
+                <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
+            </div>
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}.effect"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-11" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Chat Message" data-dtype="String">
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}.check"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
+            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect Dice" data-dtype="String">
+        </li>
+        {{/if}}
+        {{/each}}
+    </ol>
+</fieldset>

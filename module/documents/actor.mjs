@@ -198,6 +198,33 @@ export class OpsActor extends Actor {
     systemData.details.cost.total = systemData.details.cost.innate + systemData.details.cost.misc
     // Calculate total initiative
     systemData.stats.init.total = systemData.stats.init.innate + fromUuidSync(systemData.stats.init.driver)?.system.stats.init.value;
+    // Parse linked crew members
+    for (let [key, entry] of Object.entries(systemData.vehicle.crew)){
+      if (key == 'generic'){}
+      else {
+        let crewDoc = fromUuidSync(entry.uuid);
+        entry.name = crewDoc.name;
+        entry.init = crewDoc.system.stats.init.value;
+        entry.attackBase = crewDoc.system.stats.bab.value + crewDoc.abilityMod(entry.attackAbility) + entry.attackMisc;
+        entry.skillBase = crewDoc.items.get(entry.skill).skillSum().total;
+      }
+    }
+    // Tally up vehicle actions
+    for (let [key, entry] of Object.entries(systemData.actions)){
+      if (entry.check.type != 'message'){
+        entry.check.mid = Number(systemData.vehicle.crew[entry.source][`${entry.check.type}Base`])
+        entry.check.total = `${entry.check.mid}`;
+        if (entry.check.type=='skill'){
+          entry.check.mid += systemData.stats.maneuver.total;
+          if (systemData.stats.maneuver.total!=0) entry.check.total += ` ${systemData.stats.maneuver.total>=0?'+':''}${systemData.stats.maneuver.total}`;
+        }
+        else {
+          entry.check.mid += systemData.stats.maneuver.speed;
+          if (systemData.stats.maneuver.speed!=0) entry.check.total += ` ${systemData.stats.maneuver.speed>=0?'+':''}${systemData.stats.maneuver.speed}`;
+        }
+        if (entry.check.misc) entry.check.total += ` ${(entry.check.misc.charAt(0)=='-' || entry.check.misc.charAt(0)=='+')?'':'+'}${entry.check.misc}`;
+      }
+    }
   }
 
   async rollActorCheck(checkID,event=undefined){
@@ -239,7 +266,7 @@ export class OpsActor extends Actor {
 
   async actorAction(checkID, event=undefined){
     const cpCost = getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`);
-    console.debug(cpCost)
+    //console.debug(cpCost)
     if (cpCost==0) return;
     let cpCheck = (event && event.ctrlKey)? true : ((this.system.cp.value-cpCost) >= -this.system.cp.temp);
     if (!cpCheck){
@@ -592,6 +619,7 @@ export class OpsActor extends Actor {
   async _preUpdate(changed,options,user){
     await super._preUpdate(changed,options,user);
     const updates= {};
+    //console.debug(changed)
     switch (this.type){
       case 'character':
         if (hasProperty(changed,'img') && CONFIG.OATS.characterIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
@@ -605,5 +633,4 @@ export class OpsActor extends Actor {
     }
     if(!isEmpty(updates)) return this.updateSource(updates);
   }
-
 }

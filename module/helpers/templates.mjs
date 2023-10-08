@@ -16,6 +16,7 @@
     "systems/opsandtactics/templates/actor/parts/actor-traits.html",
     "systems/opsandtactics/templates/actor/parts/actor-biography.html",
     "systems/opsandtactics/templates/actor/parts/actor-vehicle.html",
+    "systems/opsandtactics/templates/actor/parts/vehicle-actions.html",
     // Item partials.
     "systems/opsandtactics/templates/item/parts/item-object.html"
   ]);

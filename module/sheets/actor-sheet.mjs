@@ -23,7 +23,7 @@ export class OpsActorSheet extends ActorSheet {
   }
 
   /* -------------------------------------------- */
-
+  
   collapseStates = {
     fortitude: true,
     reflex: true,
@@ -392,21 +392,22 @@ export class OpsActorSheet extends ActorSheet {
       {value: 7, label: 'Top: All Out'}
     ]
     // Parse linked crew members
-    context.drivers = {
-      plain: [],
-      init: []
-    };
+    context.drivers = [];
+    context.crew = [{value:'generic', label: 'Crew Quality'}]
     for (let [key, entry] of Object.entries(systemData.vehicle.crew)) {
       if (key == 'generic') continue;
       let crewDoc = fromUuidSync(entry.uuid);
-      entry.name = crewDoc.name;
-      entry.attackTotal = crewDoc.system.stats.bab.value + crewDoc.abilityMod(entry.attackAbility) + entry.attackMisc;
       entry.listSkills = [];
       for (let i of crewDoc.items){
         if (i.type=='skill') entry.listSkills.push({value:i._id,label:`${i.name} (${i.skillSum().total})`})
       }
-    context.drivrs.plain.push({value:entry.uuid, label:entry.name});
-    context.drivers.init.push({value:entry.uuid, label: `${entry.name} (${crewDoc.system.stats.init.value>=0?'+':''}${crewDoc.system.stats.init.value})`})
+    context.crew.push({value:key, uuid:entry.uuid, label:entry.name});
+    context.drivers.push({value:entry.uuid, label: `${entry.name} (${entry.init>=0?'+':''}${entry.init})`})
+    }
+    for (let [key, entry] of Object.entries(systemData.actions)) {
+      if (entry.source == 'generic'){
+        //if(entry.check.type != 'message') entry.check.total = `${Number(systemData.vehicle.crew.generic[entry.check.type])}${entry.check.misc?((entry.check.misc.charAt(0)=='-' || entry.check.misc.charAt(0)=='+')?` ${entry.char.misc}`:` +${entry.char.misc}`):''}${systemData.stats.maneuver.speed?` ${systemData.stats.manuever.speed}`:''}`;
+      }
     }
     console.debug(context)
   }
@@ -424,6 +425,7 @@ export class OpsActorSheet extends ActorSheet {
     // Render the item sheet for viewing/editing prior to the editable check.
     html.find('.item-edit').click(this._onItemEdit.bind(this));
     html.find('.actor-edit').click(this._onActorEdit.bind(this));
+    html.find('.sheet-refresh').click(() => this.render());
     // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
@@ -468,10 +470,15 @@ export class OpsActorSheet extends ActorSheet {
     // Vehicle Crew Linking
     html.find('.crew-link').click(this._onLinkCrew.bind(this));
     html.find('.crew-unlink').click(this._crewUnlink.bind(this));
+    html.find('.actor-refresh').click(() => {
+      this.actor.prepareData();
+      this.render();
+    })
      // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
     // Generic Rollables
     html.find('.rollable').click(this._onRoll.bind(this));
+    
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
@@ -666,7 +673,30 @@ export class OpsActorSheet extends ActorSheet {
   async _actionCreate(event){
     event.preventDefault();
     const updateData = {};
-    updateData[`system.actions.${randomID(8)}`] = {name:null,cost:null,quantity:1};
+    if (this.actor.type == 'character') updateData[`system.actions.${randomID(8)}`] = {
+      name:null,
+      cost:null,
+      quantity:1
+    };
+    if (this.actor.type == 'vehicle') updateData[`system.actions.${randomID(8)}`] = {
+      name:null,
+      source: 'generic',
+      check: {
+        type: 'skill',
+        misc: null,
+        flavor: null
+      },
+      effect: {
+        misc: null,
+        flavor: null
+      },
+      ammo: {
+        cost: null,
+        value: null,
+        max: null
+      },
+      cp: 6
+    };
     await this.actor.update(updateData);
   }
   async _actionDelete(event){
@@ -738,8 +768,13 @@ export class OpsActorSheet extends ActorSheet {
     const checkLink = await fromUuid(form.idLink.value);
     if (checkLink && checkLink.type=='character'){
       const updateData = {};
-      updateData[`system.vehicle.crew.${randomID(8)}`] = {uuid:form.idLink.value, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
+      const charData = {};
+      const randKey = randomID(8);
+      updateData[`system.vehicle.crew.${randKey}`] = {uuid:form.idLink.value, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
+      charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
       await this.actor.update(updateData);
+      await checkLink.update(charData);      
+      await console.debug(checkLink)
     }
     else {
       return null;
@@ -750,14 +785,20 @@ export class OpsActorSheet extends ActorSheet {
     Dialog.confirm({
       title: "Unlink Confirmation",
       content: "Remove linked Actor from crew list?",
-      yes: () => {
-        const updateData = {};
-        updateData[`system.vehicle.crew.-=${event.currentTarget.dataset.target}`] = null;
-        this.actor.update(updateData);
-      },
+      yes: () => this._submitUnlinkCrew(event),
       no: () => {return null},
       defaultYes: true
     });
+  }
+  async _submitUnlinkCrew(event){
+    const checkLink = await fromUuid(getProperty(this.actor,`system.vehicle.crew.${event.currentTarget.dataset.target}.uuid`))
+    const updateData = {};
+    const charData = {};
+    if (hasProperty(this.actor, `system.vehicle.crew.${event.currentTarget.dataset.target}`)) updateData[`system.vehicle.crew.-=${event.currentTarget.dataset.target}`] = null;
+    if (hasProperty(checkLink, `system.links.vehicle.${event.currentTarget.dataset.target}`)) charData[`system.links.vehicle.-=${event.currentTarget.dataset.target}`] = null;
+    await this.actor.update(updateData);
+    if (checkLink)await checkLink.update(charData)
+    console.debug(checkLink)
   }
 
   /**

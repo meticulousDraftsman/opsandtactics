@@ -175,6 +175,9 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                         hard: new field.NumberField({nullable:true})
                     }),
                 })
+            }),
+            links: new field.SchemaField({
+                vehicle: new field.ObjectField()
             })
         };
     };
@@ -186,8 +189,8 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                 crew: new field.ObjectField({
                     initial:{
                         generic: {
-                            skill: 0,
-                            attack: 0
+                            skillBase: 0,
+                            attackBase: 0
                         }
                     }
                 }),
