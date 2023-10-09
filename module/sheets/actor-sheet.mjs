@@ -60,11 +60,11 @@ export class OpsActorSheet extends ActorSheet {
     
     context.flags = actorData.flags;
     context.OATS = CONFIG.OATS;
-
+    context.collapses = this.collapseStates;
+    
     // Prepare character data and items.
     if (actorData.type == 'character') {
       //console.debug(context);
-      context.collapses = this.collapseStates;
       this._prepareCharacterItems(context);
       this._prepareCharacterData(context);
     }

@@ -7,15 +7,15 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/opsandtactics/templates/actor/parts/actor-character.html",
-    "systems/opsandtactics/templates/actor/parts/actor-items.html",
-    "systems/opsandtactics/templates/actor/parts/actor-utility.html",
     "systems/opsandtactics/templates/actor/parts/actor-effects.html",
-    "systems/opsandtactics/templates/actor/parts/actor-defense.html",
-    "systems/opsandtactics/templates/actor/parts/actor-offense.html",
-    "systems/opsandtactics/templates/actor/parts/actor-traits.html",
-    "systems/opsandtactics/templates/actor/parts/actor-biography.html",
-    "systems/opsandtactics/templates/actor/parts/actor-vehicle.html",
+    "systems/opsandtactics/templates/actor/parts/character-character.html",
+    "systems/opsandtactics/templates/actor/parts/character-items.html",
+    "systems/opsandtactics/templates/actor/parts/character-utility.html",
+    "systems/opsandtactics/templates/actor/parts/character-defense.html",
+    "systems/opsandtactics/templates/actor/parts/character-offense.html",
+    "systems/opsandtactics/templates/actor/parts/character-traits.html",
+    "systems/opsandtactics/templates/actor/parts/character-biography.html",
+    "systems/opsandtactics/templates/actor/parts/vehicle-vehicle.html",
     "systems/opsandtactics/templates/actor/parts/vehicle-actions.html",
     // Item partials.
     "systems/opsandtactics/templates/item/parts/item-object.html"
