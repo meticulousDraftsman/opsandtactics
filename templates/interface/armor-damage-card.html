@@ -1,7 +1,7 @@
 <div>
     <details>
         <summary class="grid grid-2col">
-            <span class="grid-span-2" data-tooltip="Expand Damage Log">Resolving {{title}} damage{{#if (gt report.length 1)}} (x{{report.length}}){{/if}}{{#if (gt report.length 1)}} <i class="fas fa-list"></i>{{else}}.{{/if}}</span>
+            <span class="grid-span-2" {{#if (gt report.length 1)}}data-tooltip="Expand Damage Log"{{/if}}>Resolving {{title}} damage{{#if (gt report.length 1)}} (x{{report.length}}){{/if}}{{#if (gt report.length 1)}} <i class="fas fa-list"></i>{{else}}.{{/if}}</span>
         </summary>
         <div>
             {{#each report}}

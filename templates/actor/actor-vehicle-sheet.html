@@ -5,59 +5,22 @@
     <div class="flexrow">
       <div class="profile-img flex-group-center">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
-        <div class="grid grid-3col flex-group-center">
-          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.frontLeft">
-            {{#if system.health.extremity.frontLeft}}
-            <i class="fas fa-burst jammed"></i>
-            {{else}}
-            <i class="fas fa-compact-disc"></i>
-            {{/if}}
-          </a>
-          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.engine">
-            {{#if system.health.extremity.engine}}
-            <i class="fas fa-oil-can jammed"></i>
-            {{else}}
-            <i class="fas fa-oil-can"></i>
-            {{/if}}
-          </a>
-          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.frontRight">
-            {{#if system.health.extremity.frontRight}}
-            <i class="fas fa-burst jammed"></i>
-            {{else}}
-            <i class="fas fa-compact-disc"></i>
-            {{/if}}
-          </a>
-          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rearLeft">
-            {{#if system.health.extremity.rearLeft}}
-            <i class="fas fa-burst jammed"></i>
-            {{else}}
-            <i class="fas fa-compact-disc"></i>
-            {{/if}}
-          </a>
-          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.other">
-            {{#if system.health.extremity.other}}
-            <i class="fas fa-gauge-high jammed"></i>
-            {{else}}
-            <i class="fas fa-gauge"></i>
-            {{/if}}
-          </a>
-          <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rearRight">
-            {{#if system.health.extremity.rearRight}}
-            <i class="fas fa-burst jammed"></i>
-            {{else}}
-            <i class="fas fa-compact-disc"></i>
-            {{/if}}
-          </a>
-        </div>
+        <select name="system.details.speedUnit" class="flex-group-center">
+        {{#select system.details.speedUnit}}
+          <option value="mph">MPH</option>
+          <option value="fps">Ft/s</option>
+          <option value="fpr">Ft/round</option>
+        {{/select}}
+        </select>
       </div>
       <div class="header-fields">
         <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
         {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
         use both the "grid" and "grid-Ncol" class where "N" can be any number
         from 1 to 12 and will create that number of columns.  --}}
-        <div class="grid grid-2col">
-          <fieldset>
-            <div class="grid grid-5col flex-group-center">
+        <div class="grid grid-10col">
+          <fieldset class="grid-span-6">
+            <div class="grid grid-7col flex-group-center">
               <span>HP</span>
               <div class="grid-span-2 flexrow flex-group-center">
                 <input class="flex3 resource-delta" type="text" data-target="system.health.hp.value" value="{{system.health.hp.value}}" data-dtype="String">
@@ -66,29 +29,29 @@
               </div>
               <span>HRD</span>
               <input type="text" name="system.def.hardness" value="{{system.def.hardness}}" placeholder="0" data-dtype="Number">
+              <span>P-HRD</span>
+              <input type="text" name="system.def.plasma" value="{{system.def.plasma}}" placeholder="0" data-dtype="Number">
             </div>
           </fieldset>
-          <fieldset>
-            <div class="grid grid-5col flex-group-center">
+          <fieldset class="grid-span-4">
+            <div class="grid grid-4col flex-group-center">
               <span>DEF</span>
               <input type="text" name="system.def.innate" value="{{system.def.innate}}" placeholder="Base" data-dtype="Number">
               <input type="text" name="system.def.misc" value="{{system.def.misc}}" placeholder="Misc" data-dtype="Number">
-              <span>Total</span>
               <input type="text" value="{{system.def.total}}" readonly>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="grid-span-6">
             <select name="system.vehicle.speed" class="flex-group-center">
               {{selectOptions speedList selected=system.vehicle.speed nameAttr="value" labelAttr="label"}}
             </select>
           </fieldset>
-          <fieldset>
-            <div class="grid grid-5col flex-group-center">
+          <fieldset class="grid-span-4">
+            <div class="grid grid-4col flex-group-center">
               <span>MAN</span>
               <input type="text" name="system.stats.maneuver.innate" value="{{system.stats.maneuver.innate}}" placeholder="Base" data-dtype="Number">
               <input type="text" name="system.stats.maneuver.misc" value="{{system.stats.maneuver.misc}}" placeholder="Misc" data-dtype="Number">
-              <span>Total</span>
-              <input type="text" value="{{system.stats.maneuver.total}}" readonly>
+              <input type="text" value="{{numberFormat system.stats.maneuver.total sign=true}}" readonly>
             </div>
           </fieldset>
         </div>

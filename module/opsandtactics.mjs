@@ -122,6 +122,8 @@ export async function opsCheck(data){
       formula = data.mod;
       break;
     default:
+      let firstChar = `${data.mod}`.charAt(0);
+      if (firstChar != '+' && firstChar != '-') data.mod = `+${data.mod}`;
       formula = '3d6' + data.mod;
       break;
   }

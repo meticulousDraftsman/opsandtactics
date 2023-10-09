@@ -25,6 +25,69 @@
                 <input type="text" class="grid-span-2" name="system.details.cost.misc" value="{{system.details.cost.misc}}" placeholder="Misc" data-dtype="Number">
             </div>
         </fieldset>
+        <fieldset>
+            <legend class="resource-label">Vehicle Damage</legend>
+            <div class="grid grid-5col flex-group-center">
+                <input type="text" class="grid-span-3" name="system.health.incoming" value="{{system.health.incoming}}" placeholder="Incoming" data-dtype="Number">
+                <a class="item-control apply-damage" data-tooltip="Apply Normal Damage" data-target="vehicle"><i class="fas fa-car-burst"></i></a>
+                <a class="item-control apply-damage" data-tooltip="Apply Plasma Damage" data-target="vehiclePlasma"><i class="fas fa-shield"></i></a>
+                <input type="text" class="grid-span-5" name="system.health.notes" value="{{system.health.notes}}" placeholder="Notes" data-dtype="String">      
+                <span class="grid-span-5">Locational</span>                   
+                <span></span>
+                <fieldset class="action-item grid grid-3col flex-group-center">
+                    <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.frontLeft">
+                        {{#if system.health.extremity.frontLeft}}
+                        <i class="fas fa-burst jammed"></i>
+                        {{else}}
+                        <i class="fas fa-compact-disc"></i>
+                        {{/if}}
+                    </a>
+                    <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.engine">
+                        {{#if system.health.extremity.engine}}
+                        <i class="fas fa-smog jammed"></i>
+                        {{else}}
+                        <i class="fas fa-oil-can"></i>
+                        {{/if}}
+                    </a>                
+                    <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.frontRight">
+                        {{#if system.health.extremity.frontRight}}
+                        <i class="fas fa-burst jammed"></i>
+                        {{else}}
+                        <i class="fas fa-compact-disc"></i>
+                        {{/if}}
+                    </a>
+                    <a class="actor-toggle resource-label grid-start-2" data-target-prop="system.health.extremity.other">
+                        {{#if system.health.extremity.other}}
+                        <i class="fas fa-gauge-high jammed"></i>
+                        {{else}}
+                        <i class="fas fa-gauge"></i>
+                        {{/if}}
+                    </a>
+                    <span></span>
+                    <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rearLeft">
+                        {{#if system.health.extremity.rearLeft}}
+                        <i class="fas fa-burst jammed"></i>
+                        {{else}}
+                        <i class="fas fa-compact-disc"></i>
+                        {{/if}}
+                    </a>
+                    <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.cargo">
+                        {{#if system.health.extremity.cargo}}
+                        <i class="fas fa-box-open jammed"></i>
+                        {{else}}
+                        <i class="fas fa-box"></i>
+                        {{/if}}
+                    </a>
+                    <a class="actor-toggle resource-label" data-target-prop="system.health.extremity.rearRight">
+                        {{#if system.health.extremity.rearRight}}
+                        <i class="fas fa-burst jammed"></i>
+                        {{else}}
+                        <i class="fas fa-compact-disc"></i>
+                        {{/if}}
+                    </a>
+                </fieldset>
+            </div>
+        </fieldset>
     </aside>
 
     <section class="main grid-span-3">
@@ -34,7 +97,7 @@
             </legend>
             <ol class="items-list">
                 {{#each system.vehicle.crew}}
-                {{#if @first}}
+                {{#if (eq @key "generic")}}
                 <li class="item">
                 <fieldset class="action-item grid grid-9col flex-group-center">
                     <span class="grid-span-3">NPC Crew Quality</span>
@@ -59,7 +122,7 @@
                     <select class="flex-group-center grid-span-2" name="system.vehicle.crew.{{@key}}.attackAbility" data-dtype="String">
                         {{selectOptions @root.OATS.abilityShort selected=this.attackAbility localize=true blank="Ability"}}
                     </select>
-                    <input type="text" value="{{this.attackBase}}" readonly>
+                    <input type="text" value="{{numberFormat this.attackBase sign=true}}" readonly>
                 </fieldset>
                 </li>
                 {{/if}}

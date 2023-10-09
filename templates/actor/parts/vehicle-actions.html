@@ -27,16 +27,16 @@
             <div class="flex-group-center">
                 <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
             </div>
-            <a class="vehicle-check resource-label" data-check-id="{{@key}}.check"><i class="fas fa-dice"></i></a>
-            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}" data-roll-type="{{this.check.type}}"><i class="fas fa-dice"></i></a>
             <select name="system.actions.{{@key}}.source" class="grid-span-3 flex-group-center">
-                {{selectOptions @root.crew selected=this.source nameAttr="value" labelAttr="label"}}
+                {{selectOptions @root.skillers selected=this.source nameAttr="value" labelAttr="label"}}
             </select>
-            <input type="text" value="{{this.check.mid}}" readonly>
+            <input type="text" value="{{numberFormat this.check.mid sign=true}}" readonly>
             <input type="text" class="grid-span-2" name="system.actions.{{@key}}.check.misc" value="{{this.check.misc}}" placeholder="Misc" data-dtype="String">
-            <a class="vehicle-check resource-label" data-check-id="{{@key}}.effect"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
+            <a class="rollable resource-label" data-roll="{{this.effect.misc}}" data-label="{{this.name}}: {{this.effect.flavor}}"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect" data-dtype="String">
             <input type="text" class="grid-span-5" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
-            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" data-dtype="String">
             </li>
         {{/if}}
         {{/each}}
@@ -71,16 +71,16 @@
             <div class="flex-group-center">
                 <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
             </div>
-            <a class="vehicle-check resource-label" data-check-id="{{@key}}.check"><i class="fas fa-dice"></i></a>
-            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}" data-roll-type="{{this.check.type}}"><i class="fas fa-dice"></i></a>
             <select name="system.actions.{{@key}}.source" class="grid-span-3 flex-group-center">
-                {{selectOptions @root.crew selected=this.source nameAttr="value" labelAttr="label"}}
+                {{selectOptions @root.attackers selected=this.source nameAttr="value" labelAttr="label"}}
             </select>
-            <input type="text" value="{{this.check.mid}}" readonly>
+            <input type="text" value="{{numberFormat this.check.mid sign=true}}" readonly>
             <input type="text" class="grid-span-2" name="system.actions.{{@key}}.check.misc" value="{{this.check.misc}}" placeholder="Misc" data-dtype="String">
-            <a class="vehicle-check resource-label" data-check-id="{{@key}}.effect"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-5" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
+            <a class="rollable resource-label" data-roll="{{this.effect.misc}}" data-label="{{this.name}}: {{this.effect.flavor}}"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect" data-dtype="String">
             <input type="text" class="grid-span-5" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
-            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" data-dtype="String">
         </li>
         {{/if}}
         {{/each}}
@@ -115,11 +115,14 @@
             <div class="flex-group-center">
                 <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
             </div>
-            <a class="vehicle-check resource-label" data-check-id="{{@key}}.effect"><i class="fas fa-dice"></i></a>
-            <input type="text" class="grid-span-11" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Chat Message" data-dtype="String">
-            <a class="vehicle-check resource-label" data-check-id="{{@key}}.check"><i class="fas fa-dice"></i></a>
+            <a class="vehicle-check resource-label" data-check-id="{{@key}}" data-roll-type="{{this.check.type}}"><i class="fas fa-message"></i></a>
+            <select name="system.actions.{{@key}}.source" class="grid-span-3 flex-group-center">
+                {{selectOptions @root.crew selected=this.source nameAttr="value" labelAttr="label"}}
+            </select>
+            <input type="text" class="grid-span-8" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Chat Message" data-dtype="String">
+            <a class="rollable resource-label" data-roll="{{this.effect.misc}}" data-label="{{this.name}}: {{this.effect.flavor}}"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect" data-dtype="String">
             <input type="text" class="grid-span-5" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
-            <input type="text" class="grid-span-6" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect Dice" data-dtype="String">
         </li>
         {{/if}}
         {{/each}}

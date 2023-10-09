@@ -206,7 +206,7 @@ export class OpsActor extends Actor {
         entry.name = crewDoc.name;
         entry.init = crewDoc.system.stats.init.value;
         entry.attackBase = crewDoc.system.stats.bab.value + crewDoc.abilityMod(entry.attackAbility) + entry.attackMisc;
-        entry.skillBase = crewDoc.items.get(entry.skill).skillSum().total;
+        entry.skillBase = entry.skill? crewDoc.items.get(entry.skill).skillSum().total : 0;
       }
     }
     // Tally up vehicle actions
@@ -264,6 +264,66 @@ export class OpsActor extends Actor {
     return roll;
   }
 
+  async rollVehicleCheck(actionID, rollType,event=undefined){
+    // Check Resource Consumptions
+    let ammoCheck = (event && (event.ctrlKey || event.altKey))? true : this.vehicleResourceAvailableCheck(actionID);
+    let cpCheck = (getProperty(this,`system.actions.${actionID}.source`) == 'generic' || (event && (event.ctrlKey || event.altKey)))? true : fromUuidSync(getProperty(this,`system.vehicle.crew.${getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).cpAvailableCheck(getProperty(this,`system.actions.${actionID}.cp`))
+    if (!ammoCheck || !cpCheck){
+      await Dialog.confirm({
+        title: "Insufficient Resources",
+        content: `Perform check despite not having enough ${!ammoCheck?'ammo':''}${(!ammoCheck&&!cpCheck)?' or ':''}${!cpCheck?'combat points':''}?`,
+        yes: () => {
+          ammoCheck = true;
+          cpCheck = true;
+        },
+        no: () => {},
+        defaultYes:true
+      });
+    }
+    if(!ammoCheck || !cpCheck) return;
+    // Prepare data for roll
+    const rollData=this.getRollData();
+    const rollConfig = {
+      actor: this,
+      data: rollData,
+      title: this.system.actions[actionID].name,
+      flavor: getProperty(this, `system.actions.${actionID}.check.flavor`),
+      mod: getProperty(this, `system.actions.${actionID}.check.total`), 
+      speaker: ChatMessage.getSpeaker({actor:this}),
+      rollMode: game.settings.get('core','rollMode'),
+      popupSkip: (event && event.shiftKey)
+    }
+    switch (rollType){
+      case 'skill':
+        rollConfig.checkType = 'skill';
+        break;
+      case 'attack':
+        rollConfig.checkType = 'ranged';
+        rollConfig.attackStance = this.effects.find(e => e.getFlag("core", "statusId") === 'prone') ? 'prone' : this.effects.find(e => e.getFlag("core", "statusId") === 'kneeling') ? 'kneeling' : undefined;
+        rollConfig.targetStance = undefined;
+        const mainTarget = Array.from(game.user.targets)[0] || undefined;
+        if (mainTarget) rollConfig.targetStance = mainTarget.actor.effects.find(e => e.getFlag("core", "statusId") === 'prone') ? 'prone' : mainTarget.actor?.effects.find(e => e.getFlag("core", "statusId") === 'kneeling') ? 'kneeling' : undefined;
+        break;
+      case 'message':
+        rollConfig.checkType = 'noneUtility';
+        break;
+    }
+    // Execute Roll
+    const roll = await opsCheck(rollConfig);
+    if (roll==null) return null;
+    //Resource Consumption
+    if (!(event && event.altKey)){
+      await this.attributeConsume(`system.actions.${actionID}.ammo.value`,getProperty(this,`system.actions.${actionID}.ammo.cost`));
+      if (getProperty(this,`system.actions.${actionID}.source`) != 'generic') fromUuidSync(getProperty(this,`system.vehicle.crew.${getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).attributeConsume('system.cp.value',getProperty(this,`system.actions.${actionID}.cp`));
+    }
+    return roll;
+  }
+  vehicleResourceAvailableCheck(actionID){
+    const cost = getProperty(this, `system.actions.${actionID}.ammo.cost`);
+    if (Number(cost==0)) return true;
+    return (getProperty(this,`system.actions.${actionID}.ammo.value`)-cost) >= 0;
+  }
+
   async actorAction(checkID, event=undefined){
     const cpCost = getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`);
     //console.debug(cpCost)
@@ -284,6 +344,14 @@ export class OpsActor extends Actor {
     const updateData = {};
     updateData['system.cp.value'] = (this.system.cp.value-cpCost);
     await this.update(updateData);
+  }
+
+  cpAvailableCheck(cost){
+    return (this.system.cp.value-cost >= -this.system.cp.temp)
+  }
+  async attributeConsume(path,cost){
+    if (Number(cost)==0) return;
+    await this.update({[path]:(getProperty(this,path)-cost)});
   }
 
   /**
@@ -370,6 +438,12 @@ export class OpsActor extends Actor {
         remaining = this.system.health[target].value;
         type = target;
         break;
+      case 'vehicle':
+      case 'vehiclePlasma':
+        dr = this.system.def.hardness + ((target=='vehiclePlasma')? this.system.def.plasma : 0);
+        remaining = this.system.health.hp.value;
+        type = target;
+        break;
       default:
         if (this.items.get(target) == undefined) return null;
         drItem = this.items.get(target);
@@ -433,6 +507,28 @@ export class OpsActor extends Actor {
           }
           setProperty(itemUpdateData,'system.ap.value',remaining);
         }
+        break;
+      case 'vehicle':
+      case 'vehiclePlasma':
+        if (incoming <= dr){
+          report = `${this.name} shrugs off the damage.`
+        }
+        else {
+          incoming -= dr;
+          remaining -= incoming;
+          switch (true){
+            case (remaining > 0):
+              report = `${this.name} takes ${incoming} damage, ${remaining} HP remain.`
+              break;
+            case (remaining > (-2 * this.system.health.hp.max)):
+              report = `${this.name} takes ${incoming} damage and is disabled at ${remaining} HP.`;
+              break;
+            default:
+              report = `${this.name} takes ${incoming} damage and is destroyed at ${remaining} HP.`;
+          }
+        }
+        incoming=0;
+        setProperty(actorUpdateData,'system.health.hp.value',remaining);
         break;
       default:
         if (max == 0) break;

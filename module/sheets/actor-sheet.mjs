@@ -64,6 +64,7 @@ export class OpsActorSheet extends ActorSheet {
     // Prepare character data and items.
     if (actorData.type == 'character') {
       //console.debug(context);
+      context.collapses = this.collapseStates;
       this._prepareCharacterItems(context);
       this._prepareCharacterData(context);
     }
@@ -72,7 +73,7 @@ export class OpsActorSheet extends ActorSheet {
       this._prepareVehicleData(context);
     }
 
-    context.collapses = this.collapseStates;
+    
 
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
@@ -371,16 +372,45 @@ export class OpsActorSheet extends ActorSheet {
   _prepareVehicleData(context) {
     const systemData = context.system;
     // Speed Options
-    context.speedList = [
-      {value: 0, label: 'Stationary: 0 MPH, +0 / -0'},
-      {value: 1, label: 'Observing: 0-15 MPH, +0 / +0'},
-      {value: 2, label: 'Cruising: 15-30 MPH, +1 / +0'},
-      {value: 3, label: 'Alley: 30-45 MPH, +1 / -1'},
-      {value: 4, label: 'Avenue: 45-60 MPH, +2 / -2'},
-      {value: 5, label: 'Street: 60-75 MPH, +3 / -4'},
-      {value: 6, label: 'Highway: 75-90 MPH, +5 / -6'},
-      {value: 7, label: 'All Out: 90-110+ MPH, +7 / -8'}
-    ]
+
+    switch(systemData.details.speedUnit){
+      case 'mph':
+        context.speedList = [
+          {value: 0, label: 'Stationary: 0 MPH, +0 / -0'},
+          {value: 1, label: 'Observing: 0-15 MPH, +0 / +0'},
+          {value: 2, label: 'Cruising: 15-30 MPH, +1 / +0'},
+          {value: 3, label: 'Alley: 30-45 MPH, +1 / -1'},
+          {value: 4, label: 'Avenue: 45-60 MPH, +2 / -2'},
+          {value: 5, label: 'Street: 60-75 MPH, +3 / -4'},
+          {value: 6, label: 'Highway: 75-90 MPH, +5 / -6'},
+          {value: 7, label: 'All Out: 90-110+ MPH, +7 / -8'}
+        ]
+        break;
+      case 'fps':
+        context.speedList = [
+          {value: 0, label: 'Stationary: 0 FPS, +0 / -0'},
+          {value: 1, label: 'Observing: 0-22 FPS, +0 / +0'},
+          {value: 2, label: 'Cruising: 22-44 FPS, +1 / +0'},
+          {value: 3, label: 'Alley: 44-66 FPS, +1 / -1'},
+          {value: 4, label: 'Avenue: 66-88 FPS, +2 / -2'},
+          {value: 5, label: 'Street: 88-110 FPS, +3 / -4'},
+          {value: 6, label: 'Highway: 110-132 FPS, +5 / -6'},
+          {value: 7, label: 'All Out: 132-161+ FPS, +7 / -8'}
+        ]
+        break;
+      case 'fpr':
+        context.speedList = [
+          {value: 0, label: 'Stationary: 0 FPR, +0 / -0'},
+          {value: 1, label: 'Observing: 0-132 FPR, +0 / +0'},
+          {value: 2, label: 'Cruising: 132-264 FPR, +1 / +0'},
+          {value: 3, label: 'Alley: 264-396 FPR, +1 / -1'},
+          {value: 4, label: 'Avenue: 396-528 FPR, +2 / -2'},
+          {value: 5, label: 'Street: 528-660 FPR, +3 / -4'},
+          {value: 6, label: 'Highway: 660-792 FPR, +5 / -6'},
+          {value: 7, label: 'All Out: 792-968+ FPR, +7 / -8'}
+        ]
+        break;
+    }
     context.topSpeeds = [
       {value: 0, label: 'Top: Stationary'},
       {value: 1, label: 'Top: Observing'},
@@ -392,8 +422,10 @@ export class OpsActorSheet extends ActorSheet {
       {value: 7, label: 'Top: All Out'}
     ]
     // Parse linked crew members
-    context.drivers = [];
     context.crew = [{value:'generic', label: 'Crew Quality'}]
+    context.drivers = [];
+    context.attackers = [{value: 'generic', label: `Crew Quality (${systemData.vehicle.crew.generic.attackBase>=0?'+':''}${systemData.vehicle.crew.generic.attackBase})`}];
+    context.skillers = [{value: 'generic', label: `Crew Quality (${systemData.vehicle.crew.generic.skillBase>=0?'+':''}${systemData.vehicle.crew.generic.skillBase})`}]
     for (let [key, entry] of Object.entries(systemData.vehicle.crew)) {
       if (key == 'generic') continue;
       let crewDoc = fromUuidSync(entry.uuid);
@@ -403,13 +435,9 @@ export class OpsActorSheet extends ActorSheet {
       }
     context.crew.push({value:key, uuid:entry.uuid, label:entry.name});
     context.drivers.push({value:entry.uuid, label: `${entry.name} (${entry.init>=0?'+':''}${entry.init})`})
+    context.attackers.push({value:key, label: `${entry.name} (${entry.attackBase>=0?'+':''}${entry.attackBase})`})
+    context.skillers.push({value:key, label: `${entry.name} (${entry.skillBase})`})
     }
-    for (let [key, entry] of Object.entries(systemData.actions)) {
-      if (entry.source == 'generic'){
-        //if(entry.check.type != 'message') entry.check.total = `${Number(systemData.vehicle.crew.generic[entry.check.type])}${entry.check.misc?((entry.check.misc.charAt(0)=='-' || entry.check.misc.charAt(0)=='+')?` ${entry.char.misc}`:` +${entry.char.misc}`):''}${systemData.stats.maneuver.speed?` ${systemData.stats.manuever.speed}`:''}`;
-      }
-    }
-    console.debug(context)
   }
 
   _prepareVehicleItems(context) {
@@ -458,6 +486,7 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-check').click(this._actionCheck.bind(this));   
     html.find('.skill-check').click(this._skillCheck.bind(this));   
     html.find('.actor-check').click(this._actorCheck.bind(this));
+    html.find('.vehicle-check').click(this._vehicleCheck.bind(this));
     // Character Actions
     html.find('.action-spend').click(this._actionSpend.bind(this));
     html.find('.action-create').click(this._actionCreate.bind(this));
@@ -665,6 +694,12 @@ export class OpsActorSheet extends ActorSheet {
     event.preventDefault();
     const checkID = event.currentTarget.dataset.checkId;
     this.actor.rollActorCheck(checkID,event);
+  }
+  _vehicleCheck(event){
+    event.preventDefault();
+    const checkID = event.currentTarget.dataset.checkId;
+    const rollType = event.currentTarget.dataset.rollType;
+    this.actor.rollVehicleCheck(checkID,rollType,event);
   }
   _actionSpend(event){
     event.preventDefault();

@@ -222,14 +222,16 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                     innate: new field.NumberField(),
                     misc: new field.NumberField()
                     // total:
-                })
+                }),
+                speedUnit: new field.StringField({initial:'mph'})
             }),
             def: new field.SchemaField({
                 innate: new field.NumberField(),
                 misc: new field.NumberField(),
                 // speed:
                 // total:
-                hardness: new field.NumberField()
+                hardness: new field.NumberField(),
+                plasma: new field.NumberField()
             }),
             health: new field.SchemaField({
                 hp: new field.SchemaField({
@@ -242,10 +244,12 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                     rearLeft: new field.BooleanField(),
                     rearRight: new field.BooleanField(),
                     engine: new field.BooleanField(),
+                    cargo: new field.BooleanField(),
                     other: new field.BooleanField()
                 }),
                 notes: new field.StringField(),
-                incoming: new field.NumberField()
+                incoming: new field.NumberField(),
+                damageReport: new field.StringField({initial:""})
             }),
             actions: new field.ObjectField()
         }

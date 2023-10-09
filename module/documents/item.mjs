@@ -72,7 +72,7 @@ export class OpsItem extends Item {
   async rollActionCheck(actionID,event=undefined){
     // Check resource consumption and override
     let ammoCheck = (event && (event.ctrlKey || event.altKey))? true : this.resourceAvailableCheck(getProperty(this,`system.actions.${actionID}.ammo`));
-    let cpCheck = (event && (event.ctrlKey || event.altKey))? true : this.cpAvailableCheck(this.actionSum(this.system.actions[actionID]).cp);
+    let cpCheck = (event && (event.ctrlKey || event.altKey))? true : this.actor.cpAvailableCheck(this.actionSum(this.system.actions[actionID]).cp);
     if (!ammoCheck || !cpCheck){
       await Dialog.confirm({
         title: "Insufficient Resources",
@@ -113,7 +113,7 @@ export class OpsItem extends Item {
     // Perform resource consumption
     if (!(event && event.altKey)){
       await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`));
-      await this.cpConsume(this.actionSum(this.system.actions[actionID]).cp);
+      await this.actor.attributeConsume('system.cp.value',this.actionSum(this.system.actions[actionID]).cp);
     }
 
     return roll;
@@ -233,13 +233,6 @@ export class OpsItem extends Item {
         }
         break;
     }
-  }
-  cpAvailableCheck(cost){
-    return (this.actor.system.cp.value-cost >= -this.actor.system.cp.temp)
-  }
-  async cpConsume(cost){
-    if (Number(cost)==0) return;
-    await this.actor.update({['system.cp.value']:(this.actor.system.cp.value-cost)});
   }
 
   checkType(checkType){
