@@ -157,6 +157,17 @@ export class OpsActor extends Actor {
     systemData.saves.reflex.value = Math.floor(systemData.saves.reflex.base * systemData.saves.reflex.mult) + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;
     systemData.saves.fortitude.value = Math.floor(systemData.saves.fortitude.base * systemData.saves.fortitude.mult) + systemData.saves.fortitude.mods.total + systemData.abilities.con.mod;
     systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
+    
+    // Trigger Vehicle Data Prep
+    if (!isEmpty(systemData.links.vehicle)){
+      let linked = new Set()
+      for (let [,i] of Object.entries(systemData.links.vehicle)){
+        linked.add(i)
+      }
+      for (let i of linked){
+        fromUuidSync(i).prepareData();
+      }
+    } 
   }
   
   _prepareVehicleData(actorData) {

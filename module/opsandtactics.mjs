@@ -391,7 +391,6 @@ function addChatContext(html, options){
     const message = game.messages.get(li.data("messageId"));
     return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker?.actor)?.type==='character' && canvas.tokens.controlled[0].actor.type==='spacecraft';
   }
-  console.debug(canApply,checkShip)
   options.push(
     {
       name: 'Add to incoming damage',

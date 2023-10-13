@@ -444,6 +444,34 @@ export class OpsActorSheet extends ActorSheet {
 
   }
 
+  /** @override */
+  render(force=false, options={}){
+    if (this.actor.type=='vehicle' && Object.keys(this.actor.system.vehicle.crew).filter(key => key!='generic').length){
+      let linked = new Set()
+      for (let [key,entry] of Object.entries(this.actor.system.vehicle.crew)){
+        if (key=='generic') continue;
+        linked.add(entry.uuid)
+      }
+      for (let i of linked){
+        fromUuidSync(i).apps[this.appId] = this;
+      }
+    }
+    return super.render(force, options)
+  }
+  close(options={}){
+    if (this.actor.type=='vehicle' && Object.keys(this.actor.system.vehicle.crew).filter(key => key!='generic').length){
+      let linked = new Set()
+      for (let [key,entry] of Object.entries(this.actor.system.vehicle.crew)){
+        if (key=='generic') continue;
+        linked.add(entry.uuid)
+      }
+      for (let i of linked){
+        delete fromUuidSync(i).apps[this.appId];
+      }
+    }
+    return super.close(options)
+  }
+
   /* -------------------------------------------- */
 
   /** @override */
