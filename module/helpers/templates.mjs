@@ -8,6 +8,8 @@
 
     // Actor partials.
     "systems/opsandtactics/templates/actor/parts/actor-effects.html",
+    "systems/opsandtactics/templates/actor/parts/nested-gear.html",
+    "systems/opsandtactics/templates/actor/parts/object-resources.html",
     "systems/opsandtactics/templates/actor/parts/character-character.html",
     "systems/opsandtactics/templates/actor/parts/character-items.html",
     "systems/opsandtactics/templates/actor/parts/character-utility.html",

@@ -37,6 +37,18 @@ OATS.saves = {
   will: "OATS.saves.will"
 }
 
+OATS.sizes = {
+  fine: "OATS.sizes.fine",
+  diminutive: "OATS.sizes.diminutive",
+  tiny: "OATS.sizes.tiny",
+  small: "OATS.sizes.small",
+  medium: "OATS.sizes.medium",
+  large: "OATS.sizes.large",
+  huge: "OATS.sizes.huge",
+  gargantuan: "OATS.sizes.gargantuan",
+  colossal: "OATS.sizes.colossal",
+}
+
 OATS.labels = {
   fortitude: "OATS.labels.fortitude",
   reflex: "OATS.labels.reflex",

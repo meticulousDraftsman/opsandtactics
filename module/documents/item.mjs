@@ -351,7 +351,7 @@ export class OpsItem extends Item {
     }
     // Attacks add BAB, and recoil if present
     if (sourceAction.check.type==='melee' || sourceAction.check.type==='ranged' || sourceAction.check.type==='otherAttack'){
-      if (this.actor) mods.checkNum += this.actor.system.stats.bab.value;
+      if (this.actor) mods.checkNum += Number(getProperty(this.actor,'system.stats.bab.value'));
       if (hasProperty(sourceAction,'recoil')) mods.checkNum += Math.min(mods.recoil+mods.reduction,0);
     }
     //Totals

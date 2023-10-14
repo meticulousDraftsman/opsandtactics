@@ -216,6 +216,7 @@ export class OpsVehicle extends foundry.abstract.DataModel {
             }),
             details: new field.SchemaField({
                 biography: new field.StringField(),
+                cargo: new field.StringField(),
                 size: new field.StringField(),
                 chassis: new field.StringField(),
                 cost: new field.SchemaField({

@@ -3,39 +3,29 @@
     <legend class="resource-label">
         Object Properties {{#if item.actor}}{{#if (eq item.type "object")}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}{{/if}}
     </legend>
-    <div class="grid grid-7col flex-group-center">
-        <span>Quantity</span>
+    <div class="grid grid-10col flex-group-center">
+        <span class="grid-span-2">Quantity</span>
         <input name="system.gear.quantity.value" value="{{system.gear.quantity.value}}" type="text" data-dtype="Number" placeholder="#">
         <span>Size</span>
-        <select class="grid-span-2 flex-group-center" name="system.gear.size" data-dtype="String">
-            {{#select system.gear.size}}
-                <option value="Fine">Fine</option>
-                <option value="Diminutive">Diminutive</option>
-                <option value="Tiny">Tiny</option>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-                <option value="Huge">Huge</option>
-                <option value="Gargantuan">Gargantuan</option>
-                <option value="Colossal"></option>
-            {{/select}}
+        <select class="grid-span-3 flex-group-center" name="system.gear.size" data-dtype="String">
+            {{selectOptions OATS.sizes selected=system.gear.size localize=true}}
             </select>
-        <span>Weight</span>
-        <input name="system.gear.weight" value="{{system.gear.weight}}" type="text" data-dtype="Number" placeholder="lbs">
-        <span>Cost</span>
-        <input name="system.gear.cost" value="{{system.gear.cost}}" type="text" data-dtype="Number" placeholder="WP">
+        <a class="toggle-value grid-span-2" data-target="system.gear.tons" data-title="Toggle between pounds and tons">{{#if system.gear.tons}}Tonnage{{else}}Weight{{/if}} <i class="fa-solid fa-weight-hanging"></i></a>
+        <input name="system.gear.weight" value="{{system.gear.weight}}" type="text" data-dtype="Number" placeholder="{{#if system.gear.tons}}tn{{else}}lbs{{/if}}">
+        <a class="toggle-value grid-span-2" data-target="system.gear.capital">{{#if system.gear.capital}}Capital Cost <i class="fa-solid fa-chart-line"></i>{{else}}Cost <i class="fa-solid fa-money-bill"></i>{{/if}}</a>
+        <input name="system.gear.cost" value="{{system.gear.cost}}" type="text" data-dtype="Number" placeholder="{{#if system.gear.capital}}CAP{{else}}WP{{/if}}">
         <span>Quality</span>
-        <input class="grid-span-2" name="system.gear.quality" value="{{system.gear.quality}}" type="text" data-dtype="String">        
-        <span>License</span>
+        <input class="grid-span-3" name="system.gear.quality" value="{{system.gear.quality}}" type="text" data-dtype="String">        
+        <span class="grid-span-2">License</span>
         <input name="system.gear.restriction" value="{{system.gear.restriction}}" type="text" data-dtype="String" placeholder="None">
     </div>
-    <div class="grid grid-7col flex-group-center">
-        <span>Container</span>
-        <select class="grid-span-6 flex-group-center" name="system.gear.location.parent" data-dtype="String">
+    <div class="grid grid-10col flex-group-center">
+        <span class="grid-span-2">Container</span>
+        <select class="grid-span-8 flex-group-center" name="system.gear.location.parent" data-dtype="String">
             {{selectOptions containers selected=system.gear.location.parent nameAttr="id" labelAttr="name"}}
         </select>        
-        <span>Note</span>
-        <input class="grid-span-6" name="system.gear.location.note" value="{{system.gear.location.note}}" type="text" data-dtype="String" placeholder="Location note"/>
+        <span class="grid-span-2">Note</span>
+        <input class="grid-span-8" name="system.gear.location.note" value="{{system.gear.location.note}}" type="text" data-dtype="String" placeholder="Location note"/>
     </div>
 </fieldset>
 {{/if}}

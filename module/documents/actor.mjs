@@ -382,12 +382,12 @@ export class OpsActor extends Actor {
           return 0;
       case 'foc':
       case 'pow':
-          return this.system.abilities.str[source] ?? 0;
+          return getProperty(this,`system.abilities.str.${source}`);
       case 'mrk':
       case 'agi':
-          return this.system.abilities.dex[source] ?? 0;
+          return getProperty(this,`system.abilities.dex.${source}`);
       default:
-          return this.system.abilities[source].mod ?? 0;
+          return getProperty(this,`system.abilities.${source}.mod`);
     }  
   }
   wagerPenalty(){

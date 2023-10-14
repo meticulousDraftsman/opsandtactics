@@ -85,6 +85,7 @@ export class OpsActorSheet extends ActorSheet {
     if (hasProperty(context,'system.wealth.description')) context.enrichGear = await TextEditor.enrichHTML(context.system.wealth.description,{async:true});
     if (hasProperty(context,'system.details.biography')) context.enrichBio = await TextEditor.enrichHTML(context.system.details.biography,{async:true});
     if (hasProperty(context,'system.vehicle.passengers')) context.enrichPassengers = await TextEditor.enrichHTML(context.system.vehicle.passengers,{async:true});
+    if (hasProperty(context,'system.details.cargo')) context.enrichCargo = await TextEditor.enrichHTML(context.system.details.cargo,{async:true});
 
     return context;
   }
@@ -289,77 +290,14 @@ export class OpsActorSheet extends ActorSheet {
       if (layer.items.length==0 && key != 'worn') delete armors[key];
     }    
 
-    // Crazy Container Nesting
-    const locations = ["Loose","Worn","Carried","Stored"];
-    // Initialize children of layer 0 items
-    const nestedGear = {Loose:{children:[],weight:0},Worn:{children:[],weight:0},Carried:{children:[],weight:0},Stored:{children:[],weight:0}};
-    for (let layer0 of locations){
-      for (let i = 0; i < gear.length; i++){
-        if (gear[i].system.gear.location.parent == layer0){
-          nestedGear[layer0].children.push(gear[i]);
-          nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
-          gearFail[i]=undefined;
-        }
-      }
-    }
-    for (let layer0 of locations){
-      for (let layer1 of nestedGear[layer0].children){
-        for (let i = 0; i < gear.length; i++){
-          if (gear[i].system.gear.location.parent == layer1._id){
-            layer1.children.push(gear[i]);
-            nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
-            gearFail[i]=undefined;
-          }
-        }
-      }
-    }
-    for (let layer0 of locations){
-      for (let layer1 of nestedGear[layer0].children){
-        for (let layer2 of layer1.children){
-          for (let i = 0; i < gear.length; i++){
-            if (gear[i].system.gear.location.parent == layer2._id){
-              layer2.children.push(gear[i]);
-              nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
-              gearFail[i]=undefined;
-            }
-          }
-        }
-      }
-    }
-    for (let layer0 of locations){
-      for (let layer1 of nestedGear[layer0].children){
-        for (let layer2 of layer1.children){
-          for (let layer3 of layer2.children){
-            for (let i = 0; i < gear.length; i++){
-              if (gear[i].system.gear.location.parent == layer3._id){
-                layer3.children.push(gear[i]);
-                nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0);
-                gearFail[i]=undefined;
-              }
-            }
-          }
-        }
-      }
-    }
-    for (let i of gearFail){
-      if (i != undefined){
-        nestedGear.Loose.children.push(i);
-        nestedGear.Loose.weight += Math.max((i.system.gear.quantity.value * i.system.gear.weight),0);
-      }
-    }
-
-    // Clean up floating point weight and Purge Empty Gear Layers
-    for (let [key,layer] of Object.entries(nestedGear)){
-      layer.weight = Number(parseFloat(layer.weight).toPrecision(12));
-      if (layer.children.length == 0 && key != 'Loose') delete nestedGear[key];
-    }       
+       
 
     // Assign and return
     context.skills = skills;
     context.armors = armors;
     context.weapons = weapons;
     context.gear = gear;
-    context.nestedGear = nestedGear;
+    context.nestedGear = this._nestContainers(gear,gearFail);
     context.traits = traits;
     context.utilityMagic = utilityMagic;
     context.attackMagic = attackMagic;
@@ -441,7 +379,124 @@ export class OpsActorSheet extends ActorSheet {
   }
 
   _prepareVehicleItems(context) {
+    const systemData = context.system;
+    let gear = [];
+    let gearFail = [];
+    const resObjects = {
+      consumable: {
+        label: 'Consumable',
+        entries: []
+      },
+      coolant: {
+        label: 'Coolant',
+        entries: []
+      },
+      magic:  {
+        label: 'Magic',
+        entries: []
+      },
+      resource: {
+        label: 'General',
+        entries: []
+      }
+    };
+    // Iterate through items, allocating to containers
+    for (let i of context.items) {
+      i.img = i.img || DEFAULT_TOKEN;
+      // Append to gear
+      if(i.system.gear?.physical){
+        // If parent ID is invalid and not one of the predefined containers, set it to loose
+        if (!context.actor.items.get(i.system.gear.location.parent) && i.system.gear.location.parent != "Loose" && i.system.gear.location.parent != "Worn" && i.system.gear.location.parent != "Carried" && i.system.gear.location.parent != "Stored"){
+          //console.debug(i, "dropped")
+          context.actor.items.get(i._id).update({"system.gear.location.parent": "Loose"});
+        }
+        i.children = [];
+        gear.push(i);
+        gearFail.push(i);
+      }
+      // Append to objects-with-resources
+      if(!isEmpty(getProperty(i,'system.gear.resources'))){
+        for (let [key,res] of Object.entries(i.system.gear.resources)){
+          let tempRes = res;
+          tempRes.name = `${i.name}${res.name?`: ${res.name}`:''}`
+          tempRes.id = `${i._id},system.gear.resources.${key}`
+          tempRes.itemId = i._id;
+          resObjects[res.type].entries.push(tempRes)
+        }
+      }
+    }
+    context.gear = gear;
+    context.nestedGear = this._nestContainers(gear,gearFail);
+    context.resObjects = resObjects;
+  }
 
+  _nestContainers(gear,gearFail){
+    // Crazy Container Nesting
+    const locations = ["Loose","Worn","Carried","Stored"];
+    // Initialize children of layer 0 items
+    const nestedGear = {Loose:{children:[],weight:0,label:"Loose"},Worn:{children:[],weight:0,label:(this.actor.type=='character'?"Worn":"Mounted")},Carried:{children:[],weight:0,label:"Carried"},Stored:{children:[],weight:0,label:"Stored"}};
+    for (let layer0 of locations){
+      for (let i = 0; i < gear.length; i++){
+        if (gear[i].system.gear.location.parent == layer0){
+          nestedGear[layer0].children.push(gear[i]);
+          nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0) * (gear[i].system.gear.tons?2000:1);
+          gearFail[i]=undefined;
+        }
+      }
+    }
+    for (let layer0 of locations){
+      for (let layer1 of nestedGear[layer0].children){
+        for (let i = 0; i < gear.length; i++){
+          if (gear[i].system.gear.location.parent == layer1._id){
+            layer1.children.push(gear[i]);
+            nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0) * (gear[i].system.gear.tons?2000:1);
+            gearFail[i]=undefined;
+          }
+        }
+      }
+    }
+    for (let layer0 of locations){
+      for (let layer1 of nestedGear[layer0].children){
+        for (let layer2 of layer1.children){
+          for (let i = 0; i < gear.length; i++){
+            if (gear[i].system.gear.location.parent == layer2._id){
+              layer2.children.push(gear[i]);
+              nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0) * (gear[i].system.gear.tons?2000:1);
+              gearFail[i]=undefined;
+            }
+          }
+        }
+      }
+    }
+    for (let layer0 of locations){
+      for (let layer1 of nestedGear[layer0].children){
+        for (let layer2 of layer1.children){
+          for (let layer3 of layer2.children){
+            for (let i = 0; i < gear.length; i++){
+              if (gear[i].system.gear.location.parent == layer3._id){
+                layer3.children.push(gear[i]);
+                nestedGear[layer0].weight += Math.max((gear[i].system.gear.quantity.value * gear[i].system.gear.weight),0) * (gear[i].system.gear.tons?2000:1);
+                gearFail[i]=undefined;
+              }
+            }
+          }
+        }
+      }
+    }
+    for (let i of gearFail){
+      if (i != undefined){
+        nestedGear.Loose.children.push(i);
+        nestedGear.Loose.weight += Math.max((i.system.gear.quantity.value * i.system.gear.weight),0) * (gear[i].system.gear.tons?2000:1);
+      }
+    }
+
+    // Clean up floating point weight and Purge Empty Gear Layers
+    for (let [key,layer] of Object.entries(nestedGear)){
+      layer.pounds = layer.weight.toLocaleString()
+      layer.tons = (layer.weight / 2000).toLocaleString()
+      if (layer.children.length == 0 && key != 'Loose') delete nestedGear[key];
+    }
+    return nestedGear;
   }
 
   /** @override */
@@ -837,7 +892,6 @@ export class OpsActorSheet extends ActorSheet {
       charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
       await this.actor.update(updateData);
       await checkLink.update(charData);      
-      await console.debug(checkLink)
     }
     else {
       return null;
@@ -861,7 +915,6 @@ export class OpsActorSheet extends ActorSheet {
     if (hasProperty(checkLink, `system.links.vehicle.${event.currentTarget.dataset.target}`)) charData[`system.links.vehicle.-=${event.currentTarget.dataset.target}`] = null;
     await this.actor.update(updateData);
     if (checkLink)await checkLink.update(charData)
-    console.debug(checkLink)
   }
 
   /**

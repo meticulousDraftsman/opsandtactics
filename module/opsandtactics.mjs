@@ -482,16 +482,13 @@ async function handleWeaponMod(li,op){
   else {
     target = await game.journal.get(li.data("documentId"));
   }
-  const messageData = {
-    type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
-    whisper: game.user._id
-  }
+  let messageData;
   const checkFlag = await target.getFlag('opsandtactics','wepMods')
   if (op=='check'){
-    messageData.content = `${target.name} is${checkFlag? '' : ' not'} a source of Weapon Mods.`
+    messageData = `${target.name} is${checkFlag? '' : ' not'} a source of Weapon Mods.`
   }
   else {
-    messageData.content = `${target.name} is ${checkFlag? 'no longer' : 'now'} a source of Weapon Mods. Refresh client.`;
+    messageData = `${target.name} is ${checkFlag? 'no longer' : 'now'} a source of Weapon Mods. Refresh client.`;
     if (checkFlag){
       await target.unsetFlag('opsandtactics','wepMods');
     }
@@ -499,7 +496,7 @@ async function handleWeaponMod(li,op){
       await target.setFlag('opsandtactics','wepMods', true);
     }
   }
-  await ChatMessage.create(messageData);
+  ui.notifications.info(messageData);
 }
 
 /* -------------------------------------------- */

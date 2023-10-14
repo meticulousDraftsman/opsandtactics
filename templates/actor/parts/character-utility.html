@@ -27,70 +27,10 @@
             <input type="text" value="{{system.magic.mlRecipe}}" readonly>
             <a class="grid-span-3 resource-label incant-regain" data-tooltip="Regain Mental Limit spent by Invoking">Mental Limit Spent Invoking <i class="fas fa-recycle"></i></a>
             <input type="text" name="system.magic.mlCant" value="{{system.magic.mlCant}}" data-dtype="Number" placeholder="Spent">
-
-
-
-
         </div>
     </div>
 </fieldset>
-<fieldset class="collapse-parent">
-    <legend class="resource-label">
-        Resources <a data-tooltip="Toggle Resource List Display"><i class="fas fa-list collapse-toggle" data-collapse="resources"></i></a>
-    </legend>
-    <div class="resources {{#if collapses.resources}}collapse{{/if}}">
-        {{#each resObjects}}
-        {{#if this.entries.length}}
-        <fieldset>
-            <legend>
-                {{this.label}} 
-            </legend>
-            <ol class="items-list">  
-            {{#each this.entries}}
-                <li class="grid grid-10col flex-group-center">
-                    <a class="item-control item-edit grid-span-5 flex-group-left" data-item-id="{{this.itemId}}"><i class="fas fa-edit"></i> {{this.name}}</a>
-                    {{#if (eq this.type "consumable")}}
-                    <div class="grid-span-2 flexrow flex-group-center">
-                        <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
-                        <span>/</span>
-                        <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.id}}" value="{{this.max}}" data-dtype="Number" placeholder="Max">
-                    </div>
-                    <span class="grid-span-2">Available</span>
-                    <div>
-                        <input class="flex3 item-checkbox" type="checkbox" data-target-prop="available" data-target-id="{{this.id}}" {{checked this.available}}>
-                    </div>
-                    {{/if}}
-                    {{#if (eq this.type "coolant")}}
-                    <input class="grid-span-2 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
-                    <span class="grid-span-2">Cool</span>
-                    <div>
-                        <input class="flex3 item-checkbox" type="checkbox" data-target-prop="available" data-target-id="{{this.id}}" {{checked this.available}}>
-                    </div>
-                    {{/if}}
-                    {{#if (eq this.type "magic")}}
-                    <div class="grid-span-2 flexrow flex-group-center">
-                        <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
-                        <span>/</span>
-                        <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.id}}" value="{{this.max}}" data-dtype="Number" placeholder="Max">
-                    </div>
-                    <span class="grid-span-2">Mental Limit</span>
-                    <input class="item-input" type="text" data-target-prop="ml" data-target-id="{{this.id}}" value="{{this.ml}}" data-dtype="Number" placeholder="ML">
-                    {{/if}}
-                    {{#if (eq this.type "resource")}}
-                    <div class="grid-span-5 flexrow flex-group-center">
-                        <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="String" placeholder="Value">
-                        <span>/</span>
-                        <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.id}}" value="{{this.max}}" data-dtype="String" placeholder="Max">
-                    </div>
-                    {{/if}}
-                </li>
-            {{/each}}
-            </ol>
-        </fieldset>
-        {{/if}}
-        {{/each}}
-    </div>
-</fieldset>
+{{> "systems/opsandtactics/templates/actor/parts/object-resources.html"}}
 <fieldset class="collapse-parent">
     <legend class="resource-label">
         Character <a class="action-create"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Character Action List Display"><i class="fas fa-list collapse-toggle" data-collapse="characterActions"></i></a>

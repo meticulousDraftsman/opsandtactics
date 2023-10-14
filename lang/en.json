@@ -29,6 +29,18 @@
             "reflex":"Reflex",
             "will":"Will"
         },
+        "sizes":{
+            "insignificant":"Insignificant",
+            "fine":"Fine",
+            "diminutive":"Diminutive",
+            "tiny":"Tiny",
+            "small":"Small",
+            "medium":"Medium",
+            "large":"Large",
+            "huge":"Huge",
+            "gargantuan":"Gargantuan",
+            "colossal":"Colossal"
+        },
         "labels":{
             "fortitude": "Fortitude",
             "reflex": "Reflex",

@@ -84,7 +84,16 @@
 
     {{!-- Cargo Tabs --}}
     <div class="tab cargo" data-group="primary" data-tab="cargo">
-
+      {{> "systems/opsandtactics/templates/actor/parts/object-resources.html"}}
+      {{> "systems/opsandtactics/templates/actor/parts/nested-gear.html"}}
+      <fieldset>
+        <legend class="resource-label">
+          Cargo Notes
+        </legend>
+        <div>
+          {{editor enrichCargo target="system.details.cargo" rollData=rollData button=true owner=owner editable=editable engine="prosemirror"}}
+        </div>
+      </fieldset>
     </div>
 
     {{!-- Description Tab --}}

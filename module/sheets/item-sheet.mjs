@@ -55,7 +55,7 @@ export class OpsItemSheet extends ItemSheet {
     context.effects = prepareActiveEffectCategories(this.item.effects);
     // Enrich description text
     context.enrichDescription = await TextEditor.enrichHTML(systemData.description,{async:true});
-    
+
     let  magazines;
     const importableMods = {};
     if (itemData.type === 'weapon'){
@@ -88,10 +88,8 @@ export class OpsItemSheet extends ItemSheet {
       let journalPacks = game.packs.filter(entry => entry.metadata.type==='JournalEntry');
       for (let jp of journalPacks){
         await jp.getIndex({fields: ['flags']})
-        console.debug(jp.index)
         for (let je of jp.index){
           if (getProperty(je,'flags.opsandtactics.wepMods')){
-            console.debug(je)
             let jeGot = await jp.getDocument(je._id);
             for (let [,pe] of jeGot.pages.entries()){
               if (pe.type!=='text') continue;
@@ -168,9 +166,10 @@ export class OpsItemSheet extends ItemSheet {
         }
       }
     }
-    const containers = [{name:"Loose",id:"Loose"},{name:"Worn",id:"Worn"},{name:"Carried",id:"Carried"},{name:"Stored",id:"Stored"}];
+    let containers = [{name:"Loose",id:"Loose"},{name:"Worn",id:"Worn"},{name:"Carried",id:"Carried"},{name:"Stored",id:"Stored"}];
     if (actor){
       // Build list of potential parent containers for a physical item
+      if (actor.type!='character') containers[1].name = "Mounted";
       for (let i of actor.items){
         if (i.system.gear?.physical && i._id != this.object._id) {
           containers.push(i);
