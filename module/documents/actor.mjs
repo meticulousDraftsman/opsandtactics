@@ -714,6 +714,7 @@ export class OpsActor extends Actor {
         if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)];
         break;
       case 'vehicle':
+        if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.vehicleActions;
         if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.vehicleIcons[Math.floor(Math.random()*CONFIG.OATS.vehicleIcons.length)];
         break;
       case 'spacecraft':

@@ -5,7 +5,7 @@
     <ol class="items-list">
         {{#each system.actions}}
         {{#if (eq this.check.type "skill")}}
-        <li class="item grid grid-12col flex-group-center">
+        <li class="grid grid-12col flex-group-center">
             <input class="grid-span-3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
             <select name="system.actions.{{@key}}.check.type" class="flex-group-center grid-span-2">
             {{#select this.check.type}}
@@ -49,7 +49,7 @@
     <ol class="items-list">
         {{#each system.actions}}
         {{#if (eq this.check.type "attack")}}
-        <li class="item grid grid-12col flex-group-center">
+        <li class="grid grid-12col flex-group-center">
             <input class="grid-span-3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
             <select name="system.actions.{{@key}}.check.type" class="flex-group-center grid-span-2">
             {{#select this.check.type}}
@@ -93,7 +93,7 @@
     <ol class="items-list">
         {{#each system.actions}}
         {{#if (eq this.check.type "message")}}
-        <li class="item grid grid-12col flex-group-center">
+        <li class="grid grid-12col flex-group-center">
             <input class="grid-span-3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
             <select name="system.actions.{{@key}}.check.type" class="flex-group-center grid-span-2">
             {{#select this.check.type}}

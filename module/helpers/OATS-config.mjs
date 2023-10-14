@@ -118,6 +118,10 @@ OATS.characterActions = {
   coolant: {name: 'Reload a plasarm, lasarm, elarm, or plasma blade', cost: 4, quantity: 1}
 }
 
+OATS.vehicleActions = {
+  retain: {name: 'Retain Control', source: 'generic', check:{type: 'skill',flavor:'If the check fails the vehicle goes into a spin. If it fails by 10 or more, the vehicle rolls.'}}
+}
+
 OATS.characterIcons = [
   'systems/opsandtactics/icons/svg/transparent/astronaut-helmet.svg',
   'systems/opsandtactics/icons/svg/transparent/balaclava.svg',
