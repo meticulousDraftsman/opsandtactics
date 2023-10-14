@@ -7,14 +7,14 @@
         "name": "Draft",
         "url": "https://foundryvtt.com/community/draftsman"
     }],    
-    "version": "0.0.11",
+    "version": "0.0.12",
     "compatibility": {
         "minimum": 10,
         "verified": "10.303",
         "maximum": 10
     },
     "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.11.zip",
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/archive/refs/tags/v0.0.12.zip",
     "esmodules":["module/opsandtactics.mjs"],
     "styles":["css/opsandtactics.css"],
     "scripts":[],
