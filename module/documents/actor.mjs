@@ -165,7 +165,7 @@ export class OpsActor extends Actor {
         linked.add(i)
       }
       for (let i of linked){
-        fromUuidSync(i).prepareData();
+        if (fromUuidSync(i).type=='vehicle') fromUuidSync(i).prepareData();
       }
     } 
   }
