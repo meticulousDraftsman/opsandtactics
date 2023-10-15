@@ -235,6 +235,15 @@ export class OpsActor extends Actor {
         }
         if (entry.check.misc) entry.check.total += ` ${(entry.check.misc.charAt(0)=='-' || entry.check.misc.charAt(0)=='+')?'':'+'}${entry.check.misc}`;
       }
+      if (entry.ammo.source){
+        const dualID = entry.ammo.source.split(',');
+        const resource = getProperty(this.items.get(dualID[0]),dualID[1]);
+        entry.linked = {
+          type: (resource?.type ?? 'quantity'),
+          value: resource.value,
+          max: resource?.max
+        };
+      }
     }
   }
 
@@ -324,20 +333,37 @@ export class OpsActor extends Actor {
     if (roll==null) return null;
     //Resource Consumption
     if (!(event && event.altKey)){
-      await this.attributeConsume(`system.actions.${actionID}.ammo.value`,getProperty(this,`system.actions.${actionID}.ammo.cost`));
-      if (getProperty(this,`system.actions.${actionID}.source`) != 'generic') fromUuidSync(getProperty(this,`system.vehicle.crew.${getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).attributeConsume('system.cp.value',getProperty(this,`system.actions.${actionID}.cp`));
+      let cost = getProperty(this,`system.actions.${actionID}.ammo.cost`);
+      if (getProperty(this,`system.actions.${actionID}.ammo.source`)){
+        const dualID = getProperty(this,`system.actions.${actionID}.ammo.source`).split(',');
+        if (getProperty(this,`system.actions.${actionID}.linked.type`)=='coolant') cost *= -1;
+        await this.items.get(dualID[0]).attributeConsume(`${dualID[1]}.value`,cost)
+      }
+      else {
+        await this.attributeConsume(`system.actions.${actionID}.ammo.value`,cost);
+      }
+      if (getProperty(this,`system.actions.${actionID}.source`) != 'generic') await fromUuidSync(getProperty(this,`system.vehicle.crew.${getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).attributeConsume('system.cp.value',getProperty(this,`system.actions.${actionID}.cp`));
     }
     return roll;
   }
   vehicleResourceAvailableCheck(actionID){
-    const cost = getProperty(this, `system.actions.${actionID}.ammo.cost`);
-    if (Number(cost==0)) return true;
-    return (getProperty(this,`system.actions.${actionID}.ammo.value`)-cost) >= 0;
+    const action = getProperty(this,`system.actions.${actionID}`);
+    const cost = getProperty(action, 'ammo.cost') ?? 0;
+    if (Number(cost)==0) return true;
+    if (getProperty(action,'ammo.source')){
+      const dualID = getProperty(action,'ammo.source').split(',');
+      const item = this.items.get(dualID[0]);
+      const resource = getProperty(item,dualID[1]);
+      if (action.linked.type=='coolant') return ((action.linked.value+cost) <= action.ammo.max);
+      return ((action.linked.value-cost) >= 0)   
+    }
+    else{
+      return ((action.ammo.value-cost) >= 0);
+    }
   }
 
   async actorAction(checkID, event=undefined){
     const cpCost = getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`);
-    //console.debug(cpCost)
     if (cpCost==0) return;
     let cpCheck = (event && event.ctrlKey)? true : ((this.system.cp.value-cpCost) >= -this.system.cp.temp);
     if (!cpCheck){
@@ -358,6 +384,7 @@ export class OpsActor extends Actor {
   }
 
   cpAvailableCheck(cost){
+    if (cost==0) return true;
     return (this.system.cp.value-cost >= -this.system.cp.temp)
   }
   async attributeConsume(path,cost){
@@ -727,7 +754,6 @@ export class OpsActor extends Actor {
   async _preUpdate(changed,options,user){
     await super._preUpdate(changed,options,user);
     const updates= {};
-    //console.debug(changed)
     switch (this.type){
       case 'character':
         if (hasProperty(changed,'img') && CONFIG.OATS.characterIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;

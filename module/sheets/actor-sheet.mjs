@@ -46,13 +46,11 @@ export class OpsActorSheet extends ActorSheet {
 
   /** @override */
   async getData() {
-    //console.debug('actor-sheet getData')
     // Retrieve the data structure from the base sheet. You can inspect or log
     // the context variable to see the structure, but some key properties for
     // sheets are the actor object, the data object, whether or not it's
     // editable, the items array, and the effects array.
     const context = super.getData();
-    //console.debug('actor-sheet super.getData',context)
     const actorData = context.actor;
 
     // Add the actor's data to context.data for easier access, as well as flags.
@@ -64,7 +62,6 @@ export class OpsActorSheet extends ActorSheet {
     
     // Prepare character data and items.
     if (actorData.type == 'character') {
-      //console.debug(context);
       this._prepareCharacterItems(context);
       this._prepareCharacterData(context);
     }
@@ -198,7 +195,6 @@ export class OpsActorSheet extends ActorSheet {
       // Append armor.
       if (i.type === 'armor') {
         if(i.system.active){
-          //console.debug(i.system)
           armors[i.system.layer].items.push(i);
         }
         else{
@@ -225,7 +221,6 @@ export class OpsActorSheet extends ActorSheet {
       if(i.system.gear?.physical){
         // If parent ID is invalid and not one of the predefined containers, set it to loose
         if (!context.actor.items.get(i.system.gear.location.parent) && i.system.gear.location.parent != "Loose" && i.system.gear.location.parent != "Worn" && i.system.gear.location.parent != "Carried" && i.system.gear.location.parent != "Stored"){
-          //console.debug(i, "dropped")
           context.actor.items.get(i._id).update({"system.gear.location.parent": "Loose"});
         }
         i.children = [];
@@ -304,13 +299,11 @@ export class OpsActorSheet extends ActorSheet {
     context.resObjects = resObjects;
     context.attackObjects = attackObjects;
     context.utilityObjects = utilityObjects;
-    //console.debug(context);
   }
 
   _prepareVehicleData(context) {
     const systemData = context.system;
     // Speed Options
-
     switch(systemData.details.speedUnit){
       case 'mph':
         context.speedList = [
@@ -383,6 +376,10 @@ export class OpsActorSheet extends ActorSheet {
     let gear = [];
     let gearFail = [];
     const resObjects = {
+      quantity: {
+        label: 'Object Quantity',
+        entries: []
+      },
       consumable: {
         label: 'Consumable',
         entries: []
@@ -400,6 +397,7 @@ export class OpsActorSheet extends ActorSheet {
         entries: []
       }
     };
+    const resOptions = duplicate(resObjects);
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
@@ -407,12 +405,16 @@ export class OpsActorSheet extends ActorSheet {
       if(i.system.gear?.physical){
         // If parent ID is invalid and not one of the predefined containers, set it to loose
         if (!context.actor.items.get(i.system.gear.location.parent) && i.system.gear.location.parent != "Loose" && i.system.gear.location.parent != "Worn" && i.system.gear.location.parent != "Carried" && i.system.gear.location.parent != "Stored"){
-          //console.debug(i, "dropped")
           context.actor.items.get(i._id).update({"system.gear.location.parent": "Loose"});
         }
         i.children = [];
         gear.push(i);
         gearFail.push(i);
+
+        if(i.system.gear.quantity.available){
+          resObjects.quantity.entries.push({value:i.system.gear.quantity.value,available:true,name:i.name,id:`${i._id},system.gear.quantity`,itemId:i._id})
+          if (i.system.gear.quantity.available) resOptions.quantity.entries.push({value:i.system.gear.quantity.value,available:true,name:i.name,id:`${i._id},system.gear.quantity`,itemId:i._id})
+        }
       }
       // Append to objects-with-resources
       if(!isEmpty(getProperty(i,'system.gear.resources'))){
@@ -422,12 +424,14 @@ export class OpsActorSheet extends ActorSheet {
           tempRes.id = `${i._id},system.gear.resources.${key}`
           tempRes.itemId = i._id;
           resObjects[res.type].entries.push(tempRes)
+          if (res.type!='consumable' || res?.available) resOptions[res.type].entries.push(tempRes)
         }
       }
     }
     context.gear = gear;
     context.nestedGear = this._nestContainers(gear,gearFail);
     context.resObjects = resObjects;
+    context.resOptions = resOptions;
   }
 
   _nestContainers(gear,gearFail){
@@ -810,6 +814,7 @@ export class OpsActorSheet extends ActorSheet {
       },
       ammo: {
         cost: null,
+        source: '',
         value: null,
         max: null
       },

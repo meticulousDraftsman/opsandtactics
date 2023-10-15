@@ -32,11 +32,8 @@ export class OpsItemSheet extends ItemSheet {
 
   /** @override */
   async getData() {
-    //console.debug('item-sheet getData')
     // Retrieve base data structure.
     const context = super.getData();
-    //console.debug('item-sheet super.getData',context)
-    
 
     // Include config in context
     context.OATS = CONFIG.OATS;
@@ -200,10 +197,6 @@ export class OpsItemSheet extends ItemSheet {
       context.magazines = magazines;
     }
     if (itemData.type === 'magic') context.sourceMagics = sourceMagics;
-    //context.otherSkills = otherSkills;
-    //context.abilityMod = abilityMod;
-
-    //console.debug(context);
 
     return context;
   }

@@ -13,19 +13,16 @@ export class OpsItem extends Item {
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
-    //console.debug('item prepareData',this)
   }
 
   prepareDerivedData(){
     
     const itemData = this;
     const systemData = itemData.system;
-    //console.debug(itemData)
     if (itemData.type === 'skill') this._prepareSkillData(itemData);
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'object') this._prepareObjectData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
-    //console.debug('item prepareDerivedData',this)
   }
 
   _prepareSkillData(itemData){
@@ -235,6 +232,11 @@ export class OpsItem extends Item {
     }
   }
 
+  async attributeConsume(path,cost){
+    if (Number(cost)==0) return;
+    await this.update({[path]:(getProperty(this,path)-cost)});
+  }
+
   checkType(checkType){
     switch (checkType){
       case 'melee':
@@ -327,10 +329,10 @@ export class OpsItem extends Item {
         }
       }
       if (this.actor && (mods.recoil!=null || mods.reduction!=null)){
-        if (this.actor.system.stats.recoil.value>0){
+        if (getProperty(this.actor,'system.stats.recoil.value')>0){
           mods.reduction += this.actor.system.stats.recoil.value;
         }
-        else if (this.actor.system.stats.recoil.value<0){
+        else if (getProperty(this.actor,'system.stats.recoil.value')<0){
           mods.recoil += this.actor.system.stats.recoil.value;
         }
       }
