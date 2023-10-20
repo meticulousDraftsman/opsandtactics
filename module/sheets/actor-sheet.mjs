@@ -581,8 +581,26 @@ export class OpsActorSheet extends ActorSheet {
     // Character Option Points
     html.find('.create-cop').click(this._copCreate.bind(this));    
     html.find('.delete-cop').click(this._copDelete.bind(this));
-    // Context Menu
-    html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
+    // Item Context Menu
+    new ContextMenu(html, '.item-edit', [
+      {
+        name: 'Copy inside Actor',
+        icon: '<i class="fas fa-clone"></i>',
+        callback: event => {
+          const item = this.actor.items.get($(event)[0].dataset.itemId)
+          Item.createDocuments([item.toObject()],{parent:this.actor})
+        }
+      },
+      {
+        name: 'Copy to World',
+        icon: '<i class="fas fa-file-export"></i>',
+        callback: event => {
+          const item = this.actor.items.get($(event)[0].dataset.itemId)
+          Item.createDocuments([item.toObject()])
+        }
+      }
+    ])
+    //html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
     // Vehicle Crew Linking
     html.find('.crew-link').click(this._onLinkCrew.bind(this));
     html.find('.crew-unlink').click(this._crewUnlink.bind(this));
@@ -841,30 +859,6 @@ export class OpsActorSheet extends ActorSheet {
     updateData['system.cops'] = getProperty(this.actor,'system.cops')
     updateData['system.cops'].splice(event.currentTarget.dataset.target,1);
     await this.actor.update(updateData);
-  }
-  _itemContextMenu(event){
-    event.preventDefault();
-    const item = this.actor.items.get(event.currentTarget.dataset.itemId)
-    const dupe = new Dialog({
-      title: `Extra options for ${item.name}`,
-      content: null,
-      buttons:{
-        internal :{
-          icon: '<i class="fas fa-clone"></i>',
-          label: 'Copy in Actor',
-          callback: () => {
-            Item.createDocuments([item.toObject()],{parent:this.actor});
-          }
-        },
-        external:{
-          icon: '<i class="fas fa-file-export"></i>',
-          label: 'Copy to World',
-          callback: () => {
-            Item.createDocuments([item.toObject()]);
-          }
-        }
-      }
-    }).render(true);
   }
 
   async _onLinkCrew(event) {
