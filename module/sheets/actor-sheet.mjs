@@ -587,7 +587,7 @@ export class OpsActorSheet extends ActorSheet {
         name: 'Copy inside Actor',
         icon: '<i class="fas fa-clone"></i>',
         callback: event => {
-          const item = this.actor.items.get($(event)[0].dataset.itemId)
+          const item = this.actor.items.get(event[0].dataset.itemId)
           Item.createDocuments([item.toObject()],{parent:this.actor})
         }
       },
@@ -595,7 +595,7 @@ export class OpsActorSheet extends ActorSheet {
         name: 'Copy to World',
         icon: '<i class="fas fa-file-export"></i>',
         callback: event => {
-          const item = this.actor.items.get($(event)[0].dataset.itemId)
+          const item = this.actor.items.get(event[0].dataset.itemId)
           Item.createDocuments([item.toObject()])
         }
       }
