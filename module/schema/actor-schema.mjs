@@ -57,9 +57,9 @@ class Defense extends foundry.abstract.DataModel {
     static defineSchema(){
         return{
             equip: new field.EmbeddedDataField(Mods),
-            size: new field.NumberField({initial:0}),
-            move: new field.NumberField({initial:0}),
-            misc: new field.NumberField({initial:0}),
+            size: new field.NumberField(),
+            move: new field.NumberField(),
+            misc: new field.NumberField(),
             dodge: new field.EmbeddedDataField(Mods)
         }
     }

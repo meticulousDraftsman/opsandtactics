@@ -105,6 +105,7 @@ export async function opsCheck(data){
     type: CONST.CHAT_MESSAGE_TYPES.ROLL,
     from: game.user._id,
     speaker: data.speaker,
+    sound: 'sounds/dice.wav'
   }
   switch (data.checkType){
     case 'noChatAttack':
@@ -354,7 +355,7 @@ export class OpsRoll extends Roll{
         data.missChance = Math.max(data.missChance, Number(form.defConceal.value));
         break;
       case 'reflex':
-        sitMods.refBonus = Number(form.refCover.value);
+        sitMods.refBon = Number(form.refCover.value);
         break;
     }
     return;
