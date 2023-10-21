@@ -13,7 +13,7 @@
             <input type="text" value="{{system.magic.mlMisc}}" readonly>                
             <span class="grid-span-3">Temporary Mental Limit Capacity</span>
             <input type="text" name="system.ml.temp" value="{{system.ml.temp}}" data-dtype="Number" placeholder="0">                              
-            <span class="grid-span-2">Psionically Focused</span>
+            <span class="grid-span-2">Psionically {{#if system.magic.psionFocus}}Fo{{else}}Unfo{{/if}}cused</span>
             <div>
                 <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
             </div>
@@ -33,20 +33,20 @@
 {{> "systems/opsandtactics/templates/actor/parts/object-resources.html"}}
 <fieldset class="collapse-parent">
     <legend class="resource-label">
-        Character <a class="action-create"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Character Action List Display"><i class="fas fa-list collapse-toggle" data-collapse="characterActions"></i></a>
+        Character <a class="action-create" data-tooltip="Create Character Action"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Character Action List Display"><i class="fas fa-list collapse-toggle" data-collapse="characterActions"></i></a>
     </legend>
     <ol class="items-list characterActions {{#if collapses.characterActions}}collapse{{/if}}">
         {{#each system.actions}}
         <li class="item grid grid-12col flex-group-center">
             <input class="grid-span-8" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" data-dtype="String" placeholder="Character Action">
-            <a class="action-spend resource-label" data-check-id="{{@key}}"><i class="fas fa-stopwatch"></i> CP</a>
+            <a class="action-spend resource-label" data-check-id="{{@key}}" data-tooltip="Spend Action CP"><i class="fas fa-stopwatch"></i> CP</a>
             <div class="grid-span-2 flexrow flex-group-center">
                 <input class="flex3" type="text" name="system.actions.{{@key}}.cost" value="{{this.cost}}" data-dtype="Number" placeholder="0">
                 <i class="fas fa-times"></i>
                 <input class="flex3" type="text" name="system.actions.{{@key}}.quantity" value="{{this.quantity}}" data-dtype="Number" placeholder="0?">
             </div>
             <div class="flex-group-center">
-                <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
+                <a class="action-delete" data-target="{{@key}}" data-tooltip="Delete Character Action"><i class="fas fa-trash"></i></a>
             </div>
         </li>
         {{/each}}
@@ -84,7 +84,7 @@
                         {{#if this.active}}
                         {{#if (eq this.type "utility")}}
                         <li class="item flexrow">
-                            <a class="item-check resource-label flex-group-left {{#unless this.mods.effectTotal}}flex2{{/unless}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Check Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="item-check resource-label flex-group-left {{#unless this.mods.effectTotal}}flex2{{/unless}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (eq this.check.type 'skill')}}Skill Check{{/if}}{{#if (eq this.check.type 'generic')}}Generic Check{{/if}}{{#if (eq this.check.type 'otherUtility')}}Other Roll{{/if}}{{#if (eq this.check.type 'noneUtility')}}Utility Message{{/if}}{{#if (eq this.check.type 'noChatUtility')}}Utility Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
                             <a class="rollable grid-span-2 resource-label {{#unless this.mods.effectTotal}}collapse{{/unless}}" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Effect Roll">{{this.mods.effectTotal}}</a>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
@@ -142,7 +142,7 @@
                         {{#if this.active}}
                         {{#if (eq this.type "utility")}}
                         <li class="item flexrow">
-                            <a class="item-check resource-label flex-group-left {{#unless this.mods.effectTotal}}flex2{{/unless}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="Check Roll">{{this.mods.checkTotal}} {{this.name}}</a>
+                            <a class="item-check resource-label flex-group-left {{#unless this.mods.effectTotal}}flex2{{/unless}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (eq this.check.type 'generic')}}Generic Check{{/if}}{{#if (eq this.check.type 'otherUtility')}}Other Roll{{/if}}{{#if (eq this.check.type 'noneUtility')}}Utility Message{{/if}}{{#if (eq this.check.type 'noChatUtility')}}Utility Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
                             <a class="rollable grid-span-2 resource-label {{#unless this.mods.effectTotal}}collapse{{/unless}}" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Effect Roll">{{this.mods.effectTotal}}</a>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>

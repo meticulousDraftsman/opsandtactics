@@ -1,7 +1,7 @@
 {{#if system.gear.physical}}
 <fieldset>
     <legend class="resource-label">
-        Object Properties {{#if item.actor}}{{#if (eq item.type "object")}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}{{/if}}
+        Object Properties {{#if item.actor}}{{#if (eq item.type "object")}}<a class="item-control self-destruct" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}{{/if}}
     </legend>
     <div class="grid grid-10col flex-group-center">
         <span class="grid-span-2">Quantity</span>
@@ -10,9 +10,9 @@
         <select class="grid-span-3 flex-group-center" name="system.gear.size" data-dtype="String">
             {{selectOptions OATS.sizes selected=system.gear.size localize=true}}
             </select>
-        <a class="toggle-value grid-span-2" data-target="system.gear.tons" data-title="Toggle between pounds and tons">{{#if system.gear.tons}}Tonnage{{else}}Weight{{/if}} <i class="fa-solid fa-weight-hanging"></i></a>
+        <a class="toggle-value grid-span-2" data-target="system.gear.tons" data-tooltip="Toggle between pounds and tons">{{#if system.gear.tons}}Tonnage{{else}}Weight{{/if}} <i class="fa-solid fa-weight-hanging"></i></a>
         <input name="system.gear.weight" value="{{system.gear.weight}}" type="text" data-dtype="Number" placeholder="{{#if system.gear.tons}}tn{{else}}lbs{{/if}}">
-        <a class="toggle-value grid-span-2" data-target="system.gear.capital">{{#if system.gear.capital}}Capital Cost <i class="fa-solid fa-chart-line"></i>{{else}}Cost <i class="fa-solid fa-money-bill"></i>{{/if}}</a>
+        <a class="toggle-value grid-span-2" data-target="system.gear.capital" data-tooltip="Toggle between Wealth Points and Capital">{{#if system.gear.capital}}Capital Cost <i class="fa-solid fa-chart-line"></i>{{else}}Cost <i class="fa-solid fa-money-bill"></i>{{/if}}</a>
         <input name="system.gear.cost" value="{{system.gear.cost}}" type="text" data-dtype="Number" placeholder="{{#if system.gear.capital}}CAP{{else}}WP{{/if}}">
         <span>Quality</span>
         <input class="grid-span-3" name="system.gear.quality" value="{{system.gear.quality}}" type="text" data-dtype="String">        
@@ -31,7 +31,7 @@
 {{/if}}
 <fieldset>
     <legend class="resource-label">
-        Object Resources - <a class="item-control sub-create" data-target-name="consumable" title="Add Consumable"><i class="fas fa-boxes"></i></a> - <a class="item-control sub-create" data-target-name="coolant" title="Add Coolant"><i class="fas fa-snowflake"></i></a> - <a class="item-control sub-create" data-target-name="magic" title="Add Magic"><i class="fas fa-scroll"></i></a> - <a class="item-control sub-create" data-target-name="resource" title="Add Generic Resource"><i class="fas fa-plus"></i></a> 
+        Object Resources - <a class="item-control sub-create" data-target-name="consumable" data-tooltip="Add Consumable"><i class="fas fa-boxes"></i></a> - <a class="item-control sub-create" data-target-name="coolant" data-tooltip="Add Coolant"><i class="fas fa-snowflake"></i></a> - <a class="item-control sub-create" data-target-name="magic" data-tooltip="Add Magic"><i class="fas fa-scroll"></i></a> - <a class="item-control sub-create" data-target-name="resource" data-tooltip="Add Generic Resource"><i class="fas fa-plus"></i></a> 
     </legend>
     <ol class="items-list flex-group-center">
         <li class="grid grid-10col flex-group-center">
@@ -39,7 +39,7 @@
             <input class="grid-span-2" type="text"  value="{{system.gear.quantity.value}}" readonly>
             <span class="grid-start-7 grid-span-2">Available</span>
             <div>
-                <input name="system.gear.quantity.available" title="Available" type="checkbox" {{checked system.gear.quantity.available}}/>
+                <input name="system.gear.quantity.available" data-tooltip="Available" type="checkbox" {{checked system.gear.quantity.available}}/>
             </div>
         </li>
         {{#each system.gear.resources}}
@@ -63,21 +63,21 @@
             {{#if (eq this.type "consumable")}}
             <span class="grid-span-2">Available</span>
             <div>
-                <input name="system.gear.resources.{{@key}}.available" title="Available" type="checkbox" {{checked this.available}}/>
+                <input name="system.gear.resources.{{@key}}.available" data-tooltip="Available" type="checkbox" {{checked this.available}}/>
             </div>
             {{/if}}
             {{#if (eq this.type "coolant")}}
             <input class="grid-span-2" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="Number" placeholder="Value">
             <span class="grid-start-7 grid-span-2">Cool</span>
             <div>
-                <input name="system.gear.resources.{{@key}}.cool" title="Cool" type="checkbox" {{checked this.cool}}/>
+                <input name="system.gear.resources.{{@key}}.cool" data-tooltip="Cool" type="checkbox" {{checked this.cool}}/>
             </div>
             {{/if}}
             {{#if (eq this.type "magic")}}
             <span class="grid-span-2">Mental Limit</span>
             <input type="text" name="system.gear.resources.{{@key}}.ml" value="{{this.ml}}" data-dtype="Number" placeholder="ML">
             {{/if}}
-            <a class="item-control sub-delete grid-start-10" data-target-name="gear.resources" data-remove-target="{{@key}}" title="Remove Resource"><i class="fas fa-trash"></i></a>
+            <a class="item-control sub-delete grid-start-10" data-target-name="gear.resources" data-remove-target="{{@key}}" data-tooltip="Remove Resource"><i class="fas fa-trash"></i></a>
         </li>
         {{/each}}
     </ol>

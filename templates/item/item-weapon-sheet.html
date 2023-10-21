@@ -16,7 +16,7 @@
         <div class="tab" data-group="primary" data-tab="stats">
             <fieldset>
                 <legend class="resource-label">
-                    Weapon Statistics {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+                    Weapon Statistics {{#if item.actor}}<a class="item-control self-destruct" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
                 </legend>
                 <div class="grid grid-12col flex-group-center">
                     <span class="grid-span-3">Weapon Range</span>
@@ -39,7 +39,7 @@
                             <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number" placeholder="0"/>
                             <span class="grid-span-2">Capacity</span>
                             <input name="system.magazine.max" value="{{system.magazine.max}}" type="text" data-dtype="Number" placeholder="0"/>
-                            <a class="mag-load resource-label grid-span-3">Load/Unload <i class="fas fa-exchange-alt"></i></a>
+                            <a class="mag-load resource-label grid-span-3" data-tooltip="Transfer ammo between internal magazine and other resources">Load/Unload <i class="fas fa-exchange-alt"></i></a>
                         {{else}}
                             {{#if (eq system.magazine.type "coolant")}}
                                 <select class="grid-span-5 flex-group-center" name="system.magazine.source" data-dtype="String">
@@ -52,7 +52,7 @@
                                 <select class="grid-span-6 flex-group-center" name="system.magazine.source" data-dtype="String">
                                     {{selectOptions magazines selected=system.magazine.source nameAttr="id" labelAttr="label"}}
                                 </select>
-                                <a class=" chamber-round grid-span-2" data-loaded="{{system.magazine.source}}" Title="Chamber a round from the loaded magazine">Chamber</a>
+                                <a class="resource-label chamber-round grid-span-2" data-loaded="{{system.magazine.source}}" data-tooltip="Chamber a round from the loaded magazine">Chamber</a>
                                 <input name="system.magazine.value" value="{{system.magazine.value}}" type="text" data-dtype="Number" placeholder="+0"/>
                             {{/if}}
                         {{/if}}
@@ -79,7 +79,7 @@
                             <div class="grid-span-3">Damage</div>
                             <div>Recoil</div>
                             <div>CP</div>
-                            <a class="item-control sub-create" data-target-name="weaponMods" title="Add Weapon Modifier"><i class="fas fa-plus"></i></a>
+                            <a class="item-control sub-create" data-target-name="weaponMods" data-tooltip="Add Weapon Modifier"><i class="fas fa-plus"></i></a>
                         </li>
                     </ol>
                     {{#unless (eq system.importFilter "")}}
@@ -110,7 +110,7 @@
                         <input class="grid-span-3" name="system.weaponMods.{{@key}}.effect" type="text" value="{{this.effect}}" data-dtype="String" placeholder="0"/>
                         <input name="system.weaponMods.{{@key}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number" placeholder="0"/>
                         <input name="system.weaponMods.{{@key}}.cp" type="text" value="{{this.cp}}" data-dtype="Number" placeholder="0"/>
-                        <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" title="Remove Modifier"><i class="fas fa-trash"></i></a>
+                        <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" data-tooltip="Remove Modifier"><i class="fas fa-trash"></i></a>
                         <input class="grid-span-10 flex-group-left" name="system.weaponMods.{{@key}}.description" type="text" value="{{this.description}}" data-dtype="String" placeholder="Description"/>
                     </li>
                     {{#if @last}}
@@ -129,13 +129,13 @@
         <div class="tab" data-group="primary" data-tab="attacks">
             <fieldset>
                 <legend class="resource-label">
-                    Attacks <a class="item-control sub-create" data-target-name="attacks" title="Add Attack"><i class="fas fa-plus"></i></a>
+                    Attacks <a class="item-control sub-create" data-target-name="attacks" data-tooltip="Add Attack"><i class="fas fa-plus"></i></a>
                 </legend>
                 {{#each system.actions}}
                 <fieldset class="attack">
                     <legend>
                         <div class="flexrow flex-group-center">
-                          <input name="system.actions.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"> <a class="item-control sub-delete flex0" data-target-name="actions" data-remove-target="{{@key}}" title="Remove Attack"> <i class="fas fa-trash"></i></a>
+                          <input name="system.actions.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"> <a class="item-control sub-delete flex0" data-target-name="actions" data-remove-target="{{@key}}" data-tooltip="Remove Attack"> <i class="fas fa-trash"></i></a>
                         </div>
                     </legend>
                     <ol class="items-list">
@@ -159,43 +159,43 @@
                         {{#if this.display}}
                         <li class="item grid grid-9col flex-group-center">
                             {{#if (or (eq this.check.type "noneAttack") (eq this.check.type "noChatAttack"))}}
-                            <button type="button" class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
-                            <input class="grid-span-2" name="system.actions.{{@key}}.cp.inherent" value="{{this.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" title="From Attack">
+                            <button type="button" class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" data-tooltip="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
+                            <input class="grid-span-2" name="system.actions.{{@key}}.cp.inherent" value="{{this.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" data-tooltip="From Attack">
                             <div class="mod-list grid-span-5 flexrow">
                                 {{#each this.cp.mods}}
                                 <div class="attack-mod flex-group-center">
-                                    <a class="item-control sub-delete" data-target-name="cp" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Combat Point Modifier">{{this.name}}: {{this.value}}</a>
+                                    <a class="item-control sub-delete" data-target-name="cp" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" data-tooltip="Remove Combat Point Modifier">{{this.name}}: {{this.value}}</a>
                                 </div>
                                 {{/each}}
                             </div>
                             {{else}}
-                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" title="Add To-Hit Modifier">To-Hit: {{this.mods.checkTotal}}</button>
-                            <input class="grid-span-3" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
+                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="check" data-pre-target="{{@key}}" data-tooltip="Add To-Hit Modifier">To-Hit: {{this.mods.checkTotal}}</button>
+                            <input class="grid-span-3" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" type="text" data-dtype="String" placeholder="From Attack" data-tooltip="From Attack">
                             <select class="grid-span-3 flex-group-center" name="system.actions.{{@key}}.check.ability" data-dtype="String">
                                   {{selectOptions @root.OATS.abilities selected=this.check.ability localize=true blank="Ability Modifier"}}
                             </select>
                             <div class="mod-list grid-span-9 flexrow">
                                 {{#each this.check.mods}}
                                 <div class="attack-mod flex-group-center">
-                                    <a class="item-control sub-delete" data-target-name="check" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove To-Hit Modifier">{{this.name}}: {{this.value}}</a>
+                                    <a class="item-control sub-delete" data-target-name="check" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" data-tooltip="Remove To-Hit Modifier">{{this.name}}: {{this.value}}</a>
                                 </div>
                                 {{/each}}
                             </div>
-                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="recoil" data-pre-target="{{@key}}" title="Add Recoil Modifier">Recoil: {{#if this.mods.recoil}}{{this.mods.recoil}}{{#if (gt this.mods.reduction 0)}} vs +{{this.mods.reduction}}{{/if}}{{else}}None{{/if}}</button>
-                            <input class="grid-span-2" name="system.actions.{{@key}}.recoil.inherent" value="{{this.recoil.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" title="From Attack">
-                            <button type="button" class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" title="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
-                            <input class="grid-span-2" name="system.actions.{{@key}}.cp.inherent" value="{{this.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" title="From Attack">
+                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="recoil" data-pre-target="{{@key}}" data-tooltip="Add Recoil Modifier">Recoil: {{#if this.mods.recoil}}{{this.mods.recoil}}{{#if (gt this.mods.reduction 0)}} vs +{{this.mods.reduction}}{{/if}}{{else}}None{{/if}}</button>
+                            <input class="grid-span-2" name="system.actions.{{@key}}.recoil.inherent" value="{{this.recoil.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" data-tooltip="From Attack">
+                            <button type="button" class="item-control sub-create grid-span-2" data-target-name="cp" data-pre-target="{{@key}}" data-tooltip="Add Combat Point Modifier">CP: {{this.mods.cp}}</button>
+                            <input class="grid-span-2" name="system.actions.{{@key}}.cp.inherent" value="{{this.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack" data-tooltip="From Attack">
                             <div class="mod-list grid-span-5 flexrow">
                                 {{#each this.recoil.mods}}
                                 <div class="attack-mod flex-group-center">
-                                    <a class="item-control sub-delete" data-target-name="recoil" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Recoil Modifier">{{this.name}}: {{this.value}}</a>
+                                    <a class="item-control sub-delete" data-target-name="recoil" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" data-tooltip="Remove Recoil Modifier">{{this.name}}: {{this.value}}</a>
                                 </div>
                                 {{/each}}
                             </div>
                             <div class="mod-list grid-span-4 flexrow">
                                 {{#each this.cp.mods}}
                                 <div class="attack-mod flex-group-center">
-                                    <a class="item-control sub-delete" data-target-name="cp" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Combat Point Modifier">{{this.name}}: {{this.value}}</a>
+                                    <a class="item-control sub-delete" data-target-name="cp" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" data-tooltip="Remove Combat Point Modifier">{{this.name}}: {{this.value}}</a>
                                 </div>
                                 {{/each}}
                             </div>
@@ -204,8 +204,8 @@
                         </li>
                         {{#unless (eq this.check.type 'noChatAttack')}}
                         <li class="item grid grid-9col flex-group-center">
-                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" title="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.effectTotal}}</button>
-                            <input class="grid-span-3" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack" title="From Attack">
+                            <button type="button" class="item-control sub-create grid-span-3" data-target-name="effect" data-pre-target="{{@key}}" data-tooltip="Add Damage Modifier" style="word-wrap: break-word;">Damage: {{this.mods.effectTotal}}</button>
+                            <input class="grid-span-3" name="system.actions.{{@key}}.effect.inherent" value="{{this.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack" data-tooltip="From Attack">
                             <div class="grid-span-3 flexrow flex-group-center">
                                 <select class="flex3 flex-group-center" name="system.actions.{{@key}}.effect.ability" data-dtype="String">
                                     {{selectOptions @root.OATS.abilityShort selected=this.effect.ability localize=true blank="Ability"}}
@@ -216,7 +216,7 @@
                             <div class="mod-list grid-span-9 flexrow">
                                 {{#each this.effect.mods}}
                                 <div class="attack-mod flex-group-center">
-                                    <a class="item-control sub-delete" data-target-name="effect" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" title="Remove Damage Modifier">{{this.name}}: {{this.value}}</a>
+                                    <a class="item-control sub-delete" data-target-name="effect" data-pre-target="{{@../key}}" data-remove-target="{{@key}}" data-tooltip="Remove Damage Modifier">{{this.name}}: {{this.value}}</a>
                                 </div>
                                 {{/each}}
                             </div>

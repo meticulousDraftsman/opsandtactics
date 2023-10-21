@@ -8,7 +8,7 @@
     <li class="item grid grid-9col flex-group-left" data-item-id="{{item._id}}">
       <div class="grid-span-3 item-name flexrow">
         <img class="item-image" src="{{item.img}}">
-        <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+        <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
       </div>
       <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
       {{#if item.children.length}}
@@ -18,7 +18,7 @@
           <li class="item grid grid-9col flex-group-left">
             <div class="grid-span-3 item-name flexrow">
               <img class="item-image" src="{{item.img}}">
-              <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+              <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
             </div>
             <i class="grid-span-6">{{item.system.gear.location.note}}</i>            
             {{#if item.children.length}}
@@ -28,7 +28,7 @@
                 <li class="item grid grid-9col flex-group-left">
                   <div class="grid-span-3 item-name flexrow">
                     <img class="item-image" src="{{item.img}}">
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
                   </div>
                   <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
                   {{#if item.children.length}}
@@ -38,7 +38,7 @@
                       <li class="item grid grid-9col flex-group-left">
                         <div class="grid-span-3 item-name flexrow">
                           <img class="item-image" src="{{item.img}}">
-                          <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Gear"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+                          <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
                         </div>
                         <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
                       </li>

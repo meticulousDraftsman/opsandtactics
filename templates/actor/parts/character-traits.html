@@ -40,7 +40,7 @@
 </div>
 <fieldset class="collapse-parent">
     <legend class="resource-label">
-        Character Options <a class="create-cop" title="Spend COPs"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Character Option Point Display"><i class="fas fa-list collapse-toggle" data-collapse="cops"></i></a>
+        Character Option Points <a class="create-cop" data-tooltip="Spend C.O.P.s"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Character Option Point Display"><i class="fas fa-list collapse-toggle" data-collapse="cops"></i></a>
     </legend>
     <ol class="items-list item-list flex-group-center cops {{#if collapses.cops}}collapse{{/if}}">
         {{#each system.cops}}
@@ -61,7 +61,7 @@
                 </div>
             </div>          
             <div class="flex-group-center">
-                <a class="delete-cop" data-target="{{@index}}"><i class="fas fa-trash"></i></a>
+                <a class="delete-cop" data-target="{{@index}}" data-tooltip="Delete C.O.P. Entry"><i class="fas fa-trash"></i></a>
             </div>
         </li>
         {{/each}}
@@ -69,14 +69,14 @@
 </fieldset>
 <fieldset>
     <legend class="resource-label">
-        Traits and Feats <a class="item-control item-create" title="Create Trait" data-type="feature"><i class="fas fa-plus"></i></a>
+        Traits and Feats <a class="item-control item-create" data-tooltip="Create Feature" data-type="feature"><i class="fas fa-plus"></i></a>
     </legend>
     <ol class="items-list item-list">
         {{#each traits as |item id|}}
         <li class="item grid grid-3col flex-group-left" data-item-id="{{item._id}}">
             <div class="item-name flexrow">
                 <img class="item-image" src="{{item.img}}">
-                <a class="item-control item-edit" data-item-id="{{item._id}}" title="Edit Trait"><i class="fas fa-edit"></i> {{item.name}}</a>
+                <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Trait"><i class="fas fa-edit"></i> {{item.name}}</a>
             </div>
             <i class="grid-span-2">{{item.system.summary}}</i>
         </li>

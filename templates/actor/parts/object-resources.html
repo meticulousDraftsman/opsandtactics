@@ -12,7 +12,7 @@
             <ol class="items-list">  
             {{#each this.entries}}
                 <li class="grid grid-10col flex-group-center">
-                    <a class="item-control item-edit grid-span-5 flex-group-left" data-item-id="{{this.itemId}}"><i class="fas fa-edit"></i> {{this.name}}</a>
+                    <a class="item-control item-edit grid-span-5 flex-group-left" data-item-id="{{this.itemId}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{this.name}}</a>
                     {{#if (eq @../key "quantity")}}
                     <input class="grid-span-2 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
                     <span class="grid-span-2">Available</span>

@@ -164,6 +164,10 @@ export class OpsActorSheet extends ActorSheet {
     const attackMagic = [];
     const utilityMagic = [];
     const resObjects = {
+      quantity: {
+        label: 'Object Quantity',
+        entries: []
+      },
       consumable: {
         label: 'Consumable',
         entries: []
@@ -177,7 +181,7 @@ export class OpsActorSheet extends ActorSheet {
         entries: []
       },
       resource: {
-        label: 'General',
+        label: 'Generic',
         entries: []
       }
     };
@@ -226,6 +230,9 @@ export class OpsActorSheet extends ActorSheet {
         i.children = [];
         gear.push(i);
         gearFail.push(i);
+        if(i.system.gear.quantity.available){
+          resObjects.quantity.entries.push({value:i.system.gear.quantity.value,available:true,name:i.name,id:`${i._id},system.gear.quantity`,itemId:i._id})
+        }
       }
       // Append to features.
       if (i.type === 'feature') {
@@ -393,7 +400,7 @@ export class OpsActorSheet extends ActorSheet {
         entries: []
       },
       resource: {
-        label: 'General',
+        label: 'Generic',
         entries: []
       }
     };
@@ -413,7 +420,7 @@ export class OpsActorSheet extends ActorSheet {
 
         if(i.system.gear.quantity.available){
           resObjects.quantity.entries.push({value:i.system.gear.quantity.value,available:true,name:i.name,id:`${i._id},system.gear.quantity`,itemId:i._id})
-          if (i.system.gear.quantity.available) resOptions.quantity.entries.push({value:i.system.gear.quantity.value,available:true,name:i.name,id:`${i._id},system.gear.quantity`,itemId:i._id})
+          resOptions.quantity.entries.push({value:i.system.gear.quantity.value,available:true,name:i.name,id:`${i._id},system.gear.quantity`,itemId:i._id})
         }
       }
       // Append to objects-with-resources

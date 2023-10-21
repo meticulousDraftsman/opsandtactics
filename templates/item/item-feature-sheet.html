@@ -40,7 +40,7 @@
     </fieldset>
     <fieldset>
       <legend class="resource-label">
-        Summary and Description {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+        Summary and Description {{#if item.actor}}<a class="item-control self-destruct" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
       </legend>
       <input class="flex-group-center" type="text" name="system.summary" value="{{system.summary}}" data-dtype="String" placeholder="Summary">
       <div>
