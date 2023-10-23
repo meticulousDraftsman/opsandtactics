@@ -93,6 +93,7 @@ Hooks.once("ready", async function() {
 Hooks.on("getChatLogEntryContext", addChatContext);
 Hooks.on("getJournalDirectoryEntryContext", addJournalContext);
 Hooks.on("getCompendiumEntryContext", addCompendiumContext);
+Hooks.on("getActorDirectoryEntryContext", addActorContext);
 
 /* -------------------------------------------- */
 /*  Core Check Handling                         */
@@ -474,6 +475,16 @@ function addCompendiumContext(html, options){
   )
   return options;
 }
+function addActorContext(html, options){
+  options.push(
+    {
+      name: 'Disable all Active Effects',
+      icon: '<i class="fa-solid fa-toggle-off"></i>',
+      condition: () => game.user.isGM,
+      callback: li => disableActorEffects(li)
+    }
+  )
+}
 
 async function handleWeaponMod(li,op){
   let target;
@@ -498,6 +509,17 @@ async function handleWeaponMod(li,op){
     }
   }
   ui.notifications.info(messageData);
+}
+async function disableActorEffects(li){
+  const target = await game.actors.get(li.data("documentId"));
+  if (isEmpty(target.collections.effects)){
+    ui.notifications.info(`${target.name} has no Active Effects`)
+    return null;
+  } 
+  for (let ae of target.collections.effects){
+    await ae.update({disabled:true})
+  }
+  ui.notifications.info(`All Active Effects disabled on ${target.name}`)
 }
 
 /* -------------------------------------------- */
