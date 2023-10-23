@@ -537,6 +537,27 @@ export class OpsActorSheet extends ActorSheet {
     }
     return super.close(options)
   }
+  async _onDropActor(event, data) {
+    super._onDropActor(event, data);
+    if (this.actor.type=='vehicle'){
+      const dropActor = await fromUuid(data.uuid);
+      if (dropActor.pack){
+        ui.notifications.warn("Cannot link Compendium actors");
+        return false;
+      }
+      if (dropActor.type!='character'){
+        ui.notifications.warn("Linked crew must be a Character");
+        return false;
+      }
+      const updateData = {};
+      const charData = {};
+      const randKey = randomID(8);
+      updateData[`system.vehicle.crew.${randKey}`] = {uuid:data.uuid, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
+      charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
+      await this.actor.update(updateData);
+      await dropActor.update(charData);   
+    }
+  }
 
   /* -------------------------------------------- */
 
@@ -872,7 +893,7 @@ export class OpsActorSheet extends ActorSheet {
     event.preventDefault();
     const template = 'systems/opsandtactics/templates/interface/dialog-document-link.html';
     const content = await renderTemplate(template);
-    const title = 'Paste actor UUID to link them as vehicle crew';
+    const title = 'Paste actor UUID to link them as vehicle crew (drag-and-drop works too)';
     return new Promise(resolve => {
       new Dialog({
         title: title,
@@ -890,18 +911,25 @@ export class OpsActorSheet extends ActorSheet {
   async _submitLinkCrew(html){
     const form = html[0].querySelector("form");
     const checkLink = await fromUuid(form.idLink.value);
-    if (checkLink && checkLink.type=='character'){
-      const updateData = {};
-      const charData = {};
-      const randKey = randomID(8);
-      updateData[`system.vehicle.crew.${randKey}`] = {uuid:form.idLink.value, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
-      charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
-      await this.actor.update(updateData);
-      await checkLink.update(charData);      
-    }
-    else {
+    if (!checkLink) {
+      ui.notifications.warn("Invalid UUID");
       return null;
     }
+    if (checkLink.pack) {
+      ui.notifications.warn("Cannot link Compendium actors");
+      return null;
+    }
+    if (checkLink.type!='character'){
+      ui.notifications.warn("Linked crew must be a Character");
+      return null;
+    }
+    const updateData = {};
+    const charData = {};
+    const randKey = randomID(8);
+    updateData[`system.vehicle.crew.${randKey}`] = {uuid:form.idLink.value, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
+    charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
+    await this.actor.update(updateData);
+    await checkLink.update(charData);      
   }
   async _crewUnlink(event){
     event.preventDefault();
@@ -917,7 +945,13 @@ export class OpsActorSheet extends ActorSheet {
     const checkLink = await fromUuid(getProperty(this.actor,`system.vehicle.crew.${event.currentTarget.dataset.target}.uuid`))
     const updateData = {};
     const charData = {};
-    if (hasProperty(this.actor, `system.vehicle.crew.${event.currentTarget.dataset.target}`)) updateData[`system.vehicle.crew.-=${event.currentTarget.dataset.target}`] = null;
+    if (hasProperty(this.actor, `system.vehicle.crew.${event.currentTarget.dataset.target}`)){
+      updateData[`system.vehicle.crew.-=${event.currentTarget.dataset.target}`] = null;
+      if (this.actor.system.stats.init.drive == getProperty(this.actor,`system.vehicle.crew.${event.currentTarget.dataset.target}.uuid`)) updateData['system.stats.init.drive'] = '';
+      for (let [key,entry] of Object.entries(this.actor.system.actions)){
+        if (entry.source==event.currentTarget.dataset.target) updateData[`system.actions.${key}.source`] = 'generic';
+      }
+    } 
     if (hasProperty(checkLink, `system.links.vehicle.${event.currentTarget.dataset.target}`)) charData[`system.links.vehicle.-=${event.currentTarget.dataset.target}`] = null;
     await this.actor.update(updateData);
     if (checkLink)await checkLink.update(charData)
