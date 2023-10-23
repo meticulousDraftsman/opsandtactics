@@ -1,4 +1,4 @@
-import {OpsAction, Protection, ResourceConsumable, ResourceCoolant, ResourceMagic, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
+import {OpsAction, Protection, ResourceConsumable, ResourceCoolant, ResourceMagic, ResourceSpacecraft, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -183,6 +183,32 @@ export class OpsItemSheet extends ItemSheet {
         syn: 'Synergy'
       }
     }
+    if (hasProperty(systemData,'gear.resources')){
+      systemData.gear.hasConsumable = false;
+      systemData.gear.hasCoolant = false;
+      systemData.gear.hasMagic = false;
+      systemData.gear.hasSpacecraft = false;
+      systemData.gear.hasGeneric = false;
+      for (let res of Object.values(systemData.gear.resources)){
+        switch (res.type){
+          case 'consumable':
+            systemData.gear.hasConsumable = true;
+            break;
+          case 'coolant':
+            systemData.gear.hasCoolant = true;
+            break;
+          case 'magic':
+            systemData.gear.hasMagic = true;
+            break;
+          case 'spacecraft':
+            systemData.gear.hasSpacecraft = true;
+            break;
+          case 'resource':
+            systemData.gear.hasGeneric = true;
+            break;
+        }
+      }
+    }
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = itemData.system;
@@ -342,6 +368,9 @@ export class OpsItemSheet extends ItemSheet {
         break;
       case 'magic':
         setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceMagic);
+        break;
+      case 'spacecraft':
+        setProperty(updateData,`system.gear.resources.${randomID(8)}`, new ResourceSpacecraft);
         break;
       case 'resource':
         setProperty(updateData,`system.gear.resources.${randomID(8)}`,{name:null, type:'resource', value:null, max:null});

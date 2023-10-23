@@ -23,6 +23,21 @@ export class OpsItem extends Item {
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'object') this._prepareObjectData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
+
+    if (hasProperty(systemData,'gear.resources')){
+      for (let [,entry] of Object.entries(systemData.gear.resources)){
+        if (entry.type!='spacecraft') continue;
+        entry.hardness.value = entry.hardness.inherent ?? 0;
+        switch (entry.damage.type){
+          case 'piercing':
+            entry.hardness.value += 1;
+            break;
+          case 'concussion':
+            entry.hardness.value += 2;
+            break;
+        }
+      }
+    }
   }
 
   _prepareSkillData(itemData){

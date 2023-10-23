@@ -198,6 +198,27 @@ export class ResourceMagic extends foundry.abstract.DataModel{
         }
     }
 }
+export class ResourceSpacecraft extends foundry.abstract.DataModel{
+    static defineSchema(){
+        return{
+            name: new field.StringField(),
+            type: new field.StringField({initial:'spacecraft'}),
+            value: new field.NumberField(),
+            payload: new field.StringField({initial:'standard'}),
+            damage: new field.SchemaField({
+                value: new field.StringField(),
+                type: new field.StringField({initial:'ballistic'})
+            }),
+            hardness: new field.SchemaField({
+                inherent: new field.NumberField()
+            }),
+            crit: new field.SchemaField({
+                value: new field.NumberField({initial:16}),
+                condition: new field.StringField()
+            })
+        }
+    }
+}
 export class OpsObject extends foundry.abstract.DataModel{
     static defineSchema(){
         return{
@@ -231,6 +252,13 @@ export class OpsMagic extends foundry.abstract.DataModel{
                 type: new field.StringField({initial:'external'}),
                 source: new field.StringField()
             })
+        }
+    }
+}
+export class OpsComponent extends foundry.abstract.DataModel{
+    static defineSchema(){
+        return{
+            
         }
     }
 }
