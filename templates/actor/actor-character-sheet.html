@@ -49,11 +49,11 @@
           <fieldset>
             <div class="grid grid-3col flex-group-center">
               <span class="grid-span-2">Defense</span>
-              <input type="text" value="{{system.def.value}}" readonly>
+              <input type="text" value="{{system.def.value}}" data-tooltip="10 Base{{#if system.def.equip.value}}, {{numberFormat system.def.equip.value sign=true}} Equipment{{/if}}{{#if system.abilities.dex.agi}}, {{numberFormat system.abilities.dex.agi sign=true}} Agility{{/if}}{{#if system.def.size}}, {{numberFormat system.def.size sign=true}} Size{{/if}}{{#if system.def.move}}, {{numberFormat system.def.move sign=true}} Movement{{/if}}{{#if system.def.misc.value}}, {{numberFormat system.def.misc.value sign=true}} Misc.{{/if}}{{#if system.def.dodge.value}}, {{numberFormat system.def.dodge.value sign=true}} Dodge{{/if}}" readonly>
               <span class="grid-span-2">Flat-Footed</span>
-              <input type="text" value="{{system.def.flat}}" readonly>
+              <input type="text" value="{{system.def.flat}}" data-tooltip="10 Base{{#if system.def.equip.value}}, {{numberFormat system.def.equip.value sign=true}} Equipment{{/if}}{{#if system.def.size}}, {{numberFormat system.def.size sign=true}} Size{{/if}}{{#if system.def.move}}, {{numberFormat system.def.move sign=true}} Movement{{/if}}{{#if system.def.misc.value}}, {{numberFormat system.def.misc.value sign=true}} Misc.{{/if}}" readonly>
               <span class="grid-span-2">Touch</span>
-              <input type="text" value="{{system.def.touch}}" readonly>
+              <input type="text" value="{{system.def.touch}}" data-tooltip="10 Base{{#if system.abilities.dex.agi}}, {{numberFormat system.abilities.dex.agi sign=true}} Agility{{/if}}{{#if system.def.size}}, {{numberFormat system.def.size sign=true}} Size{{/if}}{{#if system.def.move}}, {{numberFormat system.def.move sign=true}} Movement{{/if}}{{#if system.def.misc.value}}, {{numberFormat system.def.misc.value sign=true}} Misc.{{/if}}{{#if system.def.dodge.value}}, {{numberFormat system.def.dodge.value sign=true}} Dodge{{/if}}" readonly>
             </div>
           </fieldset>
         </div>

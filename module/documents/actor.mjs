@@ -57,10 +57,11 @@ export class OpsActor extends Actor {
 
     // Loop through active armor and determine impact before calculating ability modifiers
     // Start with mods from active effects
-    systemData.def.equip.value = systemData.def.equip.total;
-    systemData.def.dodge.value = systemData.def.dodge.total;
-    systemData.stats.armorPenalty.value = systemData.stats.armorPenalty.total;
-    systemData.cp.armor.value = systemData.cp.armor.total;
+    systemData.def.equip.value = systemData.def.equip.subtotal;
+    systemData.def.dodge.value = systemData.def.dodge.subtotal;
+    systemData.def.misc.value = systemData.def.misc.subtotal;
+    systemData.stats.armorPenalty.value = systemData.stats.armorPenalty.subtotal;
+    systemData.cp.armor.value = systemData.cp.armor.subtotal;
     // Initially no cap on agility
     systemData.stats.agiMax = null;
     let agiClamp = false;
@@ -83,7 +84,7 @@ export class OpsActor extends Actor {
 
     // Loop through ability scores and calculate modifiers
     for (let [key, ability] of Object.entries(systemData.abilities)) {
-      ability.mod = Math.floor((ability.score-10)/2)+ability.modMods.total;
+      ability.mod = Math.floor((ability.score-10)/2)+ability.modMods.subtotal;
       switch(key){
         case 'str':
             ability.pow = ability.mod - ability.foc;
@@ -95,32 +96,33 @@ export class OpsActor extends Actor {
       }
     }
     // Calculate Defense
-    systemData.def.value = 10 + systemData.def.equip.value + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge.value;
-    systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc + systemData.def.dodge.value;
-    systemData.def.flat = 10 + systemData.def.equip.value + systemData.def.size + systemData.def.move + systemData.def.misc;
+    systemData.def.value = 10 + systemData.def.equip.value + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc.value + systemData.def.dodge.value;
+    systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc.value + systemData.def.dodge.value;
+    systemData.def.flat = 10 + systemData.def.equip.value + systemData.def.size + systemData.def.move + systemData.def.misc.value;
 
     //Calculate Initiative Modifier
-    systemData.stats.init.value = systemData.stats.init.total + systemData.abilities.dex.agi +systemData.stats.wager;
+    //console.debug(systemData.stats.init.subtotal)
+    systemData.stats.init.value = systemData.stats.init.subtotal + systemData.abilities.dex.agi +systemData.stats.wager;
     // Calculate BAB
-    systemData.stats.bab.value = systemData.stats.level.value + systemData.stats.bab.total + this.wagerPenalty();
+    systemData.stats.bab.value = systemData.stats.level.value + systemData.stats.bab.subtotal + this.wagerPenalty();
     // Calculate Recoil Reduction
-    systemData.stats.recoil.value = systemData.abilities.str.score - 10 + systemData.stats.recoil.total;
+    systemData.stats.recoil.value = systemData.abilities.str.score - 10 + systemData.stats.recoil.subtotal;
     // Calculate Personal Capital    
-    systemData.wealth.capital.personal.total = (5*(systemData.stats.level.value+1))+systemData.abilities.cha.score;
+    systemData.wealth.capital.personal.value = (5*(systemData.stats.level.value+1))+systemData.abilities.cha.score;
     // Calculate Hit Points
     const rollData = this.getRollData({deterministic:true});
     const chpRoll = new Roll(systemData.health.chp.formula,rollData);
-    systemData.health.chp.max = chpRoll.isDeterministic ? chpRoll.evaluate({async:false}).total + systemData.health.chp.mods.total : 0;
+    systemData.health.chp.max = chpRoll.isDeterministic ? chpRoll.evaluate({async:false}).total + systemData.health.chp.mods.subtotal : 0;
     const xhpRoll = new Roll(systemData.health.xhp.formula,rollData);
-    systemData.health.xhp.max = xhpRoll.isDeterministic ? xhpRoll.evaluate({async:false}).total + systemData.health.xhp.mods.total : 0;
+    systemData.health.xhp.max = xhpRoll.isDeterministic ? xhpRoll.evaluate({async:false}).total + systemData.health.xhp.mods.subtotal : 0;
     // Calculate Carrying Capacity
     const carryRoll = new Roll(systemData.stats.carrying.formula,rollData);
-    systemData.stats.carrying.light = carryRoll.isDeterministic ? carryRoll.evaluate({async:false}).total + systemData.stats.carrying.mods.total : 0;
+    systemData.stats.carrying.light = carryRoll.isDeterministic ? carryRoll.evaluate({async:false}).total + systemData.stats.carrying.mods.subtotal : 0;
     systemData.stats.carrying.medium = systemData.stats.carrying.light*2;
     systemData.stats.carrying.heavy = systemData.stats.carrying.light*3;
     // Calculate Mental Limit
     const mlRoll = new Roll(systemData.ml.formula,rollData);
-    systemData.ml.max = mlRoll.isDeterministic ? mlRoll.evaluate({async:false}).total + systemData.ml.mods.total + systemData.ml.temp : 0;
+    systemData.ml.max = mlRoll.isDeterministic ? mlRoll.evaluate({async:false}).total + systemData.ml.mods.subtotal + systemData.ml.temp : 0;
     systemData.magic.mlPsion = systemData.magic.psionFocus?((2*systemData.stats.level.value)+25):0;
     systemData.magic.mlRecipe = systemData.magic.invokerMemorize?((3*systemData.stats.level.value)+3):0;
     systemData.magic.mlObject = 0;
@@ -131,7 +133,7 @@ export class OpsActor extends Actor {
         }
       }
     }
-    systemData.magic.mlMisc = systemData.magic.mods.total
+    systemData.magic.mlMisc = systemData.magic.mods.subtotal
     systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + systemData.magic.mlCant + systemData.magic.mlMisc;
     // Calculate Skill Points
     systemData.stats.skills.points = (3 + systemData.abilities.int.mod) * (systemData.stats.level.value + 4);
@@ -154,9 +156,9 @@ export class OpsActor extends Actor {
       }
     }
     // Calculate Saves
-    systemData.saves.reflex.value = Math.floor(systemData.saves.reflex.base * systemData.saves.reflex.mult) + systemData.saves.reflex.mods.total + systemData.abilities.dex.agi;
-    systemData.saves.fortitude.value = Math.floor(systemData.saves.fortitude.base * systemData.saves.fortitude.mult) + systemData.saves.fortitude.mods.total + systemData.abilities.con.mod;
-    systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.total + systemData.abilities.wis.mod;
+    systemData.saves.reflex.value = Math.floor(systemData.saves.reflex.base * systemData.saves.reflex.mult) + systemData.saves.reflex.mods.subtotal + systemData.abilities.dex.agi;
+    systemData.saves.fortitude.value = Math.floor(systemData.saves.fortitude.base * systemData.saves.fortitude.mult) + systemData.saves.fortitude.mods.subtotal + systemData.abilities.con.mod;
+    systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.subtotal + systemData.abilities.wis.mod;
     
     // Trigger Vehicle Data Prep
     if (!isEmpty(systemData.links.vehicle)){
@@ -204,11 +206,11 @@ export class OpsActor extends Actor {
         systemData.def.speed = 0;
     }
     // Calculate total defense, maneuever, and cost
-    systemData.def.total = systemData.def.innate + systemData.def.misc + systemData.def.speed;
-    systemData.stats.maneuver.total = systemData.stats.maneuver.innate + systemData.stats.maneuver.misc + systemData.stats.maneuver.speed;
-    systemData.details.cost.total = systemData.details.cost.innate + systemData.details.cost.misc
+    systemData.def.value = systemData.def.innate + systemData.def.misc + systemData.def.speed;
+    systemData.stats.maneuver.value = systemData.stats.maneuver.innate + systemData.stats.maneuver.misc + systemData.stats.maneuver.speed;
+    systemData.details.cost.value = systemData.details.cost.innate + systemData.details.cost.misc
     // Calculate total initiative
-    systemData.stats.init.total = systemData.stats.init.innate + fromUuidSync(systemData.stats.init.driver)?.system.stats.init.value;
+    systemData.stats.init.value = systemData.stats.init.innate + fromUuidSync(systemData.stats.init.driver)?.system.stats.init.value;
     // Parse linked crew members
     for (let [key, entry] of Object.entries(systemData.vehicle.crew)){
       if (key == 'generic'){}
@@ -226,8 +228,8 @@ export class OpsActor extends Actor {
         entry.check.mid = Number(systemData.vehicle.crew[entry.source][`${entry.check.type}Base`])
         entry.check.total = `${entry.check.mid}`;
         if (entry.check.type=='skill'){
-          entry.check.mid += systemData.stats.maneuver.total;
-          if (systemData.stats.maneuver.total!=0) entry.check.total += ` ${systemData.stats.maneuver.total>=0?'+':''}${systemData.stats.maneuver.total}`;
+          entry.check.mid += systemData.stats.maneuver.value;
+          if (systemData.stats.maneuver.value!=0) entry.check.total += ` ${systemData.stats.maneuver.value>=0?'+':''}${systemData.stats.maneuver.value}`;
         }
         else {
           entry.check.mid += systemData.stats.maneuver.speed;
@@ -728,7 +730,7 @@ export class OpsActor extends Actor {
   _getVehicleRollData(data) {
     if (this.type !== 'vehicle') return;
     // Bring initiative up for combat tracker
-    data.init = data.stats.init.total ?? 0;
+    data.init = data.stats.init.value ?? 0;
   }
 
   // Pre-creation

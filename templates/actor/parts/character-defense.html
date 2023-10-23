@@ -4,21 +4,24 @@
       Defense Modifiers
     </legend>
     <div class="grid grid-4col flex-group-center">
+      <span>Miscellaneous</span>
+      <div class="flexrow">
+        <input type="text" value="{{numberFormat system.def.misc.value sign=true}}" data-dtype="Number" readonly/>
+        <input type="text" name="system.def.misc.misc" value="{{system.def.misc.misc}}" data-dtype="Number" placeholder="0"/>
+      </div>      
       <span>Movement</span>
       <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number" placeholder="+1/5' over 20'"/>
-      <span>Dodge</span>
-      <div class="flexrow">
-        <input type="text" value="{{numberFormat system.def.dodge.value sign=true}}" readonly>
-        <input type="text" name="system.def.dodge.misc" value="{{system.def.dodge.misc}}" data-dtype="Number" placeholder="0"/>
-      </div>
-      <span>Miscellaneous</span>
-      <input type="text" name="system.def.misc" value="{{system.def.misc}}" data-dtype="Number" placeholder="0"/>
-      <span>Size</span>
-      <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number" placeholder="0"/>
       <span>Equipment</span>
       <div class="flexrow">
         <input type="text" value="{{numberFormat system.def.equip.value sign=true}}" data-dtype="Number" readonly/>
         <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number" placeholder="0"/>
+      </div>    
+      <span>Size</span>
+      <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number" placeholder="0"/>        
+      <span>Dodge</span>
+      <div class="flexrow">
+        <input type="text" value="{{numberFormat system.def.dodge.value sign=true}}" readonly>
+        <input type="text" name="system.def.dodge.misc" value="{{system.def.dodge.misc}}" data-dtype="Number" placeholder="0"/>
       </div>
     </div>
   </fieldset>

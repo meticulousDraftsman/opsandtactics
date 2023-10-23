@@ -6,8 +6,8 @@ class Mods extends foundry.abstract.DataModel {
             misc: new field.NumberField({nullable:true})
         }
     }
-    get total(){
-        return Object.values(this).reduce((a,b)=>a+b,0);
+    get subtotal(){
+        return Object.values(this).reduce((a,b)=>a+b,hasProperty(this,'value')?-this.value:0);
     }
 };
 class Health extends foundry.abstract.DataModel {
@@ -59,7 +59,7 @@ class Defense extends foundry.abstract.DataModel {
             equip: new field.EmbeddedDataField(Mods),
             size: new field.NumberField(),
             move: new field.NumberField(),
-            misc: new field.NumberField(),
+            misc: new field.EmbeddedDataField(Mods),
             dodge: new field.EmbeddedDataField(Mods)
         }
     }
@@ -171,7 +171,7 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                         hard: new field.NumberField({nullable:true})
                     }),
                     external: new field.SchemaField({
-                        total: new field.NumberField({nullable:true}),
+                        value: new field.NumberField({nullable:true}),
                         hard: new field.NumberField({nullable:true})
                     }),
                 })
@@ -259,16 +259,50 @@ export class OpsVehicle extends foundry.abstract.DataModel {
 export class OpsSpacecraft extends foundry.abstract.DataModel {
     static defineSchema(){
         return {
+            vehicle: new field.SchemaField({
+                crew: new field.ObjectField({
+                    initial:{
+                        generic: {
+                            skillBase: -4,
+                            attackBase: -2
+                        }
+                    }
+                }),
+                passengers: new field.StringField()
+            }),
             health: new field.SchemaField({
-                hull: new field.SchemaField({
+                hp: new field.SchemaField({
                     value: new field.NumberField()
                 }),
-                shield: new field.SchemaField({
+                soak: new field.SchemaField({
                     value: new field.NumberField()
                 })
             }),
+            cp: new field.EmbeddedDataField(CombatPoints),
+            def: new field.SchemaField({
+                hrd: new field.NumberField()
+            }),
             stats: new field.SchemaField({
-                size: new field.StringField()
+                ueg: new field.SchemaField({
+                    value: new field.NumberField()
+                    //max:
+                }),
+                rgn: new field.EmbeddedDataField(Mods),
+                pwr: new field.EmbeddedDataField(Mods),
+                drn: new field.EmbeddedDataField(Mods),
+                bp: new field.EmbeddedDataField(Mods),
+                mov: new field.EmbeddedDataField(Mods),
+                plt: new field.EmbeddedDataField(Mods),
+                init: new field.SchemaField({
+                    innate: new field.NumberField(),
+                    driver: new field.StringField()
+                    // total:
+                }),
+                ram: new field.StringField({initial:"1d10"})
+            }),
+            details: new field.SchemaField({
+                size: new field.StringField(),
+
             })
         }
     }
