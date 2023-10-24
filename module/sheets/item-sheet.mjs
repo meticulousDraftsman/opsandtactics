@@ -418,19 +418,26 @@ export class OpsItemSheet extends ItemSheet {
     const preTarget = dataset?.preTarget;
     const removed = dataset.removeTarget;
     const updateData = {};
-    let updateTarget;
     switch(target){
       case 'check':
       case 'effect':
       case 'recoil':
       case 'cp':
-        updateTarget = `system.actions.${preTarget}.${target}.mods.-=${removed}`;
+        updateData[`system.actions.${preTarget}.${target}.mods.-=${removed}`] = null;
+        break;
+      case 'weaponMods':
+        updateData[`system.${target}.-=${removed}`] = null;
+        for (let [key,entry] of Object.entries(this.object.system.actions)){
+          if (hasProperty(entry,`check.mods.${removed}`)) updateData[`system.actions.${key}.check.mods.-=${removed}`] = null;
+          if (hasProperty(entry,`effect.mods.${removed}`)) updateData[`system.actions.${key}.effect.mods.-=${removed}`] = null;
+          if (hasProperty(entry,`recoil.mods.${removed}`)) updateData[`system.actions.${key}.recoil.mods.-=${removed}`] = null;
+          if (hasProperty(entry,`cp.mods.${removed}`)) updateData[`system.actions.${key}.cp.mods.-=${removed}`] = null;
+        }
         break;
       default:
-        updateTarget = `system.${target}.-=${removed}`;
+        updateData[`system.${target}.-=${removed}`] = null;
         break;
     }
-    updateData[updateTarget] = null;
     this.object.update(updateData);
   }
 }
