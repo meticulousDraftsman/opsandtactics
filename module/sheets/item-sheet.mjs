@@ -64,14 +64,10 @@ export class OpsItemSheet extends ItemSheet {
       for (let [,je] of worldWepMods.entries()){
         for (let [,pe] of je.pages.entries()){
           if (pe.type!=='text') continue;
-          strip = pe.text.content.replaceAll('</p>','[split]');
-          strip = strip.replaceAll('&amp;','&');
           entries = [];
-          strip = strip.replace( /(<([^>]+)>)/ig, '');
-          strip = strip.split('[split]');
-          strip.pop();
+          strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
           for (let i of strip){
-            entries.push({label:i.split(',',1),value:i})
+            entries.push({label:i.textContent.split(',',1),value:i.textContent})
           }
           if (hasProperty(importableMods,`${pe.name}.entries`)){
             importableMods[pe.name].entries.push(entries)
@@ -90,14 +86,10 @@ export class OpsItemSheet extends ItemSheet {
             let jeGot = await jp.getDocument(je._id);
             for (let [,pe] of jeGot.pages.entries()){
               if (pe.type!=='text') continue;
-              strip = pe.text.content.replaceAll('</p>','[split]');
-              strip = strip.replaceAll('&amp;','&');
               entries = [];
-              strip = strip.replace( /(<([^>]+)>)/ig, '');
-              strip = strip.split('[split]');
-              strip.pop();
+              strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
               for (let i of strip){
-                entries.push({label:i.split(',',1),value:i})
+                entries.push({label:i.textContent.split(',',1),value:i.textContent})
               }
               if (hasProperty(importableMods,`${pe.name}.entries`)){
                 importableMods[pe.name].entries.push(entries)
