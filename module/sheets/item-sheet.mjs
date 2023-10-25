@@ -237,6 +237,7 @@ export class OpsItemSheet extends ItemSheet {
     html.find('.mag-load').click(this._onMagLoad.bind(this));
     // Pull a bullet from a loaded magazine into the internal chamber
     html.find('.chamber-round').click(this._onChamberRound.bind(this));
+    html.find('.attack-edit').click(this._editAttackMod.bind(this));
     // Reset imported mod when changing source filter
     html.find('.filter-select').change(this._onFilterSelect.bind(this));
     // Create/delete sub-properties
@@ -411,6 +412,13 @@ export class OpsItemSheet extends ItemSheet {
     if (form.chooseMod.value==="null") return null;
     setProperty(updateData,`system.actions.${preTarget}.${target}.mods.${form.chooseMod.value}`,{});
   }
+  async _editAttackMod(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    const target = dataset.targetName;
+    const preTarget = dataset?.preTarget;
+    new AttackEditApp(this.object,{target:preTarget,tabs:[{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial:target}]}).render(true)
+  }
   _subDeletion(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
@@ -423,15 +431,14 @@ export class OpsItemSheet extends ItemSheet {
       case 'effect':
       case 'recoil':
       case 'cp':
-        updateData[`system.actions.${preTarget}.${target}.mods.-=${removed}`] = null;
+        //updateData[`system.actions.${preTarget}.${target}.mods.-=${removed}`] = null;
         break;
       case 'weaponMods':
         updateData[`system.${target}.-=${removed}`] = null;
         for (let [key,entry] of Object.entries(this.object.system.actions)){
-          if (hasProperty(entry,`check.mods.${removed}`)) updateData[`system.actions.${key}.check.mods.-=${removed}`] = null;
-          if (hasProperty(entry,`effect.mods.${removed}`)) updateData[`system.actions.${key}.effect.mods.-=${removed}`] = null;
-          if (hasProperty(entry,`recoil.mods.${removed}`)) updateData[`system.actions.${key}.recoil.mods.-=${removed}`] = null;
-          if (hasProperty(entry,`cp.mods.${removed}`)) updateData[`system.actions.${key}.cp.mods.-=${removed}`] = null;
+          for (let imp of ['check','effect','recoil','cp']){
+            if (hasProperty(entry,`${imp}.mods.${removed}`)) updateData[`system.actions.${key}.${imp}.mods.-=${removed}`] = null;
+          }
         }
         break;
       default:
@@ -439,5 +446,44 @@ export class OpsItemSheet extends ItemSheet {
         break;
     }
     this.object.update(updateData);
+  }
+}
+
+class AttackEditApp extends FormApplication {
+  static get defaultOptions() {
+    return mergeObject(super.defaultOptions, {
+      classes: ["opsandtactics", "sheet", "item"],
+      template: 'systems/opsandtactics/templates/interface/dialog-attack-edit.html',
+      width: 520,
+      height: 480,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body"}]
+    });
+  }
+  get title(){
+    return `Editing details for attack '${this.object.system.actions[this.options.target].name}' in ${this.object.name}`
+  }
+  getData(){
+    const context = {
+      OATS: CONFIG.OATS,
+      system: this.object.system,
+      attack: {
+        id: this.options.target,
+        object: this.object.system.actions[this.options.target]
+      } 
+    }
+    return context;
+  }
+  render(force=false, options={}){
+    this.object.apps[this.appId] = this;
+    return super.render(force,options)
+  }
+  close(options={}){
+    delete this.object.apps[this.appId]
+    return super.close(options)
+  }
+  async _updateObject(event, formData){
+    await this.object.update(formData)
   }
 }

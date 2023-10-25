@@ -1,0 +1,159 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="check">To-Hit</a>
+        <a class="item" data-tab="recoil">Recoil</a>
+        <a class="item" data-tab="effect">Damage</a>
+        <a class="item" data-tab="cp">Combat Points</a>
+    </nav>
+
+    <section class="sheet-body">
+        <div class="tab" data-group="primary" data-tab="check">
+            <fieldset>
+                <legend>Attack-Specific Modifiers</legend>
+                <div class="grid grid-4col flex-group-center">
+                    <span>To-Hit</span>
+                    <input name="system.actions.{{attack.id}}.check.inherent" value="{{attack.object.check.inherent}}" type="text" data-dtype="String" placeholder="From Attack">
+                    <select class="grid-span-2 flex-group-center" name="system.actions.{{attack.id}}.check.ability" data-dtype="String">
+                        {{selectOptions OATS.abilities selected=attack.object.check.ability localize=true blank="Ability Modifier"}}
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Ammunition Effects</legend>
+            </fieldset>
+            <fieldset>
+                <legend>Attack-Applicable Weapon Mods</legend>
+                <div class="grid grid-8col flex-group-center">
+                    {{#each system.weaponMods}}
+                    {{#if this.check}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}: {{this.check}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.check.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.check.mods @key) 'active')}}>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    {{#each system.weaponMods}}
+                    {{#unless this.check}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.check.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.check.mods @key) 'active')}}>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="recoil">
+            <fieldset>
+                <legend>Attack-Specific Modifiers</legend>
+                <div class="grid grid-4col flex-group-center">
+                    <span>Recoil?</span>
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{attack.id}}.recoil.active" type="checkbox" {{checked attack.object.recoil.active}}>
+                    </div>
+                    
+                    <span>Penalty</span>
+                    <input name="system.actions.{{attack.id}}.recoil.inherent" value="{{attack.object.recoil.inherent}}" type="text" data-dtype="Number" placeholder="From Attack">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Ammunition Effects</legend>
+            </fieldset>
+            <fieldset>
+                <legend>Attack-Applicable Weapon Mods</legend>
+                <div class="grid grid-8col flex-group-center">
+                    {{#each system.weaponMods}}
+                    {{#if this.recoil}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}: {{this.recoil}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.recoil.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.recoil.mods @key) 'active')}}>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    {{#each system.weaponMods}}
+                    {{#unless this.recoil}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.recoil.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.recoil.mods @key) 'active')}}>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </fieldset>
+        </div>
+        <div class="tab" data-group="primary" data-tab="effect">
+            <fieldset>
+                <legend>Attack-Specific Modifiers</legend>
+                <div class="grid grid-4col flex-group-center">
+                    <span>Damage</span>
+                    <input name="system.actions.{{attack.id}}.effect.inherent" value="{{attack.object.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack">
+                    <div class="grid-span-2 flexrow flex-group-center">
+                        <select class="flex3 flex-group-center" name="system.actions.{{attack.id}}.effect.ability" data-dtype="String">
+                            {{selectOptions OATS.abilityShort selected=attack.object.effect.ability localize=true blank="Ability"}}
+                        </select>
+                        <i class="fas fa-times flex1"></i>
+                        <input class="flex2" name="system.actions.{{attack.id}}.effect.scaleAbility" value="{{attack.object.effect.scaleAbility}}" type="text" data-dtype="Number" placeholder="Mult">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Ammunition Effects</legend>
+            </fieldset>
+            <fieldset>
+                <legend>Attack-Applicable Weapon Mods</legend>
+                <div class="grid grid-8col flex-group-center">
+                    {{#each system.weaponMods}}
+                    {{#if this.effect}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}: {{this.effect}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.effect.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.effect.mods @key) 'active')}}>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    {{#each system.weaponMods}}
+                    {{#unless this.effect}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.effect.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.effect.mods @key) 'active')}}>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </fieldset>
+        </div>
+        <div class="tab" data-group="primary" data-tab="cp">
+            <fieldset>
+                <legend>Attack-Specific Modifiers</legend>
+                <div class="grid grid-4col flex-group-center">
+                    <span>Combat Points</span>
+                    <input name="system.actions.{{attack.id}}.cp.inherent" value="{{attack.object.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Ammunition Effects</legend>
+            </fieldset>
+            <fieldset>
+                <legend>Attack-Applicable Weapon Mods</legend>
+                <div class="grid grid-8col flex-group-center">
+                    {{#each system.weaponMods}}
+                    {{#if this.cp}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}: {{this.cp}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.cp.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.cp.mods @key) 'active')}}>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    {{#each system.weaponMods}}
+                    {{#unless this.cp}}
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}</span> 
+                    <div class="flex-group-center">
+                        <input name="system.actions.{{@root.attack.id}}.cp.mods.{{@key}}.active" type="checkbox" {{checked (lookup (lookup @root.attack.object.cp.mods @key) 'active')}}>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </fieldset>
+        </div>
+    </section>
+</form>

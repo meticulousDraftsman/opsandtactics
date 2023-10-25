@@ -156,6 +156,7 @@ export class WeaponAttack extends OpsAction{
         );
         schema.recoil = new field.SchemaField({
             inherent: new field.NumberField({initial:null, nullable:true}),
+            active: new field.BooleanField({initial:false}),
             mods: new field.ObjectField()
         });
         schema.cp.fields = mergeObject(

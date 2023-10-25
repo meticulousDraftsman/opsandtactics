@@ -49,18 +49,22 @@ export class OpsItem extends Item {
      for (let [,a] of Object.entries(systemData.actions)){
       a.type = 'attack';
        for (let [key,entry] of Object.entries(a.check.mods)){
+        if (!entry.active) continue;
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
         entry.value = systemData.weaponMods?.[key]?.check ?? null;
        }
        for (let [key,entry] of Object.entries(a.effect.mods)){
+        if (!entry.active) continue;
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
         entry.value = systemData.weaponMods?.[key]?.effect ?? null;
        }
        for (let [key,entry] of Object.entries(a.recoil.mods)){
+        if (!entry.active) continue;
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
         entry.value = systemData.weaponMods?.[key]?.recoil ?? null;
        }
        for (let [key,entry] of Object.entries(a.cp.mods)){
+        if (!entry.active) continue;
         entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
         entry.value = systemData.weaponMods?.[key]?.cp ?? null;
        }
@@ -296,7 +300,7 @@ export class OpsItem extends Item {
       if (mods.effectTotal && mods.effectTotal.charAt(0) == '+') mods.effectTotal = mods.effectTotal.substring(1);
     }
     // Handle CP
-    mods.cp = sourceAction.cp.inherent?sourceAction.cp.inherent:null;
+    mods.cp = sourceAction.cp.inherent?Number(sourceAction.cp.inherent):null;
     if (hasProperty(sourceAction,'cp.mods')){
       for (let [,p] of Object.entries(sourceAction.cp.mods)){
         mods.cp += Number(p.value) || 0;
@@ -331,24 +335,26 @@ export class OpsItem extends Item {
     if (hasProperty(sourceAction,'recoil')){
       mods.recoil = null;
       mods.reduction = null;
-      if (sourceAction.recoil.inherent != null){
-        mods.recoil = Number(Math.min(sourceAction.recoil.inherent,0));
-        mods.reduction = Number(Math.max(sourceAction.recoil.inherent,0));
-      }
-      for (let [,r] of Object.entries(sourceAction.recoil.mods)){
-        if (r.value > 0){
-          mods.reduction += r.value?Number(r.value):null;
+      if (sourceAction.recoil.active){
+        if (sourceAction.recoil.inherent != null){
+          mods.recoil = Number(Math.min(sourceAction.recoil.inherent,0));
+          mods.reduction = Number(Math.max(sourceAction.recoil.inherent,0));
         }
-        else if (r.value < 0){
-          mods.recoil += r.value?Number(r.value):null;
+        for (let [,r] of Object.entries(sourceAction.recoil.mods)){
+          if (r.value > 0){
+            mods.reduction += r.value?Number(r.value):null;
+          }
+          else if (r.value < 0){
+            mods.recoil += r.value?Number(r.value):null;
+          }
         }
-      }
-      if (this.actor && (mods.recoil!=null || mods.reduction!=null)){
-        if (getProperty(this.actor,'system.stats.recoil.value')>0){
-          mods.reduction += this.actor.system.stats.recoil.value;
-        }
-        else if (getProperty(this.actor,'system.stats.recoil.value')<0){
-          mods.recoil += this.actor.system.stats.recoil.value;
+        if (this.actor && (mods.recoil!=null || mods.reduction!=null)){
+          if (getProperty(this.actor,'system.stats.recoil.value')>0){
+            mods.reduction += this.actor.system.stats.recoil.value;
+          }
+          else if (getProperty(this.actor,'system.stats.recoil.value')<0){
+            mods.recoil += this.actor.system.stats.recoil.value;
+          }
         }
       }
     }
