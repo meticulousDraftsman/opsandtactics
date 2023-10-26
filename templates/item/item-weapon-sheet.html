@@ -165,7 +165,7 @@
                             <input class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" type="text" data-dtype="String" placeholder="Attack {{#if (eq this.check.type 'noneAttack')}}Message{{else}}Description{{/if}}">
                             {{else}}
                             <button type="button" class="item-control attack-edit grid-span-3" data-target-name="check" data-pre-target="{{@key}}" data-tooltip="Edit Attack To-Hit">To-Hit: {{this.mods.checkTotal}}</button>
-                            <button type="button" class="item-control attack-edit grid-span-3" data-target-name="recoil" data-pre-target="{{@key}}" data-tooltip="Edit Attack Recoil">Recoil: {{#if this.mods.recoil}}{{this.mods.recoil}}{{#if (gt this.mods.reduction 0)}} vs +{{this.mods.reduction}}{{/if}}{{else}}None{{/if}}</button>
+                            <button type="button" class="item-control attack-edit grid-span-3" data-target-name="recoil" data-pre-target="{{@key}}" data-tooltip="Edit Attack Recoil">Recoil: {{#if this.mods.recoil}}{{this.mods.recoil}}{{#if (gt this.mods.reduction 0)}} vs +{{this.mods.reduction}}{{/if}}{{else}}{{#if this.recoil.active}}None{{else}}N/a{{/if}}{{/if}}</button>
                             <button type="button" class="item-control attack-edit grid-span-3" data-target-name="cp" data-pre-target="{{@key}}" data-tooltip="Edit Attack Combat Points">CP: {{this.mods.cp}}</button>
                             <input class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" type="text" data-dtype="String" placeholder="Attack roll flavor">
                             {{/if}} 

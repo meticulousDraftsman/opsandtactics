@@ -470,9 +470,24 @@ class AttackEditApp extends FormApplication {
       system: this.object.system,
       attack: {
         id: this.options.target,
-        object: this.object.system.actions[this.options.target]
+        object: this.object.system.actions[this.options.target],
+        check: {},
+        effect: {},
+        recoil: {},
+        cp: {}
       } 
     }
+    for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
+      for (let imp of ['check','effect','recoil','cp']){
+        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:this.object.system.actions[this.options.target][imp].mods[key]?.active}
+      }
+    }
+    for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
+      for (let imp of ['check','effect','recoil','cp']){
+        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:this.object.system.actions[this.options.target][imp].mods[key]?.active}
+      }
+    }
+    console.debug(context)
     return context;
   }
   render(force=false, options={}){
