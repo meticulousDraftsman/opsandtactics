@@ -102,7 +102,7 @@ export class OpsItemSheet extends ItemSheet {
         }
       }
       // Prep data for addition to the weapon based on the currently-selected mod
-      let tempMod = systemData.importMod?.split(',');
+      let tempMod = systemData.importMod?.split(',') ?? [null,null,null,null,null,null];
       itemData.readyMod = {
         name:(tempMod[0] ? tempMod[0].trim() : 'New Mod'),
         check:(tempMod[1] ? tempMod[1].trim() : null),
