@@ -60,7 +60,7 @@
         {{#each utilityObjects as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
             <fieldset class="action-item">
-                <legend class="action-legend">
+                <legend class="action-legend item-context" data-item-id="{{item._id}}">
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
@@ -106,7 +106,7 @@
         {{#each utilityMagic as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
             <fieldset class="action-item">
-                <legend class="action-legend">
+                <legend class="action-legend item-context" data-item-id="{{item._id}}">
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>

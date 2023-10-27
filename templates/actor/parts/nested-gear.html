@@ -5,7 +5,7 @@
   </legend>
   <ol class="items-list flex-group-left {{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
     {{#each this.children as |item id|}}
-    <li class="item grid grid-9col flex-group-left" data-item-id="{{item._id}}">
+    <li class="item grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
       <div class="grid-span-3 item-name flexrow">
         <img class="item-image" src="{{item.img}}">
         <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
@@ -15,7 +15,7 @@
       <fieldset class="nested-container grid-start-2 grid-span-8">
         <ol class="items-list flex-group-left">
           {{#each item.children as |item id|}}
-          <li class="item grid grid-9col flex-group-left">
+          <li class="item grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
             <div class="grid-span-3 item-name flexrow">
               <img class="item-image" src="{{item.img}}">
               <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
@@ -25,7 +25,7 @@
             <fieldset class="nested-container grid-start-2 grid-span-8">
               <ol class="items-list flex-group-left">
                 {{#each item.children as |item id|}}
-                <li class="item grid grid-9col flex-group-left">
+                <li class="item grid grid-9col flex-group-left item-context"data-item-id="{{item._id}}">
                   <div class="grid-span-3 item-name flexrow">
                     <img class="item-image" src="{{item.img}}">
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
@@ -35,7 +35,7 @@
                   <fieldset class="nested-container grid-start-2 grid-span-8">
                     <ol class="items-list flex-group-left">
                       {{#each item.children as |item id|}}
-                      <li class="item grid grid-9col flex-group-left">
+                      <li class="item grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
                         <div class="grid-span-3 item-name flexrow">
                           <img class="item-image" src="{{item.img}}">
                           <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>

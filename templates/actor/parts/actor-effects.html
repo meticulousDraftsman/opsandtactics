@@ -34,7 +34,7 @@
     <div class="unfiltered {{#if collapses.unfiltered}}collapse{{/if}}">
       <ol class="items-list ">
         {{#each items as |item id|}}
-        <li class="item grid grid-10col flex-group-left" data-item-id="{{item._id}}">
+        <li class="item grid grid-10col flex-group-left item-context" data-item-id="{{item._id}}">
           <a class="item-control item-edit grid-span-9" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.type}}: {{item.name}}</a>
           <a class="item-control item-delete" data-item-id="{{item._id}}" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
         </li>

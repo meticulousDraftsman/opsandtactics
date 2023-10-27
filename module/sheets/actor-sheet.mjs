@@ -497,7 +497,7 @@ export class OpsActorSheet extends ActorSheet {
     for (let i of gearFail){
       if (i != undefined){
         nestedGear.Loose.children.push(i);
-        nestedGear.Loose.weight += Math.max((i.system.gear.quantity.value * i.system.gear.weight),0) * (gear[i].system.gear.tons?2000:1);
+        nestedGear.Loose.weight += Math.max((i.system.gear.quantity.value * i.system.gear.weight),0) * (i.system.gear.tons?2000:1);
       }
     }
 
@@ -610,7 +610,7 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.create-cop').click(this._copCreate.bind(this));    
     html.find('.delete-cop').click(this._copDelete.bind(this));
     // Item Context Menu
-    new ContextMenu(html, '.item-edit', [
+    new ContextMenu(html, '.item-context', [
       {
         name: 'Copy inside Actor',
         icon: '<i class="fas fa-clone"></i>',

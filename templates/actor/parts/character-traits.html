@@ -73,7 +73,7 @@
     </legend>
     <ol class="items-list item-list">
         {{#each traits as |item id|}}
-        <li class="item grid grid-3col flex-group-left" data-item-id="{{item._id}}">
+        <li class="item grid grid-3col flex-group-left item-context" data-item-id="{{item._id}}">
             <div class="item-name flexrow">
                 <img class="item-image" src="{{item.img}}">
                 <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Trait"><i class="fas fa-edit"></i> {{item.name}}</a>

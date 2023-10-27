@@ -58,11 +58,10 @@
       </legend>
       <ol>
         {{#each skills as |item id|}}
-        <li class="item skill flex-group-center" data-item-id="{{item._id}}">
+        <li class="item skill flex-group-center item-context" data-item-id="{{item._id}}">
           <fieldset>
             <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Skill Item"><i class="fas fa-edit"></i> {{item.name}}</a>
             <a class="skill-check resource-label" data-item-id="{{item._id}}" data-tooltip="{{item.mods.label}}"><i class="fas fa-dice"></i> {{item.mods.total}}</a>
-            
           </fieldset> 
         </li>
         {{/each}}     
