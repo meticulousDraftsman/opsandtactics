@@ -98,7 +98,7 @@ export class OpsWeapon extends foundry.abstract.DataModel{
             actions: new field.ObjectField(),
             selectMod: new field.StringField(),
             importFilter: new field.StringField(),
-            importMod: new field.StringField(),
+            importMod: new field.StringField({nullable:false}),
             gear: new field.EmbeddedDataField(Gear)
         }
     }
