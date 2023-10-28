@@ -37,20 +37,21 @@ Hooks.once('init', async function() {
     formula: "3d6 + @init",
     decimals: 2
   };
+  CONFIG.ActiveEffect.legacyTransferral = false;
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = OpsActor;
   CONFIG.Item.documentClass = OpsItem;
 
   // Assign custom DataModels
-  CONFIG.Actor.systemDataModels['character'] = OpsCharacter;
-  CONFIG.Actor.systemDataModels['vehicle'] = OpsVehicle;
-  CONFIG.Item.systemDataModels['skill'] = OpsSkill;
-  CONFIG.Item.systemDataModels['armor'] = OpsArmor;
-  CONFIG.Item.systemDataModels['weapon'] = OpsWeapon;
-  CONFIG.Item.systemDataModels['object'] = OpsObject;
-  CONFIG.Item.systemDataModels['feature'] = OpsFeature;
-  CONFIG.Item.systemDataModels['magic'] = OpsMagic;
+  CONFIG.Actor.dataModels['character'] = OpsCharacter;
+  CONFIG.Actor.dataModels['vehicle'] = OpsVehicle;
+  CONFIG.Item.dataModels['skill'] = OpsSkill;
+  CONFIG.Item.dataModels['armor'] = OpsArmor;
+  CONFIG.Item.dataModels['weapon'] = OpsWeapon;
+  CONFIG.Item.dataModels['object'] = OpsObject;
+  CONFIG.Item.dataModels['feature'] = OpsFeature;
+  CONFIG.Item.dataModels['magic'] = OpsMagic;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
@@ -368,12 +369,12 @@ function _manageOpsStatusEffects(){
   CONFIG.statusEffects.unshift(
     {
       "id":"kneeling",
-      "label":"Kneeling",
+      "name":"Kneeling",
       "icon":"systems/opsandtactics/icons/svg/transparent/kneeling.svg"
     },
     {
       "id":"prone",
-      "label":"Prone",
+      "name":"Prone",
       "icon":"systems/opsandtactics/icons/svg/transparent/prone.svg"
     }
   )

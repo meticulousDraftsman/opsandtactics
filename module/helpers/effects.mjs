@@ -7,7 +7,18 @@
   event.preventDefault();
   const a = event.currentTarget;
   const li = a.closest("li");
-  const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
+  let effect;
+  if (li.dataset.effectId){
+    if (owner.documentName=="Actor"){
+      effect = Array.from(owner.allApplicableEffects()).find((element) => element.uuid == li.dataset.effectId) ?? null;
+    }
+    else{
+      effect = Array.from(owner.effects).find((element) => element.uuid == li.dataset.effectId) ?? null;
+    }
+  }
+  else {
+    effect = null;
+  }
   switch ( a.dataset.action ) {
     case "create":
       return owner.createEmbeddedDocuments("ActiveEffect", [{
@@ -18,11 +29,14 @@
         disabled: li.dataset.effectType === "inactive"
       }]);
     case "edit":
-      return effect.sheet.render(true);
+      effect.sheet.render(true);
+      break;
     case "delete":
-      return effect.delete();
+      effect.delete();
+      break;
     case "toggle":
-      return effect.update({disabled: !effect.disabled});
+      effect.update({disabled: !effect.disabled});
+      break;
   }
 }
 
@@ -54,7 +68,7 @@ export function prepareActiveEffectCategories(effects) {
 
     // Iterate over active effects, classifying them into categories
     for ( let e of effects ) {
-      e._getSourceName(); // Trigger a lookup for the source name
+      //e._getSourceName(); // Trigger a lookup for the source name
       if ( e.disabled ) categories.inactive.effects.push(e);
       else if ( e.isTemporary ) categories.temporary.effects.push(e);
       else categories.passive.effects.push(e);
