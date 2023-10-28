@@ -63,7 +63,7 @@
   <ol class="items-list flex-group-center">
     <li class="grid grid-8col flex-group-center">
       <a class="actor-bleed resource-label" data-tooltip="Roll Bleed Dice and add to incoming damage">Bleed <i class="fas fa-tint"></i></a>
-      <input type="text" name="system.health.bleed" value="{{system.health.bleed}}" data-dtype="Number"/>
+      <input class="resource-delta" type="text" data-target="system.health.bleed" value="{{system.health.bleed}}" data-dtype="Number"/>
       <span>Incoming</span>
       <input class="grid-span-2 resource-delta" type="text" data-target="system.health.incoming" value="{{system.health.incoming}}" data-dtype="String" placeholder="Damage"/>
       <span>XHP</span>
