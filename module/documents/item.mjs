@@ -118,10 +118,10 @@ export class OpsItem extends Item {
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
       rollMode: game.settings.get('core', 'rollMode'),
       popupSkip: (event && event.shiftKey),
-      attackStance: this.actor.effects.find(e => e.getFlag("core", "statusId") === 'prone') ? 'prone' : this.actor?.effects.find(e => e.getFlag("core", "statusId") === 'kneeling') ? 'kneeling' : undefined,
+      attackStance: this.actor.statuses.has('prone') ? 'prone' : this.actor.statuses.has('kneeling') ? 'kneeling' : undefined,
       targetStance: undefined
     }
-    if (mainTarget) rollConfig.targetStance = mainTarget.actor.effects.find(e => e.getFlag("core", "statusId") === 'prone') ? 'prone' : mainTarget.actor?.effects.find(e => e.getFlag("core", "statusId") === 'kneeling') ? 'kneeling' : undefined;
+    if (mainTarget) rollConfig.targetStance = mainTarget.actor.statuses.has('prone') ? 'prone' : mainTarget.actor.statuses.has('kneeling') ? 'kneeling' : undefined;
     // Execute roll
     const roll = await opsCheck(rollConfig);
     if (roll==null) return null;
@@ -436,6 +436,7 @@ export class OpsItem extends Item {
     labelParts = labelParts.filter(part => part != null);
     mods.label = labelParts.join(', ') || 'No Modifiers';
     mods.total = this.system.ranks + mods.ability + mods.occ + mods.equip + mods.syn + mods.armor + mods.misc;
+    if (Number.isNaN(mods.total)) mods.total = 0;
     mods.total = mods.total>=0?`+${mods.total}`:mods.total;
     return mods;    
   }
