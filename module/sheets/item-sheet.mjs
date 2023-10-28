@@ -328,7 +328,7 @@ export class OpsItemSheet extends ItemSheet {
         await this._addAttackMod(updateData,preTarget, target);
         break;
       case 'skillMods':
-        newProp = new SkillMod;
+        newProp = (new SkillMod).toObject();
         newProp.type = preTarget;
         setProperty(updateData,`system.mods.${randomID(8)}`,newProp);
         break;
@@ -336,9 +336,7 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,`system.protection.${randomID(8)}`,new Protection);
         break;
       case 'attacks':
-        newProp = new WeaponAttack;
-        newProp.name = 'New Attack';
-        newProp.check.type = 'ranged';
+        newProp = (new WeaponAttack).toObject();
         setProperty(updateData,`system.actions.${randomID(8)}`,newProp);
         break;
       case 'weaponMods':
@@ -348,7 +346,7 @@ export class OpsItemSheet extends ItemSheet {
         setProperty(updateData,'system.importMod','');
         break;
       case 'action':
-        newProp = new OpsAction;
+        newProp = (new OpsAction).toObject();
         if (this.object.type==='object') newProp.check.type = 'otherUtility';
         if (this.object.type==='magic') newProp.check.type = 'ranged';
         setProperty(updateData,`system.actions.${randomID(8)}`,newProp)
@@ -487,7 +485,6 @@ class AttackEditApp extends FormApplication {
         if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:this.object.system.actions[this.options.target][imp].mods[key]?.active}
       }
     }
-    console.debug(context)
     return context;
   }
   render(force=false, options={}){

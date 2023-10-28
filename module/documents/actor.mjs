@@ -408,6 +408,7 @@ export class OpsActor extends Actor {
   abilityMod(source){
     switch (source){
       case '':
+      case undefined:
           return 0;
       case 'foc':
       case 'pow':

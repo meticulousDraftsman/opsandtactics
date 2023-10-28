@@ -139,32 +139,38 @@ export class OpsAction  extends foundry.abstract.DataModel{
         }
     }
 }
-export class WeaponAttack extends OpsAction{
+export class WeaponAttack extends foundry.abstract.DataModel{
     static defineSchema(){
-        const schema = super.defineSchema();
-        schema.display = new field.BooleanField({initial:true});
-        schema.check.fields = mergeObject(
-            schema.check.fields,{
+        return{
+            name: new field.StringField({initial:'New Attack'}),
+            active: new field.BooleanField({initial:true}),
+            display: new field.BooleanField({initial:true}),
+            check: new field.SchemaField({
+                flavor: new field.StringField(),
+                type: new field.StringField(), // melee,ranged vs skill,generic,otherUtility
+                source: new field.StringField(),
+                inherent: new field.StringField(),
+                ability: new field.StringField(),
                 mods: new field.ObjectField()
-            }
-        );
-        schema.effect.fields = mergeObject(
-            schema.check.fields,{
-                mods: new field.ObjectField(),
-                scaleAbility: new field.NumberField({initial:1})
-            }
-        );
-        schema.recoil = new field.SchemaField({
-            inherent: new field.NumberField({initial:null, nullable:true}),
-            active: new field.BooleanField({initial:false}),
-            mods: new field.ObjectField()
-        });
-        schema.cp.fields = mergeObject(
-            schema.cp.fields,{
+            }),
+            effect: new field.SchemaField({
+                flavor: new field.StringField(),
+                inherent: new field.StringField(),
+                ability: new field.StringField(),
+                scaleAbility: new field.NumberField({initial:1}),
                 mods: new field.ObjectField()
-            }
-        );
-        return schema;
+            }),
+            recoil: new field.SchemaField({
+                inherent: new field.NumberField({initial:null, nullable:true}),
+                active: new field.BooleanField({initial:false}),
+                mods: new field.ObjectField()
+            }),
+            ammo: new field.NumberField(),
+            cp: new field.SchemaField({
+                inherent: new field.NumberField(),
+                mods: new field.ObjectField()
+            })
+        }
     }
 }
 export class ResourceConsumable extends foundry.abstract.DataModel{

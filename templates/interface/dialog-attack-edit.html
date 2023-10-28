@@ -25,7 +25,7 @@
                 <legend class="resource-label">Attack-Applicable Weapon Mods</legend>
                 <div class="grid grid-8col flex-group-center">
                     {{#each attack.check}}
-                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}{{#if this.check}}: {{numberFormat this.check sign=true}}{{/if}}</span> 
+                    <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}{{#if this.check}}: {{this.check}}{{/if}}</span> 
                     <div class="flex-group-center">
                         <input name="system.actions.{{@root.attack.id}}.check.mods.{{@key}}.active" type="checkbox" {{checked this.active}}>
                     </div>

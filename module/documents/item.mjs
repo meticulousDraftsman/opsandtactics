@@ -359,15 +359,25 @@ export class OpsItem extends Item {
       }
     }
     // Handle Check (general)
-    mods.checkNum = Number.isNaN(Number(sourceAction.check.inherent))?0:Number(sourceAction.check.inherent)
-    mods.checkParts.push(Number.isNaN(Number(sourceAction.check.inherent))?sourceAction.check.inherent:null)
+    if (sourceAction.check.inherent && Number.isNaN(Number(sourceAction.check.inherent))){
+      // If inherent exists and isn't a number, add it to the parts
+      mods.checkParts.push(sourceAction.check.inherent)
+    }
+    else if (sourceAction.check.inherent && !Number.isNaN(Number(sourceAction.check.inherent))){
+      // If inherent exists and is a number, add it to num
+      mods.checkNum += Number(sourceAction.check.inherent)
+    }
+    // If owned by an actor, add their ability modifier to num
     if (this.actor) mods.checkNum += this.actor.abilityMod(sourceAction.check.ability);
     if (hasProperty(sourceAction,'check.mods')){
       for (let [,c] of Object.entries(sourceAction.check.mods)){
-        if (Number.isNaN(Number(c.value))){
-          mods.checkParts.push(c.value?(c.value.charAt(0) != '-'? `+${c.value}`:`${c.value}`):null);
+        // If mod isn't active, skip it
+        if (!c.active) continue;
+        // If mod value exists and isn't a number, add it to parts
+        if (c.value && Number.isNaN(Number(c.value))){
+          mods.checkParts.push(c.value.charAt(0)=='-' ? `${c.value}` : `+${c.value}`)
         }
-        else {
+        else if (c.value) {
           mods.checkNum += Number(c.value);
         }
       }
