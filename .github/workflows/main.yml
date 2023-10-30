@@ -1,0 +1,42 @@
+name: System Release Building
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get Version
+        shell: bash
+        id: get-version
+        run: echo "version=$(node ./.github/workflows/get-version.js)">>$GITHUB_OUTPUT
+
+      - name: Zip Creation
+        working-directory: ./
+        run: |
+          zip                       \
+            -r                      \
+            ./opsandtactics.zip     \
+            LICENSE.txt             \
+            README.md               \
+            system.json             \
+            template.json           \
+            css/                    \
+            icons/                  \
+            lang                    \
+            lib/                    \
+            module/                 \
+            packs/                  \
+            templates/              \
+      
+      - name: Create Release
+        id: create-release
+        uses: ncipollo\release-action@v1
+        with:
+          allowUpdates: true
+          name: Release ${{ steps.get-version.outputs.version }}
+          draft: false
+          prelelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './system.json, opsandtactics-${{ steps.get-version.outputs.version }}.zip'
+          tag: ${{ steps.get-version.outputs.version }}
