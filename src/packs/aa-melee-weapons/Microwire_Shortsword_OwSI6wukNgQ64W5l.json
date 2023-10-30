@@ -1,0 +1,320 @@
+{
+  "name": "Microwire Shortsword",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/sabre.svg",
+  "system": {
+    "description": "<p>These bear a strong resemblance to their medieval counterparts, but have been upgraded with futuristic improvements, such as improved grip handles with a soft rubber coating and the addition of a microwire to the edge of the blade, increasing their effectiveness. Microwire axes and swords can not accept any upgrade on their contact. Microwire swords and axes are considered to be the same kind of weapons as their non- microwire counterparts. Microwire swords come with a tactical sheath.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "value": 0,
+      "max": 0
+    },
+    "range": "5ft",
+    "crit": 15,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "yqmwlhNc": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "2d3+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "IahSqLdj": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "2d3+5",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "NXsbkFwi": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "3d3+5",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "JwwHwrGj": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "4d3+9",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "pmJUQEom": {
+        "name": "Light (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "2d3+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "lx5YMrZ7": {
+        "name": "Standard (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "2d3+5",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "iSagMTCI": {
+        "name": "Heavy (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "3d3+5",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "mXgZi6xI": {
+        "name": "Full (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "4d3+9",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 2,
+      "cost": 2,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.cqNKL3J3nmzDC3sP"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1682700802473,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "OwSI6wukNgQ64W5l",
+  "_key": "!items!OwSI6wukNgQ64W5l"
+}

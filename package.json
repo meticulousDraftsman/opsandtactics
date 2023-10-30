@@ -1,0 +1,17 @@
+{
+  "name": "opsandtactics",
+  "version": "1.0.0",
+  "description": "This is an implementation of the Ops and Tactics system in Foundry VTT, using the Boilerplate system as an initial base.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.0-rc.4"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Trauma Plates",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/flat-platform.svg",
+  "system": {
+    "description": "<p>These plates are made from kevlar, designed to give additional ballistic protection.</p>",
+    "layer": "plate",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "ZyyEUojP": {
+        "name": "Ballistic",
+        "value": 8
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 32,
+      "max": 32
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 1.8,
+      "cost": 7,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.SsioFp7QqFk9x9To"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1682705882619,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "vGo1vs4i8YcFgTRt",
+  "_key": "!items!vGo1vs4i8YcFgTRt"
+}

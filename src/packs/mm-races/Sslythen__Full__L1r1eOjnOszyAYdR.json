@@ -1,0 +1,74 @@
+{
+  "name": "Sslythen (Full)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Sslythens have the Fast Healing ability, allowing them to regenerate 1 CHP per round. Fast healing stops working when a sslythen is reduced to &minus;10 CHP or fewer. Fast Healing also doesn&rsquo;t restore HP lost to starvation, thirst, or suffocation, and it doesn&rsquo;t allow a creature to regrow or reattach severed body parts.</li>\n<li>Sslythens possess Low-Light Vision, allowing them to see twice as far as normal in poor lightning conditions, as well as distinguish colors, even in dim lighting.</li>\n<li>Sslythens have tails, which are natural melee weapon. This weapon causes <code>1d8+POW</code> bludgeoning damage that is considered a Small weapon. They can also use their tail for all trip and disarm attacks. They are considered proficient with this weapon and do not suffer a penalty for using these weapons due to size.</li>\n<li>Sslythens are immune to hot environments. They do not have to make a Saving Throw against hot environments</li>\n<li>Sslythen are weak to cold environments. The Fortitude Saving Throw to resist cold environments is doubled.</li>\n<li>Sslythens have Alternate Biochemistry. They gain no benefit from using standard medicines and pharmaceuticals, and instead must have specific pharmaceuticals made for Dragons. All medicines, drugs, and pharmaceuticals for Dragons cost twice as much and when crafting pharmaceuticals for Dragons, the TN is increased by +6.</li>\n<li>Sslythens are immune to dry environments. They do not require additional water beyond the normal amount in hot or very hot climates.</li>\n<li>Sslythens have the Regeneration ability, which grants the race the ability to regrow and reattach severed body parts, allows extremity damage to be healed as if it were normal HP damage without surgery, and stop bleeding at the rate of 1 bleed damage per 5 rounds. Severed parts that aren&rsquo;t reattached wither and die normally. Regeneration doesn&rsquo;t restore hit points lost to starvation, thirst, or suffocation. Regeneration stops working when sslythen are reduced to &minus;10 CHP or fewer.</li>\n<li>Sslythens are carnivores. Consuming food out of this diet causes them to become Sickened for 24 hours.</li>\n<li>Sslythens have Lungdao as their native language and receive Trade Bant Simplified as a secondary language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Sslythens are Medium sized creatures.</li>\n<li>Sslythens have a base Combat Point score of 14.</li>\n<li>Sslythens CHP formula is <code>CON Score + 1</code>.</li>\n</ul>\n<h3>Dragons</h3>\n<p>All dragons have tails that can be targeted. They have the same targeting rules as legs. Any armor that provides protection to legs, will also provide protection to tails.</p>\n<h3>Physical Description</h3>\n<p>A healthy Sslythen typically stands between 5&frac34;-6&frac12;&rsquo;, and weighs between 130-290 lbs. The males and females are nearly the same height. Male and female Sslythen gain strong, thick tails as they mature. Sslythen have thin scales covering their body, which are usually a light green to a dark green color. Sslythen do not have hair. The average Sslythen lifespan is 110 years, reaching physical adulthood between the ages of 19-24.</p>\n<h3>Language</h3>\n<p>The native language of a Sslythen is Lungdao. The will often speak Trade Bant Simplified.</p>\n<h3>Names</h3>\n<p>Sslythen have three names, the first being the given name, and the second being the clan name. The third name is usually the title, job, or designation given to that Sslythen, and changes when their job changes.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "label": "Racial Effects",
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 5,
+          "value": "Sslythen"
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium"
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "14"
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)+1"
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!L1r1eOjnOszyAYdR.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.zS0jXga6Qoca176p"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1683080737120,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "L1r1eOjnOszyAYdR",
+  "_key": "!items!L1r1eOjnOszyAYdR"
+}

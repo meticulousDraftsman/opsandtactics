@@ -1,0 +1,31 @@
+{
+  "name": "Break Barrel Shotgun Expert",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Prerequisites </h3><p>Personal Firearms Proficiency, Shotgun Specialist, Break Barrel Shotgunner</p><h3>Benefit </h3><p>When firing a single shot shotgun or double-barrel OxU or SxS shotgun with a single shot attack the Combat Point cost is 4 less, and when firing a double-barrel shotgun with a doublefire attack, the Combat Point cost is 3 less, and when attempting to repair a single or double-barrel shotgun, the character receives a +6 bonus. Also, when a character with this feat reduces a creature to 0 CHP or less with a single or double-barrel shotgun, the character immediately gains 5 Combat Points that can be used for attacks or reloading. The Combat Points that are given must be used on attacks or reloading only, and only attacks with the same shotgun that reduced the creature to 0 CHP must be used. A character can only receive these Combat Points once per turn The character may not move any distance and if the bonus Combat Points are not used immediately after the attack, the character loses them.</p>",
+    "summary": "-4 CP single shot, -3 CP doublefire, 5CP cleave to attack or reload"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.A9cdznvA5dlISTbc"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1682813420592,
+    "modifiedTime": 1682837426652,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "wE3YzDSxxRbgCNrJ",
+  "_key": "!items!wE3YzDSxxRbgCNrJ"
+}

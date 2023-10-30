@@ -1,0 +1,278 @@
+{
+  "name": "Acme Backup Special",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/revolver.svg",
+  "system": {
+    "description": "<h3>Acme Backup Special</h3>\n<p>Upgrade Points: Frame, Barrel.</p>\n<p>Not affected by Error Range from ammunition.</p>\n<h3>Revolver Double Action (RDA)</h3>\n<p>Revolver Double Action is similar to DA/SA but every shot is a heavy double action pull. Double Action firearms are considered semi-automatic firearms. The hammer is exposed and can be cocked back for 1 Combat Points, gaining a +1 attack bonus on single shot attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "internal",
+      "source": "",
+      "value": null,
+      "max": 5
+    },
+    "range": "25ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {
+      "JL2nwIO6": {
+        "name": ".38 Special",
+        "check": "",
+        "effect": "2d4+1",
+        "recoil": -1,
+        "cp": null,
+        "description": "Light Rimmed"
+      }
+    },
+    "actions": {
+      "kq7T5QpI": {
+        "name": "Cock Hammer",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "noChatAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 1,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "bNDK23Qg": {
+        "name": "Single Shot (Cocked)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "+1",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "JL2nwIO6": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "5RaM5ysQ": {
+        "name": "Potshot (Cocked)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-5",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "JL2nwIO6": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "xSIZ5kQk": {
+        "name": "Double Tap",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "1d4",
+          "ability": "",
+          "mods": {
+            "JL2nwIO6": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -3,
+          "mods": {
+            "JL2nwIO6": {}
+          }
+        }
+      },
+      "Uekg1Wkv": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "JL2nwIO6": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "Ok5GGd1F": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "JL2nwIO6": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Small",
+      "weight": 1.6,
+      "cost": 13,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    },
+    "minimized": false
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.Osg687ICLwS8z4rW"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.8",
+    "coreVersion": "10.291",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1682740839343,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "EVdhkWiyDUVW7Kyi",
+  "_key": "!items!EVdhkWiyDUVW7Kyi"
+}

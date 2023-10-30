@@ -1,0 +1,61 @@
+{
+  "name": "Ballistic Combat Helmet",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/stahlhelm.svg",
+  "system": {
+    "description": "<p>The standard helmet usually issued to combat forces in the military that protects against shrapnel and glancing bullets.</p>",
+    "layer": "other",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "9lx4d1Ge": {
+        "name": "Ballistic, Bludgeoning, Slashing",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 20,
+      "max": 20
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 3,
+      "cost": 10,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681772381698,
+    "modifiedTime": 1682705240006,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "FOywHJOEF7GNjQJb",
+  "_key": "!items!FOywHJOEF7GNjQJb"
+}

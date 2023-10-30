@@ -1,0 +1,192 @@
+{
+  "name": "Weighted Chain",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/crossed-chains.svg",
+  "system": {
+    "description": "<p>A weighted chain consists of a light 10-15&rsquo; chain and a set of metal weights used to entangle an opponent, or their weapon. It can be whirled quickly, striking with hard blows from the weights. An improvised version of this weapon is a pair of horseshoes tied to the ends of a rope. The weighted chain can be used as a double weapon. A character can fight with it as if fighting with two weapons, incurring all the normal attack penalties as if using a one-handed weapon and a Small weapon. In this case the weapon&rsquo;s reach is reduced by 5&rsquo;. A character can strike opponents up to 10&rsquo; away with a weighted chain.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "value": 0,
+      "max": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "Y6pG14FO": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "3d8-3",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "iWA6HogG": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "3d8",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "bxZFVoc0": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "4d8",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "y3Ble2Ny": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "5d8+4",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 5.3,
+      "cost": 5,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.vTal6q4EvuARYCKc"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1682713626841,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "pySiLD2xrXakLd31",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_key": "!items!pySiLD2xrXakLd31"
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Dragonbreed (Dominant)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Dragonbreeds can not use Fine, Diminutive, or Tiny sized weapons, and take a &minus;2 penalty when using all Small sized weapons.</li>\n<li>Dragonbreeds have claws, which are natural melee weapons. This weapon cause <code>1d4+POW</code> slashing damage that are considered Small melee weapons. They are considered proficient with this weapon and do not suffer a penalty for using these weapons due to size.</li>\n<li>Dragonbreeds may select cold, fire, concussive, acid, or electricity. They gain a natural energy resistance against the selected type of damage that grants them 3 DR against all damage of that type. This selection is permanent.</li>\n<li>Dragonbreeds have Alternate Biochemistry. They gain no benefit from using standard medicines and pharmaceuticals, and instead must have specific pharmaceuticals made for Dragons. All medicines, drugs, and pharmaceuticals for Dragons cost twice as much and when crafting pharmaceuticals for Dragons, the TN is increased by +6.</li>\n<li>All clothing and armor purchased for Dragonbreeds has an increased cost of 25%.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Dragonbreeds are Medium sized creatures.</li>\n</ul>\n<h3>Dragons</h3>\n<p>All dragons have tails that can be targeted. They have the same targeting rules as legs. Any armor that provides protection to legs, will also provide protection to tails.</p>\n<h3>Physical Description</h3>\n<p>A healthy dragonbreed typically stands between 5&frac34;-7&rsquo;, and weighs between 180-350 lbs. The males are significantly larger than the females, usually towering a good foot above them. Male and female dragonbreed begin to grow out their claws as they reach adulthood. These claws are considered a badge of adulthood, and are well taken care of. Dragonbreed have thin scales covering their body, which can range in a multitude of colors, but the most common colors being red, blue, green, yellow, brown, and black. Dragonbreed do not have hair. The average dragonbreed lifespan is 340 years, reaching physical adulthood between the ages of 40-45.</p>\n<h3>Language</h3>\n<p>The native language of a dragonbreed depends on their background. The will often speak Tiahma or Lungdao.</p>\n<h3>Names</h3>\n<p>Dragonbreeds have one name, given to them at birth. This name can span multiple words, however.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "label": "Racial Effects",
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "Dragonbreed"
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium"
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!qsWGHlNB6zWqYBBc.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.zS0jXga6Qoca176p"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1683080530103,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "qsWGHlNB6zWqYBBc",
+  "_key": "!items!qsWGHlNB6zWqYBBc"
+}

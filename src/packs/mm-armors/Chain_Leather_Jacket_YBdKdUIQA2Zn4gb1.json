@@ -1,0 +1,73 @@
+{
+  "name": "Chain Leather Jacket",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/chain-mail.svg",
+  "system": {
+    "description": "<p>This is a thick leather jacket with a lining of thin but strong steel chain mail integrated in the chest and arms of the jacket often worn by urban warriors. It grants the wearer a +1 bonus to Fortitude Saving Throws made to resist the effects of cold weather. Chain Leather Jackets have two pockets than can hold 1.5 lbs of equipment that is Tiny sized or smaller each.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms of the wearer, providing DR and Defense to all listed areas.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 2,
+    "agiMax": 2,
+    "penalty": -3,
+    "cpLoss": 0,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Slashing",
+        "value": 8
+      },
+      "HT6OJrsQ": {
+        "name": "Piercing",
+        "value": 4
+      },
+      "KCZsNPYt": {
+        "name": "Bludgeoning",
+        "value": 2
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 100,
+      "max": 100
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 6.8,
+      "cost": 15,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.DAdXDLXIGdKR9WN6"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682701650099,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "YBdKdUIQA2Zn4gb1",
+  "_key": "!items!YBdKdUIQA2Zn4gb1"
+}

@@ -1,0 +1,154 @@
+{
+  "name": "Acme Hunter Rifle",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/winchester-rifle.svg",
+  "system": {
+    "description": "<h3>Acme Hunter Rifle</h3><p>Upgrade Points: Frame, Barrel.</p><p>Fixed stock. Not affected by Error Range from ammunition.</p><h3>Lever Action</h3><p>The firearm has a lever that must be worked after each shot. Attacks cost +3 Combat Points when firing from a prone position, but −1 Combat Points when performing single shot attacks. Lever action firearms can perform single shot and potshot attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "internal",
+      "source": "",
+      "value": null,
+      "max": 8
+    },
+    "range": "80ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots"
+      },
+      "5tsuI7LD": {
+        "name": ".30-30 Winchester",
+        "check": "",
+        "effect": "4d6+1",
+        "recoil": -5,
+        "cp": null,
+        "description": "Heavy Rifle"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "5tsuI7LD": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 7,
+          "mods": {
+            "gN80d9f3": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "5tsuI7LD": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "gN80d9f3": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 6.4,
+      "cost": 32,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    },
+    "minimized": false
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.Ihav659i13JmkUcz"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.8",
+    "coreVersion": "10.291",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1682740839352,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "wwpIi5wzf6O2Pzdo",
+  "_key": "!items!wwpIi5wzf6O2Pzdo"
+}

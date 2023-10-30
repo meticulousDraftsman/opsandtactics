@@ -1,0 +1,31 @@
+{
+  "name": "Danger Sense",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites </h3><p>Improved Initiative</p><h3>Benefit</h3><p>Before combat starts, the character may roll their Initiative check twice and take the best result. The character must decide to reroll before the first round starts.</p>",
+    "summary": "Roll Initiative with advantage"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.XAhibCWKbqpb3jiY"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1681243127085,
+    "modifiedTime": 1682836974788,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "H4xqm7d4WclhJjTj",
+  "_key": "!items!H4xqm7d4WclhJjTj"
+}

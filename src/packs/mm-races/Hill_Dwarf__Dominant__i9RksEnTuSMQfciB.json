@@ -1,0 +1,69 @@
+{
+  "name": "Hill Dwarf (Dominant)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Hill dwarves can use any melee weapon as if it were one size smaller. This only applies to using, not concealing.</li>\n<li>Hill dwarves receive the extra feat Archaic Weapon Proficiency (Axes) at 1st level for free.</li>\n<li>When using the Extra Effort action, hill dwarves are not Flat-footed and can still make Attacks of Opportunity.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Hill Dwarves are Medium sized creatures.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy hill dwarf typically stands between 4-5&frac12;&rsquo;, and weighs between 180-280 lbs. The men are slightly taller than the women on average. The male dwarves begin to grow a beard right at the beginning of adulthood, which is a prized and cherished possession and badge of manhood, while a female dwarves&rsquo; hair begins to grow to an impressive length, which is well kept and treasured as a symbol of womanhood. Dwarven skin tone ranges from a dark brown to a light olive, and their hair ranges from black to a dark brown, usually in a thick, curly or coarse texture. The average dwarven lifespan is 145 years, reaching physical adulthood between the ages of 19-25.</p>\n<h3>Language</h3>\n<p>The native language of a hill dwarf is Modern Dwemer, but many speak, read, and can write in Reformed Dwemer for technical reasons. Trade Bant Simplified is also a common language for hill dwarves.</p>\n<h3>Names</h3>\n<p>Hill dwarves have three names, the first name being a given name, and is used to refer to the particular dwarf, the second name being their family name, that denotes their immediate family, and the third being their clan or communal name, that signifies their original hometown or village.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "label": "Racial Effects",
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.keCzvEPZ9uTnvBGp",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "TwFmPpDwgAsrPq9N",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "Hill Dwarf-"
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium"
+        },
+        {
+          "key": "system.stats.recoil.dwarf",
+          "mode": 2,
+          "value": "2"
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!i9RksEnTuSMQfciB.TwFmPpDwgAsrPq9N"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.keCzvEPZ9uTnvBGp"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1677901156240,
+    "modifiedTime": 1683080596827,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "i9RksEnTuSMQfciB",
+  "_key": "!items!i9RksEnTuSMQfciB"
+}

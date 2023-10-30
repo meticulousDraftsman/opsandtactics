@@ -1,0 +1,128 @@
+{
+  "name": "Lever Action (Med)",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/winchester-rifle.svg",
+  "system": {
+    "description": "<h3>Weapon</h3>\n<p>Upgrade Points:</p>\n<h3>Lever Action</h3>\n<p>The firearm has a lever that must be worked after each shot. Attacks cost +3 Combat Points when firing from a prone position, but &minus;1 Combat Points when performing single shot attacks. Lever action firearms can perform single shot and potshot attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "internal",
+      "source": "",
+      "value": null,
+      "max": null
+    },
+    "range": "5ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.Osg687ICLwS8z4rW"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.8",
+    "coreVersion": "10.291",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1682730282114,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "PAwIB2JsQf8bzHoM",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_key": "!items!PAwIB2JsQf8bzHoM"
+}

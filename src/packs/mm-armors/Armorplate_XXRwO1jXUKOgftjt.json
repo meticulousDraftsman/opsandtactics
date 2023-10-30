@@ -1,0 +1,73 @@
+{
+  "name": "Armorplate",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/armor-vest.svg",
+  "system": {
+    "description": "<p>Armorplate is a modern upgrade of old style plate armor consisting of a breastplate, fauld, and backplate made with modern alloys with comfortably-padded arming garments beneath.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 5,
+    "agiMax": 2,
+    "penalty": -7,
+    "cpLoss": 3,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Slashing",
+        "value": 24
+      },
+      "9B9g4029": {
+        "name": "Piercing, Bludgeoning",
+        "value": 16
+      },
+      "M0JNfja4": {
+        "name": "Ballistic",
+        "value": 4
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 220,
+      "max": 220
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 15,
+      "cost": 38,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.sHqK9xTRVystDl3g"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682701627699,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "XXRwO1jXUKOgftjt",
+  "_key": "!items!XXRwO1jXUKOgftjt"
+}

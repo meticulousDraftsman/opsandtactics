@@ -1,0 +1,352 @@
+{
+  "name": "Acme Warrior Light SAW",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/ak47.svg",
+  "system": {
+    "description": "<h3>Acme Warrior Light SAW</h3><p>Upgrade Points: Frame, Barrel, Optic, 2 Tactical.</p><p>Fixed stock, bipod, and one 100 round ammo box. Uses 100, or 200 round ammo boxes.</p><h3>Fully Automatic (Auto)</h3><p>Stands for fully automatic where the firearm will continue to fire as long as the trigger is pressed down. The firearm can perform autofire, suppressive fire, sweepfire, sprayfire, or burst fire attacks.</p><p>Slow (S) autofire means the weapon has a slow rate of fire. Slow autofire fires less rounds per second, giving a more controllable rate of fire. Slow autofire can perform single shot attacks, double tap attacks and potshot attacks, but can’t perform burst fire attacks.</p><p>Medium (M) autofire has a standard rate of fire. It has no penalties or bonuses to its attacks.</p><p>Fast (F) autofire fires more rounds per second, putting more bullets downrange. It has a -2 attack penalty to all autofire, suppressive fire, burst fire, sweepfire, and sprayfire attacks, but gains +1 dice damage on all autofire, suppressive fire, burst fire, sweepfire and sprayfire attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "external",
+      "source": "",
+      "value": null,
+      "max": null
+    },
+    "range": "110ft",
+    "crit": 16,
+    "error": 5,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots"
+      },
+      "JmPNIBx4": {
+        "name": "Bipod",
+        "check": "+3",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "Must be braced to benefit. 1 CP to deploy or retract."
+      },
+      "KQNE3oUF": {
+        "name": "5.56x45mm",
+        "check": "",
+        "effect": "5d4",
+        "recoil": -5,
+        "cp": null,
+        "description": "Intermediate Rifle"
+      }
+    },
+    "actions": {
+      "ubKz1c7S": {
+        "name": "Burstfire",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {
+            "JmPNIBx4": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "4d4",
+          "ability": "",
+          "mods": {
+            "KQNE3oUF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 6,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -4,
+          "mods": {
+            "gN80d9f3": {},
+            "KQNE3oUF": {}
+          }
+        }
+      },
+      "CYGzX71r": {
+        "name": "Autofire",
+        "active": true,
+        "check": {
+          "flavor": "Targets a 10ft by 10ft area with effective DEF 10",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {
+            "JmPNIBx4": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Reflex Saving Throw [TN15] for half",
+          "type": "",
+          "source": "",
+          "inherent": "1d4",
+          "ability": "",
+          "mods": {
+            "KQNE3oUF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 12,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -7,
+          "mods": {
+            "gN80d9f3": {},
+            "KQNE3oUF": {}
+          }
+        }
+      },
+      "esuc8dGm": {
+        "name": "Sprayfire",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {
+            "JmPNIBx4": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "5d4",
+          "ability": "",
+          "mods": {
+            "KQNE3oUF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 12,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -10,
+          "mods": {
+            "gN80d9f3": {},
+            "KQNE3oUF": {}
+          }
+        }
+      },
+      "azH0VQmO": {
+        "name": "Sweepfire",
+        "active": true,
+        "check": {
+          "flavor": "Targets all creatures in 90-degree cone",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {
+            "JmPNIBx4": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "1d4",
+          "ability": "",
+          "mods": {
+            "KQNE3oUF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 18,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -10,
+          "mods": {
+            "gN80d9f3": {},
+            "KQNE3oUF": {}
+          }
+        }
+      },
+      "nLttctOn": {
+        "name": "Suppressive Fire",
+        "active": true,
+        "check": {
+          "flavor": "Take damage when starting turn in area and every 5ft square moved through",
+          "type": "noneAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "On starting or entering, Will Save [TN18]. Shaken (pass) or Rattled (fail) for 1d3 rounds.",
+          "type": "",
+          "source": "",
+          "inherent": "1d4",
+          "ability": "",
+          "mods": {
+            "KQNE3oUF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 12,
+        "cp": {
+          "inherent": 9,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "ZJXqYuWe": {
+        "name": "Shift Suppression 5ft",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "noChatAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "AI92dJ6t": {
+        "name": "Deploy/Retract Bipod",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "noChatAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 1,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 16.5,
+      "cost": 114,
+      "quality": "",
+      "restriction": "M&P",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "t30CqpgP": {
+          "name": "Ammo Box",
+          "type": "consumable",
+          "value": null,
+          "max": 100,
+          "available": false
+        }
+      }
+    },
+    "minimized": false
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.VGEsMp6KdFmVIsqt"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.8",
+    "coreVersion": "10.291",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1682740839356,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "jA52CEE5ukBGTwnO",
+  "_key": "!items!jA52CEE5ukBGTwnO"
+}

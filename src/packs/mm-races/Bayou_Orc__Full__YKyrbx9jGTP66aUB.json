@@ -1,0 +1,84 @@
+{
+  "name": "Bayou Orc (Full)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Bayou orcs can use any ranged weapon as if it were one size smaller. This only applies to using, not concealing.</li>\n<li>Bayou orcs can not use Fine, Diminutive, or Tiny sized weapons, and take a &minus;2 penalty when using all Small sized weapons.</li>\n<li>Bayou orcs receive the extra feat Brawl at 1st level for free.</li>\n<li>Bayou orcs are immune to wet environments. They do not have to make a Saving Throw against diseases.</li>\n<li>Bayou orcs are weak to dry environments. They require double the normal water intake in dry environments.</li>\n<li>Bayou orcs can select Karkarash Technical or Karkarash Gutter as their native language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Bayou orcs are Medium sized creatures.</li>\n<li>Bayou orcs multiply their base Fortitude Saving Throw by 1.5.</li>\n<li>Bayou orcs have a base Combat Point score of 14.</li>\n<li>Bayou orcs CHP formula is <code>CON Score 3</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy bayou orc typically stands between 5&frac34;-6&frac12;&rsquo;, and weighs between 160-270 lbs. The males are significantly larger than the females, usually towering a good foot above them. Male and female orcs begin to grow out their inferior canines as they reach adulthood, that sit in front of the lower lip once fully grown. These canines are considered a badge of adulthood, and are kept clean and sharp. Orc skin tone ranges in the grays, browns, and greens, and their hair ranges from dark brown to black, usually in a coarse, curly texture. The average orc lifespan is 130 years, reaching physical adulthood between the ages of 16-20.</p>\n<h3>Language</h3>\n<p>The native language of a bayou orc depends on their background. They primarily speak Karkarash Gutter, but have been known to speak Karkarash Technical as well.</p>\n<h3>Names</h3>\n<p>Bayou orcs generally have two sets of names. The first name being their legal, recorded name, that usually follows the same naming conventions that humans use, and a second, given name at a teeth cutting ceremony. The newly adult orc is given a title, that includes their first name, with an adjective describing them. As they go throughout life, they will be granted more titles by more experienced, higher titled orcs.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "label": "Racial Effects",
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 5,
+          "value": "Bayou Orc",
+          "priority": null
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium",
+          "priority": null
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "14",
+          "priority": null
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)+3",
+          "priority": null
+        },
+        {
+          "key": "system.saves.fortitude.mult",
+          "mode": 5,
+          "value": "1.5",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!YKyrbx9jGTP66aUB.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.zS0jXga6Qoca176p"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1683080451976,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "YKyrbx9jGTP66aUB",
+  "_key": "!items!YKyrbx9jGTP66aUB"
+}

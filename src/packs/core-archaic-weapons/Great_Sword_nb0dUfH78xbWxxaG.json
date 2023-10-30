@@ -1,0 +1,192 @@
+{
+  "name": "Great Sword",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "system": {
+    "description": "<p>A great sword is a massive two-handed sword is reminiscent of an iron beam with a handle and a cutting edge. A character can strike opponents up to 10&rsquo; away with a great sword. A classic example is the German zweih&auml;nder. Improvised versions of this unique weapon are extremely unlikely. Great swords come with a tactical sheath.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "value": 0,
+      "max": 0
+    },
+    "range": "10ft",
+    "crit": 14,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "FEx456FG": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "2d10-3",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "dLSlE7r1": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "2d10",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "fUrcx4zY": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "3d10",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "7bfatA2J": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "4d10+4",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 12,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Huge",
+      "weight": 8,
+      "cost": 11,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.dekNvBRrhuwWrVhC"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.11",
+    "coreVersion": "10.303",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1691110293470,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "nb0dUfH78xbWxxaG",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_key": "!items!nb0dUfH78xbWxxaG"
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Standard Spacesuit (Physical)",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "system": {
+    "description": "<p>This spacesuit is a full body spacesuit that protects a single person from the harmful radiation and vacuum of space. It has its own life support system that negates any temperature effects, as well as an emergency 48 hour air tank, a full sun visor, and a communication radio. Due to its bulk, any character wearing this suit is unable to use any weapon larger than medium size or any weapon smaller than tiny size, taking a penalty on the attack roll equal to the armor penalty. This armor can soak 5 points of plasma or electric damage before it requires a new coolant pack. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the head, arms, legs, feet, and hands of the wearer, providing DR and Defense to all listed areas. If a standard spacesuit loses all of its AP, it is depressurized and can no longer protect its wearer from the environment. This armor is hardened against EMP.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 4,
+    "agiMax": 0,
+    "penalty": -5,
+    "cpLoss": 4,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Slashing, Bludgeoning, Piercing",
+        "value": 12
+      },
+      "v3E908Tb": {
+        "name": "Ballistic",
+        "value": 6
+      },
+      "VkKQnXxI": {
+        "name": "Fire",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 40,
+      "max": 40
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 45,
+      "cost": 100,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "BNMFL25V": {
+          "name": "Oxygen",
+          "type": "resource",
+          "value": "48",
+          "max": "48 hours"
+        }
+      }
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.DAdXDLXIGdKR9WN6"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682699851439,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "nazNXOen6qjz5NEP",
+  "_key": "!items!nazNXOen6qjz5NEP"
+}

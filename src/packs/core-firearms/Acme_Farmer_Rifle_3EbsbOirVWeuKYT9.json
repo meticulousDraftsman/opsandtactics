@@ -1,0 +1,220 @@
+{
+  "name": "Acme Farmer Rifle",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/lee-enfield.svg",
+  "system": {
+    "description": "<h3>Acme Farmer Rifle</h3><p>Upgrade Points: Frame, Barrel, Optic.</p><p>Fixed stock and four 10 round magazine.</p><h3>Self Loading (SL)</h3><p>Each pull of the trigger reloads the firearm. It is synonymous with semi-automatic, and self-loading firearms are considered semi-automatic firearms.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "external",
+      "source": "",
+      "value": null,
+      "max": null
+    },
+    "range": "80ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots"
+      },
+      "A6JxiebF": {
+        "name": "5.56x45mm",
+        "check": "",
+        "effect": "5d4",
+        "recoil": -5,
+        "cp": null,
+        "description": "Intermediate Rifle"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "A6JxiebF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {
+            "gN80d9f3": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "A6JxiebF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "gN80d9f3": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "xkazHUhJ": {
+        "name": "Double Tap",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "2d4",
+          "ability": "",
+          "mods": {
+            "A6JxiebF": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -3,
+          "mods": {
+            "gN80d9f3": {},
+            "A6JxiebF": {}
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 6,
+      "cost": 42,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "fYrbQFoR": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 10,
+          "available": false
+        },
+        "7AUtnUZH": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 10,
+          "available": false
+        },
+        "ed6Bwk1N": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 10,
+          "available": false
+        },
+        "rMxaOhJO": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 10,
+          "available": false
+        }
+      }
+    },
+    "minimized": false
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.Ihav659i13JmkUcz"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.8",
+    "coreVersion": "10.291",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1682740839352,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "3EbsbOirVWeuKYT9",
+  "_key": "!items!3EbsbOirVWeuKYT9"
+}

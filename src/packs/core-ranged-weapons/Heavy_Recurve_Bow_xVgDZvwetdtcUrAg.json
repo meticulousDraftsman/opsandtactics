@@ -1,0 +1,160 @@
+{
+  "name": "Heavy Recurve Bow",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/pocket-bow.svg",
+  "system": {
+    "description": "<p>A bow that has tips that curve away from the archer when the bow is strung. By definition, the difference between recurve and other bows is that the string touches a section of the limb when the bow is strung. A recurve bow stores more energy and delivers energy more efficiently than an equivalent straight-limbed bow, giving a greater amount of energy and hence speed to the arrow. If the character does not have the required modifier for a recurve bow, they can only make Light Pull attacks with that bow. A character adds their POW bonus, up to a maximum of +6, to all damage rolls when using recurve bows.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "internal",
+      "source": "",
+      "value": 1,
+      "max": 1
+    },
+    "range": "40ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "WYULcrEI": {
+        "name": "Light Pull",
+        "active": true,
+        "check": {
+          "flavor": "-5' Range",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "2d4+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "wXRpSIyy": {
+        "name": "Standard Pull",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "3d4+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "rsal5bdz": {
+        "name": "Heavy Pull",
+        "active": true,
+        "check": {
+          "flavor": "+10'",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Piercing",
+          "type": "",
+          "source": "",
+          "inherent": "4d4+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 3,
+      "cost": 9,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.qMD8zKiHMhf8hnLj"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681646395557,
+    "modifiedTime": 1682701976988,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "xVgDZvwetdtcUrAg",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_key": "!items!xVgDZvwetdtcUrAg"
+}

@@ -1,0 +1,234 @@
+{
+  "name": "Curved Hilt Plasma Blade",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/light-saber.svg",
+  "system": {
+    "description": "<p>The plasma blade is a weapon that consists of a hilt, usually between 12-18&rsquo;&rsquo; in length, that projects a blade between 24-30&rsquo;&rsquo; in length. They are very close related to the psion&rsquo;s psiblade, even going so far as to use most of the external parts, but internally they are completely different weapons. The blade has no weight, making the entire weapon bottom heavy, and quite odd to use by someone not used to it.</p>\n<p>When the plasma blade is inactive, it looks like a simple tube. When activated, the glowing blade springs forth from the emitter area, giving off a soft hum.</p>\n<p>Plasma blades have four major components: The case, the emitter, the plasma energy core, and the coolant system.</p>\n<p>The case is the largest part of the weapon, and is the piece that houses all of the other components. It is usually made of a durable metal, such as aluminum, steel, or titanium. It is ill advised to use anything but a resilient metal, due to the heat the plasma blade generates. The case holds the activation mechanism, which is usually a button or toggle, but can be a sliding plate, or sequence of buttons (often incorporating a password for activation). The case also holds all of the upgrades performed on the plasma blade.</p>\n<p>The emitter is where the plasma energy is emitted. The plasma blade draws from the power of the plasma energy core, focusing the energy into a blade made of plasma. When the plasma blade is activated, it possesses a blade of plasma that glows a warm blue, green, red, yellow, orange, or violet. The color of the emitter is entirely dependent on the manufacturer.</p>\n<p>The plasma energy core is the power source of the plasma blade, generating massive amounts of energy in a small space. This is where the plasma blade draws its energy. Because of the heat, the plasma blade must have a fresh coolant pack installed in order to be used. If a plasma blade does not have a fresh coolant pack, it will not function. The damage of a plasma blade is determined by the wattage of the plasma energy core.</p>\n<p>The coolant system is the system that cools down the plasma core, keeping the plasma blade&rsquo;s plasma core cool enough while it&rsquo;s being used. A plasma blade uses Heat at a rate of 1 Heat per attack, which is how much heat it can transfer into its coolant pack before it becomes too hot to use. Any plasma blade that generates enough Heat to meet or exceed its Heat, immediately shuts down unless a fresh coolant pack is put into the plasma blade. The coolant packs are interchangeable with any plasma weapon. Heavy attacks use +1 additional heat per attack and Full attacks use +2 additional Heat per attack.</p>\n<p>Plasma blades are special weapons themselves, and require the Plasma Blade Proficiency feat in order to use without a &minus;4 attack penalty. Any character that has Archaic Weapon Proficiency (Combat Swords or Fencing Swords) can use a plasma blade at a &minus;2 penalty instead. Plasma blades can not be used to trip.</p>\n<p>Plasma blades may be interfaced with various technologies.</p>\n<p>All plasma blades deal plasma damage.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "coolant",
+      "source": "",
+      "value": 0,
+      "max": 33
+    },
+    "range": "5ft",
+    "crit": 11,
+    "error": 0,
+    "weaponMods": {
+      "CyVLZ0vo": {
+        "name": "25kW",
+        "check": "",
+        "effect": "1d8+1",
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      },
+      "dcOCDH49": {
+        "name": "Curved Hilt",
+        "check": "3",
+        "effect": "",
+        "recoil": null,
+        "cp": 3,
+        "description": "A curved hilt plasma blade grants a +3 attack bonus, all attack actions are increased by +3 Combat Points, and all reactions, and fighting defensively actions are increased by +2 Combat Points."
+      }
+    },
+    "actions": {
+      "yqmwlhNc": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "dcOCDH49": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Plasma",
+          "type": "",
+          "source": "",
+          "inherent": "-3",
+          "ability": "pow",
+          "mods": {
+            "CyVLZ0vo": {}
+          },
+          "scaleAbility": 0
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 2,
+          "mods": {
+            "dcOCDH49": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "IahSqLdj": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "dcOCDH49": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Plasma",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "CyVLZ0vo": {}
+          },
+          "scaleAbility": 0
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "dcOCDH49": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "NXsbkFwi": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "dcOCDH49": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Plasma",
+          "type": "",
+          "source": "",
+          "inherent": "1d8",
+          "ability": "pow",
+          "mods": {
+            "CyVLZ0vo": {}
+          },
+          "scaleAbility": 0
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "dcOCDH49": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "JwwHwrGj": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "dcOCDH49": {}
+          },
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Plasma",
+          "type": "",
+          "source": "",
+          "inherent": "2d8+4",
+          "ability": "pow",
+          "mods": {
+            "CyVLZ0vo": {}
+          },
+          "scaleAbility": 0
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 10,
+          "mods": {
+            "dcOCDH49": {}
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Small",
+      "weight": 2.8,
+      "cost": 15,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.cqNKL3J3nmzDC3sP"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1682699983265,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "AouyhKOcdHIHpK1O": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "90n2svv3hXm2ObYD",
+  "_key": "!items!90n2svv3hXm2ObYD"
+}

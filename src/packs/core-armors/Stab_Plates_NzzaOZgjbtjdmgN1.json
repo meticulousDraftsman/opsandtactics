@@ -1,0 +1,69 @@
+{
+  "name": "Stab Plates",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/flat-platform.svg",
+  "system": {
+    "description": "<p>These plates are made from a high density polymer, designed to give protection against stabbing and piercing.</p>",
+    "layer": "plate",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "ZyyEUojP": {
+        "name": "Piercing",
+        "value": 7
+      },
+      "k7a0OXEa": {
+        "name": "Ballistic Piercing",
+        "value": 2
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 35,
+      "max": 35
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 1.6,
+      "cost": 2,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.QfR73zQ8gj0WXThq"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1682705868003,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "NzzaOZgjbtjdmgN1",
+  "_key": "!items!NzzaOZgjbtjdmgN1"
+}

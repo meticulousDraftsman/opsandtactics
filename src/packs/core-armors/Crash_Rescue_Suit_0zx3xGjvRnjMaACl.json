@@ -1,0 +1,65 @@
+{
+  "name": "Crash Rescue Suit",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "system": {
+    "description": "<p>This reflective, full-body suit is exclusive to fire departments expecting to deal with high radiant heat or savage burning liquids. It is rated to protect against sustained exposure to temperatures of 1,500&deg;F and short exposure to 2,000&deg;F, and includes a hood with a reflective faceplate, mittens, and boots. A crash rescue suit contains a 30 minute air supply.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the head, arms, legs, feet, and hands of the wearer, providing DR and Defense to all listed areas. This clothing cannot catch fire.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 4,
+    "agiMax": 2,
+    "penalty": -4,
+    "cpLoss": 3,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Fire",
+        "value": 25
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 50,
+      "max": 50
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 25,
+      "cost": 40,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.vhWY9Ncget1Is6Bg"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682705535557,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "0zx3xGjvRnjMaACl",
+  "_key": "!items!0zx3xGjvRnjMaACl"
+}

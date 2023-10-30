@@ -1,0 +1,410 @@
+{
+  "name": "Acme Overseer Automatic",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/glock.svg",
+  "system": {
+    "description": "<h3>Acme Overseer Automatic</h3><p>Upgrade Points: Frame, Barrel, 1 Tactical.</p><p>Three 17 round magazines.</p><h3>Preset Action (PA)</h3><p>Preset Action, the action is at half-cock giving a light trigger pull. Preset Action firearms are considered semi-automatic firearms. All single shot attacks have a +1 attack bonus.</p><h3>Fully Automatic (Auto)</h3><p>Stands for fully automatic where the firearm will continue to fire as long as the trigger is pressed down. The firearm can perform autofire, suppressive fire, sweepfire, sprayfire, or burst fire attacks.</p><p>Slow (S) autofire means the weapon has a slow rate of fire. Slow autofire fires less rounds per second, giving a more controllable rate of fire. Slow autofire can perform single shot attacks, double tap attacks and potshot attacks, but can’t perform burst fire attacks.</p><p>Medium (M) autofire has a standard rate of fire. It has no penalties or bonuses to its attacks.</p><p>Fast (F) autofire fires more rounds per second, putting more bullets downrange. It has a -2 attack penalty to all autofire, suppressive fire, burst fire, sweepfire, and sprayfire attacks, but gains +1 dice damage on all autofire, suppressive fire, burst fire, sweepfire and sprayfire attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "external",
+      "source": "",
+      "value": null,
+      "max": null
+    },
+    "range": "35ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {
+      "crVEJR7x": {
+        "name": ".40 S&W",
+        "check": "",
+        "effect": "3d4",
+        "recoil": -3,
+        "cp": null,
+        "description": "Intermediate Rimless"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "+1",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-5",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "xkazHUhJ": {
+        "name": "Double Tap",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "2d4",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -3,
+          "mods": {
+            "crVEJR7x": {}
+          }
+        }
+      },
+      "ubKz1c7S": {
+        "name": "Burstfire",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "4d4",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 6,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -4,
+          "mods": {
+            "crVEJR7x": {}
+          }
+        }
+      },
+      "CYGzX71r": {
+        "name": "Autofire",
+        "active": true,
+        "check": {
+          "flavor": "Targets a 10ft by 10ft area with effective DEF 10",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Reflex Saving Throw [TN15] for half",
+          "type": "",
+          "source": "",
+          "inherent": "1d4",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 12,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -7,
+          "mods": {
+            "crVEJR7x": {}
+          }
+        }
+      },
+      "esuc8dGm": {
+        "name": "Sprayfire",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "5d4",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 12,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -10,
+          "mods": {
+            "crVEJR7x": {}
+          }
+        }
+      },
+      "azH0VQmO": {
+        "name": "Sweepfire",
+        "active": true,
+        "check": {
+          "flavor": "Targets all creatures in 90-degree cone",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "1d4",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 18,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -10,
+          "mods": {
+            "crVEJR7x": {}
+          }
+        }
+      },
+      "1NTgd7GC": {
+        "name": "Suppressive Fire",
+        "active": true,
+        "check": {
+          "flavor": "Take damage when starting turn in area and every 5ft square moved through",
+          "type": "noneAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "On starting or entering, Will Save [TN18]. Shaken (pass) or Rattled (fail) for 1d3 rounds.",
+          "type": "",
+          "source": "",
+          "inherent": "1d4",
+          "ability": "",
+          "mods": {
+            "crVEJR7x": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 12,
+        "cp": {
+          "inherent": 9,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "9FQbO5bs": {
+        "name": "Shift Suppression 5ft",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "noChatAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 1.7,
+      "cost": 28,
+      "quality": "",
+      "restriction": "M&P",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "YO3PwkZS": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 17,
+          "available": false
+        },
+        "HGbOwJP4": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 17,
+          "available": false
+        },
+        "5wXsEHF2": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 17,
+          "available": false
+        }
+      }
+    },
+    "minimized": false
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.Osg687ICLwS8z4rW"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.8",
+    "coreVersion": "10.291",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1682740839345,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "XPyYhqkoQiE4xFaF",
+  "_key": "!items!XPyYhqkoQiE4xFaF"
+}

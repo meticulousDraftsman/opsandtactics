@@ -1,0 +1,31 @@
+{
+  "name": "Combat Martial Arts",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefit </h3><p>When making an unarmed attack, the character deals non-lethal bludgeoning damage equal to 1d4+POW modifer. The character’s unarmed attacks count as armed, which means that opponents do not get AoO when the character attacks them unarmed. The character may take AoO against opponents who provoke such attacks. The character takes no penalty when performing lethal unarmed strikes. </p><h3>Normal </h3><p>Unarmed attacks normally deal non-lethal bludgeoning damage equal to 1d3+POW modifier. Choosing to perform lethal unarmed strikes normally imparts a -4 attack penalty. Unarmed attacks normally provoke AoO and unarmed combatants cannot normally make AoO. </p><h3>Special </h3><p>This feat allows a character with a natural melee weapon to apply any increases of unarmed strike damage to their natural melee weapon’s damage instead.</p>",
+    "summary": "Armed unarmed strikes at 1d4 lethal"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Z6y4nfjGqsfyZriU"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1682891278210,
+    "modifiedTime": 1682893108986,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "PUXhcguzYaifjdzB",
+  "_key": "!items!PUXhcguzYaifjdzB"
+}

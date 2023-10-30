@@ -1,0 +1,60 @@
+{
+  "name": "Focused Saving Throw (Fortitude)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefit </h3><p>Select Fortitude, Will, or Reflex The character gains a +4 bonus on the selected Saving Throw.</p><h3>Special </h3><p>This feat can be taken multiple times. Each time it is taken, it applies to a different Saving Throw.</p>",
+    "summary": "+4 Fortitude"
+  },
+  "effects": [
+    {
+      "label": "+4 Reflex",
+      "icon": "systems/opsandtactics/icons/svg/notebook.svg",
+      "origin": "Item.RTRNRgQVMe3EYyS5",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "n8GfWIZcAjHxZ26A",
+      "changes": [
+        {
+          "key": "system.saves.fortitude.mods.focus",
+          "mode": 2,
+          "value": "4",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!XGFMEepBBhPlNKUH.n8GfWIZcAjHxZ26A"
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.RTRNRgQVMe3EYyS5"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.10",
+    "coreVersion": "10.291",
+    "createdTime": 1683318590623,
+    "modifiedTime": 1683654765853,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "XGFMEepBBhPlNKUH",
+  "_key": "!items!XGFMEepBBhPlNKUH"
+}

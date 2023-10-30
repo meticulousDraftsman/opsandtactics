@@ -1,0 +1,576 @@
+{
+  "name": "Macahuitl",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/chainsaw.svg",
+  "system": {
+    "description": "<p>A maquahuitl is a weapon shaped like a wooden sword, that has its sides embedded with prismatic blades made from obsidian. It was similar to a large wooden club with cuts in the side to hold the sharpened obsidian, and can be used to both inflict ripping slashing damage, or bludgeoning damage. When using a maquahuitl, the player must declare what kind of damage they are attempting to inflict. This weapon has two sets of damage types, damage values and Critical Threat levels, which is determined by which damage the character chooses to inflict. Maquahuitls can not perform thrust attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "value": 0,
+      "max": 0
+    },
+    "range": "5ft",
+    "crit": 15,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "yqmwlhNc": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "2d6-2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "IahSqLdj": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "2d6+1",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "NXsbkFwi": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "3d6+1",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "JwwHwrGj": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "4d6+5",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "FEx456FG": {
+        "name": "Light (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "2d6-2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "dLSlE7r1": {
+        "name": "Standard (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "2d6+1",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "fUrcx4zY": {
+        "name": "Heavy (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "3d6+1",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "7bfatA2J": {
+        "name": "Full (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Slashing",
+          "type": "",
+          "source": "",
+          "inherent": "4d6+5",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "OpLkp8Eo": {
+        "name": "Light (Club)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d6-3",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "QtjmTyWJ": {
+        "name": "Standard (Club)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d6",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "YJppWFlM": {
+        "name": "Heavy (Club)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "2d6",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "p0HmJtN2": {
+        "name": "Full (Club)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "3d6+4",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "w0SlbBsb": {
+        "name": "Light (Club, 2h) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d6-3",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "bgN7hsR5": {
+        "name": "Standard (Club, 2h) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d6",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "ZNCruSts": {
+        "name": "Heavy (Club, 2h) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "2d6",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "AeYGcTKF": {
+        "name": "Full (Club, 2h) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "3d6+4",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 3.1,
+      "cost": 14,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.dekNvBRrhuwWrVhC"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1682713423488,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "iaU749CDgT9fUSBV",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_key": "!items!iaU749CDgT9fUSBV"
+}

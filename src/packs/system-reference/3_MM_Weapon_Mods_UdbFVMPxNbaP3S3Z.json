@@ -1,0 +1,82 @@
+{
+  "name": "3 MM Weapon Mods",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "MM: Barrel",
+      "type": "text",
+      "_id": "6rafhWBkKUm8aXLf",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Evokalloy Barrel (Standard), , 1[cold], , , Grants a cold/fire/concussive/electrical damage bonus</p><p>Evokalloy Barrel (High), , 3[cold], , , Grants a cold/fire/concussive/electrical damage bonus</p><p></p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!UdbFVMPxNbaP3S3Z.6rafhWBkKUm8aXLf"
+    },
+    {
+      "sort": 200000,
+      "name": "MM: Melee Mods",
+      "type": "text",
+      "_id": "4DxSMxKeDVPbtnCG",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!UdbFVMPxNbaP3S3Z.4DxSMxKeDVPbtnCG"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "JournalEntry.h9Oe0TIeNLLJSVdW"
+    },
+    "opsandtactics": {
+      "wepMods": true
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.11",
+    "coreVersion": "10.303",
+    "createdTime": 1679699244996,
+    "modifiedTime": 1694806802721,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "UdbFVMPxNbaP3S3Z",
+  "_key": "!journal!UdbFVMPxNbaP3S3Z"
+}

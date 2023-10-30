@@ -1,0 +1,320 @@
+{
+  "name": "Pistol Whip (4.1-5.0)",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/revolver.svg",
+  "system": {
+    "description": "<p>Not a melee weapon in the traditional sense, rather using the side of a handgun to strike a target. While pistol whipping is an improvised weapon, it does not incur the penalties for being one, nor will it break if used as a weapon. If a character provokes an AoO on a character wielding a handgun that can pistol whip, that character can use the pistol whip to perform their AoO. A pistol whip can not be upgraded with any melee upgrades. Adds the character&rsquo;s POW modifier to the damage as normal.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "value": 0,
+      "max": 0
+    },
+    "range": "5ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "7E5bgEO4": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d4-1",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "hyf6INoV": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d4+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "wzTzyDZ6": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "2d4+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "bRaOYdZo": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "3d4+6",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "SaJHTuBy": {
+        "name": "Light (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d4-1",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "O9CT84Ee": {
+        "name": "Standard (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d4+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "r2lsICuZ": {
+        "name": "Heavy (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "2d4+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "qUZo2HCQ": {
+        "name": "Full (2h)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "3d4+6",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.6FYXbcbGP6VTMBKx"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.10",
+    "coreVersion": "10.291",
+    "createdTime": 1681642282810,
+    "modifiedTime": 1685031308711,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "X5OuCyEJdcVOMDeF",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_key": "!items!X5OuCyEJdcVOMDeF"
+}

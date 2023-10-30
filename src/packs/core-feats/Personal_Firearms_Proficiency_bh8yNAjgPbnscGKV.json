@@ -1,0 +1,31 @@
+{
+  "name": "Personal Firearms Proficiency",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Benefit</h3><p>The character can fire any personal firearm without penalty and may use the attack bonuses a firearm receives from upgrades.</p><h3>Normal</h3><p>Characters without this feat take a −4 penalty on attack rolls made with personal firearms,may not reload firearms, and may not use attack bonuses given by firearm upgrades.</p><h3>Special</h3><p>The character with this feat can use black powder firearms without penalty, but cannot reload them. </p><h3>Tutoring</h3><p>Time: 1 day</p><p>Benefit: Can reload firearms and attack penalty is reduced to −3. Considered proficient at using firearms for the purpose of feat prerequisites, but not for having the actual feat.</p>",
+    "summary": "Use and reload firearms without penalty, benefit from upgrades"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.RKCVEogWbpeMmWCk"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1682807800856,
+    "modifiedTime": 1682837278436,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "bh8yNAjgPbnscGKV",
+  "_key": "!items!bh8yNAjgPbnscGKV"
+}

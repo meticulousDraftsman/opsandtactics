@@ -1,0 +1,31 @@
+{
+  "name": "Medium Armor Proficiency",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Benefit</h3><p>When the character wears medium armor, they can add the armor’s equipment bonus to their DEF, and the armor’s skill penalty only applies to the following skills: Acrobatics, Athletics, and Stealth.</p><h3>Normal</h3><p>A character who wears armor with which they are not proficient only receives the Damage Reduction bonus, and suffers the armor’s skill penalty on the listed skill checks.</p><h3>Tutoring</h3><p>Time: 1 day</p><p>Benefit: Can gain up to +2 to Defense when wearing medium armor</p>",
+    "summary": "Benefit fully from medium armors"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.686Kv57YQo5jx6Un"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1682813414669,
+    "modifiedTime": 1682837479434,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "WZ0rvKlWs6AyVXn5",
+  "_key": "!items!WZ0rvKlWs6AyVXn5"
+}

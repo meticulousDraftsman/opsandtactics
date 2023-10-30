@@ -1,0 +1,69 @@
+{
+  "name": "Brawler's Jacket",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/sleeveless-jacket.svg",
+  "system": {
+    "description": "<p>This stylish leather jacket is worn by street fighters, and other individuals who may have to engage in combat and fight. The jacket has small, light metal plates sewn into the arms of the jacket (to protect against slashing weapons) which are then lined with a non-Newtonian fluid to help absorb the shock of bludgeoning weapons. It is further reinforced to take more damage than a standard leather jacket. It grants the wearer a +1 to Fortitude Saving Throws made to resist the effects of cold weather. Brawler&rsquo;s jackets have two pockets than can hold 1.5 lbs of equipment that is Tiny sized or smaller each.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms of the wearer, providing DR and Defense to all listed areas.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 1,
+    "agiMax": 8,
+    "penalty": -1,
+    "cpLoss": 0,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Bludgeoning",
+        "value": 6
+      },
+      "HT6OJrsQ": {
+        "name": "Slashing",
+        "value": 3
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 48,
+      "max": 48
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 2,
+      "cost": 10,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.DAdXDLXIGdKR9WN6"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682699139908,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "7SQGmvdX7b51VTu4",
+  "_key": "!items!7SQGmvdX7b51VTu4"
+}

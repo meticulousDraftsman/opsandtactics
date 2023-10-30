@@ -1,0 +1,200 @@
+{
+  "name": "Acme Service Mini Guard",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/glock.svg",
+  "system": {
+    "description": "<h3>Acme Service Mini Guard</h3>\n<p>Upgrade Points: Frame, Barrel.</p>\n<p>Three 13 round magazines.</p>\n<h3>Preset Action (PA)</h3>\n<p>Preset Action, the action is at half-cock giving a light trigger pull. Preset Action firearms are considered semi-automatic firearms. All single shot attacks have a +1 attack bonus.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "external",
+      "source": "",
+      "value": null,
+      "max": null
+    },
+    "range": "30ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {
+      "eTDGuseO": {
+        "name": "9x19mm",
+        "check": "",
+        "effect": "2d6",
+        "recoil": -2,
+        "cp": null,
+        "description": "Intermediate Rimless"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "1",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "eTDGuseO": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-5",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "eTDGuseO": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "lla0OcKp": {
+        "name": "Double Tap",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "1d6",
+          "ability": "",
+          "mods": {
+            "eTDGuseO": {}
+          },
+          "scaleAbility": 1
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -3,
+          "mods": {
+            "eTDGuseO": {}
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Small",
+      "weight": 1.7,
+      "cost": 24,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "NfODI5jd": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 13,
+          "available": false
+        },
+        "2aisk9du": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 13,
+          "available": false
+        },
+        "d158jX03": {
+          "name": "Magazine",
+          "type": "consumable",
+          "value": null,
+          "max": 13,
+          "available": false
+        }
+      }
+    },
+    "minimized": false
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.Osg687ICLwS8z4rW"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.8",
+    "coreVersion": "10.291",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1682740839350,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "d1Te2u2JtndHCkGN",
+  "_key": "!items!d1Te2u2JtndHCkGN"
+}

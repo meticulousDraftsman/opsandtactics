@@ -1,0 +1,69 @@
+{
+  "name": "Steel Plates",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/flat-platform.svg",
+  "system": {
+    "description": "<p>These are heavy steel inserts, used for multiple rifle round hits, at the cost of weight.</p>",
+    "layer": "plate",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": 2,
+    "protection": {
+      "ZyyEUojP": {
+        "name": "Ballistic, Ballistic Piercing",
+        "value": 9
+      },
+      "cbM0v4yT": {
+        "name": "Piercing",
+        "value": 2
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 54,
+      "max": 54
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 5.5,
+      "cost": 10,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.fvAq7AU0zHjV9Eoa"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1682705873400,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "nFrDVkV9aJyPqIZw",
+  "_key": "!items!nFrDVkV9aJyPqIZw"
+}

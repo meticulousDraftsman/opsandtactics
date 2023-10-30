@@ -1,0 +1,65 @@
+{
+  "name": "Standard Evokalloy Plates (Elemental)",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/sparkles.svg",
+  "system": {
+    "description": "<p>These plates are made from standard evokalloys, that provide protection against a single selected evocational element. The character can select fire, concussive, acid, cold, or electrical damage. The elemental damage does not reduce AP when it provides it&rsquo;s protection.</p>",
+    "layer": "magic",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "ngk0Cm87": {
+        "name": "[Element of Choice]",
+        "value": 4
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 0,
+      "max": 0
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": false,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.QQyiMqxaaXmVcdM1"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1682701721843,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "mJBLgizKpbfcm1xm",
+  "_key": "!items!mJBLgizKpbfcm1xm"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Polaran (Recessive)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Polarans have the Fast Healing ability based on their climate, or if they&rsquo;re wearing their chill collar. Fast Healing stops working when the race is reduced to &minus;10 CHP or fewer.\n<ul>\n<li><strong>Cold climates or wearing a chill collar in any climate:</strong> Polarans heal 1 bleed dice per round, and heal 1 HP per round</li>\n<li><strong>Very Cold climates:</strong> Polarans heal 2 bleed dice per round, and heal 2 HP per round</li>\n<li><strong>Extremely Cold climates:</strong> Polarans heal 3 bleed dice per round, and heal 3 HP per round</li>\n</ul>\n</li>\n<li>When a Polaran is not in an extremely cold, very cold, or cold climate, or is not wearing a chill collar, their base Combat Point Score drops to 10.</li>\n<li>Polarans have Polar as their native language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Polarans have a base Combat Point score of 16.</li>\n<li>Polarans CHP formula is <code>CON Score +1</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy polaran typically stands between 5-6&frac12;&rsquo;, and weighs between 130-180 lbs. The men and women are generally the same height. Polaran skin tone ranges from a pale flesh tone all the way to a snow white, and their hair ranges from a faint grey to bright white, with some possessing naturally blue hair, with silver and white being more common, almost exclusively straight and long. Eye color is also unique, ranging from a deep teal all the way to a deep dark blue, to assist in the snow. The average polaran lifespan is 110 years, reaching physical adulthood between the ages of 17-22.</p>\n<h3>Language</h3>\n<p>The native language of a Polaran is Polar, but Trade Bant is an often taught language, for trade.</p>\n<h3>Names</h3>\n<p>Polarans have two names, The first name being a given name, and is used to refer to the particular polar, the second name being their family name, that denotes their immediate family.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "label": "Racial Effects",
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.VfoJEbTPJP2z6cqt",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "VlIeiq9gmNfDZsE7",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "-Polaran"
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "16"
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)+1"
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!4eGjMFxirGIjbxwS.VlIeiq9gmNfDZsE7"
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.YgOKy30xNCFHVvnf"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1681848685014,
+    "modifiedTime": 1683080324949,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "4eGjMFxirGIjbxwS",
+  "_key": "!items!4eGjMFxirGIjbxwS"
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Fluid Plates",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/jerrycan.svg",
+  "system": {
+    "description": "<p>These are not plates in the truest sense, rather a semi-solid non-Newtonian fluid in a formed shape that absorbs shock, providing very good protection against blunt force trauma.</p>",
+    "layer": "plate",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "ZyyEUojP": {
+        "name": "Bludgeoning",
+        "value": 12
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 40,
+      "max": 40
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 1.3,
+      "cost": 10,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.6O5vrK43VznlUhEK"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1682699464074,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "OZgil2ffJy5uthtH",
+  "_key": "!items!OZgil2ffJy5uthtH"
+}

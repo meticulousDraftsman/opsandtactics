@@ -1,0 +1,31 @@
+{
+  "name": "Improved Brawl",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>Brawl</p><h3>Benefit </h3><p>When making an unarmed attack, the character receives a +2 bonus to their attack roll, and the character deals non-lethal bludgeoning damage equal to 2d6+POW modifer. Normal Unarmed attacks normally deal non-lethal bludgeoning damage equal to 1d3+POW modifier</p><h3>Special</h3><p>Characters with natural melee weapons can use this feat to increase their natural melee weapon’s damage by two damage dice, but that damage becomes non-lethal.</p>",
+    "summary": "+2 attack unarmed, 2d6 or +2d"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.9knD2qWLdXYnMNvS"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1682891640197,
+    "modifiedTime": 1682893121820,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "TzPNBHV5iTpLztes",
+  "_key": "!items!TzPNBHV5iTpLztes"
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Improved Initiative",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefit </h3><p>The character gains a +3 circumstance bonus on Initiative checks.</p>",
+    "summary": "+3 Initiative"
+  },
+  "effects": [
+    {
+      "label": "+3 Initiative",
+      "icon": "systems/opsandtactics/icons/svg/notebook.svg",
+      "origin": "Item.cz6hyIu7gxdFXR8Y",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "sK4wv8FYvXm0nyWK",
+      "changes": [
+        {
+          "key": "system.stats.init.improved",
+          "mode": 2,
+          "value": "3",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!NRmapbgghqY7Sr7p.sK4wv8FYvXm0nyWK"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.cz6hyIu7gxdFXR8Y"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1681242938759,
+    "modifiedTime": 1682837040449,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "NRmapbgghqY7Sr7p",
+  "_key": "!items!NRmapbgghqY7Sr7p"
+}

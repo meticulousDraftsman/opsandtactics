@@ -1,0 +1,31 @@
+{
+  "name": "Rifle and SMG Reloader",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>Personal Firearms Proficiency</p><h3>Benefit</h3><p>Reloading any rifle or sub-machine gun with a magazine or full stripper clip costs 2 Combat Points. Reloading any rifle or sub-machine gun from loose rounds or refilling a magazine or stripper clip costs 1 Combat Points per round loaded. Refilling a magazine with a stripper clip costs 1 Combat Points per clip. Once per round, the character may reload a single round into a bolt action or sniper rifle for no Combat Points, ejecting the chambered round on the ground.</p><h3>Advanced Arms</h3><p>Reloading a coolant pack into a plasma SMG, plasma rifle or plasma sniper rifle costs 2 CP.</p>",
+    "summary": "2 CP to reload rifle or smg mags, 1 CP for loose rounds, chamber swap"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Y283YgPlr5ZBY1yk"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.10",
+    "coreVersion": "10.291",
+    "createdTime": 1682893642518,
+    "modifiedTime": 1683654750291,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "dhTX0krkABarqA30",
+  "_key": "!items!dhTX0krkABarqA30"
+}

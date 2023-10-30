@@ -1,0 +1,65 @@
+{
+  "name": "Motorcycle Armor",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/abdominal-armor.svg",
+  "system": {
+    "description": "<p>This suit of modern armor is worn by motorcyclist to protect from falls. It includes gloves and a motorcycle jacket. It grants the wearer a +1 to Fortitude Saving Throws made to resist the effects of cold weather.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and hands of the<br>wearer, providing DR and Defense to all listed areas.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 2,
+    "agiMax": 5,
+    "penalty": -1,
+    "cpLoss": 1,
+    "protection": {
+      "Ybp9HRIi": {
+        "name": "Slashing, Bludgeoning",
+        "value": 4
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 20,
+      "max": 20
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 5,
+      "cost": 11,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.UETqmyhK923xgLa0"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682705808961,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "Zgmmmb3WO6Na42BQ",
+  "_key": "!items!Zgmmmb3WO6Na42BQ"
+}

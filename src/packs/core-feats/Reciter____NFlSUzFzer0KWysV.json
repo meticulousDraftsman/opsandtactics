@@ -1,0 +1,31 @@
+{
+  "name": "Reciter ()",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Prerequisites </h3><p>Incantation (Chosen Skill) 1 rank</p><h3>Benefit </h3><p>When creating incantation recipes in the selected skill, the IP cost is reduced by 1</p><h3>Special </h3><p>This feat stacks with any other incantation recipe cost reduction feats. This feat can be taken multiple times. Each time it is taken, it applies to a different incantation skill.</p>",
+    "summary": "-1 IP cost"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.EJ1dQdWkKU8JkCmr"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1682808448685,
+    "modifiedTime": 1682837330524,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "NFlSUzFzer0KWysV",
+  "_key": "!items!NFlSUzFzer0KWysV"
+}

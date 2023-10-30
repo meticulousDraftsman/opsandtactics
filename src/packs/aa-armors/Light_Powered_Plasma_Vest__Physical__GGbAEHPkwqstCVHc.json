@@ -1,0 +1,65 @@
+{
+  "name": "Light Powered Plasma Vest (Physical)",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/kevlar-vest.svg",
+  "system": {
+    "description": "<p>The light powered plasma vest is an armor system that derives its protection ability from the same source that plasarms do, and as such, require coolant just as plasarms do. This system is a vest that has built in plasma emitters, that neutralize incoming plasma or electrical attacks, but has diminished protection against other forms of damage, in order to save on weight. This armor can soak 40 points of plasma or electric damage before it requires a new coolant pack. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>\n<h3>Special Notes</h3>\n<p>This armor is hardened against EMP</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 2,
+    "agiMax": 8,
+    "penalty": -2,
+    "cpLoss": 1,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Bludgeoning",
+        "value": 4
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 32,
+      "max": 32
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 7.5,
+      "cost": 35,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.DAdXDLXIGdKR9WN6"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682699580285,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "GGbAEHPkwqstCVHc",
+  "_key": "!items!GGbAEHPkwqstCVHc"
+}

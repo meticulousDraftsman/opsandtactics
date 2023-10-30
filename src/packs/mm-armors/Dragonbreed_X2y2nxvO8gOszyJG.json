@@ -1,0 +1,65 @@
+{
+  "name": "Dragonbreed",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/fish-scales.svg",
+  "system": {
+    "description": "<p>Dragonbreeds may select cold, fire, concussive, acid, or electricity. They gain a natural energy resistance against the selected type of damage that grants them 3 DR against all damage of that type. This selection is permanent.</p>",
+    "layer": "other",
+    "active": true,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "sMYNA1H1": {
+        "name": "Chosen Element",
+        "value": 3
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 0,
+      "max": 0
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Fine",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": false,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.HWfkRSeIFOPotaw2"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1682371028336,
+    "modifiedTime": 1682371245879,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "X2y2nxvO8gOszyJG",
+  "_key": "!items!X2y2nxvO8gOszyJG"
+}

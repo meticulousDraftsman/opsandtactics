@@ -1,0 +1,79 @@
+{
+  "name": "Dragonbreed (Full)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Dragonbreeds can not use Fine, Diminutive, or Tiny sized weapons, and take a &minus;2 penalty when using all Small sized weapons.</li>\n<li>Dragonbreeds have claws, which are natural melee weapons. This weapon cause <code>1d4+POW</code> slashing damage that are considered Small melee weapons. They are considered proficient with this weapon and do not suffer a penalty for using these weapons due to size.</li>\n<li>Dragonbreeds may select cold, fire, concussive, acid, or electricity. They gain a natural energy resistance against the selected type of damage that grants them 3 DR against all damage of that type. This selection is permanent.</li>\n<li>Dragonbreeds have Alternate Biochemistry. They gain no benefit from using standard medicines and pharmaceuticals, and instead must have specific pharmaceuticals made for Dragons. All medicines, drugs, and pharmaceuticals for Dragons cost twice as much and when crafting pharmaceuticals for Dragons, the TN is increased by +6.</li>\n<li>All clothing and armor purchased for Dragonbreeds has an increased cost of 25%.</li>\n<li>Once every five minutes, dragonbreeds have a breath weapon. This breath weapon can be fired in a 10&rsquo; cone, or a 20&rsquo; line, causing 3d2+(1d2 per Character level) of damage. The type of damage this breath weapon causes is the same kind of damage the dragonbreed has a natural energy resistance to. It cost 8 Combat Points to activate this ability. Any creature caught in the breath may make a Reflex Saving Throw [TN8 + Ranged Attack Modifier] for half damage. In addition, Dragonbreed gain an effect of the breath weapon dependent on what kind of Energy they select\n<ul>\n<li><strong>Fire </strong>Any creature caught in the breath makes a Fortitude Saving Throw [TN12 + (Character Level * 2)] or catches fire for 1d4 per round for 1d3+1 rounds or until they extinguish themselves.</li>\n<li><strong>Cold </strong>Any creature caught in the breath makes a Fortitude Saving Throw [TN12 + (Character Level * 2)] or lose 1d3 Combat Points for 2d3 rounds.</li>\n<li><strong>Concussive </strong>Any creature caught in the breath makes a Fortitude Saving Throw [TN12 + (Character Level * 2)] or be knocked prone and stunned for 1d2+1 rounds.</li>\n<li><strong>Acid </strong>Any creature caught in the breath makes a Fortitude Saving Throw [TN12 + (Character Level * 2)] or take 1/2 full damage from the breath attack the following round.</li>\n<li><strong>Electricity </strong>Any creature caught in the breath makes a Fortitude Saving Throw [TN12 + (Character Level * 2)] or be paralyzed for 1 round.</li>\n</ul>\n</li>\n<li>Dragonbreeds are carnivores. Consuming food out of this diet causes them to become sickened for 24 hours.</li>\n<li>Dragonbreeds can select Tiahma or Lungdao as their native language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Dragonbreeds are Medium sized creatures.</li>\n<li>Dragonbreeds have a Mental Limit equal to <code>((6+WIS Score)&times;CL) + 30</code>.</li>\n<li>Dragonbreeds have a base Combat Point score of 13.</li>\n<li>Dragonbreeds CHP formula is <code>CON Score +3</code>.</li>\n</ul>\n<h3>Dragons</h3>\n<p>All dragons have tails that can be targeted. They have the same targeting rules as legs. Any armor that provides protection to legs, will also provide protection to tails.</p>\n<h3>Physical Description</h3>\n<p>A healthy dragonbreed typically stands between 5&frac34;-7&rsquo;, and weighs between 180-350 lbs. The males are significantly larger than the females, usually towering a good foot above them. Male and female dragonbreed begin to grow out their claws as they reach adulthood. These claws are considered a badge of adulthood, and are well taken care of. Dragonbreed have thin scales covering their body, which can range in a multitude of colors, but the most common colors being red, blue, green, yellow, brown, and black. Dragonbreed do not have hair. The average dragonbreed lifespan is 340 years, reaching physical adulthood between the ages of 40-45.</p>\n<h3>Language</h3>\n<p>The native language of a dragonbreed depends on their background. The will often speak Tiahma or Lungdao.</p>\n<h3>Names</h3>\n<p>Dragonbreeds have one name, given to them at birth. This name can span multiple words, however.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "label": "Racial Effects",
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 5,
+          "value": "Dragonbreed"
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium"
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "13"
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)+3"
+        },
+        {
+          "key": "system.ml.formula",
+          "mode": 5,
+          "value": "((6+@wis.score)*@lvl)+30"
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!qHBb4t8ATtDkfLfj.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.zS0jXga6Qoca176p"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1683080538905,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "qHBb4t8ATtDkfLfj",
+  "_key": "!items!qHBb4t8ATtDkfLfj"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Field Vest",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/kevlar-vest.svg",
+  "system": {
+    "description": "<p>This vest is an updated version of the flak vest, increasing it&rsquo;s protection against shrapnel and providing some light ballistic protection at the cost of weight. This armor was created by Blackghost</p>\n<h3>Special Notes</h3>\n<p>This Armor can accept a single set of Armor Plates.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 2,
+    "agiMax": 4,
+    "penalty": -2,
+    "cpLoss": 1,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Piercing, Slashing",
+        "value": 6
+      },
+      "xing99l9": {
+        "name": "Ballistic",
+        "value": 2
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 30,
+      "max": 30
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 5,
+      "cost": 18,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.DAdXDLXIGdKR9WN6"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682705606670,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "zPXY5tprcvMos6c7",
+  "_key": "!items!zPXY5tprcvMos6c7"
+}

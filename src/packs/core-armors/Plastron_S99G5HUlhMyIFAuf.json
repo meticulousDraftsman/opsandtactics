@@ -1,0 +1,65 @@
+{
+  "name": "Plastron",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/plastron.svg",
+  "system": {
+    "description": "<p>Fencers wear this quilted canvas armor, which protects the torso, arms, and groin against parries, thrust, and swipes from foils, epees, and sabres.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms of the wearer, providing DR and Defense to all listed areas.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 2,
+    "agiMax": 4,
+    "penalty": -1,
+    "cpLoss": 0,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Piercing, Slashing",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 32,
+      "max": 32
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 3,
+      "cost": 10,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {}
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.DAdXDLXIGdKR9WN6"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.7",
+    "coreVersion": "10.291",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1682705728154,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "S99G5HUlhMyIFAuf",
+  "_key": "!items!S99G5HUlhMyIFAuf"
+}

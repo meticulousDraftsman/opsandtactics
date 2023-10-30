@@ -1,0 +1,109 @@
+{
+  "name": "2 AA Weapon Mods",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "AA: Caseless",
+      "type": "text",
+      "_id": "Kla0N7G565eBqH3c",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>.28 Caseless,,1d12+3,-4,</p><p>.40 Caseless,,2d12+6,-5,</p><p>.20 Hi-Velo Caseless,,4d12+4,-8,</p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!yAqTilfcpiFNMQpC.Kla0N7G565eBqH3c"
+    },
+    {
+      "sort": 200000,
+      "name": "AA: Wattage",
+      "type": "text",
+      "_id": "qZgbdIptPITWvPZv",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>10kW,,1d8-1,,</p><p>15kW,,1d8,,</p><p>25kW,,1d8+1,,</p><p>35kW,,2d8,,</p><p>40kW,,2d8+1,,</p><p>45kW,,2d8+2,,</p><p>50kW,,3d8,,</p><p>65kW,,3d8+2,,</p><p>75kW,,3d8+3,,</p><p>90kW,,4d8,,</p><p>100kW,,4d8+2,,</p><p>120kW,,4d8+4,,</p><p>135kW,,5d8,,</p><p>165kW,,5d8+3,,</p><p>180kW,,6d8+2,,</p><p>200kW,,7d8+1,,</p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!yAqTilfcpiFNMQpC.qZgbdIptPITWvPZv"
+    },
+    {
+      "sort": 300000,
+      "name": "AA: Melee Mods",
+      "type": "text",
+      "_id": "hchqc1OxVNRCy3Yz",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!yAqTilfcpiFNMQpC.hchqc1OxVNRCy3Yz"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "JournalEntry.a4cuHLK9Xqtjsh5M"
+    },
+    "opsandtactics": {
+      "wepMods": true
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.11",
+    "coreVersion": "10.303",
+    "createdTime": 1679783501983,
+    "modifiedTime": 1694806796148,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "yAqTilfcpiFNMQpC",
+  "_key": "!journal!yAqTilfcpiFNMQpC"
+}

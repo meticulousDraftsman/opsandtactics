@@ -1,0 +1,69 @@
+{
+  "name": "Plateau Dwarf (Dominant)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Plateau dwarves can choose between Archaic Weapon Proficiency (Spears) or Archaic Weapon Proficiency (Bows), at 1st level for free.</li>\n<li>Plateau dwarves have a permanent +8 racial bonus to all Athletics checks.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Plateau dwarves are Medium sized creatures.</li>\n<li>Plateau dwarves gain a +3 Racial Recoil Bonus to recoil when using any weapon that has recoil.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy plateau dwarf typically stands between 4-5&frac12;&rsquo;, and weighs between 140-170 lbs. The men are slightly taller than the women on average. The male dwarfs begin to grow a beard right at the beginning of adulthood, which is a prized and cherished possession and badge of manhood, while a female dwarf&rsquo;s hair begins to grow to an impressive length, which is well kept and treasured as a symbol of womanhood. Dwarven skin tone ranges from a light brown to a dark brown, and their hair ranges from light brown to black, usually in a straight texture. The average dwarven lifespan is 145 years, reaching physical adulthood between the ages of 19-25. Plateau dwarven eye color tends to range from dark brown to light hazel.</p>\n<h3>Language</h3>\n<p>The native language of a plateau dwarf is Dvergjar, but many speak, read, and can write in Trade Bant Simplified or Reformed Dwemer.</p>\n<h3>Names</h3>\n<p>Plateau dwarves have two names, the first name usually being an adjective describing them and the second name being a noun, most often an animal or plant, but it is not unheard of to have other nouns besides plants or animals.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "label": "Racial Effects",
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "Plateau Dwarf"
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium"
+        },
+        {
+          "key": "system.stats.recoil.dwarf",
+          "mode": 2,
+          "value": "3"
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "_key": "!items.effects!cCKbLPZ0bUZYMeRu.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Item.zS0jXga6Qoca176p"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1683080710222,
+    "lastModifiedBy": "qDhNdGOjrAc4xpWx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "cCKbLPZ0bUZYMeRu",
+  "_key": "!items!cCKbLPZ0bUZYMeRu"
+}

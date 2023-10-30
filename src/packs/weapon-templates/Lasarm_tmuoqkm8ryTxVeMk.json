@@ -1,0 +1,328 @@
+{
+  "name": "Lasarm",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/laser-blast.svg",
+  "system": {
+    "minimized": false,
+    "description": "<h3>Laser Arms</h3><p>Lasarms function like shotguns using shot, in that the range increment gives a penalty to both ranged attack rolls and damage rolls.</p><p>Lasarms with the single firing mode can perform potshot attacks.</p><h3>Gridshot</h3><p>A gridshot is a burst of loosely controlled plasma or a grid of lasers, fired at a specific area. If a plasarm or lasarm has a grid emitter, it may be used to perform a gridshot attack. Gridshot attacks affects an area and everyone in it, not a specific creature. The character targets a 10’-by-10’ area and makes an attack roll with a −6 penalty; the targeted area has an effective DEF of 10. If the attack succeeds, every creature within the affected area must make a Reflex Saving Throw [TN18]. If they succeed, they take half of the weapon’s damage. A gridshot uses 8 units of Heat, and can only be done if the weapon has enough Heat to support the attack. Gridshot can not perform called shot attacks.</p><h3>Scourshot</h3><p>A scourshot is a sudden fan of lasers that cover an area directly in front of the lasarm, fanning out and striking all those within range. If a lasarm has a scour emitter, it may be used to perform a scourshot attack. The character declares what direction they’re going to fire their scourshot attack. All creatures within a 15’ cone are immediately hit, and the character may roll their damage. A scourshot uses 15 units of Heat and can only be done if the weapon has enough Heat to support the attack. Scourshot can not perform called shot attacks.</p><h3>Focusshot</h3><p>A focusshot is sustained laser burn that is fired and held at a specific target. If a lasarm has a focus emitter, it may be used to perform a focusshot attack. The character targets a specific creature and makes an attack roll with a -6 penalty. If the attack succeeds, the character may roll their damage. The character may spend 5 Combat Points to continue to hold down the trigger of the lasarm and hold the lasarm on the target. If they do, they may roll the lasarm’s damage again, and add it to the original damage. The dice are always the same type as used in the original damage. A focusshot uses 9 units of Heat, and can only be done if the weapon has enough Heat to support the attack.</p><h3>Pulseshot</h3><p>A pulseshot is burst of rapid plasma bolts fired at a specific target. If a plasarm or lasarm has a pulse emitter, it may be used to perform a pulseshot attack. The character targets a specific creature and makes an attack roll with a −6 penalty. If the attack succeeds, the character may roll their damage with 2 extra damage dice plus +1 damage per 10 kW rating the plasma has. The dice are always the same type as used in the original damage. A pulseshot uses 5 units of Heat, and can only be done if the weapon has enough Heat to support the attack. Pulseshot can not perform called shot attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "coolant",
+      "source": "",
+      "value": 0,
+      "max": 0
+    },
+    "range": "5ft",
+    "crit": 16,
+    "error": 0,
+    "weaponMods": {},
+    "actions": {
+      "DCQSn7fm": {
+        "name": "Single Shot (Small)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "D0DvTTfp": {
+        "name": "Single Shot (Medium)",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "EE5NLUJH": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "qIQPlj2t": {
+        "name": "Gridshot",
+        "active": true,
+        "check": {
+          "flavor": "Targets a 10ft by 10ft area with effective DEF 10",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "Reflex Saving Throw [TN18] for half",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 8,
+        "cp": {
+          "inherent": null,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "rxF3m373": {
+        "name": "Pulseshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 5,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "QXvTs6Rg": {
+        "name": "Scourshot",
+        "active": true,
+        "check": {
+          "flavor": "Hits all in a 15ft cone",
+          "type": "noneAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 15,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "zLKw5Plq": {
+        "name": "Focusshot",
+        "active": true,
+        "check": {
+          "flavor": "On hit, can hold trigger",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": 9,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      },
+      "RAzw5dPt": {
+        "name": "Hold Trigger",
+        "active": true,
+        "check": {
+          "flavor": "Roll damage again and add to total",
+          "type": "noneAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Fine",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "NKuOr6HN": {
+          "name": "",
+          "type": "coolant",
+          "value": null,
+          "cool": true
+        }
+      }
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.0POBfVXAfW7gnJLd"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.0.9",
+    "coreVersion": "10.291",
+    "createdTime": 1682749959210,
+    "modifiedTime": 1682753765524,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "tmuoqkm8ryTxVeMk",
+  "_key": "!items!tmuoqkm8ryTxVeMk"
+}
