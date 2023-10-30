@@ -38,5 +38,5 @@ jobs:
           draft: false
           prelelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './system.json, opsandtactics-${{ steps.get-version.outputs.version }}.zip'
+          artifacts: './system.json, opsandtactics.zip'
           tag: ${{ steps.get-version.outputs.version }}
