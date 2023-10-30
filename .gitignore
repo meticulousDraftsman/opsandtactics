@@ -6,4 +6,5 @@ packs/**/MANIFEST
 packs/**/CURRENT
 packs/**/LOG
 packs/**/MANIFEST-*
+*.lock
 node_modules/
