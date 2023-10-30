@@ -33,7 +33,7 @@ jobs:
       
       - name: Add Artifacts to Release
         id: create_version_release
-        uses: ncipollo\release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           name: ${{ github.event.release.name }}
