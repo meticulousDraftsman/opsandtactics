@@ -7,29 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3      
 
       - name: Zip Creation
-        run: |
-          zip                       \
-            --recurse-paths         \
-            ./opsandtactics.zip     \
-            LICENSE.txt             \
-            README.md               \
-            system.json             \
-            template.json           \
-            css/                    \
-            icons/                  \
-            lang                    \
-            lib/                    \
-            module/                 \
-            packs/                  \
-            templates/
+        run: zip -r ./opsandtactics.zip LICENSE.txt README.md system.json template.json css/ icons/ lang/ lib/ module/ packs/ templates/
       
       - name: Add Artifacts to Release
         id: create_version_release
