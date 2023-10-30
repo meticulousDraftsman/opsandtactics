@@ -16,11 +16,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
       - run: npm install -g @foundryvtt/foundryvtt-cli
       - run: fvtt configure set "dataPath" ${GITHUB_WORKSPACE}
       - run: fvtt package workon "opsandtactics" --type "System"
       
-      - name: Create Packs from Source
       - run: fvtt package pack "aa-armors" --in "src/packs/aa-armors" --out "packs"
       - run: fvtt package pack "aa-melee-weapons" --in "src/packs/aa-melee-weapons" --out "packs"
       - run: fvtt package pack "aa-races" --in "src/packs/aa-races" --out "packs"
