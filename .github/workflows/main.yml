@@ -1,5 +1,19 @@
 name: System Release Building
 
+env:
+  # The URL used for the module's "Project URL" link on FoundryVTT's website.
+  project_url: "https://github.com/${{github.repository}}"
+
+  # A URL that will always point to the latest manifest.
+  # FoundryVTT uses this URL to check whether the current module version that
+  # is installed is the latest version. This URL should NOT change,
+  # otherwise FoundryVTT won't be able to perform this check.
+  latest_manifest_url: "https://github.com/${{github.repository}}/releases/latest/download/module.json"
+
+  # The URL to the module archive associated with the module release being
+  # processed by this workflow.
+  release_module_url: "https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.zip"
+  
 on:
   release:
     types: [published]
@@ -7,6 +21,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3      
