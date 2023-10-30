@@ -1,4 +1,19 @@
 {
+    "TYPES":{
+        "Actor":{
+            "character":"Character",
+            "vehicle":"Vehicle",
+            "spacecraft":"Spacecraft"
+        },
+        "Item":{
+            "weapon":"Weapon",
+            "armor":"Armor",
+            "skill":"Skill",
+            "object":"Object",
+            "feature":"Feature",
+            "magic":"Magic"
+        }
+    },
     "OATS":{
         "abilities":{
             "str": "Strength",
