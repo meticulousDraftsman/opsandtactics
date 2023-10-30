@@ -8,7 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3      
+      - name: Checkout Repository
+        uses: actions/checkout@v3      
 
       - name: Zip Creation
         run: zip -r ./opsandtactics.zip LICENSE.txt README.md system.json template.json css/ icons/ lang/ lib/ module/ packs/ templates/
