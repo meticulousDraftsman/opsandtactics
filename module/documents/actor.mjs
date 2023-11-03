@@ -237,7 +237,7 @@ export class OpsActor extends Actor {
         }
         if (entry.check.misc) entry.check.total += ` ${(entry.check.misc.charAt(0)=='-' || entry.check.misc.charAt(0)=='+')?'':'+'}${entry.check.misc}`;
       }
-      if (entry.ammo.source){
+      if (entry.ammo?.source){
         const dualID = entry.ammo.source.split(',');
         const resource = getProperty(this.items.get(dualID[0]),dualID[1]);
         entry.linked = {
@@ -741,14 +741,23 @@ export class OpsActor extends Actor {
     switch (this.type){
       case 'character':
         if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.characterActions;
-        if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)];
+        if (!hasProperty(data,'img')){
+          updates['img'] = CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)];
+          updates['prototypeToken.texture.src'] = updates['img'];
+        }
         break;
       case 'vehicle':
         if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.vehicleActions;
-        if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.vehicleIcons[Math.floor(Math.random()*CONFIG.OATS.vehicleIcons.length)];
+        if (!hasProperty(data,'img')){
+          updates['img'] = CONFIG.OATS.vehicleIcons[Math.floor(Math.random()*CONFIG.OATS.vehicleIcons.length)];
+          updates['prototypeToken.texture.src'] = updates['img'];
+        } 
         break;
       case 'spacecraft':
-        if (!hasProperty(data,'img')) updates['img'] = CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)];
+        if (!hasProperty(data,'img')){
+          updates['img'] = CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)];
+          updates['prototypeToken.texture.src'] = updates['img'];
+        } 
         break;
     }
     if(!isEmpty(updates)) return this.updateSource(updates);

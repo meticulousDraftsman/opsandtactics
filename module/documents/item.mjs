@@ -566,6 +566,9 @@ export class OpsItem extends Item {
         case 'skill':
           updates["name"] = this.name.replace('Item','Skill')
           break;
+        case 'object':
+          updates["name"] = this.name.replace('Item','Object')
+          break;          
         case 'feature':
           updates["name"] = this.name.replace('Item','Feature')
           break;
