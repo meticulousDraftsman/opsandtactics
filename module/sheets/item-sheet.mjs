@@ -67,6 +67,7 @@ export class OpsItemSheet extends ItemSheet {
           entries = [];
           strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
           for (let i of strip){
+            if (i.textContent=='') continue;
             entries.push({label:i.textContent.split(',',1),value:i.textContent})
           }
           if (hasProperty(importableMods,`${pe.name}.entries`)){
@@ -74,6 +75,7 @@ export class OpsItemSheet extends ItemSheet {
           }
           else {
             setProperty(importableMods,`${pe.name}.entries`,entries);
+            setProperty(importableMods,`${pe.name}.name`,pe.name)
           }
         }
       }
@@ -89,6 +91,7 @@ export class OpsItemSheet extends ItemSheet {
               entries = [];
               strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
               for (let i of strip){
+                if (i.textContent=='') continue;
                 entries.push({label:i.textContent.split(',',1),value:i.textContent})
               }
               if (hasProperty(importableMods,`${pe.name}.entries`)){
@@ -96,6 +99,7 @@ export class OpsItemSheet extends ItemSheet {
               }
               else {
                 setProperty(importableMods,`${pe.name}.entries`,entries);
+                setProperty(importableMods,`${pe.name}.name`,pe.name)
               }
             }
           }
@@ -475,6 +479,7 @@ class AttackEditApp extends FormApplication {
         cp: {}
       } 
     }
+    if (getProperty(context,'attack.object.effect.scaleCartridge.bar') > 0) context.attack.object.effect.scaleCartridge.lessBar = context.attack.object.effect.scaleCartridge.bar - 1;
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
       for (let imp of ['check','effect','recoil','cp']){
         if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:this.object.system.actions[this.options.target][imp].mods[key]?.active}

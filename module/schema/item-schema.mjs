@@ -184,6 +184,34 @@ export class ResourceConsumable extends foundry.abstract.DataModel{
         }
     }
 }
+export class ResourceCartridge extends foundry.abstract.DataModel{
+    static defineSchema(){
+        return{
+            name: new field.StringField(),
+            type: new field.StringField({initial:'cartridge'}),
+            value: new field.NumberField(),
+            max: new field.NumberField(),
+            flavor: new field.StringField(),
+            cartridge: new field.SchemaField({
+                check: new field.NumberField(),
+                error: new field.NumberField(),
+                recoil: new field.NumberField(),
+                effect: new field.SchemaField({
+                    good: new field.SchemaField({
+                        primary: new field.StringField(),
+                        secondary: new field.StringField(),
+                        extra: new field.StringField()
+                    }),
+                    bad: new field.SchemaField({
+                        primary: new field.StringField(),
+                        secondary: new field.StringField(),
+                        extra: new field.StringField()
+                    })
+                })
+            })
+        }
+    }
+}
 export class ResourceCoolant extends foundry.abstract.DataModel{
     static defineSchema(){
         return{

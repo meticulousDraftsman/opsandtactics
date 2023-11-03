@@ -62,56 +62,59 @@
             </fieldset>
             <fieldset>
                 <legend class="resource-label">
-                    Weapon Modifiers
+                    Weapon Modifiers 
                 </legend>
                 <div class="grid grid-10col flex-group-center">
-                    <select class="filter-select grid-span-3" name="system.importFilter" data-dtype="String">
-                    {{#select system.importFilter}}
-                        <option value="">Create New</option>
-                        {{#each importableMods}}
-                        <option value="{{@key}}">{{@key}}</option>
-                        {{/each}}
-                    {{/select}}
+                    <select class="filter-select grid-span-4" name="system.importFilter" data-dtype="String">
+                        {{selectOptions importableMods selected=system.importFilter nameAttr="name" labelAttr="name" blank="Create New"}}
                     </select>
-                    <ol class="items-list flex-group-center grid-span-7">
-                        <li class="item items-header resource-label grid grid-7col">
-                            <div>To-Hit</div>
-                            <div class="grid-span-3">Damage</div>
-                            <div>Recoil</div>
-                            <div>CP</div>
+                    {{#if (eq system.importFilter "")}}
+                    <span class="grid-span-6"></span>
+                    {{else}}
+                    <select class="grid-span-6" name="system.importMod" data-dtype="String" >
+                        {{#with (lookup importableMods @root.system.importFilter)}}
+                        {{selectOptions this.entries selected=@root.system.importMod nameAttr="value" labelAttr="label" blank=""}}
+                        {{/with}}
+                    </select>
+                    {{/if}}
+                    <ol class="items-list flex-group-center grid-span-10">
+                        <li class="item items-header resource-label grid grid-8col">
+                            <span>To-Hit</span>
+                            <span class="grid-span-3">Flat Damage</span>
+                            <span class="grid-span-1">Extra Dice</span>
+                            <span>Recoil</span>
+                            <span>CP</span>
                             <a class="item-control sub-create" data-target-name="weaponMods" data-tooltip="Add Weapon Modifier"><i class="fas fa-plus"></i></a>
                         </li>
+                        <li></li>
+                        {{#unless (eq system.importFilter "")}}
+                        <li class="item grid grid-8col">
+                            <input type="text" value="{{item.readyMod.check}}" readonly>
+                            <input class="grid-span-3" type="text" value="{{item.readyMod.effect}}" readonly>
+                            <input type="text" value="" readonly>
+                            <input type="text" value="{{item.readyMod.recoil}}" readonly>
+                            <input type="text" value="{{item.readyMod.cp}}" readonly>
+                            <i class="grid-span-8">{{item.readyMod.description}}</i>
+                        </li>
+                        {{/unless}}
                     </ol>
-                    {{#unless (eq system.importFilter "")}}
-                    <select class="grid-span-3" name="system.importMod" data-dtype="String">
-                    {{#select system.importMod}}
-                        <option value=""></option>
-                            {{#with (lookup importableMods @root.system.importFilter)}}
-                            {{#each this.entries}}
-                                <option value="{{this.value}}">{{this.label}}</option>>
-                            {{/each}}
-                            {{/with}}
-                    {{/select}}
-                    </select>
-                    <input type="text" value="{{item.readyMod.check}}" readonly>
-                    <input class="grid-span-3" type="text" value="{{item.readyMod.effect}}" readonly>
-                    <input type="text" value="{{item.readyMod.recoil}}" readonly>
-                    <input type="text" value="{{item.readyMod.cp}}" readonly>
-                    <div></div>
-                    <i class="grid-span-10">{{item.readyMod.description}}</i>
-                    {{/unless}}
                 </div>
+                {{#each system.weaponMods}}
+
+                {{/each}}
                 <hr>
                 <ol class="items-list flex-group-center">
                     {{#each system.weaponMods}}
-                    <li class="grid grid-10col">
+                    <li class="grid grid-8col flex-group-center">
                         <input class="grid-span-3" name="system.weaponMods.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String" placeholder="Source"/>
-                        <input name="system.weaponMods.{{@key}}.check" type="text" value="{{this.check}}" data-dtype="String" placeholder="0"/>
-                        <input class="grid-span-3" name="system.weaponMods.{{@key}}.effect" type="text" value="{{this.effect}}" data-dtype="String" placeholder="0"/>
-                        <input name="system.weaponMods.{{@key}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number" placeholder="0"/>
-                        <input name="system.weaponMods.{{@key}}.cp" type="text" value="{{this.cp}}" data-dtype="Number" placeholder="0"/>
+                        <input class="grid-span-5 flex-group-left" name="system.weaponMods.{{@key}}.description" type="text" value="{{this.description}}" data-dtype="String" placeholder="Description"/>
+                        <input name="system.weaponMods.{{@key}}.check" type="text" value="{{this.check}}" data-dtype="String" placeholder="0" data-tooltip="To-Hit"/>
+                        <input class="grid-span-3" name="system.weaponMods.{{@key}}.effect" type="text" value="{{this.effect}}" data-dtype="String" placeholder="0d0 + 0" data-tooltip="Flat Damage"/>
+                        <input name="" type="text" value="" data-dtype="Number" placeholder="0" data-tooltip="Extra Dice" readonly/>
+                        <input name="system.weaponMods.{{@key}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number" placeholder="0" data-tooltip="Recoil"/>
+                        <input name="system.weaponMods.{{@key}}.cp" type="text" value="{{this.cp}}" data-dtype="Number" placeholder="0" data-tooltip="Combat Points"/>
                         <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" data-tooltip="Remove Modifier"><i class="fas fa-trash"></i></a>
-                        <input class="grid-span-10 flex-group-left" name="system.weaponMods.{{@key}}.description" type="text" value="{{this.description}}" data-dtype="String" placeholder="Description"/>
+                        
                     </li>
                     {{#if @last}}
                     {{else}}
@@ -134,8 +137,9 @@
                 {{#each system.actions}}
                 <fieldset class="attack">
                     <legend>
-                        <div class="flexrow flex-group-center">
-                          <input name="system.actions.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String"> <a class="item-control sub-delete flex0" data-target-name="actions" data-remove-target="{{@key}}" data-tooltip="Remove Attack"> <i class="fas fa-trash"></i></a>
+                        <div class="grid grid-10col flex-group-center">
+                          <input class="grid-span-9" name="system.actions.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String">
+                          <a class="item-control sub-delete" data-target-name="actions" data-remove-target="{{@key}}" data-tooltip="Remove Attack"> <i class="fas fa-trash"></i></a>
                         </div>
                     </legend>
                     <ol class="items-list">

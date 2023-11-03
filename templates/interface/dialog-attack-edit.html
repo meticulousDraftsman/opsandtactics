@@ -20,6 +20,12 @@
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Ammunition Effects</legend>
+                <div class="grid grid-4col flex-group-center">
+                    <span>To-Hit</span>
+                    <input type="text" value="" readonly>
+                    <span>Error Range</span>
+                    <input type="text" value="%" readonly>
+                </div>
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Attack-Applicable Weapon Mods</legend>
@@ -38,7 +44,7 @@
             <fieldset>
                 <legend class="resource-label">Attack-Specific Modifiers</legend>
                 <div class="grid grid-4col flex-group-center">
-                    <span>Recoil?</span>
+                    <span>Recoil Applicable?</span>
                     <div class="flex-group-center">
                         <input name="system.actions.{{attack.id}}.recoil.active" type="checkbox" {{checked attack.object.recoil.active}}>
                     </div>
@@ -49,6 +55,10 @@
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Ammunition Effects</legend>
+                <div class="grid grid-4col flex-group-center">
+                    <span class="grid-span-2">Caliber Recoil Penalty (CRP)</span>
+                    <input type="text" value="" readonly>
+                </div>
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Attack-Applicable Weapon Mods</legend>
@@ -66,15 +76,35 @@
         <div class="tab" data-group="primary" data-tab="effect">
             <fieldset>
                 <legend class="resource-label">Attack-Specific Modifiers</legend>
-                <div class="grid grid-4col flex-group-center">
-                    <span>Damage</span>
-                    <input name="system.actions.{{attack.id}}.effect.inherent" value="{{attack.object.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack">
-                    <div class="grid-span-2 flexrow flex-group-center">
+                <div class="grid grid-8col flex-group-center">
+                    <span class="grid-span-2">Damage</span>
+                    <input class="grid-span-2" name="system.actions.{{attack.id}}.effect.inherent" value="{{attack.object.effect.inherent}}" type="text" data-dtype="String" placeholder="From Attack">
+                    <div class="grid-span-4 flexrow flex-group-center">
                         <select class="flex3 flex-group-center" name="system.actions.{{attack.id}}.effect.ability" data-dtype="String">
                             {{selectOptions OATS.abilityShort selected=attack.object.effect.ability localize=true blank="Ability"}}
                         </select>
                         <i class="fas fa-times flex1"></i>
                         <input class="flex2" name="system.actions.{{attack.id}}.effect.scaleAbility" value="{{attack.object.effect.scaleAbility}}" type="text" data-dtype="Number" placeholder="Mult">
+                    </div>
+                    <span class="grid-span-2">Ammo Scaling</span>
+                    <div class="grid-start-3 grid-span-6 grid grid-9col flex-group-center">
+                        <span class="grid-span-3">For damage with</span>
+                        <input type="text" value="{{attack.object.effect.scaleCartridge.lessBar}}" readonly>
+                        <span class="grid-span-3">or less dice gain</span>
+                        <input name="system.actions.{{attack.id}}.effect.scaleCartridge.less" value="{{attack.object.effect.scaleCartridge.less}}" type="text" data-dtype="Number" placeholder="0">
+                        <span>{{#if (eq attack.object.effect.scaleCartridge.less 1)}}die.{{else}}dice.{{/if}}</span>
+                        <span class="grid-span-3">For damage with</span>
+                        <input name="system.actions.{{attack.id}}.effect.scaleCartridge.bar" value="{{attack.object.effect.scaleCartridge.bar}}" type="text" data-dtype="Number" placeholder="0">
+                        <span class="grid-span-3">or more dice gain</span>
+                        <input name="system.actions.{{attack.id}}.effect.scaleCartridge.more" value="{{attack.object.effect.scaleCartridge.more}}" type="text" data-dtype="Number" placeholder="0">
+                        <span>{{#if (eq attack.object.effect.scaleCartridge.more 1)}}die.{{else}}dice.{{/if}}</span>
+                        <span class="grid-span-2">For every</span>
+                        <input name="system.actions.{{attack.id}}.effect.scaleCartridge.per" value="{{attack.object.effect.scaleCartridge.per}}" type="text" data-dtype="Number" placeholder="0">
+                        <span class="grid-span-2">{{#if (eq attack.object.effect.scaleCartridge.per 1)}}die{{else}}dice{{/if}} past</span>
+                        <input type="text" value="{{attack.object.effect.scaleCartridge.bar}}" readonly>
+                        <span>gain</span>
+                        <input name="system.actions.{{attack.id}}.effect.scaleCartridge.scale" value="{{attack.object.effect.scaleCartridge.scale}}" type="text" data-dtype="Number" placeholder="0">
+                        <span>{{#if (eq attack.object.effect.scaleCartridge.scale 1)}}die.{{else}}dice.{{/if}}</span>
                     </div>
                 </div>
             </fieldset>
@@ -101,9 +131,6 @@
                     <span>Combat Points</span>
                     <input name="system.actions.{{attack.id}}.cp.inherent" value="{{attack.object.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack">
                 </div>
-            </fieldset>
-            <fieldset>
-                <legend class="resource-label">Ammunition Effects</legend>
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Attack-Applicable Weapon Mods</legend>
