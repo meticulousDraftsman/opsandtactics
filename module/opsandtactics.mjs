@@ -384,57 +384,133 @@ function _manageOpsStatusEffects(){
 function addChatContext(html, options){
   let canApply = li => {
     const message = game.messages.get(li.data("messageId"));
-    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0;
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message?.rolls?.length>0;
   };
+  let oneRoll = li => {
+    const message = game.messages.get(li.data("messageId"));
+    return message?.rolls?.length==1;
+  }
+  let twoRoll = li => {
+    const message = game.messages.get(li.data("messageId"));
+    return message?.rolls?.length==2;
+  }
+  let moreRoll = li => {
+    const message = game.messages.get(li.data("messageId"));
+    return message?.rolls?.length>=3;
+  }
   let checkShip = li => {
     const message = game.messages.get(li.data("messageId"));
-    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker?.actor)?.type==='spacecraft' && canvas.tokens.controlled[0].actor.type==='character';
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker?.actor)?.type==='spacecraft' && canvas.tokens.controlled[0].actor.type!=='spacecraft';
   }
-  let checkPerson = li => {
+  let checkPersonal = li => {
     const message = game.messages.get(li.data("messageId"));
-    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker?.actor)?.type==='character' && canvas.tokens.controlled[0].actor.type==='spacecraft';
+    return message?.isRoll && message?.isContentVisible && canvas.tokens?.controlled.length && message.rolls.length > 0 && game.actors.get(message?.speaker?.actor)?.type!=='spacecraft' && canvas.tokens.controlled[0].actor.type==='spacecraft';
   }
   options.push(
     {
-      name: 'Add to incoming damage',
+      name: 'Add total to incoming damage',
       icon: '<i class="fas fa-heart-broken"></i>',
       condition: canApply,
-      callback: li => applyChatDamage(li, 1)
+      callback: li => applyChatDamage(li, -1, 1)
     },
     {
-      name: 'Add half to incoming damage',
+      name: 'Add half of total to incoming',
       icon: '<i class="fas fa-heart"></i>',
       condition: canApply,
-      callback: li => applyChatDamage(li, 0.5)
+      callback: li => applyChatDamage(li, -1, 0.5)
     },
     {
-      name: 'Add quarter to incoming damage',
+      name: 'Add quarter of total to incoming',
       icon: '<i class="fas fa-hand-holding-heart"></i>',
       condition: canApply,
-      callback: li => applyChatDamage(li, 0.25)
+      callback: li => applyChatDamage(li, -1, 0.25)
     },
     {
-      name: 'Add tenfold to incoming damage',
-      icon: '<i class="fas fa-rocket"></i>',
-      condition: (checkShip),
-      callback: li => applyChatDamage(li, 10)
+      name: 'Add first roll to incoming damage',
+      icon: '<i class="fas fa-heart-broken"></i>',
+      condition: (canApply && (twoRoll || moreRoll)),
+      callback: li => applyChatDamage(li, 0, 1)
     },
     {
-      name: 'Add fifth to incoming damage',
+      name: 'Add half of first to incoming',
+      icon: '<i class="fas fa-heart"></i>',
+      condition: (canApply && (twoRoll || moreRoll)),
+      callback: li => applyChatDamage(li, 0, 0.5)
+    },
+    {
+      name: 'Add quarter of first to incoming',
+      icon: '<i class="fas fa-hand-holding-heart"></i>',
+      condition: (canApply && (twoRoll || moreRoll)),
+      callback: li => applyChatDamage(li, 0, 0.25)
+    },
+    {
+      name: 'Add second roll to incoming damage',
+      icon: '<i class="fas fa-heart-broken"></i>',
+      condition: (canApply && (twoRoll || moreRoll)),
+      callback: li => applyChatDamage(li, 1, 1)
+    },
+    {
+      name: 'Add half of second to incoming',
+      icon: '<i class="fas fa-heart"></i>',
+      condition: (canApply && (twoRoll || moreRoll)),
+      callback: li => applyChatDamage(li, 1, 0.5)
+    },
+    {
+      name: 'Add quarter of second to incoming',
+      icon: '<i class="fas fa-hand-holding-heart"></i>',
+      condition: (canApply && (twoRoll || moreRoll)),
+      callback: li => applyChatDamage(li, 1, 0.25)
+    },
+    {
+      name: 'Add third roll to incoming damage',
+      icon: '<i class="fas fa-heart-broken"></i>',
+      condition: (canApply && moreRoll),
+      callback: li => applyChatDamage(li, 2, 1)
+    },
+    {
+      name: 'Add half of third to incoming',
+      icon: '<i class="fas fa-heart"></i>',
+      condition: (canApply && moreRoll),
+      callback: li => applyChatDamage(li, 2, 0.5)
+    },
+    {
+      name: 'Add quarter of third to incoming',
+      icon: '<i class="fas fa-hand-holding-heart"></i>',
+      condition: (canApply && moreRoll),
+      callback: li => applyChatDamage(li, 2, 0.25)
+    },
+    {
+      name: 'Add tenfold of total to incoming damage',
       icon: '<i class="fas fa-rocket"></i>',
-      condition: (checkPerson),
-      callback: li => applyChatDamage(li, .2)
+      condition: checkShip,
+      callback: li => applyChatDamage(li, -1, 10)
+    },
+    {
+      name: 'Add fifth of total to incoming damage',
+      icon: '<i class="fas fa-rocket"></i>',
+      condition: checkPersonal,
+      callback: li => applyChatDamage(li, -1, .2)
     }
   );
   return options;
 }
-function applyChatDamage(li, multiplier) {
+async function applyChatDamage(li, rollNum, multiplier) {
   const message = game.messages.get(li.data("messageId"));
-  const roll = message.rolls[0];
+  console.debug(game.actors.get(message?.speaker?.actor)?.type==='spacecraft')
+  let damage = 0;
+  if (rollNum>=0){
+    damage = Number(message.rolls[rollNum].total);
+  }
+  else{
+    for (let r of message.rolls){
+      damage += Number(r.total);
+    }
+  }
+  if (damage==0) return;
   return Promise.all(canvas.tokens.controlled.map(t => {
     const a = t.actor;
     if (!a.isOwner) return a;
-    const updateData = {['system.health.incoming']:getProperty(a,'system.health.incoming')+Math.floor(Number(roll.total)*multiplier)};
+    const updateData = {['system.health.incoming']:getProperty(a,'system.health.incoming')+Math.floor(damage*multiplier)};
     return a.update(updateData);
   }));
 }
