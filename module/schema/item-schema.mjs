@@ -110,6 +110,7 @@ export class WeaponMod extends foundry.abstract.DataModel{
             description: new field.StringField(),
             check: new field.StringField({initial:null,nullable:true}),
             effect: new field.StringField({initial:null,nullable:true}),
+            dice: new field.NumberField({initial:null,nullable:true}),
             recoil: new field.NumberField({initial:null,nullable:true}),
             cp: new field.NumberField({initial:null,nullable:true})
         }
@@ -158,6 +159,16 @@ export class WeaponAttack extends foundry.abstract.DataModel{
                 inherent: new field.StringField(),
                 ability: new field.StringField(),
                 scaleAbility: new field.NumberField({initial:1}),
+                mods: new field.ObjectField()
+            }),
+            dice: new field.SchemaField({
+                scaleCartridge: new field.SchemaField({
+                    less: new field.NumberField(),
+                    bar: new field.NumberField(),
+                    more: new field.NumberField(),
+                    per: new field.NumberField(),
+                    scale: new field.NumberField()
+                }),
                 mods: new field.ObjectField()
             }),
             recoil: new field.SchemaField({

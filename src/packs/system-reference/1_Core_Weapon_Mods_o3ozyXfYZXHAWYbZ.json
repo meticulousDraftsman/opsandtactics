@@ -13,7 +13,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>Ported Barrel,,,+1,</p><p>Match Barrel (Match Ammo),+3,,,</p><p>Match Barrel (Supermatch Ammo),+4,,,</p><p>Precision Barrel (Standard Ammo),+1,,,</p><p>Precision Barrel (Match Ammo),+2,,,</p><p>Slug Barrel (Slug),+2,,,</p><p>Slug Barrel (Non-Slug),-4,,,</p><p>Compact Barrel,-1,,,</p><p>Muzzle Brake,,,+3,</p><p>Compensator,,,+2,</p>",
+        "content": "<p>Ported Barrel | | | | +1 | | Cannot also be threaded</p><p>Match Barrel (Match Ammo) | +3 | | | | | Cannot also be precision</p><p>Match Barrel (Supermatch Ammo) | +4 | | | | | Cannot also be precision</p><p>Precision Barrel (Standard Ammo) | +1 | | | | | Cannot also be match</p><p>Precision Barrel (Match Ammo) | +2 | | | | | Cannot also be match</p><p>Slug Barrel (Slug) | +2 | | | | | Slugs ignore range penalty to damage</p><p>Slug Barrel (Non-Slug) | -4 | | | | |</p><p>Choked Barrel (Bird) | +3 | | | | |</p><p>Choked Barrel (Buck) | +1 | | | | |</p><p>Choked Barrel (Other) | -2 | | | | | Non-birdshot and non-buckshot</p><p>Compact Barrel | -1 | | | | | Attack penalty to all attacks, no other barrel upgrades</p><p>Muzzle Brake | | | | +3 | | Barrel must be threaded</p><p>Compensator | | | | +2 | | Cannot also be threaded or ported</p>",
         "markdown": ""
       },
       "video": {
@@ -26,6 +26,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699046914325,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.586ezkcx6nD8j7ib"
     },
     {
@@ -40,7 +48,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>Balanced Red Dot Sight,+1,,,</p><p>Quick Red Dot Sight,+2,,,</p><p>Ghost Ring Sight,+2,,,</p><p>Balanced Advanced Combat Sight,+1,,,</p>",
+        "content": "<p>Balanced Red Dot Sight | +1 | | | | | Attack bonus to all within first five range increments</p><p>Quick Red Dot Sight | +2 | | | | | Attack bonus to all within first range increment</p><p>Ghost Ring Sight | +2 | | | | | Attack bonus to all within first four range increments</p><p>Balanced Advanced Combat Sight | +1 | | | | | Attack bonus to all within first five range increments</p><p>Standard Laser (Single) | +1 | | | | | Attack bonus to single shots within first range increment, cannot combine with other sight attack bonuses</p><p>Standard Laser (Potshot) | +2 | | | | | Attack bonus to potshots within first range increment, cannot combine with other sight attack bonuses</p><p>Infrared Laser | +1 | | | | | Attack bonus to single shots and potshots within first two range increments, cannot combine with other sight attack bonuses</p>",
         "markdown": ""
       },
       "video": {
@@ -53,11 +61,19 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699046678123,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.kbQIvhVFnnN9qN5o"
     },
     {
       "sort": 287500,
-      "name": "Core: Tactical",
+      "name": "Core: Tactical/Frame",
       "type": "text",
       "_id": "TjRpfLgA9vwbRN2p",
       "title": {
@@ -67,7 +83,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>Laser Sight (Singleshot/IR),+1,,,</p><p>Laser Sight (Potshot),+2,,,</p><p>Vertical Foregrip,,,+2,</p><p>Angled Foregrip,+2,,,</p><p>Magazine Foregrip,,,+1,</p><p>Vertical Grippod,+1,,+1,</p>",
+        "content": "<p><span style=\"font-family:Roboto, sans-serif\">Standard Laser (Single) | +1 | | | | | Attack bonus to single shots within first range increment, cannot combine with other sight attack bonuses</span></p><p style=\"box-sizing:border-box;user-select:text;margin:0.5em 0px;color:rgb(25, 24, 19);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:Roboto, sans-serif\">Standard Laser (Potshot) | +2 | | | | | Attack bonus to potshots within first range increment, cannot combine with other sight attack bonuses</span></p><p style=\"box-sizing:border-box;user-select:text;margin:0.5em 0px;color:rgb(25, 24, 19);font-family:Roboto, sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:Roboto, sans-serif\">Infrared Laser | +1 | | | | | Attack bonus to single shots and potshots within first two range increments, cannot combine with other sight attack bonuses</span></p><p>Vertical Foregrip |  |  |  | +2 |  | </p><p>Angled Foregrip | +2 |  |  |  |  | Attack bonus to single shots and double taps</p><p>Magazine Foregrip |  |  |  | +1 |  | </p><p>Vertical Grippod (Stowed) | +1 |  |  | +1 |  | Attack bonus to single shots and potshots</p><p>Vertical Grippod (Deployed) | +2 |  |  | +1 |  | Attack bonus to single shots, potshot, double taps, and burst fire</p><p>Bipod (Deployed) | +3 |  |  |  |  | Cannot also benefit from grips or slings</p>",
         "markdown": ""
       },
       "video": {
@@ -80,6 +96,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699046583849,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.TjRpfLgA9vwbRN2p"
     },
     {
@@ -94,7 +118,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>Custom Handle,+1,,,</p><p>Personalized Weapon,+4,+1,,-1</p><p>Razor Sharp,,+3,,</p><p>Reinforced,,+2,,</p><p>Weighted,-2,,,</p>",
+        "content": "<p>Custom Handle | +1 |  |  |  |  | Attack bonus to all attacks for owner</p><p>Personalized Weapon | +4 | 1 |  |  | -1 | Attack bonus to all attacks for owner, CP reduction for all actions for owner</p><p>Razor Sharp |  | 3 |  |  |  | </p><p>Reinforced |  | +2 |  |  |  | Damage bonus for bludgeoning attacks</p><p>Weighted | -2 | 1d0 |  |  |  | Attack penalty to all attacks, damage of existing dice</p>",
         "markdown": ""
       },
       "video": {
@@ -107,6 +131,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699048667046,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.O7xSScFhQtxuDFYQ"
     },
     {
@@ -121,7 +153,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>Weapon Specialist,+1,,,-1</p><p>Simple Weapon Specialist,,,,-1</p><p>Autofire Proficiency (Autofire),,,+4,</p><p>Autofire Proficiency (Bumpfire),,,+1,</p><p>Autofire Proficiency (Sweep/Sprayfire),,,+3,</p><p>Burstfire Proficiency,,,+2,</p><p>Autofire Mastery,,,+2,</p><p>Doubletap Proficiency,,,+2,</p><p>Slamfire Proficiency,,,+3,</p><p>Slamfire Mastery,,,+3,</p><p>Favored Type,,+3,,</p><p>Grenadier,+3,,,,</p>",
+        "content": "<p>[Weapon] Specialist | +1 |  |  |  | -1 | Attack bonus and CP reduction for all attacks</p><p>Simple Weapon Specialist |  |  |  |  | -1 | CP reduction for all attacks with chosen weapon</p><p>Autofire Proficiency (Autofire) |  |  |  | +4 |  | Reduces recoil for autofire</p><p>Autofire Proficiency (Bumpfire) |  |  |  | +1 |  | Reduces recoil for bumpfire</p><p>Autofire Proficiency (Sweep/Sprayfire) |  |  |  | +3 |  | Reduces recoil for sweepfire and sprayfire</p><p>Burst Fire Proficiency |  |  |  | +2 |  | Reduces recoil for burst fire</p><p>Autofire Mastery (Most) |  |  |  | +2 |  | Reduces recoil for autofire, sweepfire, sprayfire, and burst fire with three or more rounds</p><p>Autofire Mastery (2RB) |  |  |  | +1 |  | Reduces recoil for burst fire with two rounds</p><p>Double Tap Proficiency |  |  |  | +2 |  | Reduces recoil for double taps</p><p>Slamfire Proficiency |  |  |  | +3 |  | Reduces recoil for slamfires</p><p>Slamfire Expert |  |  |  | +3 |  | Reduces recoil for slamfires</p><p>Favored Type |  | 3 |  |  |  | Damage bonus to weapon attacks with chosen type</p><p>Grenadier | +3 |  |  |  |  | Attack bonus to all thrown explosives and splash weapons</p><p>Rifle Expert |  |  | 2 |  | -1 | Reduces CP for all attacks, damage dice increase for autofire, burst fire, sprayfire and sweepfire with SMGs</p><p>Pistol Expert (Semi) |  |  | 1 |  | -2 | Reduces CP for all attacks, damage dice increase for double taps with non-machine pistols</p><p>Pistol Expert (Machine) |  |  | 2 |  | -2 | Reduces CP for all attacks, damage dice increase for autofire, burst fire, sprayfire, and sweepfire with machine pistols</p><p>Revolver Expert | +2 |  |  |  | -3 | Reduces CP for all attacks, attack bonus for potshots</p><p>Shotgun Expert | +4 |  |  |  | -1 | Reduces CP for all attacks, attack bonus for potshots</p><p>Shotgun Ace |  |  |  |  | -5 | Reduces CP for no-miss shots</p><p>Break Barrel Shotgunner | +3 |  |  |  |  | Attack bonus to all attacks</p><p>Break Barrel Shotgun Expert (Single) |  |  |  |  | -4 | Reduces CP for single shots</p><p>Break Barrel Shotgun Expert (Double) |  |  |  |  | -3 | Reduces CP for doublefire</p>",
         "markdown": ""
       },
       "video": {
@@ -134,6 +166,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699048279646,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.RKwZV8ZNAyclMXzY"
     },
     {
@@ -148,7 +188,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>Custom Grip,+1,,,</p><p>Ergonomic Stock,+3,,,-1</p><p>Fixed Stock,,,+2,-1</p><p>Synthetic Stock,,,,-2</p><p>Buffer Stock,,,+5,</p><p>Bumpfire Stock,+4,,,</p><p>Bumpfire Stock (Singleshot),-2,,,</p><p>Detachable Stock,+1,,+1,</p><p>Integral Stock,,,+2,</p>",
+        "content": "<p>Custom Grip | +1 | | | | | Attack bonus to all attacks for owner</p><p>Ergonomic Stock | +3 | | | | -1 | Attack bonus and CP reduction for single shots for owner</p><p>Fixed Stock | | | | +2 | -1 | Reduces CP for single shots</p><p>Synthetic Stock | | | | | -2 | Reduces CP for single shots</p><p>Buffer Stock | | | | +5 | |</p><p>Bumpfire Stock (Bump) | +4 | | | | | Attack bonus to bumpfire</p><p>Bumpfire Stock (Single/Double) | -2 | | | | | Attack penalty to single shots and double taps</p><p>Detachable Stock | +1 | | | +1 | | Attack bonus to single shots and double taps</p><p>Integral Stock | | | | +2 | |</p><p>Buttpad | | | | +1 | | Requires a stock</p>",
         "markdown": ""
       },
       "video": {
@@ -161,6 +201,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699046898129,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.eZQq5bd2rVXkve3O"
     },
     {
@@ -175,7 +223,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.41 Rimfire,,1,+0,,Rimfire</p><p>.22 Short,,1d2,+0,,Rimfire</p><p>.22 Long Rifle,,2d3,+0,,Rimfire</p><p>.32 Rimfire,,1,-0,,Rimfire</p><p>.17 HMR,,1d4+2,-1,,Rimfire</p><p>.22 WMR,,2d4+2,-2,,Rimfire</p><p>.44 Henry,,2d6+1,-2,,Rimfire</p>",
+        "content": "<p>.41 Rimfire |  | 1 |  | +0 |  | Rimfire</p><p>.22 Short |  | 1d2 |  | +0 |  | Rimfire</p><p>.22 Long Rifle |  | 2d3 |  | +0 |  | Rimfire</p><p>.32 Rimfire |  | 1 |  | +0 |  | Rimfire</p><p>.17 HMR |  | 1d4+2 |  | -1 |  | Rimfire</p><p>.22 WMR |  | 2d4+2 |  | -2 |  | Rimfire</p><p>.44 Henry |  | 2d6+1 |  | -2 |  | Rimfire</p>",
         "markdown": ""
       },
       "video": {
@@ -188,6 +236,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.Z4ArtXk1uw8FXUZc"
     },
     {
@@ -202,7 +258,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.25 ACP,,1d3,+0,,<span style=\"font-family:Roboto, sans-serif\">Light Rimless</span></p><p>.32 ACP,,1d6,-1,,<span style=\"font-family:Roboto, sans-serif\">Light Rimless</span></p><p>7.65mm Longue,,1d4,-1,,<span style=\"font-family:Roboto, sans-serif\">Light Rimless</span></p>",
+        "content": "<p>.25 ACP |  | 1d3 |  | +0 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimless, Tiny Pistol</span></p><p>.32 ACP |  | 1d6 |  | -1 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimless, Tiny Pistol</span></p><p>7.65mm Longue |  | 1d4 |  | -1 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimless, Small Pistol</span></p>",
         "markdown": ""
       },
       "video": {
@@ -215,6 +271,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699049001880,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.OlbQ5FAhoJkqGbaB"
     },
     {
@@ -229,7 +293,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.380 ACP,,2d4,-1,,Intermediate Rimless</p><p>8x22mm Nambu,,2d4,-1,,Intermediate Rimless</p><p>9x18mm PM,,2d4+1,-1,,Intermediate Rimless</p><p>.30 Super Carry,,2d6-1,-2,,Intermediate Rimless</p><p>9x19mm,,2d6,-2,,Intermediate Rimless</p><p>.40 S&amp;W,,3d4,-3,,Intermediate Rimless</p><p>.38 ACP,,2d6+1,-2,,Intermediate Rimless</p><p>.38 Super,,3d4+3,-4,,Intermediate Rimless</p><p>7.63x25mm Mauser,,2d8,-3,,Intermediate Rimless</p><p>.22 TCM,,2d3+3,-1,,Intermediate Rimless</p><p>7.63mm Mannlicher,,1d6+4,-3,,Intermediate Rimless</p><p>.357 Sig,,2d6+2,-3,,Intermediate Rimless</p><p>7.62x25mm Tokarev,,2d8+2,-4,,Intermediate Rimless</p><p>9x23mm Steyr,,2d6+3,-3,,Intermediate Rimless</p>",
+        "content": "<p>.380 ACP |  | 2d4 |  | -1 |  | Intermediate Rimless, Small Pistol</p><p>8x22mm Nambu |  | 2d4 |  | -1 |  | Intermediate Rimless, Small Pistol</p><p>9x18mm PM |  | 2d4+1 |  | -1 |  | Intermediate Rimless, Small Pistol</p><p>.30 Super Carry |  | 2d6-1 | -2 |  |  | Intermediate Rimless, Small Pistol</p><p>9x19mm |  | 2d6 |  | -2 |  | Intermediate Rimless, Small Pistol</p><p>.40 S&amp;W |  | 3d4 |  | -3 |  | Intermediate Rimless, Small Pistol</p><p>.38 ACP |  | 2d6+1 |  | -2 |  | Intermediate Rimless, Small Pistol</p><p>.38 Super |  | 3d4+3 |  | -4 |  | Intermediate Rimless, Small Pistol</p><p>7.63x25mm Mauser |  | 2d8 |  | -3 |  | Intermediate Rimless, Small Pistol</p><p>.22 TCM |  | 2d3+3 |  | -1 |  | Intermediate Rimless, Small Pistol</p><p>7.63mm Mannlicher |  | 1d6+4 |  | -3 |  | Intermediate Rimless, Small Pistol</p><p>.357 Sig |  | 2d6+2 |  | -3 |  | Intermediate Rimless, Large Pistol</p><p>7.62x25mm Tokarev |  | 2d8+2 |  | -4 |  | Intermediate Rimless, Small Pistol</p><p>9x23mm Steyr |  | 2d6+3 |  | -3 |  | Intermediate Rimless, Large Pistol</p>",
         "markdown": ""
       },
       "video": {
@@ -242,6 +306,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699049496870,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.Bi5GAhvBcPWutGOo"
     },
     {
@@ -256,7 +328,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.45 ACP,,3d4+2,-4,,Heavy Rimless</p><p>.45 GAP,,3d4+2,-4,,Heavy Rimless</p><p>10mm Auto,,2d6+4,-4,,Heavy Rimless</p><p>.44 AMP,,3d6,-4,,Heavy Rimless</p><p>.45 Winchester Magnum,,3d6+1,-4,,Heavy Rimless</p><p>.50 GI,,5d3+2,-5,,Heavy Rimless</p><p>.475 Wildey Magnum,,3d6+5,-6,,Heavy Rimless</p><p>.460 Rowland,,4d4+2,-5,,Heavy Rimless</p><p>.50 Action Express,,3d6+2,-5,,Heavy Rimless</p>",
+        "content": "<p>.45 ACP |  | 3d4+2 |  | -4 |  | Heavy Rimless, Large Pistol</p><p>.45 GAP |  | 3d4+2 |  | -4 |  | Heavy Rimless, Large Pistol</p><p>10mm Auto |  | 2d6+4 |  | -4 |  | Heavy Rimless, Large Pistol</p><p>.44 AMP |  | 3d6 |  | -4 |  | Heavy Rimless, Large Pistol</p><p>.45 Winchester Magnum |  | 3d6+1 |  | -4 |  | Heavy Rimless, Large Pistol</p><p>.50 GI |  | 5d3+2 |  | -5 |  | Heavy Rimless, Large Pistol</p><p>.475 Wildey Magnum |  | 3d6+5 |  | -6 |  | Heavy Rimless</p><p>.460 Rowland |  | 4d4+2 |  | -5 |  | Heavy Rimless, Large Pistol</p><p>.50 Action Express |  | 3d6+2 |  | -5 |  | Heavy Rimless, Large Pistol</p>",
         "markdown": ""
       },
       "video": {
@@ -269,6 +341,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699049797042,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.SixBilYuEHk5ngYh"
     },
     {
@@ -283,7 +363,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.38 Long Colt,,1d4,+0,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>.38/200,,1d4+3,-1,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>.38 S&amp;W,,1d4+3,-1,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>.38 Special,,2d4+1,-1,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>.476 Enfield,,1d4,+0,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>9mm Japanese Revolver,,1d6+2,-2,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>7.62x38mmR,,1d8+2,-3,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>.32 S&amp;W Long,,1d4+1,+0,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p><p>.32 H&amp;R Magnum,,1d8+3,-3,,<span style=\"font-family:Roboto, sans-serif\">Light Rimmed</span></p>",
+        "content": "<p>.38 Long Colt |  | 1d4 |  | +0 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Small Pistol</span></p><p>.38/200 |  | 1d4+3 |  | -1 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Small Pistol</span></p><p>.38 S&amp;W |  | 1d4+3 |  | -1 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Small Pistol</span></p><p>.38 Special |  | 2d4+1 |  | -1 |  | L<span style=\"font-family:Roboto, sans-serif\">ight Rimmed, Small Pistol</span></p><p>.476 Enfield |  | 1d4 |  | +0 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Large Pistol</span></p><p>9mm Japanese Revolver |  | 1d6+2 |  | -2 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Small Pistol</span></p><p>7.62x38mmR |  | 1d8+2 |  | -3 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Small Pistol</span></p><p>.32 S&amp;W Long |  | 1d4+1 |  | +0 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Small Pistol</span></p><p>.32 H&amp;R Magnum |  | 1d8+3 |  | -3 |  | <span style=\"font-family:Roboto, sans-serif\">Light Rimmed, Small Pistol</span></p>",
         "markdown": ""
       },
       "video": {
@@ -296,6 +376,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699049971662,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.4mm7Yq8AeurxypMA"
     },
     {
@@ -310,7 +398,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.44 American,,1d6+3,-2,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.44 Russian,,1d6+3,-2,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.45 Schofield,,2d4+3,-2,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.327 Federal Magnum,,2d6+1,-2,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.45 Long Colt,,2d6+3,-3,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.41 Long Colt,,3d4+1,-3,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.455 Webley,,3d4+1,-3,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.357 Magnum,,3d4+3,-4,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.32-20 Winchester,,1d10,-1,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.44 Special,,1d6+6,-4,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.38-40 Winchester,,1d6+5,-3,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.44-40 Winchester,,1d10+5,-5,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.44 Magnum,,3d6,-4,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.454 Casull,,3d6+5,-6,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.500 S&amp;W Special,,5d6+4,-8,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.500 Wyoming Express,,4d6+2,-6,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p><p>.500 S&amp;W Magnum,,7d6,-9,,<span style=\"font-family:Roboto, sans-serif\">Heavy Rimmed</span></p>",
+        "content": "<p>.44 American |  | 1d6+3 | | -2 |  | Heavy Rimmed, Large Pistol</p><p>.44 Russian |  | 1d6+3 | | -2 |  | Heavy Rimmed, Large Pistol</p><p>.45 Schofield |  | 2d4+3 | | -2 |  | Heavy Rimmed</p><p>.327 Federal Magnum |  | 2d6+1 | | -2 |  | Heavy Rimmed, Small Pistol</p><p>.45 Long Colt |  | 2d6+3 | | -3 |  | Heavy Rimmed, Small Pistol</p><p>.41 Long Colt |  | 3d4+1 | | -3 |  | Heavy Rimmed, Small Pistol</p><p>.455 Webley |  | 3d4+1 | | -3 |  | Heavy Rimmed, Large Pistol</p><p>.357 Magnum |  | 3d4+3 | | -4 |  | Heavy Rimmed, Large Pistol</p><p>.32-20 Winchester |  | 1d10 | | -1 |  | Heavy Rimmed, Tiny Pistol</p><p>.44 Special |  | 1d6+6 | | -4 |  | Heavy Rimmed, Large Pistol</p><p>.38-40 Winchester |  | 1d6+5 | | -3 |  | Heavy Rimmed, Small Pistol</p><p>.44-40 Winchester |  | 1d10+5 | | -5 |  | Heavy Rimmed, Large Pistol</p><p>.44 Magnum |  | 3d6 | | -4 |  | Heavy Rimmed, Large Pistol</p><p>.454 Casull |  | 3d6+5 | | -6 |  | Heavy Rimmed, Large Pistol</p><p>.500 S&amp;W Special |  | 5d6+4 | | -8 |  | Heavy Rimmed, Large Pistol</p><p>.500 Wyoming Express |  | 4d6+2 | | -6 |  | Heavy Rimmed, Large Pistol</p><p>.500 S&amp;W Magnum |  | 7d6 | | -9 |  | Heavy Rimmed, Large Pistol</p>",
         "markdown": ""
       },
       "video": {
@@ -323,6 +411,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699050486107,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.vYsjOUwPcddVAMJx"
     },
     {
@@ -337,7 +433,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.17 Remington,,2d6,-2,,Light Rifle</p><p>4.6x30mm,,3d4-1,-3,,Light Rifle</p><p>5.7x28mm,,3d4-1,-3,,Light Rifle</p>",
+        "content": "<p>.17 Remington |  | 2d6 | | -2 |  | Light Rifle, Medium Rifle</p><p>4.6x30mm |  | 3d4-1 | | -3 |  | Light Rifle, Tiny Rifle</p><p>5.7x28mm |  | 3d4-1 | | -3 |  | Light Rifle, Tiny Rifle</p>",
         "markdown": ""
       },
       "video": {
@@ -350,6 +446,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699050604820,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.6qYzqJ0962EmtM11"
     },
     {
@@ -364,7 +468,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.30 Carbine,,3d6+1,-4,,Intermediate Rifle</p><p>5.45x39mm,,4d4+2,-5,,Intermediate Rifle</p><p>5.8x42mm,,5d4,-5,,Intermediate Rifle</p><p>5.56x45mm,,5d4,-5,,Intermediate Rifle</p><p>9x39mm,,4d4+4,-6,,Intermediate Rifle</p><p>6mm Lee Navy,,5d4+2,-6,,Intermediate Rifle</p><p>6.8mm Remington SPC,,5d4+3,-6,,Intermediate Rifle</p>",
+        "content": "<p>.30 Carbine |  | 3d6+1 | | -4 |  | Intermediate Rifle, Small Rifle</p><p>5.45x39mm |  | 4d4+2 | | -5 |  | Intermediate Rifle, Medium Rifle</p><p>5.8x42mm |  | 5d4 | | -5 |  | Intermediate Rifle, Medium Rifle</p><p>5.56x45mm |  | 5d4 | | -5 |  | Intermediate Rifle, Medium Rifle</p><p>9x39mm |  | 4d4+4 | | -6 |  | Intermediate Rifle, Medium Rifle</p><p>6mm Lee Navy |  | 5d4+2 | | -6 |  | Intermediate Rifle, Large Rifle</p><p>6.8mm Remington SPC |  | 5d4+3 | | -6 |  | Intermediate Rifle, Medium Rifle</p>",
         "markdown": ""
       },
       "video": {
@@ -377,6 +481,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699050733653,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.5J6R8brksfWWO4qd"
     },
     {
@@ -391,7 +503,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>6.5mm Creedmoor,,6d4,-7,,Heavy Rifle</p><p>6.5x50mm Arisaka,,4d6,-5,,Heavy Rifle</p><p>7.92x33mm Kurz,,3d8,-5,,Heavy Rifle</p><p>.243 Winchester,,4d6+2,-6,,Heavy Rifle</p><p>.300 AAC Blackout,,4d6,-5,,Heavy Rifle</p><p>.30-30 Winchester,,4d6+1,-5,,Heavy Rifle</p><p>6.5 Grendel,,4d6+1,-5,,Heavy Rifle</p><p>6.5x52mm Carcano,,4d6+2,-6,,Heavy Rifle</p><p>7.62x39mm,,4d6+2,-6,,Heavy Rifle</p><p>.280 British,,4d6+3,-6,,Heavy Rifle</p><p>7.5x54mm French,,4d6+4,-7,,Heavy Rifle</p><p>7.62x51mm,,5d6,-6,,Heavy Rifle</p><p>8mm Lebel,,5d6+1,-6,,Heavy Rifle</p><p>7x57mm Mauser,,5d6+2,-7,,Heavy Rifle</p><p>7.62x54mmR,,5d6+2,-7,,Heavy Rifle</p><p>.303 British,,5d6+3,-7,,Heavy Rifle</p><p>.30-40 Krag,,5d6+4,-8,,Heavy Rifle</p><p>7.7x58mm Arisaka,,5d6+4,-8,,Heavy Rifle</p><p>7.5x55mm Swiss,,5d6+4,-8,,Heavy Rifle</p><p>7.92x57mm Mauser,,5d6+5,-8,,Heavy Rifle</p><p>.30-06 Springfield,,6d6,-8,,Heavy Rifle</p><p>.56-56 Spencer,,2d10+5,-6,,Heavy Rifle</p><p>.45-70 Goverment,,3d10,-6,,Heavy Rifle</p><p>.50-70 Government,,3d10+5,-8,,Heavy Rifle</p><p>.458 SOCOM,,3d12,-7,,Heavy Rifle</p>",
+        "content": "<p>6.5mm Creedmoor |  | 6d4 | | -7 |  | Heavy Rifle, Medium Rifle</p><p>6.5x50mm Arisaka |  | 4d6 | | -5 |  | Heavy Rifle, Medium Rifle</p><p>7.92x33mm Kurz |  | 3d8 | | -5 |  | Heavy Rifle, Large Rifle</p><p>.243 Winchester |  | 4d6+2 | | -6 |  | Heavy Rifle, Medium Rifle</p><p>.300 AAC Blackout |  | 4d6 | | -5 |  | Heavy Rifle, Medium Rifle</p><p>.30-30 Winchester |  | 4d6+1 | | -5 |  | Heavy Rifle, Large Rifle</p><p>6.5 Grendel |  | 4d6+1 | | -5 |  | Heavy Rifle, Large Rifle</p><p>6.5x52mm Carcano |  | 4d6+2 | | -6 |  | Heavy Rifle, Large Rifle</p><p>7.62x39mm |  | 4d6+2 | | -6 |  | Heavy Rifle, Large Rifle</p><p>.280 British |  | 4d6+3 | | -6 |  | Heavy Rifle, Large Rifle</p><p>7.5x54mm French |  | 4d6+4 | | -7 |  | Heavy Rifle, Large Rifle</p><p>7.62x51mm |  | 5d6 | | -6 |  | Heavy Rifle, Large Rifle</p><p>8mm Lebel |  | 5d6+1 | | -6 |  | Heavy Rifle, Large Rifle</p><p>7x57mm Mauser |  | 5d6+2 | | -7 |  | Heavy Rifle, Large Rifle</p><p>7.62x54mmR |  | 5d6+2 | | -7 |  | Heavy Rifle, Large Rifle</p><p>.303 British |  | 5d6+3 | | -7 |  | Heavy Rifle, Large Rifle</p><p>.30-40 Krag |  | 5d6+4 | | -8 |  | Heavy Rifle, Large Rifle</p><p>7.7x58mm Arisaka |  | 5d6+4 | | -8 |  | Heavy Rifle, Large Rifle</p><p>7.5x55mm Swiss |  | 5d6+4 | | -8 |  | Heavy Rifle, Large Rifle</p><p>7.92x57mm Mauser |  | 5d6+5 | | -8 |  | Heavy Rifle, Large Rifle</p><p>.30-06 Springfield |  | 6d6 | | -8 |  | Heavy Rifle, Large Rifle</p><p>.56-56 Spencer |  | 2d10+5 | | -6 |  | Heavy Rifle, Huge Rifle</p><p>.45-70 Goverment |  | 3d10 | | -6 |  | Heavy Rifle, Large Rifle</p><p>.50-70 Government |  | 3d10+5 | | -8 |  | Heavy Rifle, Huge Rifle</p><p>.458 SOCOM |  | 3d12 | | -7 |  | Heavy Rifle, Large Rifle</p>",
         "markdown": ""
       },
       "video": {
@@ -404,6 +516,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699051058388,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.H24nrY82KiaFU6Fn"
     },
     {
@@ -418,7 +538,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.300 Winchester Magnum,,7d6,-9,,Superheavy Rifle</p><p>.338 Lapua Magnum,,7d8,-10,,Superheavy Rifle</p><p>7.92x94mm,,7d8,-10,,Superheavy Rifle</p><p>.50 BMG,,10d8,-16,,Superheavy Rifle</p><p>12.7x108mm,,10d8,-16,,Superheavy Rifle</p><p>13.9x99mmB,,12d8,-19,,Superheavy Rifle</p><p>14.5x114mm,,10d10,-17,,Superheavy Rifle</p><p>20x102mm,,12d10,-20,,Superheavy Rifle</p><p>20x105mm,,12d10,-20,,Superheavy Rifle</p><p>20x125mm,,12d10,-20,,Superheavy Rifle</p>",
+        "content": "<p>.300 Winchester Magnum |  | 7d6 | | -9 |  | Superheavy Rifle, Large Rifle</p><p>.338 Lapua Magnum |  | 7d8 | | -10 |  | Superheavy Rifle, Huge Rifle</p><p>7.92x94mm |  | 7d8 | | -10 |  | Superheavy Rifle, Huge Rifle</p><p>.50 BMG |  | 10d8 | | -16 |  | Superheavy Rifle, Huge Rifle</p><p>12.7x108mm |  | 10d8 | | -16 |  | Superheavy Rifle, Huge Rifle</p><p>13.9x99mmB |  | 12d8 | | -19 |  | Superheavy Rifle, Huge Rifle</p><p>14.5x114mm |  | 10d10 | | -17 |  | Superheavy Rifle, Huge Rifle</p><p>20x102mm |  | 12d10 | | -20 |  | Superheavy Rifle, Huge Rifle</p><p>20x105mm |  | 12d10 | | -20 |  | Superheavy Rifle, Huge Rifle</p><p>20x125mm |  | 12d10 | | -20 |  | Superheavy Rifle, Huge Rifle</p>",
         "markdown": ""
       },
       "video": {
@@ -431,6 +551,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699051172314,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.Gvmc5wNe55ti2zw5"
     },
     {
@@ -445,7 +573,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>.410 Bore,,3d4+1,-3,,Light Shotshell</p><p>20 Gauge,,4d6,-5,,Intermediate Shotshell</p><p>16 Gauge,,4d6+3,-6,,Intermediate Shotshell</p><p>12 Gauge,,5d6,-6,,Intermediate Shotshell</p><p>10 Gauge,,7d6,-9,,Heavy Shotshell</p>",
+        "content": "<p>.410 Bore |  | 3d4+1 | | -3 |  | Light Shotshell, Shotgun Shell</p><p>20 Gauge |  | 4d6 | | -5 |  | Intermediate Shotshell, Shotgun Shell</p><p>16 Gauge |  | 4d6+3 | | -6 |  | Intermediate Shotshell, Shotgun Shell</p><p>12 Gauge |  | 5d6 | | -6 |  | Intermediate Shotshell, Shotgun Shell</p><p>10 Gauge |  | 7d6 | | -9 |  | Heavy Shotshell, Shotgun Shell</p>",
         "markdown": ""
       },
       "video": {
@@ -458,6 +586,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699051222698,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!o3ozyXfYZXHAWYbZ.OqSLrspEld0mrjT5"
     }
   ],
@@ -471,10 +607,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.0.11",
-    "coreVersion": "10.303",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.314",
     "createdTime": 1679698713852,
-    "modifiedTime": 1694491105110,
+    "modifiedTime": 1699051222698,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": null,

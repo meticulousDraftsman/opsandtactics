@@ -13,7 +13,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>Evokalloy Barrel (Standard), , 1[cold], , , Grants a cold/fire/concussive/electrical damage bonus</p><p>Evokalloy Barrel (High), , 3[cold], , , Grants a cold/fire/concussive/electrical damage bonus</p><p></p>",
+        "content": "<p>Evokalloy Barrel (Standard)|  | 1[cold] |  |  |  | Grants a cold/fire/concussive/electrical damage bonus</p><p>Evokalloy Barrel (High)|  | 3[cold] |  |  |  | Grants a cold/fire/concussive/electrical damage bonus</p><p></p><p></p>",
         "markdown": ""
       },
       "video": {
@@ -26,6 +26,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.1.3",
+        "coreVersion": "11.314",
+        "createdTime": null,
+        "modifiedTime": 1699051629447,
+        "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+      },
       "_key": "!journal.pages!UdbFVMPxNbaP3S3Z.6rafhWBkKUm8aXLf"
     },
     {
@@ -52,6 +60,14 @@
         "default": -1
       },
       "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
       "_key": "!journal.pages!UdbFVMPxNbaP3S3Z.4DxSMxKeDVPbtnCG"
     }
   ],
@@ -65,10 +81,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.0.11",
-    "coreVersion": "10.303",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.314",
     "createdTime": 1679699244996,
-    "modifiedTime": 1694806802721,
+    "modifiedTime": 1699051629447,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": null,

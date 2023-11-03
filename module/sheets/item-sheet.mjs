@@ -68,7 +68,7 @@ export class OpsItemSheet extends ItemSheet {
           strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
           for (let i of strip){
             if (i.textContent=='') continue;
-            entries.push({label:i.textContent.split(',',1),value:i.textContent})
+            entries.push({label:i.textContent.split('|',1),value:i.textContent})
           }
           if (hasProperty(importableMods,`${pe.name}.entries`)){
             importableMods[pe.name].entries.push(entries)
@@ -92,7 +92,7 @@ export class OpsItemSheet extends ItemSheet {
               strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
               for (let i of strip){
                 if (i.textContent=='') continue;
-                entries.push({label:i.textContent.split(',',1),value:i.textContent})
+                entries.push({label:i.textContent.split('|',1),value:i.textContent})
               }
               if (hasProperty(importableMods,`${pe.name}.entries`)){
                 importableMods[pe.name].entries.push(entries)
@@ -106,14 +106,15 @@ export class OpsItemSheet extends ItemSheet {
         }
       }
       // Prep data for addition to the weapon based on the currently-selected mod
-      let tempMod = systemData.importMod?.split(',') ?? [null,null,null,null,null,null];
+      let tempMod = systemData.importMod?.split('|') ?? [null,null,null,null,null,null,null];
       itemData.readyMod = {
         name:(tempMod[0] ? tempMod[0].trim() : 'New Mod'),
         check:(tempMod[1] ? tempMod[1].trim() : null),
         effect:(tempMod[2] ? tempMod[2].trim() : null),
-        recoil:(tempMod[3] ? tempMod[3].trim() : null),
-        cp:(tempMod[4] ? tempMod[4].trim() : null),
-        description:(tempMod[5] ? tempMod[5].trim() : null),
+        dice:(tempMod[3] ? tempMod[3].trim() : null),
+        recoil:(tempMod[4] ? tempMod[4].trim() : null),
+        cp:(tempMod[5] ? tempMod[5].trim() : null),
+        description:(tempMod[6] ? tempMod[6].trim() : null),
       }
       // Tally modifiers for each attack
       for(let [,a] of Object.entries(itemData.system.actions)){
@@ -324,13 +325,6 @@ export class OpsItemSheet extends ItemSheet {
     const updateData = {};
     let newProp;
     switch(target){
-      case 'check':
-      case 'effect':
-      case 'recoil':
-      case 'cp':
-        if (isEmpty(this.object.system.weaponMods)) return null;
-        await this._addAttackMod(updateData,preTarget, target);
-        break;
       case 'skillMods':
         newProp = (new SkillMod).toObject();
         newProp.type = preTarget;
@@ -373,47 +367,6 @@ export class OpsItemSheet extends ItemSheet {
     }
     this.object.update(updateData);
   }
-  async _addAttackMod(updateData,preTarget,target){
-    const template = 'systems/opsandtactics/templates/interface/dialog-wepmod-select.html';
-    const content = await renderTemplate(template,{
-      type: target,
-      wepmods: this.object.system.weaponMods
-    });
-    let flavor;
-    switch (target){
-      case 'check':
-        flavor = 'to-hit';
-        break;
-      case 'effect':
-        flavor = 'damage';
-        break;
-      case 'recoil':
-        flavor = 'recoil';
-        break;
-      case 'cp':
-        flavor = 'combat point';
-        break;        
-    }
-    const title = `Add ${flavor} mod for ${this.object.system.actions[preTarget].name}`;
-    return new Promise(resolve => {
-      new Dialog({
-        title: title,
-        content,
-        buttons: {
-          add: {
-            label: "Add Selected",
-            callback: html => resolve(this._submitAttackMod(html,updateData,preTarget,target))
-          }
-        },
-        close: () => resolve(null)
-      }).render(true,{width:520});
-    });
-  }
-  async _submitAttackMod(html,updateData,preTarget,target){
-    const form = html[0].querySelector("form");
-    if (form.chooseMod.value==="null") return null;
-    setProperty(updateData,`system.actions.${preTarget}.${target}.mods.${form.chooseMod.value}`,{});
-  }
   async _editAttackMod(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
@@ -429,16 +382,10 @@ export class OpsItemSheet extends ItemSheet {
     const removed = dataset.removeTarget;
     const updateData = {};
     switch(target){
-      case 'check':
-      case 'effect':
-      case 'recoil':
-      case 'cp':
-        //updateData[`system.actions.${preTarget}.${target}.mods.-=${removed}`] = null;
-        break;
       case 'weaponMods':
         updateData[`system.${target}.-=${removed}`] = null;
         for (let [key,entry] of Object.entries(this.object.system.actions)){
-          for (let imp of ['check','effect','recoil','cp']){
+          for (let imp of ['check','effect','dice','recoil','cp']){
             if (hasProperty(entry,`${imp}.mods.${removed}`)) updateData[`system.actions.${key}.${imp}.mods.-=${removed}`] = null;
           }
         }
@@ -475,21 +422,23 @@ class AttackEditApp extends FormApplication {
         object: this.object.system.actions[this.options.target],
         check: {},
         effect: {},
+        dice: {},
         recoil: {},
         cp: {}
       } 
     }
-    if (getProperty(context,'attack.object.effect.scaleCartridge.bar') > 0) context.attack.object.effect.scaleCartridge.lessBar = context.attack.object.effect.scaleCartridge.bar - 1;
+    if (getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
-      for (let imp of ['check','effect','recoil','cp']){
+      for (let imp of ['check','effect','dice','recoil','cp']){
         if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:this.object.system.actions[this.options.target][imp].mods[key]?.active}
       }
     }
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
-      for (let imp of ['check','effect','recoil','cp']){
-        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:this.object.system.actions[this.options.target][imp].mods[key]?.active}
+      for (let imp of ['check','effect','dice','recoil','cp']){
+        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:this.object.system.actions[this.options.target][imp]?.mods[key]?.active}
       }
     }
+    console.debug(context)
     return context;
   }
   render(force=false, options={}){

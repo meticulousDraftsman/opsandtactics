@@ -46,29 +46,44 @@ export class OpsItem extends Item {
   _prepareWeaponData(itemData){
     const systemData = itemData.system;
     // Map weapon mods values to attacks
-     for (let [,a] of Object.entries(systemData.actions)){
+    for (let [,a] of Object.entries(systemData.actions)){
       a.type = 'attack';
-       for (let [key,entry] of Object.entries(a.check.mods)){
-        if (!entry.active) continue;
-        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
-        entry.value = systemData.weaponMods?.[key]?.check ?? null;
-       }
-       for (let [key,entry] of Object.entries(a.effect.mods)){
-        if (!entry.active) continue;
-        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
-        entry.value = systemData.weaponMods?.[key]?.effect ?? null;
-       }
-       for (let [key,entry] of Object.entries(a.recoil.mods)){
-        if (!entry.active) continue;
-        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
-        entry.value = systemData.weaponMods?.[key]?.recoil ?? null;
-       }
-       for (let [key,entry] of Object.entries(a.cp.mods)){
-        if (!entry.active) continue;
-        entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
-        entry.value = systemData.weaponMods?.[key]?.cp ?? null;
-       }
+      if (hasProperty(a,'check.mods')){
+        for (let [key,entry] of Object.entries(a.check.mods)){
+          if (!entry.active) continue;
+          entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+          entry.value = systemData.weaponMods?.[key]?.check ?? null;
+         }
       }
+      if (hasProperty(a,'effect.mods')){
+        for (let [key,entry] of Object.entries(a.effect.mods)){
+          if (!entry.active) continue;
+          entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+          entry.value = systemData.weaponMods?.[key]?.effect ?? null;
+         }
+      }
+      if (hasProperty(a,'dice.mods')){
+        for (let [key,entry] of Object.entries(a.dice.mods)){
+          if (!entry.active) continue;
+          entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+          entry.value = systemData.weaponMods?.[key]?.dice ?? null;
+         }
+      }
+      if (hasProperty(a,'recoil.mods')){
+        for (let [key,entry] of Object.entries(a.recoil.mods)){
+          if (!entry.active) continue;
+          entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+          entry.value = systemData.weaponMods?.[key]?.recoil ?? null;
+         }
+      }
+      if (hasProperty(a,'cp.mods')){
+        for (let [key,entry] of Object.entries(a.cp.mods)){
+          if (!entry.active) continue;
+          entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
+          entry.value = systemData.weaponMods?.[key]?.cp ?? null;
+         }
+      }
+    }
   }
   _prepareObjectData(itemData){
     const systemData = itemData.system;

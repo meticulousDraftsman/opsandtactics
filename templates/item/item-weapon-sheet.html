@@ -91,7 +91,7 @@
                         <li class="item grid grid-8col">
                             <input type="text" value="{{item.readyMod.check}}" readonly>
                             <input class="grid-span-3" type="text" value="{{item.readyMod.effect}}" readonly>
-                            <input type="text" value="" readonly>
+                            <input type="text" value="{{item.readyMod.dice}}" readonly>
                             <input type="text" value="{{item.readyMod.recoil}}" readonly>
                             <input type="text" value="{{item.readyMod.cp}}" readonly>
                             <i class="grid-span-8">{{item.readyMod.description}}</i>
@@ -110,7 +110,7 @@
                         <input class="grid-span-5 flex-group-left" name="system.weaponMods.{{@key}}.description" type="text" value="{{this.description}}" data-dtype="String" placeholder="Description"/>
                         <input name="system.weaponMods.{{@key}}.check" type="text" value="{{this.check}}" data-dtype="String" placeholder="0" data-tooltip="To-Hit"/>
                         <input class="grid-span-3" name="system.weaponMods.{{@key}}.effect" type="text" value="{{this.effect}}" data-dtype="String" placeholder="0d0 + 0" data-tooltip="Flat Damage"/>
-                        <input name="" type="text" value="" data-dtype="Number" placeholder="0" data-tooltip="Extra Dice" readonly/>
+                        <input name="system.weaponMods.{{@key}}.dice" type="text" value="{{this.dice}}" data-dtype="Number" placeholder="0" data-tooltip="Extra Dice"/>
                         <input name="system.weaponMods.{{@key}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number" placeholder="0" data-tooltip="Recoil"/>
                         <input name="system.weaponMods.{{@key}}.cp" type="text" value="{{this.cp}}" data-dtype="Number" placeholder="0" data-tooltip="Combat Points"/>
                         <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" data-tooltip="Remove Modifier"><i class="fas fa-trash"></i></a>
