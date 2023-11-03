@@ -38,6 +38,20 @@ Hooks.once('init', async function() {
     decimals: 2
   };
   CONFIG.ActiveEffect.legacyTransferral = false;
+  CONFIG.Actor.trackableAttributes = {
+    character: {
+      bar: ["health.chp","health.xhp","cp","ml"],
+      value: ["health.temp","health.bleed","cp.temp","def.value","def.touch","def.flat"]
+    },
+    vehicle: {
+      bar: ["health.hp"],
+      value: ["vehicle.speed","def.value"]
+    },
+    spacecraft: {
+      bar: ["health.hp","health.soak","cp"],
+      value: []
+    }
+  }
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = OpsActor;

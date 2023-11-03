@@ -2,18 +2,7 @@
   "Actor": {
     "types": ["character","vehicle","spacecraft"],
     "character": {},
-    "spacecraft": {
-      "health": {
-        "hull": {
-          "value": 20,
-          "max": 0
-        },
-        "shield": {
-          "value": 0,
-          "max": 0
-        }
-      }
-    }
+    "spacecraft": {}
   },
   "Item": {
     "types": ["weapon","armor","skill","object","feature","magic"]
