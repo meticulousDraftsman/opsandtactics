@@ -84,13 +84,16 @@ export class OpsWeapon extends foundry.abstract.DataModel{
             description: new field.StringField(),
             type: new field.StringField(),
             magazine: new field.SchemaField({
-                loaded: new field.SchemaField({
-                }),
-                type: new field.StringField({initial:"internal"}),
+                type: new field.StringField({initial:"unlimited"}),
+                insideOut: new field.StringField({initial:"both"}),
                 source: new field.StringField(),
+                backup: new field.StringField(),
+                loaded: new field.ObjectField(),
                 value: new field.NumberField({initial:0}),
-                max: new field.NumberField({initial:0})
+                max: new field.NumberField({initial:0}),
+                heatBase: new field.NumberField({initial:0})
             }),
+            damageBase: new field.StringField(),
             range: new field.StringField({initial:"5ft"}),
             crit: new field.NumberField({initial:16}),
             error: new field.NumberField({initial:0}),
@@ -152,6 +155,7 @@ export class WeaponAttack extends foundry.abstract.DataModel{
                 source: new field.StringField(),
                 inherent: new field.StringField(),
                 ability: new field.StringField(),
+                ammo: new field.BooleanField({initial:true}),
                 mods: new field.ObjectField()
             }),
             effect: new field.SchemaField({
@@ -159,6 +163,7 @@ export class WeaponAttack extends foundry.abstract.DataModel{
                 inherent: new field.StringField(),
                 ability: new field.StringField(),
                 scaleAbility: new field.NumberField({initial:1}),
+                ammo: new field.BooleanField({initial:true}),
                 mods: new field.ObjectField()
             }),
             dice: new field.SchemaField({
@@ -174,6 +179,7 @@ export class WeaponAttack extends foundry.abstract.DataModel{
             recoil: new field.SchemaField({
                 inherent: new field.NumberField({initial:null, nullable:true}),
                 active: new field.BooleanField({initial:false}),
+                ammo: new field.BooleanField({initial:true}),
                 mods: new field.ObjectField()
             }),
             ammo: new field.NumberField(),
@@ -202,22 +208,33 @@ export class ResourceCartridge extends foundry.abstract.DataModel{
             type: new field.StringField({initial:'cartridge'}),
             value: new field.NumberField(),
             max: new field.NumberField(),
+            available: new field.BooleanField({initial:true}),
+            cartridges: new field.ObjectField()
+        }
+    }
+}
+export class Cartridge extends foundry.abstract.DataModel{
+    static defineSchema(){
+        return{
+            name: new field.StringField(),
             flavor: new field.StringField(),
-            cartridge: new field.SchemaField({
-                check: new field.NumberField(),
-                error: new field.NumberField(),
-                recoil: new field.NumberField(),
-                effect: new field.SchemaField({
-                    good: new field.SchemaField({
-                        primary: new field.StringField(),
-                        secondary: new field.StringField(),
-                        extra: new field.StringField()
-                    }),
-                    bad: new field.SchemaField({
-                        primary: new field.StringField(),
-                        secondary: new field.StringField(),
-                        extra: new field.StringField()
-                    })
+            stats: new field.SchemaField({
+                check: new field.NumberField({initial:0,nullable:false}),
+                error: new field.NumberField({initial:0,nullable:false}),
+                recoil: new field.NumberField({initial:0,nullable:false}),
+                good: new field.SchemaField({
+                    primary: new field.StringField({initial:'',nullable:false}),
+                    primaryFlavor: new field.StringField({initial:'',nullable:false}),
+                    secondary: new field.StringField({initial:'',nullable:false}),
+                    secondaryFlavor: new field.StringField({initial:'',nullable:false}),
+                    extra: new field.StringField({initial:'',nullable:false})
+                }),
+                bad: new field.SchemaField({
+                    primary: new field.StringField({initial:'',nullable:false}),
+                    primaryFlavor: new field.StringField({initial:'',nullable:false}),
+                    secondary: new field.StringField({initial:'',nullable:false}),
+                    secondaryFlavor: new field.StringField({initial:'',nullable:false}),
+                    extra: new field.StringField({initial:'',nullable:false})
                 })
             })
         }

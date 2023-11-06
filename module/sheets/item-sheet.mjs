@@ -1,4 +1,4 @@
-import {OpsAction, Protection, ResourceConsumable, ResourceCoolant, ResourceMagic, ResourceSpacecraft, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
+import {OpsAction, Protection, ResourceConsumable, ResourceCartridge, Cartridge, ResourceCoolant, ResourceMagic, ResourceSpacecraft, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
 
 /**
@@ -54,57 +54,11 @@ export class OpsItemSheet extends ItemSheet {
     context.enrichDescription = await TextEditor.enrichHTML(systemData.description,{async:true});
 
     let  magazines;
-    const importableMods = {};
+    let importableMods;
+    
     if (itemData.type === 'weapon'){
       magazines = itemData.listMagazines();
-      // Parse weapon mods from journal entries in the world
-      let worldWepMods = await game.journal.filter(entry => entry.getFlag('opsandtactics','wepMods')==true);
-      let strip;
-      let entries;
-      for (let [,je] of worldWepMods.entries()){
-        for (let [,pe] of je.pages.entries()){
-          if (pe.type!=='text') continue;
-          entries = [];
-          strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
-          for (let i of strip){
-            if (i.textContent=='') continue;
-            entries.push({label:i.textContent.split('|',1),value:i.textContent})
-          }
-          if (hasProperty(importableMods,`${pe.name}.entries`)){
-            importableMods[pe.name].entries.push(entries)
-          }
-          else {
-            setProperty(importableMods,`${pe.name}.entries`,entries);
-            setProperty(importableMods,`${pe.name}.name`,pe.name)
-          }
-        }
-      }
-      // Parse weapon mods from journal entries in compendiums
-      let journalPacks = game.packs.filter(entry => entry.metadata.type==='JournalEntry');
-      for (let jp of journalPacks){
-        await jp.getIndex({fields: ['flags']})
-        for (let je of jp.index){
-          if (getProperty(je,'flags.opsandtactics.wepMods')){
-            let jeGot = await jp.getDocument(je._id);
-            for (let [,pe] of jeGot.pages.entries()){
-              if (pe.type!=='text') continue;
-              entries = [];
-              strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
-              for (let i of strip){
-                if (i.textContent=='') continue;
-                entries.push({label:i.textContent.split('|',1),value:i.textContent})
-              }
-              if (hasProperty(importableMods,`${pe.name}.entries`)){
-                importableMods[pe.name].entries.push(entries)
-              }
-              else {
-                setProperty(importableMods,`${pe.name}.entries`,entries);
-                setProperty(importableMods,`${pe.name}.name`,pe.name)
-              }
-            }
-          }
-        }
-      }
+      importableMods = await this._wepModImportList();
       // Prep data for addition to the weapon based on the currently-selected mod
       let tempMod = systemData.importMod?.split('|') ?? [null,null,null,null,null,null,null];
       itemData.readyMod = {
@@ -117,8 +71,8 @@ export class OpsItemSheet extends ItemSheet {
         description:(tempMod[6] ? tempMod[6].trim() : null),
       }
       // Tally modifiers for each attack
-      for(let [,a] of Object.entries(itemData.system.actions)){
-        a.mods = context.item.actionSum(a);
+      for(let [key,a] of Object.entries(itemData.system.actions)){
+        a.mods = context.item.actionSum(key);
       }
     }
     const sourceSkills = [{label:"None",id:""}];
@@ -182,6 +136,7 @@ export class OpsItemSheet extends ItemSheet {
     }
     if (hasProperty(systemData,'gear.resources')){
       systemData.gear.hasConsumable = false;
+      systemData.gear.hasCartridge = false;
       systemData.gear.hasCoolant = false;
       systemData.gear.hasMagic = false;
       systemData.gear.hasSpacecraft = false;
@@ -190,6 +145,9 @@ export class OpsItemSheet extends ItemSheet {
         switch (res.type){
           case 'consumable':
             systemData.gear.hasConsumable = true;
+            break;
+          case 'cartridge':
+            systemData.gear.hasCartridge = true;
             break;
           case 'coolant':
             systemData.gear.hasCoolant = true;
@@ -243,6 +201,7 @@ export class OpsItemSheet extends ItemSheet {
     // Pull a bullet from a loaded magazine into the internal chamber
     html.find('.chamber-round').click(this._onChamberRound.bind(this));
     html.find('.attack-edit').click(this._editAttackMod.bind(this));
+    html.find('.cartridge-edit').click(this._editCartridge.bind(this));
     // Reset imported mod when changing source filter
     html.find('.filter-select').change(this._onFilterSelect.bind(this));
     // Create/delete sub-properties
@@ -312,6 +271,59 @@ export class OpsItemSheet extends ItemSheet {
     }
   }
 
+  async _wepModImportList(){
+    const importableMods = {};
+    // Parse weapon mods from journal entries in the world
+    let worldWepMods = await game.journal.filter(entry => entry.getFlag('opsandtactics','wepMods')==true);
+    let strip;
+    let entries;
+    for (let [,je] of worldWepMods.entries()){
+      for (let [,pe] of je.pages.entries()){
+        if (pe.type!=='text') continue;
+        entries = [];
+        strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
+        for (let i of strip){
+          if (i.textContent=='') continue;
+          entries.push({label:i.textContent.split('|',1),value:i.textContent})
+        }
+        if (hasProperty(importableMods,`${pe.name}.entries`)){
+          importableMods[pe.name].entries.push(entries)
+        }
+        else {
+          setProperty(importableMods,`${pe.name}.entries`,entries);
+          setProperty(importableMods,`${pe.name}.name`,pe.name)
+        }
+      }
+    }
+    // Parse weapon mods from journal entries in compendiums
+    let journalPacks = game.packs.filter(entry => entry.metadata.type==='JournalEntry');
+    for (let jp of journalPacks){
+      await jp.getIndex({fields: ['flags']})
+      for (let je of jp.index){
+        if (getProperty(je,'flags.opsandtactics.wepMods')){
+          let jeGot = await jp.getDocument(je._id);
+          for (let [,pe] of jeGot.pages.entries()){
+            if (pe.type!=='text') continue;
+            entries = [];
+            strip = new DOMParser().parseFromString(pe.text.content, 'text/html').getElementsByTagName('p');
+            for (let i of strip){
+              if (i.textContent=='') continue;
+              entries.push({label:i.textContent.split('|',1),value:i.textContent})
+            }
+            if (hasProperty(importableMods,`${pe.name}.entries`)){
+              importableMods[pe.name].entries.push(entries)
+            }
+            else {
+              setProperty(importableMods,`${pe.name}.entries`,entries);
+              setProperty(importableMods,`${pe.name}.name`,pe.name)
+            }
+          }
+        }
+      }
+    }
+    return importableMods;
+  }
+
   _onFilterSelect(event){
     event.preventDefault();
     this.object.update({'system.importMod':''});
@@ -352,6 +364,14 @@ export class OpsItemSheet extends ItemSheet {
       case 'consumable':
         setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceConsumable);
         break;
+      case 'cartridge':
+        newProp = (new ResourceCartridge).toObject();
+        newProp.cartridges[randomID(8)] = new Cartridge;
+        setProperty(updateData,`system.gear.resources.${randomID(8)}`,newProp);
+        break;
+      case 'bullet':
+        setProperty(updateData,`system.gear.resources.${preTarget}.cartridges.${randomID(8)}`,new Cartridge);
+        break;
       case 'coolant':
         setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceCoolant);
         break;
@@ -367,12 +387,19 @@ export class OpsItemSheet extends ItemSheet {
     }
     this.object.update(updateData);
   }
-  async _editAttackMod(event){
+  _editAttackMod(event){
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
     const target = dataset.targetName;
     const preTarget = dataset?.preTarget;
     new AttackEditApp(this.object,{target:preTarget,tabs:[{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial:target}]}).render(true)
+  }
+  _editCartridge(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    const target = dataset.targetName;
+    const preTarget = dataset?.preTarget;
+    new CartridgeEditApp(this.object,{target:target,resource:preTarget}).render(true)
   }
   _subDeletion(event){
     event.preventDefault();
@@ -407,11 +434,12 @@ class AttackEditApp extends FormApplication {
       height: 480,
       closeOnSubmit: false,
       submitOnChange: true,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body"}]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body"}],
+      resizable: true
     });
   }
   get title(){
-    return `Editing details for attack '${this.object.system.actions[this.options.target].name}' in ${this.object.name}`
+    return `Editing details for attack '${this.object.system.actions[this.options.target].name}' in ${this.object.name}`;
   }
   getData(){
     const context = {
@@ -430,7 +458,7 @@ class AttackEditApp extends FormApplication {
     if (getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
       for (let imp of ['check','effect','dice','recoil','cp']){
-        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:this.object.system.actions[this.options.target][imp].mods[key]?.active}
+        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:this.object.system.actions[this.options.target][imp]?.mods[key]?.active}
       }
     }
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
@@ -438,7 +466,6 @@ class AttackEditApp extends FormApplication {
         if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:this.object.system.actions[this.options.target][imp]?.mods[key]?.active}
       }
     }
-    console.debug(context)
     return context;
   }
   render(force=false, options={}){
@@ -450,6 +477,61 @@ class AttackEditApp extends FormApplication {
     return super.close(options)
   }
   async _updateObject(event, formData){
+    await this.object.update(formData)
+  }
+}
+class CartridgeEditApp extends FormApplication {
+  static get defaultOptions() {
+    return mergeObject(super.defaultOptions, {
+      classes: ['opsandtactics','sheet','item'],
+      template: 'systems/opsandtactics/templates/interface/dialog-cartridge-edit.html',
+      width: 520,
+      height: 380,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      resizable: true
+    });
+  }
+  get title(){
+    return `Editing cartridge '${this.object.system.gear.resources[this.options.resource].cartridges[this.options.target].name}' in '${this.object.system.gear.resources[this.options.resource].name}' in ${this.object.name}`;
+  }
+  getData(){
+    const context = {
+      OATS: CONFIG.OATS,
+      system: this.object.system,
+      resource: {
+        id: this.options.resource,
+        object: this.object.system.gear.resources[this.options.resource]
+      },
+      cartridge: {
+        id: this.options.target,
+        object: this.object.system.gear.resources[this.options.resource].cartridges[this.options.target]
+      }
+    };
+    return context;
+  }
+  render(force=false,options={}){
+    this.object.apps[this.appId] = this;
+    return super.render(force,options)
+  }
+  close(options={}){
+    delete this.object.apps[this.appId];
+    return super.close(options)
+  }
+  async _updateObject(event, formData){
+    for (let [key, entry] of Object.entries(formData)){
+      if ((key.includes('stats.check') || key.includes('stats.recoil' || key.includes('stats.error'))) && Number.isNaN(entry)) formData[key] = 0;
+      if (entry===null){
+        formData[key] = '';
+        switch(true){
+          case key.includes('stats.check'):
+          case key.includes('stats.recoil'):
+          case key.includes('stats.error'):
+            formData[key] = 0;
+            break;
+        }
+      }
+    }
     await this.object.update(formData)
   }
 }

@@ -20,7 +20,7 @@
                         <input class="flex3 item-checkbox" type="checkbox" data-target-prop="available" data-target-id="{{this.id}}" {{checked this.available}}>
                     </div>
                     {{/if}}
-                    {{#if (eq @../key "consumable")}}
+                    {{#if (or (eq @../key "consumable") (eq @../key "cartridge"))}}
                     <div class="grid-span-2 flexrow flex-group-center">
                         <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.id}}" value="{{this.value}}" data-dtype="Number" placeholder="Value">
                         <span>/</span>

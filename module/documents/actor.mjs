@@ -409,6 +409,7 @@ export class OpsActor extends Actor {
     switch (source){
       case '':
       case undefined:
+      case null:
           return 0;
       case 'foc':
       case 'pow':

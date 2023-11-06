@@ -19,13 +19,20 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend class="resource-label">Ammunition Effects</legend>
+                <legend class="resource-label">
+                    <label class="flexrow flex-group-center">
+                        <span class="">Ammunition Effects</span>
+                        <input name="system.actions.{{attack.id}}.check.ammo" data-tooltip="Affected by loaded ammo?" type="checkbox" {{checked attack.object.check.ammo}}/>
+                    </label>
+                </legend>
+                {{#if system.magazine.source}}
                 <div class="grid grid-4col flex-group-center">
                     <span>To-Hit</span>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{numberFormat system.magazine.loaded.stats.check sign=true}}" readonly>
                     <span>Error Range</span>
-                    <input type="text" value="%" readonly>
+                    <input type="text" value="{{numberFormat system.magazine.loaded.stats.error sign=true}}%" readonly>
                 </div>
+                {{/if}}
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Attack-Applicable Weapon Mods</legend>
@@ -54,11 +61,18 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend class="resource-label">Ammunition Effects</legend>
+                <legend class="resource-label">
+                    <label class="flexrow flex-group-center">
+                        <span class="">Ammunition Effects</span>
+                        <input name="system.actions.{{attack.id}}.recoil.ammo" data-tooltip="Affected by loaded ammo?" type="checkbox" {{checked attack.object.recoil.ammo}}/>
+                    </label>
+                </legend>
+                {{#if system.magazine.source}}
                 <div class="grid grid-4col flex-group-center">
                     <span class="grid-span-2">Caliber Recoil Penalty (CRP)</span>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{numberFormat system.magazine.loaded.stats.recoil sign=true}}" readonly>
                 </div>
+                {{/if}}
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Attack-Applicable Weapon Mods</legend>
@@ -109,7 +123,29 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend class="resource-label">Ammunition Effects</legend>
+                <legend class="resource-label">
+                    <label class="flexrow flex-group-center">
+                        <span class="">Ammunition Effects</span>
+                        <input name="system.actions.{{attack.id}}.effect.ammo" data-tooltip="Affected by loaded ammo?" type="checkbox" {{checked attack.object.effect.ammo}}/>
+                    </label>
+                </legend>
+                <div class="grid grid-8col flex-group-center">
+                    <span>Good</span>
+                    <div class="grid-span-7 flexrow flex-group-center">
+                        <input type="text" value="{{system.magazine.loaded.stats.good.primary}} {{system.magazine.loaded.stats.good.primaryFlavor}}" readonly>
+                        {{#if system.magazine.loaded.stats.good.secondary}}<input type="text" value="{{system.magazine.loaded.stats.good.secondary}} {{system.magazine.loaded.stats.good.secondaryFlavor}}" readonly>{{/if}}
+                        {{#if system.magazine.loaded.stats.good.extra}}<input type="text" value="{{system.magazine.loaded.stats.good.extra}}" readonly>{{/if}}
+                    </div>
+                    {{#if system.magazine.loaded.stats.bad.primary}}
+                    <span>Bad</span>
+                    <div class="grid-span-7 flexrow flex-group-center">
+                        <input type="text" value="{{system.magazine.loaded.stats.bad.primary}} {{system.magazine.loaded.stats.bad.primaryFlavor}}" readonly>
+                        {{#if system.magazine.loaded.stats.bad.secondary}}<input type="text" value="{{system.magazine.loaded.stats.bad.secondary}} {{system.magazine.loaded.stats.bad.secondaryFlavor}}" readonly>{{/if}}
+                        {{#if system.magazine.loaded.stats.bad.extra}}<input type="text" value="{{system.magazine.loaded.stats.bad.extra}}" readonly>{{/if}}
+                    </div>
+                    {{/if}}
+                </div>
+
             </fieldset>
             <fieldset>
                 <legend class="resource-label">Attack-Applicable Weapon Mods</legend>
@@ -142,7 +178,7 @@
             <fieldset>
                 <legend class="resource-label">Attack-Specific Modifiers</legend>
                 <div class="grid grid-4col flex-group-center">
-                    <span>Combat Points</span>
+                    <span class="grid-start-2">Combat Points</span>
                     <input name="system.actions.{{attack.id}}.cp.inherent" value="{{attack.object.cp.inherent}}" type="text" data-dtype="Number" placeholder="From Attack">
                 </div>
             </fieldset>

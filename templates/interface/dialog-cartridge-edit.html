@@ -1,0 +1,46 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <section class="sheet-body">
+        <fieldset>
+            <legend class="resource-label">Impact on Attack Rolls</legend>
+            <div class="grid grid-6col flex-group-center">
+                <span>To-Hit</span>
+                <input type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.check" value="{{cartridge.object.stats.check}}" data-dtype="Number">
+                <span>Recoil</span>
+                <input type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.recoil" value="{{cartridge.object.stats.recoil}}" data-dtype="Number">
+                <span>Error %</span>
+                <input type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.error" value="{{cartridge.object.stats.error}}" data-dtype="Number">
+                <input class="grid-span-6" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.flavor" value="{{cartridge.object.flavor}}" data-dtype="String" placeholder="Roll Flavor">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend class="resource-label">Damage Against Intended Targets</legend>
+            <div class="grid grid-6col flex-group-center">
+                <span>Primary</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.good.primary" value="{{cartridge.object.stats.good.primary}}" data-dtype="String" data-tooltip="Included for base damage dice count, increased by extra dice">
+                <span>Type</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.good.primaryFlavor" value="{{cartridge.object.stats.good.primaryFlavor}}" data-dtype="String">
+                <span>Secondary</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.good.secondary" value="{{cartridge.object.stats.good.secondary}}" data-dtype="String" data-tooltip="Included for base damage dice count, not increased by extra dice">
+                <span>Type</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.good.secondaryFlavor" value="{{cartridge.object.stats.good.secondaryFlavor}}" data-dtype="String">
+                <span>Extra</span>
+                <input class="grid-span-5" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.good.extra" value="{{cartridge.object.stats.good.extra}}" data-dtype="String" data-tooltip="Not included for base damage dice count, not increased by extra dice">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend class="resource-label">Damage Against Unintended Targets</legend>
+            <div class="grid grid-6col flex-group-center">
+                <span>Primary</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.bad.primary" value="{{cartridge.object.stats.bad.primary}}" data-dtype="String" data-tooltip="Included for base damage dice count, increased by extra dice">
+                <span>Type</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.bad.primaryFlavor" value="{{cartridge.object.stats.bad.primaryFlavor}}" data-dtype="String">
+                <span>Secondary</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.bad.secondary" value="{{cartridge.object.stats.bad.secondary}}" data-dtype="String" data-tooltip="Included for base damage dice count, not increased by extra dice">
+                <span>Type</span>
+                <input class="grid-span-2" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.bad.secondaryFlavor" value="{{cartridge.object.stats.bad.secondaryFlavor}}" data-dtype="String">
+                <span>Extra</span>
+                <input class="grid-span-5" type="text" name="system.gear.resources.{{resource.id}}.cartridges.{{cartridge.id}}.stats.bad.extra" value="{{cartridge.object.stats.bad.extra}}" data-dtype="String" data-tooltip="Not included for base damage dice count, not increased by extra dice">
+            </div>
+        </fieldset>
+    </section>
+</form>

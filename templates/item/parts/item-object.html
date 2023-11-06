@@ -31,7 +31,7 @@
 {{/if}}
 <fieldset>
     <legend class="resource-label">
-        Object Resources - <a class="item-control sub-create" data-target-name="consumable" data-tooltip="Add Consumable"><i class="fas fa-boxes"></i></a> - <a class="item-control sub-create" data-target-name="coolant" data-tooltip="Add Coolant"><i class="fas fa-snowflake"></i></a> - <a class="item-control sub-create" data-target-name="magic" data-tooltip="Add Magic"><i class="fas fa-scroll"></i></a> - <a class="item-control sub-create" data-target-name="spacecraft" data-tooltip="Add Spacecraft Resource"><i class="fas fa-rocket"></i></a> - <a class="item-control sub-create" data-target-name="resource" data-tooltip="Add Generic Resource"><i class="fas fa-plus"></i></a>
+        Object Resources - <a class="item-control sub-create" data-target-name="consumable" data-tooltip="Add Consumable"><i class="fas fa-boxes"></i></a> - <a class="item-control sub-create" data-target-name="cartridge" data-tooltip="Add Cartridge"><i class="fas fa-gun"></i></a> - <a class="item-control sub-create" data-target-name="coolant" data-tooltip="Add Coolant"><i class="fas fa-snowflake"></i></a> - <a class="item-control sub-create" data-target-name="magic" data-tooltip="Add Magic"><i class="fas fa-scroll"></i></a> - <a class="item-control sub-create" data-target-name="spacecraft" data-tooltip="Add Spacecraft Resource"><i class="fas fa-rocket"></i></a> - <a class="item-control sub-create" data-target-name="resource" data-tooltip="Add Generic Resource"><i class="fas fa-plus"></i></a>
     </legend>
     <ol class="items-list flex-group-center">
         <li class="grid grid-10col flex-group-center">
@@ -58,6 +58,49 @@
                 <input name="system.gear.resources.{{@key}}.available" data-tooltip="Available" type="checkbox" {{checked this.available}}/>
             </div>
             <a class="item-control sub-delete grid-start-10" data-target-name="gear.resources" data-remove-target="{{@key}}" data-tooltip="Remove Consumable Resource"><i class="fas fa-trash"></i></a>
+        </li>
+        {{/if}}
+        {{/each}}
+        {{/if}}
+        {{#if system.gear.hasCartridge}}
+        <hr>
+        {{#each system.gear.resources}}
+        {{#if (eq this.type "cartridge")}}
+        <li class="grid grid-10col flex-group-center">
+            <input class="grid-span-3" type="text" name="system.gear.resources.{{@key}}.name" value="{{this.name}}" data-dtype="String" placeholder="Cartridges">
+            <div class="flexrow grid-span-3 flex-group-center">
+                <input class="flex3" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="Number" placeholder="Value">
+                <span>/</span>
+                <input class="flex3" type="text" name="system.gear.resources.{{@key}}.max" value="{{this.max}}" data-dtype="Number" placeholder="Max">
+            </div>
+            <a class="item-control sub-create" data-pre-target="{{@key}}" data-target-name="bullet" data-tooltip="Add Bullet"><i class="fas fa-arrow-down"></i></a>
+            <label class="grid-span-2 flexrow flex-group-center">
+                <span class="">Available</span>
+                <input name="system.gear.resources.{{@key}}.available" data-tooltip="Available" type="checkbox" {{checked this.available}}/>
+            </label>
+            <a class="item-control sub-delete grid-start-10" data-target-name="gear.resources" data-remove-target="{{@key}}" data-tooltip="Remove Cartridge Resource"><i class="fas fa-trash"></i></a>
+            {{#each this.cartridges}}
+            <fieldset class="attack grid-span-10 flex-group-left">
+                <div class="grid grid-10col flex-group-center">
+                    <input class="grid-span-3" name="system.gear.resources.{{@../key}}.cartridges.{{@key}}.name" type="text" value="{{this.name}}" data-dtype="String" placeholder="Bullet">
+                    <button type="button" class="item-control cartridge-edit grid-span-6" data-target-name="{{@key}}" data-pre-target="{{@../key}}" data-tooltip="Edit Cartridge">
+                        {{numberFormat this.stats.check sign=true}} To-Hit, {{numberFormat this.stats.recoil sign=true}} Recoil, {{numberFormat this.stats.error sign=true}}% Error Range 
+                    </button>
+                    <a class="item-control sub-delete" data-target-name="gear.resources.{{@../key}}.cartridges" data-remove-target="{{@key}}" data-tooltip="Remove Cartridge"> <i class="fas fa-trash"></i></a>
+                    {{#if this.flavor}}
+                    <i class="grid-span-10">{{this.flavor}}</i>
+                    {{/if}}
+                    <button type="button" class="item-control cartridge-edit grid-span-10" data-target-name="{{@key}}" data-pre-target="{{@../key}}" data-tooltip="Edit Cartridge">
+                        {{#if this.stats.good.primary}}{{this.stats.good.primary}} {{this.stats.good.primaryFlavor}}{{#if (or this.stats.good.secondary this.stats.good.extra)}} + {{/if}}{{/if}}{{#if this.stats.good.secondary}}{{this.stats.good.secondary}} {{this.stats.good.secondaryFlavor}}{{#if this.stats.good.extra}} + {{/if}}{{/if}}{{this.stats.good.extra}} Damage
+                    </button>
+                    {{#if (or this.stats.bad.primary this.stats.bad.secondary this.stats.bad.extra)}}
+                    <button type="button" class="item-control cartridge-edit grid-span-10" data-target-name="{{@key}}" data-pre-target="{{@../key}}" data-tooltip="Edit Cartridge">
+                        {{#if this.stats.bad.primary}}{{this.stats.bad.primary}} {{this.stats.bad.primaryFlavor}}{{#if (or this.stats.bad.secondary this.stats.bad.extra)}} + {{/if}}{{/if}}{{#if this.stats.bad.secondary}}{{this.stats.bad.secondary}} {{this.stats.bad.secondaryFlavor}}{{#if this.stats.bad.extra}} + {{/if}}{{/if}}{{this.stats.bad.extra}} Damage
+                    </button>
+                    {{/if}}
+                </div>
+            </fieldset>
+            {{/each}}
         </li>
         {{/if}}
         {{/each}}

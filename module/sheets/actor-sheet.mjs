@@ -172,6 +172,10 @@ export class OpsActorSheet extends ActorSheet {
         label: 'Consumable',
         entries: []
       },
+      cartridge: {
+        label: 'Cartridge',
+        entries: []
+      },
       coolant: {
         label: 'Coolant',
         entries: []
@@ -207,15 +211,15 @@ export class OpsActorSheet extends ActorSheet {
       }
       // Append weapons.
       if (i.type === 'weapon') {
-        for (let [,a] of Object.entries(i.system.actions)){
-          a.mods = context.actor.items.get(i._id).actionSum(a);
+        for (let [key,a] of Object.entries(i.system.actions)){
+          a.mods = context.actor.items.get(i._id).actionSum(key);
         }
         if(i.system.magazine.type != 'internal'){
           if(i.system.magazine.source){
-              let dualID = i.system.magazine.source.split(',')
-              let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
-              i.system.magazine.loaded.value = getProperty(loadedMag,`${dualID[1]}.value`);
-              i.system.magazine.loaded.max = getProperty(loadedMag,`${dualID[1]}.max`);  
+              //let dualID = i.system.magazine.source.split(',')
+              //let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
+              //i.system.magazine.loaded.value = getProperty(loadedMag,`${dualID[1]}.value`);
+              //i.system.magazine.loaded.max = getProperty(loadedMag,`${dualID[1]}.max`);  
           }
         }
         weapons.push(i);
@@ -248,8 +252,8 @@ export class OpsActorSheet extends ActorSheet {
         }
         if(!isEmpty(getProperty(i,'system.actions'))){
           let attackFlag = false;
-          for (let [,a] of Object.entries(i.system.actions)){
-            a.mods = context.actor.items.get(i._id).actionSum(a);
+          for (let [key,a] of Object.entries(i.system.actions)){
+            a.mods = context.actor.items.get(i._id).actionSum(key);
             if (a.type==='attack' && a.active) attackFlag = true;
           }
           if (attackFlag) attackMagic.push(i);
@@ -262,6 +266,11 @@ export class OpsActorSheet extends ActorSheet {
         for (let [key,res] of Object.entries(i.system.gear.resources)){
           let tempRes = res;
           tempRes.name = `${i.name}${res.name?`: ${res.name}`:''}`
+          if (tempRes.type=='cartridge'){
+            for (let [,car] of Object.entries(tempRes.cartridges)){
+              if (car.name) tempRes.name = tempRes.name.concat(', ',car.name);
+            }
+          }
           tempRes.id = `${i._id},system.gear.resources.${key}`
           tempRes.itemId = i._id;
           resObjects[res.type].entries.push(tempRes)
@@ -278,8 +287,8 @@ export class OpsActorSheet extends ActorSheet {
           }
         }
         let attackFlag = false;
-        for (let [,a] of Object.entries(i.system.actions)){
-          a.mods = context.actor.items.get(i._id).actionSum(a);
+        for (let [key,a] of Object.entries(i.system.actions)){
+          a.mods = context.actor.items.get(i._id).actionSum(key);
           if (a.type==='attack' && a.active) attackFlag = true;
         }
         if (attackFlag) attackObjects.push(i);
