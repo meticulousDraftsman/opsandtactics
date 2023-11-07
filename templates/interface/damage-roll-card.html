@@ -1,0 +1,24 @@
+{{log this}}
+<h4>{{title}}</h4>
+<div class="dice-roll opsandtactics">
+    {{#if flavor}}
+    <div class="flexcol">
+        {{#each flavor}}
+        <div>{{this}}</div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+{{#each rolls}}
+<div class="opsandtactics grid grid-12col flex-row-center">
+    <div class="grid-span-11 dice-roll">
+        <div class="dice-result">
+            <div class="dice-formula dice-tooltip">{{formula}}</div>
+            {{{tooltip}}}
+            <h4 class="dice-total">{{total}} {{lookup ../rollTypes @index}}</h4>
+        </div>
+    </div>
+    <a class="chat-button-damage flex-group-center" data-damage="{{total}}" data-tooltip="Add to Incoming Damage"><i class="fas fa-heart-broken"></i></a>
+</div>
+
+{{/each}}

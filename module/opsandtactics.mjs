@@ -109,6 +109,7 @@ Hooks.on("getChatLogEntryContext", addChatContext);
 Hooks.on("getJournalDirectoryEntryContext", addJournalContext);
 Hooks.on("getCompendiumEntryContext", addCompendiumContext);
 Hooks.on("getActorDirectoryEntryContext", addActorContext);
+Hooks.on("renderChatLog", (app, html, data) => OpsActor.addChatListeners(html));
 
 /* -------------------------------------------- */
 /*  Core Check Handling                         */
@@ -161,6 +162,26 @@ export async function opsCheck(data){
   messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/check-roll-card.html',poppedRoll);
   ChatMessage.create(messageData, {rollMode: data.rollMode})
   return poppedRoll;
+}
+
+export async function opsDamage(data){
+  // Takes a list of rolls and flavors and outputs them into the special adjustible damage chat card
+  const messageData = {
+    type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+    from: game.user._id,
+    speaker: data.speaker,
+    sound: 'sounds/dice.wav'
+  }
+  messageData.rolls = [];
+  for (let e of data.rolls){
+    messageData.rolls.push(await new Roll(e.formula).evaluate({async:true}));
+  }
+  for (let e of messageData.rolls){
+    e.tooltip = await e.getTooltip()
+  }
+  data.rolls=messageData.rolls;
+  messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/damage-roll-card.html',data);
+  ChatMessage.create(messageData, {rollMode: data.rollMode})  
 }
 
 export class OpsRoll extends Roll{
@@ -406,7 +427,7 @@ function addChatContext(html, options){
   }
   let twoRoll = li => {
     const message = game.messages.get(li.data("messageId"));
-    return message?.rolls?.length==2;
+    return message?.rolls?.length>=2;
   }
   let moreRoll = li => {
     const message = game.messages.get(li.data("messageId"));
@@ -442,37 +463,37 @@ function addChatContext(html, options){
     {
       name: 'Add first roll to incoming damage',
       icon: '<i class="fas fa-heart-broken"></i>',
-      condition: (canApply && (twoRoll || moreRoll)),
+      condition: (canApply && twoRoll),
       callback: li => applyChatDamage(li, 0, 1)
     },
     {
       name: 'Add half of first to incoming',
       icon: '<i class="fas fa-heart"></i>',
-      condition: (canApply && (twoRoll || moreRoll)),
+      condition: (canApply && twoRoll),
       callback: li => applyChatDamage(li, 0, 0.5)
     },
     {
       name: 'Add quarter of first to incoming',
       icon: '<i class="fas fa-hand-holding-heart"></i>',
-      condition: (canApply && (twoRoll || moreRoll)),
+      condition: (canApply && twoRoll),
       callback: li => applyChatDamage(li, 0, 0.25)
     },
     {
       name: 'Add second roll to incoming damage',
       icon: '<i class="fas fa-heart-broken"></i>',
-      condition: (canApply && (twoRoll || moreRoll)),
+      condition: (canApply && twoRoll),
       callback: li => applyChatDamage(li, 1, 1)
     },
     {
       name: 'Add half of second to incoming',
       icon: '<i class="fas fa-heart"></i>',
-      condition: (canApply && (twoRoll || moreRoll)),
+      condition: (canApply && twoRoll),
       callback: li => applyChatDamage(li, 1, 0.5)
     },
     {
       name: 'Add quarter of second to incoming',
       icon: '<i class="fas fa-hand-holding-heart"></i>',
-      condition: (canApply && (twoRoll || moreRoll)),
+      condition: (canApply && twoRoll),
       callback: li => applyChatDamage(li, 1, 0.25)
     },
     {

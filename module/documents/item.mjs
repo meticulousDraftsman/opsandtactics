@@ -282,7 +282,52 @@ export class OpsItem extends Item {
     if (Number(cost)==0) return;
     await this.update({[path]:(getProperty(this,path)-cost)});
   }
-
+  rollDamage(actionID,goodBad='good',event=undefined){
+    const rollData = this.actor.getRollData();
+    const rollConfig = {
+      rolls: [],
+      rollTypes: [],
+      actor: this.actor,
+      data: rollData,
+      title: `${this.name} - ${this.system.actions[actionID].name}${getProperty(this,'system.magazine.loaded.name')?` - ${this.system.magazine.loaded.name}`:''}`,
+      flavor:[`${this.system.actions[actionID].effect.flavor}`],
+      speaker: ChatMessage.getSpeaker({actor:this.actor}),
+      rollMode: game.settings.get('core','rollMode')
+    }
+    if (getProperty(this,`system.actions.${actionID}.effect.ammo`) && getProperty(this,'system.magazine.source')) rollConfig.flavor.push(this.system.magazine.loaded.flavor)
+    const mods = this.actionSum(actionID);
+    if (goodBad=='good'){
+      if (mods.effectGood.primary){
+        rollConfig.rolls.push(mods.effectGood.primary)
+        if (getProperty(this,`system.actions.${actionID}.effect.ammo`) && getProperty(this,'system.magazine.source')) rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.good.primaryFlavor'));
+      }
+      if (mods.effectGood.secondary){
+        rollConfig.rolls.push(mods.effectGood.secondary)
+        rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.good.secondaryFlavor'))
+      }
+      if (mods.effectGood.extra){
+        rollConfig.rolls.push(mods.effectGood.extra)
+        rollConfig.rollTypes.push('Others');
+      }
+    }
+    else{
+      rollConfig.title = rollConfig.title.concat(' (Bad)');
+      if (mods.effectBad.primary){
+        rollConfig.rolls.push(mods.effectBad.primary)
+        rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.bad.primaryFlavor'));
+      }
+      if (mods.effectBad.secondary){
+        rollConfig.rolls.push(mods.effectBad.secondary)
+        rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.bad.secondaryFlavor'))
+      }
+      if (mods.effectBad.extra){
+        rollConfig.rolls.push(mods.effectBad.extra)
+        rollConfig.rollTypes.push('Other');
+      }
+    }
+    console.debug(this)
+    opsDamage(rollConfig);
+  }
   checkType(checkType){
     switch (checkType){
       case 'melee':

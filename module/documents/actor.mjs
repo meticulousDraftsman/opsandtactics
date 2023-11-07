@@ -691,6 +691,24 @@ export class OpsActor extends Actor {
     return super.modifyTokenAttribute(attribute,value,isDelta,isBar);
   }
 
+  static addChatListeners(html){
+    html.on("click",".chat-button-damage",this._onChatDamage.bind(this));
+  }
+  static async _onChatDamage(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    let damage = Number(dataset.damage);
+    if (!canvas.tokens?.controlled?.length || Number.isNaN(damage)) return;
+    damage = event.shiftKey?Math.floor(damage/2):damage;
+    damage = event.altKey?-1*damage:damage;
+    return Promise.all(canvas.tokens.controlled.map(t => {
+      const a = t.actor;
+      if (!a.isOwner) return a;
+      const updateData = {['system.health.incoming']:getProperty(a,'system.health.incoming')+damage};
+      return a.update(updateData);
+    }))
+  }
+
   /**
    * Override getRollData() that's supplied to rolls.
    */
