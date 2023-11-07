@@ -1,4 +1,4 @@
-import { opsCheck } from "../opsandtactics.mjs";
+import { opsCheck, opsDamage } from "../opsandtactics.mjs";
 
 /**
  * Extend the basic Item with some very simple modifications.
@@ -92,6 +92,7 @@ export class OpsItem extends Item {
       else {
         systemData.magazine.loaded = getProperty(this,tripleID[1]+'.'+tripleID[2]);
       }
+      
     }
     else {
       systemData.magazine.loaded = {stats:{good:{primary:systemData.damageBase}}};
@@ -138,7 +139,7 @@ export class OpsItem extends Item {
       actor: this.actor,
       data: rollData,
       critical: getProperty(this,'system.crit'),
-      error: getProperty(this,'system.error'),
+      error: getProperty(this,'system.errorBase') + getProperty(this,'system.magazine.loaded.stats.error'),
       title: `${this.name} - ${this.system.actions[actionID].name}`,
       flavor: getProperty(this,`system.actions.${actionID}.check.flavor`),
       checkType: getProperty(this,`system.actions.${actionID}.check.type`),
@@ -193,7 +194,8 @@ export class OpsItem extends Item {
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
         return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.max);
-      case 'external':
+      case 'consumable':
+      case 'cartridge':
         if (!this.system.magazine.source) return false;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
@@ -233,7 +235,8 @@ export class OpsItem extends Item {
         coolUpdate[`${dualID[1]}.value`] = getProperty(loadedMag,`${dualID[1]}.value`)+cost;
         await loadedMag.update(coolUpdate);
         break;
-      case 'external':
+      case 'consumable':
+      case 'cartridge':
         if (!this.system.magazine.source) return;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
@@ -346,7 +349,6 @@ export class OpsItem extends Item {
 
   actionSum(actionKey,tweaks={}){ //['system.magazine.loaded.stats.check']:9
     const tweakedThis = mergeObject(this.toObject(false),tweaks);
-    if (!objectsEqual(this.system,tweakedThis.system)) console.debug(diffObject(this.system,tweakedThis.system))
     const sourceAction = getProperty(tweakedThis,`system.actions.${actionKey}`);
     const mods = {
       checkNum: 0,
@@ -367,177 +369,242 @@ export class OpsItem extends Item {
     // If we can't just null it out...
     else {
       // Start with the inherent input from the attack
-      if (sourceAction.effect.inherent) mods.effectParts.push(new Roll(`${sourceAction.effect.inherent}`))
+      if (sourceAction.effect.inherent) mods.effectParts.push(new Roll(`${sourceAction.effect.inherent}`,this?.actor.getRollData()))
       // Add the actor's ability score if present
       if (this.actor){
         let abilityScale = sourceAction.effect?.scaleAbility || 1;
         let scaledAbility = Math.floor(this.actor.abilityMod(sourceAction.effect.ability) * abilityScale);
         if (scaledAbility!=0) mods.effectParts.push(new Roll(`${scaledAbility}`))
       }
-      // Add each mod with a damage impact on its own
-      if (hasProperty(sourceAction,'effect.mods')){
-        for (let [,e] of Object.entries(sourceAction.effect.mods)){
-          if (e.value) mods.effectParts.push(new Roll(`${e.value}`))
-        }
-      }
-      // Prepare the base damage both good and bad whatever's present
-      // Assign the separately-input flavor to the primary and secondary rolls, leave extra alone
-      // Count the total 'base' dice from primary and secondary
-      let goodCount = 0;
-      if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.primary')){
-        mods.goodBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.primary}${getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')}]`:''}`);
-        if (mods.goodBase.primary.terms[0] instanceof Die) goodCount += mods.goodBase.primary.terms[0].number;
-      } 
-      if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondary')){
-        mods.goodBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.secondary}${getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')}]`:''}`);
-        if (mods.goodBase.secondary.terms[0] instanceof Die) goodCount += mods.goodBase.secondary.terms[0].number;
-      } 
-      if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.extra')) mods.goodBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.good.extra);
-
-      let badCount = 0;
-      if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')){
-        mods.badBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.primary}${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')}]`:''}`);
-        if (mods.badBase.primary.terms[0] instanceof Die) badCount += mods.badBase.primary.terms[0].number;
-      } 
-      if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondary')){
-        mods.badBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.secondary}${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')}]`:''}`);
-        if (mods.badBase.secondary.terms[0] instanceof Die) badCount += mods.badBase.secondary.terms[0].number;
-      } 
-      if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.extra')) mods.badBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.bad.extra);
       
-      // Dice scaling from attack
-      let goodBonus = 0;
-      if (goodCount < getProperty(sourceAction,'dice.scaleCartridge.bar')){
-        goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.less'));
-      }
-      else{
-        goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
-        goodCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
-        if (goodCount >= getProperty(sourceAction,'dice.scaleCartridge.per') && getProperty(sourceAction,'dice.scaleCartridge.per')!=0) goodBonus += getProperty(sourceAction,'dice.scaleCartridge.scale')*Math.floor(goodCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
-      }
-      if (Number.isNaN(goodBonus)) goodBonus = 0;      
-
-      let badBonus = 0;
-      if (badCount < getProperty(sourceAction,'dice.scaleCartridge.bar')){
-        badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.less'));
-      }
-      else{
-        badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
-        badCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
-        if (badCount >= getProperty(sourceAction,'dice.scaleCartridge.per') && getProperty(sourceAction,'dice.scaleCartridge.per')!=0) badBonus += getProperty(sourceAction,'dice.scaleCartridge.scale')*Math.floor(badCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
-      }
-      if (Number.isNaN(goodBonus)) badBonus = 0;    
-
-      // Dice scaling from mods
-      if (hasProperty(sourceAction,'dice.mods')){
-        for (let [,d] of Object.entries(sourceAction.dice.mods)){
-          if (d.value) {
-            goodBonus += d.value;
-            badBonus += d.value;
+      if (this.type=='weapon'){
+        // Add each mod with a damage impact on its own
+        if (hasProperty(sourceAction,'effect.mods')){
+          for (let [,e] of Object.entries(sourceAction.effect.mods)){
+            if (e.value) mods.effectParts.push(new Roll(`${e.value}`))
           }
         }
-      }
-
-      // Apply bonus dice and dissolve into terms
-      if (mods.goodBase.primary){
-        mods.goodBase.primary.alter(1,goodBonus);
-        mods.goodBase.primary = mods.goodBase.primary.terms;
-      } 
-      else{
-        mods.goodBase.primary = [];
-      }
-      if (mods.goodBase.secondary){
-        mods.goodBase.secondary = mods.goodBase.secondary.terms;
-      }
-      else{
-        mods.goodBase.secondary = [];
-      }
-      if (mods.goodBase.extra){
-        mods.goodBase.extra = mods.goodBase.extra.terms;
-      } 
-      else{
-        mods.goodBase.extra = [];
-      }
-      if (mods.badBase.primary){
-        mods.badBase.primary.alter(1,badBonus);
-        mods.badBase.primary = mods.badBase.primary.terms;
-      } 
-      else{
-        mods.badBase.primary = []
-      }
-      if (mods.badBase.secondary){
-        mods.badBase.secondary = mods.badBase.secondary.terms;
-      }
-      else{
-        mods.badBase.secondary = [];
-      }
-      if (mods.badBase.extra){
-        mods.badBase.extra = mods.badBase.extra.terms;
-      } 
-      else{
-        mods.badBase.extra = [];
-      }
-
-      // Sort attack and mod parts to where they go
-      for (let part of mods.effectParts){
-        let flavors = [];
-        for (let t of part.terms){
-          if (t.flavor) flavors.push(t.flavor)
-        }
-        // If it only has one flavor, nice and easy
-        if (flavors.length==1){
-          // Check if it goes in the primary, then the secondary, and if neither then the extra
-          if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')){
-            if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
-            mods.goodBase.primary.push(part);
-          }
-          else if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')){
-            if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.secondary.push(new OperatorTerm({operator:'+'}));
-            mods.goodBase.secondary.push(part);
-          }
-          else {
-            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
-            mods.goodBase.extra.push(part);
-          }
-          // Same but bad
-          if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')){
-            if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.primary.push(new OperatorTerm({operator:'+'}));
-            mods.badBase.primary.push(part);
-          }
-          else if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')){
-            if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.secondary.push(new OperatorTerm({operator:'+'}));
-            mods.badBase.secondary.push(part);
-          }
-          else {
-            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
-            mods.badBase.extra.push(part);
-          }
-        }
-        else if (flavors.length==0){
-          // If it has no flavor, it goes in the primary
-          if (!(part.terms[0] instanceof OperatorTerm)){
-            mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
-            mods.badBase.primary.push(new OperatorTerm({operator:'+'}));
+        // Prepare the base damage both good and bad whatever's present
+        // Assign the separately-input flavor to the primary and secondary rolls, leave extra alone
+        // Count the total 'base' dice from primary and secondary
+        let goodCount = 0;
+        let badCount = 0;
+        let goodBonus = 0;
+        let badBonus = 0;
+        if (sourceAction.effect.ammo){
+          if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.primary')){
+            
+            mods.goodBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.primary}${getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')}]`:''}`);
+            if (mods.goodBase.primary.terms[0] instanceof Die) goodCount += mods.goodBase.primary.terms[0].number;
           } 
-          mods.goodBase.primary.push(part);
-          mods.badBase.primary.push(part);
+          if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondary')){
+            
+            mods.goodBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.secondary}${getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')}]`:''}`);
+            if (mods.goodBase.secondary.terms[0] instanceof Die) goodCount += mods.goodBase.secondary.terms[0].number;
+          } 
+          if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.extra')){
+            
+            mods.goodBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.good.extra);
+          }
+
+  
+          
+          if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')){
+            
+            mods.badBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.primary}${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')}]`:''}`);
+            if (mods.badBase.primary.terms[0] instanceof Die) badCount += mods.badBase.primary.terms[0].number;
+          } 
+          if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondary')){
+            
+            mods.badBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.secondary}${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')}]`:''}`);
+            if (mods.badBase.secondary.terms[0] instanceof Die) badCount += mods.badBase.secondary.terms[0].number;
+          } 
+          if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.extra')){
+            
+            mods.badBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.bad.extra);
+          } 
+          // Dice scaling from attack
+          
+          
+          if (goodCount < getProperty(sourceAction,'dice.scaleCartridge.bar')){
+            goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.less'));
+          }
+          else{
+            goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
+            goodCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
+            if (goodCount >= getProperty(sourceAction,'dice.scaleCartridge.per') && getProperty(sourceAction,'dice.scaleCartridge.per')!=0) goodBonus += getProperty(sourceAction,'dice.scaleCartridge.scale')*Math.floor(goodCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
+          }
+          if (Number.isNaN(goodBonus)) goodBonus = 0;      
+
+          
+          if (badCount < getProperty(sourceAction,'dice.scaleCartridge.bar')){
+            badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.less'));
+          }
+          else{
+            badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
+            badCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
+            if (badCount >= getProperty(sourceAction,'dice.scaleCartridge.per') && getProperty(sourceAction,'dice.scaleCartridge.per')!=0) badBonus += getProperty(sourceAction,'dice.scaleCartridge.scale')*Math.floor(badCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
+          }
+          if (Number.isNaN(goodBonus)) badBonus = 0;    
+          // Dice scaling from mods
+          if (hasProperty(sourceAction,'dice.mods')){
+            for (let [,d] of Object.entries(sourceAction.dice.mods)){
+              if (d.value) {
+                goodBonus += d.value;
+                badBonus += d.value;
+              }
+            }
+          }
+        }
+        // Apply bonus dice and dissolve into terms
+        if (mods.goodBase.primary){
+          mods.goodBase.primary.alter(1,goodBonus);
+          mods.goodBase.primary = mods.goodBase.primary.terms;
+        } 
+        else{
+          mods.goodBase.primary = [];
+        }
+        if (mods.goodBase.secondary){
+          mods.goodBase.secondary = mods.goodBase.secondary.terms;
         }
         else{
-          // If it's flavor-mixed, dump it in the extras
-          if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
-          if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
-          mods.goodBase.extra.push(part);
-          mods.badBase.extra.push(part);
+          mods.goodBase.secondary = [];
         }
+        if (mods.goodBase.extra){
+          mods.goodBase.extra = mods.goodBase.extra.terms;
+        } 
+        else{
+          mods.goodBase.extra = [];
+        }
+        if (mods.badBase.primary){
+          mods.badBase.primary.alter(1,badBonus);
+          mods.badBase.primary = mods.badBase.primary.terms;
+        } 
+        else{
+          mods.badBase.primary = []
+        }
+        if (mods.badBase.secondary){
+          mods.badBase.secondary = mods.badBase.secondary.terms;
+        }
+        else{
+          mods.badBase.secondary = [];
+        }
+        if (mods.badBase.extra){
+          mods.badBase.extra = mods.badBase.extra.terms;
+        } 
+        else{
+          mods.badBase.extra = [];
+        }
+        
+        // Sort attack and mod parts to where they go
+        for (let part of mods.effectParts){
+          let flavors = [];
+          for (let t of part.terms){
+            if (t.flavor) flavors.push(t.flavor)
+          }
+          if (!sourceAction.effect.ammo){
+            // If no ammo influence then just put it all in the good primary
+            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.primary)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
+            mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
+          }
+          // If it only has one flavor, nice and easy
+          else if (flavors.length==1){
+            // Check if it goes in the primary, then the secondary, and if neither then the extra
+            if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')){
+              if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
+              mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
+            }
+            else if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')){
+              if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.secondary.push(new OperatorTerm({operator:'+'}));
+              mods.goodBase.secondary = mods.goodBase.secondary.concat(part.terms);
+            }
+            else {
+              if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
+              mods.goodBase.extra = mods.goodBase.extra.concat(part.terms);
+            }
+            // Same but bad
+            if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')){
+              if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.primary.push(new OperatorTerm({operator:'+'}));
+              mods.badBase.primary = mods.badBase.primary.concat(part.terms);
+            }
+            else if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')){
+              if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.secondary.push(new OperatorTerm({operator:'+'}));
+              mods.badBase.secondary = mods.badBase.secondary.concat(part.terms);
+            }
+            else {
+              if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
+              mods.badBase.extra = mods.badBase.extra.concat(part.terms);
+            }
+          }
+          else if (flavors.length==0){
+            // If it has no flavor, it goes in the primary
+            if (!(part.terms[0] instanceof OperatorTerm)){
+              mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
+              mods.badBase.primary.push(new OperatorTerm({operator:'+'}));
+            } 
+            mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
+            mods.badBase.primary = mods.badBase.primary.concat(part.terms);
+          }
+          else{
+            // If it's flavor-mixed, dump it in the extras
+            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
+            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
+            mods.goodBase.extra = mods.goodBase.extra.concat(part.terms);
+            mods.badBase.extra = mods.badBase.extra.concat(part.terms);
+          }
+        }
+        // Nuke the bad primary if it isn't defined
+        if(!getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')) mods.badBase.primary = []
+        // Nuke the bad extra if there's no bad primary or secondary
+        if (isEmpty(mods.badBase.primary) && isEmpty(mods.badBase.secondary)) mods.badBase.extra = [];
+        // Turn everything back into rolls and then expressions
+        if (!isEmpty(mods.goodBase.primary)){
+          mods.effectGood.primary = Roll.fromTerms(mods.goodBase.primary);
+          if (sourceAction.effect.ammo){
+            mods.effectGood.primaryLabel = [mods.effectGood.primary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor'):''].join(' ');
+          }
+          else{
+            mods.effectGood.primaryLabel = mods.effectGood.primary.formula;
+          }          
+        } 
+        if (!isEmpty(mods.goodBase.secondary)){
+          mods.effectGood.secondary = Roll.fromTerms(mods.goodBase.secondary);
+          mods.effectGood.secondaryLabel = [mods.effectGood.secondary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor'):''].join(' ');
+        } 
+        if (!isEmpty(mods.goodBase.extra)){
+          mods.effectGood.extra = Roll.fromTerms(mods.goodBase.extra);
+          mods.effectGood.extraLabel = mods.effectGood.extra.formula;
+        } 
+        if (!isEmpty(mods.badBase.primary)){
+          mods.effectBad.primary = Roll.fromTerms(mods.badBase.primary);
+          mods.effectBad.primaryLabel = [mods.effectBad.primary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor'):''].join(' ');
+        } 
+        if (!isEmpty(mods.badBase.secondary)){
+          mods.effectBad.secondary = Roll.fromTerms(mods.badBase.secondary);
+          mods.effectBad.secondaryLabel = [mods.effectBad.secondary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor'):''].join(' ');
+        } 
+        if (!isEmpty(mods.badBase.extra)){
+          mods.effectBad.extra = Roll.fromTerms(mods.badBase.extra);
+          mods.effectBad.extraLabel = mods.effectBad.extra.formula;
+        } 
       }
+      // For objects and magic just parse the inherent and ability modifier into the good primary
+      if (this.type=='object' || this.type=='magic'){
+        mods.goodBase.primary = [];
+        for (let part of mods.effectParts){
+          if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.primary)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
+          mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
+        }
+        if (isEmpty(mods.goodBase.primary)){
+          mods.effectGood.primary = new Roll('0');
+          mods.effectGood.primaryLabel = null;
+        }
+        else{
+          mods.effectGood.primary = Roll.fromTerms(mods.goodBase.primary);
+          mods.effectGood.primaryLabel = mods.effectGood.primary.formula;
+        }
 
-      // Turn everything back into rolls and then expressions
-      if (!isEmpty(mods.goodBase.primary)) mods.effectGood.primary = Roll.getFormula(mods.goodBase.primary);
-      if (!isEmpty(mods.goodBase.secondary)) mods.effectGood.secondary = Roll.getFormula(mods.goodBase.secondary);
-      if (!isEmpty(mods.goodBase.extra)) mods.effectGood.extra = Roll.getFormula(mods.goodBase.extra);
-      if (!isEmpty(mods.badBase.primary)) mods.effectBad.primary = Roll.getFormula(mods.badBase.primary);
-      if (!isEmpty(mods.badBase.secondary)) mods.effectBad.secondary = Roll.getFormula(mods.badBase.secondary);
-      if (!isEmpty(mods.badBase.extra)) mods.effectBad.extra = Roll.getFormula(mods.badBase.extra);
+      }
     }
     // Handle CP
     mods.cp = sourceAction.cp.inherent?Number(sourceAction.cp.inherent):null;
@@ -703,12 +770,25 @@ export class OpsItem extends Item {
 
   listMagazines(){
     const magazines = {};
-    if (this.system.magazine.type=='unlimited') return magazines;
+    if (this.system.magazine.type=='unlimited' || this.system.magazine.type=='mental') return magazines;
+    if (this.system.magazine.type=='magic'){
+      magazines.entries = [];
+      if (this.actor){
+        for (let i of this.actor.items){
+          if (getProperty(i,'system.gear.resources')){
+            for (let [key,entry] of Object.entries(i.system.gear.resources)){
+              if (entry.type==='magic') magazines.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}]`,id:`${i.id},system.gear.resources.${key}`});
+            }
+          }
+        }
+      }
+    }
 
     if (this.system.magazine.insideOut!='external'){
       magazines.internal = {label:'Internal',entries: []};
       switch (this.system.magazine.type){
         case 'consumable':
+          if (!hasProperty(this,'system.gear')) break;
           magazines.internal.entries.push({label:`Self x${this.system.gear.quantity.value}`,id:`${this.id},system.gear.quantity`});
           for (let [key, entry] of Object.entries(this.system.gear.resources)){
             if (entry.type==='consumable') magazines.internal.entries.push({label:`${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}]`,id:`${this.id},system.gear.resources.${key}`});
@@ -757,13 +837,21 @@ export class OpsItem extends Item {
           case 'coolant':
             if (getProperty(i,'system.gear.resources')){
               for (let [key,entry] of Object.entries(i.system.gear.resources)){
-                if (entry.type==='coolant') magazines.external.entries.push({label:`${entry.name?entry.name:''} [${entry.value?(entry.value):'Cool'}]`,id:`${i.id},system.gear.resources.${key}`});
+                if (entry.type==='coolant') magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?(entry.value):'Cool'}]`,id:`${i.id},system.gear.resources.${key}`});
+              }
+            }
+            break;
+          case 'magic':
+            if (getProperty(i,'system.gear.resources')){
+              for (let [key,entry] of Object.entries(i.system.gear.resources)){
+                if (entry.type==='magic') magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}]`,id:`${i.id},system.gear.resources.${key}`});
               }
             }
             break;
         }
       }
     }
+    
     return magazines;
   }
 

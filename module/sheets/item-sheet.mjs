@@ -78,41 +78,16 @@ export class OpsItemSheet extends ItemSheet {
     const sourceSkills = [{label:"None",id:""}];
     if (itemData.type === 'object'){
       // Build list of usable object resources or skill items for objects
-      magazines = [{label:"Unloaded",id:""}];
+      magazines = itemData.listMagazines();
       if(actor){
         for (let i of actor.items){
           if (i.type==='skill') sourceSkills.push({label:i.name,id:i.id})
-          if (itemData.system.magazine.type === 'external'){
-            if (i.id!=itemData.id){
-              if (getProperty(i,'system.gear.quantity.available')) magazines.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
-              if (getProperty(i,'system.gear.resources')){
-                for (let [key,r] of Object.entries(i.system.gear.resources)){
-                  if (r.type==='consumable' && r.available) magazines.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},system.gear.resources.${key}`});
-                }
-              }
-            }
-          }
-        }
-      }
-      if (itemData.system.magazine.type === 'internal'){
-        magazines.push({label:`${itemData.name} x${itemData.system.gear.quantity.value}`,id:`${itemData.id},system.gear.quantity`});
-        for (let [key,r] of Object.entries(itemData.system.gear.resources)){
-          if (r.type==='consumable') magazines.push({label:`${r.name?r.name:itemData.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${itemData.id},system.gear.resources.${key}`});
         }
       }
     }
-    const sourceMagics = [{name:"None",id:""}];
     if (itemData.type==='magic'){
       // Build list of usable object resources for magic
-      if(actor && itemData.system.magazine.type==='external'){
-        for(let i of actor.items){
-          if(getProperty(i,'system.gear.resources')){
-            for (let [key,r] of Object.entries(i.system.gear.resources)){
-              if (r.type==='magic') sourceMagics.push({label:`${r.name?r.name:i.name} [${r.value?r.value:0}/${r.max?r.max:0}]`,id:`${i.id},system.gear.resources.${key}`});
-            }
-          }
-        }
-      }
+      magazines = itemData.listMagazines();
     }
     let containers = [{name:"Loose",id:"Loose"},{name:"Worn",id:"Worn"},{name:"Carried",id:"Carried"},{name:"Stored",id:"Stored"}];
     if (actor){
@@ -177,7 +152,7 @@ export class OpsItemSheet extends ItemSheet {
       context.sourceSkills = sourceSkills;
       context.magazines = magazines;
     }
-    if (itemData.type === 'magic') context.sourceMagics = sourceMagics;
+    if (itemData.type === 'magic') context.magazines = magazines;
 
     return context;
   }

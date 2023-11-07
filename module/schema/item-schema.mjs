@@ -87,16 +87,13 @@ export class OpsWeapon extends foundry.abstract.DataModel{
                 type: new field.StringField({initial:"unlimited"}),
                 insideOut: new field.StringField({initial:"both"}),
                 source: new field.StringField(),
-                backup: new field.StringField(),
                 loaded: new field.ObjectField(),
-                value: new field.NumberField({initial:0}),
-                max: new field.NumberField({initial:0}),
                 heatBase: new field.NumberField({initial:0})
             }),
             damageBase: new field.StringField(),
             range: new field.StringField({initial:"5ft"}),
             crit: new field.NumberField({initial:16}),
-            error: new field.NumberField({initial:0}),
+            errorBase: new field.NumberField({initial:0}),
             weaponMods: new field.ObjectField(),
             actions: new field.ObjectField(),
             selectMod: new field.StringField(),
@@ -289,6 +286,7 @@ export class OpsObject extends foundry.abstract.DataModel{
             description: new field.StringField(),
             gear: new field.EmbeddedDataField(Gear),
             actions: new field.ObjectField(),
+            range: new field.StringField({initial:"5ft"}),
             magazine: new field.SchemaField({
                 type: new field.StringField({initial:'unlimited'}),
                 source: new field.StringField()
@@ -311,6 +309,7 @@ export class OpsMagic extends foundry.abstract.DataModel{
             minimized: new field.BooleanField({initial:false}),
             description: new field.StringField(),
             actions: new field.ObjectField(),
+            range: new field.StringField({initial:"5ft"}),
             magazine: new field.SchemaField({
                 type: new field.StringField({initial:'external'}),
                 source: new field.StringField()

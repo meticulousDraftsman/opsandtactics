@@ -214,14 +214,9 @@ export class OpsActorSheet extends ActorSheet {
         for (let [key,a] of Object.entries(i.system.actions)){
           a.mods = context.actor.items.get(i._id).actionSum(key);
         }
-        if(i.system.magazine.type != 'internal'){
-          if(i.system.magazine.source){
-              //let dualID = i.system.magazine.source.split(',')
-              //let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
-              //i.system.magazine.loaded.value = getProperty(loadedMag,`${dualID[1]}.value`);
-              //i.system.magazine.loaded.max = getProperty(loadedMag,`${dualID[1]}.max`);  
-          }
-        }
+        i.magazines = context.actor.items.get(i._id).listMagazines();
+        i.system.error = i.system.errorBase;
+        if (getProperty(i,'system.magazine.loaded.stats.error')) i.system.error += getProperty(i,'system.magazine.loaded.stats.error');
         weapons.push(i);
       }
 
@@ -244,12 +239,7 @@ export class OpsActorSheet extends ActorSheet {
       }
       // Append to magics.
       if (i.type === 'magic') {
-        if (i.system.magazine.type==='external' && i.system.magazine.source){
-          let dualID = i.system.magazine.source.split(',')
-          let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
-          i.system.magazine.value = getProperty(loadedMag,`${dualID[1]}.value`);
-          i.system.magazine.max = getProperty(loadedMag,`${dualID[1]}.max`);  
-        }
+        i.magazines = context.actor.items.get(i._id).listMagazines();
         if(!isEmpty(getProperty(i,'system.actions'))){
           let attackFlag = false;
           for (let [key,a] of Object.entries(i.system.actions)){
@@ -259,6 +249,9 @@ export class OpsActorSheet extends ActorSheet {
           if (attackFlag) attackMagic.push(i);
         }
         utilityMagic.push(i);
+      }
+      if (i.type === 'object'){
+        i.magazines = context.actor.items.get(i._id).listMagazines();
       }
 
       // Append to objects-with-resources
@@ -608,6 +601,7 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.resource-delta').change(this._onResourceDelta.bind(this));
     // Actor Sheet Rolls
     html.find('.item-check').click(this._actionCheck.bind(this));   
+    html.find('.damage-roll').click(this._damageRoll.bind(this));
     html.find('.skill-check').click(this._skillCheck.bind(this));   
     html.find('.actor-check').click(this._actorCheck.bind(this));
     html.find('.vehicle-check').click(this._vehicleCheck.bind(this));
@@ -825,6 +819,14 @@ export class OpsActorSheet extends ActorSheet {
     const actionID = event.currentTarget.dataset.actionId;
     const item = this.actor.items.get(itemID);
     item.rollActionCheck(actionID,event);
+  }
+  _damageRoll(event){
+    event.preventDefault();
+    const itemID = event.currentTarget.dataset.itemId;
+    const actionID = event.currentTarget.dataset.actionId;
+    const goodBad = event.currentTarget.dataset.goodBad;
+    const item = this.actor.items.get(itemID);
+    item.rollDamage(actionID,goodBad,event);
   }
   _skillCheck(event){
     event.preventDefault();
