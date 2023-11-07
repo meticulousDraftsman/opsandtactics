@@ -10,53 +10,89 @@
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-5col action-pane {{#if item.system.minimized}}collapse{{/if}}">
-                    <div class="grid-span-2">
+                <div class="grid grid-10col action-pane flex-group-center {{#if item.system.minimized}}collapse{{/if}}">
+                    <div class="grid-span-4 flex-group-center">
                         <div class="grid grid-5col flex-group-center">
-                            <span>Crit</span>
-                            <input type="text" value="{{item.system.crit}}-18" readonly>
-                            {{#if (eq this.system.magazine.type "coolant")}}
-                            <span>Heat</span>
-                            {{else}}
-                            <span>Ammo</span>
-                            {{/if}}
-                            {{#if (eq item.system.magazine.type "internal")}}
-                            <div class="grid-span-2 flexrow flex-group-center">
-                                <input class="flex3 item-input" type="text" data-target-prop="system.magazine.value" data-target-id="{{item._id}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
-                                <span>/</span>
-                                <input class="flex3" type="text" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
-                            </div>
-                            {{/if}}
-                            {{#if (eq item.system.magazine.type "external")}}
-                            <div class="grid-span-2 flexrow flex-group-center">
-                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
-                                <span>{{#if (gt item.system.magazine.value 0)}}+{{item.system.magazine.value}}{{/if}}/</span>
-                                <input type="text" class="flex3" value="{{item.system.magazine.loaded.max}}" data-dtype="Number" readonly/>
-                            </div>
-                            {{/if}}
-                            {{#if (eq item.system.magazine.type "coolant")}}
-                            <div class="grid-span-2 flexrow flex-group-center">
-                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.loaded.value}}" data-dtype="Number"/>
-                                <span>/</span>
-                                <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
-                            </div>
-                            {{/if}}
-                            {{#if (eq item.system.magazine.type "unlimited")}}
-                            <i class="grid-span-2 fas fa-infinity"></i>
-                            {{/if}}
-                            <a class="resource-label rollable" data-roll="1d100" data-label="{{this.name}} {{item.system.error}}% Error Range" data-tooltip="Roll for Jam Potential">Error</a>
-                            <input type="text" value="{{item.system.error}}%" data-dtype="Number" readonly>
                             <span>Range</span>
-                            <input class="grid-span-2 item-input" type="text" data-target-prop="system.range" data-target-id="{{item._id}}" value="{{item.system.range}}" data-dtype="Number">
+                            <input type="text" value="{{item.system.range}}" readonly>
+                            <a class="resource-label rollable" data-roll="1d100" data-label="{{this.name}} {{item.system.error}}% Error Range" data-tooltip="Roll for Jam Potential">Error</a>
+                            <input type="text" value="{{item.system.error}}%" readonly>
+                            <span>{{#if (eq this.system.magazine.type 'coolant')}}Heat{{else}}Ammo{{/if}}</span>
                         </div>
                     </div>
-                    <ol class="grid-span-3 items-list flex-group-center">
+                    
+                    {{#if (or (eq item.system.magazine.type "consumable") (eq item.system.magazine.type "cartridge"))}}
+                    <select class="grid-span-6 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                        {{#select item.system.magazine.source}}
+                        <option value="">Unloaded</option>
+                        {{#each item.magazines}}
+                        {{#if this.entries.length}}
+                        <optgroup label="{{this.label}}">
+                            {{selectOptions this.entries nameAttr="id" labelAttr="label"}}
+                        </optgroup>
+                        {{/if}}
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                    {{#if (eq item.system.magazine.type "coolant")}}
+                    <div class="grid-span-6 flexrow flex-group-center">
+                        <select class="flex3 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                            {{#select item.system.magazine.source}}
+                            <option value="">Unsunk</option>
+                            {{#each item.magazines}}
+                            {{#if this.entries.length}}
+                            <optgroup label="{{this.label}}">
+                                {{selectOptions this.entries nameAttr="id" labelAttr="label"}}
+                            </optgroup>
+                            {{/if}}
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                        <span class="flex0">/</span>
+                        <input type="text" class="flex1" value="{{item.system.magazine.heatBase}}" data-dtype="Number" readonly/>
+                    </div>
+                    {{/if}}
+                    {{#if (eq item.system.magazine.type "unlimited")}}
+                    <i class="grid-span-2 fas fa-infinity"></i>
+                    {{/if}}
+                    <ol class="grid-span-10 items-list flex-group-center">
                         {{#each item.system.actions}}
                         {{#if this.active}}
-                        <li class="item flexrow">
-                            <a class="item-check resource-label flex-group-left {{#unless this.mods.effectTotal}}flex2{{/unless}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
-                            <a class="rollable grid-span-2 resource-label {{#unless this.mods.effectTotal}}collapse{{/unless}}" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Damage Roll">{{this.mods.effectTotal}}</a>
-                            <span class="grid-start-3">{{this.mods.cpAmmoLabel}}</span>
+                        <li class="item grid grid-5col">
+                            <div class="grid-span-4 flexrow">
+                                <a class="item-check resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
+                                <div class="flexcol flex2 flex-group-center">
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="{{#if this.mods.effectBad.primary}}Good {{/if}}Damage Roll">
+                                        {{#if (or this.mods.effectGood.secondary this.mods.effectGood.extra)}}
+                                        ({{this.mods.effectGood.primaryLabel}}) 
+                                        {{else}}
+                                        {{this.mods.effectGood.primaryLabel}}
+                                        {{/if}}
+                                        {{#if this.mods.effectGood.secondary}}
+                                        , ({{this.mods.effectGood.secondaryLabel}})
+                                        {{/if}}                                        
+                                        {{#if this.mods.effectGood.extra}}
+                                        , ({{this.mods.effectGood.extraLabel}})
+                                        {{/if}}     
+                                    </a>
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="bad" data-tooltip="Bad Damage Roll">
+                                        {{#if (and this.mods.effectBad.primary (or this.mods.effectBad.secondary this.mods.effectBad.extra))}}
+                                        ({{this.mods.effectBad.primaryLabel}}) 
+                                        {{else}}
+                                        {{this.mods.effectBad.primaryLabel}}
+                                        {{/if}}
+                                        {{#if this.mods.effectBad.secondary}}
+                                        , ({{this.mods.effectBad.secondaryLabel}})
+                                        {{/if}}                                        
+                                        {{#if this.mods.effectBad.extra}}
+                                        , ({{this.mods.effectBad.extraLabel}})
+                                        {{/if}}  
+                                    </a>
+                                </div>
+
+                            </div>
+                            <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
                         {{/if}}
                         {{/each}}
@@ -79,30 +115,44 @@
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-5col action-pane {{#if item.system.minimized}}collapse{{/if}}">
-                    <div class="grid-span-2">
+                <div class="grid grid-10col action-pane {{#if item.system.minimized}}collapse{{/if}}">
+                    <div class="grid-span-4 flex-group-center">
                         <div class="grid grid-5col flex-group-center">
-                            <span>Crit</span>
-                            <input type="text" value="{{item.system.crit}}-18" readonly>
-                            <span>Uses</span>
-                            {{#if (eq item.system.magazine.type "unlimited")}}
-                            <i class="grid-span-2 fas fa-infinity"></i>
-                            {{else}}
-                            <div class="grid-span-2 flexrow flex-group-center">
-                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
-                                <span>/</span>
-                                <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
-                            </div>
-                            {{/if}}
+                            <span>Range</span>
+                            <input type="text" value="{{item.system.range}}" readonly>
+                            <span class="grid-start-5">Uses</span>
                         </div>
                     </div>
-                    <ol class="grid-span-3 items-list flex-group-center">
+                    {{#if (eq item.system.magazine.type "consumable")}}
+                    <select class="grid-span-6 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                        {{#select item.system.magazine.source}}
+                        <option value="">Empty</option>
+                        {{#each item.magazines}}
+                        {{#if this.entries.length}}
+                        <optgroup label="{{this.label}}">
+                            {{selectOptions this.entries nameAttr="id" labelAttr="label"}}
+                        </optgroup>
+                        {{/if}}
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                    {{#if (eq item.system.magazine.type "unlimited")}}
+                    <i class="grid-span-2 fas fa-infinity"></i>
+                    {{/if}}
+                    <ol class="grid-span-10 items-list flex-group-center">
                         {{#each item.system.actions}}
                         {{#if this.active}}
                         {{#if (eq this.type "attack")}}
-                        <li class="item flexrow">
-                            <a class="item-check resource-label flex-group-left {{#unless this.mods.effectTotal}}flex2{{/unless}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
-                            <a class="rollable grid-span-2 resource-label {{#unless this.mods.effectTotal}}collapse{{/unless}}" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Damage Roll">{{this.mods.effectTotal}}</a>
+                        <li class="item grid grid-5col">
+                            <div class="grid-span-4 flexrow">
+                                <a class="item-check resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
+                                <div class="flexcol flex2 flex-group-center">
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Damage Roll">
+                                        {{this.mods.effectGood.primaryLabel}}
+                                    </a>
+                                </div>
+                            </div>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
                         {{/if}}
@@ -127,40 +177,46 @@
                     <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <div class="grid grid-5col action-pane {{#if item.system.minimized}}collapse{{/if}}">
-                    <div class="grid-span-2">
+                <div class="grid grid-10col action-pane flex-group-center {{#if item.system.minimized}}collapse{{/if}}">
+                    <div class="grid-span-4 flex-group-center">
                         <div class="grid grid-5col flex-group-center">
+                            <span>Range</span>
+                            <input type="text" value="{{item.system.range}}" readonly>
                             {{#unless (eq item.system.magazine.type "mental")}}
-                            <span class="grid-start-2 grid-span-2">Charges</span>
+                            <span class="grid-start-5">Charges</span>
                             {{else}}
-                            <span class="grid-start-2 grid-span-2">Mental Limit</span>
+                            <span class="grid-start-4 grid-span-2">Mental Limit</span>
                             {{/unless}}
-                            {{#if (eq item.system.magazine.type "unlimited")}}
-                            <i class="grid-span-2 fas fa-infinity"></i>
-                            {{/if}}
-                            {{#if (eq item.system.magazine.type "external")}}
-                            <div class="grid-span-2 flexrow flex-group-center">
-                                <input type="text" class="item-input flex3" data-target-prop="value" data-target-id="{{item.system.magazine.source}}" value="{{item.system.magazine.value}}" data-dtype="Number"/>
-                                <span>/</span>
-                                <input type="text" class="flex3" value="{{item.system.magazine.max}}" data-dtype="Number" readonly/>
-                            </div>
-                            {{/if}}
-                            {{#if (eq system.magazine.type "mental")}}
-                            <div class="grid-span-2 flexrow flex-group-center">
-                                <input type="text" class="flex3" value="{{@root.system.magic.mlUsed}}" data-dtype="Number" readonly/>
-                                <span>/</span>
-                                <input type="text" class="flex3" value="{{@root.system.ml.max}}" data-dtype="Number" readonly/>
-                            </div>
-                            {{/if}}
                         </div>
                     </div>
-                    <ol class="grid-span-3 items-list flex-group-center">
+                    {{#if (eq item.system.magazine.type "magic")}}
+                    <select class="grid-span-6 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                            {{selectOptions item.magazines.entries selected=item.system.magazine.source nameAttr="id" labelAttr="label" blank="Blank"}}
+                    </select>
+                    {{/if}}
+                    {{#if (eq system.magazine.type "mental")}}
+                    <div class="grid-span-4 flexrow flex-group-center">
+                        <input type="text" class="flex3" value="{{@root.system.magic.mlUsed}}" data-dtype="Number" readonly/>
+                        <span>/</span>
+                        <input type="text" class="flex3" value="{{@root.system.ml.max}}" data-dtype="Number" readonly/>
+                    </div>
+                    {{/if}}
+                    {{#if (eq item.system.magazine.type "unlimited")}}
+                    <i class="grid-span-2 fas fa-infinity"></i>
+                    {{/if}}
+                    <ol class="grid-span-10 items-list flex-group-center">
                         {{#each item.system.actions}}
                         {{#if this.active}}
                         {{#if (eq this.type "attack")}}
-                        <li class="item flexrow">
-                            <a class="item-check resource-label flex-group-left {{#unless this.mods.effectTotal}}flex2{{/unless}}" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
-                            <a class="rollable grid-span-2 resource-label {{#unless this.mods.effectTotal}}collapse{{/unless}}" data-roll="{{this.mods.effectTotal}}" data-label="{{../name}} - {{this.name}}{{#if this.effect.flavor}} - {{/if}}{{this.effect.flavor}}" data-tooltip="Damage Roll">{{this.mods.effectTotal}}</a>
+                        <li class="item grid grid-5col">
+                            <div class="grid-span-4 flexrow">
+                                <a class="item-check resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
+                                <div class="flexcol flex2 flex-group-center">
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Damage Roll">
+                                        {{this.mods.effectGood.primaryLabel}}
+                                    </a>
+                                </div>
+                            </div>
                             <span>{{this.mods.cpAmmoLabel}}</span>
                         </li>
                         {{/if}}

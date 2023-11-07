@@ -21,18 +21,37 @@
           Object Actions <a class="item-control sub-create" data-target-name="action" title="Add Action"><i class="fas fa-plus"></i></a>
         </legend>
         <div class="grid grid-9col flex-group-center">
+          <select class="grid-span-3 flex-group-center" name="system.magazine.type" data-dtype="String">
+            {{#select system.magazine.type}}
+                <option value="unlimited">Unlimited</option>
+                <option value="consumable">Consumable</option>
+            {{/select}}
+          </select>
+          <span class="">Range</span>
+          <input name="system.range" value="{{system.range}}" type="text" data-dtype="String" placeholder="ft">
           <span>Crit</span>
           <input type="text" name="system.crit" value="{{system.crit}}" data-dtype="Number">
-          <select class="grid-span-3 flex-group-center" name="system.magazine.type" data-dtype="String">
-          {{#select system.magazine.type}}
-            <option value="unlimited">Unlimited Use</opton>
-            <option value="internal">Internal Uses</option>
-            <option value="external">External Uses</option>
-          {{/select}}
+          <span class="grid-span-2"></span>
+          {{#unless (eq system.magazine.type 'unlimited')}}
+          <select class="grid-start-1 grid-span-2 flex-group-center" name="system.magazine.insideOut" data-dtype="String">
+              {{#select system.magazine.insideOut}}
+                  <option value="internal">Internal</option>
+                  <option value="external">External</option>
+                  <option value="both">Both</option>
+              {{/select}}
           </select>
-          {{#unless (eq system.magazine.type "unlimited")}}
-          <select class="flex-group-center grid-span-4" name="system.magazine.source" data-dtype="String">
-            {{selectOptions magazines selected=system.magazine.source nameAttr="id" labelAttr="label"}}
+          <a class="resource-label" data-tooltip="Transfer Uses"><i class="fa-solid fa-right-left"></i></a>
+          <select class="grid-span-6 flex-group-center" name="system.magazine.source" data-dtype="String">
+          {{#select system.magazine.source}}
+              <option value="">Unloaded</option>
+              {{#each magazines}}
+              {{#if this.entries.length}}
+              <optgroup label="{{this.label}}">
+                  {{selectOptions this.entries selected=@root.system.magazine.source nameAttr="id" labelAttr="label"}}
+              </optgroup>
+              {{/if}}
+              {{/each}}
+          {{/select}}
           </select>
           {{/unless}}
         </div>

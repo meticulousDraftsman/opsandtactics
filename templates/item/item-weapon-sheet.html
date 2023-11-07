@@ -18,32 +18,33 @@
                 <legend class="resource-label">
                     Weapon Statistics {{#if item.actor}}<a class="item-control self-destruct" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
                 </legend>
-                <div class="grid grid-8col flex-group-center">
-                    <select class="grid-span-2 flex-group-center" name="system.magazine.type" data-dtype="String">
+                <div class="grid grid-9col flex-group-center">
+                    <select class="grid-span-3 flex-group-center" name="system.magazine.type" data-dtype="String">
                         {{#select system.magazine.type}}
                             <option value="unlimited">Unlimited</option>
                             <option value="consumable">Consumable</option>
                             <option value="cartridge">Cartridge</option>
                             <option value="coolant">Fusion</option>
                         {{/select}}
-                        </select>
+                    </select>
                     <span class="">Range</span>
                     <input name="system.range" value="{{system.range}}" type="text" data-dtype="String" placeholder="ft">
                     <span class="">Critical</span>
                     <input name="system.crit" value="{{system.crit}}" type="text" data-dtype="Number" placeholder="-">
                     <span class="">Error %</span>
-                    <input name="system.error" value="{{system.error}}" type="text" data-dtype="Number" placeholder="%">
+                    <input name="system.errorBase" value="{{system.errorBase}}" type="text" data-dtype="Number" placeholder="%">
                     {{#unless (eq system.magazine.type 'unlimited')}}
                     <select class="grid-span-2 flex-group-center" name="system.magazine.insideOut" data-dtype="String">
                         {{#select system.magazine.insideOut}}
                             <option value="internal">Internal</option>
                             <option value="external">External</option>
-                            <option value="both">All Available</option>
+                            <option value="both">Both</option>
                         {{/select}}
                     </select>
+                    <a class="resource-label" data-tooltip="Transfer Ammo"><i class="fa-solid fa-right-left"></i></a>
                     <select class="grid-span-6 flex-group-center" name="system.magazine.source" data-dtype="String">
                     {{#select system.magazine.source}}
-                        <option value="">Unloaded (Main)</option>
+                        <option value="">Unloaded</option>
                         {{#each magazines}}
                         {{#if this.entries.length}}
                         <optgroup label="{{this.label}}">
@@ -53,36 +54,18 @@
                         {{/each}}
                     {{/select}}
                     </select>
-                    <select class="grid-start-3 grid-span-6 flex-group-center" name="system.magazine.backup" data-dtype="String">
-                    {{#select system.magazine.backup}}
-                        <option value="">Unloaded (Backup)</option>
-                        {{#each magazines}}
-                        {{#if this.entries.length}}
-                        <optgroup label="{{this.label}}">
-                            {{selectOptions this.entries selected=@root.system.magazine.backup nameAttr="id" labelAttr="label"}}
-                        </optgroup>
-                        {{/if}}
-                        {{/each}}
-                    {{/select}}
-                    </select>
                     {{/unless}}
                     {{#if (eq system.magazine.type "cartridge")}}
-                    <span class="grid-span-2">Empty Damage</span>
+                    <span class="grid-span-3">Empty Damage</span>
                     {{else}}
-                    <span class="grid-span-2">Weapon Damage</span>
+                    <span class="grid-span-3">Weapon Damage</span>
                     {{/if}}
-                    <input class="grid-span-3" name="system.damageBase" value="{{system.damageBase}}" type="text" data-dtype="String">
                     {{#if (eq system.magazine.type "coolant")}}
+                    <input class="grid-span-3" name="system.damageBase" value="{{system.damageBase}}" type="text" data-dtype="String">
                     <span class="grid-span-2">Heat Capacity</span>
                     <input type="text" name="system.magazine.heatBase" value="{{system.magazine.heatBase}}" data-dtype="Number">
                     {{else}}
-                    {{#unless (eq system.magazine.type "unlimited")}}
-                    <div class="grid-span-3 flexrow">
-                        <a class="resource-label"><i class="fa-solid fa-arrows-left-right"></i></a>
-                        <span>Transfer</span>
-                        <a class="resource-label"><i class="fa-solid fa-arrows-up-down"></i></a>
-                    </div>
-                    {{/unless}}
+                    <input class="grid-span-6" name="system.damageBase" value="{{system.damageBase}}" type="text" data-dtype="String">
                     {{/if}}
                 </div>
             </fieldset>
@@ -206,31 +189,35 @@
                             <button type="button" class="item-control attack-edit grid-span-9" data-target-name="effect" data-pre-target="{{@key}}" style="word-wrap: break-word;">Damage: n/A</button>
                             {{else}}
                             <button type="button" class="item-control attack-edit grid-span-9" data-target-name="effect" data-pre-target="{{@key}}" data-tooltip="Edit Attack Damage" style="word-wrap: break-word;">
-                                {{#if (or this.mods.effectBad.primary this.mods.effectBad.secondary)}}Good {{/if}}Damage: 
-                                {{#if (or this.mods.effectGood.secondary this.mods.effectGood.extra)}}
-                                ({{this.mods.effectGood.primary}}) 
-                                {{else}}
-                                {{this.mods.effectGood.primary}}
-                                {{/if}}
-                                {{#if this.mods.effectGood.secondary}}
-                                , ({{this.mods.effectGood.secondary}})
-                                {{/if}}                                        
-                                {{#if this.mods.effectGood.extra}}
-                                , ({{this.mods.effectGood.extra}})
-                                {{/if}}           
+                                <div>
+                                    {{#if (or this.mods.effectBad.primary this.mods.effectBad.secondary)}}Good {{/if}}Damage: 
+                                    {{#if (or this.mods.effectGood.secondary this.mods.effectGood.extra)}}
+                                    ({{this.mods.effectGood.primaryLabel}}) 
+                                    {{else}}
+                                    {{this.mods.effectGood.primaryLabel}}
+                                    {{/if}}
+                                    {{#if this.mods.effectGood.secondary}}
+                                    , ({{this.mods.effectGood.secondaryLabel}})
+                                    {{/if}}                                        
+                                    {{#if this.mods.effectGood.extra}}
+                                    , ({{this.mods.effectGood.extraLabel}})
+                                    {{/if}}     
+                                </div>
                                 {{#if (or this.mods.effectBad.primary this.mods.effectBad.secondary)}}
-                                Bad Damage:
-                                {{#if (and this.mods.effectBad.primary (or this.mods.effectBad.secondary this.mods.effectBad.extra))}}
-                                ({{this.mods.effectBad.primary}}) 
-                                {{else}}
-                                {{this.mods.effectBad.primary}}
-                                {{/if}}
-                                {{#if this.mods.effectBad.secondary}}
-                                , ({{this.mods.effectBad.secondary}})
-                                {{/if}}                                        
-                                {{#if this.mods.effectBad.extra}}
-                                , ({{this.mods.effectBad.extra}})
-                                {{/if}}
+                                <div>
+                                    Bad Damage:
+                                    {{#if (and this.mods.effectBad.primary (or this.mods.effectBad.secondary this.mods.effectBad.extra))}}
+                                    ({{this.mods.effectBad.primaryLabel}}) 
+                                    {{else}}
+                                    {{this.mods.effectBad.primaryLabel}}
+                                    {{/if}}
+                                    {{#if this.mods.effectBad.secondary}}
+                                    , ({{this.mods.effectBad.secondaryLabel}})
+                                    {{/if}}                                        
+                                    {{#if this.mods.effectBad.extra}}
+                                    , ({{this.mods.effectBad.extraLabel}})
+                                    {{/if}}
+                                </div>
                                 {{/if}}
                             </button>
                             {{/if}}

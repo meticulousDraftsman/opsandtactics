@@ -20,17 +20,19 @@
         <legend class="resource-label">
           Magic Properties {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}} <a class="item-control sub-create" data-target-name="action" title="Add Action"><i class="fas fa-plus"></i></a>
         </legend>
-        <div class="grid grid-3col flex-group-center">
-          <select class="flex-group-center" name="system.magazine.type" data-dtype="String">
+        <div class="grid grid-9col flex-group-center">
+          <select class="grid-span-3 flex-group-center" name="system.magazine.type" data-dtype="String">
           {{#select system.magazine.type}}
           <option value="unlimited">Unlimited Use</option>
-            <option value="external">External Charges</option>
+            <option value="magic">Charges</option>
             <option value="mental">Mental Limit on Use</option>
           {{/select}}
           </select>
-          {{#if (eq system.magazine.type "external")}}
-          <select class="grid-span-2 flex-group-center" name="system.magazine.source" data-dtype="String">
-            {{selectOptions sourceMagics selected=system.magazine.source nameAttr="id" labelAttr="label"}}
+          <span>Range</span>
+          <input name="system.range" value="{{system.range}}" type="text" data-dtype="String" placeholder="ft">
+          {{#if (eq system.magazine.type 'magic')}}
+          <select class="grid-span-4 flex-group-center" name="system.magazine.source" data-dtype="String">
+            {{selectOptions magazines.entries selected=system.magazine.source nameAttr="id" labelAttr="label" blank="Blank"}}
           </select>
           {{/if}}
         </div>
