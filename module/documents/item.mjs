@@ -368,7 +368,7 @@ export class OpsItem extends Item {
     // If we can't just null it out...
     else {
       // Start with the inherent input from the attack
-      if (sourceAction.effect.inherent) mods.effectParts.push(new Roll(`${sourceAction.effect.inherent}`,this?.actor.getRollData()))
+      if (sourceAction.effect.inherent) mods.effectParts.push(new Roll(`${sourceAction.effect.inherent}`,(this.actor?.getRollData() || {})))
       // Add the actor's ability score if present
       if (this.actor){
         let abilityScale = sourceAction.effect?.scaleAbility || 1;
