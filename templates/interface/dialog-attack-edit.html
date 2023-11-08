@@ -16,6 +16,7 @@
                     <select class="grid-span-2 flex-group-center" name="system.actions.{{attack.id}}.check.ability" data-dtype="String">
                         {{selectOptions OATS.abilities selected=attack.object.check.ability localize=true blank="Ability Modifier"}}
                     </select>
+                    <input class="grid-span-4 flex-group-center" name="system.actions.{{attack.id}}.check.flavor" value="{{attack.object.check.flavor}}" type="text" data-dtype="String" placeholder="Attack roll flavor">
                 </div>
             </fieldset>
             <fieldset>
@@ -29,6 +30,7 @@
                 <div class="grid grid-4col flex-group-center">
                     <span class="grid-start-2">To-Hit</span>
                     <input type="text" value="{{numberFormat system.magazine.loaded.stats.check sign=true}}" readonly>
+                    <i class="grid-span-4">{{system.magazine.loaded.flavor}}</i>
                 </div>
                 {{/if}}
             </fieldset>
@@ -118,6 +120,7 @@
                         <input name="system.actions.{{attack.id}}.dice.scaleCartridge.scale" value="{{attack.object.dice.scaleCartridge.scale}}" type="text" data-dtype="Number" placeholder="0">
                         <span>{{#if (eq attack.object.dice.scaleCartridge.scale 1)}}die.{{else}}dice.{{/if}}</span>
                     </div>
+                    <input class="grid-span-8 flex-group-center" name="system.actions.{{action.id}}.effect.flavor" value="{{action.object.effect.flavor}}" type="text" data-dtype="String" placeholder="Damage {{#if (eq action.object.check.type 'noChatAttack')}}Description{{else}}roll flavor{{/if}}">
                 </div>
             </fieldset>
             <fieldset>
@@ -142,6 +145,7 @@
                         {{#if system.magazine.loaded.stats.bad.extra}}<input type="text" value="{{system.magazine.loaded.stats.bad.extra}}" readonly>{{/if}}
                     </div>
                     {{/if}}
+                    <i class="grid-span-8">{{system.magazine.loaded.flavor}}</i>
                 </div>
 
             </fieldset>
