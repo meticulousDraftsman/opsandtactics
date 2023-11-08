@@ -431,7 +431,7 @@ export class OpsItem extends Item {
           else{
             goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
             goodCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
-            if (goodCount >= getProperty(sourceAction,'dice.scaleCartridge.per') && getProperty(sourceAction,'dice.scaleCartridge.per')!=0) goodBonus += getProperty(sourceAction,'dice.scaleCartridge.scale')*Math.floor(goodCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
+            if (goodCount >= Number(getProperty(sourceAction,'dice.scaleCartridge.per')) && getProperty(sourceAction,'dice.scaleCartridge.per')!=0 && getProperty(sourceAction,'dice.scaleCartridge.scale')) goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.scale'))*Math.floor(goodCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
           }
           if (Number.isNaN(goodBonus)) goodBonus = 0;      
 
@@ -442,7 +442,7 @@ export class OpsItem extends Item {
           else{
             badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
             badCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
-            if (badCount >= getProperty(sourceAction,'dice.scaleCartridge.per') && getProperty(sourceAction,'dice.scaleCartridge.per')!=0) badBonus += getProperty(sourceAction,'dice.scaleCartridge.scale')*Math.floor(badCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
+            if (badCount >= Number(getProperty(sourceAction,'dice.scaleCartridge.per')) && getProperty(sourceAction,'dice.scaleCartridge.per')!=0 && getProperty(sourceAction,'dice.scaleCartridge.scale')) badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.scale'))*Math.floor(badCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
           }
           if (Number.isNaN(badBonus)) badBonus = 0;    
           // Dice scaling from mods
