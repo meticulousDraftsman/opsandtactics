@@ -328,7 +328,6 @@ export class OpsItem extends Item {
         rollConfig.rollTypes.push('Other');
       }
     }
-    console.debug(this)
     opsDamage(rollConfig);
   }
   checkType(checkType){
@@ -381,7 +380,7 @@ export class OpsItem extends Item {
         // Add each mod with a damage impact on its own
         if (hasProperty(sourceAction,'effect.mods')){
           for (let [,e] of Object.entries(sourceAction.effect.mods)){
-            if (e.value) mods.effectParts.push(new Roll(`${e.value}`))
+            if (e.value && e.active) mods.effectParts.push(new Roll(`${e.value}`))
           }
         }
         // Prepare the base damage both good and bad whatever's present
@@ -445,11 +444,11 @@ export class OpsItem extends Item {
             badCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
             if (badCount >= getProperty(sourceAction,'dice.scaleCartridge.per') && getProperty(sourceAction,'dice.scaleCartridge.per')!=0) badBonus += getProperty(sourceAction,'dice.scaleCartridge.scale')*Math.floor(badCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
           }
-          if (Number.isNaN(goodBonus)) badBonus = 0;    
+          if (Number.isNaN(badBonus)) badBonus = 0;    
           // Dice scaling from mods
           if (hasProperty(sourceAction,'dice.mods')){
             for (let [,d] of Object.entries(sourceAction.dice.mods)){
-              if (d.value) {
+              if (d.value && d.active) {
                 goodBonus += d.value;
                 badBonus += d.value;
               }
@@ -610,7 +609,7 @@ export class OpsItem extends Item {
     mods.cp = sourceAction.cp.inherent?Number(sourceAction.cp.inherent):null;
     if (hasProperty(sourceAction,'cp.mods')){
       for (let [,p] of Object.entries(sourceAction.cp.mods)){
-        mods.cp += Number(p.value) || 0;
+        if (p.value && p.active) mods.cp += Number(p.value) || 0;
       }
     }
     // Handle Ammo and CP/Ammo Label
@@ -656,10 +655,10 @@ export class OpsItem extends Item {
           }
         }
         for (let [,r] of Object.entries(sourceAction.recoil.mods)){
-          if (r.value > 0){
+          if (r.value > 0 && r.active){
             mods.reduction += r.value?Number(r.value):null;
           }
-          else if (r.value < 0){
+          else if (r.value < 0 && r.active){
             mods.recoil += r.value?Number(r.value):null;
           }
         }
@@ -683,7 +682,7 @@ export class OpsItem extends Item {
       mods.checkNum += Number(sourceAction.check.inherent)
     }
     // Ammo Impact
-    if (hasProperty(tweakedThis,'system.magazine.loaded.stats.check') && sourceAction.check.ammo) mods.checkNum += tweakedThis.system.magazine.loaded.stats.check;
+    if (hasProperty(tweakedThis,'system.magazine.loaded.stats.check') && sourceAction.check.ammo) mods.checkNum += Number(tweakedThis.system.magazine.loaded.stats.check);
     // If owned by an actor, add their ability modifier to num
     if (this.actor) mods.checkNum += this.actor.abilityMod(sourceAction.check.ability);
     if (hasProperty(sourceAction,'check.mods')){
@@ -692,7 +691,7 @@ export class OpsItem extends Item {
         if (!c.active) continue;
         // If mod value exists and isn't a number, add it to parts
         if (c.value && Number.isNaN(Number(c.value))){
-          mods.checkParts.push(c.value.charAt(0)=='-' ? `${c.value}` : `+${c.value}`)
+          mods.checkParts.push((c.value.charAt(0)=='-' || c.value.charAt(0)=='+') ? `${c.value}` : `+${c.value}`)
         }
         else if (c.value) {
           mods.checkNum += Number(c.value);

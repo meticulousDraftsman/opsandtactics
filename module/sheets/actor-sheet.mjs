@@ -601,6 +601,7 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.resource-delta').change(this._onResourceDelta.bind(this));
     // Actor Sheet Rolls
     html.find('.item-check').click(this._actionCheck.bind(this));   
+    html.find('.item-attack-dash').click(this._onAttackDash.bind(this));
     html.find('.damage-roll').click(this._damageRoll.bind(this));
     html.find('.skill-check').click(this._skillCheck.bind(this));   
     html.find('.actor-check').click(this._actorCheck.bind(this));
@@ -968,6 +969,53 @@ export class OpsActorSheet extends ActorSheet {
     if (checkLink)await checkLink.update(charData)
   }
 
+  _onAttackDash(event){
+    event.preventDefault();
+    const itemID = event.currentTarget.dataset.itemId;
+    const actionID = event.currentTarget.dataset.actionId;
+    const item = this.actor.items.get(itemID);
+    const tweaks = {
+      offense:{
+        stance: 0
+      },
+      defense:{
+        stance: 0
+      },
+      item: item,
+      attack: item.system.actions[actionID]
+    }
+    const mainTarget = Array.from(game.user.targets)[0] || undefined;
+    let defStance;
+    if (mainTarget){
+      defStance = mainTarget.actor.statuses.has('prone') ? 'prone' : mainTarget.actor.statuses.has('kneeling') ? 'kneeling' : 'standing';
+    }
+    let atkStance = this.actor.statuses.has('prone') ? 'prone' : this.actor.statuses.has('kneeling') ? 'kneeling' : 'standing'
+    if (tweaks.attack.check.type=='melee'){
+      if (defStance=='prone') tweaks.defense.stance = -2;
+      if (defStance=='kneeling') tweaks.defense.stance = -4;
+      if (atkStance=='prone') tweaks.offense.stance = -4;
+      if (atkStance=='kneeling') tweaks.offense.stance = -2;
+    }
+    else{
+      if (defStance=='prone') tweaks.defense.stance = 4;
+      if (defStance=='kneeling') tweaks.defense.stance = 2;
+      if (atkStance=='prone') tweaks.offense.stance = 2;
+      if (atkStance=='kneeling') tweaks.offense.stance = 1;
+    }
+    if (item.type=='weapon' && item.system.magazine.type=='cartridge' && item.system.magazine.source!=''){
+      const tripleID = getProperty(item,'system.magazine.source').split(',')
+      item.system.magazine.preLoad =  getProperty(this.actor.items.filter(item => item._id == tripleID[0])[0],tripleID[1]);
+      tweaks.ammo = {
+        effect: tripleID[2],
+        active: {}
+      }
+      for (let [key,entry] of Object.entries(item.system.magazine.preLoad.cartridges)){
+        tweaks.ammo.active[key] = {name:entry.name,check:(`cartridges.${key}`==tripleID[2]),recoil:(`cartridges.${key}`==tripleID[2])}
+      }
+    }
+    new AttackDashboardApp(tweaks,{source:item,target:actionID}).render(true)
+  }
+
   /**
    * Handle clickable rolls.
    * @param {Event} event   The originating click event
@@ -1000,4 +1048,169 @@ export class OpsActorSheet extends ActorSheet {
     }
   }
 
+}
+
+class AttackDashboardApp extends FormApplication {
+  static get defaultOptions(){
+    return mergeObject(super.defaultOptions, {
+      classes: ['opsandtactics','sheet','item'],
+      template: 'systems/opsandtactics/templates/interface/dialog-attack-dashboard.html',
+      width: 650,
+      height: 600,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      resizable: true
+    });
+  }
+  get title(){
+    return `${this.options.source.actor.name} tweaking execution of ${this.options.source.system.actions[this.options.target].name} from ${this.options.source.name}`;
+  }
+  getData(){
+    //console.debug(objectsEqual(this.object.item.system,this.options.source.system))
+    const tempSource = duplicate(this.options.source)
+    if (this.options.source.type=='weapon'){
+      for (let [key,entry] of Object.entries(this.options.source.system.weaponMods)){
+        for (let imp of ['check','effect','dice','recoil','cp']){
+          if ((entry[imp])){
+            tempSource.system.actions[this.options.target][imp].mods[key].value = entry[imp];
+          }
+        }
+      }
+    }
+    this.object.item = mergeObject(tempSource,this.object.item);
+    if (this.object.ammo){
+      mergeObject(this.object.item.system.magazine.loaded,duplicate(getProperty(this.options.source.system.magazine.preLoad,this.object.ammo.effect)))
+      let tempCheck = 0;
+      let tempRecoil = 0;
+      
+      for (let [key,entry] of Object.entries(this.object.ammo.active)){
+        entry.name = getProperty(this.options.source.system.magazine.preLoad.cartridges,key).name;
+        if (entry.check) tempCheck += Number(getProperty(this.options.source.system.magazine.preLoad.cartridges,key).stats.check)
+        if (entry.recoil) tempRecoil += Number(getProperty(this.options.source.system.magazine.preLoad.cartridges,key).stats.recoil)
+      }
+      setProperty(this,'object.item.system.magazine.loaded.stats.check',tempCheck);
+      setProperty(this,'object.item.system.magazine.loaded.stats.recoil',tempRecoil);
+    }
+    const context = {
+      OATS: CONFIG.OATS,
+      tweaks: this.object,
+      item: this.options.source,
+      target: this.options.target,
+      action: this.object.item.system.actions[this.options.target],
+      attackMods: this.options.source.actionSum(this.options.target,this.object.item),
+      wepMods: {
+        check:{},
+        effect:{},
+        dice:{},
+        recoil:{},
+        cp:{}
+      },
+      isTweaked: !objectsEqual(this.options.source,this.object.item),
+      lists: {
+        attackFlank: [
+          {label:`Attacking into Defender's Front`,value:0},
+          {label:`Attacking into Defender's Flanks (+2)`,value:2},
+          {label:`Attacking into Defender's Rear (+4)`,value:4}
+        ],
+        attackStance: [],
+        attackFace: [
+          {label:`Attacking from Attacker's Front`,value:0},
+          {label:`Attacking from Attacker's Flanks (-5)`,value:-5},
+          {label:`Attacking from Attacker's Rear (-10)`,value:-10}
+        ],
+        defendStance: [],
+        defendCover: [
+          {label:'Defender behind No Cover',value:'cov0'},
+          {label:'Defender behind 1/4 Cover (+3)',value:'cov1'},
+          {label:'Defender behind 1/2 Cover (+6, 10%)',value:'cov2'},
+          {label:'Defender behind 3/4 Cover (+9, 20%)',value:'cov3'},
+          {label:'Defender behind 9/10 Cover (+15, 30%)',value:'cov4'}
+        ],
+        defendConceal: [
+          {label:'Defender has No Concealment',value:0},
+          {label:'Defender has (5%)',value:5},
+          {label:'Defender has 1/4 Concealment (10%)',value:10},
+          {label:'Defender has (15%)',value:15},
+          {label:'Defender has 1/2 Concealment (20%)',value:20},
+          {label:'Defender has (25%)',value:25},
+          {label:'Defender has 3/4 Concealment (30%)',value:30},
+          {label:'Defender has (35%)',value:35},
+          {label:'Defender has 9/10 Concealment (40%)',value:40},
+          {label:'Defender has (45%)',value:45},
+          {label:'Defender has Total Concealment (50%)',value:50},
+        ]
+      }
+    }
+    if (context.tweaks.attack.check.type=='melee'){
+      context.lists.attackStance = [
+        {label:'Attacker is Standing',value:0},
+        {label:'Attacker is Kneeling (-2)',value:-2},
+        {label:'Attacker is Prone (-4)',value:-4}
+      ]
+      context.lists.defendStance = [
+        {label:'Defender is Standing',value:0},
+        {label:'Defender is Kneeling (-4)',value:-4},
+        {label:'Defender is Prone (-2)',value:-2}
+      ]
+    }
+    else{
+      context.lists.attackStance = [
+        {label:'Attacker is Standing',value:0},
+        {label:'Attacker is Kneeling (+1)',value:1},
+        {label:'Attacker is Prone (+2)',value:2}
+      ]
+      context.lists.defendStance = [
+        {label:'Defender is Standing',value:0},
+        {label:'Defender is Kneeling (+2)',value:2},
+        {label:'Defender is Prone (+4)',value:4}
+      ]
+    }
+    if (this.options.source.type=='weapon'){
+      for (let [key,entry] of Object.entries(this.options.source.system.weaponMods)){
+        for (let imp of ['check','effect','dice','recoil','cp']){
+          if ((entry[imp])){
+            context.wepMods[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:this.object.item.system.actions[this.options.target][imp]?.mods[key]?.active}
+          }
+        }
+      }
+    }
+    context.offenseTotal = Number(getProperty(this.object,'offense.high')?this.object.offense.high:0) + Number(getProperty(this.object,'offense.seen')?this.object.offense.seen:0) + Number(getProperty(this.object,'offense.flank')?this.object.offense.flank:0) + Number(getProperty(this.object,'offense.stance')?this.object.offense.stance:0) + Number(getProperty(this.object,'offense.face')?this.object.offense.face:0)
+    context.defenseTotal = Number(getProperty(this.object,'defense.pin')?this.object.defense.pin:0) + Number(getProperty(this.object,'defense.stun')?this.object.defense.stun:0) + Number(getProperty(this.object,'defense.climb')?this.object.defense.climb:0) + Number(getProperty(this.object,'defense.stance')?this.object.defense.stance:0)
+    context.missChance = 0;
+    switch (getProperty(this.object,'defense.cover')){
+      case 'cov0':
+        break;
+      case 'cov1':
+        context.defenseTotal += 3;
+        break;
+      case 'cov2':
+        context.defenseTotal += 6;
+        context.missChance = 10;
+        break;
+      case 'cov3':
+        context.defenseTotal += 9;
+        context.missChance = 20;
+        break;
+      case 'cov4':
+        context.defenseTotal += 15;
+        context.missChance = 30;
+    }
+    context.missChance = Math.max(context.missChance,Number(getProperty(this.object,'defense.conceal')?this.object.defense.conceal:0));
+    return context;
+  }
+  render(force=false,options={}){
+    return super.render(force, options)
+  }
+  close(options={}){
+    return super.close(options)
+  }
+  activateListeners(html){
+    super.activateListeners(html);
+  }
+  async _updateObject(event, formData){
+    for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){
+      setProperty(this.object,key,entry)
+    }
+    this.render()
+  }
 }

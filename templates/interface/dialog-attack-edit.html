@@ -27,10 +27,8 @@
                 </legend>
                 {{#if system.magazine.source}}
                 <div class="grid grid-4col flex-group-center">
-                    <span>To-Hit</span>
+                    <span class="grid-start-2">To-Hit</span>
                     <input type="text" value="{{numberFormat system.magazine.loaded.stats.check sign=true}}" readonly>
-                    <span>Error Range</span>
-                    <input type="text" value="{{numberFormat system.magazine.loaded.stats.error sign=true}}%" readonly>
                 </div>
                 {{/if}}
             </fieldset>
@@ -163,7 +161,7 @@
                     <div class="grid-span-2 flex-group-center">
                         <div class="grid grid-8col flex-group-center">
                             {{#each attack.dice}}
-                            <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}{{#if this.dice}}: {{this.dice}}{{#if (eq this.dice 1)}} die{{else}} dice{{/if}}{{/if}}</span> 
+                            <span class="grid-span-7"  data-tooltip="{{this.description}}">{{this.name}}{{#if this.dice}}: {{numberFormat this.dice sign=true}}{{#if (eq this.dice 1)}} die{{else}} dice{{/if}}{{/if}}</span> 
                             <div class="flex-group-center">
                                 <input name="system.actions.{{@root.attack.id}}.dice.mods.{{@key}}.active" type="checkbox" {{checked this.active}}>
                             </div>
