@@ -1,12 +1,11 @@
 <form class="{{cssClass}}" autocomplete="off">
-    {{log this}}
     <section class="sheet-body">
         <fieldset>
             <legend class="resource-label">
                 Situational Modifiers
             </legend>
             <div class="flex-group-center">
-                <input type="text" name="tweaks.situation" placeholder="Generic">
+                <input type="text" name="tweaks.situation" value="{{tweaks.situation}}" placeholder="Generic">
             </div>
             <div class="grid grid-2col flex-grouo-venter">
                 <fieldset>
@@ -15,12 +14,12 @@
                     </legend>
                     <div class="grid grid-2col flex-group-center">
                         {{#if (eq tweaks.attack.check.type 'melee')}}
-                        <label class="flexrow flex-group-center">
+                        <label class="grid-span-2 flexrow flex-group-center">
                             <span>High Ground (+1)</span>
                             <input type="checkbox" name="tweaks.offense.high" value="1" {{checked tweaks.offense.high}}>
                         </label>
                         {{/if}}
-                        <label class="grid-start-2 flexrow flex-group-center">
+                        <label class="grid-span-2 flexrow flex-group-center">
                             <span>Unseen (+2)</span>
                             <input type="checkbox" name="tweaks.offense.seen" value="2" {{checked tweaks.offense.seen}}>
                         </label>
@@ -36,26 +35,37 @@
                             {{selectOptions lists.attackFace selected=tweaks.offense.face nameAttr="value" labelAttr="label"}}
                         </select>
                     </div>
+                    {{#unless (eq tweaks.attack.check.type 'melee')}}
+                    <div class="grid grid-2col flex-group-center">
+                        <span>Range Increments</span>
+                        <div class="flexrow flex-group-center">
+                            <input class="flex3" type="text" name="tweaks.offense.range" value="{{tweaks.offense.range}}">
+                            <i class="fas fa-times"></i>
+                            <input class="flex3" type="text" name="tweaks.offense.rangeMult" value="{{tweaks.offense.rangeMult}}">
+                        </div>
+                    </div>
+                    {{/unless}}
                 </fieldset>
                 <fieldset>
                     <legend class="resource-label">
                         {{#if (eq tweaks.attack.check.type 'melee')}}Melee{{else}}Ranged{{/if}} Defense: {{numberFormat defenseTotal sign=true}}{{#if missChance}}, {{missChance}}%{{/if}}
                     </legend>
                     <div class="grid grid-2col flex-group-center">
+                        <label class="flexrow grid-start-2 flex-group-center">
+                            <span>Climbing (-2)</span>
+                            <input type="checkbox" name="tweaks.defense.climb" value="-2" {{checked tweaks.defense.climb}}>
+                        </label>
                         {{#if (eq tweaks.attack.check.type 'melee')}}
-                        <label class="grid-start-2 flexrow flex-group-center">
+                        <label class="flexrow flex-group-center">
                             <span>Pinned (-4)</span>
                             <input type="checkbox" name="tweaks.defense.pin" value="-4" {{checked tweaks.defense.pin}}>
                         </label>
                         {{/if}}
-                        <label class="flexrow flex-group-center">
+                        <label class="grid-start-2 flexrow flex-group-center">
                             <span>Stunned (-2)</span>
                             <input type="checkbox" name="tweaks.defense.stun" value="-2" {{checked tweaks.defense.stun}}>
                         </label>
-                        <label class="flexrow flex-group-center">
-                            <span>Climbing (-2)</span>
-                            <input type="checkbox" name="tweaks.defense.climb" value="-2" {{checked tweaks.defense.climb}}>
-                        </label>
+
                     </div>
                     <div class="flex-group-center">
                         <select class="flex-group-center" name="tweaks.defense.stance">
@@ -75,84 +85,13 @@
         <div class="grid grid-2col flex-group-center">
             <fieldset class="action-item">
                 <div class="flex-group-center">
-                    <a class="resource-label ">pew pew make the attack</a>
+                    <a class="resource-label attack-roll">Attack: {{formula}}</a>
                 </div>
             </fieldset>
             <div class="flexcol">
                 <fieldset class="action-item">
                     <div class="flex-group-center">
-                        <a class="resource-label ">bang bang roll the damage</a>
-                    </div>
-                </fieldset>
-                {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}
-                <fieldset class="action-item">
-                    <div class="flex-group-center">
-                        <a class="resource-label ">bang bang roll the damage</a>
-                    </div>
-                </fieldset>
-                {{/if}}
-            </div>
-        </div>
-        <hr>
-        <fieldset>
-            <legend class="resource-label">
-                {{tweaks.attack.name}} Modifiers {{#if isTweaked}}(Tweaked){{/if}}
-            </legend>
-            <div class="grid grid-2col">
-                <fieldset>
-                    <legend class="resource-label">
-                        To-Hit: {{attackMods.checkTotal}}
-                    </legend>
-                    <div class="grid grid-3col flex-group-center">
-                        <span>Inherent</span>
-                        <input type="text" name="tweaks.item.system.actions.{{target}}.check.inherent" value="{{action.check.inherent}}">
-                        <select class="flex-group-center" name="tweaks.item.system.actions.{{target}}.check.ability">
-                            {{selectOptions OATS.abilityShort selected=action.check.ability localize=true blank="Ability"}}
-                        </select>
-                        <span>Ammo</span>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.item.system.actions.{{target}}.check.ammo" {{checked action.check.ammo}}>
-                        </div>
-                        <input type="text" value="{{numberFormat tweaks.item.system.magazine.loaded.stats.check sign=true}}" readonly>
-                    </div>
-                    {{#each wepMods.check}}
-                    <label class="grid grid-10col flex-group-center">
-                        <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.check}}</span>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.check.mods.{{@key}}.active" {{checked this.active}}>
-                        </div>
-                    </label>
-                    {{/each}}
-                </fieldset>
-                <fieldset>
-                    <legend class="resource-label">
-                        Recoil: {{#if attackMods.recoil}}{{attackMods.recoil}}{{#if (gt attackMods.reduction 0)}} vs +{{attackMods.reduction}}{{/if}}{{else}}{{#if action.recoil.active}}None{{else}}N/a{{/if}}{{/if}}
-                    </legend>
-                    <div class="grid grid-3col flex-group-center">
-                        <span>Enabled</span>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.item.system.actions.{{target}}.recoil.active" {{checked action.recoil.active}}>
-                        </div>
-                        <input type="text" name="tweaks.item.system.actions.{{target}}.recoil.inherent" value="{{action.recoil.inherent}}">
-                        <span>Ammo</span>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.item.system.actions.{{target}}.recoil.ammo" {{checked action.recoil.ammo}}>
-                        </div>
-                        <input type="text" value="{{numberFormat tweaks.item.system.magazine.loaded.stats.recoil sign=true}}" readonly>
-                    </div>
-                    {{#each wepMods.recoil}}
-                    <label class="grid grid-10col flex-group-center">
-                        <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.recoil}}</span>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.recoil.mods.{{@key}}.active" {{checked this.active}}>
-                        </div>
-                    </label>
-                    {{/each}}
-                </fieldset>
-                <fieldset class="grid-span-2">
-                    <legend class="resource-label flexcol">
-                        <div>
-                            {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}Good {{/if}}Damage: 
+                        <a class="resource-label damage-roll" data-good-bad="good">
                             {{#if (or attackMods.effectGood.secondary attackMods.effectGood.extra)}}
                             ({{attackMods.effectGood.primaryLabel}}) 
                             {{else}}
@@ -163,11 +102,14 @@
                             {{/if}}                                        
                             {{#if attackMods.effectGood.extra}}
                             , ({{attackMods.effectGood.extraLabel}})
-                            {{/if}}                             
-                        </div>
-                        {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}
-                        <div>
-                            Bad Damage:
+                            {{/if}}   
+                        </a>
+                    </div>
+                </fieldset>
+                {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}
+                <fieldset class="action-item">
+                    <div class="flex-group-center">
+                        <a class="resource-label damage-roll" data-good-bad="bad">
                             {{#if (and attackMods.effectBad.primary (or attackMods.effectBad.secondary attackMods.effectBad.extra))}}
                             ({{attackMods.effectBad.primaryLabel}}) 
                             {{else}}
@@ -178,106 +120,210 @@
                             {{/if}}                                        
                             {{#if attackMods.effectBad.extra}}
                             , ({{attackMods.effectBad.extraLabel}})
-                            {{/if}}
-                        </div>
-                        {{/if}}
-                    </legend>
-                    <div class="grid grid-5col flex-group-center">
-                        <span>Inherent</span>
-                        <input type="text" name="tweaks.item.system.actions.{{target}}.effect.inherent" value="{{action.effect.inherent}}">
-                        <div class="grid-span-2 flexrow flex-group-center">
-                            <select class="flex3 flex-group-center" name="tweaks.item.system.actions.{{target}}.effect.ability">
-                                {{selectOptions OATS.abilityShort selected=action.effect.ability localize=true blank="Ability"}}
-                            </select>
-                            <i class="fas fa-times"></i>
-                            <input type="text" name="tweaks.item.system.actions.{{target}}.effect.scaleAbility" value="{{action.effect.scaleAbility}}">
-                        </div>
-                        <label class="flexrow flex-group-center">
-                            <span>Ammo</span>
-                            <input type="checkbox" name="tweaks.item.system.actions.{{target}}.effect.ammo" {{checked action.effect.ammo}}>
-                        </label>
-                        <span>Good</span>
-                        <div class="grid-span-4 flexrow flex-group-center">
-                            <input type="text" value="{{tweaks.item.system.magazine.loaded.stats.good.primary}} {{tweaks.item.system.magazine.loaded.stats.good.primaryFlavor}}" readonly>
-                            {{#if tweaks.item.system.magazine.loaded.stats.good.secondary}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.good.secondary}} {{tweaks.item.system.magazine.loaded.stats.good.secondaryFlavor}}" readonly>{{/if}}
-                            {{#if tweaks.item.system.magazine.loaded.stats.good.extra}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.good.extra}}" readonly>{{/if}}
-                        </div>
-                        {{#if tweaks.item.system.magazine.loaded.stats.bad.primary}}
-                        <span>Bad</span>
-                        <div class="grid-span-4 flexrow flex-group-center">
-                            <input type="text" value="{{tweaks.item.system.magazine.loaded.stats.bad.primary}} {{tweaks.item.system.magazine.loaded.stats.bad.primaryFlavor}}" readonly>
-                            {{#if tweaks.item.system.magazine.loaded.stats.bad.secondary}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.bad.secondary}} {{tweaks.item.system.magazine.loaded.stats.bad.secondaryFlavor}}" readonly>{{/if}}
-                            {{#if tweaks.item.system.magazine.loaded.stats.bad.extra}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.bad.extra}}" readonly>{{/if}}
-                        </div>
-                        {{/if}}
-                    </div>
-                    <div class="grid grid-2col flex-group-center">
-                        <div>
-                            {{#each wepMods.effect}}
-                            <label class="grid grid-10col flex-group-center">
-                                <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.effect}}</span>
-                                <div class="flex-group-center">
-                                    <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.effect.mods.{{@key}}.active" {{checked this.active}}>
-                                </div>
-                            </label>
-                            {{/each}}
-                        </div>
-                        <div>
-                            {{#each wepMods.dice}}
-                            <label class="grid grid-10col flex-group-center">
-                                <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{numberFormat this.dice sign=true}} {{#if (gt this.dice 1)}}dice{{else}}die{{/if}}</span>
-                                <div class="flex-group-center">
-                                    <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.dice.mods.{{@key}}.active" {{checked this.active}}>
-                                </div>
-                            </label>
-                            {{/each}}
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend class="resource-label">
-                        Combat Points: {{attackMods.cp}}
-                    </legend>
-                    <div class="grid grid-4col flex-group-center">
-                        <span class="grid-start-2">Inherent</span>
-                        <input type="text" name="tweaks.item.system.actions.{{target}}.cp.inherent" value="{{action.cp.inherent}}">
-                    </div>
-                    {{#each wepMods.cp}}
-                    <label class="grid grid-10col flex-group-center">
-                        <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.cp}}</span>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.cp.mods.{{@key}}.active" {{checked this.active}}>
-                        </div>
-                    </label>
-                    {{/each}}
-                </fieldset>
-                {{#if tweaks.ammo}}
-                <fieldset>
-                    <legend class="resource-label">
-                        Combining Cartridges
-                    </legend>
-                    <div class="grid grid-4col flex-group-center">
-                        <span>Name</span>
-                        <span>To-Hit</span>
-                        <span>Recoil</span>
-                        <span>Damage</span>
-                        {{#each tweaks.ammo.active}}
-                        <span>{{this.name}}</span>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.ammo.active.{{@key}}.check" {{checked this.check}}>
-                        </div>
-                        <div class="flex-group-center">
-                            <input type="checkbox" name="tweaks.ammo.active.{{@key}}.recoil" {{checked this.recoil}}>
-                        </div>
-                        {{#if (eq (concat 'cartridges.' @key) @root.tweaks.ammo.effect)}}
-                        <input type="radio" name="tweaks.ammo.effect" value="cartridges.{{@key}}" checked>
-                        {{else}}
-                        <input type="radio" name="tweaks.ammo.effect" value="cartridges.{{@key}}">
-                        {{/if}}
-                        {{/each}}
+                            {{/if}}  
+                        </a>
                     </div>
                 </fieldset>
                 {{/if}}
+            </div>
+        </div>
+        <hr>
+        <fieldset class="collapse-parent">
+            <legend class="resource-label">
+                {{tweaks.attack.name}} Modifiers <a data-tooltip="Toggle Attack Detail Display"><i class="fas fa-list collapse-toggle" data-collapse="dashAttack"></i></a>
+            </legend>
+            <div class="dashAttack {{#if collapses.dashAttack}}collapse{{/if}}">
+                <div class="grid grid-2col">
+                    <fieldset>
+                        <legend class="resource-label">
+                            To-Hit: {{attackMods.checkTotal}}
+                        </legend>
+                        <div class="grid grid-3col flex-group-center">
+                            <span>Inherent</span>
+                            <input type="text" name="tweaks.item.system.actions.{{target}}.check.inherent" value="{{action.check.inherent}}">
+                            <select class="flex-group-center" name="tweaks.item.system.actions.{{target}}.check.ability">
+                                {{selectOptions OATS.abilityShort selected=action.check.ability localize=true blank="Ability"}}
+                            </select>
+                            {{#if (eq item.system.magazine.type 'cartridge')}}
+                            <span>Ammo</span>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.item.system.actions.{{target}}.check.ammo" {{checked action.check.ammo}}>
+                            </div>
+                            <input type="text" value="{{numberFormat tweaks.item.system.magazine.loaded.stats.check sign=true}}" readonly>
+                            {{/if}}
+                        </div>
+                        {{#each wepMods.check}}
+                        <label class="grid grid-10col flex-group-center">
+                            <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.check}}</span>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.check.mods.{{@key}}.active" {{checked this.active}}>
+                            </div>
+                        </label>
+                        {{/each}}
+                    </fieldset>
+                    <fieldset>
+                        <legend class="resource-label">
+                            Recoil: {{#if attackMods.recoil}}{{attackMods.recoil}}{{#if (gt attackMods.reduction 0)}} vs +{{attackMods.reduction}}{{/if}}{{else}}{{#if action.recoil.active}}None{{else}}N/a{{/if}}{{/if}}
+                        </legend>
+                        <div class="grid grid-3col flex-group-center">
+                            <span>Enabled</span>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.item.system.actions.{{target}}.recoil.active" {{checked action.recoil.active}}>
+                            </div>
+                            <input type="text" name="tweaks.item.system.actions.{{target}}.recoil.inherent" value="{{action.recoil.inherent}}">
+                            {{#if (eq item.system.magazine.type 'cartridge')}}
+                            <span>Ammo</span>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.item.system.actions.{{target}}.recoil.ammo" {{checked action.recoil.ammo}}>
+                            </div>
+                            <input type="text" value="{{numberFormat tweaks.item.system.magazine.loaded.stats.recoil sign=true}}" readonly>
+                            {{/if}}
+                        </div>
+                        {{#each wepMods.recoil}}
+                        <label class="grid grid-10col flex-group-center">
+                            <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.recoil}}</span>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.recoil.mods.{{@key}}.active" {{checked this.active}}>
+                            </div>
+                        </label>
+                        {{/each}}
+                    </fieldset>
+                    <fieldset class="grid-span-2">
+                        <legend class="resource-label flexcol">
+                            <div>
+                                {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}Good {{/if}}Damage: 
+                                {{#if (or attackMods.effectGood.secondary attackMods.effectGood.extra)}}
+                                ({{attackMods.effectGood.primaryLabel}}) 
+                                {{else}}
+                                {{attackMods.effectGood.primaryLabel}}
+                                {{/if}}
+                                {{#if attackMods.effectGood.secondary}}
+                                , ({{attackMods.effectGood.secondaryLabel}})
+                                {{/if}}                                        
+                                {{#if attackMods.effectGood.extra}}
+                                , ({{attackMods.effectGood.extraLabel}})
+                                {{/if}}                             
+                            </div>
+                            {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}
+                            <div>
+                                Bad Damage:
+                                {{#if (and attackMods.effectBad.primary (or attackMods.effectBad.secondary attackMods.effectBad.extra))}}
+                                ({{attackMods.effectBad.primaryLabel}}) 
+                                {{else}}
+                                {{attackMods.effectBad.primaryLabel}}
+                                {{/if}}
+                                {{#if attackMods.effectBad.secondary}}
+                                , ({{attackMods.effectBad.secondaryLabel}})
+                                {{/if}}                                        
+                                {{#if attackMods.effectBad.extra}}
+                                , ({{attackMods.effectBad.extraLabel}})
+                                {{/if}}
+                            </div>
+                            {{/if}}
+                        </legend>
+                        <div class="grid grid-5col flex-group-center">
+                            <span>Inherent</span>
+                            {{#if (eq item.system.magazine.type 'cartridge')}}
+                            <input type="text" name="tweaks.item.system.actions.{{target}}.effect.inherent" value="{{action.effect.inherent}}">
+                            {{else}}
+                            <input class="grid-span-2" type="text" name="tweaks.item.system.actions.{{target}}.effect.inherent" value="{{action.effect.inherent}}">
+                            {{/if}}
+                            <div class="grid-span-2 flexrow flex-group-center">
+                                <select class="flex3 flex-group-center" name="tweaks.item.system.actions.{{target}}.effect.ability">
+                                    {{selectOptions OATS.abilities selected=action.effect.ability localize=true blank="Ability"}}
+                                </select>
+                                <i class="fas fa-times"></i>
+                                <input type="text" name="tweaks.item.system.actions.{{target}}.effect.scaleAbility" value="{{action.effect.scaleAbility}}">
+                            </div>
+                            {{#if (eq item.system.magazine.type 'cartridge')}}
+                            <label class="flexrow flex-group-center">
+                                <span>Ammo</span>
+                                <input type="checkbox" name="tweaks.item.system.actions.{{target}}.effect.ammo" {{checked action.effect.ammo}}>
+                            </label>
+                            <span>Good</span>
+                            <div class="grid-span-4 flexrow flex-group-center">
+                                <input type="text" value="{{tweaks.item.system.magazine.loaded.stats.good.primary}} {{tweaks.item.system.magazine.loaded.stats.good.primaryFlavor}}" readonly>
+                                {{#if tweaks.item.system.magazine.loaded.stats.good.secondary}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.good.secondary}} {{tweaks.item.system.magazine.loaded.stats.good.secondaryFlavor}}" readonly>{{/if}}
+                                {{#if tweaks.item.system.magazine.loaded.stats.good.extra}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.good.extra}}" readonly>{{/if}}
+                            </div>
+                            {{#if tweaks.item.system.magazine.loaded.stats.bad.primary}}
+                            <span>Bad</span>
+                            <div class="grid-span-4 flexrow flex-group-center">
+                                <input type="text" value="{{tweaks.item.system.magazine.loaded.stats.bad.primary}} {{tweaks.item.system.magazine.loaded.stats.bad.primaryFlavor}}" readonly>
+                                {{#if tweaks.item.system.magazine.loaded.stats.bad.secondary}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.bad.secondary}} {{tweaks.item.system.magazine.loaded.stats.bad.secondaryFlavor}}" readonly>{{/if}}
+                                {{#if tweaks.item.system.magazine.loaded.stats.bad.extra}}<input type="text" value="{{tweaks.item.system.magazine.loaded.stats.bad.extra}}" readonly>{{/if}}
+                            </div>
+                            {{/if}}
+                            {{/if}}
+                        </div>
+                        <div class="grid grid-2col flex-group-center">
+                            <div>
+                                {{#each wepMods.effect}}
+                                <label class="grid grid-10col flex-group-center">
+                                    <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.effect}}</span>
+                                    <div class="flex-group-center">
+                                        <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.effect.mods.{{@key}}.active" {{checked this.active}}>
+                                    </div>
+                                </label>
+                                {{/each}}
+                            </div>
+                            <div>
+                                {{#each wepMods.dice}}
+                                <label class="grid grid-10col flex-group-center">
+                                    <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{numberFormat this.dice sign=true}} {{#if (gt this.dice 1)}}dice{{else}}die{{/if}}</span>
+                                    <div class="flex-group-center">
+                                        <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.dice.mods.{{@key}}.active" {{checked this.active}}>
+                                    </div>
+                                </label>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="resource-label">
+                            Combat Points: {{attackMods.cp}}
+                        </legend>
+                        <div class="grid grid-4col flex-group-center">
+                            <span class="grid-start-2">Inherent</span>
+                            <input type="text" name="tweaks.item.system.actions.{{target}}.cp.inherent" value="{{action.cp.inherent}}">
+                        </div>
+                        {{#each wepMods.cp}}
+                        <label class="grid grid-10col flex-group-center">
+                            <span class="grid-span-9" data-tooltip="{{this.description}}">{{this.name}}: {{this.cp}}</span>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.item.system.actions.{{@root.target}}.cp.mods.{{@key}}.active" {{checked this.active}}>
+                            </div>
+                        </label>
+                        {{/each}}
+                    </fieldset>
+                    {{#if tweaks.ammo}}
+                    <fieldset>
+                        <legend class="resource-label">
+                            Combining Cartridges
+                        </legend>
+                        <div class="grid grid-4col flex-group-center">
+                            <span>Name</span>
+                            <span>To-Hit</span>
+                            <span>Recoil</span>
+                            <span>Damage</span>
+                            {{#each tweaks.ammo.active}}
+                            <span>{{this.name}}</span>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.ammo.active.{{@key}}.check" {{checked this.check}}>
+                            </div>
+                            <div class="flex-group-center">
+                                <input type="checkbox" name="tweaks.ammo.active.{{@key}}.recoil" {{checked this.recoil}}>
+                            </div>
+                            {{#if (eq (concat 'cartridges.' @key) @root.tweaks.ammo.effect)}}
+                            <input type="radio" name="tweaks.ammo.effect" value="cartridges.{{@key}}" checked>
+                            {{else}}
+                            <input type="radio" name="tweaks.ammo.effect" value="cartridges.{{@key}}">
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                    </fieldset>
+                    {{/if}}
+                </div>
             </div>
         </fieldset>
 

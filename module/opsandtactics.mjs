@@ -146,22 +146,20 @@ export async function opsCheck(data){
       break;
   }
   // Create the roll and apply any situational modifiers
-  const roll = new OpsRoll(formula,data);
-  const poppedRoll = await roll.situationalMods(data);
-  if (poppedRoll===null) return null;
+  const checkRoll = new OpsRoll(formula,data);
   // Evaluate Roll and prepare for message creation
-  await poppedRoll.evaluate({async:true});
-  messageData.rolls = [poppedRoll];
+  await checkRoll.evaluate({async:true});
+  messageData.rolls = [checkRoll];
   // Add the miss chance roll if necessary
   if (data?.missChance > 0){
-    poppedRoll.missRoll = await new Roll('1d100').evaluate({async:true});
-    poppedRoll.missRoll.tooltip = await poppedRoll.missRoll.getTooltip();
-    messageData.rolls.push(poppedRoll.missRoll);
+    checkRoll.missRoll = await new Roll('1d100').evaluate({async:true});
+    checkRoll.missRoll.tooltip = await checkRoll.missRoll.getTooltip();
+    messageData.rolls.push(checkRoll.missRoll);
   }
-  poppedRoll.tooltip = await poppedRoll.getTooltip();
-  messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/check-roll-card.html',poppedRoll);
+  checkRoll.tooltip = await checkRoll.getTooltip();
+  messageData.content = await renderTemplate('systems/opsandtactics/templates/interface/check-roll-card.html',checkRoll);
   ChatMessage.create(messageData, {rollMode: data.rollMode})
-  return poppedRoll;
+  return checkRoll;
 }
 
 export async function opsDamage(data){

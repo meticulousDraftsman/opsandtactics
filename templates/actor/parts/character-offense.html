@@ -146,7 +146,7 @@
                         {{#if (eq this.type "attack")}}
                         <li class="item grid grid-5col">
                             <div class="grid-span-4 flexrow">
-                                <a class="item-check resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
+                                <a class="item-attack-dash resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
                                 <div class="flexcol flex2 flex-group-center">
                                     <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Damage Roll">
                                         {{this.mods.effectGood.primaryLabel}}
@@ -210,7 +210,7 @@
                         {{#if (eq this.type "attack")}}
                         <li class="item grid grid-5col">
                             <div class="grid-span-4 flexrow">
-                                <a class="item-check resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
+                                <a class="item-attack-dash resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
                                 <div class="flexcol flex2 flex-group-center">
                                     <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Damage Roll">
                                         {{this.mods.effectGood.primaryLabel}}

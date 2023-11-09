@@ -827,7 +827,7 @@ export class OpsActorSheet extends ActorSheet {
     const actionID = event.currentTarget.dataset.actionId;
     const goodBad = event.currentTarget.dataset.goodBad;
     const item = this.actor.items.get(itemID);
-    item.rollDamage(actionID,goodBad,event);
+    item.rollDamage({actionID:actionID,goodBad:goodBad,event:event,loaded:false});
   }
   _skillCheck(event){
     event.preventDefault();
@@ -976,10 +976,12 @@ export class OpsActorSheet extends ActorSheet {
     const item = this.actor.items.get(itemID);
     const tweaks = {
       offense:{
-        stance: 0
+        stance: 0,
+        rangeMult: 1
       },
       defense:{
-        stance: 0
+        stance: 0,
+        stun: null
       },
       item: item,
       attack: item.system.actions[actionID]
@@ -988,6 +990,7 @@ export class OpsActorSheet extends ActorSheet {
     let defStance;
     if (mainTarget){
       defStance = mainTarget.actor.statuses.has('prone') ? 'prone' : mainTarget.actor.statuses.has('kneeling') ? 'kneeling' : 'standing';
+      if (mainTarget.actor.statuses.has('stun')) tweaks.defense.stun = -2;
     }
     let atkStance = this.actor.statuses.has('prone') ? 'prone' : this.actor.statuses.has('kneeling') ? 'kneeling' : 'standing'
     if (tweaks.attack.check.type=='melee'){
@@ -1013,7 +1016,13 @@ export class OpsActorSheet extends ActorSheet {
         tweaks.ammo.active[key] = {name:entry.name,check:(`cartridges.${key}`==tripleID[2]),recoil:(`cartridges.${key}`==tripleID[2])}
       }
     }
-    new AttackDashboardApp(tweaks,{source:item,target:actionID}).render(true)
+    if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('none') || item.system.actions[actionID].check.type.includes('noChat')){
+      new AttackDashboardApp(tweaks,{source:item,target:actionID}).rollAttack(event)
+    }
+    else{
+      new AttackDashboardApp(tweaks,{source:item,target:actionID}).render(true)
+    }
+    
   }
 
   /**
@@ -1056,7 +1065,7 @@ class AttackDashboardApp extends FormApplication {
       classes: ['opsandtactics','sheet','item'],
       template: 'systems/opsandtactics/templates/interface/dialog-attack-dashboard.html',
       width: 650,
-      height: 600,
+      height: 480,
       closeOnSubmit: false,
       submitOnChange: true,
       resizable: true
@@ -1065,14 +1074,16 @@ class AttackDashboardApp extends FormApplication {
   get title(){
     return `${this.options.source.actor.name} tweaking execution of ${this.options.source.system.actions[this.options.target].name} from ${this.options.source.name}`;
   }
+  collapseStates = {
+    dashAttack: true
+  }
   getData(){
-    //console.debug(objectsEqual(this.object.item.system,this.options.source.system))
     const tempSource = duplicate(this.options.source)
     if (this.options.source.type=='weapon'){
       for (let [key,entry] of Object.entries(this.options.source.system.weaponMods)){
         for (let imp of ['check','effect','dice','recoil','cp']){
-          if ((entry[imp])){
-            tempSource.system.actions[this.options.target][imp].mods[key].value = entry[imp];
+          if (entry[imp]){
+            setProperty(tempSource,`system.actions.${this.options.target}.${imp}.mods.${key}.value`,entry[imp])
           }
         }
       }
@@ -1093,6 +1104,7 @@ class AttackDashboardApp extends FormApplication {
     }
     const context = {
       OATS: CONFIG.OATS,
+      collapses: this.collapseStates,
       tweaks: this.object,
       item: this.options.source,
       target: this.options.target,
@@ -1105,7 +1117,6 @@ class AttackDashboardApp extends FormApplication {
         recoil:{},
         cp:{}
       },
-      isTweaked: !objectsEqual(this.options.source,this.object.item),
       lists: {
         attackFlank: [
           {label:`Attacking into Defender's Front`,value:0},
@@ -1174,7 +1185,8 @@ class AttackDashboardApp extends FormApplication {
         }
       }
     }
-    context.offenseTotal = Number(getProperty(this.object,'offense.high')?this.object.offense.high:0) + Number(getProperty(this.object,'offense.seen')?this.object.offense.seen:0) + Number(getProperty(this.object,'offense.flank')?this.object.offense.flank:0) + Number(getProperty(this.object,'offense.stance')?this.object.offense.stance:0) + Number(getProperty(this.object,'offense.face')?this.object.offense.face:0)
+    context.situational = getProperty(this.object,'situation')
+    context.offenseTotal = Number(getProperty(this.object,'offense.high')?this.object.offense.high:0) + Number(getProperty(this.object,'offense.seen')?this.object.offense.seen:0) + Number(getProperty(this.object,'offense.flank')?this.object.offense.flank:0) + Number(getProperty(this.object,'offense.stance')?this.object.offense.stance:0) + Number(getProperty(this.object,'offense.face')?this.object.offense.face:0) + Math.floor(Number(getProperty(this.object,'offense.range')?this.object.offense.range:0) * -2 * Number(getProperty(this.object,'offense.rangeMult')?this.object.offense.rangeMult:1))
     context.defenseTotal = Number(getProperty(this.object,'defense.pin')?this.object.defense.pin:0) + Number(getProperty(this.object,'defense.stun')?this.object.defense.stun:0) + Number(getProperty(this.object,'defense.climb')?this.object.defense.climb:0) + Number(getProperty(this.object,'defense.stance')?this.object.defense.stance:0)
     context.missChance = 0;
     switch (getProperty(this.object,'defense.cover')){
@@ -1196,16 +1208,60 @@ class AttackDashboardApp extends FormApplication {
         context.missChance = 30;
     }
     context.missChance = Math.max(context.missChance,Number(getProperty(this.object,'defense.conceal')?this.object.defense.conceal:0));
+    context.formula = context.attackMods.checkTotal;
+    if (context.formula!==null){
+      context.formula = `${context.formula}${context.situational?` +(${context.situational})`:''}${context.offenseTotal?` +(${context.offenseTotal})`:''}${context.defenseTotal?` -(${context.defenseTotal})`:''}`;
+    }
+    console.debug(context)
     return context;
   }
+
+  activateListeners(html){
+    super.activateListeners(html);
+    html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
+    html.find('.attack-roll').click(this.rollAttack.bind(this));
+    html.find('.damage-roll').click(this.rollDamage.bind(this));
+  }
+
+  rollAttack(event){
+    event.preventDefault();
+    const context = this.getData();
+    this.options.source.rollActionCheck({modifier:context.formula,missChance:context.missChance,event:event,actionID:context.target,cp:context.attackMods.cp});
+  }
+  rollDamage(event){
+    event.preventDefault()
+    const context = this.getData()
+    this.options.source.rollDamage({loaded:context.tweaks.item.system.magazine.loaded,actionID:context.target,useAmmo:context.action.effect.ammo,goodBad:event.currentTarget.dataset.goodBad,mods:context.attackMods})
+  }
+
+  _onToggleCollapse(event){
+    event.preventDefault();
+    const collapseTarget = event.currentTarget.dataset.collapse;
+    const wrapper = $(event.currentTarget).parents(`.collapse-parent`);
+    const collapser = wrapper.children(`.${collapseTarget}`);
+    this._collapse(collapser,collapseTarget)
+  }
+  _collapse(collapser,collapseTarget){
+    const collapseCheck = this.collapseStates[collapseTarget];
+    if(collapseCheck){
+      collapser.slideDown(250, () =>{
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = false;
+      });
+    }
+    else {
+      collapser.slideUp(250, () => {
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = true;
+      });
+    }
+  }
+
   render(force=false,options={}){
     return super.render(force, options)
   }
   close(options={}){
     return super.close(options)
-  }
-  activateListeners(html){
-    super.activateListeners(html);
   }
   async _updateObject(event, formData){
     for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){

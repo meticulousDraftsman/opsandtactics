@@ -113,10 +113,11 @@ export class OpsItem extends Item {
     }
   }
 
-  async rollActionCheck(actionID,event=undefined){
+  async rollActionCheck(checkData){
+    console.debug(checkData)
     // Check resource consumption and override
-    let ammoCheck = (event && (event.ctrlKey || event.altKey))? true : this.resourceAvailableCheck(getProperty(this,`system.actions.${actionID}.ammo`));
-    let cpCheck = (event && (event.ctrlKey || event.altKey))? true : this.actor.cpAvailableCheck(this.actionSum(actionID).cp);
+    let ammoCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.resourceAvailableCheck(getProperty(this,`system.actions.${checkData.actionID}.ammo`));
+    let cpCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.actor.cpAvailableCheck(checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     if (!ammoCheck || !cpCheck){
       await Dialog.confirm({
         title: "Insufficient Resources",
@@ -133,31 +134,28 @@ export class OpsItem extends Item {
     
     // Prep data for roll
     const rollData = this.actor.getRollData();
-    const mainTarget = Array.from(game.user.targets)[0] || undefined;
+    
     const rollConfig = {
-      mod: this.actionSum(actionID).checkTotal,
+      mod: checkData.modifier?checkData.modifier:this.actionSum(checkData.actionID,checkData.tweaks?checkData.tweaks:{}).checkTotal,
       actor: this.actor,
       data: rollData,
       critical: getProperty(this,'system.crit'),
       error: getProperty(this,'system.errorBase') + getProperty(this,'system.magazine.loaded.stats.error'),
-      title: `${this.name} - ${this.system.actions[actionID].name}`,
-      flavor: getProperty(this,`system.actions.${actionID}.check.flavor`),
-      checkType: getProperty(this,`system.actions.${actionID}.check.type`),
+      missChance: checkData.missChance,
+      title: `${this.name} - ${this.system.actions[checkData.actionID].name}`,
+      flavor: getProperty(this,`system.actions.${checkData.actionID}.check.flavor`),
+      checkType: getProperty(this,`system.actions.${checkData.actionID}.check.type`),
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
       rollMode: game.settings.get('core', 'rollMode'),
-      popupSkip: (event && event.shiftKey),
-      attackStance: this.actor.statuses.has('prone') ? 'prone' : this.actor.statuses.has('kneeling') ? 'kneeling' : undefined,
-      targetStance: undefined
     }
-    if (mainTarget) rollConfig.targetStance = mainTarget.actor.statuses.has('prone') ? 'prone' : mainTarget.actor.statuses.has('kneeling') ? 'kneeling' : undefined;
     // Execute roll
     const roll = await opsCheck(rollConfig);
     if (roll==null) return null;
 
     // Perform resource consumption
-    if (!(event && event.altKey)){
-      await this.resourceConsume(getProperty(this,`system.actions.${actionID}.ammo`));
-      await this.actor.attributeConsume('system.cp.value',this.actionSum(actionID).cp);
+    if (!(checkData.event && checkData.event.altKey)){
+      await this.resourceConsume(getProperty(this,`system.actions.${checkData.actionID}.ammo`));
+      await this.actor.attributeConsume('system.cp.value',checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     }
 
     return roll;
@@ -193,32 +191,18 @@ export class OpsItem extends Item {
         if (!this.system.magazine.source) return false;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.max);
+        return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.heatBase);
       case 'consumable':
       case 'cartridge':
         if (!this.system.magazine.source) return false;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        if (this.type==='weapon'){
-          return ((getProperty(loadedMag,`${dualID[1]}.value`)+this.system.magazine.value-cost) >= 0);
-        }
-        else {
-          return ((getProperty(loadedMag,`${dualID[1]}.value`)-cost) >= 0);
-        }
-      case 'internal':
-        if (this.type==='weapon'){
-          return ((this.system.magazine.value-cost) >= 0);
-        }
-        else {
-          if (!this.system.magazine.source) return false;
-          dualID = this.system.magazine.source.split(',');
-          loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-          return ((getProperty(loadedMag,`${dualID[1]}.value`)-cost) >= 0);
-        }
+        return ((getProperty(loadedMag,`${dualID[1]}.value`)-cost) >= 0);
     }
   }
   async resourceConsume(cost){
     if (Number(cost)==0) return;
+    if (this.system.magazine.type=='coolant') cost = -cost;
     let loadedMag;
     let dualID;
     switch (this.system.magazine.type){
@@ -228,55 +212,12 @@ export class OpsItem extends Item {
         await this.actor.update({['system.magic.mlCant']:(this.actor.system.magic.mlCant+cost)});
         break;
       case 'coolant':
-        if (!this.system.magazine.source) return;
-        dualID = this.system.magazine.source.split(',');
-        loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        const coolUpdate = {[`${dualID[1]}.cool`]:false}
-        coolUpdate[`${dualID[1]}.value`] = getProperty(loadedMag,`${dualID[1]}.value`)+cost;
-        await loadedMag.update(coolUpdate);
-        break;
       case 'consumable':
       case 'cartridge':
         if (!this.system.magazine.source) return;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        if (this.type==='weapon'){
-          const magOld = getProperty(loadedMag,`${dualID[1]}.value`);
-          let magNew = magOld;
-          const chamberOld = this.system.magazine.value;
-          let chamberNew = chamberOld;
-          let reduce;
-          // Deduct cost from loaded value until zero
-          if (magNew > 0){
-            reduce = Math.min(cost, magNew);
-            magNew -= reduce;
-            cost -= reduce;
-          }
-          // Deduct any remaining cost from chamber value until zero
-          if (cost > 0 && chamberNew > 0){
-            reduce = Math.min(cost,chamberNew);
-            chamberNew -= reduce;
-            cost -= reduce;
-          }
-          // Deduct any remaining cost from loaded value even below zero, or add negative cost
-          magNew -= cost;
-          await loadedMag.update({[`${dualID[1]}.value`]:magNew});
-          if (chamberNew != chamberOld) await this.update({['system.magazine.value']:chamberNew});
-        }
-        else {
-          await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-cost)});
-        }
-        break;
-      case 'internal':
-        if (this.type==='weapon'){
-          await this.update({['system.magazine.value']:(this.system.magazine.value-cost)});
-        }
-        else {
-          if (!this.system.magazine.source) return;
-          dualID = this.system.magazine.source.split(',');
-          loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-          await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-cost)});
-        }
+        await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-cost)});
         break;
     }
   }
@@ -285,43 +226,46 @@ export class OpsItem extends Item {
     if (Number(cost)==0) return;
     await this.update({[path]:(getProperty(this,path)-cost)});
   }
-  rollDamage(actionID,goodBad='good',event=undefined){
+  rollDamage(damageData){
     const rollData = this.actor.getRollData();
+    const loadedMag = damageData.loaded?damageData.loaded:getProperty(this,'system.magazine.loaded');
+    console.debug(loadedMag)
     const rollConfig = {
       rolls: [],
       rollTypes: [],
       actor: this.actor,
       data: rollData,
-      title: `${this.name} - ${this.system.actions[actionID].name}${getProperty(this,'system.magazine.loaded.name')?` - ${this.system.magazine.loaded.name}`:''}`,
-      flavor:[`${this.system.actions[actionID].effect.flavor}`],
+      title: `${this.name} - ${this.system.actions[damageData.actionID].name}${getProperty(loadedMag,'name')?` - ${loadedMag.name}`:''}`,
+      flavor:[`${this.system.actions[damageData.actionID].effect.flavor}`],
       speaker: ChatMessage.getSpeaker({actor:this.actor}),
       rollMode: game.settings.get('core','rollMode')
     }
-    if (getProperty(this,`system.actions.${actionID}.effect.ammo`) && getProperty(this,'system.magazine.source')) rollConfig.flavor.push(this.system.magazine.loaded.flavor)
-    const mods = this.actionSum(actionID);
-    if (goodBad=='good'){
+    const useAmmo = damageData.useAmmo?damageData.useAmmo:getProperty(this,`system.actions.${damageData.actionID}.effect.ammo`)
+    if (useAmmo && loadedMag) rollConfig.flavor.push(getProperty(loadedMag,'flavor'))
+    const mods = damageData.mods?damageData.mods:this.actionSum(damageData.actionID,damageData.tweaks?damageData.tweaks:{});
+    if (damageData.goodBad=='good'){
       if (mods.effectGood.primary){
         rollConfig.rolls.push(mods.effectGood.primary)
-        if (getProperty(this,`system.actions.${actionID}.effect.ammo`) && getProperty(this,'system.magazine.source')) rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.good.primaryFlavor'));
+        if (useAmmo && loadedMag) rollConfig.rollTypes.push(getProperty(loadedMag,'stats.good.primaryFlavor'));
       }
       if (mods.effectGood.secondary){
         rollConfig.rolls.push(mods.effectGood.secondary)
-        rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.good.secondaryFlavor'))
+        rollConfig.rollTypes.push(getProperty(loadedMag,'stats.good.secondaryFlavor'))
       }
       if (mods.effectGood.extra){
         rollConfig.rolls.push(mods.effectGood.extra)
-        rollConfig.rollTypes.push('Others');
+        rollConfig.rollTypes.push('Other');
       }
     }
     else{
       rollConfig.title = rollConfig.title.concat(' (Bad)');
       if (mods.effectBad.primary){
         rollConfig.rolls.push(mods.effectBad.primary)
-        rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.bad.primaryFlavor'));
+        rollConfig.rollTypes.push(getProperty(loadedMag,'stats.bad.primaryFlavor'));
       }
       if (mods.effectBad.secondary){
         rollConfig.rolls.push(mods.effectBad.secondary)
-        rollConfig.rollTypes.push(getProperty(this,'system.magazine.loaded.stats.bad.secondaryFlavor'))
+        rollConfig.rollTypes.push(getProperty(loadedMag,'stats.bad.secondaryFlavor'))
       }
       if (mods.effectBad.extra){
         rollConfig.rolls.push(mods.effectBad.extra)
@@ -346,7 +290,7 @@ export class OpsItem extends Item {
     }
   }
 
-  actionSum(actionKey,tweaks={}){ //['system.magazine.loaded.stats.check']:9
+  actionSum(actionKey,tweaks={}){
     const tweakedThis = mergeObject(this.toObject(false),tweaks);
     const sourceAction = getProperty(tweakedThis,`system.actions.${actionKey}`);
     const mods = {

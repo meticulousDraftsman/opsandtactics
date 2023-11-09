@@ -120,7 +120,7 @@
                         <input name="system.actions.{{attack.id}}.dice.scaleCartridge.scale" value="{{attack.object.dice.scaleCartridge.scale}}" type="text" data-dtype="Number" placeholder="0">
                         <span>{{#if (eq attack.object.dice.scaleCartridge.scale 1)}}die.{{else}}dice.{{/if}}</span>
                     </div>
-                    <input class="grid-span-8 flex-group-center" name="system.actions.{{action.id}}.effect.flavor" value="{{action.object.effect.flavor}}" type="text" data-dtype="String" placeholder="Damage {{#if (eq action.object.check.type 'noChatAttack')}}Description{{else}}roll flavor{{/if}}">
+                    <input class="grid-span-8 flex-group-center" name="system.actions.{{attack.id}}.effect.flavor" value="{{action.object.effect.flavor}}" type="text" data-dtype="String" placeholder="Damage {{#if (eq action.object.check.type 'noChatAttack')}}Description{{else}}roll flavor{{/if}}">
                 </div>
             </fieldset>
             <fieldset>
