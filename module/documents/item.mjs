@@ -713,8 +713,10 @@ export class OpsItem extends Item {
 
   listMagazines(){
     const magazines = {};
+    // Unlimited-use and actions that cost ML don't need a magazine list
     if (this.system.magazine.type=='unlimited' || this.system.magazine.type=='mental') return magazines;
-    if (this.system.magazine.type=='magic'){
+    // Magic that uses charges can only look externally and doesn't need to differentiate
+    if (this.type=='magic'){
       magazines.entries = [];
       if (this.actor){
         for (let i of this.actor.items){
@@ -726,7 +728,7 @@ export class OpsItem extends Item {
         }
       }
     }
-
+    // Everything else builds an internal/external list based on what they use
     if (this.system.magazine.insideOut!='external'){
       magazines.internal = {label:'Internal',entries: []};
       switch (this.system.magazine.type){
@@ -780,14 +782,7 @@ export class OpsItem extends Item {
           case 'coolant':
             if (getProperty(i,'system.gear.resources')){
               for (let [key,entry] of Object.entries(i.system.gear.resources)){
-                if (entry.type==='coolant') magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?(entry.value):'Cool'}]`,id:`${i.id},system.gear.resources.${key}`});
-              }
-            }
-            break;
-          case 'magic':
-            if (getProperty(i,'system.gear.resources')){
-              for (let [key,entry] of Object.entries(i.system.gear.resources)){
-                if (entry.type==='magic') magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}]`,id:`${i.id},system.gear.resources.${key}`});
+                if (entry.type==='coolant' && entry.available) magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?(entry.value):'Cool'}]`,id:`${i.id},system.gear.resources.${key}`});
               }
             }
             break;

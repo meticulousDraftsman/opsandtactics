@@ -112,9 +112,9 @@
         <li class="grid grid-10col flex-group-center">
             <input class="grid-span-3" type="text" name="system.gear.resources.{{@key}}.name" value="{{this.name}}" data-dtype="String" placeholder="Coolant">
             <input class="grid-span-2" type="text" name="system.gear.resources.{{@key}}.value" value="{{this.value}}" data-dtype="Number" placeholder="Value">
-            <span class="grid-start-7 grid-span-2">Cool</span>
+            <span class="grid-start-7 grid-span-2">Available</span>
             <div>
-                <input name="system.gear.resources.{{@key}}.cool" data-tooltip="Cool" type="checkbox" {{checked this.cool}}/>
+                <input name="system.gear.resources.{{@key}}.available" data-tooltip="Available" type="checkbox" {{checked this.available}}/>
             </div>
             <a class="item-control sub-delete grid-start-10" data-target-name="gear.resources" data-remove-target="{{@key}}" data-tooltip="Remove Coolant Resource"><i class="fas fa-trash"></i></a>
         </li>

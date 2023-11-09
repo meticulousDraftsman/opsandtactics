@@ -243,7 +243,7 @@ export class ResourceCoolant extends foundry.abstract.DataModel{
             name: new field.StringField(),
             type: new field.StringField({initial:'coolant'}),
             value: new field.NumberField(),
-            cool: new field.BooleanField({initial:true})
+            available: new field.BooleanField({initial:true})
         }
     }
 }
