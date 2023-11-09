@@ -194,6 +194,7 @@ export class OpsItem extends Item {
         return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.heatBase);
       case 'consumable':
       case 'cartridge':
+      case 'magic':
         if (!this.system.magazine.source) return false;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
@@ -214,6 +215,7 @@ export class OpsItem extends Item {
       case 'coolant':
       case 'consumable':
       case 'cartridge':
+      case 'magic':
         if (!this.system.magazine.source) return;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
