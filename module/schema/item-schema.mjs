@@ -91,6 +91,7 @@ export class OpsWeapon extends foundry.abstract.DataModel{
                 heatBase: new field.NumberField({initial:0})
             }),
             damageBase: new field.StringField(),
+            flavorBase: new field.StringField(),
             range: new field.StringField({initial:"5ft"}),
             crit: new field.NumberField({initial:16}),
             errorBase: new field.NumberField({initial:0}),

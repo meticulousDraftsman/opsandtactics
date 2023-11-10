@@ -95,7 +95,7 @@ export class OpsItem extends Item {
       
     }
     else {
-      systemData.magazine.loaded = {stats:{good:{primary:systemData.damageBase}}};
+      systemData.magazine.loaded = {stats:{good:{primary:systemData.damageBase,primaryFlavor:systemData.flavorBase}}};
     }
   }
   _prepareObjectData(itemData){
