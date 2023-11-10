@@ -25,6 +25,27 @@
             "type": "JournalEntry"
         },
         {
+            "name": "core-rulebook",
+            "label": "Core Rulebook",
+            "system": "opsandtactics",
+            "path": "packs/core-rulebook",
+            "type": "Item"
+        },
+        {
+            "name": "aa-rulebook",
+            "label": "Advanced Arms",
+            "system": "opsandtactics",
+            "path": "packs/aa-rulebook",
+            "type": "Item"
+        },
+        {
+            "name": "mm-rulebook",
+            "label": "Modern Magika",
+            "system": "opsandtactics",
+            "path": "packs/mm-rulebook",
+            "type": "Item"
+        },
+        {
             "name": "core-feats",
             "label": "Core Feats",
             "system": "opsandtactics",

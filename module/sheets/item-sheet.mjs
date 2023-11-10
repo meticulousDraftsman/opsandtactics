@@ -409,6 +409,7 @@ class AttackEditApp extends FormApplication {
       height: 480,
       closeOnSubmit: false,
       submitOnChange: true,
+      submitOnClose: true,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body"}],
       resizable: true
     });
@@ -438,7 +439,7 @@ class AttackEditApp extends FormApplication {
     }
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
       for (let imp of ['check','effect','dice','recoil','cp']){
-        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:this.object.system.actions[this.options.target][imp]?.mods[key]?.active}
+        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)} 
       }
     }
     return context;
