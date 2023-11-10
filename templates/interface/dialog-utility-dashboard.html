@@ -1,0 +1,132 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <section class="sheet-body">
+        <fieldset>
+            <legend class="resource-label">
+                Situational Modifiers
+            </legend>
+            <div class="{{#if isReflex}}grid grid-2col{{/if}} flex-group-center">
+                <input type="text" name="tweaks.situation" value="{{tweaks.situation}}" placeholder="Generic">
+                {{#if isReflex}}
+                <select class="flex-group-center" name="tweaks.reflexCover">
+                    {{selectOptions lists.reflexCover selected=tweaks.reflexCover nameAttr="value" labelAttr="label"}}
+                </select>
+                {{/if}}
+            </div>
+        </fieldset>
+        <hr>
+        <div class="grid grid-2col flex-group-center">
+            {{#if item}}
+            <fieldset class="action-item">
+                <div class="flex-group-center">
+                    <a class="resource-label utility-roll">{{#if (eq action.check.type 'otherUtility')}}Roll{{else}}Check{{/if}}: {{formula}}</a>
+                </div>
+            </fieldset>
+            <div class="flexcol">
+                <fieldset class="action-item">
+                    <div class="flex-group-center">
+                        <a class="resource-label effect-roll">{{utilityMods.effectGood.primaryLabel}}</a>
+                    </div>
+                </fieldset>
+            </div>
+            {{else}}
+            <fieldset class="grid-span-2 action-item">
+                <div class="flex-group-center">
+                    <a class="resource-label utility-roll">Check: {{formula}}</a>
+                </div>
+            </fieldset>
+            {{/if}}
+        </div> 
+        <hr>
+        {{#if (or item skill)}}
+        <fieldset class="collapse-parent">
+            <legend class="resource-label">
+                {{action.name}} Modifiers <a data-tooltip="Toggle Utility Detail Display"><i class="fas fa-list collapse-toggle" data-collapse="dashUtility"></i></a>
+            </legend>
+            <div class="dashUtility {{#if collapses.dashUtility}}collapse{{/if}}">
+                <div class="grid grid-2col">
+                    {{#if (or skill (eq action.check.type 'skill'))}}
+                    <fieldset class="grid-span-2">
+                        <legend class="resource-label">
+                            Skill: {{skillMods.label}}
+                        </legend>
+                        {{#if skill}}
+                        <div class="grid grid-6col flex-group-center">
+                            <select class="grid-span-2 flex-group-center" name="tweaks.skill.system.focus" data-dtype="String">
+                                {{#select tweaks.skill.system.focus}}
+                                <option value="unfocus">{{localize "OATS.skills.unfocus"}}</option>
+                                <option value="focus">{{localize "OATS.skills.focus"}}</option>
+                                <option value="double">{{localize "OATS.skills.double"}}</option>
+                                {{/select}}
+                              </select>
+                            <select class="flex-group-center" name="tweaks.skill.system.ability">
+                                {{selectOptions OATS.abilityShort selected=tweaks.skill.system.ability localize=true blank="Ability"}}
+                            </select>
+                            <span>Ranks</span>
+                            <input type="text" name="tweaks.skill.system.ranks" value="{{tweaks.skill.system.ranks}}">
+                            <label class="flex-group-center">
+                                <div class="flexrow flex-group-center">
+                                    <span>Armor</span>
+                                    <div class="flex-group-center">
+                                        <input type="checkbox" name="tweaks.skill.system.armor.active" {{checked tweaks.skill.system.armor.active}}>
+                                    </div>
+                                </div>
+
+                            </label>
+                            <div class="grid-span-6 flex-group-center">
+                                {{#each tweaks.skill.system.mods}}
+                                {{#if this.value}}
+                                <label class="grid grid-10col flex-group-center">
+                                    <span class="grid-span-9">{{this.name}}: {{this.value}}</span>
+                                    <div class="flex-group-center">
+                                        <input type="checkbox" name="tweaks.skill.system.mods.{{@key}}.active" {{checked this.active}}>
+                                    </div>
+                                </label>
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                        </div>
+                        {{/if}}
+                    </fieldset>
+                    {{else}}
+                    <fieldset>
+                        <legend class="resource-label">
+                            Check: {{utilityMods.checkTotal}}
+                        </legend>
+                        <div class="grid grid-3col flex-group-center">
+                            <span>Inherent</span>
+                            <input type="text" name="tweaks.item.system.actions.{{target}}.check.inherent" value="{{action.check.inherent}}">
+                            <select class="flex-group-center" name="tweaks.item.system.actions.{{target}}.check.ability">
+                                {{selectOptions OATS.abilityShort selected=action.check.ability localize=true blank="Ability"}}
+                            </select>
+                        </div>
+                    </fieldset>
+                    {{/if}}
+                    {{#if (or (eq item.type 'object') (eq item.type 'magic'))}}
+                    <fieldset>
+                        <legend class="resource-label">
+                            Effect: {{utilityMods.effectGood.primaryLabel}}
+                        </legend>
+                        <div class="grid grid-3col flex-group-center">
+                            <span>Inherent</span>
+                            <input type="text" name="tweaks.item.system.actions.{{target}}.effect.inherent" value="{{action.effect.inherent}}">
+                            <select class="flex-group-center" name="tweaks.item.system.actions.{{target}}.effect.ability">
+                                {{selectOptions OATS.abilityShort selected=action.effect.ability localize=true blank="Ability"}}
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="resource-label">
+                            Combat Points: {{utilityMods.cp}}
+                        </legend>
+                        <div class="grid grid-6col flex-group-center">
+                            <span class="grid-start-2 grid-span-2">Inherent</span>
+                            <input class="grid-span-2" type="text" name="tweaks.item.system.actions.{{target}}.cp.inherent" value="{{action.cp.inherent}}">
+                        </div>
+                    </fieldset>
+                    {{/if}}
+                </div>
+            </div>
+        </fieldset>
+        {{/if}}
+    </section>
+</form>

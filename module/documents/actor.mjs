@@ -249,7 +249,7 @@ export class OpsActor extends Actor {
     }
   }
 
-  async rollActorCheck(checkID,event=undefined){
+  async rollActorCheck(checkData){
     const rollData = this.getRollData();
     const rollConfig = {
       actor: this,
@@ -257,30 +257,34 @@ export class OpsActor extends Actor {
       flavor: null,
       speaker: ChatMessage.getSpeaker({actor: this}),
       rollMode: game.settings.get('core', 'rollMode'),
-      popupSkip: (event && event.shiftKey)
     }
-    switch (checkID){
+    switch (checkData.checkID){
       case 'fortitude':
         rollConfig.title = 'Fortitude Save';
         rollConfig.checkType = 'generic';
-        rollConfig.mod = this.system.saves[checkID].value;
+        rollConfig.mod = checkData.modifier?checkData.modifier: this.system.saves[checkData.checkID].value;
         break;
       case 'reflex':
         rollConfig.title = 'Reflex Save';
         rollConfig.checkType = 'reflex';
-        rollConfig.mod = this.system.saves[checkID].value;
+        rollConfig.mod = checkData.modifier?checkData.modifier:this.system.saves[checkData.checkID].value;
         break;
       case 'will':
         rollConfig.title = 'Will Save';
         rollConfig.checkType = 'generic';
-        rollConfig.mod = this.system.saves[checkID].value;
+        rollConfig.mod = checkData.modifier?checkData.modifier:this.system.saves[checkData.checkID].value;
+        break;
+      case 'skill':
+        rollConfig.title = `${checkData.itemName} Check`
+        rollConfig.checkType = 'generic';
+        rollConfig.mod = checkData.modifier;
         break;
       default:
-        rollConfig.title = `${game.i18n.localize(CONFIG.OATS.abilities[checkID])} Check`;
+        rollConfig.title = `${game.i18n.localize(CONFIG.OATS.abilities[checkData.checkID])} Check`;
         rollConfig.checkType = 'generic';
-        rollConfig.mod = this.abilityMod(checkID)
+        rollConfig.mod = checkData.modifier?checkData.modifier:this.abilityMod(checkData.checkID)
     }
-    rollConfig.mod = rollConfig.mod>=0?`+${rollConfig.mod}`:rollConfig.mod;
+    rollConfig.mod = (`${rollConfig.mod}`.charAt(0)!='+' && `${rollConfig.mod}`.charAt(0)!='-')?`+${rollConfig.mod}`:rollConfig.mod;
     const roll = await opsCheck(rollConfig);
     if (roll==null) return null;
     return roll;

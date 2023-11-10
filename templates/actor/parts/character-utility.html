@@ -95,7 +95,7 @@
                         {{#if (eq this.type "utility")}}
                         <li class="item grid grid-5col">
                             <div class="grid-span-4 flexrow">
-                                <a class="item-check resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (eq this.check.type 'skill')}}Skill Check{{/if}}{{#if (eq this.check.type 'generic')}}Generic Check{{/if}}{{#if (eq this.check.type 'otherUtility')}}Other Roll{{/if}}{{#if (eq this.check.type 'noneUtility')}}Utility Message{{/if}}{{#if (eq this.check.type 'noChatUtility')}}Utility Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
+                                <a class="item-utility-dash resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (eq this.check.type 'skill')}}Skill Check{{/if}}{{#if (eq this.check.type 'generic')}}Generic Check{{/if}}{{#if (eq this.check.type 'otherUtility')}}Other Roll{{/if}}{{#if (eq this.check.type 'noneUtility')}}Utility Message{{/if}}{{#if (eq this.check.type 'noChatUtility')}}Utility Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
                                 <div class="flexcol flex2 flex-group-center">
                                     <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Utility Roll">
                                         {{this.mods.effectGood.primaryLabel}}
@@ -159,7 +159,7 @@
                         {{#if (eq this.type "utility")}}
                         <li class="item grid grid-5col">
                             <div class="grid-span-4 flexrow">
-                                <a class="item-check resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (eq this.check.type 'generic')}}Generic Check{{/if}}{{#if (eq this.check.type 'otherUtility')}}Other Roll{{/if}}{{#if (eq this.check.type 'noneUtility')}}Utility Message{{/if}}{{#if (eq this.check.type 'noChatUtility')}}Utility Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
+                                <a class="item-utility-dash resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (eq this.check.type 'generic')}}Generic Check{{/if}}{{#if (eq this.check.type 'otherUtility')}}Other Roll{{/if}}{{#if (eq this.check.type 'noneUtility')}}Utility Message{{/if}}{{#if (eq this.check.type 'noChatUtility')}}Utility Resources{{/if}}">{{this.mods.checkTotal}} {{this.name}}</a>
                                 <div class="flexcol flex2 flex-group-center">
                                     <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Utility Roll">
                                         {{this.mods.effectGood.primaryLabel}}

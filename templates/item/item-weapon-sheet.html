@@ -44,7 +44,7 @@
                     <a class="resource-label" data-tooltip="Transfer Ammo"><i class="fa-solid fa-right-left"></i></a>
                     <select class="grid-span-6 flex-group-center" name="system.magazine.source" data-dtype="String">
                     {{#select system.magazine.source}}
-                        <option value="">Unloaded</option>
+                        <option value="">{{#if (eq system.magazine.type 'coolant')}}Uncooled{{else}}Unloaded{{/if}}</option>
                         {{#each magazines}}
                         {{#if this.entries.length}}
                         <optgroup label="{{this.label}}">

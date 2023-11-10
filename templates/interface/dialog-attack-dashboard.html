@@ -161,6 +161,7 @@
                         </label>
                         {{/each}}
                     </fieldset>
+                    {{#if (eq item.type 'weapon')}}
                     <fieldset>
                         <legend class="resource-label">
                             Recoil: {{#if attackMods.recoil}}{{attackMods.recoil}}{{#if (gt attackMods.reduction 0)}} vs +{{attackMods.reduction}}{{/if}}{{else}}{{#if action.recoil.active}}None{{else}}N/a{{/if}}{{/if}}
@@ -188,6 +189,17 @@
                         </label>
                         {{/each}}
                     </fieldset>
+                    {{else}}
+                    <fieldset>
+                        <legend class="resource-label">
+                            Combat Points: {{attackMods.cp}}
+                        </legend>
+                        <div class="grid grid-4col flex-group-center">
+                            <span class="grid-start-2">Inherent</span>
+                            <input type="text" name="tweaks.item.system.actions.{{target}}.cp.inherent" value="{{action.cp.inherent}}">
+                        </div>
+                    </fieldset>
+                    {{/if}}
                     <fieldset class="grid-span-2">
                         <legend class="resource-label flexcol">
                             <div>
@@ -279,6 +291,7 @@
                             </div>
                         </div>
                     </fieldset>
+                    {{#if (eq item.type 'weapon')}}
                     <fieldset>
                         <legend class="resource-label">
                             Combat Points: {{attackMods.cp}}
@@ -296,6 +309,7 @@
                         </label>
                         {{/each}}
                     </fieldset>
+                    {{/if}}
                     {{#if tweaks.ammo}}
                     <fieldset>
                         <legend class="resource-label">

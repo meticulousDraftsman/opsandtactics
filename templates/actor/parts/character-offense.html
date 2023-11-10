@@ -39,7 +39,7 @@
                     <div class="grid-span-6 flexrow flex-group-center">
                         <select class="flex3 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
                             {{#select item.system.magazine.source}}
-                            <option value="">Unsunk</option>
+                            <option value="">Uncooled</option>
                             {{#each item.magazines}}
                             {{#if this.entries.length}}
                             <optgroup label="{{this.label}}">
@@ -54,7 +54,7 @@
                     </div>
                     {{/if}}
                     {{#if (eq item.system.magazine.type "unlimited")}}
-                    <i class="grid-span-2 fas fa-infinity"></i>
+                    <i class="grid-start-7 grid-span-2 fas fa-infinity"></i>
                     {{/if}}
                     <ol class="grid-span-10 items-list flex-group-center">
                         {{#each item.system.actions}}
@@ -138,7 +138,7 @@
                     </select>
                     {{/if}}
                     {{#if (eq item.system.magazine.type "unlimited")}}
-                    <i class="grid-span-2 fas fa-infinity"></i>
+                    <i class="grid-start-7 grid-span-2 fas fa-infinity"></i>
                     {{/if}}
                     <ol class="grid-span-10 items-list flex-group-center">
                         {{#each item.system.actions}}
@@ -202,7 +202,7 @@
                     </div>
                     {{/if}}
                     {{#if (eq item.system.magazine.type "unlimited")}}
-                    <i class="grid-span-2 fas fa-infinity"></i>
+                    <i class="grid-start-7 grid-span-2 fas fa-infinity"></i>
                     {{/if}}
                     <ol class="grid-span-10 items-list flex-group-center">
                         {{#each item.system.actions}}

@@ -602,6 +602,8 @@ export class OpsActorSheet extends ActorSheet {
     // Actor Sheet Rolls
     html.find('.item-check').click(this._actionCheck.bind(this));   
     html.find('.item-attack-dash').click(this._onAttackDash.bind(this));
+    html.find('.item-utility-dash').click(this._onUtilityDash.bind(this));
+    html.find('.actor-action-dash').click(this._onActionDash.bind(this));
     html.find('.damage-roll').click(this._damageRoll.bind(this));
     html.find('.skill-check').click(this._skillCheck.bind(this));   
     html.find('.actor-check').click(this._actorCheck.bind(this));
@@ -1024,6 +1026,56 @@ export class OpsActorSheet extends ActorSheet {
     }
     
   }
+  _onUtilityDash(event){
+    event.preventDefault();
+    const itemID = event.currentTarget.dataset.itemId;
+    const actionID = event.currentTarget.dataset.actionId;
+    const item = this.actor.items.get(itemID);
+    const tweaks = {
+      item: item,
+      skill: null,
+      utility: item.system.actions[actionID]
+    }
+    if (tweaks.utility.check.type=='skill' && tweaks.utility.check.source!='') tweaks.skill = this.actor.items.get(tweaks.utility.check.source)
+    if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('none') || item.system.actions[actionID].check.type.includes('noChat')){
+      new UtilityDashboardApp(tweaks,{sourceItem:item,sourceSkill:tweaks.skill,target:actionID}).rollUtility(event)
+    }
+    else{
+      new UtilityDashboardApp(tweaks,{sourceItem:item,sourceSkill:tweaks.skill,target:actionID}).render(true)
+    }
+  }
+  _onActionDash(event){
+    event.preventDefault()
+    const checkID = event.currentTarget.dataset.checkId;
+    const itemID = event.currentTarget.dataset.itemId;
+    const item = itemID?this.actor.items.get(itemID):null;
+    let checkName='';
+    switch (checkID){
+      case 'skill':
+        checkName = `${item.name} Check`
+        break;
+      case 'fortitude':
+        checkName = 'Fortitude Save';
+        break;
+      case 'reflex':
+        checkName = 'Reflex Save';
+        break;
+      case 'will':
+        checkName = 'Will Save';
+        break;
+      default:
+        checkName = `${game.i18n.localize(CONFIG.OATS.abilities[checkID])} Check`
+    }
+    const tweaks = {
+      skill: (checkID=='skill')?item:null,
+    }
+    if ((event && event.shiftKey)){
+      new ActionDashboardApp(tweaks,{actor:this.actor,name:checkName,sourceSkill:tweaks.skill,target:checkID,height:(checkID=='skill'?340:180)}).rollAction(event);
+    }
+    else{
+      new ActionDashboardApp(tweaks,{actor:this.actor,name:checkName,sourceSkill:tweaks.skill,target:checkID,height:(checkID=='skill'?340:180)}).render(true);
+    }
+  }
 
   /**
    * Handle clickable rolls.
@@ -1212,7 +1264,6 @@ class AttackDashboardApp extends FormApplication {
     if (context.formula!==null){
       context.formula = `${context.formula}${context.situational?` +(${context.situational})`:''}${context.offenseTotal?` +(${context.offenseTotal})`:''}${context.defenseTotal?` -(${context.defenseTotal})`:''}`;
     }
-    console.debug(context)
     return context;
   }
 
@@ -1256,12 +1307,198 @@ class AttackDashboardApp extends FormApplication {
       });
     }
   }
-
-  render(force=false,options={}){
-    return super.render(force, options)
+  async _updateObject(event, formData){
+    for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){
+      setProperty(this.object,key,entry)
+    }
+    this.render()
   }
-  close(options={}){
-    return super.close(options)
+}
+class UtilityDashboardApp extends FormApplication {
+  static get defaultOptions(){
+    return mergeObject(super.defaultOptions, {
+      classes: ['opsandtactics','sheet','item'],
+      template: 'systems/opsandtactics/templates/interface/dialog-utility-dashboard.html',
+      width: 520,
+      height: 340,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      resizable: true
+    });
+  }
+  get title(){
+    return `${this.options.sourceItem.actor.name} tweaking execution of ${this.options.sourceItem.system.actions[this.options.target].name} from ${this.options.sourceItem.name}`;
+  }
+  collapseStates = {
+    dashUtility: true
+  }
+  getData(){
+    const tempItemSource = duplicate(this.options.sourceItem)
+    this.object.item = mergeObject(tempItemSource,this.object.item);
+    if (this.options.sourceSkill){
+      const tempSkillSource = duplicate(this.options.sourceSkill)
+      this.object.skill = mergeObject(tempSkillSource,this.object.skill);
+    }
+    const context = {
+      OATS: CONFIG.OATS,
+      collapses: this.collapseStates,
+      tweaks: this.object,
+      item: this.options.sourceItem,
+      skill: this.options.sourceSkill,
+      target: this.options.target,
+      action: this.object.item.system.actions[this.options.target],
+      utilityMods: this.options.sourceItem.actionSum(this.options.target,this.object.item),
+      lists: {}
+    }
+    context.situational = getProperty(this.object,'situation')
+    if (this.options.sourceSkill) {
+      context.skillMods = this.options.sourceSkill.skillSum(this.object.skill)
+      context.formula = context.skillMods.total;
+    }
+    else {
+      context.formula = context.utilityMods.checkTotal;
+    }
+    if (context.formula!==null){
+      context.formula = `${context.formula}${context.situational?` +(${context.situational})`:''}`;
+    }
+    return context;
+  }
+  activateListeners(html){
+    super.activateListeners(html);
+    html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
+    html.find('.utility-roll').click(this.rollUtility.bind(this));
+    html.find('.effect-roll').click(this.rollEffect.bind(this));
+  }
+  rollUtility(event){
+    event.preventDefault();
+    const context = this.getData();
+    this.options.sourceItem.rollActionCheck({modifier:context.formula,event:event,actionID:context.target,cp:context.utilityMods.cp});
+  }
+  rollEffect(event){
+    event.preventDefault()
+    const context = this.getData()
+    this.options.sourceItem.rollDamage({actionID:context.target,goodBad:'good',mods:context.utilityMods})
+  }
+  _onToggleCollapse(event){
+    event.preventDefault();
+    const collapseTarget = event.currentTarget.dataset.collapse;
+    const wrapper = $(event.currentTarget).parents(`.collapse-parent`);
+    const collapser = wrapper.children(`.${collapseTarget}`);
+    this._collapse(collapser,collapseTarget)
+  }
+  _collapse(collapser,collapseTarget){
+    const collapseCheck = this.collapseStates[collapseTarget];
+    if(collapseCheck){
+      collapser.slideDown(250, () =>{
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = false;
+      });
+    }
+    else {
+      collapser.slideUp(250, () => {
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = true;
+      });
+    }
+  }
+  async _updateObject(event, formData){
+    for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){
+      setProperty(this.object,key,entry)
+    }
+    this.render()
+  }
+}
+class ActionDashboardApp extends FormApplication {
+  static get defaultOptions(){
+    return mergeObject(super.defaultOptions, {
+      classes: ['opsandtactics','sheet','item'],
+      template: 'systems/opsandtactics/templates/interface/dialog-utility-dashboard.html',
+      width: 520,
+      height: 340,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      resizable: true
+    });
+  }
+  get title(){
+    return `${this.options.actor.name} tweaking execution of ${this.options.name}`;
+  }
+  collapseStates = {
+    dashUtility: true
+  }
+  getData(){
+    if (this.options.sourceSkill){
+      const tempSkillSource = duplicate(this.options.sourceSkill)
+      this.object.skill = mergeObject(tempSkillSource,this.object.skill);
+    }
+    const context = {
+      OATS: CONFIG.OATS,
+      collapses: this.collapseStates,
+      tweaks: this.object,
+      skill: this.options.sourceSkill,
+      isReflex: (this.options.target=='reflex'),
+      lists: {
+        reflexCover: [
+          {label:'Not Behind Cover',value:'cov0'},
+          {label:'Behind 1/4 Cover (+2)',value:2},
+          {label:'Behind 1/2 Cover (+4)',value:4},
+          {label:'Behind 3/4 Cover (+6)',value:6},
+          {label:'Behind 9/10 Cover (+8)',value:8}
+        ]
+      }
+    }
+    context.situational = getProperty(this.object,'situation')
+    context.cover = getProperty(this.object,'reflexCover')
+    switch(this.options.target){
+      case 'skill':
+        context.skillMods = this.options.sourceSkill.skillSum(this.object.skill)
+        context.formula = context.skillMods.total;
+        break;
+      case 'fortitude':
+      case 'reflex':
+      case 'will':
+        context.formula = `${this.options.actor.system.saves[this.options.target].value>=0?'+':''}${this.options.actor.system.saves[this.options.target].value}`;
+        break;
+      default:
+        context.formula = `${this.options.actor.abilityMod(this.options.target)>=0?'+':''}${this.options.actor.abilityMod(this.options.target)}`
+    }
+    if (context.formula!==null){
+      context.formula = `${context.formula}${context.situational?` +(${context.situational})`:''}`;
+      if (this.options.target=='reflex') context.formula = `${context.formula}${context.cover?` +(${context.cover})`:''}`;
+    }
+    return context;
+  }
+  activateListeners(html){
+    super.activateListeners(html);
+    html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
+    html.find('.utility-roll').click(this.rollAction.bind(this));
+  }
+  rollAction(event){
+    event.preventDefault();
+    const context = this.getData();
+    this.options.actor.rollActorCheck({modifier:context.formula,event:event,checkID:this.options.target,itemName:getProperty(context,'skill.name')});
+  }
+  _onToggleCollapse(event){
+    event.preventDefault();
+    const collapseTarget = event.currentTarget.dataset.collapse;
+    const wrapper = $(event.currentTarget).parents(`.collapse-parent`);
+    const collapser = wrapper.children(`.${collapseTarget}`);
+    this._collapse(collapser,collapseTarget)
+  }
+  _collapse(collapser,collapseTarget){
+    const collapseCheck = this.collapseStates[collapseTarget];
+    if(collapseCheck){
+      collapser.slideDown(250, () =>{
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = false;
+      });
+    }
+    else {
+      collapser.slideUp(250, () => {
+        collapser.removeClass('collapse');
+        this.collapseStates[collapseTarget] = true;
+      });
+    }
   }
   async _updateObject(event, formData){
     for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){

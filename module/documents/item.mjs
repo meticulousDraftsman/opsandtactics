@@ -684,21 +684,22 @@ export class OpsItem extends Item {
     return mods;
   }
 
-  skillSum(){
+  skillSum(tweaks={}){
+    const tweakedThis = mergeObject(this.toObject(false),tweaks);
     const mods = {
-      ability: (this?.actor ? this.actor.abilityMod(this.system.ability) : 0),
+      ability: (this?.actor ? this.actor.abilityMod(tweakedThis.system.ability) : 0),
       equip: 0,
       syn: 0,
-      occ: (this.system.focus == 'double' ? 1 : 0),
-      armor: (this.system.armor.active ? (this?.actor ? this.actor.system.stats.armorPenalty.value : null) : null),
+      occ: (tweakedThis.system.focus == 'double' ? 1 : 0),
+      armor: (tweakedThis.system.armor.active ? (this?.actor ? this.actor.system.stats.armorPenalty.value : null) : null),
       misc: 0
     };
-    for (let [,mod] of Object.entries(this.system.mods)){
-      if (mod.active) mods[mod.type] += mod.value;
+    for (let [,mod] of Object.entries(tweakedThis.system.mods)){
+      if (mod.active) mods[mod.type] += Number(mod.value);
     }
     let labelParts = [
-      (this.system.ranks ? `${this.system.ranks} Ranks` : null),
-      (mods.ability ? `${mods.ability>=0 ? '+' : ''}${mods.ability} ${this.system.ability.toUpperCase()}` : null),
+      (tweakedThis.system.ranks ? `${Number(tweakedThis.system.ranks)} Ranks` : null),
+      (mods.ability ? `${mods.ability>=0 ? '+' : ''}${mods.ability} ${tweakedThis.system.ability.toUpperCase()}` : null),
       (mods.occ ? `${mods.occ>0 ? '+' : ''}${mods.occ} Occupation` : null),
       (mods.equip ? `${mods.equip>0 ? '+' : ''}${mods.equip} Equipment` : null),
       (mods.syn ? `${mods.syn>0 ? '+' : ''}${mods.syn} Synergy` : null),
@@ -707,7 +708,7 @@ export class OpsItem extends Item {
     ]
     labelParts = labelParts.filter(part => part != null);
     mods.label = labelParts.join(', ') || 'No Modifiers';
-    mods.total = this.system.ranks + mods.ability + mods.occ + mods.equip + mods.syn + mods.armor + mods.misc;
+    mods.total = Number(tweakedThis.system.ranks) + mods.ability + mods.occ + mods.equip + mods.syn + mods.armor + mods.misc;
     if (Number.isNaN(mods.total)) mods.total = 0;
     mods.total = mods.total>=0?`+${mods.total}`:mods.total;
     return mods;    
