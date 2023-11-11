@@ -7,13 +7,13 @@
         "name": "Draft",
         "url": "https://foundryvtt.com/community/draftsman"
     }],    
-    "version": "0.1.3",
+    "version": "0.2.0",
     "compatibility": {
         "minimum": 11,
-        "verified": "11.314"
+        "verified": "11.315"
     },
     "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "https://github.com/meticulousDraftsman/opsandtactics/releases/download/v0.1.3/opsandtactics.zip",
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/releases/download/v0.2.0/opsandtactics.zip",
     "esmodules":["module/opsandtactics.mjs"],
     "styles":["css/opsandtactics.css"],
     "scripts":[],
@@ -44,137 +44,17 @@
             "system": "opsandtactics",
             "path": "packs/mm-rulebook",
             "type": "Item"
-        },
-        {
-            "name": "core-feats",
-            "label": "Core Feats",
-            "system": "opsandtactics",
-            "path": "packs/core-feats",
-            "type": "Item"
-        },
-        {
-            "name": "core-ranged-weapons",
-            "label": "Core Ranged Weapons",
-            "system": "opsandtactics",
-            "path": "packs/core-ranged-weapons",
-            "type": "Item"
-        },
-        {
-            "name": "core-melee-weapons",
-            "label": "Core Melee Weapons",
-            "system": "opsandtactics",
-            "path": "packs/core-melee-weapons",
-            "type": "Item"
-        },
-        {
-            "name": "core-archaic-weapons",
-            "label": "Core Archaic Melee Weapons",
-            "system": "opsandtactics",
-            "path": "packs/core-archaic-weapons",
-            "type": "Item"
-        },
-        {
-            "name": "core-firearms",
-            "label": "Core Firearms",
-            "system": "opsandtactics",
-            "path": "packs/core-firearms",
-            "type": "Item"
-        },
-        {
-            "name": "core-armors",
-            "label": "Core Armors",
-            "system": "opsandtactics",
-            "path": "packs/core-armors",
-            "type": "Item"
-        },
-        {
-            "name": "mm-races",
-            "label": "MM Races",
-            "system": "opsandtactics",
-            "path": "packs/mm-races",
-            "type": "Item"
-        },
-        {
-            "name": "mm-melee-weapons",
-            "label": "MM Melee Weapons",
-            "system": "opsandtactics",
-            "path": "packs/mm-melee-weapons",
-            "type": "Item"
-        },
-        {
-            "name": "mm-armors",
-            "label": "MM Armors",
-            "system": "opsandtactics",
-            "path": "packs/mm-armors",
-            "type": "Item"
-        },
-        {
-            "name": "aa-races",
-            "label": "AA Races",
-            "system": "opsandtactics",
-            "path": "packs/aa-races",
-            "type": "Item"
-        },
-        {
-            "name": "aa-melee-weapons",
-            "label": "AA Melee Weapons",
-            "system": "opsandtactics",
-            "path": "packs/aa-melee-weapons",
-            "type": "Item"
-        },
-        {
-            "name": "aa-armors",
-            "label": "AA Armors",
-            "system": "opsandtactics",
-            "path": "packs/aa-armors",
-            "type": "Item"
-        },
-        {
-            "name": "weapon-templates",
-            "label": "Weapon Templates",
-            "system": "opsandtactics",
-            "path": "packs/weapon-templates",
-            "type": "Item"
         }
     ],
     "packFolders": [
         {
-            "name": "Core",
-            "sorting": "m",
-            "packs": [
-                "core-feats",
-                "weapon-templates",
-                "core-armors"
-            ],
-            "folders": [
-                {
-                    "name": "Weapons",
-                    "sorting": "m",
-                    "packs": [
-                        "core-firearms",
-                        "core-melee-weapons",
-                        "core-ranged-weapons",
-                        "core-archaic-weapons"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Modern Magika",
-            "sorting": "m",
-            "packs": [
-                "mm-races",
-                "mm-melee-weapons",
-                "mm-armors"
-            ]
-        },
-        {
-            "name": "Advanced Arms",
-            "sorting": "m",
-            "packs": [
-                "aa-races",
-                "aa-melee-weapons",
-                "aa-armors"
+            "name": "Ops and Tactics",
+            "sorting":"m",
+            "packs":[
+                "system-reference",
+                "core-rulebook",
+                "mm-rulebook",
+                "aa-rulebook"
             ]
         }
     ],

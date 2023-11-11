@@ -21,20 +21,11 @@ jobs:
       - run: fvtt configure set "dataPath" ${GITHUB_WORKSPACE}
       - run: fvtt package workon "opsandtactics" --type "System"
       
-      - run: fvtt package pack "aa-armors" --in "src/packs/aa-armors" --out "packs"
-      - run: fvtt package pack "aa-melee-weapons" --in "src/packs/aa-melee-weapons" --out "packs"
-      - run: fvtt package pack "aa-races" --in "src/packs/aa-races" --out "packs"
-      - run: fvtt package pack "core-archaic-weapons" --in "src/packs/core-archaic-weapons" --out "packs"
-      - run: fvtt package pack "core-armors" --in "src/packs/core-armors" --out "packs"
-      - run: fvtt package pack "core-feats" --in "src/packs/core-feats" --out "packs"
-      - run: fvtt package pack "core-firearms" --in "src/packs/core-firearms" --out "packs"
-      - run: fvtt package pack "core-melee-weapons" --in "src/packs/core-melee-weapons" --out "packs"
-      - run: fvtt package pack "core-ranged-weapons" --in "src/packs/core-ranged-weapons" --out "packs"
-      - run: fvtt package pack "mm-armors" --in "src/packs/mm-armors" --out "packs"
-      - run: fvtt package pack "mm-melee-weapons" --in "src/packs/mm-melee-weapons" --out "packs"
-      - run: fvtt package pack "mm-races" --in "src/packs/mm-races" --out "packs"
       - run: fvtt package pack "system-reference" --in "src/packs/system-reference" --out "packs"
-      - run: fvtt package pack "weapon-templates" --in "src/packs/weapon-templates" --out "packs"
+      - run: fvtt package pack "core-rulebook" --in "src/packs/core-rulebook" --out "packs"
+      - run: fvtt package pack "mm-rulebook" --in "src/packs/mm-rulebook" --out "packs"
+      - run: fvtt package pack "aa-rulebook" --in "src/packs/aa-rulebook" --out "packs"
+
 
       - name: Zip Creation
         run: |
