@@ -650,7 +650,7 @@ export class OpsActor extends Actor {
     const content = await renderTemplate('systems/opsandtactics/templates/interface/dialog-blades.html');
     return new Promise(resolve => {
       new Dialog({
-        title: "Skilled Plas- or Psibladist?",
+        title: "Skilled Psiblade Attack?",
         content,
         buttons: {
           apply: {
