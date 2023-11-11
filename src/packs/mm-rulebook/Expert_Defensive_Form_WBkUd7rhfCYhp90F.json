@@ -1,0 +1,28 @@
+{
+  "name": "Expert Defensive Form",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.jViibXrHmQKko0gM]{Basic Defensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.IqlAGgpvfpZnCc2W]{Reaction Form Focus} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.gAJy77Uf1u1MAm8m]{Deflect Form Focus}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.XMcusmiFwpjpi36m]{Intermediate Defensive Form}, </span><span class=\"fontstyle3\"><strong>and</strong> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.WR1aUMPFdye0K53C]{Reaction Form Expertise} </span><span class=\"fontstyle2\"><em>or </em></span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.oHkWwlRjTVC2GHGd]{Deflect Form Expertise}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When any hostile creature moves adjacent to the character, the character immediately receives an Attack of Opportunity when wielding a psiblade or plasblade. This is limited to one attack per hostile creature. When fighting defensively with a psiblade or plasblade, there is no additional Combat Point cost and the attack penalty is reduced to -2. When wielding a psiblade or plasblade, the Combat Point cost to perform any reaction is reduced by 3</span></p>",
+    "summary": "Defensive fighting penalty reduction, -3 CP to react, AoO"
+  },
+  "effects": [],
+  "folder": "DzwgkbHqAih5qJFB",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699691517584,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "WBkUd7rhfCYhp90F",
+  "_key": "!items!WBkUd7rhfCYhp90F"
+}

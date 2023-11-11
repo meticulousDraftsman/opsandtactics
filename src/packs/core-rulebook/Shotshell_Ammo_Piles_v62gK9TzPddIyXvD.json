@@ -1,0 +1,195 @@
+{
+  "folder": "SjDLp5TzRN00YBSZ",
+  "name": "Shotshell Ammo Piles",
+  "type": "object",
+  "_id": "v62gK9TzPddIyXvD",
+  "img": "systems/opsandtactics/icons/svg/shotgun-rounds.svg",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "HPiF3PRx": {
+          "type": "cartridge",
+          "value": 25,
+          "max": 25,
+          "available": true,
+          "cartridges": {
+            "XtDvFERM": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -3,
+                "good": {
+                  "primary": "3d4+1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".410 Bore",
+              "flavor": ""
+            }
+          },
+          "name": "Quantum Light Shotshell"
+        },
+        "oxnn7WVL": {
+          "type": "cartridge",
+          "value": 25,
+          "max": 25,
+          "available": true,
+          "cartridges": {
+            "Aud1bOUr": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "4d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "20 Gauge",
+              "flavor": ""
+            },
+            "7v7z0TWx": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "4d6+3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "16 Gauge",
+              "flavor": ""
+            },
+            "Rh7HKla6": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "12 Gauge",
+              "flavor": ""
+            }
+          },
+          "name": "Quantum Intermediate Shotshell"
+        },
+        "ee5uPSDO": {
+          "type": "cartridge",
+          "value": 25,
+          "max": 25,
+          "available": true,
+          "cartridges": {
+            "zqNsdFIC": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -9,
+                "good": {
+                  "primary": "7d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "10 Gauge",
+              "flavor": ""
+            }
+          },
+          "name": "Quantum Heavy Shotshell"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p>A box of light shotshells weighs 0.4 lb per 25 rounds.</p><p>A box of intermediate shotshells weighs 0.6 lb per 25 rounds.</p><p>A box of heavy shotshells weighs 0.8 lb per 25 rounds.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699684247863,
+    "modifiedTime": 1699684465550,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!v62gK9TzPddIyXvD"
+}

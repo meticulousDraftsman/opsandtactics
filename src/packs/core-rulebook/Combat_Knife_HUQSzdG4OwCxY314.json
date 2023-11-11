@@ -1,0 +1,341 @@
+{
+  "name": "Combat Knife",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/bowie-knife.svg",
+  "system": {
+    "description": "<p>A typical fighting knife and also represents a variety of field weapons like stabbing daggers and bayonets. Improvised versions of this weapon include broken bottles and kitchen knives. Combat knives come with a tactical sheath.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "5ft",
+    "crit": 14,
+    "weaponMods": {
+      "3VINI8EY": {
+        "name": "Swipe",
+        "check": "-2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": 1,
+        "description": "Deal Slashing"
+      }
+    },
+    "actions": {
+      "yqmwlhNc": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "-3",
+          "ability": "pow",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 2,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        }
+      },
+      "IahSqLdj": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        }
+      },
+      "NXsbkFwi": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        }
+      },
+      "JwwHwrGj": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+4",
+          "ability": "pow",
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 10,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "3VINI8EY": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.5,
+      "cost": 3,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "1d4",
+    "flavorBase": "Piercing"
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1699679551885,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "zqCKOIcFCrcCvKOl",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "HUQSzdG4OwCxY314",
+  "sort": 300000,
+  "_key": "!items!HUQSzdG4OwCxY314"
+}

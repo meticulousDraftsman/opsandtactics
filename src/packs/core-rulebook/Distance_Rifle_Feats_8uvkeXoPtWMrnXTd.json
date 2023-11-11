@@ -1,0 +1,19 @@
+{
+  "name": "Distance Rifle Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "8uvkeXoPtWMrnXTd",
+  "sort": 800000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698600515011,
+    "modifiedTime": 1699580959002,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!8uvkeXoPtWMrnXTd"
+}

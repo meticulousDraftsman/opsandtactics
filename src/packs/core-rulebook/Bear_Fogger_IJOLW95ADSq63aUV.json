@@ -1,0 +1,115 @@
+{
+  "folder": "vHmlRMcqXyNIS28E",
+  "name": "Bear Fogger",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/chemical-bolt.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "consumable",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": "IJOLW95ADSq63aUV,system.gear.resources.2lkG13OW"
+    },
+    "range": "5ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "yhnZjCz9": {
+        "name": "Spray Chemical Irritants",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noneAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "Fills a 10ft by 10ft area for 1d4 rounds, [TN9] Fortitude or blinded for [[/r 2d4]] rounds"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 0.58,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "2lkG13OW": {
+          "type": "consumable",
+          "value": 5,
+          "max": 5,
+          "available": false,
+          "name": "Canister"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p>A chemical irritant is a spray or fog that can temporarily blind and incapacitate target. It comes in various forms such as pepper spray and bear fogger. Chemical irritants are simple weapons and require no feats to use. To use bear fogger, the user selects a 10’×10’ area within the range increment, that lasts for 1d4 rounds. Any targets caught in the fog must make a Fortitude Saving Throw [TN9], or be blinded for 2d4 rounds. Bear fogger is limited to 1 range increment. A gas mask or a MOPP suit renders the target immune to the effects and a wet cloth held over the eyes, nose, and mouth provides a +2 bonus to the Fortitude Saving Throw.</p>",
+    "damageBase": "",
+    "flavorBase": "",
+    "importFilter": "",
+    "importMod": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699665571160,
+    "modifiedTime": 1699734900523,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "IJOLW95ADSq63aUV",
+  "sort": 50000,
+  "_key": "!items!IJOLW95ADSq63aUV"
+}

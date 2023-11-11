@@ -1,0 +1,28 @@
+{
+  "name": "Leading Target",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.iHruvh0FiUFh3EDH]{Distance Rifle Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attacking with a bolt action rifle, anti-materiel rifle, or designated marksman rifle, a character may ignore half of the target’s DEF bonuses due to movement.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">All other defense bonuses due to armor, Agility, and size still apply unless otherwise noted.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "summary": "Ignore 1/2 target's movement bonus to defense"
+  },
+  "effects": [],
+  "folder": "8uvkeXoPtWMrnXTd",
+  "sort": -15625,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699637492354,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "Op4t9DIZwYzlVr8N",
+  "_key": "!items!Op4t9DIZwYzlVr8N"
+}

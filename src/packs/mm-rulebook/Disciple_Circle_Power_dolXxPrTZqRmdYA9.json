@@ -1,0 +1,28 @@
+{
+  "name": "Disciple Circle Power",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Psionics (Any) 9 ranks, @UUID[Compendium.opsandtactics.mm-rulebook.Item.6OfmqdWPGxSUipql]{Initiate Circle Power}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.5OKNRqmJte204t9Y]{Acolyte Circle Power}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The Psion can change the point of origin of their abilities, up to 60’ away from their location. They must be able to visually see the location they wish to use as their origin point</span>.</p>",
+    "summary": "Disjoint psi-casts up to 60' away"
+  },
+  "effects": [],
+  "folder": "5xSNbq5nBfbZmeYo",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699690785537,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "dolXxPrTZqRmdYA9",
+  "_key": "!items!dolXxPrTZqRmdYA9"
+}

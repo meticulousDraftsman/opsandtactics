@@ -1,0 +1,65 @@
+{
+  "name": "HEM Tactical Vest (Shield)",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/shieldcomb.svg",
+  "system": {
+    "description": "<p>This is the new standard in body armor for the military, given both a plasma defense system and a Health and Environment Monitoring system that monitors the wearer&rsquo;s current health as well as their environmental location and possible dangers. The HEM tactical vest also possesses three auto-injectors that can be programmed to inject the wearer with any injectable substance when specific conditions are met. The standard conditions are when a character hits 75% of their total HP for the first, 50% of their total HP for the second and when a character is reduced to 2 CHP for the third. This armor has 12 MOLLE slots, but they can be removed at time of purchase for no cost, and can soak 20 points of plasma or electric damage before it requires a new coolant pack. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>\n<h3>Special Notes</h3>\n<p>This armor is hardened against EMP. This Armor can accept a single set of Armor Plates.</p>",
+    "layer": "shield",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Plasma, Electric",
+        "value": 12
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 20,
+      "max": 20
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": false,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699686525033,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "C9RrNQrxG7BPZXfq",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "a3vbuqMHO0I4rpAE",
+  "sort": 0,
+  "_key": "!items!a3vbuqMHO0I4rpAE"
+}

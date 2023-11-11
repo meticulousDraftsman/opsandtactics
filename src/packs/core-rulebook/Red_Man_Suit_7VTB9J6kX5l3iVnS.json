@@ -1,0 +1,65 @@
+{
+  "name": "Red Man Suit",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "system": {
+    "description": "<p>This heavily padded suit is used primarily for unarmed and blunt-weapon melee combat training, allowing opponents to throw full-force blows without injuring their training partners.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 3,
+    "agiMax": 1,
+    "penalty": -5,
+    "cpLoss": 3,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Bludgeoning",
+        "value": 10
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 50,
+      "max": 50
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 12,
+      "cost": 24,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585599353,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "WBHh8q8AosHoSTNP",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "7VTB9J6kX5l3iVnS",
+  "sort": 100000,
+  "_key": "!items!7VTB9J6kX5l3iVnS"
+}

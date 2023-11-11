@@ -1,0 +1,65 @@
+{
+  "name": "Advanced Ballistic Combat Helmet",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/samus-helmet.svg",
+  "system": {
+    "description": "<p>This is an upgrade to the ballistic combat helmet, introducing new, stronger materials that increase it&rsquo;s ability to take hits, at the cost of it&rsquo;s durablity. This helmet can also directly mount a Gas Mask, Emergency Air Mask, Condenser-Diluter, Rebreather, Night Vision Goggles, Infrared Goggles, and Passive or Active Hearing Protection.</p>",
+    "layer": "other",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "xJo01CIQ": {
+        "name": "Ballistic, Bludgeoning, Ballistic Piercing, Slashing",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 30,
+      "max": 30
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 3.5,
+      "cost": 35,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681776472939,
+    "modifiedTime": 1699686689005,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "OL22ovnv3PleIiIT",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "roLPIgaR9CEh7uCv",
+  "sort": 400000,
+  "_key": "!items!roLPIgaR9CEh7uCv"
+}

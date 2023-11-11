@@ -1,0 +1,65 @@
+{
+  "name": "Light Football Pads",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/knee-pad.svg",
+  "system": {
+    "description": "<p>This suit of armor is worn by professional and amateur players alike, and includes shoulder, leg, and arm pads. This type is normally worn by running backs and quarterbacks, sacrificing extra armor for range of motion.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and legs of the wearer, providing DR and Defense to all listed areas.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 0,
+    "agiMax": 6,
+    "penalty": 0,
+    "cpLoss": 0,
+    "protection": {
+      "xing99l9": {
+        "name": "Bludgeoning",
+        "value": 3
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 15,
+      "max": 15
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 4,
+      "cost": 5,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585415322,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "gMx1J0qOaPk1DblG",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "bFdhK6O3OMVz7UFP",
+  "sort": 300000,
+  "_key": "!items!bFdhK6O3OMVz7UFP"
+}

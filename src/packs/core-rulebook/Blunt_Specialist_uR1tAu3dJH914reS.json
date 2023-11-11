@@ -1,0 +1,32 @@
+{
+  "name": "Blunt Specialist",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.53RM572RAaaWLZqq]{Simple Weapon Specialist (Light Club,}@UUID[Compendium.opsandtactics.core-rulebook.Item.53RM572RAaaWLZqq]{Medium Club,}@UUID[Compendium.opsandtactics.core-rulebook.Item.53RM572RAaaWLZqq]{Heavy Club,} @UUID[Compendium.opsandtactics.core-rulebook.Item.53RM572RAaaWLZqq]{Tool Hammer or}@UUID[Compendium.opsandtactics.core-rulebook.Item.53RM572RAaaWLZqq]{Sledgehammer)}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When wielding a light club, medium club, heavy club, tool hammer, or sledgehammer, the Critical Threat range is 14-18</span>.</p><h3>Normal</h3><p><span class=\"fontstyle0\">The Critical Threat range for a light club, medium club, heavy club, tool hammer, or sledgehammer is 16-18</span>.</p>",
+    "summary": "14-18 Crit range"
+  },
+  "effects": [],
+  "folder": "Pu7P22JtHcTcoqf1",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pXA9CxhxP8x7frcH"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699640349127,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "uR1tAu3dJH914reS",
+  "_key": "!items!uR1tAu3dJH914reS"
+}

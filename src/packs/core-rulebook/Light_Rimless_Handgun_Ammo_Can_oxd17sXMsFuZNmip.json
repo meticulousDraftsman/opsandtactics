@@ -1,0 +1,130 @@
+{
+  "folder": "SjDLp5TzRN00YBSZ",
+  "name": "Light Rimless Handgun Ammo Can",
+  "type": "object",
+  "_id": "oxd17sXMsFuZNmip",
+  "img": "systems/opsandtactics/icons/svg/cardboard-box-closed.svg",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.5,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "rhd461a9": {
+          "type": "cartridge",
+          "value": 50,
+          "max": 50,
+          "available": true,
+          "cartridges": {
+            "gl6TPhQF": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "1d3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".25 ACP",
+              "flavor": ""
+            },
+            "VBFDQvRD": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -1,
+                "good": {
+                  "primary": "1d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".32 ACP",
+              "flavor": ""
+            },
+            "gXwrS3M4": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -1,
+                "good": {
+                  "primary": "1d4+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.65mm Longue",
+              "flavor": ""
+            }
+          },
+          "name": "Quantum Light Rimless"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699680549678,
+    "modifiedTime": 1699680681257,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!oxd17sXMsFuZNmip"
+}

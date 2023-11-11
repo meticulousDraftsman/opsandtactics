@@ -1,0 +1,81 @@
+{
+  "name": "Dragonskin",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/fish-scales.svg",
+  "system": {
+    "description": "<p>Dragonskin is armor that is composed of small ceramic plates that are stitched together with strong thread, creating a flexible, protective layer, in a vest like package.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 6,
+    "agiMax": 0,
+    "penalty": -6,
+    "cpLoss": 5,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Ballistic Piercing",
+        "value": 20
+      },
+      "9B9g4029": {
+        "name": "Ballistic",
+        "value": 14
+      },
+      "AqWwaPbR": {
+        "name": "Slashing",
+        "value": 10
+      },
+      "5AByUfaY": {
+        "name": "Piercing",
+        "value": 8
+      },
+      "VvYkztG9": {
+        "name": "Bludgeoning",
+        "value": 7
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 98,
+      "max": 98
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 20,
+      "cost": 50,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699690074210,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "CcJCIm7Kqgn8k9Br",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "jizi5qiXf4B3PMXC",
+  "sort": 0,
+  "_key": "!items!jizi5qiXf4B3PMXC"
+}

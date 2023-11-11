@@ -1,0 +1,66 @@
+{
+  "name": "Toughness",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefit </h3><p>The character gains +4 XHP and +2 CHP.</p><h3>Special </h3><p>A character may take this feat multiple times. Each time the character takes this feat they receive the same bonuses.</p>",
+    "summary": "+4 XHP, +2 CHP"
+  },
+  "effects": [
+    {
+      "icon": "systems/opsandtactics/icons/svg/notebook.svg",
+      "origin": "Item.0R8OU845Q9QBzF3D",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "nS4qzb7NPSjnALuY",
+      "changes": [
+        {
+          "key": "system.health.xhp.mods.tough",
+          "mode": 2,
+          "value": "4",
+          "priority": null
+        },
+        {
+          "key": "system.health.chp.mods.tough",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "name": "+4 XHP, +2 CHP",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!jAxQosHivblcnpQV.nS4qzb7NPSjnALuY"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681255288826,
+    "modifiedTime": 1699581526439,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "ii9NKpCX96yrDtuu",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "jAxQosHivblcnpQV",
+  "sort": 350000,
+  "_key": "!items!jAxQosHivblcnpQV"
+}

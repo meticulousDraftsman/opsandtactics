@@ -1,0 +1,421 @@
+{
+  "folder": "NWMAd77ogmBFnbgh",
+  "name": "Throwing Knife/Star",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/shuriken.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "U84VZFrzV7V7beYA,system.gear.quantity",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {
+      "Wp2LnexC": {
+        "name": "Swipe Attack",
+        "check": "-2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": 1,
+        "description": "Deal Slashing"
+      }
+    },
+    "actions": {
+      "3tc7nTGj": {
+        "name": "Throw",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "",
+          "inherent": "",
+          "ability": "mrk",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "",
+          "inherent": "",
+          "ability": "pow",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": true
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        }
+      },
+      "RqG45RFN": {
+        "name": "Strike (Light)",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "",
+          "inherent": "-2",
+          "ability": "foc",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "Piercing",
+          "inherent": "(1d2-2)[Piercing]",
+          "ability": "pow",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": false
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "ammo": false
+        },
+        "ammo": 0,
+        "cp": {
+          "inherent": 2,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        }
+      },
+      "7xdrdbRT": {
+        "name": "Strike (Standard)",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "",
+          "inherent": "-2",
+          "ability": "foc",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "Piercing",
+          "inherent": "(1d2+1)[Piercing]",
+          "ability": "pow",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": false
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "ammo": false
+        },
+        "ammo": 0,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        }
+      },
+      "wu2pEqAz": {
+        "name": "Strike (Heavy)",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "",
+          "inherent": "-2",
+          "ability": "foc",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "Piercing",
+          "inherent": "(2d2+1)[Piercing]",
+          "ability": "",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": false
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "ammo": false
+        },
+        "ammo": 0,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DrioHurf": {
+        "name": "Strike (Full)",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "",
+          "inherent": "-2",
+          "ability": "foc",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "flavor": "Piercing",
+          "inherent": "(3d2+5)[Piercing]",
+          "ability": "pow",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": false
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          },
+          "ammo": false
+        },
+        "ammo": 0,
+        "cp": {
+          "inherent": 10,
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Wp2LnexC": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.5,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle0\">These sleek and fast throwing stars and knives are omnipresent in classic martial arts movies and nearly synonymous with ninja. Throwing stars and throwing knives require the Exotic Melee Weapons Proficiency feat in order to be used without a -4 attack penalty. Throwing knives and stars can be embedded.</span> </p>",
+    "importFilter": "",
+    "importMod": "",
+    "errorBase": 0,
+    "damageBase": "1d3+2",
+    "flavorBase": "Piercing"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "IDlR3swyzHy0JGgv": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699220648692,
+    "modifiedTime": 1699679580912,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "U84VZFrzV7V7beYA",
+  "sort": 400000,
+  "_key": "!items!U84VZFrzV7V7beYA"
+}

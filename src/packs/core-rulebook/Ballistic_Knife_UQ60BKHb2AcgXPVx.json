@@ -1,0 +1,415 @@
+{
+  "name": "Ballistic Knife",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/switchblade.svg",
+  "system": {
+    "description": "<p>A ballistic knife is a specialized combat knife with a detachable blade that can be expelled from the handle/frame as a projectile by means of a spring-operated mechanism. All ballistic knives come with two blades, and require 4 Combat Points to reload and provokes AoO. When it isn&rsquo;t fired it functions like a survival knife. The damage listed is for when the blade is launched. It is limited to 2 range increments and has a 20&rsquo; range. Ballistic knives can be embedded.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "UQ60BKHb2AcgXPVx,system.gear.resources.ci4MCrS7",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "5ft",
+    "crit": 14,
+    "weaponMods": {
+      "Ns5Y0oq1": {
+        "name": "Thrust",
+        "check": "-2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": 1,
+        "description": "Deal Piercing"
+      }
+    },
+    "actions": {
+      "yqmwlhNc": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "-3",
+          "ability": "pow",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 2,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        }
+      },
+      "IahSqLdj": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        }
+      },
+      "NXsbkFwi": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        }
+      },
+      "JwwHwrGj": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+4",
+          "ability": "pow",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 10,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        }
+      },
+      "ls2HxBg8": {
+        "name": "Fire Blade",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "3d4[Piercing]",
+          "ability": "",
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Ns5Y0oq1": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 2,
+      "cost": 20,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "ci4MCrS7": {
+          "type": "consumable",
+          "value": 2,
+          "max": 2,
+          "available": false,
+          "name": "Blades"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "1d4",
+    "flavorBase": "Slashing"
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1699679565939,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "zqCKOIcFCrcCvKOl",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "UQ60BKHb2AcgXPVx",
+  "sort": 900000,
+  "_key": "!items!UQ60BKHb2AcgXPVx"
+}

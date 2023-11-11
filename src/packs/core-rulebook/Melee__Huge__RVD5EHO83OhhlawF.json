@@ -1,0 +1,231 @@
+{
+  "name": "Melee (Huge)",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "unlimited",
+      "insideOut": "both",
+      "loaded": {},
+      "heatBase": 0
+    },
+    "range": "5ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "O1TQAmqs": {
+        "name": "Light",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "-3",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      },
+      "fD6Lg61p": {
+        "name": "Standard",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      },
+      "vn8u8l2c": {
+        "name": "Heavy",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        }
+      },
+      "hKb8WHXH": {
+        "name": "Full",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "+4",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 12,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "huge",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "damageBase": "",
+    "flavorBase": "",
+    "importFilter": "",
+    "importMod": ""
+  },
+  "effects": [],
+  "folder": "Je4kJeKM0hAB5VqH",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699679376520,
+    "modifiedTime": 1699679961512,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "RVD5EHO83OhhlawF",
+  "sort": 0,
+  "_key": "!items!RVD5EHO83OhhlawF"
+}

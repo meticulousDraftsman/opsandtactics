@@ -1,0 +1,27 @@
+{
+  "folder": "yy3qadOIF6qMcsPf",
+  "name": "Rifle Master",
+  "type": "feature",
+  "_id": "gSvNTQ1c725491PZ",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "summary": "15-18 Critical Threat",
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MjNoL6QtM0Nptxsw]{Rifle Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.q2CTcyiqF0ovbeZH]{Rifle and SMG Reloader}, @UUID[Compendium.opsandtactics.core-rulebook.Item.6Fp9udJ3zelmnhkl]{Rifle Ace} or @UUID[Compendium.opsandtactics.core-rulebook.Item.hEyRyjwS4v5mbVyp]{Rifle Expert}</p><h3>Benefit</h3><p>When wielding an assault, battle, carbine, or target rifle, or sub-machine gun the Critical Threat range for any of these weapons is 15-18.</p><h3>Normal</h3><p>The Critical Threat range for all firearms is 16-18.</p><h3>Special</h3><p>If a character selects the Rifle Master Feat, they may not select the Rifle Savant Feat.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699579782491,
+    "modifiedTime": 1699636979500,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!gSvNTQ1c725491PZ"
+}

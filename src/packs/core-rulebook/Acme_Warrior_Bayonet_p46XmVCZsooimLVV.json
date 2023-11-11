@@ -1,0 +1,247 @@
+{
+  "name": "Acme Warrior Bayonet",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/bayonet.svg",
+  "system": {
+    "description": "<h3>Rifle Bayonet</h3><p>The statistics given describe a bayonet fixed at the end of a longarm with an appropriate mount. With the bayonet fixed, the longarm becomes a double weapon, club-like at one end and spear-like at the other. A character can fight with it as if fighting with two weapons, but if the character does so, they incur all the normal attack penalties associated with fighting with two weapons, as if using a one-handed weapon and a Small weapon. Any survival knife, combat knife, or field knife can be used as a bayonet, taking the damage dice and damage type of the selected knife with a +1 damage die, and any contact upgrades that were placed on the knife transfer over to the rifle bayonet. The clublike end of a rifle bayonet is a buttstroke and incurs all the bonuses and penalties of one. A character can strike opponents up to 10’ away with the blade end of a rifle bayonet, but can’t use it against an adjacent foe.</p><h3>Survival Knife</h3><p>A typical fighting knife and also represents a variety of field weapons like cutting daggers and bayonets. Improvised versions of this weapon include broken bottles and kitchen knives. Survival knives come with a tactical sheath.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "yqmwlhNc": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "-3",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "IahSqLdj": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "NXsbkFwi": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "JwwHwrGj": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+4",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.5,
+      "cost": 3,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": "On bayonet lug"
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "damageBase": "2d4",
+    "errorBase": 0,
+    "flavorBase": "Slashing"
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1699645046573,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "g808B4Ewc2QxTQdp",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "p46XmVCZsooimLVV",
+  "sort": 0,
+  "_key": "!items!p46XmVCZsooimLVV"
+}

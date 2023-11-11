@@ -1,0 +1,19 @@
+{
+  "name": "Rifles",
+  "sorting": "m",
+  "folder": "gviZEpYfQfK4uYve",
+  "type": "Item",
+  "_id": "G7uHnpc0DNT0FlF3",
+  "sort": -25000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699641798552,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!G7uHnpc0DNT0FlF3"
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Adamantine Plates",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/cube.svg",
+  "system": {
+    "description": "<p>These plates are made from Adamantine, designed to give long lasting, strong protection against stabbing and piercing at the cost of weight and speed.</p>",
+    "layer": "plate",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": 3,
+    "protection": {
+      "ZyyEUojP": {
+        "name": "Ballistic, Ballistic Piercing, Piercing",
+        "value": 11
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 154,
+      "max": 154
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 9.5,
+      "cost": 40,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1699690136331,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "Mzv2SjnGvJ3RgEcC",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "eGoFG7Ri8fuPyRH9",
+  "sort": 0,
+  "_key": "!items!eGoFG7Ri8fuPyRH9"
+}

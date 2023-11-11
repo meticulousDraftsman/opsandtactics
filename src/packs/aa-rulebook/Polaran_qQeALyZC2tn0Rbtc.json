@@ -1,0 +1,65 @@
+{
+  "name": "Polaran",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/ice-cube.svg",
+  "system": {
+    "description": "<p>Polarans have a Natural Energy Resistance to cold. They gain 5/Cold DR.</p>",
+    "layer": "other",
+    "active": true,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "8T0AsjQ1": {
+        "name": "Cold",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 0,
+      "max": 0
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Fine",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": false,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682370413636,
+    "modifiedTime": 1699686786857,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "G8ZV4c3hkH7zpTfy",
+  "_id": "qQeALyZC2tn0Rbtc",
+  "sort": 100000,
+  "_key": "!items!qQeALyZC2tn0Rbtc"
+}

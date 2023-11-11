@@ -1,0 +1,19 @@
+{
+  "name": "Axes",
+  "sorting": "m",
+  "folder": "EkYTnP2SQjMR0ZGn",
+  "type": "Item",
+  "_id": "nWonf7r74hdM4vok",
+  "sort": -100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699643290436,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!nWonf7r74hdM4vok"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Combat Shields",
+  "sorting": "m",
+  "folder": "VGn2dP7bgniMUukB",
+  "type": "Item",
+  "_id": "SL5sI5SDhwhKfQzr",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!SL5sI5SDhwhKfQzr"
+}

@@ -1,0 +1,78 @@
+{
+  "name": "Cave Dwarf (Dominant)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Cave dwarves can choose between Archaic Weapon Proficiency (Maces) or Archaic Weapon Proficiency (Picks), at 1st level for free.</li>\n<li>Cave dwarves possess Low-Light Vision, allowing them to see twice as far as normal in poor lightning conditions, as well as distinguish colors, even in dim lighting.</li>\n<li>When cave dwarves are in direct sunlight or bright light, and not wearing welding goggles, sunglasses, or any other type of equipment that dims lighting, they are considered blind.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Cave dwarves are Medium sized creatures.</li>\n<li>When calculating the carrying capacity for a cave dwarf, multiply all carrying capacity values by 2.</li>\n<li>Cave dwarves gain a +5 Racial Recoil Bonus to recoil when using any weapon that has recoil.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy cave dwarf typically stands between 4-5&frac12;&rsquo;, and weighs between 170-200 lbs. The men are slightly taller than the women on average. The male dwarfs begin to grow a beard right at the beginning of adulthood, which is a prized and cherished possession and badge of manhood, while a female dwarf&rsquo;s hair begins to grow to an impressive length, which is well kept and treasured as a symbol of womanhood. Dwarven skin tone ranges from a dark brown to a light olive, and their hair ranges from black to a dark brown, usually in a thick, curly or coarse texture. The average dwarven lifespan is 145 years, reaching physical adulthood between the ages of 19-25. Cave dwarves have eyes suited to darker environments, and as such their eye color tends to range from a offwhite color to a light violet color.</p>\n<h3>Language</h3>\n<p>The native language of a cave dwarf is Reformed Dwemer, but many speak, read, and can write in Dvergjar for Ceremonial reasons. Trade Bant Simplified is also a common language for cave dwarves.</p>\n<h3>Names</h3>\n<p>Cave dwarves have three names, the first name being a given name, and is used to refer to the particular dwarf, the second name being their family name, that denotes their immediate family, and the third being their clan or communal name, that signifies their original hometown or village.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "Cave Dwarf",
+          "priority": null
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium",
+          "priority": null
+        },
+        {
+          "key": "system.stats.recoil.dwarf",
+          "mode": 2,
+          "value": "5",
+          "priority": null
+        },
+        {
+          "key": "system.stats.carrying.formula",
+          "mode": 5,
+          "value": "(@str.score)*8",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "name": "Racial Effects",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!1aII1lsrYdbRYNkx.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1699689660247,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": "PWeOparSHhznTxmu",
+  "_id": "1aII1lsrYdbRYNkx",
+  "sort": 0,
+  "_key": "!items!1aII1lsrYdbRYNkx"
+}

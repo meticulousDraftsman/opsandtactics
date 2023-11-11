@@ -1,0 +1,61 @@
+{
+  "name": "Zen Mind",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefits</h3><p><span class=\"fontstyle0\">The character gains +25 Mental Limit.</span> </p><h3>Special</h3><p><span class=\"fontstyle0\">A character may gain this feat multiple times. Its effect stacks</span>.</p>",
+    "summary": "+25 Mental Limit"
+  },
+  "effects": [
+    {
+      "icon": "icons/svg/aura.svg",
+      "origin": "Item.f402uBiSKDIhrYCG",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "name": "+25 Mental Limit",
+      "_id": "xT0SwxM0ehSQkK5F",
+      "changes": [
+        {
+          "key": "system.ml.mods.zen",
+          "mode": 2,
+          "value": "25",
+          "priority": null
+        }
+      ],
+      "description": "",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "tint": null,
+      "_key": "!items.effects!cxCgKobLwMAZZQeR.xT0SwxM0ehSQkK5F"
+    }
+  ],
+  "folder": "lLtxMv0FY6IH9l2O",
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699690277259,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "cxCgKobLwMAZZQeR",
+  "sort": 0,
+  "_key": "!items!cxCgKobLwMAZZQeR"
+}

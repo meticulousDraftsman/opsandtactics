@@ -1,0 +1,32 @@
+{
+  "name": "Shield Strike",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefits</h3><p><span class=\"fontstyle0\">The character gains a +3 Reflex Saving Throw Bonus when performing the stumble reactions. On a successful stumble reaction, the stumbled character can be immediately knocked prone, regardless of their prior stance.</span> </p><h3>Normal</h3><p><span class=\"fontstyle0\">Kneeling characters are knocked prone, and standing characters are knocked to kneeling.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "summary": "+3 to stumble reactions, stumble can knock opponent prone."
+  },
+  "effects": [],
+  "folder": "Pu7P22JtHcTcoqf1",
+  "sort": 650000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pXA9CxhxP8x7frcH"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699583490950,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "SJ40tT28alLWvOze",
+  "_key": "!items!SJ40tT28alLWvOze"
+}

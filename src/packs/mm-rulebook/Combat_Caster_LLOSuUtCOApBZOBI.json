@@ -1,0 +1,30 @@
+{
+  "name": "Combat Caster",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 1 rank</span> </p><h3>Benefits</h3><p><span class=\"fontstyle0\">When casting a spell or scroll adjacent to an enemy, AoO is not provoked</span>.</p><h3>Normal</h3><p><span class=\"fontstyle0\">Casting a spell adjacent to an enemy provokes an AoO</span>.</p>",
+    "summary": "Spell casting no longer provokes AoO"
+  },
+  "effects": [],
+  "folder": "jpOZus3RH45dgJCw",
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699690477953,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "LLOSuUtCOApBZOBI",
+  "sort": 100000,
+  "_key": "!items!LLOSuUtCOApBZOBI"
+}

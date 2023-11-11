@@ -1,0 +1,30 @@
+{
+  "name": "Manual Action Quickshot",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}</p><h3>Benefit</h3><p>When using a lever action or pump action firearm, a character can perform double tap attacks with the firearm.</p><h3>Normal</h3><p>Lever action and pump action firearms can only perform single shot and potshot attacks.</p>",
+    "summary": "Double tap with level and pump actions"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682891953555,
+    "modifiedTime": 1699639753238,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "Gb64JgdoIqJLhVSv",
+  "_id": "gMeJgbfP9jiTiDW1",
+  "sort": 643750,
+  "_key": "!items!gMeJgbfP9jiTiDW1"
+}

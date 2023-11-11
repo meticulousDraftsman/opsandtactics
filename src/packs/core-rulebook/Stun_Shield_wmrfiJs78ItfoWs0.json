@@ -1,0 +1,403 @@
+{
+  "name": "Stun Shield",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/lightning-arc.svg",
+  "system": {
+    "description": "<p>A shield composed of high impact plastic, complete with inlaid electrical contacts, that when the shield is activated, will shock and incapacitate the person struck. A stun shield provides one-quarter cover in one direction. A stun shield has to be activated, which costs 2 Combat Points. On a successful hit with an activated shield, the stun shield deals 1d3 points of Electricity damage (do not add the character&rsquo;s POW bonus) and the target must make a Fortitude Saving Throw [TN13] or be paralyzed for 1d2 rounds. Stun shields can not be disarmed.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "5ft",
+    "crit": 16,
+    "weaponMods": {
+      "Lu9YDIGr": {
+        "name": "Shield Activated",
+        "check": "",
+        "effect": "1d3[Electricity]",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "[TN13] Fortitude on strike or paralyzed for 1d2 rounds"
+      }
+    },
+    "actions": {
+      "yqmwlhNc": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "-3",
+          "ability": "pow",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        }
+      },
+      "IahSqLdj": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        }
+      },
+      "NXsbkFwi": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        }
+      },
+      "JwwHwrGj": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+4",
+          "ability": "pow",
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        }
+      },
+      "u0fHRJAu": {
+        "name": "Activate Shield",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noneAttack",
+          "ammo": true,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "flavor": "On strike deal electric damage, [TN13] Fortitude or paralyzed [[/r 1d2]] rounds",
+          "inherent": "",
+          "ability": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": false,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 2,
+          "mods": {
+            "Lu9YDIGr": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 3,
+      "cost": 14,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "1d4",
+    "flavorBase": "Bludgeoning"
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1699734837037,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "P20UXV3dIgURBUOF",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "wmrfiJs78ItfoWs0",
+  "sort": 300000,
+  "_key": "!items!wmrfiJs78ItfoWs0"
+}

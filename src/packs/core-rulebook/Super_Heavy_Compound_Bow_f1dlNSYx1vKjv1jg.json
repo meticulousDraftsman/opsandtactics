@@ -1,0 +1,244 @@
+{
+  "name": "Super-Heavy Compound Bow",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/pocket-bow.svg",
+  "system": {
+    "description": "<p>A bow that uses a levering system of cables and pulleys to bend its limbs. Compound bows are used for hunting, Olympic archery, and general target practice. If the character does not have the required modifier for a compound bow, they can not use this bow at all.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "80ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "WYULcrEI": {
+        "name": "Light Pull",
+        "active": true,
+        "check": {
+          "flavor": "-5' Range",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+3",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "wXRpSIyy": {
+        "name": "Standard Pull",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+3",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 3,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "rsal5bdz": {
+        "name": "Heavy Pull",
+        "active": true,
+        "check": {
+          "flavor": "+10'",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+3",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 4,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "ODejTML7": {
+        "name": "Reload an Arrow",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 1,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 3,
+      "cost": 25,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681646395557,
+    "modifiedTime": 1699669505641,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "FGFpPjwlKFqX2Pri",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "f1dlNSYx1vKjv1jg",
+  "sort": 99219,
+  "_key": "!items!f1dlNSYx1vKjv1jg"
+}

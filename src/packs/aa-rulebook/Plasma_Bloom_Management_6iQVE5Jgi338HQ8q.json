@@ -1,0 +1,32 @@
+{
+  "name": "Plasma Bloom Management",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.CbH9UMxgrmEr8tFh]{Personal Plasmas Proficiency}, @UUID[Compendium.opsandtactics.aa-rulebook.Item.I2ulORBcKU6kkakv]{Advanced Plasmas Proficiency}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When performing a waveshot attack the Reflex Saving Throw TN is increased to [TN18]. When performing a gridshot attack, the character may choose to change its area of effect in one of the following ways:<br>• Change the area of effect to a 5’-by-10’ area, and increase<br>the Reflex Saving throw TN to [TN22]<br>• Change the area of effect to a 10’-by-20’ area, and decrease<br>the Reflex Saving Throw TN to [TN14]</span></p>",
+    "summary": "TN 18 Reflex save for waveshot, modify waveshot attack AOE"
+  },
+  "effects": [],
+  "folder": "qLyZC1TtVGQRnodr",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.6iQVE5Jgi338HQ8q"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699686105831,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "6iQVE5Jgi338HQ8q",
+  "_key": "!items!6iQVE5Jgi338HQ8q"
+}

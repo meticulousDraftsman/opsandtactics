@@ -1,0 +1,155 @@
+{
+  "name": "Bolt Case",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/svg/quiver.svg",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 1,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "sleMjCv5": {
+          "type": "cartridge",
+          "value": 20,
+          "max": 20,
+          "available": true,
+          "cartridges": {
+            "V5qcsW6E": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "1d3",
+                  "primaryFlavor": "Piercing",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Fieldpoint Bolt",
+              "flavor": ""
+            },
+            "QhjGelfo": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "1d3",
+                  "primaryFlavor": "Nonlethal Bludgeoning",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Blunt Bolt",
+              "flavor": ""
+            },
+            "j1yRqkwT": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "3d3",
+                  "primaryFlavor": "Piercing",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Bodkin Bolt",
+              "flavor": ""
+            },
+            "aqQGmnr6": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "1d3",
+                  "primaryFlavor": "Piercing",
+                  "secondary": "1d3",
+                  "secondaryFlavor": "Slashing",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Broadhead Bolt",
+              "flavor": ""
+            }
+          },
+          "name": "Bolts"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "folder": "mTiSfWFmJYOlHhBY",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699650885940,
+    "modifiedTime": 1699685398123,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "egC1tYH2huSZzCak",
+  "sort": 0,
+  "_key": "!items!egC1tYH2huSZzCak"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Personal Plasmas Proficiency",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Benefit</h3><p><span class=\"fontstyle0\">The character can fire any personal plasarm, lasarm, or elarm without penalty.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Characters without this feat take a -4 penalty on attack rolls made with personal plasarms, lasarms and elarms, and can not reload plasarms, lasarms, or elarms.</span></p><h3>Tutoring</h3><p>Time: 1 hour</p><p>Benefit: <span class=\"fontstyle0\">Can reload plasarms, lasarms and elarms and attack penalty is reduced to -3</span></p>",
+    "summary": "Use and reload energy weapons without penalty"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.RKCVEogWbpeMmWCk"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682807800856,
+    "modifiedTime": 1699685980145,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "qLyZC1TtVGQRnodr",
+  "sort": 0,
+  "_id": "CbH9UMxgrmEr8tFh",
+  "_key": "!items!CbH9UMxgrmEr8tFh"
+}

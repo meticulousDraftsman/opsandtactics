@@ -1,0 +1,65 @@
+{
+  "name": "Charged Tactical Vest (Shield)",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/shieldcomb.svg",
+  "system": {
+    "description": "<p>The new standard body armor for police tactical units, this vest has been upgraded with a plasma defense system, allowing it to defend against plasma or electric attacks as well. This tactical gear is covered in MOLLE, which allows different accessories to be mounted on to the user&rsquo;s specifications. This armor has 6 MOLLE slots, but they can be removed at time of purchase for no cost, and can soak 30 points of plasma or electric damage before it requires a new coolant pack. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>\n<h3>Special Notes</h3>\n<p>This armor is hardened against EMP</p>",
+    "layer": "shield",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Plasma, Electric",
+        "value": 12
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 30,
+      "max": 30
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": false,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699686513550,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "C9RrNQrxG7BPZXfq",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "JJbYUASplGP57CVs",
+  "sort": 0,
+  "_key": "!items!JJbYUASplGP57CVs"
+}

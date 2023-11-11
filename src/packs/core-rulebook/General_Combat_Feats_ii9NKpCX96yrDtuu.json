@@ -1,0 +1,19 @@
+{
+  "name": "General Combat Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "ii9NKpCX96yrDtuu",
+  "sort": 1200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698602548066,
+    "modifiedTime": 1699581458715,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!ii9NKpCX96yrDtuu"
+}

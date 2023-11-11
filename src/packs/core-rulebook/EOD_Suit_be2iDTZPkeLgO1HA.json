@@ -1,0 +1,65 @@
+{
+  "name": "EOD Suit",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "system": {
+    "description": "<p>This armor consists of a complete anti-explosive armor setup, used by bomb disposal technicians to diffuse live bombs. It includes heavy ballistic armor, as well as a see-through ballistic visor and helmet.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the head, arms, legs, feet, and hands of the wearer, providing DR and Defense to all listed areas.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 4,
+    "agiMax": 0,
+    "penalty": -7,
+    "cpLoss": 4,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Concussion, Piercing, Slashing",
+        "value": 40
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 50,
+      "max": 50
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 35,
+      "cost": 95,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585621185,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "WBHh8q8AosHoSTNP",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "be2iDTZPkeLgO1HA",
+  "sort": 350000,
+  "_key": "!items!be2iDTZPkeLgO1HA"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Slam Throw",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.x0nG5fvFuZUAMz05]{Evasive Martial Arts}, @UUID[Compendium.opsandtactics.core-rulebook.Item.hklX41S7ovugpEnQ]{Combat Throw}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">A successful trip attempt by the character deals damage as they would with an unarmed strike.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">If a character has any feats that allow them to modify their unarmed strike damage without penalty or increase the damage that unarmed attacks cause, these increase the damage done by this feat.</span></p>",
+    "summary": "Trips deal damage"
+  },
+  "effects": [],
+  "folder": "BfQrisONp9zLTEW3",
+  "sort": 800000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699641403857,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "UElc1A1NlGEdtsPq",
+  "_key": "!items!UElc1A1NlGEdtsPq"
+}

@@ -1,0 +1,244 @@
+{
+  "name": "Heavy Recurve Bow",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/pocket-bow.svg",
+  "system": {
+    "description": "<p>A bow that has tips that curve away from the archer when the bow is strung. By definition, the difference between recurve and other bows is that the string touches a section of the limb when the bow is strung. A recurve bow stores more energy and delivers energy more efficiently than an equivalent straight-limbed bow, giving a greater amount of energy and hence speed to the arrow. If the character does not have the required modifier for a recurve bow, they can only make Light Pull attacks with that bow. A character adds their POW bonus, up to a maximum of +6, to all damage rolls when using recurve bows.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "40ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "WYULcrEI": {
+        "name": "Light Pull",
+        "active": true,
+        "check": {
+          "flavor": "-5' Range",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "wXRpSIyy": {
+        "name": "Standard Pull",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "rsal5bdz": {
+        "name": "Heavy Pull",
+        "active": true,
+        "check": {
+          "flavor": "+10'",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+2",
+          "ability": "pow",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 3,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "eM0Tv0vy": {
+        "name": "Reload an Arrow",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 1,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 3,
+      "cost": 9,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681646395557,
+    "modifiedTime": 1699669548099,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "FGFpPjwlKFqX2Pri",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "d1XRq08CVlKXOxkj",
+  "sort": 93750,
+  "_key": "!items!d1XRq08CVlKXOxkj"
+}

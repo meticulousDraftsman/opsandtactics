@@ -1,0 +1,32 @@
+{
+  "name": "Rapid Form Master",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.MHXQ6uBfaRCgUfgW]{Basic Offensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.XGxd5T4lqfPVTwF1]{Rapid Form Focus}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.tbBRjXDVRbf2ZsHH]{Intermediate Offensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.vbOMM8Ep25gwiLuw]{Rapid Form Expertise}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.S0PG7PXrqantMoiM]{Expert Offensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When using a psiblade or plasblade, for every two successful melee attacks a character completes, the character immediately receives one additional attack for no Combat Points. The extra attack is with the same weapon and at the same bonus as the attack as the previous two attacks. Also, the Combat Point Cost to Heavy attack is reduced by 1 and the cost to Full attack is reduced by 2 when using a psiblade or plasblade</span>.</p><h3>Special</h3><p><span class=\"fontstyle0\">This feat’s effects replace the Rapid Form Expertise’s effects</span>.</p>",
+    "summary": "1 Free attack every two hits, -1 CP to heavy attack, -2 CP to full attack"
+  },
+  "effects": [],
+  "folder": "3l4ZEMi7eRbrgoH1",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.wq39oPWntepis2YZ"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699691306492,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "wq39oPWntepis2YZ",
+  "_key": "!items!wq39oPWntepis2YZ"
+}

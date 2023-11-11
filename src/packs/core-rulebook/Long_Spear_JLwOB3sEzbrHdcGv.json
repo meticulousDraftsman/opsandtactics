@@ -1,0 +1,605 @@
+{
+  "name": "Long Spear",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/broadhead-arrow.svg",
+  "system": {
+    "description": "<p>A long spear ranges from 3-6&rsquo; taller than its wielder. Classic examples are pike or naginata. Improvised versions of this weapon include flagpoles with points and long pipes with sharp ends. A character can strike opponents up to 15&rsquo; away with a long spear, but can&rsquo;t use it against an adjacent foe. Long spears can be used to perform trip attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "15ft",
+    "crit": 15,
+    "weaponMods": {
+      "0Sd6wjfJ": {
+        "name": "Swipe Attack",
+        "check": "-2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": 1,
+        "description": "Deal Slashing"
+      }
+    },
+    "actions": {
+      "FEx456FG": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "-3",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      },
+      "dLSlE7r1": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      },
+      "fUrcx4zY": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      },
+      "7bfatA2J": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+4",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      },
+      "w0SlbBsb": {
+        "name": "Light (Haft) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "(1d4-3)[Bludgeoning]",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": false
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      },
+      "bgN7hsR5": {
+        "name": "Standard (Haft) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "1d4[Bludgeoning]",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": false
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      },
+      "ZNCruSts": {
+        "name": "Heavy (Haft) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "2d4[Bludgeoning]",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": false
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 6,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      },
+      "AeYGcTKF": {
+        "name": "Full (Haft) ",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "Bludgeoning",
+          "type": "",
+          "source": "",
+          "inherent": "(3d4+4)[Bludgeoning]",
+          "ability": "pow",
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": false
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 11,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "0Sd6wjfJ": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 6,
+      "cost": 5,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "2d8",
+    "flavorBase": "Piercing"
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1699679431520,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "g808B4Ewc2QxTQdp",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "JLwOB3sEzbrHdcGv",
+  "sort": 50000,
+  "_key": "!items!JLwOB3sEzbrHdcGv"
+}

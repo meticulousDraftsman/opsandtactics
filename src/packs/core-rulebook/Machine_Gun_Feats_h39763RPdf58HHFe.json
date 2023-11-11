@@ -1,0 +1,19 @@
+{
+  "name": "Machine Gun Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "h39763RPdf58HHFe",
+  "sort": 1500000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698606313102,
+    "modifiedTime": 1699582060390,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!h39763RPdf58HHFe"
+}

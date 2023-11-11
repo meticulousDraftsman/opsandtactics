@@ -1,0 +1,32 @@
+{
+  "name": "Rifle Expert",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MjNoL6QtM0Nptxsw]{Rifle Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.q2CTcyiqF0ovbeZH]{Rifle and SMG Reloader}</p><h3>Benefit</h3><p><span class=\"fontstyle0\">When firing an assault, battle, carbine, or target rifle, or sub-machine gun the Combat Point cost is 1 less, when clearing a jammed assault, battle, carbine, or target rifle, or sub-machine gun the Combat Point cost is 10 less, and when attempting to repair an assault, battle, carbine, or target rifle, or sub-machine gun the character receives a +6 bonus. Also, when a character with this feat reduces a creature to 0 CHP or less with an assault, battle, carbine, or target rifle, the character immediately gains 5 Combat Points that can be used for attacks or reloading. The Combat Points that are given must be used on attacks or reloading only, and only attacks with the same rifle that reduced the creature to 0 CHP must be used. A character can only receive these Combat Points once per turn. The character may not move any distance and if the bonus Combat Points are not used immediately after the attack, the character loses them. Also, a character receives +2 damage dice when performing an autofire, burst fire, sprayfire, or sweepfire attack with a sub-machine gun</span></p><h3>Special</h3><p><span class=\"fontstyle0\">If a character selects the Rifle Expert Feat, they may not select the Rifle Ace Feat</span>.</p><h3>Advanced Arms</h3><p>Plasma SMGs receive a +2 damage dice when performing gridshot or pulseshot attacks.</p>",
+    "summary": "-1 CP, 5 CP cleave for attacks or reloading, +2 die autofire with smg"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.opsandtactics.core-feats.Item.MrmKfGvRxKZurlq2"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682894074793,
+    "modifiedTime": 1699685737438,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "yy3qadOIF6qMcsPf",
+  "_id": "hEyRyjwS4v5mbVyp",
+  "sort": -25000,
+  "_key": "!items!hEyRyjwS4v5mbVyp"
+}

@@ -1,0 +1,27 @@
+{
+  "folder": "2u78F7ZWHkNsVEJd",
+  "name": "Burst Fire Proficiency",
+  "type": "feature",
+  "_id": "rz4pgWSLLDYhl4VH",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "summary": "Reduced recoil penalty for Burst Fire",
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.X1Qj8vIUDMDE4iQ9]{Autofire Proficiency}</p><h3>Benefit</h3><p>The character’s Total Recoil Penalty is reduced by 2 when performing burst fire attacks. This reduction is calculated after the Attack Recoil Penalty and the Caliber Recoil Penalty.</p>"
+  },
+  "effects": [],
+  "sort": 112500,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699580546206,
+    "modifiedTime": 1699637296861,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!rz4pgWSLLDYhl4VH"
+}

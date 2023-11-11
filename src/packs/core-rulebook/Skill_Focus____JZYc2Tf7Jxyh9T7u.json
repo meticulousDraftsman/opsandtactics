@@ -1,0 +1,29 @@
+{
+  "name": "Skill Focus ()",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefit</h3><p>Select a skill. If the character does not have the selected skill as a focused skill, they gain it as one, and have a +2 miscellaneous bonus to the chosen skill. If the character already has the selected skill as a focused skill, they gain a +4 miscellaneous bonus to the chosen skill instead.</p><h3>Special </h3><p>When selecting Craft skills, Perform skills, or Knowledge skills, a single specific skill is selected. This feat can be taken multiple times. Each time it is taken, it applies to a different skill.</p>",
+    "summary": "+4 / +2 and Focused to"
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681243179041,
+    "modifiedTime": 1699583617884,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "3ZiXr5MZ2VINUTgv",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "JZYc2Tf7Jxyh9T7u",
+  "sort": -200000,
+  "_key": "!items!JZYc2Tf7Jxyh9T7u"
+}

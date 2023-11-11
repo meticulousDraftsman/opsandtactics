@@ -1,0 +1,32 @@
+{
+  "name": "Vocalist",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.SgeUD936ILLwzJUZ]{Savant (Speechcraft)}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The range on all bolster, confuse, and captivate Speechcraft checks are doubled, and on a successful Speechcraft check to confuse, captivate, bolster, or intimidate, the effect’s duration is doubled.</span></p>",
+    "summary": "Double duration and range on speech craft effects"
+  },
+  "effects": [],
+  "folder": "3ZiXr5MZ2VINUTgv",
+  "sort": -50000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pXA9CxhxP8x7frcH"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699640806750,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "uQLVx1gXyuhqn116",
+  "_key": "!items!uQLVx1gXyuhqn116"
+}

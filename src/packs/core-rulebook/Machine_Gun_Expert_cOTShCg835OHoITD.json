@@ -1,0 +1,28 @@
+{
+  "name": "Machine Gun Expert",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.i5Xz1hjImCHirF7l]{Machine Gun Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.iGdDH3k6zt6mBOsA]{General Purpose Machine Gunner}, @UUID[Compendium.opsandtactics.core-rulebook.Item.46U1CPOMY8hwoZSD]{Close Combat Machine Gunner}, @UUID[Compendium.opsandtactics.core-rulebook.Item.3sr5p717BmTjji8x]{Machine Gun Reloader}</p><h3>Benefits</h3><p><span class=\"fontstyle0\">When clearing a jammed LMG or GPMG the Combat Point cost is 7 less, when attempting to repair a LMG or GPMG the character receives a +2 bonus. Also, when firing a LMG or GPMG, the character can immediately perform a suppressive fire attack without having made an autofire attack prior to the suppressive fire attack. The character spends the same Combat Point cost that it would take to start an autofire attack, but the attack is instead a suppressive fire attack, for the first attack. All subsequent attacks are normal suppressive fire attacks, and follow the same rules as suppressive fire. Lastly, the character can shift the area suppressed at 5’ per 1 Combat Point</span>.</p><h3>Special</h3><p><span class=\"fontstyle0\">If a character selects the Machine Gun Expert Feat, they may not select the Machine Gun Ace Feat.</span></p>",
+    "summary": "Shift suppressive fire for 1 CP, suppressive fire without autofire."
+  },
+  "effects": [],
+  "folder": "h39763RPdf58HHFe",
+  "sort": 275000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699639334200,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "cOTShCg835OHoITD",
+  "_key": "!items!cOTShCg835OHoITD"
+}

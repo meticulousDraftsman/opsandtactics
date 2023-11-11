@@ -1,0 +1,30 @@
+{
+  "name": "Handgun Specialist",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}</p><h3>Benefit</h3><p>When firing a holdout, backup, full-size, or target handgun or a machine pistol, the Combat Point cost is reduced by 1 and the character gains a +1 attack bonus to all attacks.</p>",
+    "summary": "-1 CP, +1 attack"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682808447656,
+    "modifiedTime": 1699638097835,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "dqgulUq8p1TXghtD",
+  "_id": "pTE8c8BZNlsYPWTN",
+  "sort": 0,
+  "_key": "!items!pTE8c8BZNlsYPWTN"
+}

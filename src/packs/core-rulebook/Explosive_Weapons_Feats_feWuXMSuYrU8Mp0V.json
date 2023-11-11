@@ -1,0 +1,19 @@
+{
+  "name": "Explosive Weapons Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "feWuXMSuYrU8Mp0V",
+  "sort": 900000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698601686171,
+    "modifiedTime": 1699581223472,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!feWuXMSuYrU8Mp0V"
+}

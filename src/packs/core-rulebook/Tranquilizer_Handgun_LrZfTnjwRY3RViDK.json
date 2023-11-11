@@ -1,0 +1,256 @@
+{
+  "name": "Tranquilizer Handgun",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/luger.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "cartridge",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": "LrZfTnjwRY3RViDK,system.gear.resources.4Hah29Zk,cartridges.lC5guOot"
+    },
+    "range": "25ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "5M6ZKQza": {
+        "name": "Single Shot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      },
+      "WIHwwmkH": {
+        "name": "Potshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      },
+      "swebu9S4": {
+        "name": "Reload a Dart",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 9,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 2,
+      "tons": false,
+      "cost": 12,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "4Hah29Zk": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": false,
+          "cartridges": {
+            "lC5guOot": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Empty Dart",
+              "flavor": "Doses target with loaded poison"
+            }
+          },
+          "name": "Chamber"
+        },
+        "IuL1euc4": {
+          "type": "cartridge",
+          "value": 9,
+          "max": 10,
+          "available": true,
+          "cartridges": {
+            "PXWlzyjG": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Empty Dart",
+              "flavor": "Doses target with loaded poison"
+            }
+          },
+          "name": "Box"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p>A tranquilizer gun is an airgun that fires a hypodermic needle-like dart, that injects a target with one dose of tranquilizer agent. Tranquilizer guns do no damage on their own, but rather the damage is derived from the poison in the dart. A tranquilizer dart can house one dose of any solid or liquid poison. A tranquilizer gun comes with 10 empty darts. Tranquilizer guns are simple weapons and require no feats to use. Tranquilizer guns can not provoke critical strikes. Reloading a tranquilizer gun costs 9 Combat Points and provokes AoO. Tranquilizer guns come in both handgun, and rifle configurations. The rifle configuration has a fixed stock and an optics mount, while the handgun configuration has an optics mount. For the purpose of non-proficiency feats, tranquilizer handguns are considered handguns with detachable magazines and tranquilizer rifles are considered designated marksman rifles.</p>",
+    "damageBase": "",
+    "flavorBase": "",
+    "importFilter": "",
+    "importMod": ""
+  },
+  "effects": [],
+  "folder": "vHmlRMcqXyNIS28E",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699666499574,
+    "modifiedTime": 1699669935445,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "LrZfTnjwRY3RViDK",
+  "sort": 100000,
+  "_key": "!items!LrZfTnjwRY3RViDK"
+}

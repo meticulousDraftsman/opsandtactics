@@ -1,0 +1,28 @@
+{
+  "name": "Axe Mastery",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.02gA5fFJOdsPh4LS]{Archaic Weapon Proficiency (Axes)}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MTbNQ0q4AensGsif]{Axe Martial Arts}, @UUID[Compendium.opsandtactics.core-rulebook.Item.YVtppsdK3LWwitEY]{Axe Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When wielding a battle-axe, broadaxe, or hand axe, the character gains an additional +1 damage die, and the character may treat any damage as bludgeoning as well, for the purpose of defeating a defender’s armor</span></p>",
+    "summary": "Another +1 damage die, attack bludgeoning DR"
+  },
+  "effects": [],
+  "folder": "D3sZZAdXDsgCZMJv",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699637118189,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "xIUDveto72C73Z47",
+  "_key": "!items!xIUDveto72C73Z47"
+}

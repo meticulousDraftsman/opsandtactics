@@ -1,0 +1,19 @@
+{
+  "name": "Defensive Form",
+  "sorting": "m",
+  "folder": "wYSuz5lWFZ9DXcNd",
+  "type": "Item",
+  "_id": "DzwgkbHqAih5qJFB",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699690930786,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!DzwgkbHqAih5qJFB"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Revolver Expert",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.pTE8c8BZNlsYPWTN]{Handgun Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.PjWBnexrl6cy31Qc]{Handgun Reloader}, @UUID[Compendium.opsandtactics.core-rulebook.Item.ymmaTW00mscYmpMe]{Skilled Speedloader User}</span></p><h3>Benefit</h3><p><span class=\"fontstyle0\">When firing a holdout, backup, full-size, or target handgun that has a cylinder the Combat Point cost is reduced by 3. When attempting a potshot attack with a holdout, backup, full-size, or target handgun that has a cylinder the penalty is lowered to a -4, and when attempting to repair a holdout, backup, full-size, or target handgun that has a cylinder the character receives a +6 bonus. Also, when a character with this feat reduces a creature to 0 CHP or less with a holdout, backup, full-size, or target handgun that has a cylinder, the character immediately reloads the handgun that they were using against that creature, to full capacity, for free. This reload can be with any rounds the character has on their person, regardless of their location, as long as they are compatible with the handgun. This can be done only once per turn.</span></p>",
+    "summary": "-3 CP, full reload on cleave"
+  },
+  "effects": [],
+  "folder": "dqgulUq8p1TXghtD",
+  "sort": 87500,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.6CeoqEgv8xpXnH2x"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699638034122,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "7ObhltBSEnP5YX7M",
+  "_key": "!items!7ObhltBSEnP5YX7M"
+}

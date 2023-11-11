@@ -1,0 +1,65 @@
+{
+  "name": "Plasma Combat Helmet (Shield)",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/shieldcomb.svg",
+  "system": {
+    "description": "<p>&nbsp;The standard helmet usually issued to combat forces in the military that protects against shrapnel and glancing shots. This helmet exchanges the ballistic protection for plasma protection. This helmet can soak 5 points of plasma or electric damage before it requires a new coolant pack. It takes 5 rounds for the plasma shields to recharge after a new coolant pack has been inserted. Plasma helmets require coolant packs.</p>",
+    "layer": "shield",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "IaE1p7Eb": {
+        "name": "Plasma, Electric",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 5,
+      "max": 5
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": false,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681776128468,
+    "modifiedTime": 1699686687450,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "OL22ovnv3PleIiIT",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "azUyhUW7Gu68PbAu",
+  "sort": 300000,
+  "_key": "!items!azUyhUW7Gu68PbAu"
+}

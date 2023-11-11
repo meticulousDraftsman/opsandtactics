@@ -1,0 +1,28 @@
+{
+  "name": "Blind Sense",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefits</h3><p><span class=\"fontstyle0\">In melee combat, every time the character misses because of concealment, the character can re-roll the miss chance roll once to see if they actually hit. The character takes only ½ the usual penalties for being unable to see. Darkness does not increase the character’s Combat Point cost to move.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "summary": "Re-roll concealment check, 1/2 blind penalties, no extra CP to move blind"
+  },
+  "effects": [],
+  "folder": "ii9NKpCX96yrDtuu",
+  "sort": -50000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699581476416,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "LVQcKtcsWLQycUGe",
+  "_key": "!items!LVQcKtcsWLQycUGe"
+}

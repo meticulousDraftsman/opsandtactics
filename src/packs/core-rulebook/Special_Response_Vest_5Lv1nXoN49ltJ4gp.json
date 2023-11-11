@@ -1,0 +1,73 @@
+{
+  "name": "Special Response Vest",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/kevlar-vest.svg",
+  "system": {
+    "description": "<p>Built like the tactical vest, but incorporating groin and neck protection as well as trauma plates over the chest and back. This tactical gear is covered in MOLLE, which allows different accessories to be mounted according to the user&rsquo;s specifications. This armor has 7 MOLLE slots, but they can be removed at time of purchase for no cost.</p>\n<h3>Special Notes</h3>\n<p>This Armor can accept a single set of Armor Plates.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 5,
+    "agiMax": 1,
+    "penalty": -5,
+    "cpLoss": 3,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Ballistic, Ballistic Piercing",
+        "value": 18
+      },
+      "9B9g4029": {
+        "name": "Piercing",
+        "value": 8
+      },
+      "Ybp9HRIi": {
+        "name": "Slashing",
+        "value": 6
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 108,
+      "max": 108
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 17,
+      "cost": 45,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585612010,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "WBHh8q8AosHoSTNP",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "5Lv1nXoN49ltJ4gp",
+  "sort": 150000,
+  "_key": "!items!5Lv1nXoN49ltJ4gp"
+}

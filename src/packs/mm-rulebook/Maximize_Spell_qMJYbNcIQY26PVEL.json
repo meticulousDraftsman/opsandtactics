@@ -1,0 +1,30 @@
+{
+  "name": "Maximize Spell",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 8 Ranks</span> </p><h3>Benefits</h3><p><span class=\"fontstyle0\">When casting a spell with this modification, all variable numeric effects are increased to their maximum. Instead of rolling for damage, you use the number size of the die for the damage. This modification adds 6 SP to the spell’s cost</span>.</p><h3>Special</h3><p><span class=\"fontstyle0\">This modification can only be placed on spells that have a variable numerical effect. There is no benefit gained from placing it on a spell without one.</span></p>",
+    "summary": "Maximize spell effect"
+  },
+  "effects": [],
+  "folder": "jpOZus3RH45dgJCw",
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699690477953,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "qMJYbNcIQY26PVEL",
+  "sort": 700000,
+  "_key": "!items!qMJYbNcIQY26PVEL"
+}

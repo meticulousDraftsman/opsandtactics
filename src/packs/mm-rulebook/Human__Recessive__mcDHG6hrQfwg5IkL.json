@@ -1,0 +1,72 @@
+{
+  "name": "Human (Recessive)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Humans have Trade Bant Traditional as their native language, and can select any language as a second language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Humans have a base Combat Point score of 15.</li>\n<li>Human CHP formula is <code>CON Score + 2</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy standard human typically stands from 5-6&rsquo;, and weighs between 110-260 lbs. The men are noticeably taller than the women on average, but there are plenty of exceptions, in both cases. Human skin tone ranges from a near black to pale white, and their hair ranges from black to white, in all forms and textures. The average human lifespan is 72 years, reaching physical adulthood between the ages of 13-18.</p>\n<h3>Language</h3>\n<p>Humans have the largest span of languages of any race, with dialects from major sects of languages being extremely common. The most commonly spoken languages for humans are Mandarin, Spanish, English, and Arabic, but it is not uncommon for a human to speak nearly any language, based on their homeland location and culture they&rsquo;ve integrated themselves with. Trade Bant is also a common language for humans.</p>\n<h3>Names</h3>\n<p>Human names typically come in two parts, inducing a given name, or first name and a last name, or family name, that denotes what family the person is from. Often a middle name is given, to distinguish between two people who may have the same exact name because of family, or simply for style and cultural reasons.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.Ywrq25mBsAJbql9V",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "q0rhNewGu7F1V789",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "-Human",
+          "priority": null
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "15",
+          "priority": null
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)+2",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "name": "Racial Traits",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!mcDHG6hrQfwg5IkL.q0rhNewGu7F1V789"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681244045661,
+    "modifiedTime": 1699689592352,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "w2hronwUkqlMiJFp",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "mcDHG6hrQfwg5IkL",
+  "sort": 0,
+  "_key": "!items!mcDHG6hrQfwg5IkL"
+}

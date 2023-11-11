@@ -1,0 +1,65 @@
+{
+  "name": "Nullsteel Plates",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/flat-platform.svg",
+  "system": {
+    "description": "<p>These plates are made from Nullsteel, designed to give additional ballistic and stabbing protection without the weight.</p>",
+    "layer": "plate",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "ZyyEUojP": {
+        "name": "Ballistic, Piercing",
+        "value": 8
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 16,
+      "max": 16
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 0.1,
+      "cost": 22,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1699690089924,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "Mzv2SjnGvJ3RgEcC",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "Y2jR0BqE1p0osdHt",
+  "sort": 0,
+  "_key": "!items!Y2jR0BqE1p0osdHt"
+}

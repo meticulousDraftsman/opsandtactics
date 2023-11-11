@@ -1,0 +1,81 @@
+{
+  "name": "Archer's Vest",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/abdominal-armor.svg",
+  "system": {
+    "description": "<p>This lightweight armor is specifically optimized for archers and crossbow users, providing a built in quiver that holds 20 arrows or bolts and provides light protection while being light and maneuverable.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 0,
+    "agiMax": 5,
+    "penalty": -1,
+    "cpLoss": 0,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Piercing",
+        "value": 8
+      },
+      "HT6OJrsQ": {
+        "name": "Slashing",
+        "value": 4
+      },
+      "xing99l9": {
+        "name": "Bludgeoning",
+        "value": 2
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 30,
+      "max": 30
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 4,
+      "cost": 11,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "C54vpUcQ": {
+          "name": "Arrows/Bolts",
+          "type": "consumable",
+          "value": 0,
+          "max": 20,
+          "available": false
+        }
+      },
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699690059150,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "CcJCIm7Kqgn8k9Br",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "oZSlenhczS15rXGj",
+  "sort": 0,
+  "_key": "!items!oZSlenhczS15rXGj"
+}

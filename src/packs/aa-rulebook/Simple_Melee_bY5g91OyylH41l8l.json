@@ -1,0 +1,19 @@
+{
+  "name": "Simple Melee",
+  "sorting": "m",
+  "folder": "0ygMPpQxNMJJva7p",
+  "type": "Item",
+  "_id": "bY5g91OyylH41l8l",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": null,
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!bY5g91OyylH41l8l"
+}

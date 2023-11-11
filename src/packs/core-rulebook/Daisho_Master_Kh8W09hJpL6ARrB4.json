@@ -1,0 +1,28 @@
+{
+  "name": "Daisho Master",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">STR 13, @UUID[Compendium.opsandtactics.core-rulebook.Item.02gA5fFJOdsPh4LS]{Archaic Weapon Proficiency (Any)}, @UUID[Compendium.opsandtactics.core-rulebook.Item.aFfVrifmKKT9Rpzw]{Two-Weapon Melee Fighting}, @UUID[Compendium.opsandtactics.core-rulebook.Item.X3RhGMp7Ir7jZ4bD]{Two-Weapon Reaction}, @UUID[Compendium.opsandtactics.core-rulebook.Item.gJjLGDq4Vb3WHKx4]{Improved Two-Weapon Melee Fighting}, @UUID[Compendium.opsandtactics.core-rulebook.Item.RpFq5bcG5N0khfAp]{Daisho User}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">A character may wield a weapon they are proficient with in their primary hand and a small or smaller weapon in their off hand. Both weapons receive a +3 attack bonus when they are wielded in this manner</span>.</p><h3>Special</h3><p><span class=\"fontstyle0\">The benefits of the Improved Two Weapon Melee Fighting feat apply when using this feat.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "summary": "+3 To-hit when two weapon fighting"
+  },
+  "effects": [],
+  "folder": "Dn2lbkH6639Dn5Jq",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699641159776,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "Kh8W09hJpL6ARrB4",
+  "_key": "!items!Kh8W09hJpL6ARrB4"
+}

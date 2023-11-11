@@ -1,0 +1,266 @@
+{
+  "name": "Tippman 98 Custom",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/mp-40.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "cartridge",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": "0sDF0Q5FJ8Y2kQ0Z,system.gear.resources.FvJ68P6S,cartridges.cik2rPTl"
+    },
+    "range": "40ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "adO4t1Zl": {
+        "name": "Single Shot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {}
+        }
+      },
+      "1HZyUZeP": {
+        "name": "Potshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      },
+      "Tg27y9Kx": {
+        "name": "Double Tap",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 1,
+            "bar": 3,
+            "more": 2,
+            "per": 3,
+            "scale": 1
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": -3,
+          "active": true,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        }
+      },
+      "wYbGtVtr": {
+        "name": "Reload Hopper",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": false,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 3,
+      "tons": false,
+      "cost": 20,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "FvJ68P6S": {
+          "type": "cartridge",
+          "value": 200,
+          "max": 200,
+          "available": false,
+          "cartridges": {
+            "cik2rPTl": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".68PB Marker",
+              "flavor": "Leaves a splotch of paint"
+            }
+          },
+          "name": "Hopper"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "damageBase": "",
+    "flavorBase": "",
+    "importFilter": "",
+    "importMod": "",
+    "description": "<p>A paintball marker is a marker that is used to mark targets from a long range. Its original use was to mark trees or wandering cattle. They are also used for paintball games and by law enforcement for non-lethal short range engagement. Paintball markers require CO 2 or NO 2 tanks to fire, which is calculated into the price of the paintball ammunition. Paintball marker’s damage is determined by the ammunition it projects. A paintball marker is a simple weapon and requires no proficiency to use without penalty and paintball markers cannot provoke a critical strike. Reloading a paintball marker costs 4 Combat Points and provokes AoO. Unlike most non-ballistic weapons, a paintball marker can be used to make double-tap attacks at the normal Combat Point cost for a firearm. For the purpose of non-proficiency feats, the Tippman 98 Custom is considered a carbine rifle and the Tippman TPX is considered a handgun with detachable magazine.</p>"
+  },
+  "effects": [],
+  "folder": "yivFZ4cqkPItkv6A",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699672089737,
+    "modifiedTime": 1699673976993,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "0sDF0Q5FJ8Y2kQ0Z",
+  "sort": 200000,
+  "_key": "!items!0sDF0Q5FJ8Y2kQ0Z"
+}

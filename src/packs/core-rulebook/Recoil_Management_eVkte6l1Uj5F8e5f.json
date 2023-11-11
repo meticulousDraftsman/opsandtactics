@@ -1,0 +1,28 @@
+{
+  "name": "Recoil Management",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.iHruvh0FiUFh3EDH]{Distance Rifle Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When firing an anti-materiel rifle or designated marksman rifle with a deployed bipod, a character may brace the rifle for an additional +2 bonus to all attacks.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">Bracing costs no Combat Points</span></p>",
+    "summary": "+2 to-hit on all attacks"
+  },
+  "effects": [],
+  "folder": "8uvkeXoPtWMrnXTd",
+  "sort": -1562,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699637477184,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "eVkte6l1Uj5F8e5f",
+  "_key": "!items!eVkte6l1Uj5F8e5f"
+}

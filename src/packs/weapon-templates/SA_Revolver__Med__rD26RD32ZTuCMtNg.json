@@ -110,7 +110,17 @@
         "display": true,
         "recoil": {
           "inherent": -2,
-          "mods": {}
+          "mods": {},
+          "active": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
         }
       },
       "3axTaeZl": {
@@ -120,7 +130,7 @@
           "flavor": "",
           "type": "ranged",
           "source": "",
-          "inherent": "-4",
+          "inherent": "",
           "ability": "mrk",
           "mods": {},
           "scaleAbility": 1
@@ -141,8 +151,18 @@
         },
         "display": true,
         "recoil": {
-          "inherent": null,
-          "mods": {}
+          "inherent": -4,
+          "mods": {},
+          "active": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
         }
       }
     },
@@ -154,7 +174,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": null,
       "cost": null,
       "quality": "",
@@ -175,10 +195,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.0.8",
-    "coreVersion": "10.291",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.314",
     "createdTime": 1681637449760,
-    "modifiedTime": 1682730354134,
+    "modifiedTime": 1699108706009,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "rD26RD32ZTuCMtNg",

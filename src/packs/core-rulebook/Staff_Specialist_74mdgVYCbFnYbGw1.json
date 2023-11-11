@@ -1,0 +1,32 @@
+{
+  "name": "Staff Specialist",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.02gA5fFJOdsPh4LS]{Archaic Weapon Proficiency (Staffs)}, @UUID[Compendium.opsandtactics.core-rulebook.Item.hFpBIfoGSvtd1SE0]{Staff Martial Arts}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When wielding a long, quarter, or short staff as a double weapon, the character does not have to pay the additional +1 Combat Point Cost when fighting with two weapons. Additionally, the offhand is treated as a light weapon</span>.</p><h3>Normal</h3><p><span class=\"fontstyle0\">Attacking with two weapons cost +1 Combat Point cost</span>.</p>",
+    "summary": "No +1 CP to two-weapon fight, treat off-hand weapon as small"
+  },
+  "effects": [],
+  "folder": "Qt8lxZT6r8ICLm7J",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pXA9CxhxP8x7frcH"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699640910518,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "74mdgVYCbFnYbGw1",
+  "_key": "!items!74mdgVYCbFnYbGw1"
+}

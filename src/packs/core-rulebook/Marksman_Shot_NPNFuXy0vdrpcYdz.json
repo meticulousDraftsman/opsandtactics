@@ -1,0 +1,28 @@
+{
+  "name": "Marksman Shot",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.vUk6pSDZo10UZL2w]{Far Shot}, @UUID[Compendium.opsandtactics.core-rulebook.Item.AG67G8wHzwgao2wI]{Dead Aim}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">he circumstance bonus from Dead Aim may be stacked each round the character spends aiming, up to a maximum of five rounds. Each round spent aiming beyond the first round also grants a +3 attack bonus instead of a +2.</span></p>",
+    "summary": "Stack Dead Aim bonus, increase to +3"
+  },
+  "effects": [],
+  "folder": "Gb64JgdoIqJLhVSv",
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699639703417,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "NPNFuXy0vdrpcYdz",
+  "_key": "!items!NPNFuXy0vdrpcYdz"
+}

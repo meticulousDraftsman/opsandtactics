@@ -1,0 +1,19 @@
+{
+  "name": "Flexible Weapons",
+  "sorting": "m",
+  "folder": "EkYTnP2SQjMR0ZGn",
+  "type": "Item",
+  "_id": "1nRSdfNgNgj6ekfV",
+  "sort": -50000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699644193588,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!1nRSdfNgNgj6ekfV"
+}

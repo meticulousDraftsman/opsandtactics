@@ -1,0 +1,138 @@
+{
+  "folder": "yivFZ4cqkPItkv6A",
+  "name": "Slingshot",
+  "type": "weapon",
+  "_id": "0tz0tjLrytwowZeP",
+  "img": "systems/opsandtactics/icons/svg/whip.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "cartridge",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": ""
+    },
+    "range": "25ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "am5zamNq": {
+        "name": "Fire Slingshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1.5,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "pow",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "m5lY87Gh": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": false,
+          "cartridges": {
+            "lJDX6byR": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "1d2",
+                  "primaryFlavor": "Bludgeoning",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Rock",
+              "flavor": ""
+            }
+          },
+          "name": "Pocket"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "damageBase": "",
+    "flavorBase": "",
+    "importFilter": "",
+    "importMod": "",
+    "description": "<p>A slingshot is a small hand powered weapon that uses rubber bands or tubing to fling a small projectile. The classic form consists of a Y-shaped frame held in the off hand, with two rubber strips attached to the uprights. The other ends of the strips lead back to a pocket which holds the projectile. The pocket is grasped by the off-hand and drawn back to the desired extent to provide power for the projectile. Slingshots are simple weapons and require no feats to use. They are limited to three range increments. Ammunition for slings usually encompasses rocks, small marbles, lead and steel balls and any generally any Fine sized object. Slingshots can fire lead ball ammunition, as well as all paintball ammunition. The damage listed is for lead balls and rocks. When calculating damage, a character adds 1½ times their POW modifier. Slingshots must be used with two hands.</p>"
+  },
+  "effects": [],
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699674179028,
+    "modifiedTime": 1699674350686,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!0tz0tjLrytwowZeP"
+}

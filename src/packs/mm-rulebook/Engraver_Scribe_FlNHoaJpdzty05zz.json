@@ -1,0 +1,30 @@
+{
+  "name": "Engraver Scribe",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Craft (Structural) 6+ Modifier, Perception 6+ Modifier, Spellschool (Any) 1 rank.</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">You can scribe any spell using engraving tools and the appropriate surface. You can also engrave spells for other mages, provided they have at least 1 rank in the spellschool, and the SP cost is no more than the scribing mage’s total modifier in the requested spellschool, and the SP cost is no more than double the recipient’s total modifier in the spellschool, rounded down. In addition, you can also tattoo spells for other mages, provided they have at least 1 rank in the spellschool, and the SP cost is no more than the scribing mage’s total modifier in the requested spellschool, and the SP cost is no more than double the recipient’s total modifier in the spellschool, rounded down</span>.</p><h3>Normal</h3><p><span class=\"fontstyle0\">Mages can not use engraving tools to scribe spells. Mages can not tattoo spells for other mages.</span></p>",
+    "summary": "Scribe spells by engraving or tattooing"
+  },
+  "effects": [],
+  "folder": "jpOZus3RH45dgJCw",
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699690477953,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "FlNHoaJpdzty05zz",
+  "sort": 500000,
+  "_key": "!items!FlNHoaJpdzty05zz"
+}

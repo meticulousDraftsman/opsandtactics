@@ -1,0 +1,65 @@
+{
+  "name": "Mobile Tank Unit",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/metal-scales.svg",
+  "system": {
+    "description": "<p>The mobile tank unit is a set of armor with built in servo motors that augment the strength of the user at the cost of mobility. This unit is heavily armored and used primarily to provide support to other units, accomplish amazing feats of strength, and even provide cover. This armor, when worn, increases the character&rsquo;s effective STR score to 26 with all of the Ability Focus in Strength placed in POW. This suit also has servos built into it, allowing it to stand on its own with no force or strength required to wear this armor. This armor has 8 MOLLE slots, but they can be removed at time of purchase for no cost, and requires two coolant packs every four hours of operation it performs.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the head, arms, legs, feet and hands of the wearer, providing DR and Defense to all listed areas. This armor is hardened against EMP.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 5,
+    "agiMax": 0,
+    "penalty": -9,
+    "cpLoss": 5,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Ballistic, Ballistic Piercing, Piercing, Bludgeoning, Slashing",
+        "value": 25
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 375,
+      "max": 375
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 40,
+      "cost": 130,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699686615493,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "Pzoris4AIRejiogc",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "nUJft1g7qqx0FppM",
+  "sort": 400000,
+  "_key": "!items!nUJft1g7qqx0FppM"
+}

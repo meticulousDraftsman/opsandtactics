@@ -1,0 +1,69 @@
+{
+  "name": "Forced Entry Unit",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "system": {
+    "description": "<p>This armor consist of heavy torso jacket, with trauma plate holders that cover the chest and back, neck and groin guards, and arm protection. This tactical gear is covered in MOLLE, which allows different accessories to be mounted on to the user&rsquo;s specifications. This armor has 8 MOLLE slots, but they can be removed at time of purchase for no cost.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and hands of the<br>wearer, providing DR and Defense to all listed areas. This Armor<br>can accept a single set of Armor Plates.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 5,
+    "agiMax": 0,
+    "penalty": -5,
+    "cpLoss": 4,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Ballistic, Ballistic Piercing, Slashing",
+        "value": 21
+      },
+      "9B9g4029": {
+        "name": "Piercing",
+        "value": 10
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 147,
+      "max": 147
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 22,
+      "cost": 50,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585618299,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "WBHh8q8AosHoSTNP",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "jMTmPYkhzZcZ3ohb",
+  "sort": 250000,
+  "_key": "!items!jMTmPYkhzZcZ3ohb"
+}

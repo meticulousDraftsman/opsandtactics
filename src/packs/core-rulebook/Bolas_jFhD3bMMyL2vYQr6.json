@@ -1,0 +1,114 @@
+{
+  "folder": "NWMAd77ogmBFnbgh",
+  "name": "Bolas",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/crossed-chains.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "jFhD3bMMyL2vYQr6,system.gear.quantity",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "wgMhpg5s": {
+        "name": "Throw",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {},
+          "inherent": "",
+          "ability": "pow",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "flavor": "",
+          "ammo": true
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {},
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 1.5,
+      "tons": false,
+      "cost": 6,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle0\">Bolas are throwing weapons made of weights on the ends of interconnected cords designed to capture animals by entangling their legs. Improvised versions of this weapon would include an extension cord tied up with weights at the end. Bolas can be used to make a ranged trip attempt. You cannot be tripped during your own trip attempt when using them. A bola is an exotic weapon and requires an Exotic Melee Weapons Proficiency feat to be used without a -4 attack penalty.</span> </p>",
+    "importFilter": "",
+    "importMod": "",
+    "errorBase": 0,
+    "damageBase": "1d4",
+    "flavorBase": "Bludgeoning"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "IDlR3swyzHy0JGgv": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699220760038,
+    "modifiedTime": 1699675274531,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "jFhD3bMMyL2vYQr6",
+  "sort": 0,
+  "_key": "!items!jFhD3bMMyL2vYQr6"
+}

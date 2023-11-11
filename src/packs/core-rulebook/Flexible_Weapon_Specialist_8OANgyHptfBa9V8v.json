@@ -1,0 +1,28 @@
+{
+  "name": "Flexible Weapon Specialist",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.02gA5fFJOdsPh4LS]{Archaic Weapon Proficiency (Flexible Weapons)}, @UUID[Compendium.opsandtactics.core-rulebook.Item.CtOnKnVw64DAHqWV]{Flexible Weapon Martial Arts}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When wielding a bullwhip, weighted chain, chain whip, nunchaku, or three-section staff, the character may attack from a square other than their own. The character chooses a square within their weapon’s reach and then guides the attack as if they were standing in that targeted square, facing the same direction, using any bonuses or penalties that may be removed or added due to the new location. The total distance from the character to this square to their target cannot exceed the weapon’s reach</span>.</p>",
+    "summary": "Disjointed attacks"
+  },
+  "effects": [],
+  "folder": "K9I4FoWcdiixyun8",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699637790330,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "8OANgyHptfBa9V8v",
+  "_key": "!items!8OANgyHptfBa9V8v"
+}

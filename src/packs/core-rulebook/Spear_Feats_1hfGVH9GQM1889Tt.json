@@ -1,0 +1,19 @@
+{
+  "name": "Spear Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "1hfGVH9GQM1889Tt",
+  "sort": 2100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698613120532,
+    "modifiedTime": 1699583799004,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!1hfGVH9GQM1889Tt"
+}

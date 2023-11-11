@@ -1,0 +1,65 @@
+{
+  "name": "Microfiber Shirt",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/chain-mail.svg",
+  "system": {
+    "description": "<p>This is a shirt woven from extremely tough, strong fibers that protect against gunfire and sharp instruments while being light and completely unnoticeable. The downside is that it is notoriously weak to sustained abuse and will often break and tear after only a few hits.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 0,
+    "agiMax": 8,
+    "penalty": 0,
+    "cpLoss": 0,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Slashing, Ballistic",
+        "value": 8
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 8,
+      "max": 8
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.5,
+      "cost": 20,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699686435885,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "M7iTtl3EbLRs5ZxP",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "C6nqBcNhPjTU58P9",
+  "sort": -100000,
+  "_key": "!items!C6nqBcNhPjTU58P9"
+}

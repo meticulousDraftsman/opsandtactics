@@ -1,0 +1,19 @@
+{
+  "name": "General Feats",
+  "sorting": "a",
+  "folder": "h3RhrwyKLNA026Zr",
+  "type": "Item",
+  "_id": "ZAsLHapo5Gsbncum",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698675121891,
+    "modifiedTime": 1699685896007,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!ZAsLHapo5Gsbncum"
+}

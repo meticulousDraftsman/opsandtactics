@@ -1,0 +1,28 @@
+{
+  "name": "Archaic Weapons Proficiency ()",
+  "type": "feature",
+  "_id": "02gA5fFJOdsPh4LS",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "summary": "Use archaic weapons without penalty.",
+    "description": "<p><span class=\"fontstyle0\">Choose a weapon group from the following list: bows, combat swords, flexible weapons, fencing swords, axes, staffs, spears, picks,<br>or maces</span></p><h3>Benefit</h3><p><span class=\"fontstyle0\">The character makes attack rolls with the weapon normally.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">A character who uses a weapon without being proficient with it takes a -4 penalty on attack rolls.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">A character may take this feat up to nine times. Each time a character takes the feat, they select a different weapon group.</span></p><h3>Tutoring</h3><p>Time: 1 day</p><p>Categories: <span class=\"fontstyle0\">Bows, Combat Swords, Fencing Swords, Axes, Staves, Spears, Picks, Flexible Weapons, and Maces</span></p><p>Benefit: <span class=\"fontstyle0\">Attack penalty is reduced to -2</span></p>"
+  },
+  "effects": [],
+  "folder": "0d8JRCLBUnnqev20",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699584572237,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!02gA5fFJOdsPh4LS"
+}

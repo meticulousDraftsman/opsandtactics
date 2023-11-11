@@ -1,0 +1,32 @@
+{
+  "name": "Enthraller",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.SgeUD936ILLwzJUZ]{Savant (Presence)}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">On a successful Presence checks to terrify, all targets within range are considered Shaken for 1d6 minutes. The effect ends immediately if the target takes damage. The TN of a Presence check to terrify is equal to 10 + the target’s WIS modifier + Miscellaneous modifiers, and the Combat Point Cost to Terrify is reduced by 4.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">If successful, all targets within range are considered Shaken for 1d6 rounds and the effect ends if the character is attacked. The TN of a Presence check to terrify is equal to 10 + the target’s level + the target’s WIS modifier + Miscellaneous modifiers</span>.</p>",
+    "summary": "Increased terrify duration, -4 CP cost, reduced TN"
+  },
+  "effects": [],
+  "folder": "3ZiXr5MZ2VINUTgv",
+  "sort": -75000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pXA9CxhxP8x7frcH"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699640793279,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "vFbkDMM8o3k9zqGr",
+  "_key": "!items!vFbkDMM8o3k9zqGr"
+}

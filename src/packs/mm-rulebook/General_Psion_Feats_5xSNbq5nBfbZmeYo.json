@@ -1,0 +1,19 @@
+{
+  "name": "General Psion Feats",
+  "sorting": "m",
+  "folder": "emwN6D2K0xRPPmgA",
+  "type": "Item",
+  "_id": "5xSNbq5nBfbZmeYo",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698670091297,
+    "modifiedTime": 1699690746478,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!5xSNbq5nBfbZmeYo"
+}

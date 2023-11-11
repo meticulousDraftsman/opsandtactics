@@ -1,0 +1,62 @@
+{
+  "folder": "YxpNrIGilYHyqNmT",
+  "name": "Oak Aetherstaff",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/svg/bo.svg",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 2,
+      "tons": false,
+      "cost": 12,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "8ipbQdmY": {
+          "type": "magic",
+          "value": 30,
+          "max": 30,
+          "ml": null,
+          "name": "Spell Charges"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<h3>Aetherweapons</h3><p>Aetherweapons are split into three categories based on their capacity; Aetherrods, Aetherstaves, and Aetherwands, which are magical objects that have been formatted by an enchantment spell to receive spells and recast them as if they were cast from a mage. When a aetherweapon has completely expended all of its spell uses it returns to normal and has to be reformatted again and then re-enchanted. Aetherweapons are considered simple weapons. Unlike written spells, they can be cast by anyone, usually by either pressing a sigil, or by speaking a command word, which is usually printed on the object.</p><h3>Aetherstaves</h3><p>A staff can be created from any rod-like object that is between 37’’-72’’. An Aetherstave can hold three spells which can be used a combined 30 times before it has to be reformatted and re- enchanted. Use of any spell uses one of the uses that the staff has. The staff listed in the chart is a pre-formatted six foot long staff made of oak.</p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699729506193,
+    "modifiedTime": 1699729799891,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "ftZIzjEHeihS2p4j",
+  "sort": 100000,
+  "_key": "!items!ftZIzjEHeihS2p4j"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Coolant Specialization",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<p><span class=\"fontstyle0\">Choose Plasarms, Lasarms, or Elarms.</span></p><h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.CbH9UMxgrmEr8tFh]{Personal Plasmas Proficiency}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When using the chosen weapon type, the heat cost for attacks is multiplied by .75 rounded down (Minimum 1) and the Combat Point cost to reload is reduced by 1</span></p><h3>Special</h3><p><span class=\"fontstyle0\">A character may take this feat multiple times. Each time the character takes the feat, they select a different type.</span></p>",
+    "summary": ".75 Heat cost and -1 CP cost to reload for chosen weapon"
+  },
+  "effects": [],
+  "folder": "ZAsLHapo5Gsbncum",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.O8QSfoF4C5h5m3s8"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699686143320,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "O8QSfoF4C5h5m3s8",
+  "_key": "!items!O8QSfoF4C5h5m3s8"
+}

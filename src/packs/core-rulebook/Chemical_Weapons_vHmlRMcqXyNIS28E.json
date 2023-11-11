@@ -1,0 +1,19 @@
+{
+  "name": "Chemical Weapons",
+  "sorting": "m",
+  "folder": "dEQyDaPhOQuULPS6",
+  "type": "Item",
+  "_id": "vHmlRMcqXyNIS28E",
+  "sort": 250000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699674364538,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!vHmlRMcqXyNIS28E"
+}

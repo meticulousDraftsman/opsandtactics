@@ -1,0 +1,32 @@
+{
+  "name": "Advanced Plasmas Proficiency",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.CbH9UMxgrmEr8tFh]{Personal Plasmas Proficiency}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character can perform gridshot attacks at a -3 penalty, and when performing a waveshot attack the Reflex Saving Throw TN is increased to [TN15].</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Characters without this feat take a -6 attack penalty when attempting a gridshot attack, and when performing a waveshot attack the Reflex Saving Throw TN is [TN9]</span></p>",
+    "summary": "Reduced gridshot penalty, TN 15 waveshot reflex save"
+  },
+  "effects": [],
+  "folder": "qLyZC1TtVGQRnodr",
+  "sort": 50000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.I2ulORBcKU6kkakv"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699685994941,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "I2ulORBcKU6kkakv",
+  "_key": "!items!I2ulORBcKU6kkakv"
+}

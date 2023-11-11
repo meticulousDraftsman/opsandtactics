@@ -1,0 +1,19 @@
+{
+  "name": "Exotic",
+  "sorting": "m",
+  "folder": "B9mEMVLfTaz65GI6",
+  "type": "Item",
+  "_id": "XevrluVwFBUNq63E",
+  "sort": 425000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699676307640,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!XevrluVwFBUNq63E"
+}

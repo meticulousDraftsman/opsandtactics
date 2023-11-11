@@ -1,0 +1,28 @@
+{
+  "name": "Two-Weapon Melee Fighting",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">STR 13</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character’s penalties for fighting with two melee weapons are reduced by 2 for the primary hand and 6 for the off hand.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">If the character has the Two Weapon Ranged Fighting feat, they can mix both Ranged and Melee weapons, and the character takes no Attacks of Opportunity when performing ranged attacks in melee range, when doing a two weapon fighting attack. The character still takes Attacks of Opportunity for no-miss shots.</span> </p>",
+    "summary": "Reduced two-weapon fighting penalties"
+  },
+  "effects": [],
+  "folder": "Dn2lbkH6639Dn5Jq",
+  "sort": 162500,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699583936826,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "aFfVrifmKKT9Rpzw",
+  "_key": "!items!aFfVrifmKKT9Rpzw"
+}

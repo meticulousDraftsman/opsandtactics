@@ -1,0 +1,374 @@
+{
+  "name": "X3 Taser",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/lightning-arc.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "consumable",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": "5Jflu9VfPGqBGzbx,system.gear.resources.ctps3nDf"
+    },
+    "range": "10ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "uiV5WgNU": {
+        "name": "Fire Taser",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        }
+      },
+      "FtoSQQau": {
+        "name": "Reload a Cartridge",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        }
+      },
+      "b0JqjKXU": {
+        "name": "Remove Cartridge",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 1,
+          "mods": {}
+        }
+      },
+      "vxLAvvA8": {
+        "name": "Light Attack",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "-3",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 2,
+          "mods": {}
+        }
+      },
+      "mtfWVkgO": {
+        "name": "Standard Attack",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        }
+      },
+      "D02oeWCB": {
+        "name": "Heavy Attack",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      },
+      "ZoomqbGc": {
+        "name": "Full Attack",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "+4",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 10,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.5,
+      "tons": false,
+      "cost": 30,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "ctps3nDf": {
+          "type": "consumable",
+          "value": 3,
+          "max": 3,
+          "available": false,
+          "name": "Cartridge Bay"
+        },
+        "b3poct2H": {
+          "type": "consumable",
+          "value": 0,
+          "max": 3,
+          "available": true,
+          "name": "X3 Taser Cartridges"
+        }
+      },
+      "quality": "",
+      "restriction": "L"
+    },
+    "description": "<p>A taser is a weapon that uses springs or compressed air to fire a pair of darts at a target. On impact, the darts release a powerful electrical current. Tasers are simple weapons and require no feats to use. On a successful hit with a X26, X2, X3, and C3, the darts deal electricity damage and the target must make a Fortitude Saving Throw [TN15] or be paralyzed for 1d6 rounds. On a successful hit with a Taser 7, the darts deal electricity damage and the target must make a Fortitude Saving Throw [TN20] or be paralyzed for 1d3 rounds. Reloading a taser costs 3 Combat Points that provokes AoO. All tasers come with 3 extra cartridges. Tasers can also be used as stun gun by removing the cartridge, which cost 1 CP. When using them in this manner, they are considered simple melee weapons, and have the same damage and effect as if it were used as a ranged weapon. Tasers cannot provoke a critical strike. The X26 and the X2 taser have a single tactical upgrade slot that can be outfitted with multiple ranged upgrades, and the Taser 7 has a built in standard laser sight and standard tactical flashlight. For the purpose of non-proficiency feats, tasers are considered handguns with detachable magazines.</p>",
+    "damageBase": "1d6",
+    "flavorBase": "Electricity",
+    "importFilter": "",
+    "importMod": ""
+  },
+  "effects": [],
+  "folder": "3J8Jfwbh1r3GJ8xc",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699670120642,
+    "modifiedTime": 1699735053740,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "5Jflu9VfPGqBGzbx",
+  "sort": 200000,
+  "_key": "!items!5Jflu9VfPGqBGzbx"
+}

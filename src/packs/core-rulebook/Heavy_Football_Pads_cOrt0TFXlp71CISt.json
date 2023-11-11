@@ -1,0 +1,65 @@
+{
+  "name": "Heavy Football Pads",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/knee-pad.svg",
+  "system": {
+    "description": "<p>This suit of armor is worn by professional and amateur players alike, and includes shoulder, leg, and arm pads. This type is normally worn by linebackers and &ldquo;heavy hitter&rdquo; positions, sacrificing movement for extra padding and armor.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms, legs, feet and hands of the wearer, providing DR and Defense to all listed areas.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 1,
+    "agiMax": 4,
+    "penalty": 0,
+    "cpLoss": 1,
+    "protection": {
+      "xing99l9": {
+        "name": "Bludgeoning",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 25,
+      "max": 25
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 8,
+      "cost": 5,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585448116,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "jt9oPECwYhQzORJp",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "cOrt0TFXlp71CISt",
+  "sort": 200000,
+  "_key": "!items!cOrt0TFXlp71CISt"
+}

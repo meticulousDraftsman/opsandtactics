@@ -1,0 +1,30 @@
+{
+  "name": "Evasive Martial Arts",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Benefit</h3><p>The character gains a +2 dodge bonus to DEF against melee attacks.</p><h3>Special</h3><p>A condition that makes the character lose their AGI bonus to defense also makes the character lose Dodge bonuses.</p>",
+    "summary": "+2 dodge DEF against melee attacks"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682807231674,
+    "modifiedTime": 1699582338136,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "KoaFfoUGWATr6aTA",
+  "_id": "x0nG5fvFuZUAMz05",
+  "sort": 350000,
+  "_key": "!items!x0nG5fvFuZUAMz05"
+}

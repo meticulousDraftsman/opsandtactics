@@ -1,0 +1,19 @@
+{
+  "name": "Thrown Weapon Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "kVslZY8CM6IQxTMV",
+  "sort": 2300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698613135005,
+    "modifiedTime": 1699583864185,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!kVslZY8CM6IQxTMV"
+}

@@ -1,0 +1,115 @@
+{
+  "folder": "VHdtOuLDUZTGg9KL",
+  "name": "Flamer",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/flame.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "consumable",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": "x3QuDMgLnfkEtDWT,system.gear.resources.i4NuYKBF"
+    },
+    "range": "25ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "E5DVwlNp": {
+        "name": "Fire",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noneAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "5ft wide 25ft line of fire, sets targets on fire"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "[TN15] Reflex for half damage"
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 5,
+      "tons": false,
+      "cost": 22,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "i4NuYKBF": {
+          "type": "consumable",
+          "value": 8,
+          "max": 8,
+          "available": false,
+          "name": "Fuel Tank"
+        }
+      },
+      "quality": "",
+      "restriction": "L"
+    },
+    "description": "<p>A flamer is a hand-held version of the flamethrower, putting the fuel in a canister. It shoots a 5-foot wide, 25-foot long line of flame that deals 3d3 points of fire damage to all creatures and objects in its path. No attack roll is necessary. Any creature caught in the line of flame can make a Reflex Saving Throw [TN15] to take half damage. Creatures with cover get a bonus on their Reflex Saving Throw.</p><p>Any creature or flammable object that takes damage from a flamethrower catches on fire immediately, taking 2d6 points of fire damage each subsequent round until the flames are extinguished. A fire engulfing a single creature or object can be doused or smothered for 12 Combat Points. They can not attempt a Reflex Saving Throw to extinguish themselves. A flamethrower can fire 20 times and a flamer can fire 8 times before the fuel supply is depleted and cannot double-tap, double fire, or perform any other special firing modes. The Exotic Firearms Proficiency (Flamethrowers) feat is required to use flamethrower or flamer.</p>",
+    "damageBase": "3d3",
+    "flavorBase": "Fire",
+    "importFilter": "",
+    "importMod": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699664336353,
+    "modifiedTime": 1699674830505,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "x3QuDMgLnfkEtDWT",
+  "sort": 200000,
+  "_key": "!items!x3QuDMgLnfkEtDWT"
+}

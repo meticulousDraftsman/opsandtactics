@@ -1,0 +1,65 @@
+{
+  "name": "Improved Defensive Martial Arts",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/white-book.svg",
+  "system": {
+    "description": "<p>Benefit The character gains 4/Bludgeoning DR.<br>This DR is added to the original feat.</p>",
+    "layer": "other",
+    "active": true,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "WQPOjPkE": {
+        "name": "Bludgeoning",
+        "value": 6
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 0,
+      "max": 0
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Fine",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": false,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682371757892,
+    "modifiedTime": 1699585194576,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "Fuexi3hii0qIgu9u",
+  "_id": "UXyLrGRJkyliwVU2",
+  "sort": 500000,
+  "_key": "!items!UXyLrGRJkyliwVU2"
+}

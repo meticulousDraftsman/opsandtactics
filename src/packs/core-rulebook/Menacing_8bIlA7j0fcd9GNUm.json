@@ -1,0 +1,32 @@
+{
+  "name": "Menacing",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">CON 13</span> </p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character may add their CON modifier on Presence checks to intimidate or terrify, the duration of the Presence effect is doubled, and if you fail a Presence check by 5 or more, the target no longer tries to deceive you or hinder your activities</span> </p>",
+    "summary": "Add CON mod to intimidate checks, double duration"
+  },
+  "effects": [],
+  "folder": "3ZiXr5MZ2VINUTgv",
+  "sort": -100781,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pXA9CxhxP8x7frcH"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699583673114,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "8bIlA7j0fcd9GNUm",
+  "_key": "!items!8bIlA7j0fcd9GNUm"
+}

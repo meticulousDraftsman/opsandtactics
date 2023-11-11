@@ -1,0 +1,28 @@
+{
+  "name": "Fanning Expert",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.GkmtKC9v05vHEhTJ]{Fanning Proficiency}</p><h3>Benefits</h3><p><span class=\"fontstyle0\">When performing fanning attacks, the Recoil Penalty is calculated as CRP for two-round fan, and CRP-1 for three-round fan. The character may also make a single fanning attack for 0 Combat Point Cost per turn. This attack must be taken before the character’s turn ends.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "summary": "Additional recoil reduction for fanning attacks, one free fan per round."
+  },
+  "effects": [],
+  "folder": "Gb64JgdoIqJLhVSv",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699639681735,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "IyFJRdEBzcNAyK0s",
+  "_key": "!items!IyFJRdEBzcNAyK0s"
+}

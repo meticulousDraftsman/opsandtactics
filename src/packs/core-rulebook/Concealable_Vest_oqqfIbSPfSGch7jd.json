@@ -1,0 +1,69 @@
+{
+  "name": "Concealable Vest",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/plastron.svg",
+  "system": {
+    "description": "<p>This standard Kevlar vest is worn by most law enforcement officers under their uniform shirts.</p>\n<h3>Special Notes</h3>\n<p>Grants a +4 bonus to Stealth checks when hiding the armor.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 3,
+    "agiMax": 3,
+    "penalty": -1,
+    "cpLoss": 2,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Ballistic",
+        "value": 11
+      },
+      "9B9g4029": {
+        "name": "Slashing",
+        "value": 2
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 35,
+      "max": 35
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 4,
+      "cost": 20,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585490347,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "g7HwcKEMx8hl1MoU",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "oqqfIbSPfSGch7jd",
+  "sort": 100000,
+  "_key": "!items!oqqfIbSPfSGch7jd"
+}

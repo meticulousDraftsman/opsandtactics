@@ -1,0 +1,69 @@
+{
+  "name": "Turnout Coat",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/plastron.svg",
+  "system": {
+    "description": "<p>This fireman&rsquo;s coat is made of a thick, flame resistant and waterproof material.</p>\n<h3>Special Notes</h3>\n<p><span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">This armor protects the arms of the wearer, providing DR and Defense to all listed areas. This clothing cannot catch fire.</span></p>",
+    "layer": "worn",
+    "active": false,
+    "def": 1,
+    "agiMax": 5,
+    "penalty": 0,
+    "cpLoss": 0,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Fire",
+        "value": 2
+      },
+      "HT6OJrsQ": {
+        "name": "Slashing, Piercing",
+        "value": 1
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 10,
+      "max": 10
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 10,
+      "cost": 10,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585425460,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "gMx1J0qOaPk1DblG",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "fGyGi6VrP0xU9rsN",
+  "sort": 400000,
+  "_key": "!items!fGyGi6VrP0xU9rsN"
+}

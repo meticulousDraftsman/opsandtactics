@@ -1,0 +1,28 @@
+{
+  "name": "Black Powder Firearm Proficiency",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefit</h3><p><span class=\"fontstyle0\">The character can fire any black powder firearm without penalty.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Characters without this feat take a -4 penalty on attack rolls made with black powder firearms and can not reload them</span></p><h3>Special</h3><p><span class=\"fontstyle0\">The Personal Firearm Proficiency Feat allows you to fire black powder weapons without penalty, but not to reload them.</span></p><h3>Tutoring</h3><p>Time: 1 Day</p><p>Benefit: <span class=\"fontstyle0\">Can reload black powder firearms and attack penalty is reduced to -3</span></p>",
+    "summary": "Use and reload black powder firearms without penalty."
+  },
+  "effects": [],
+  "folder": "38Ouxi8MSX0CTflB",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699580754241,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "A8Fjrud3BxPaycCT",
+  "_key": "!items!A8Fjrud3BxPaycCT"
+}

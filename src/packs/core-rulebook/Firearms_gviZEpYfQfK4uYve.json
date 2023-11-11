@@ -1,0 +1,19 @@
+{
+  "name": "Firearms",
+  "sorting": "m",
+  "folder": "B9mEMVLfTaz65GI6",
+  "type": "Item",
+  "_id": "gviZEpYfQfK4uYve",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699673197515,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!gviZEpYfQfK4uYve"
+}

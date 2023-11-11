@@ -1,0 +1,27 @@
+{
+  "folder": "yy3qadOIF6qMcsPf",
+  "name": "Compact SMG Gunner",
+  "type": "feature",
+  "_id": "6CLqrIfYjzBSigLb",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "summary": "No penalty for folded stock or pistol grip with SMG",
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MjNoL6QtM0Nptxsw]{Rifle Specialist}</p><h3>Benefit</h3><p>When firing a sub-machine gun with a folded folding or fixed folding stock or a pistol grip, the character does not take any penalties to their attack from the stock.</p><h3>Normal</h3><p>A character without this feat has the range increment penalty doubled for all attacks with a folded folding stock or a pistol grip.</p>"
+  },
+  "effects": [],
+  "sort": -50000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699579444428,
+    "modifiedTime": 1699636673052,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!6CLqrIfYjzBSigLb"
+}

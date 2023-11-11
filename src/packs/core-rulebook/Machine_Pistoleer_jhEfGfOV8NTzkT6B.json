@@ -1,0 +1,28 @@
+{
+  "name": "Machine Pistoleer",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.pTE8c8BZNlsYPWTN]{Handgun Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">Once per turn, the character can perform a burst fire, sprayfire or sweepfire attack with a handgun or a machine pistol with full auto or burst fire firing modes for half their normal Combat Point cost, rounded up</span>.</p>",
+    "summary": "Halved cost for burstfire, sweepfire or sprayfire once per round."
+  },
+  "effects": [],
+  "folder": "dqgulUq8p1TXghtD",
+  "sort": 50000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699638088699,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "jhEfGfOV8NTzkT6B",
+  "_key": "!items!jhEfGfOV8NTzkT6B"
+}

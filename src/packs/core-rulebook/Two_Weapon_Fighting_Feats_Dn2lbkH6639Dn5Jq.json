@@ -1,0 +1,19 @@
+{
+  "name": "Two-Weapon Fighting Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "Dn2lbkH6639Dn5Jq",
+  "sort": 2400000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698613139525,
+    "modifiedTime": 1699583947229,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!Dn2lbkH6639Dn5Jq"
+}

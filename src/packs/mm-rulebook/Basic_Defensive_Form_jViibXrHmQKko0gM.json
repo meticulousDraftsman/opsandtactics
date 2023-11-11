@@ -1,0 +1,28 @@
+{
+  "name": "Basic Defensive Form",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When engaged in melee combat against a character using a psiblade or plasblade, the character gains a +4 dodge bonus to DEF, and gains a +2 dodge bonus to DEF against any other melee attacks. When attempting the Deflect reaction, the character can attempt to deflect any plasarm shots that they meet the prerequisites to deflect, and they may also attempt to deflect any thrown weapons, crossbow bolts, arrows, fired spears, paintballs, 18mm less lethal rounds, slingshot projectiles, any caseless rounds, any black powder rounds, any cased rounds, or any slug shelled rounds that are fired or thrown at them through a single ranged attack, single shot attack, or potshot attack. The character may not attempt to deflect any fired grenades, thrown grenades, rockets, missiles, mortars, or any shell round that is not a slug.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">The character can only deflect a single attack once per round, and may not attempt to deflect other types of objects besides plasarm fire.</span></p>",
+    "summary": "+4/+2 Dodge DEF in melee, allow multiple deflect attempts in one round"
+  },
+  "effects": [],
+  "folder": "DzwgkbHqAih5qJFB",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699691454059,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "jViibXrHmQKko0gM",
+  "_key": "!items!jViibXrHmQKko0gM"
+}

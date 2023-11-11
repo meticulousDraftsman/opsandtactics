@@ -1,0 +1,77 @@
+{
+  "name": "Combat Harness with Articulation Arm",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/trench-body-armor.svg",
+  "system": {
+    "description": "<p>The Combat Harness is worn by the operator of an M56 Smartgun. Made from composite micromesh ballistic armor, the articulation arm attached to the Smartgun is connected to a mount via the harness. The harness is heavily padded to ease chafing at the shoulders and hips.The combat harness also has a mount for a tactical flashlight, that can be turned off or on through any interface software.</p>\n<h3>Special Notes</h3>\n<p>When wearing this armor while using a M56 Smartgun, the weight of the M56 Smartgun is reduced by 95%, and the M56 Smartgun recieves a +8 Recoil Reduction on all attacks. This armor protects the legs of the wearer, providing DR and Defense to all listed areas</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 3,
+    "agiMax": 2,
+    "penalty": -3,
+    "cpLoss": 2,
+    "protection": {
+      "WXwri8AI": {
+        "name": "Ballistic",
+        "value": 13
+      },
+      "v3E908Tb": {
+        "name": "Piercing",
+        "value": 10
+      },
+      "VkKQnXxI": {
+        "name": "Slashing, Bludgeoning, Ballistic Piercing",
+        "value": 6
+      },
+      "3bmQa8OD": {
+        "name": "Acid",
+        "value": 4
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 120,
+      "max": 120
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 14.8,
+      "cost": 120,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699686534431,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "C9RrNQrxG7BPZXfq",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "tY3paGa5HqPwn1z1",
+  "sort": 0,
+  "_key": "!items!tY3paGa5HqPwn1z1"
+}

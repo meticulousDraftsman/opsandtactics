@@ -1,0 +1,383 @@
+{
+  "folder": "SjDLp5TzRN00YBSZ",
+  "name": "Intermediate Rimless Handgun Ammo Can",
+  "type": "object",
+  "_id": "oLYEzRIvoB1eZEIx",
+  "img": "systems/opsandtactics/icons/svg/cardboard-box-closed.svg",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.6,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "9GnOAeZO": {
+          "type": "cartridge",
+          "value": 50,
+          "max": 50,
+          "available": true,
+          "cartridges": {
+            "fQUgoKC6": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -1,
+                "good": {
+                  "primary": "2d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".380 ACP",
+              "flavor": ""
+            },
+            "mF09JPlp": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -1,
+                "good": {
+                  "primary": "2d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "8x22mm Nambu",
+              "flavor": ""
+            },
+            "yt8YtvNO": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -1,
+                "good": {
+                  "primary": "2d4+1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "9x18mm PM",
+              "flavor": ""
+            },
+            "WgOmqlgK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6-1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".30 Super Carry",
+              "flavor": ""
+            },
+            "Rd6bAfRw": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "9x19mm",
+              "flavor": ""
+            },
+            "Xs9YfJou": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -3,
+                "good": {
+                  "primary": "3d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".40 S&W",
+              "flavor": ""
+            },
+            "JmovEk0v": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6+1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".38 ACP",
+              "flavor": ""
+            },
+            "k1ryycLv": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "3d4+3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".38 Super",
+              "flavor": ""
+            },
+            "xrrJo0dJ": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -3,
+                "good": {
+                  "primary": "2d8",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.63x25mm Mauser",
+              "flavor": ""
+            },
+            "bOdhDG6J": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -1,
+                "good": {
+                  "primary": "2d3+3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".22 TCM",
+              "flavor": ""
+            },
+            "PDP9VYQJ": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -3,
+                "good": {
+                  "primary": "1d6+4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.63mm Mannlicher",
+              "flavor": ""
+            },
+            "xeJIcood": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -3,
+                "good": {
+                  "primary": "2d6+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".357 SIG",
+              "flavor": ""
+            },
+            "YrZoIRSL": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "2d8+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.62x25mm Tokarev",
+              "flavor": ""
+            },
+            "6E0y38nq": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -3,
+                "good": {
+                  "primary": "2d6+3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "9x23mm Steyr",
+              "flavor": ""
+            }
+          },
+          "name": "Quantum Intermediate Rimless"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699680651262,
+    "modifiedTime": 1699681414868,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!oLYEzRIvoB1eZEIx"
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Light Undercover Shirt",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/chain-mail.svg",
+  "system": {
+    "description": "<p>Designed for deep undercover work where the user must not appear to be armed or armored, this garment consist of a t-shirt with a band of Kevlar sewn in around the torso.</p>",
+    "layer": "worn",
+    "active": false,
+    "def": 1,
+    "agiMax": 4,
+    "penalty": -1,
+    "cpLoss": 0,
+    "protection": {
+      "HT6OJrsQ": {
+        "name": "Ballistic",
+        "value": 4
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 8,
+      "max": 8
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Large",
+      "weight": 1.4,
+      "cost": 13,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681662154248,
+    "modifiedTime": 1699585476208,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "3jEv5mDKg3PRhEQr",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "OHU4RqfTD6unVJnq",
+  "sort": 100000,
+  "_key": "!items!OHU4RqfTD6unVJnq"
+}

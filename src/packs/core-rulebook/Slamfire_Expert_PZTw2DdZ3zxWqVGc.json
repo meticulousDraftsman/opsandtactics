@@ -1,0 +1,28 @@
+{
+  "name": "Slamfire Expert",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.AwYLCSOzbri3uFmF]{Slamfire Proficiency}</p><h3>Benefits</h3><p><span class=\"fontstyle0\">When performing slamfire attacks, the Recoil Penalty is calculated as CRP-1 for two-round slamfire, and CRP-2 for threeround slamfire. The character may also make a single slamfire attack for 0 Combat Point Cost per turn. This attack must be taken before the character’s turn ends.</span></p>",
+    "summary": "Additional recoil reduction for slamfire, free slamfire once per round"
+  },
+  "effects": [],
+  "folder": "Gb64JgdoIqJLhVSv",
+  "sort": 668750,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699639836085,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "PZTw2DdZ3zxWqVGc",
+  "_key": "!items!PZTw2DdZ3zxWqVGc"
+}

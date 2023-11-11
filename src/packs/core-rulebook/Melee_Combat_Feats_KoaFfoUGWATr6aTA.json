@@ -1,0 +1,19 @@
+{
+  "name": "Melee Combat Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "KoaFfoUGWATr6aTA",
+  "sort": 1600000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698607675310,
+    "modifiedTime": 1699582315815,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!KoaFfoUGWATr6aTA"
+}

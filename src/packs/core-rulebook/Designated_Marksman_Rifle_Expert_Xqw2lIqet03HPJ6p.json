@@ -1,0 +1,28 @@
+{
+  "name": "Designated Marksman Rifle Expert",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.iHruvh0FiUFh3EDH]{Distance Rifle Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.Op4t9DIZwYzlVr8N]{Leading Target}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When firing a designated marksman rifle while using a magnified optic of 1.5x or greater, the Combat Point cost is 2 less. When clearing a jammed designated marksman rifle the Combat Point cost is 9 less, and when attempting to repair a designated marksman rifle the character receives a +6 bonus. Also, when a character with this feat reduces a creature to 0 CHP or less with a designated marksman rifle while using a magnified optic of 1.5x or greater, the character does not have to spend any Combat Points to sight in a new target.</span></p>",
+    "summary": "-2 CP, Free sight in cleave"
+  },
+  "effects": [],
+  "folder": "8uvkeXoPtWMrnXTd",
+  "sort": -43750,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699637511133,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "Xqw2lIqet03HPJ6p",
+  "_key": "!items!Xqw2lIqet03HPJ6p"
+}

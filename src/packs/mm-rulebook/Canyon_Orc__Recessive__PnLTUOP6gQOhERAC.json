@@ -1,0 +1,78 @@
+{
+  "name": "Canyon Orc (Recessive)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Canyon orcs can select Karkarash Expressive, Trade Bant Simplfied, or Trade Bant Traditional as their native language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Canyon orcs multiply their base Will Saving Throw by 1.5.</li>\n<li>Canyon orcs have a base Combat Point score of 14.</li>\n<li>Canyon orcs CHP formula is <code>CON Score 3</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy canyon orc typically stands between 5&frac34;-6&frac12;&rsquo;, and weighs between 160-270 lbs. The males are significantly larger than the females, usually towering a good foot above them. Male and female orcs begin to grow out their inferior canines as they reach adulthood, that sit in front of the lower lip once fully grown. These canines are considered a badge of adulthood, and are kept clean and sharp. Orc skin tone ranges in the grays, browns, and greens, and their hair ranges from dark brown to black, usually in a coarse, curly texture. The average orc lifespan is 130 years, reaching physical adulthood between the ages of 16-20.</p>\n<h3>Language</h3>\n<p>The native language of a canyon orc depends on their background. They primarily speak Karkarash Expressive, but have been known to speak a multitude of languages.</p>\n<h3>Names</h3>\n<p>Canyon orcs generally have two sets of names. The first name being their legal, recorded name, that usually follows the same naming conventions that humans use, and a second, given name at a teeth cutting ceremony. The newly adult orc is given a title, that includes their first name, with an adjective describing them. As they go throughout life, they will be granted more titles by more experienced, higher titled orcs.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "-Canyon Orc",
+          "priority": null
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "14",
+          "priority": null
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)+3",
+          "priority": null
+        },
+        {
+          "key": "system.saves.will.mult",
+          "mode": 5,
+          "value": "1.5",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "name": "Racial Effects",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!PnLTUOP6gQOhERAC.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1699689850570,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": "6WtXTo1uoMLbo5yx",
+  "_id": "PnLTUOP6gQOhERAC",
+  "sort": 0,
+  "_key": "!items!PnLTUOP6gQOhERAC"
+}

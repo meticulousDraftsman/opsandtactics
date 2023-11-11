@@ -1,0 +1,19 @@
+{
+  "name": "Light",
+  "sorting": "m",
+  "folder": "U6G2y93Ummtz2k5G",
+  "type": "Item",
+  "_id": "UheU78K0VNNEbBBy",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699591555870,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!UheU78K0VNNEbBBy"
+}

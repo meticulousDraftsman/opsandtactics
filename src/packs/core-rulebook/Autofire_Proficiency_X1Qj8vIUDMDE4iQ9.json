@@ -1,0 +1,28 @@
+{
+  "name": "Autofire Proficiency",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character’s Total Recoil Penalty is reduced by 4 when performing autofire attacks, by 1 when performing bump fire attacks, and by 3 when performing sweepfire and sprayfire attacks. This reduction is calculated after the Attack Recoil Penalty and the Caliber Recoil Penalty.</span></p>",
+    "summary": "Reduced recoil penalty for Autofire, Sweepfire, Bumpfire, Sprayfire"
+  },
+  "effects": [],
+  "folder": "2u78F7ZWHkNsVEJd",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699637175447,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "X1Qj8vIUDMDE4iQ9",
+  "_key": "!items!X1Qj8vIUDMDE4iQ9"
+}

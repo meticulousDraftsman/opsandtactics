@@ -1,0 +1,19 @@
+{
+  "name": "Tasers",
+  "sorting": "m",
+  "folder": "dEQyDaPhOQuULPS6",
+  "type": "Item",
+  "_id": "3J8Jfwbh1r3GJ8xc",
+  "sort": 300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699674362288,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!3J8Jfwbh1r3GJ8xc"
+}

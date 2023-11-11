@@ -1,0 +1,30 @@
+{
+  "name": "Close Combat Rifleman",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MjNoL6QtM0Nptxsw]{Rifle Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When targeting an adjacent opponent with an assault,<br>battle, or target rifle the character takes no ranged attack penalties,<br>and when using a carbine as a melee weapon the Combat Point<br>cost is reduced by 1</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">When using an assault, battle, or target rifle against an<br>adjacent opponent, the character takes a -6 penalty on all ranged<br>attacks.</span></p>",
+    "summary": "No close combat penalties with rifles, -1 CP to melee with carbines"
+  },
+  "effects": [],
+  "folder": "yy3qadOIF6qMcsPf",
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699636883099,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "PV3xo3FS8Askpue3",
+  "sort": 0,
+  "_key": "!items!PV3xo3FS8Askpue3"
+}

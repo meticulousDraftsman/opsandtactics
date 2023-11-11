@@ -1,0 +1,84 @@
+{
+  "name": "Island Elf (Full)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Island elves receive the extra feat Psiblade Proficiency at 1st level for free, even if they do not meet the prerequisites.</li>\n<li>Island elves possess Low-Light Vision, allowing them to see twice as far as normal in poor lightning conditions, as well as distinguish colors, even in dim lighting.</li>\n<li>Island elves do not have to spend any time meditating to maintain their psionic focus, or to keep their personal psiblade charged. This ablity only applies to a single psiblade that the island elf designates.</li>\n<li>Island elves are immune to wet environments. They do not have to make a Saving Throw against diseases.</li>\n<li>Island elves are weak to dry environments. They require double the normal water intake in dry environments.</li>\n<li>Island elves can choose a single Skill Focus(Fluid Dynamics, Plasma Dynamics, Telekinesis, Telepathy, or Psychometabolism) feat at 1st level for free.</li>\n<li>Island elves have Islakawa as their native language, and receive Trade Bant Simplified as a secondary language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Island elves are Medium sized creatures.</li>\n<li>Island elves receive a &minus;3 Racial Recoil Penalty to recoil when using any weapon that has recoil.</li>\n<li>Island elves have a base Combat Point score of 16.</li>\n<li>Island elves CHP formula is <code>CON Score</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy island elf typically stands between 4&rsquo;-5&rsquo;, and weighs between 80-120 lbs. The men are usually slightly taller than the women. Island elves have slightly pointed ears. Island elven skin tone ranges from a dark tan to a deep dark tone, and their hair ranges from dark brown to a black, and can be straight or curly, depending on the particular island elf. The average elven lifespan is 160 years, reaching physical adulthood between the ages of 20-27. Island elves almost always have intricate tattoos as well, that can range in size and intricacy from one person to the next.</p>\n<h3>Language</h3>\n<p>The native language of an island elf is Islakawa.</p>\n<h3>Names</h3>\n<p>Island elves can have anywhere from three to five names, the first few names denoting their birth location such as an island or country, then their family name and finally their personal identifying name. This name is usually in Islakawa.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 5,
+          "value": "Island Elf",
+          "priority": null
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium",
+          "priority": null
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "16",
+          "priority": null
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)",
+          "priority": null
+        },
+        {
+          "key": "system.stats.recoil.elf",
+          "mode": 2,
+          "value": "-3",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "name": "Racial Effects",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!SRpo7SgcrGIVOnIb.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1699689771268,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": "rQkbzgRC1Q7RZnkO",
+  "_id": "SRpo7SgcrGIVOnIb",
+  "sort": 0,
+  "_key": "!items!SRpo7SgcrGIVOnIb"
+}

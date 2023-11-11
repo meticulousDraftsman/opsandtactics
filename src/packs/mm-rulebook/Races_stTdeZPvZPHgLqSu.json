@@ -1,0 +1,19 @@
+{
+  "name": "Races",
+  "sorting": "m",
+  "folder": null,
+  "type": "Item",
+  "_id": "stTdeZPvZPHgLqSu",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699689540491,
+    "modifiedTime": 1699689540491,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!stTdeZPvZPHgLqSu"
+}

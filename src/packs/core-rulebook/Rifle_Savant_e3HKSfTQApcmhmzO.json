@@ -1,0 +1,30 @@
+{
+  "name": "Rifle Savant",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MjNoL6QtM0Nptxsw]{Rifle Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.q2CTcyiqF0ovbeZH]{Rifle and SMG Reloader}, @UUID[Compendium.opsandtactics.core-rulebook.Item.6Fp9udJ3zelmnhkl]{Rifle Ace} or @UUID[Compendium.opsandtactics.core-rulebook.Item.hEyRyjwS4v5mbVyp]{Rifle Expert}</p><h3>Benefit</h3><p>Once per round when the character is wielding an assault, battle, carbine, or target rifle, or sub-machine gun, and any character or creature is targeted by any ranged attack, the character may immediately make a single ranged attack targeted at the creature that originally made the attack using their wielded assault, battle, carbine, or target rifle, or sub-machine gun. This attack may be any standard attack, and may not use any called shot attack modifiers. This attack can not cost more than 8 Combat Points. Both of these attacks are resolved at the same time.</p><h3>Special</h3><p>If a character has the Rifle Ace Feat, they may use the Rifle Savant three times per round, instead of once per round. If a character selects the Rifle Savant Feat, they may not select the Rifle Master Feat.</p>",
+    "summary": "Once per round fire back when others targeted. Three times with Rifle Ace"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682894074793,
+    "modifiedTime": 1699636819240,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "yy3qadOIF6qMcsPf",
+  "_id": "e3HKSfTQApcmhmzO",
+  "sort": -6250,
+  "_key": "!items!e3HKSfTQApcmhmzO"
+}

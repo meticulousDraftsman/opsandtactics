@@ -1,0 +1,65 @@
+{
+  "name": "Sports Helmet",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/full-motorcycle-helmet.svg",
+  "system": {
+    "description": "<p>Used in various sporting events to protect the wearer&rsquo;s head.</p>",
+    "layer": "other",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": null,
+    "protection": {
+      "EQc6BNzc": {
+        "name": "Bludgeoning",
+        "value": 4
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 15,
+      "max": 15
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 2,
+      "cost": 2,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681772214993,
+    "modifiedTime": 1699585720883,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "WHnsEWcIDLGdsbgY",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "H8cWqzquUA0gisuU",
+  "sort": 0,
+  "_key": "!items!H8cWqzquUA0gisuU"
+}

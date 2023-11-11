@@ -1,0 +1,922 @@
+{
+  "name": "Acme Claybuster",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/sawed-off-shotgun.svg",
+  "system": {
+    "description": "<h3>Acme Claybuster</h3><p>Upgrade Points: Frame, Barrel.</p><p>Fixed stock and a removable choke barrel. Not affected by Error Range from ammunition.</p><h3>Single</h3><p>The firearm can only hold a single round and must be reloaded after every shot. Single shot firearms can perform single shot and potshot attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "YHphONC9RQ4ArOLa,system.gear.resources.dRSU6snk,cartridges.uDazFQ79",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "45ft",
+    "crit": 16,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots",
+        "dice": null
+      },
+      "NN86DPVT": {
+        "name": "Rifled Choke (Slug)",
+        "check": "+2",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "Bonus when using slugs, armor piercing slugs, or saboted slugs",
+        "dice": null
+      },
+      "kdmTQpxS": {
+        "name": "Rifled Choke (Other)",
+        "check": "-4",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "Bonus when using slugs, armor piercing slugs, or saboted slugs",
+        "dice": null
+      },
+      "e6wuqvg8": {
+        "name": "Extra Full Choke (Other)",
+        "check": "-2",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "+35ft range with birdshot, attack penalty with other ammo",
+        "dice": null
+      },
+      "B4f4pVu9": {
+        "name": "Full Choke (Bird)",
+        "check": "+2",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "+20ft range and bonus with birdshot, penalty with other ammo",
+        "dice": null
+      },
+      "ONIFkpvy": {
+        "name": "Full Choke (Other)",
+        "check": "-2",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "+20ft range and bonus with birdshot, penalty with other ammo",
+        "dice": null
+      },
+      "2rBtaqAX": {
+        "name": "Modified Choke (Other)",
+        "check": "-2",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "+10ft range with bird or buckshot, penalty with other ammo",
+        "dice": null
+      },
+      "Cpo9zodc": {
+        "name": "Improved Cylinder Choke (Bird/Buck)",
+        "check": "+1",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "Bonus with birdshot or buckshot, penalty with other ammo",
+        "dice": null
+      },
+      "VShf7Z73": {
+        "name": "Improved Cylinder Choke (Other)",
+        "check": "-1",
+        "effect": "",
+        "recoil": null,
+        "cp": null,
+        "description": "Bonus with birdshot or buckshot, penalty with other ammo",
+        "dice": null
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            },
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            },
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        }
+      },
+      "5WFQOJRZ": {
+        "name": "Change Choke",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "noChatAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            },
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 8,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        }
+      },
+      "wiv091eY": {
+        "name": "Reload a Shell",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            },
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "NN86DPVT": {
+              "active": false
+            },
+            "kdmTQpxS": {
+              "active": false
+            },
+            "e6wuqvg8": {
+              "active": false
+            },
+            "B4f4pVu9": {
+              "active": false
+            },
+            "ONIFkpvy": {
+              "active": false
+            },
+            "2rBtaqAX": {
+              "active": false
+            },
+            "Cpo9zodc": {
+              "active": false
+            },
+            "VShf7Z73": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "Core: Barrel",
+    "importMod": "Ported Barrel | | | | +1 | | Cannot also be threaded",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 6.1,
+      "cost": 12,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "dRSU6snk": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": false,
+          "cartridges": {
+            "uDazFQ79": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "12 Gauge",
+              "flavor": ""
+            }
+          },
+          "name": "Breech"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "damageBase": "",
+    "errorBase": 0,
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1699669082096,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "fLjmJN8GvZ2FAFzR",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "YHphONC9RQ4ArOLa",
+  "sort": 0,
+  "_key": "!items!YHphONC9RQ4ArOLa"
+}

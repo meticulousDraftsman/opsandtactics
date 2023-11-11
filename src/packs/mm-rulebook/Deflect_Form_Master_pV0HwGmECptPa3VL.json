@@ -1,0 +1,32 @@
+{
+  "name": "Deflect Form Master",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.jViibXrHmQKko0gM]{Basic Defensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.gAJy77Uf1u1MAm8m]{Deflect Form Focus}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.XMcusmiFwpjpi36m]{Intermediate Defensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.oHkWwlRjTVC2GHGd]{Deflect Form Expertise}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.WBkUd7rhfCYhp90F]{Expert Defensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attempting the Deflect reaction against plasarms, the character receives an additional +4 to their Reflex Saving Throw, and they may attempt a Ranged Attack with no attack penalty. Additionally, they may deflect attacks coming from any direction.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Deflect reaction ranged attacks have a -4 penalty. Deflect reactions may only be attempted if they are facing the attack.</span></p>",
+    "summary": "Deflect attacks from any direction, +4 to deflect, no penalty to redirect"
+  },
+  "effects": [],
+  "folder": "wvssTwZFvszWcM8P",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.pV0HwGmECptPa3VL"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699691682910,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "pV0HwGmECptPa3VL",
+  "_key": "!items!pV0HwGmECptPa3VL"
+}

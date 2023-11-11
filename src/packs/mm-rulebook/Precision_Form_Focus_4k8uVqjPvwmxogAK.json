@@ -1,0 +1,32 @@
+{
+  "name": "Precision Form Focus",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.MHXQ6uBfaRCgUfgW]{Basic Offensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">A character gains a +4 attack bonus to all Called Shot attacks against arms and legs made when attacking with a psiblade or plasblade. The character may also make non-lethal attacks with the psiblade or plasblade at a -2 attack penalty. Also, when attacking an object, the character gains a +2 attack bonus and ignores 1 point of hardness.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Non-lethal attacks have an attack penalty of -4.</span></p>",
+    "summary": "+4 Called Shot bonus, reduce NL attack penalty, sunder bonus"
+  },
+  "effects": [],
+  "folder": "Mc6DsbHJGQYGWBjD",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.4k8uVqjPvwmxogAK"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699691343799,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "4k8uVqjPvwmxogAK",
+  "_key": "!items!4k8uVqjPvwmxogAK"
+}

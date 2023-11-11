@@ -1,0 +1,65 @@
+{
+  "name": "Plasma Plate",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/svg/shieldcomb.svg",
+  "system": {
+    "description": "<p>These plates consist of a plasma array that is used to defend against plasma and electric damage. They, like all plasma technology, require coolant packs in order to use, but provide decent protection against plasma and electric damage. They can soak 20 points of plasma or electric damage before requiring a coolant pack change. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>",
+    "layer": "shield",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "cpLoss": 1,
+    "protection": {
+      "ZyyEUojP": {
+        "name": "Plasma, Electric",
+        "value": 5
+      }
+    },
+    "activeDR": "",
+    "ap": {
+      "value": 20,
+      "max": 20
+    },
+    "coolant": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "Medium",
+      "weight": 2,
+      "cost": 15,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681666976778,
+    "modifiedTime": 1699686670116,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "QrB2DLyRKtBLgHdd",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ImTvf5yQ28pbMbuD",
+  "sort": 500000,
+  "_key": "!items!ImTvf5yQ28pbMbuD"
+}

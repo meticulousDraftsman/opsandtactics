@@ -1,0 +1,28 @@
+{
+  "name": "Aircraft Operations",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<p><span class=\"fontstyle0\">Select a class of aircraft (heavy aircraft, attack helicopters, or attack planes). The character is proficient at operating that class of aircraft.</span></p><ul><li><p><span class=\"fontstyle0\">The heavy aircraft class includes jumbo passenger airplanes, large cargo planes, heavy bombers, and any other aircraft with three or more engines or jet engines.</span></p></li><li><p><span class=\"fontstyle0\">Attack helicopters include any helicopter with weapons.</span></p></li><li><p><span class=\"fontstyle0\">Attack planes include military fighter and ground attack planes.</span></p></li></ul><h3>Prerequisites</h3><p><span class=\"fontstyle0\">Pilot 5+</span></p><h3>Benefit</h3><p><span class=\"fontstyle0\">The character takes no penalty on Pilot checks or attack rolls made when operating an aircraft of the selected class.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Characters without this feat take a -4 penalty on Pilot checks made to operate an aircraft that falls in any of these classes, and on attacks made with aircraft weapons. There is no penalty when the character operates a general purpose aircraft.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">The character may gain this feat multiple times. Each time the character takes the feat, the character selects a different class of aircraft.</span></p><p></p>",
+    "summary": "Pilot and attack with specialized aircraft with no penalties"
+  },
+  "effects": [],
+  "folder": "V2xgoK1EMPRlyXNM",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699584437983,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "cUxeM9wqnl7gKXLv",
+  "_key": "!items!cUxeM9wqnl7gKXLv"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Reaction Form Focus",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.jViibXrHmQKko0gM]{Basic Defensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When using a psiblade or plasblade, a character gains a +5 bonus to their Will Saving Throw when performing the Predict reaction and a +5 bonus to their Reflex Saving Throw when performing the Parry reaction</span>.</p>",
+    "summary": "+5 bonus to predict and parry reactions"
+  },
+  "effects": [],
+  "folder": "p9kKyCt4IKSFVa95",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.IqlAGgpvfpZnCc2W"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699691707322,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "IqlAGgpvfpZnCc2W",
+  "_key": "!items!IqlAGgpvfpZnCc2W"
+}

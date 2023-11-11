@@ -1,0 +1,636 @@
+{
+  "folder": "SjDLp5TzRN00YBSZ",
+  "name": "Heavy Rifle Ammo Can",
+  "type": "object",
+  "_id": "GMDmzDNnvCGy4kA8",
+  "img": "systems/opsandtactics/icons/svg/cardboard-box-closed.svg",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.8,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "SJeun7qo": {
+          "type": "cartridge",
+          "value": 20,
+          "max": 20,
+          "available": true,
+          "cartridges": {
+            "XLTpnVZo": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -7,
+                "good": {
+                  "primary": "6d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "6.5 Creedmoor",
+              "flavor": ""
+            },
+            "3bdD3RXY": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "4d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "6.5x50mm Arisaka",
+              "flavor": ""
+            },
+            "GHQZwzjl": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "3d8",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.92x33mm Kurz",
+              "flavor": ""
+            },
+            "uQKyfe58": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "4d6+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".243 Winchester",
+              "flavor": ""
+            },
+            "58LC8AoM": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "4d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".300 AAC Blackout",
+              "flavor": ""
+            },
+            "siQ0aAW1": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "4d6+1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".30-30 Winchester",
+              "flavor": ""
+            },
+            "yre2jx3r": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "4d6+1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "6.5mm Grendel",
+              "flavor": ""
+            },
+            "8q6Muj92": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "4d6+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "6.5x52mm Carcano",
+              "flavor": ""
+            },
+            "0LvkkYNf": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "4d6+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.62x39mm",
+              "flavor": ""
+            },
+            "T4xBLekG": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "4d6+3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".280 British",
+              "flavor": ""
+            },
+            "bwvaGDgz": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -7,
+                "good": {
+                  "primary": "4d6+4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.5x54mm French",
+              "flavor": ""
+            },
+            "tHxBBTUK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.62x51mm",
+              "flavor": ""
+            },
+            "FCsNikJ5": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6+1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "8mm Lebel",
+              "flavor": ""
+            },
+            "zFTVicFl": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -7,
+                "good": {
+                  "primary": "5d6+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7x57mm Mauser",
+              "flavor": ""
+            },
+            "hOOeDwEP": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -7,
+                "good": {
+                  "primary": "5d6+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.62x54mmR",
+              "flavor": ""
+            },
+            "Gew4JBPa": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -7,
+                "good": {
+                  "primary": "5d6+3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".303 British",
+              "flavor": ""
+            },
+            "xASrbCjK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -8,
+                "good": {
+                  "primary": "5d6+4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".30-40 Krag",
+              "flavor": ""
+            },
+            "llhqNkZC": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -8,
+                "good": {
+                  "primary": "5d6+4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.7x58mm Arisaka",
+              "flavor": ""
+            },
+            "DYVGiA8E": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -8,
+                "good": {
+                  "primary": "5d6+4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.5x55mm Swiss",
+              "flavor": ""
+            },
+            "D9hKb9vA": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -8,
+                "good": {
+                  "primary": "5d6+5",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "7.92x57mm Mauser",
+              "flavor": ""
+            },
+            "lmYFbEJj": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -8,
+                "good": {
+                  "primary": "6d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".30-06 Springfield",
+              "flavor": ""
+            },
+            "NSOVkagP": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "2d10+5",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".56-56 Spencer",
+              "flavor": ""
+            },
+            "8oSRjdUA": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "3d10",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".45-70 Government",
+              "flavor": ""
+            },
+            "dQJOLUcA": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -8,
+                "good": {
+                  "primary": "3d10+5",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".50-70 Government",
+              "flavor": ""
+            },
+            "RtLFfE60": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -7,
+                "good": {
+                  "primary": "3d12",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".458 SOCOM",
+              "flavor": ""
+            }
+          },
+          "name": "Quantum Heavy Rifle"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699683103131,
+    "modifiedTime": 1699683802968,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!GMDmzDNnvCGy4kA8"
+}

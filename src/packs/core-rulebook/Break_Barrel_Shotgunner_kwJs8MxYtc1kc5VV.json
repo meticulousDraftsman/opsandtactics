@@ -1,0 +1,30 @@
+{
+  "name": "Break Barrel Shotgunner",
+  "type": "feature",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.YIIZnklXaHYDx9Iq]{Shotgun Specialist}</p><h3>Benefit</h3><p>When firing a single shot shotgun or double-barrel OxU or SxS shotgun, the character receives a +3 attack bonus.</p>",
+    "summary": "+3 attack"
+  },
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682808955087,
+    "modifiedTime": 1699639997585,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "ZO7E7f39Vgfgt0WX",
+  "_id": "kwJs8MxYtc1kc5VV",
+  "sort": 93750,
+  "_key": "!items!kwJs8MxYtc1kc5VV"
+}

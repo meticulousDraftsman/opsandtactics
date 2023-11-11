@@ -1,0 +1,28 @@
+{
+  "name": "Quick Draw Attack",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.kPaVd4mwK6ZO0hyq]{Tactical Draw (selected weapon)}, Proficient with weapon</span></p><h3>Benefits</h3><p><span class=\"fontstyle2\">A character may draw a model of weapon from a holster or sheath and immediately make a single attack for 4 Combat Points. The weapon used must be the same model that the character has a Tactical Draw feat for. This may only be done twice per turn.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">Any feats or equipment that reduce the Combat Point cost for a single attack or for drawing a weapon also reduce the Combat Point cost for this attack. The weapon must be in a holster or a sheath</span>.</p>",
+    "summary": "Draw weapon and attack with it in same action."
+  },
+  "effects": [],
+  "folder": "ii9NKpCX96yrDtuu",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699637888439,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "evFU6NbrcF8viQ6J",
+  "_key": "!items!evFU6NbrcF8viQ6J"
+}

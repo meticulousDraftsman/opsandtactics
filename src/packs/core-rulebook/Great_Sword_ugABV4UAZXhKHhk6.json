@@ -1,0 +1,341 @@
+{
+  "name": "Great Sword",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "system": {
+    "description": "<p>A great sword is a massive two-handed sword is reminiscent of an iron beam with a handle and a cutting edge. A character can strike opponents up to 10&rsquo; away with a great sword. A classic example is the German zweih&auml;nder. Improvised versions of this unique weapon are extremely unlikely. Great swords come with a tactical sheath.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "unlimited",
+      "source": "",
+      "insideOut": "both",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 14,
+    "weaponMods": {
+      "JhdpOPYH": {
+        "name": "Thrust Attack",
+        "check": "-2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": 1,
+        "description": "Deal Piercing"
+      }
+    },
+    "actions": {
+      "FEx456FG": {
+        "name": "Light",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "-3",
+          "ability": "pow",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        }
+      },
+      "dLSlE7r1": {
+        "name": "Standard",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        }
+      },
+      "fUrcx4zY": {
+        "name": "Heavy",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "pow",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 7,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        }
+      },
+      "7bfatA2J": {
+        "name": "Full",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "melee",
+          "source": "",
+          "inherent": "",
+          "ability": "foc",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": false
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "+4",
+          "ability": "pow",
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1.5,
+          "ammo": true
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 12,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "JhdpOPYH": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "huge",
+      "weight": 8,
+      "cost": 11,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "2d10",
+    "flavorBase": "Slashing"
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681639159699,
+    "modifiedTime": 1699679416331,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "PVVjOMkBFXUvHywS",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ugABV4UAZXhKHhk6",
+  "sort": -6250,
+  "_key": "!items!ugABV4UAZXhKHhk6"
+}

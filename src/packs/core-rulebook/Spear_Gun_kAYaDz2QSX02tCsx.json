@@ -1,0 +1,155 @@
+{
+  "folder": "W4yLZg7zp3UnKL7y",
+  "name": "Spear Gun",
+  "type": "weapon",
+  "_id": "kAYaDz2QSX02tCsx",
+  "img": "systems/opsandtactics/icons/svg/panzerfaust.svg",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "consumable",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": "kAYaDz2QSX02tCsx,system.gear.resources.8WOm8sJX"
+    },
+    "range": "25ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "zG22tcEm": {
+        "name": "Fire Spear",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      },
+      "sLDMmlVX": {
+        "name": "Reload a Spear",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 2,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 5,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "8WOm8sJX": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": false,
+          "name": "Barrel"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "damageBase": "1d10",
+    "flavorBase": "Piercing",
+    "importFilter": "",
+    "importMod": "",
+    "description": "<p>A spear gun is a gun that uses rubber tubing to fire a thin metal spear at a target. When used underwater, the spear gun’s range triples. Spear guns require the Archaic Weapons Proficiency (Bows) feat in order to be used without a −4 attack penalty.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1699665133609,
+    "modifiedTime": 1699669717386,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!kAYaDz2QSX02tCsx"
+}

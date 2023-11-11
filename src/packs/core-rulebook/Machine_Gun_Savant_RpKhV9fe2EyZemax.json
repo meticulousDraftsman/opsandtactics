@@ -1,0 +1,28 @@
+{
+  "name": "Machine Gun Savant",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.i5Xz1hjImCHirF7l]{Machine Gun Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.3sr5p717BmTjji8x]{Machine Gun Reloader}, @UUID[Compendium.opsandtactics.core-rulebook.Item.iGdDH3k6zt6mBOsA]{General Purpose Machine Gunner}, @UUID[Compendium.opsandtactics.core-rulebook.Item.46U1CPOMY8hwoZSD]{Close Combat Machine Gunner} </span><span class=\"fontstyle2\"><strong>and</strong> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.M8kz2bDgEqr4YIab]{Machine Gun Ace} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.cOTShCg835OHoITD]{Machine Gun Expert}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When firing a LMG or GPMG and making a sweeping fire attack, the maximum range is 60’. When firing a LMG or GPMG and making an autofire attack, it affects a 15’ x 15’ area.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Sweeping Fire has a maximum range of 40’. Autofire attacks affect a 10’ x 10’ area.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">If a character selects the Machine Gun Savant Feat, they may not select the Machine Gun Master Feat</span></p>",
+    "summary": "60' sweepfire max range, 15'x15' autofire attacks"
+  },
+  "effects": [],
+  "folder": "h39763RPdf58HHFe",
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699639265122,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "RpKhV9fe2EyZemax",
+  "_key": "!items!RpKhV9fe2EyZemax"
+}

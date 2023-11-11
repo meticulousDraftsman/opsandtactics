@@ -1,0 +1,33 @@
+{
+  "name": "Handgun Reloader",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}</p><h3>Benefit</h3><p><span class=\"fontstyle0\">Reloading any handgun or machine pistol with a magazine or speedloader costs 2 Combat Points. Reloading any handgun from loose rounds or refilling a magazine or speedloader costs 1 Combat Points per round loaded</span></p><h3>Advanced Arms</h3><p><span class=\"fontstyle0\">Reloading a coolant pack into a plasma, laser or electric pistol costs 2 CP.</span></p>",
+    "summary": "2 CP to reload handgun mags or speedloaders, 1 CP for loose rounds"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qDhNdGOjrAc4xpWx": 3,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Y283YgPlr5ZBY1yk"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1682893642518,
+    "modifiedTime": 1699637948658,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "dqgulUq8p1TXghtD",
+  "sort": 100000,
+  "_id": "PjWBnexrl6cy31Qc",
+  "_key": "!items!PjWBnexrl6cy31Qc"
+}

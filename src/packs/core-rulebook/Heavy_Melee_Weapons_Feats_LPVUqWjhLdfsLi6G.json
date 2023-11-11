@@ -1,0 +1,19 @@
+{
+  "name": "Heavy Melee Weapons Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "LPVUqWjhLdfsLi6G",
+  "sort": 1400000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698605494921,
+    "modifiedTime": 1699582001479,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!LPVUqWjhLdfsLi6G"
+}

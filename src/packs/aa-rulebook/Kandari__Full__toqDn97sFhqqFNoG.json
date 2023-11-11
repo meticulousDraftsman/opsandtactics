@@ -1,0 +1,90 @@
+{
+  "name": "Kandari (Full)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>When Kandari Release a Spell, Recite an Incantation, or use Psionics, the CP cost is 1 less.</li>\n<li>Kandari possess Darkvision, which allows them to see in total darkness, out to 50 feet. This vision is black-and-white only.</li>\n<li>Kandari receive Kandari as their native language for free, and can chose 4 languages as a native languages in addition.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Kandari are Medium sized creatures.</li>\n<li>Kandari receive a &minus;4 Racial Recoil Penalty to recoil when using any weapon that has recoil.</li>\n<li>Kandari have a Mental Limit equal to <code>((6+WIS Score)&times;CL) + 70</code>.</li>\n<li>Kandari have a base Combat Point score of 15.</li>\n<li>Kandari CHP formula is <code>CON Score +1</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy kandari typically stands between 5&frac12;-6&frac12;&rsquo;, and weighs between 150-200 pounds. Kandari skin tone ranges from a light flesh tone to a pale yellow, and their hair is almost exclusively black, and almost exclusively straight and long. Eye color is extremely unique, as they have the possibility to have any color of iris. Kandari also have two black dots above each of their eyebrows. The average kandari lifespan is 140 years, reaching physical adulthood between the ages of 24-28.</p>\n<h3>Language</h3>\n<p>The native language of a kandari is Kandari, but because of their ability to understand structure, patterns, and systems they pick up any language easily. English or Trade Bant is an often taught language, for trade. A kandari is capable of speaking any language of their home location, which will transcend the typical language spoken in their area or origin.</p>\n<h3>Names</h3>\n<p>Kandari usually have one long, complicated name, that spells out their personal name, family name, and current job title, in one neat package. Because of the cultural exchange, the first few syllables of their name is used by other races to denote them.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.VfoJEbTPJP2z6cqt",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "VlIeiq9gmNfDZsE7",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 5,
+          "value": "Kandari",
+          "priority": null
+        },
+        {
+          "key": "system.details.size",
+          "mode": 5,
+          "value": "Medium",
+          "priority": null
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "15",
+          "priority": null
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)+1",
+          "priority": null
+        },
+        {
+          "key": "system.ml.formula",
+          "mode": 5,
+          "value": "((6+@wis.score)*@lvl)+70",
+          "priority": null
+        },
+        {
+          "key": "system.stats.recoil.kandari",
+          "mode": 2,
+          "value": "-4",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "name": "Racial Effects",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!toqDn97sFhqqFNoG.VlIeiq9gmNfDZsE7"
+    }
+  ],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681848685014,
+    "modifiedTime": 1699689472207,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "RHcRRsUeevIm8ize",
+  "_id": "toqDn97sFhqqFNoG",
+  "sort": 0,
+  "_key": "!items!toqDn97sFhqqFNoG"
+}

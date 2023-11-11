@@ -1,0 +1,72 @@
+{
+  "name": "Kobold (Recessive)",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "system": {
+    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Kobolds possess the Scent ability, which allows them to detect approaching enemies, sniff out hidden foes, and track by sense of smell. Races with the Scent ability can identify familiar odors. The creature can detect any object or creature that has an odor within 150 feet by sense of smell. If the object or creature is upwind, the range increases to 300 feet; if downwind, it drops to 75 feet. Strong odors can be detected at twice the ranges noted above. Overpowering odors can be detected at triple normal range. When an odor is detected, the exact location is not revealed&mdash;only its presence somewhere within range. If the kobold moves within 30 feet of the source, they can pinpoint that source.</li>\n<li>Kobolds have Kobalthwyn as their native language and receive Trade Bant Simplified as a secondary language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Kobolds have a base Combat Point score of 18.</li>\n<li>Kobolds CHP formula is <code>CON Score -2</code>.</li>\n</ul>\n<h3>Dragons</h3>\n<p>All dragons have tails that can be targeted. They have the same targeting rules as legs. Any armor that provides protection to legs, will also provide protection to tails.</p>\n<h3>Physical Description</h3>\n<p>A healthy kobold typically stands between 3&frac34;-4&frac12;&rsquo;, and weighs between 90-140 lbs. The males are slightly larger than the females. Male and female Kobolds gain large ears as they reach adulthood. Kobolds have thin scales covering their body, which are usually a light green to a dark brown color. Kobolds do not have hair. The average Kobold lifespan is 80 years, reaching physical adulthood between the ages of 14-16.</p>\n<h3>Language</h3>\n<p>The native language of a Kobold is Kobalthwyn. They will often speak Trade Bant Simplified.</p>\n<h3>Names</h3>\n<p>Kobolds have a rather unique naming system, in which their name constantly changes, due to any changing circumstances, or events that happen with the kobold. The Kobold will have to refer to his old names when reuniting with old friends and acquaintances, to update them. Usually, these names are flattering to the kobold, but some can be less than flattering. Non-kobolds will usually refer to the first name they know the kobold by, to no offense to the kobold.</p>",
+    "summary": ""
+  },
+  "effects": [
+    {
+      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "origin": "Item.zS0jXga6Qoca176p",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "9MvbkKMB2pVpa0jg",
+      "changes": [
+        {
+          "key": "system.details.race",
+          "mode": 2,
+          "value": "-Kobold",
+          "priority": null
+        },
+        {
+          "key": "system.cp.max",
+          "mode": 5,
+          "value": "18",
+          "priority": null
+        },
+        {
+          "key": "system.health.chp.formula",
+          "mode": 5,
+          "value": "(@con.score)-2",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": true,
+      "flags": {},
+      "name": "Racial Effects",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!PNIbxqPny8cqLTAK.9MvbkKMB2pVpa0jg"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1677901192920,
+    "modifiedTime": 1699689926241,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "folder": "4Qx9HertJyIy9ZWl",
+  "_id": "PNIbxqPny8cqLTAK",
+  "sort": 0,
+  "_key": "!items!PNIbxqPny8cqLTAK"
+}

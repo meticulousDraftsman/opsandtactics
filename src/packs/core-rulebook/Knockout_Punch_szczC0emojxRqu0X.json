@@ -1,0 +1,28 @@
+{
+  "name": "Knockout Punch",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.ScZmtSWFJTU4dg9v]{Brawl}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">A character can spend 12 Combat Points to make a single unarmed melee attack with a -2 penalty. If this attack is successful the character gains +4 damage dice. After the attack is made the character is considered Flat-Footed for a single round. This damage is non-lethal damage.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">Even if the character has the ability to treat unarmed damage as lethal damage, the damage from a knockout punch is always non-lethal</span>.</p>",
+    "summary": "Throw a haymaker"
+  },
+  "effects": [],
+  "folder": "BfQrisONp9zLTEW3",
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699641360946,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "szczC0emojxRqu0X",
+  "_key": "!items!szczC0emojxRqu0X"
+}

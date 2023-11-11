@@ -122,7 +122,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 3,
       "cost": 25,
       "quality": "",
@@ -143,10 +143,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.0.7",
-    "coreVersion": "10.291",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.314",
     "createdTime": 1681646395557,
-    "modifiedTime": 1682701951020,
+    "modifiedTime": 1699105639035,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "NHTGFyfJzIBE4TVX",

@@ -1,0 +1,304 @@
+{
+  "name": "Acme Patroller",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/svg/sawed-off-shotgun.svg",
+  "system": {
+    "description": "<h3>Acme Patroller</h3><p>Upgrade Points: Frame, Barrel.</p><p>Fixed stock and a combat cut smoothbore barrel. Not affected by Error Range from ammunition.</p><h3>Pump Action</h3><p>The firearm has a pump on the forearm that is worked back and forth to cycle a new round. Pump action firearms can perform single shot and potshot attacks. Pump action firearms require two hands to use, regardless of their size.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "ZOxOugFG9mtnp0BU,system.gear.resources.9UkrrJOa,cartridges.3rthgwa4",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "55ft",
+    "crit": 16,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots",
+        "dice": null
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          }
+        }
+      },
+      "yvJd87PR": {
+        "name": "Reload a Shell",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          }
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          }
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 8.1,
+      "cost": 32,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "9UkrrJOa": {
+          "type": "cartridge",
+          "value": 8,
+          "max": 8,
+          "available": false,
+          "cartridges": {
+            "3rthgwa4": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "12 Gauge",
+              "flavor": ""
+            }
+          },
+          "name": "Tube"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "damageBase": "",
+    "errorBase": 0,
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1699669128135,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "fLjmJN8GvZ2FAFzR",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ZOxOugFG9mtnp0BU",
+  "sort": 0,
+  "_key": "!items!ZOxOugFG9mtnp0BU"
+}

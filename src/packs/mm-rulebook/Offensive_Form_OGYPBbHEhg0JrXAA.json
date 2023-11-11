@@ -1,0 +1,19 @@
+{
+  "name": "Offensive Form",
+  "sorting": "m",
+  "folder": "wYSuz5lWFZ9DXcNd",
+  "type": "Item",
+  "_id": "OGYPBbHEhg0JrXAA",
+  "sort": -200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1699691003452,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!OGYPBbHEhg0JrXAA"
+}

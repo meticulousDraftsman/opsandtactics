@@ -1,0 +1,19 @@
+{
+  "name": "Handgun Feats",
+  "sorting": "m",
+  "folder": "Bq5JH8GBKDTVZPar",
+  "type": "Item",
+  "_id": "dqgulUq8p1TXghtD",
+  "sort": 1300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698603690770,
+    "modifiedTime": 1699581748556,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!dqgulUq8p1TXghtD"
+}

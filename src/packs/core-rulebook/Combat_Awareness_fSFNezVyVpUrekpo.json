@@ -1,0 +1,28 @@
+{
+  "name": "Combat Awareness",
+  "type": "feature",
+  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "system": {
+    "description": "<h3>Benefits</h3><p><span class=\"fontstyle0\">The character can spend 1 Combat Point to gain a +1d2 Defense bonus. The character can not spend more Combat Points than their Character Level + 2. The bonus to the character’s defense is a dodge bonus.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">A condition that makes the character lose their AGI bonus to defense also makes the character lose dodge bonuses.</span></p>",
+    "summary": "Spend CP to gain d2 DEF"
+  },
+  "effects": [],
+  "folder": "ii9NKpCX96yrDtuu",
+  "sort": 112500,
+  "ownership": {
+    "default": 0,
+    "0zMFB2BmkiC13YBe": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.1.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698597373397,
+    "modifiedTime": 1699581667484,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "fSFNezVyVpUrekpo",
+  "_key": "!items!fSFNezVyVpUrekpo"
+}
