@@ -465,6 +465,7 @@ class CartridgeEditApp extends FormApplication {
       height: 380,
       closeOnSubmit: false,
       submitOnChange: true,
+      submitOnClose: true,
       resizable: true
     });
   }

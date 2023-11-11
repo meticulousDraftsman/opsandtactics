@@ -82,7 +82,7 @@
                     {{else}}
                     <select class="grid-span-6" name="system.importMod" data-dtype="String" >
                         {{#with (lookup importableMods @root.system.importFilter)}}
-                        {{selectOptions this.entries selected=@root.system.importMod nameAttr="value" labelAttr="label"}}
+                        {{selectOptions this.entries selected=@root.system.importMod nameAttr="value" labelAttr="label" blank="Select Mod to Import"}}
                         {{/with}}
                     </select>
                     {{/if}}
@@ -108,9 +108,6 @@
                         {{/unless}}
                     </ol>
                 </div>
-                {{#each system.weaponMods}}
-
-                {{/each}}
                 <hr>
                 <ol class="items-list flex-group-center">
                     {{#each system.weaponMods}}
@@ -123,7 +120,6 @@
                         <input name="system.weaponMods.{{@key}}.recoil" type="text" value="{{this.recoil}}" data-dtype="Number" placeholder="0" data-tooltip="Recoil"/>
                         <input name="system.weaponMods.{{@key}}.cp" type="text" value="{{this.cp}}" data-dtype="Number" placeholder="0" data-tooltip="Combat Points"/>
                         <a class="item-control sub-delete" data-target-name="weaponMods" data-remove-target="{{@key}}" data-tooltip="Remove Modifier"><i class="fas fa-trash"></i></a>
-                        
                     </li>
                     {{#if @last}}
                     {{else}}
@@ -222,6 +218,7 @@
                             </button>
                             {{/if}}
                             <i class="grid-span-9 flex-group-center">{{this.effect.flavor}}</i>
+                            {{#if this.effect.ammo}}<i class="grid-span-9 flex-group-center">{{@root.system.magazine.loaded.flavor}}</i>{{/if}}
                         </li>
                         {{/if}}
                     </ol>
