@@ -1070,10 +1070,10 @@ export class OpsActorSheet extends ActorSheet {
       skill: (checkID=='skill')?item:null,
     }
     if ((event && event.shiftKey)){
-      new ActionDashboardApp(tweaks,{actor:this.actor,name:checkName,sourceSkill:tweaks.skill,target:checkID,height:(checkID=='skill'?340:180)}).rollAction(event);
+      new ActionDashboardApp(tweaks,{actor:this.actor,name:checkName,sourceSkill:tweaks.skill,target:checkID}).rollAction(event);
     }
     else{
-      new ActionDashboardApp(tweaks,{actor:this.actor,name:checkName,sourceSkill:tweaks.skill,target:checkID,height:(checkID=='skill'?340:180)}).render(true);
+      new ActionDashboardApp(tweaks,{actor:this.actor,name:checkName,sourceSkill:tweaks.skill,target:checkID,height:(checkID=='skill'?340:180),width:((checkID=='skill' || checkID=='reflex')?520:260)}).render(true);
     }
   }
 
@@ -1421,7 +1421,7 @@ class ActionDashboardApp extends FormApplication {
     });
   }
   get title(){
-    return `${this.options.actor.name} tweaking execution of ${this.options.name}`;
+    return `${this.options.actor.name}: ${this.options.name}`;
   }
   collapseStates = {
     dashUtility: true
@@ -1477,6 +1477,7 @@ class ActionDashboardApp extends FormApplication {
     event.preventDefault();
     const context = this.getData();
     this.options.actor.rollActorCheck({modifier:context.formula,event:event,checkID:this.options.target,itemName:getProperty(context,'skill.name')});
+    this.close();
   }
   _onToggleCollapse(event){
     event.preventDefault();

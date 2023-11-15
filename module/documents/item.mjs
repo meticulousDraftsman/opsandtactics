@@ -455,11 +455,11 @@ export class OpsItem extends Item {
           // If it only has one flavor, nice and easy
           else if (flavors.length==1){
             // Check if it goes in the primary, then the secondary, and if neither then the extra
-            if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')){
+            if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
               mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
             }
-            else if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')){
+            else if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.secondary.push(new OperatorTerm({operator:'+'}));
               mods.goodBase.secondary = mods.goodBase.secondary.concat(part.terms);
             }
@@ -468,11 +468,11 @@ export class OpsItem extends Item {
               mods.goodBase.extra = mods.goodBase.extra.concat(part.terms);
             }
             // Same but bad
-            if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')){
+            if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.primary.push(new OperatorTerm({operator:'+'}));
               mods.badBase.primary = mods.badBase.primary.concat(part.terms);
             }
-            else if (flavors[0]==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')){
+            else if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.secondary.push(new OperatorTerm({operator:'+'}));
               mods.badBase.secondary = mods.badBase.secondary.concat(part.terms);
             }
