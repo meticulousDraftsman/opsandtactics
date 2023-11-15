@@ -1,0 +1,33 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Pilot",
+  "type": "skill",
+  "_id": "32yID02r45TtCI33",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {},
+    "ability": "dex",
+    "description": "<h3>Pilot (DEX) Trained Only</h3><p>This skill allows a character to successfully pilot aircraft of various types.</p><p>Typical piloting tasks don’t require checks. Checks are required during combat, for special maneuvers, in other extreme circumstances, or when the pilot wants to attempt something outside the normal parameters of the vehicle. When flying, the character can attempt simple maneuvers and stunts (actions in which the pilot attempts to do something complex very quickly or in a limited space). Each vehicle’s description includes a maneuver modifier that applies to Pilot checks made by the operator of the vehicle.</p><h3>Normal</h3><p>A pilot can fly attack helicopters and military prop aircraft but can not use any of the weapons or countermeasures.</p><h3>Special</h3><p>A character can take 10 when making a Pilot check.</p><p>There is no penalty for operating a general-purpose fixed-wing aircraft. Other types of aircraft (heavy aircraft, attack helicopters, and attack planes) require the corresponding Aircraft Operation feat, or else the character takes a −4 penalty on Pilot checks.</p><h3>Time</h3><p>A Pilot check costs 6 Combat Points.</p><h3>Try again?</h3><p>Most Pilot checks have consequences for failure that make trying again impossible.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1700002147961,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!32yID02r45TtCI33"
+}

@@ -1,0 +1,40 @@
+{
+  "folder": "Z2BPRQxhHg4VIbJ9",
+  "name": "Craft (Pharmaceutical)",
+  "type": "skill",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {
+      "yaQyYJFV": {
+        "type": "syn",
+        "value": null,
+        "active": false,
+        "name": "Knowledge (Earth and Life Sciences)"
+      }
+    },
+    "description": "<h1>Craft (INT)</h1><p>You are skilled at making various objects and substances. This skill encompasses several categories, each of them treated as a separate skill: Chemical, Electronics, Mechanical, Pharmaceutical, Structural, Visual Arts, and Writing.</p><p>Craft skills are specifically focused on creating objects. To use a Craft skill effectively, a character must have a kit or some other set of basic tools. The WP cost of this equipment varies according to the particular Craft skill.</p><p>To use Craft, first decide what the character is trying to make and consult the category descriptions below. If the character has enough WP to purchase the raw materials, make the Craft check against the given TN for the object in question. If the character fails the check, they do not make the object, and the raw materials are wasted (unless otherwise noted).</p><p>Generally, a character may take 10, when using a Craft skill to construct an object. A character may take 10 on a repair check or accomplish a jury-rig repair. Multiple attempts may be attempted, stacking on the previous attempt, each time using the same amount of raw materials each time, taking the same amount of time and adding each subsequent roll together, until the TN is achieved or the character chooses to stop.</p><p>The character may try as many times as they like, as long as they can afford the raw materials cost for each attempt.</p><h1>Craft (Pharmaceutical) Trained Only</h1><p>This skill allows a character to compound medicinal drugs to aid in recovery from treatable illnesses, and aid in recovering health.</p><p><strong>Antibacterial/Antiviral</strong> These are medicines that help combat disease. An antibacterial/antiviral drug gives a bonus on Fortitude Saving Throws made to resist the effects of a disease. The amount listed is for five doses.</p><table><tbody><tr><td data-colwidth=\"287\"><p style=\"text-align: center\"><strong>Material Cost</strong></p></td><td><p style=\"text-align: center\"><strong>Craft TN</strong></p></td><td><p style=\"text-align: center\"><strong>Effect</strong></p></td></tr><tr><td data-colwidth=\"287\"><p style=\"text-align: center\">3</p></td><td><p style=\"text-align: center\">15</p></td><td><p style=\"text-align: center\">+1 to Fort Save for disease</p></td></tr><tr><td data-colwidth=\"287\"><p style=\"text-align: center\">6</p></td><td><p style=\"text-align: center\">20</p></td><td><p style=\"text-align: center\">+2 to Fort Save for disease</p></td></tr><tr><td data-colwidth=\"287\"><p style=\"text-align: center\">9</p></td><td><p style=\"text-align: center\">25</p></td><td><p style=\"text-align: center\">+3 to Fort Save for disease</p></td></tr><tr><td data-colwidth=\"287\"><p style=\"text-align: center\">12</p></td><td><p style=\"text-align: center\">30</p></td><td><p style=\"text-align: center\">+4 to Fort Save for disease</p></td></tr><tr><td data-colwidth=\"287\"><p style=\"text-align: center\">15</p></td><td><p style=\"text-align: center\">35</p></td><td><p style=\"text-align: center\">+5 to Fort Save for disease</p></td></tr><tr><td data-colwidth=\"287\"><p style=\"text-align: center\">18</p></td><td><p style=\"text-align: center\">40</p></td><td><p style=\"text-align: center\">+6 to Fort Save for disease</p></td></tr><tr><td data-colwidth=\"287\"><p style=\"text-align: center\">21</p></td><td><p style=\"text-align: center\">45</p></td><td><p style=\"text-align: center\">+7 to Fort Save for disease</p></td></tr></tbody></table><p><strong>Analgesics/Painkillers</strong> These medicines allow a character to ignore pain and continue fighting, but only for a limited time. When the effects wear off, the healing effect of the painkillers go with it. Painkillers can only be given to a character with at least 1 XHP. A player who has 0 or less CHP has suffered serious injuries and must receive medical attention, and can not use painkillers. Painkillers only affect XHP. Painkillers can be crafted to last longer, heal more XHP, or both. Each upgrade increases the raw material WP cost by 3. The amount listed is for six doses.</p><table><tbody><tr><td><p><strong>Name</strong></p></td><td><p style=\"text-align: center;\"><strong>Base Craft TN</strong></p></td><td><p style=\"text-align: center;\"><strong>Length</strong></p></td><td><p style=\"text-align: center;\"><strong>Strength</strong></p></td></tr><tr><td><p>Painkillers</p></td><td><p style=\"text-align: center;\">10</p></td><td><p style=\"text-align: center;\">+4 TN and +3 WP per 1d3 hours</p></td><td><p style=\"text-align: center;\">+2 TN and +2 WP per 1d4 XHP restoration</p></td></tr></tbody></table><p><strong>Hemostat Medicine</strong> These medicines promote the clotting of blood. They reduce the bleed damage based on the level of the hemostat.</p><p>Hemostats can be crafted to heal more bleed damage. Each upgrade increases the raw material WP cost by 2. The amount listed is for ten doses.</p><table><tbody><tr><td><p><strong>Name</strong></p></td><td><p style=\"text-align: center;\"><strong>Base Craft TN</strong></p></td><td><p style=\"text-align: center;\"><strong>Strength</strong></p></td></tr><tr><td><p>Hemostat</p></td><td><p style=\"text-align: center;\">12</p></td><td><p style=\"text-align: center;\">+1 TN and +2 WP per bleed decrease</p></td></tr></tbody></table><p><strong>Antiseptic Medicine</strong> Antiseptics are substances that are applied to destroy microorganisms that are living on objects. These medicines give a bonus to all Treat Injury checks when used. The amount listed is for 20 doses.</p><table><tbody><tr><td><p><strong>Name</strong></p></td><td><p style=\"text-align: center\"><strong>Mat Cost</strong></p></td><td><p style=\"text-align: center\"><strong>Craft TN</strong></p></td><td><p style=\"text-align: center\"><strong>Effect</strong></p></td></tr><tr><td><p>Weak Antiseptics</p></td><td><p style=\"text-align: center\">1</p></td><td><p style=\"text-align: center\">8</p></td><td><p style=\"text-align: center\">+1 bonus</p></td></tr><tr><td><p>Standard Antiseptics</p></td><td><p style=\"text-align: center\">3</p></td><td><p style=\"text-align: center\">14</p></td><td><p style=\"text-align: center\">+3 bonus</p></td></tr><tr><td><p>Strong Antiseptics</p></td><td><p style=\"text-align: center\">6</p></td><td><p style=\"text-align: center\">18</p></td><td><p style=\"text-align: center\">+5 bonus</p></td></tr><tr><td><p>Concentrated Antiseptics</p></td><td><p style=\"text-align: center\">12</p></td><td><p style=\"text-align: center\">25</p></td><td><p style=\"text-align: center\">+8 bonus</p></td></tr></tbody></table><p><strong>Antidote</strong> Antidotes are substances that are used to counteract poison. The amount listed is for five doses. Antidotes can only counteract liquid or solid poisons.</p><table><tbody><tr><td><p><strong>Name</strong></p></td><td><p><strong>Material Cost</strong></p></td><td><p><strong>Craft TN</strong></p></td></tr><tr><td><p>Antidote</p></td><td><p style=\"text-align: center\">1</p></td><td><p style=\"text-align: center\">15</p></td></tr></tbody></table><h3>Special</h3><p>A character without a chemistry kit takes a −6 penalty on Craft (Pharmaceutical) checks.</p>",
+    "ability": "int"
+  },
+  "effects": [],
+  "sort": 125000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1699857983996,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "OaBKS1t2O1pGcycq",
+  "_key": "!items!OaBKS1t2O1pGcycq"
+}

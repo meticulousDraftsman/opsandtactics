@@ -8,8 +8,8 @@
     "magazine": {
       "loaded": {},
       "type": "cartridge",
-      "source": "bEQUEjhAs8hF5vEo,system.gear.resources.XCXT1iWC,cartridges.6pDprc6x",
-      "insideOut": "both",
+      "source": "",
+      "insideOut": "external",
       "heatBase": 0
     },
     "range": "80ft",
@@ -305,136 +305,7 @@
         "parent": "Loose",
         "note": ""
       },
-      "resources": {
-        "XCXT1iWC": {
-          "type": "cartridge",
-          "value": 10,
-          "max": 10,
-          "available": true,
-          "cartridges": {
-            "6pDprc6x": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -5,
-                "good": {
-                  "primary": "5d4",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": "5.56x45mm",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "pZNaAAHV": {
-          "type": "cartridge",
-          "value": 10,
-          "max": 10,
-          "available": true,
-          "cartridges": {
-            "UFqDAIQe": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -5,
-                "good": {
-                  "primary": "5d4",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": "5.56x45mm",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "LQnxBWS3": {
-          "type": "cartridge",
-          "value": 10,
-          "max": 10,
-          "available": true,
-          "cartridges": {
-            "8kCKsujv": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -5,
-                "good": {
-                  "primary": "5d4",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": "5.56x45mm",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "tNcceYM9": {
-          "type": "cartridge",
-          "value": 10,
-          "max": 10,
-          "available": true,
-          "cartridges": {
-            "ebAW2DUa": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -5,
-                "good": {
-                  "primary": "5d4",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": "5.56x45mm",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        }
-      },
+      "resources": {},
       "tons": false,
       "capital": false
     },
@@ -449,10 +320,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.0",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699668833165,
+    "modifiedTime": 1700006956737,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "G7uHnpc0DNT0FlF3",

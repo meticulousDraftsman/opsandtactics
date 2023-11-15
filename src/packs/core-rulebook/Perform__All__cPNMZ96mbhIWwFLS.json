@@ -1,0 +1,46 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Perform (All)",
+  "type": "skill",
+  "_id": "cPNMZ96mbhIWwFLS",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {
+      "2aeayIZj": {
+        "type": "syn",
+        "value": null,
+        "active": false,
+        "name": "Knowledge (Art)"
+      },
+      "HWXEZukw": {
+        "type": "syn",
+        "value": null,
+        "active": false,
+        "name": "Knowledge (Popular Culture)"
+      }
+    },
+    "ability": "cha",
+    "description": "<h1>Perform (CHA)</h1><p>The character is skilled in a form of entertainment. This skill encompasses several categories, each of them treated as a separate skill. These categories are identified and defined below.</p><p>The number of Perform categories is purposefully kept finite. When trying to determine what Perform skill a particular type of performance falls under, use a broad interpretation of the existing categories.</p><h3>Check</h3><p>The character is accomplished in some type of artistic expression and knows how to put on a performance. The character can impress audiences with their talent and skill. The quality of the character’s performance depends on their check result.</p><p>The eight Perform categories and the qualities each one encompasses are as follows:</p><ul><li><p><strong>Act</strong> The character is capable of performing drama, comedy, or action-oriented roles with some level of skill.</p></li><li><p><strong>Dance</strong> The character is capable of performing rhythmic and patterned bodily movements to music.</p></li><li><p><strong>Keyboards</strong> The character is a musician gifted with a talent for playing keyboard musical instruments, such as piano, organ, and synthesizer.</p></li><li><p><strong>Percussion</strong> Instruments The character is a musician gifted with a talent for playing percussion musical instruments, such as drums, cymbals, triangle, xylophone, and tambourine.</p></li><li><p><strong>Sing</strong> The character is a musician gifted with a talent for producing musical tones with their voice.</p></li><li><p><strong>Stand-up</strong> The character is capable of performing a stand-up routine before an audience.</p></li><li><p><strong>Stringed Instruments</strong> The character is a musician gifted with a talent for playing stringed musical instruments, such as banjo, guitar, harp, lute, sitar, and violin.</p></li><li><p><strong>Wind Instruments</strong> The character is a musician gifted with a talent for playing wind musical instruments, such as flute, bugle, trumpet, tuba, bagpipes, and trombone.</p><table><tbody><tr><td><p style=\"text-align: center\"><strong>Skill Check Result</strong></p></td><td><p style=\"text-align: center\"><strong>Effort Achieved</strong></p></td><td><p style=\"text-align: center\"><strong>Audience Reaction</strong></p></td></tr><tr><td><p style=\"text-align: center\">10</p></td><td><p style=\"text-align: center\">Amateur performance</p></td><td><p style=\"text-align: center\">Audience may appreciate your performance, but isn’t impressed</p></td></tr><tr><td><p style=\"text-align: center\">15</p></td><td><p style=\"text-align: center\">Routine performance</p></td><td><p style=\"text-align: center\">Audience enjoys your performance, but it isn’t exceptional</p></td></tr><tr><td><p style=\"text-align: center\">20</p></td><td><p style=\"text-align: center\">Great performance </p></td><td><p style=\"text-align: center\">Audience highly impressed</p></td></tr><tr><td><p style=\"text-align: center\">25</p></td><td><p style=\"text-align: center\">Memorable performance</p></td><td><p style=\"text-align: center\">Audience enthusiastic</p></td></tr><tr><td><p style=\"text-align: center\">30</p></td><td><p style=\"text-align: center\">Masterful performance</p></td><td><p style=\"text-align: center\">Audience awed</p></td></tr></tbody></table><h3>Special</h3><p>A character can take 10 when making a Perform check.</p><p>A character without an appropriate instrument automatically fails any Perform (Keyboard), Perform (Percussion), Perform (Stringed), or Perform (Wind) check they attempt. At the GM’s discretion, impromptu instruments may be employed, but the performer must take a −6 penalty on the check because their equipment, although usable, is inappropriate for the skill.</p><h3>Try Again?</h3><p>Not for the same performance and audience.</p><h3>Time</h3><p>A Perform check usually requires at least several minutes to an hour or more.</p></li></ul>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1700001751904,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!cPNMZ96mbhIWwFLS"
+}

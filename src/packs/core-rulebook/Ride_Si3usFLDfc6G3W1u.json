@@ -1,0 +1,40 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Ride",
+  "type": "skill",
+  "_id": "Si3usFLDfc6G3W1u",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {
+      "DXuwvvcf": {
+        "type": "syn",
+        "value": null,
+        "active": false,
+        "name": "Knowledge (Survival)"
+      }
+    },
+    "ability": "dex",
+    "description": "<h1>Ride (DEX)</h1><p>The character is skilled at riding mounts, usually a horse, but possibly something more exotic, like an elephant or camel.</p><p>Typical riding actions don’t require checks. You can saddle, mount, ride, and dismount from a mount without a problem. The following tasks do require checks. If you attempt to ride a creature that is ill suited as a mount, you take a −5 penalty on your Ride checks. In addition, attempting trick riding or commanding the animal to perform an unusual technique also requires a check.</p><p><strong>Guide with Knees [TN5]</strong> The character can react instantly to guide their mount with their knees so that the character can use both hands in combat or to perform some other action. Make the check at the start of the character’s round. If the character fails, they can only use one hand this round because the character needs to use the other to control their mount.</p><p><strong>Stay in Saddle [TN5]</strong> The character can react instantly to try to avoid falling when their mount rears or bolts unexpectedly or when the character takes damage.</p><p><strong>Fight while Mounted [TN20]</strong> While in combat, the character can attempt to control a mount that is not trained in combat riding. If the character succeeds they use only 6 Combat Points and the character can use their remaining Combat Points to do something else. If the character fails, they can do nothing else that round. If the character fails by more than 5, they lose control of the animal.</p><p>For animals trained in combat riding, the character does not need to make this check. Instead, the character can use 6 Combat Points to have the animal perform a trick (commonly, to attack). The character can use the rest of their Combat Points normally.</p><p><strong>Cover [TN15]</strong> The character can react instantly to drop down and hang alongside their mount, using it as ½ cover. The character can’t attack while using their mount as cover. If the character fails, they don’t get the cover benefit.</p><p><strong>Soft Fall [TN15]</strong> The character reacts instantly when they fall off a mount, such as when it is killed or when it falls, to try to avoid taking damage. If the character fails, they take 1d6 points of bludgeoning damage.</p><p><strong>Leap [TN15]</strong> The character can get their mount to leap obstacles as part of its movement. Use the character’s Ride modifier or the mount’s Athletics modifier (whichever is lower) when the mount makes its Athletics check. The character makes a TN15 Ride check to stay on the mount when it leaps.</p><p><strong>Fast Mount or Dismount [TN20]; armor penalty applies</strong> The character can mount or dismount by using 2 Combat Points. If the character fails the check mounting or dismounting costs 6 Combat Points. A character can’t attempt a fast mount or dismount unless they can perform the mount or dismount by spending 6 Combat Points this round, should the check fail.</p><h3>Special</h3><p>If the character is riding bareback (Without a saddle), they take a −5 penalty on Ride checks.</p><p>A character can take 10 when making a Ride check.</p><h3>Time</h3><p>Ride costs 6 Combat Points, except when otherwise noted for the special tasks listed above.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1700002831976,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!Si3usFLDfc6G3W1u"
+}

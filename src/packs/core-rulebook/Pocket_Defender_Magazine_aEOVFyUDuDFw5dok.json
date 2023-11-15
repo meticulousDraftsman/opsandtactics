@@ -1,0 +1,84 @@
+{
+  "folder": "Xr2Suzxa2frN3SHU",
+  "name": "Pocket Defender Magazine",
+  "type": "object",
+  "_id": "aEOVFyUDuDFw5dok",
+  "img": "systems/opsandtactics/icons/svg/magazine.svg",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": null,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "JdoDjggw": {
+          "type": "cartridge",
+          "value": 6,
+          "max": 6,
+          "available": true,
+          "cartridges": {
+            "90cBgzTR": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -1,
+                "good": {
+                  "primary": "1d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ".32 ACP",
+              "flavor": ""
+            }
+          },
+          "name": ""
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1700005764422,
+    "modifiedTime": 1700005865428,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!aEOVFyUDuDFw5dok"
+}

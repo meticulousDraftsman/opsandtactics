@@ -1,0 +1,33 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Linguistics",
+  "type": "skill",
+  "_id": "7Xzd2V4mSk6Ng080",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "focus",
+    "armor": {
+      "active": false
+    },
+    "mods": {},
+    "ability": "",
+    "description": "<h1>Linguistics (None) Trained Only</h1><p>This skill allows a character to speak, read, and write a language. The Linguistics skill doesn’t work like a standard skill.</p><ul><li><p>A character automatically knows how to read and write their native language; the character does not need ranks to do so.</p></li><li><p>To read, write and speak a language costs 1 modifier.</p></li><li><p>A character never makes Linguistics checks. A character either knows how to read and write a specific language or doesn’t.</p></li><li><p>A character may choose any language, modern or ancient. The GM may rule that a character can’t learn a specific language due to the circumstances of the campaign.</p></li></ul><h3>Language Groups</h3><p>There are thousands of languages to choose from when a character buys ranks in Linguistics. A few are listed here, sorted into their general language groups. A language’s group doesn’t matter when a character is buying ranks in Linguistics. This list is by no means exhaustive—there are many more language groups and most groups contain more languages than those listed here.</p><ul><li><p><strong>Greek</strong></p></li><li><p><strong>Gaelic</strong></p></li><li><p><strong>Chinese</strong> Cantonese, Mandarin,</p></li><li><p><strong>Germanic</strong> English, German</p></li><li><p><strong>Indic</strong> Hindi, Punjabi</p></li><li><p><strong>Pashto</strong></p></li><li><p><strong>Japanese</strong></p></li><li><p><strong>Korean</strong></p></li><li><p><strong>Romantic</strong> French, Italian, Latin<sup>*</sup>, Portuguese, Spanish</p></li><li><p><strong>Semitic</strong> Arabic, Hebrew</p></li><li><p><strong>Slavic</strong> Czech, Polish, Russian</p></li><li><p><strong>Turkish</strong></p></li></ul><p><sup>*</sup>This is an ancient language. In the modern world it is spoken only by scholars, or in some cases by small populations in isolated corners of the world.</p><h2>Modern Magika Language Groups</h2><ul><li><p><strong>Common</strong> Trade Bant Simplified</p></li><li><p><strong>Human</strong> Trade Bant Traditional</p></li><li><p><strong>Dragon</strong> Colate, Tiahma, Lungdao, Kobalthwyn</p></li><li><p><strong>Dwarven</strong> Modern Dwemer, Reformed Dwemer, Dvergjar<sup>*</sup></p></li><li><p><strong>Elven</strong> Eludein, Sidhe, Haramut, Islakawa</p></li><li><p><strong>Orcish</strong> Karkarash Proper, Karkarash Gutter, Karkarash Technical, Karkarash Expressive, Kardali<sup>*</sup></p></li></ul><p><sup>*</sup>This is an ancient language. In the modern world it is spoken only by scholars, or in some cases by small populations in isolated corners of the world.</p><h2>Advanced Arms Language Groups</h2><ul><li><p><strong>Polaran </strong>Polar</p></li><li><p><strong>Kandari</strong> Kandari</p></li></ul><h3>Synthetic Language Group</h3><p>Synthetics have a language group that only they can learn. The languages in the group are Glass, Penguin, Fruit, Beep, Devil, and Open Source Language (OSL). It cost 1 WP for a synthetic to learn how to read, write and speak one of these languages, in addition to the necessary skill point. Only synthetics may learn Glass, Penguin, Fruit, Devil, or Beep. It is advised that when playing a game using synthetics that the GM grant OSL as a free language to all non- synthetic PCs. The GM can represent this language group in any manner they see fit, but lines of programming code, rapid beeps and blips, flashes of various colored lights, and binary code are all good ways of doing that. The translator augmentation module can also be used to translate to and from these languages, and while it is able to generally convey most ideas fairly adequately, it can (and often does) mistranslate due to the massive language differences between a digital and traditional language. Performing any Speechcraft skill checks increases the TN by 10, when using a translator augmentation module to translate any non-synthetic language into a synthetic language, or to translate any synthetic language into a non-synthetic language</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1699999684715,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!7Xzd2V4mSk6Ng080"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Knowledge",
+  "sorting": "a",
+  "folder": "ziqdBVFWAXgpvJZS",
+  "type": "Item",
+  "_id": "9fCxpnsLWZqWSm9W",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1699928376283,
+    "modifiedTime": 1700005586814,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!9fCxpnsLWZqWSm9W"
+}

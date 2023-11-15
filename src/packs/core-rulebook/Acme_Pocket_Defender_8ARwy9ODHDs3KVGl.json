@@ -8,8 +8,8 @@
     "magazine": {
       "loaded": {},
       "type": "cartridge",
-      "source": "8ARwy9ODHDs3KVGl,system.gear.resources.4bFY7JMF,cartridges.tZzTT0jR",
-      "insideOut": "both",
+      "source": "",
+      "insideOut": "external",
       "heatBase": 0
     },
     "range": "25ft",
@@ -212,72 +212,7 @@
         "parent": "Loose",
         "note": ""
       },
-      "resources": {
-        "4bFY7JMF": {
-          "type": "cartridge",
-          "value": 6,
-          "max": 6,
-          "available": true,
-          "cartridges": {
-            "tZzTT0jR": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -1,
-                "good": {
-                  "primary": "1d6",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": ".32 ACP",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "CnKITekD": {
-          "type": "cartridge",
-          "value": 6,
-          "max": 6,
-          "available": true,
-          "cartridges": {
-            "EJVa6z7B": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -1,
-                "good": {
-                  "primary": "1d6",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": ".32 ACP",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        }
-      },
+      "resources": {},
       "tons": false,
       "capital": false
     },
@@ -292,10 +227,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.0",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699668115027,
+    "modifiedTime": 1700005898263,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "sAu9JRHd1pCrGJ4V",

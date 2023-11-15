@@ -1,0 +1,40 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Stealth",
+  "type": "skill",
+  "_id": "Bla2ZRLSaW8lPlDH",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {
+      "cp478RmW": {
+        "type": "syn",
+        "value": null,
+        "active": false,
+        "name": "Knowledge (Tactics)"
+      }
+    },
+    "ability": "dex",
+    "description": "<h1>Stealth (DEX)</h1><p>The character is skilled at avoiding detection, allowing them to slip past foes or strike from an unseen position, and pick pockets, draw hidden weapons, and take a variety of actions without being noticed. This skill covers hiding and moving silently.</p><h3>Movement</h3><p>Your Stealth check is opposed by the Perception check of anyone who might notice you. You can move at 2 Combat Points per 5’ and still use Stealth at no penalty. When moving at normal Combat Point cost, you take a −5 penalty. It is impossible to use Stealth while attacking. If people are observing you using any of their senses (typically sight) you can’t use Stealth.</p><h3>Pocketing an item</h3><p>A Stealth check [TN10] lets you palm a coin-sized, unattended object. Performing a minor feat of legerdemain, such as making a coin disappear, is also TN10 unless an observer is determined to note where the item went.</p><p>When you use this skill under close observation, your skill check is opposed by the observer’s Perception check. The observer’s success doesn’t prevent you from performing the action, just from doing it unnoticed.</p><h3>Conceal</h3><p>You can hide a small object (including a Medium or smaller weapon) on your body. Your Stealth check is opposed by the Perception check of anyone observing you or of anyone frisking you. In the latter case, the searcher gains a +4 bonus on the Perception check, since it is generally easier to find such an object than to hide it. Heavy or baggy clothing (such as an overcoat) grants you a +2 bonus on the check.</p><p>Drawing a hidden weapon is dependent on how it is holstered or sheathed, but doesn’t provoke an AoO.</p><h3>Pickpocket</h3><p>If you try to take something from a creature, you must make a Stealth check [TN20]. The opponent makes a Perception check to detect the attempt, opposed by the Stealth check result you achieved when you tried to grab the item. An opponent who succeeds on this check notices the attempt, regardless of whether you got the item. You cannot use this skill to take an object from another creature during combat if the creature is aware of your presence.</p><p>You can use Presence to allow you to use Stealth. A successful Presence check can give you the momentary diversion you need to attempt a Stealth check while people are aware of you.</p><h3>Time</h3><p>Normally, you make a Stealth check to hide or move silently as part of movement, but the Combat Point cost to move is doubled. Using Stealth to hide or move silently immediately after a ranged attack costs 6 Combat Points. Any Stealth check to conceal, or take an object costs 5 Combat Points. However, you may perform this Stealth check for 2 Combat Points by taking a −10 penalty on the check.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1700003006582,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!Bla2ZRLSaW8lPlDH"
+}

@@ -1,0 +1,33 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Perception",
+  "type": "skill",
+  "_id": "KQLOGO7C1Qui7n0o",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "focus",
+    "armor": {
+      "active": false
+    },
+    "mods": {},
+    "ability": "wis",
+    "description": "<h1>Perception (WIS)</h1><p>This skill allows a character to notice fine details and alert them to danger. Perception covers all five senses, including sight, hearing, touch, taste, and smell.</p><p>Perception has a number of uses, the most common of which is an opposed check versus an opponent’s Stealth check to notice the opponent and avoid being surprised. If you are successful, you notice the opponent and can react accordingly. If you fail, your opponent can take a variety of actions, including sneaking past you and attacking you.</p><p>Perception is also used to notice fine details in the environment. The TN to notice such details varies depending upon distance, the environment, and how noticeable the detail is. The following table gives a number of guidelines.</p><table><tbody><tr><td><p><strong>Perception</strong></p></td><td><p style=\"text-align: center\"><strong>TN</strong></p></td></tr><tr><td><p>Gunfire</p></td><td><p style=\"text-align: center\">See Text</p></td></tr><tr><td><p>Hear the sound of battle</p></td><td><p style=\"text-align: center\">-20</p></td></tr><tr><td><p>Notice the stench of rotting garbage</p></td><td><p style=\"text-align: center\">-15</p></td></tr><tr><td><p>Detect the smell of smoke</p></td><td><p style=\"text-align: center\">0</p></td></tr><tr><td><p>Hear the details of a conversation</p></td><td><p style=\"text-align: center\">0</p></td></tr><tr><td><p>Notice a visible creature</p></td><td><p style=\"text-align: center\">0</p></td></tr><tr><td><p>Determine if food is spoiled</p></td><td><p style=\"text-align: center\">5</p></td></tr><tr><td><p>Hear the sound of footsteps</p></td><td><p style=\"text-align: center\">10</p></td></tr><tr><td><p>Hear a gun being loaded and/or cocked</p></td><td><p style=\"text-align: center\">10</p></td></tr><tr><td><p>Hear the details of a whispered conversation</p></td><td><p style=\"text-align: center\">15</p></td></tr><tr><td><p>Find the average concealed door</p></td><td><p style=\"text-align: center\">15</p></td></tr><tr><td><p>Hear the sound of a key being turned in a lock</p></td><td><p style=\"text-align: center\">20</p></td></tr><tr><td><p>Notice a typical secret compartment or a simple trap</p></td><td><p style=\"text-align: center\">20</p></td></tr><tr><td><p>Notice a pickpocket</p></td><td><p style=\"text-align: center\">Opposed by Stealth</p></td></tr><tr><td><p>Notice a creature using Stealth</p></td><td><p style=\"text-align: center\">Opposed by Stealth</p></td></tr></tbody></table><table><tbody><tr><td><p><strong>Perception Modifiers</strong></p></td><td><p style=\"text-align: center\"><strong>TN</strong></p></td></tr><tr><td><p>Distance to the source, object, or creature</p></td><td><p style=\"text-align: center\">+3 per 10 feet beyond 100 feet</p></td></tr><tr><td><p>Through a closed door</p></td><td><p style=\"text-align: center\">+5</p></td></tr><tr><td><p>Through a wall</p></td><td><p style=\"text-align: center\">+10 per foot of thickness</p></td></tr><tr><td><p>Favorable conditions</p></td><td><p style=\"text-align: center\">-2</p></td></tr><tr><td><p>Unfavorable conditions</p></td><td><p style=\"text-align: center\">+5</p></td></tr><tr><td><p>Terrible conditions</p></td><td><p style=\"text-align: center\">+10</p></td></tr><tr><td><p>Creature making the check is distracted</p></td><td><p style=\"text-align: center\">+5</p></td></tr><tr><td><p>Creature making the check is asleep</p></td><td><p style=\"text-align: center\">+10</p></td></tr><tr><td><p>Creature or object is camouflaged</p></td><td><p style=\"text-align: center\">+15</p></td></tr></tbody></table><p>Favorable and unfavorable conditions depend upon the sense being used to make the check. For example, bright light might decrease the TN of checks involving sight, while torchlight or moonlight might give a penalty. Background noise might reduce a TN involving hearing, while competing odors might penalize any TN involving scent.</p><p>Terrible conditions are like unfavorable conditions, but more extreme. For example, candlelight for TNs involving sight, a roaring engine for TNs involving hearing, and an overpowering stench covering the area for TNs involving scent.</p><h3>Gunfire</h3><p>Perception to hearing gunfire is handled differently, due to the extremely ranged nature of gunfire. The size of the damage dice is first taken and added to the TN. The number of damage dice is counted and added to the TN. Finally, any bonus damage that the caliber has is added to the TN. This system is also used for Plasma Arms, Electric Arms, and Laser Arms.</p><table><tbody><tr><td><p><strong>Caliber Damage Dice and Modifiers</strong></p></td><td><p style=\"text-align: center\"><strong>TN</strong></p></td></tr><tr><td><p>D2</p></td><td><p style=\"text-align: center\">-8</p></td></tr><tr><td><p>D3</p></td><td><p style=\"text-align: center\">-12</p></td></tr><tr><td><p>D4</p></td><td><p style=\"text-align: center\">-15</p></td></tr><tr><td><p>D6</p></td><td><p style=\"text-align: center\">-18</p></td></tr><tr><td><p>D8</p></td><td><p style=\"text-align: center\">-21</p></td></tr><tr><td><p>D10</p></td><td><p style=\"text-align: center\">-24</p></td></tr><tr><td><p>D12</p></td><td><p style=\"text-align: center\">-30</p></td></tr><tr><td><p>Damage Bonus</p></td><td><p style=\"text-align: center\">-1 per +1</p></td></tr><tr><td><p>Damage Dice Number</p></td><td><p style=\"text-align: center\">-3 per dice</p></td></tr></tbody></table><h3>Special</h3><p>Creatures with the scent special quality have a +8 bonus on Perception checks made to detect a scent.</p><h3>Try Again</h3><p>Yes. You can try to sense something you missed the first time, so long as the stimulus is still present.</p><h3>Time</h3><p>Most Perception checks are reactive, made in response to observable stimulus. Intentionally searching for stimulus costs 6 Combat Points.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1700000282856,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!KQLOGO7C1Qui7n0o"
+}

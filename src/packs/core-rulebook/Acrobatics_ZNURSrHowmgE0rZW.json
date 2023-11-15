@@ -1,0 +1,33 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Acrobatics",
+  "type": "skill",
+  "_id": "ZNURSrHowmgE0rZW",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {},
+    "ability": "dex",
+    "description": "<h1>Acrobatics (DEX)</h1><p>This skill allows a character to keep their balance while traversing narrow or treacherous surfaces. The character can also dive, flip, jump, and roll to overcome obstacles and twist their body to escape.</p><p>If you take damage while using Acrobatics, you must immediately make another Acrobatics check at the same TN to avoid falling or being knocked prone.</p><p>In addition, you can move through a threatened square without provoking an AoO from an enemy by using Acrobatics. When moving in this way, you move at 1 Combat Point per 5’. You cannot use Acrobatics to move past foes if your Combat Point cost is increased due to carrying a medium or heavy load or wearing medium or heavy armor. The TNs listed are used to avoid an AoO due to movement. This TN increases by 2 for each additional opponent avoided in 1 round.</p><p>You can also use the Acrobatics skill to make jumps or to soften a fall. The base TN to make a jump is equal to the horizontal distance to be crossed or four times the vertical height. These TNs double if you do not have at least 10 feet of space to get a running start. The only Acrobatics modifiers that apply are those concerning the surface you are jumping from. If you fail this check by 4 or less, you can attempt a Reflex Saving Throw [TN15] to grab hold of the other side after having missed the jump. If you fail the Reflex Saving Throw, you fail to make the jump completely and fall (or land prone, in the case of a vertical jump). For a running jump, the result of your Acrobatics check indicates the distance traveled in the jump (and if the check fails, the distance at which you actually land and fall prone). Halve this result for a standing long jump to determine where you land. When falling more than 10’, a character can attempt a Reflex Saving Throw [TN10 + 1 per additional 10’ fallen] to soften their fall, reducing the fall damage by half.</p><p>You can also use the Acrobatics skill to slip out of bonds and escape from grapples.</p><table><tbody><tr><td><p style=\"\"><strong>Use</strong></p></td><td><p style=\"text-align: center\"><strong>TN</strong></p></td></tr><tr><td><p>Move through a threatened area</p></td><td><p style=\"text-align: center\">10 + Opponent's BAB</p></td></tr><tr><td><p>Move through an enemy's space</p></td><td><p style=\"text-align: center\">15 + Opponent's BAB</p></td></tr><tr><td><p>Rope/Bindings</p></td><td><p style=\"text-align: center\">10 + Binder's BAB</p></td></tr><tr><td><p>Grapple</p></td><td><p style=\"text-align: center\">10 + Grappler's BAB + FOC</p></td></tr></tbody></table><table><tbody><tr><td><p style=\"\"><strong>Surface Width</strong></p></td><td><p style=\"text-align: center\"><strong>TN</strong></p></td></tr><tr><td><p>&gt;3' wide</p></td><td><p style=\"text-align: center\">0<sup>1</sup></p></td></tr><tr><td><p>1-3' wide</p></td><td><p style=\"text-align: center\">5<sup>1</sup></p></td></tr><tr><td><p>7-11\" wide</p></td><td><p style=\"text-align: center\">10</p></td></tr><tr><td><p>2-6\" wide</p></td><td><p style=\"text-align: center\">20</p></td></tr><tr><td><p>&lt; 2\" wide</p></td><td><p style=\"text-align: center\">25</p></td></tr></tbody></table><table><tbody><tr><td colspan=\"2\"><p style=\"text-align: center\"><strong>Acrobatics TN Modifiers</strong></p></td></tr><tr><td><p>Slightly obstructed (gravel, sand)</p></td><td><p style=\"text-align: center\">+5</p></td></tr><tr><td><p>Severely obstructed (cavern, rubble)</p></td><td><p style=\"text-align: center\">+10</p></td></tr><tr><td><p>Slightly slippery (wet)</p></td><td><p style=\"text-align: center\">+5</p></td></tr><tr><td><p>Severely slippery (icy)</p></td><td><p style=\"text-align: center\">+10</p></td></tr><tr><td><p>Slightly sloped (less than 45°)</p></td><td><p style=\"text-align: center\">+5</p></td></tr><tr><td><p>Severely sloped (45° or more)</p></td><td><p style=\"text-align: center\">+10</p></td></tr><tr><td><p>Slightly unsteady (boat in rough water)</p></td><td><p style=\"text-align: center\">+5</p></td></tr><tr><td><p>Moderately unsteady (boat in a storm)</p></td><td><p style=\"text-align: center\">+10</p></td></tr><tr><td><p>Severely unsteady (earthquake)</p></td><td><p style=\"text-align: center\">+15</p></td></tr><tr><td><p>Move at normal CP cost on narrow or uneven surfaces</p></td><td><p style=\"text-align: center\">+5<sup>2</sup></p></td></tr></tbody></table><p>1 No Acrobatics check is needed to move across these surfaces unless the modifiers to the surface increase the TN to 10 or higher.</p><p>2 This does not apply to checks made to jump.</p><h3>Try Again?</h3><p>Varies. If the situation permits, you may make additional checks, as long as you’re not being actively opposed. If the TN to escape from rope or bindings is higher than 18 + your Acrobatics skill bonus, you can’t escape from the bonds using Acrobatics.</p><h3>Time</h3><p>Making an Acrobatics check to escape from bindings requires 1 minute of work. Escaping from a grapple or pin costs 6 Combat Points. All other Acrobatics check are made as part of another action or as a reaction to a situation.</p>"
+  },
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1699855507629,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!ZNURSrHowmgE0rZW"
+}

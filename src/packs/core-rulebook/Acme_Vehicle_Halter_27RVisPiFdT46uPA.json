@@ -8,8 +8,8 @@
     "magazine": {
       "loaded": {},
       "type": "cartridge",
-      "source": "27RVisPiFdT46uPA,system.gear.resources.7Knyyntq,cartridges.BzpEUs4A",
-      "insideOut": "both",
+      "source": "",
+      "insideOut": "external",
       "heatBase": 0
     },
     "range": "180ft",
@@ -455,168 +455,7 @@
         "parent": "Loose",
         "note": ""
       },
-      "resources": {
-        "7Knyyntq": {
-          "type": "cartridge",
-          "value": 5,
-          "max": 5,
-          "available": true,
-          "cartridges": {
-            "BzpEUs4A": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -16,
-                "good": {
-                  "primary": "10d8",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": ".50 BMG",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "GnTxVY0Z": {
-          "type": "cartridge",
-          "value": 5,
-          "max": 5,
-          "available": true,
-          "cartridges": {
-            "rSPdXHvM": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -16,
-                "good": {
-                  "primary": "10d8",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": ".50 BMG",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "5N0pWjk0": {
-          "type": "cartridge",
-          "value": 5,
-          "max": 5,
-          "available": true,
-          "cartridges": {
-            "NXQYCOYy": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -16,
-                "good": {
-                  "primary": "10d8",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": ".50 BMG",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "VdLeiDtM": {
-          "type": "cartridge",
-          "value": 5,
-          "max": 5,
-          "available": true,
-          "cartridges": {
-            "YiD9kkPb": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -16,
-                "good": {
-                  "primary": "10d8",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": ".50 BMG",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        },
-        "RSKZqJ62": {
-          "type": "cartridge",
-          "value": 5,
-          "max": 5,
-          "available": true,
-          "cartridges": {
-            "aK5Ap2tC": {
-              "stats": {
-                "check": 0,
-                "error": 0,
-                "recoil": -16,
-                "good": {
-                  "primary": "10d8",
-                  "primaryFlavor": "Ballistic",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                },
-                "bad": {
-                  "primary": "",
-                  "primaryFlavor": "",
-                  "secondary": "",
-                  "secondaryFlavor": "",
-                  "extra": ""
-                }
-              },
-              "name": ".50 BMG",
-              "flavor": ""
-            }
-          },
-          "name": "Magazine"
-        }
-      },
+      "resources": {},
       "tons": false,
       "capital": false
     },
@@ -631,10 +470,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.0",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699668679337,
+    "modifiedTime": 1700007060566,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "ownership": {

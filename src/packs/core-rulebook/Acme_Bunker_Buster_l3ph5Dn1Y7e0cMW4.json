@@ -9,7 +9,7 @@
       "loaded": {},
       "type": "cartridge",
       "source": "",
-      "insideOut": "both",
+      "insideOut": "external",
       "heatBase": 0
     },
     "range": "60ft",
@@ -254,10 +254,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.0",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699669293396,
+    "modifiedTime": 1700007399387,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "aUrAW3ng0udmOKI5",

@@ -1,0 +1,37 @@
+{
+  "folder": "ziqdBVFWAXgpvJZS",
+  "name": "Craft (None)",
+  "type": "skill",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {},
+    "description": "<h1>Craft (INT)</h1><p>You are skilled at making various objects and substances. This skill encompasses several categories, each of them treated as a separate skill: Chemical, Electronics, Mechanical, Pharmaceutical, Structural, Visual Arts, and Writing.</p><p>Craft skills are specifically focused on creating objects. To use a Craft skill effectively, a character must have a kit or some other set of basic tools. The WP cost of this equipment varies according to the particular Craft skill.</p><p>To use Craft, first decide what the character is trying to make and consult the category descriptions below. If the character has enough WP to purchase the raw materials, make the Craft check against the given TN for the object in question. If the character fails the check, they do not make the object, and the raw materials are wasted (unless otherwise noted).</p><p>Generally, a character may take 10, when using a Craft skill to construct an object. A character may take 10 on a repair check or accomplish a jury-rig repair. Multiple attempts may be attempted, stacking on the previous attempt, each time using the same amount of raw materials each time, taking the same amount of time and adding each subsequent roll together, until the TN is achieved or the character chooses to stop.</p><p>The character may try as many times as they like, as long as they can afford the raw materials cost for each attempt.</p>",
+    "ability": "int"
+  },
+  "effects": [],
+  "sort": 800000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.l4CP8lX7ZuwEKsWd"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1699857983996,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "cN8n9w9MCF7wisnI",
+  "_key": "!items!cN8n9w9MCF7wisnI"
+}

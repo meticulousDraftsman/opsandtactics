@@ -1,0 +1,40 @@
+{
+  "folder": "Z2BPRQxhHg4VIbJ9",
+  "name": "Craft (Electronics)",
+  "type": "skill",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": true
+    },
+    "mods": {
+      "fJ31istb": {
+        "type": "syn",
+        "value": null,
+        "active": false,
+        "name": "Knowledge (Physical Sciences)"
+      }
+    },
+    "description": "<h1>Craft (INT)</h1><p>You are skilled at making various objects and substances. This skill encompasses several categories, each of them treated as a separate skill: Chemical, Electronics, Mechanical, Pharmaceutical, Structural, Visual Arts, and Writing.</p><p>Craft skills are specifically focused on creating objects. To use a Craft skill effectively, a character must have a kit or some other set of basic tools. The WP cost of this equipment varies according to the particular Craft skill.</p><p>To use Craft, first decide what the character is trying to make and consult the category descriptions below. If the character has enough WP to purchase the raw materials, make the Craft check against the given TN for the object in question. If the character fails the check, they do not make the object, and the raw materials are wasted (unless otherwise noted).</p><p>Generally, a character may take 10, when using a Craft skill to construct an object. A character may take 10 on a repair check or accomplish a jury-rig repair. Multiple attempts may be attempted, stacking on the previous attempt, each time using the same amount of raw materials each time, taking the same amount of time and adding each subsequent roll together, until the TN is achieved or the character chooses to stop.</p><p>The character may try as many times as they like, as long as they can afford the raw materials cost for each attempt.</p><h1>Craft (Electronics)</h1><p>This skill allows a character to build electronic equipment from scratch, such as audio and video equipment, timers and listening devices, or radios and communication devices. When building an electronic device from scratch, the character describes the kind of device they want to construct; then the GM decides whether the device fits the definition of a simple, moderate, complex, or advanced device compared to current technology.</p><p>A character without an electronics tool kit takes a −6 penalty on Craft (Electronics) checks.</p><h3>Simple</h3><p>This category includes items such as clocks, timers, simple circuits, single mode detonators, and other simple electronics. The TN for these items is 15, the WP cost for a simple device will not exceed 4, and the time taken to build it will not exceed 2 hours.</p><h3>Moderate</h3><p>This category includes items such as electronic locks, radios, televisions, and remote controls. The TN for these items is 20, the WP cost for a moderate device will not exceed 20, and the time taken to build it will not exceed 12 hours.</p><h3>Complex</h3><p>This category includes items such as computers, cell phones, GPS equipment, and camcorders. The TN for these items is 25, the WP cost for a complex device will not exceed 25, and the time taken to build it will not exceed 24 hours.</p><h3>Advanced</h3><p>This category includes items such as server towers, the wiring system for a automobile, and the electrical system for a robot. The TN for these items is 30, the WP cost for a complex device will not exceed 500, and the time taken to build it will not exceed 60 hours.</p><h3>Repairing</h3><p>Most Repair checks are made to fix complex or advanced electronic devices. The TN is set by the GM. In general, simple repairs have a TN of 10 to 15 and require no more than a few minutes to accomplish. More complex repair work has a TN of 20 or higher and can require an hour or more to complete. Making repairs also involves a monetary cost when spare parts or new components are needed, represented by either buying or procuring them. If the GM decides this isn’t necessary for the type of repair the character is attempting, then the parts are not required.</p><p>A character can choose to attempt to jury-rig, or make temporary repairs. Doing this reduces the Repair check TN by 5, and allows the character to make the checks for 12 Combat Points. However, a jury-rigged repair can only fix a single problem with a check, and the temporary repair only lasts until the end of the current scene or encounter. The jury-rigged object must be fully repaired thereafter.</p><p>A character can also jury-rig and jump-start an electronic device. The TN for this is at least 15 and it can be higher depending on the presence of security devices.</p><table><tbody><tr><td><p><strong>Repair Task Example</strong></p></td><td><p style=\"text-align: center\"><strong>Cost</strong></p></td><td><p style=\"text-align: center\"><strong>Repair TN</strong></p></td><td><p style=\"text-align: center\"><strong>Time</strong></p></td></tr><tr><td><p>Simple</p></td><td><p style=\"text-align: center\">1</p></td><td><p style=\"text-align: center\">10</p></td><td><p style=\"text-align: center\">1 min.</p></td></tr><tr><td><p>Moderate</p></td><td><p style=\"text-align: center\">3</p></td><td><p style=\"text-align: center\">15</p></td><td><p style=\"text-align: center\">10 min.</p></td></tr><tr><td><p>Complex</p></td><td><p style=\"text-align: center\">6</p></td><td><p style=\"text-align: center\">20</p></td><td><p style=\"text-align: center\">1 hour</p></td></tr><tr><td><p>Advanced</p></td><td><p style=\"text-align: center\">12</p></td><td><p style=\"text-align: center\">25</p></td><td><p style=\"text-align: center\">10 hours</p></td></tr></tbody></table>",
+    "ability": "int"
+  },
+  "effects": [],
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1699857983996,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "l7NGXGK10mcUJNo3",
+  "_key": "!items!l7NGXGK10mcUJNo3"
+}

@@ -1,0 +1,37 @@
+{
+  "folder": "9fCxpnsLWZqWSm9W",
+  "name": "Knowledge (Art)",
+  "type": "skill",
+  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "system": {
+    "ranks": null,
+    "focus": "unfocus",
+    "armor": {
+      "active": false
+    },
+    "mods": {},
+    "description": "<h1>Knowledge (INT) Trained Only</h1><p>This skill allows a character to be knowledgeable in a particular area of lore.</p><p>A character makes a Knowledge check to see if the character knows something. When trying to determine what Knowledge skill a particular question or field of expertise falls under, use a broad interpretation of the existing categories. When answering a question, the TN for answering within the character’s field of study varies by the difficulty of the question asked.</p><p>Knowledge checks can also be used to create opportunities that would otherwise not exist, if the character was not knowledgeable in the area.</p><table><tbody><tr><td><p><strong>Question/Opportunity</strong></p></td><td><p style=\"text-align: center\"><strong>TN</strong></p></td></tr><tr><td><p>Very Easy</p></td><td><p style=\"text-align: center\">5</p></td></tr><tr><td><p>Easy</p></td><td><p style=\"text-align: center\">10</p></td></tr><tr><td><p>Basic</p></td><td><p style=\"text-align: center\">15</p></td></tr><tr><td><p>Difficult</p></td><td><p style=\"text-align: center\">20</p></td></tr><tr><td><p>Hard</p></td><td><p style=\"text-align: center\">25</p></td></tr><tr><td><p>Very Hard</p></td><td><p style=\"text-align: center\">30</p></td></tr><tr><td><p>Nearly Impossible</p></td><td><p style=\"text-align: center\">40</p></td></tr></tbody></table><h1>Art </h1><p>Fine arts and graphic arts, including art history and artistic techniques, as well as literary works. Antiques, modern art, photography, and performance art forms such as music and dance, among others.</p><p>Art can give a synergy bonus to a Perform (Any), or Craft (Visual art or Writing) skill. The character must select one specific skill to receive the bonus in.</p><h3>Synergies</h3><p>A Synergy is a representation of knowledge that can aid someone in completing a task. When a character puts ranks in any knowledge skill, they can choose the skill that they wish for the synergy to go to immediately.</p><p>For every +4 total skill modifier the character has in that knowledge skill, and they have at least 1 rank in that knowledge skill, they receive a +1 miscellaneous bonus to the selected skill.</p><h3>Multiple Synergies</h3><p>A character can have multiple synergies for a single skill. When this is the case, you simply add all of the synergy bonuses and add them to the selected skill.</p><h3>Special</h3><p>An untrained Knowledge check is simply an INT check. Without actual training, a character only knows common knowledge about a given subject.</p><p>A character can take 10 when making a Knowledge check.</p><h3>Try Again?</h3><p>No. The check represents what a character knows and thinking about a topic a second time doesn’t let the character know something they never knew in the first place.</p><h3>Time</h3><p>A Knowledge check can be a reaction, but otherwise costs 12 Combat Points.</p>",
+    "ability": "int"
+  },
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.8ZxurtTrvyJ2BREW"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.0",
+    "coreVersion": "11.315",
+    "createdTime": 1699927766250,
+    "modifiedTime": 1700005586871,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "W8ljGgyTLtT0iCCa",
+  "_key": "!items!W8ljGgyTLtT0iCCa"
+}
