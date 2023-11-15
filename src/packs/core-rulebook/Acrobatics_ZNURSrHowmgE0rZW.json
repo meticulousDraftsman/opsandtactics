@@ -8,7 +8,7 @@
     "ranks": null,
     "focus": "unfocus",
     "armor": {
-      "active": true
+      "active": 2
     },
     "mods": {},
     "ability": "dex",
@@ -23,10 +23,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.1",
     "coreVersion": "11.315",
     "createdTime": 1699855507629,
-    "modifiedTime": 1700005586871,
+    "modifiedTime": 1700033719436,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!ZNURSrHowmgE0rZW"

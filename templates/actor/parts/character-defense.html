@@ -33,7 +33,7 @@
       <span>Max Agility</span>
       <input type="text" value="{{#if system.stats.agiMax includeZero=true}}{{numberFormat system.stats.agiMax sign=true}}{{/if}}" data-dtype="Number" placeholder="n/A" readonly/>
       <span>Armor Penalty</span>
-      <input type="text" value="{{numberFormat system.stats.armorPenalty.value sign=true}}" data-dtype="Number" readonly/>
+      <input type="text" value="{{numberFormat system.stats.armorPenalty.value sign=true}}{{#if system.stats.armorNoProf}} / {{numberFormat system.stats.armorNoProf sign=true}}{{/if}}" data-dtype="Number" readonly/>
       <span>CP Loss</span>
       <input type="text" value="{{system.cp.armor.value}} CP to move" data-dtype="Number" readonly/>
     </div>

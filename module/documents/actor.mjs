@@ -61,6 +61,7 @@ export class OpsActor extends Actor {
     systemData.def.dodge.value = systemData.def.dodge.subtotal;
     systemData.def.misc.value = systemData.def.misc.subtotal;
     systemData.stats.armorPenalty.value = systemData.stats.armorPenalty.subtotal;
+    systemData.stats.armorNoProf = systemData.stats.armorPenalty.subtotal;
     systemData.cp.armor.value = systemData.cp.armor.subtotal;
     // Initially no cap on agility
     systemData.stats.agiMax = null;
@@ -69,6 +70,7 @@ export class OpsActor extends Actor {
       if (i.type === 'armor' && i.system.active){
         systemData.def.equip.value += i.system.def;
         systemData.stats.armorPenalty.value += i.system.penalty;
+        if (!i.system.proficient) systemData.stats.armorNoProf += i.system.penalty;
         systemData.cp.armor.value += i.system.cpLoss;
         if (i.system.agiMax != null){
           if (agiClamp){

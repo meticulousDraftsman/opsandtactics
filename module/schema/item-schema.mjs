@@ -32,7 +32,7 @@ export class OpsSkill extends foundry.abstract.DataModel {
             ability: new field.StringField(),
             focus: new field.StringField({initial:"unfocus"}),
             armor: new field.SchemaField({
-                active: new field.BooleanField({initial:false}), 
+                active: new field.NumberField({initial:0}),
             }),
             mods: new field.ObjectField({}),
         }
@@ -57,6 +57,7 @@ export class OpsArmor extends foundry.abstract.DataModel{
             def: new field.NumberField(),
             agiMax: new field.NumberField(),
             penalty: new field.NumberField(),
+            proficient: new field.BooleanField({initial:true}),
             cpLoss: new field.NumberField(),
             protection: new field.ObjectField(),
             activeDR: new field.StringField(),

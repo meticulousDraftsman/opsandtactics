@@ -38,8 +38,15 @@
             </div>
             <span>Ranks</span>
             <input name="system.ranks" type="text" value="{{system.ranks}}" placeholder="0" data-dtype="Number"/>
-            <Span>Armor Penalty</Span>
-            <input name="system.armor.active" type="checkbox" {{checked system.armor.active}}/>
+            <span class="grid-span-2"></span>
+            <span>Armor Penalty</span>
+            <select class="grid-span-3" name="system.armor.active" data-dtype="Number">
+              {{#select system.armor.active}}
+              <option value="0">None</option>
+              <option value="1">Non-Proficient</option>
+              <option value="2">Proficient</option>
+              {{/select}}
+            </select>
           </div>
         </div>
         <i>{{item.mods.label}}</i>

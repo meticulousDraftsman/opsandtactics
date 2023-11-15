@@ -18,6 +18,20 @@
                     Armor Statistics {{#if item.actor}}<a class="item-control self-destruct" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
                 </legend>
                 <div class="grid grid-4col flex-group-center">
+                    <label class="grid-span-2 grid grid-2col flex-group-center">
+                        <span>Active</span>
+                        <div>
+                            <input name="system.active" type="checkbox" {{checked system.active}}/>
+                        </div>
+                    </label>
+                    <label class="grid-span-2 grid grid-2col flex-group-center">
+                        <span>Physical</span>
+                        <div>
+                            <input name="system.gear.physical" type="checkbox" {{checked system.gear.physical}}/>
+                        </div>
+                    </label>
+                    <span>Defense Bonus</span>
+                    <input name="system.def" type="text" value="{{system.def}}" data-dtype="Number" placeholder="0"/>
                     <span>Layer</span>
                     <select class="flex-group-center" name="system.layer" data-dtype="String">
                         {{#select system.layer}}
@@ -27,11 +41,9 @@
                             <option value="shield">Shield</option>
                             <option value="magic">Magic</option>
                         {{/select}}
-                    </select>
-                    <span>Active</span>
-                    <div>
-                        <input name="system.active" type="checkbox" {{checked system.active}}/>
-                    </div>
+                    </select>   
+                    <span>Max Agility</span>
+                    <input name="system.agiMax" type="text" value="{{system.agiMax}}" data-dtype="Number" placeholder="None"/>
                     {{#if (eq system.layer "shield")}}
                     <span>Shield Soak</span>
                     {{else}}
@@ -41,19 +53,20 @@
                         <input class="flex3" name="system.ap.value" type="text" value="{{system.ap.value}}" data-dtype="Number"/>
                         <span>/</span>
                         <input class="flex3" name="system.ap.max" type="text" value="{{system.ap.max}}" data-dtype="Number"/>
-                    </div>
-                    <span>Physical</span>
-                    <div>
-                        <input name="system.gear.physical" type="checkbox" {{checked system.gear.physical}}/>
-                    </div>
-                    <span>Defense Bonus</span>
-                    <input name="system.def" type="text" value="{{system.def}}" data-dtype="Number" placeholder="0"/>
-                    <span>Max Agility</span>
-                    <input name="system.agiMax" type="text" value="{{system.agiMax}}" data-dtype="Number" placeholder="None"/>
+                    </div>  
                     <span>Armor Penalty</span>
                     <input name="system.penalty" type="text" value="{{system.penalty}}" data-dtype="Number" placeholder="0"/>
+                    <select class="grid-span-2 flex-group-center" name="system.proficient" data-dtype="Boolean">
+                        {{#select system.proficient}}
+                        <option value="true">Proficient Penalty</option>
+                        <option value="false">Non-Proficient Penalty</option>
+                        {{/select}}
+                    </select>
                     <span>CP Loss</span>
                     <input name="system.cpLoss" type="text" value="{{system.cpLoss}}" data-dtype="Number" placeholder="0"/>
+
+                 
+     
                 </div>
             </fieldset>
             <fieldset>

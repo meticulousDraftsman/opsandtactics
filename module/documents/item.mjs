@@ -691,9 +691,18 @@ export class OpsItem extends Item {
       equip: 0,
       syn: 0,
       occ: (tweakedThis.system.focus == 'double' ? 1 : 0),
-      armor: (tweakedThis.system.armor.active ? (this?.actor ? this.actor.system.stats.armorPenalty.value : null) : null),
       misc: 0
     };
+    switch (tweakedThis.system.armor.active){
+      case 1:
+        mods.armor = getProperty(this,'actor.system.stats.armorNoProf');
+        break;
+      case 2:
+        mods.armor = getProperty(this,'actor.system.stats.armorPenalty.value');
+        break;
+      default:
+        mods.armor = null;
+    }
     for (let [,mod] of Object.entries(tweakedThis.system.mods)){
       if (mod.active) mods[mod.type] += Number(mod.value);
     }
