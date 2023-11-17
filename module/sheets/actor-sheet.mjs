@@ -1265,6 +1265,7 @@ class AttackDashboardApp extends FormApplication {
           break;
       }
     }
+    if (getProperty(context.action,'dice.scaleCartridge.bar')>0) context.action.dice.scaleCartridge.lessBar = context.action.dice.scaleCartridge.bar-1;
     context.situational = getProperty(this.object,'situation')
     context.offenseTotal = Number(getProperty(this.object,'offense.high')?this.object.offense.high:0) + Number(getProperty(this.object,'offense.seen')?this.object.offense.seen:0) + Number(getProperty(this.object,'offense.flank')?this.object.offense.flank:0) + Number(getProperty(this.object,'offense.stance')?this.object.offense.stance:0) + Number(getProperty(this.object,'offense.face')?this.object.offense.face:0) + Math.floor(Number(getProperty(this.object,'offense.range')?this.object.offense.range:0) * -2 * Number(getProperty(this.object,'offense.rangeMult')?this.object.offense.rangeMult:1))
     context.defenseTotal = Number(getProperty(this.object,'defense.pin')?this.object.defense.pin:0) + Number(getProperty(this.object,'defense.stun')?this.object.defense.stun:0) + Number(getProperty(this.object,'defense.climb')?this.object.defense.climb:0) + Number(getProperty(this.object,'defense.stance')?this.object.defense.stance:0)

@@ -376,6 +376,10 @@
 .opsandtactics .resource-label {
   font-weight: bold;
 }
+.opsandtactics .bonus-dice {
+  margin: 5px;
+  width: 30px;
+}
 .opsandtactics .items-header {
   height: 28px;
   margin: 2px 0;

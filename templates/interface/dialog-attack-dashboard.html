@@ -281,6 +281,23 @@
                             </div>
                             {{/if}}
                             {{/if}}
+                            <div class="flex-group-center grid-span-5" style="display:flex; flex-wrap: wrap;">
+                                <span>For damage with </span>
+                                <input class="bonus-dice"  type="text" value="{{action.dice.scaleCartridge.lessBar}}" readonly>
+                                <span> or less dice gain </span>
+                                <input class="bonus-dice" type="text" value="{{action.dice.scaleCartridge.less}}" name="tweaks.item.system.actions.{{target}}.dice.scaleCartridge.less">
+                                <span> dice. For damage with </span>
+                                <input class="bonus-dice" type="text" value="{{action.dice.scaleCartridge.bar}}" name="tweaks.item.system.actions.{{target}}.dice.scaleCartridge.bar">
+                                <span> or more dice gain </span>
+                                <input class="bonus-dice" type="text" value="{{action.dice.scaleCartridge.more}}" name="tweaks.item.system.actions.{{target}}.dice.scaleCartridge.more">
+                                <span> dice. For every </span>
+                                <input class="bonus-dice" type="text" value="{{action.dice.scaleCartridge.per}}" name="tweaks.item.system.actions.{{target}}.dice.scaleCartridge.per">
+                                <span> dice past </span>
+                                <input class="bonus-dice" type="text" readonly value="{{action.dice.scaleCartridge.bar}}">
+                                <span> gain </span>
+                                <input class="bonus-dice" type="text" value="{{action.dice.scaleCartridge.scale}}" name="tweaks.item.system.actions.{{target}}.dice.scaleCartridge.scale">
+                                <span> dice.</span>
+                            </div>
                         </div>
                         <div class="grid grid-2col flex-group-center">
                             <div>
