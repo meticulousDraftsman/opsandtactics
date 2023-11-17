@@ -27,7 +27,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "mrk",
           "flavor": "[TN15] Fortitude or blinded for [[/r 1d4]] rounds"
         },
         "effect": {
@@ -103,10 +103,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.2",
     "coreVersion": "11.315",
     "createdTime": 1699665571160,
-    "modifiedTime": 1699734888047,
+    "modifiedTime": 1700189032801,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!84qRYl4AF1TMyc01"

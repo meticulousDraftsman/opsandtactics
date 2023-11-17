@@ -24,7 +24,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": ""
         },
         "effect": {
@@ -32,7 +32,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "-3",
-          "ability": "",
+          "ability": "pow",
           "flavor": ""
         },
         "dice": {
@@ -66,7 +66,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": ""
         },
         "effect": {
@@ -74,7 +74,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "pow",
           "flavor": ""
         },
         "dice": {
@@ -108,7 +108,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": ""
         },
         "effect": {
@@ -116,7 +116,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "pow",
           "flavor": ""
         },
         "dice": {
@@ -150,7 +150,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": ""
         },
         "effect": {
@@ -158,7 +158,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "+4",
-          "ability": "",
+          "ability": "pow",
           "flavor": ""
         },
         "dice": {
@@ -219,10 +219,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.2",
     "coreVersion": "11.315",
     "createdTime": 1699679376520,
-    "modifiedTime": 1699679857402,
+    "modifiedTime": 1700189513107,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "0Jdqa4jmRfgQH7va",

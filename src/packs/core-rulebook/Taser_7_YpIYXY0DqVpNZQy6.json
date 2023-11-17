@@ -39,7 +39,7 @@
             }
           },
           "inherent": "",
-          "ability": "",
+          "ability": "mrk",
           "flavor": "[TN20] Fortitude or paralyzed for [[/r 1d3]] rounds"
         },
         "effect": {
@@ -185,7 +185,7 @@
             }
           },
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN20] Fortitude or paralyzed for [[/r 1d3]] rounds"
         },
         "effect": {
@@ -247,7 +247,7 @@
             }
           },
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN20] Fortitude or paralyzed for [[/r 1d3]] rounds"
         },
         "effect": {
@@ -309,7 +309,7 @@
             }
           },
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN20] Fortitude or paralyzed for [[/r 1d3]] rounds"
         },
         "effect": {
@@ -371,7 +371,7 @@
             }
           },
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN20] Fortitude or paralyzed for [[/r 1d3]] rounds"
         },
         "effect": {
@@ -472,10 +472,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.2",
     "coreVersion": "11.315",
     "createdTime": 1699670120642,
-    "modifiedTime": 1699735087160,
+    "modifiedTime": 1700189276248,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "YpIYXY0DqVpNZQy6",

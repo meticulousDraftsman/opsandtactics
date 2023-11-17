@@ -25,7 +25,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "mrk",
           "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
         },
         "effect": {
@@ -151,7 +151,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
         },
         "effect": {
@@ -193,7 +193,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
         },
         "effect": {
@@ -235,7 +235,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
         },
         "effect": {
@@ -277,7 +277,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "foc",
           "flavor": "[TN15] Fortitude or paralyzed for [[/r 1d6]] rounds"
         },
         "effect": {
@@ -362,10 +362,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.2",
     "coreVersion": "11.315",
     "createdTime": 1699670120642,
-    "modifiedTime": 1699734997143,
+    "modifiedTime": 1700189197066,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "wF0yLDF0dkbPDBxj",

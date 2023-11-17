@@ -681,8 +681,8 @@
       }
     },
     "selectMod": "",
-    "importFilter": "Core: Heavy Rifle",
-    "importMod": "6.5mm Creedmoor |  | 6d4 | | -7 |  | Heavy Rifle, Medium Rifle",
+    "importFilter": "",
+    "importMod": "",
     "gear": {
       "quantity": {
         "value": 1,
@@ -713,10 +713,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.2",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1700007376250,
+    "modifiedTime": 1700188606420,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "AM0W83SBbDdK6en6",

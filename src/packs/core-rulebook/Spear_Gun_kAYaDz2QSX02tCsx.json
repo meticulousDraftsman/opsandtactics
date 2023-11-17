@@ -27,7 +27,7 @@
           "ammo": true,
           "mods": {},
           "inherent": "",
-          "ability": "",
+          "ability": "mrk",
           "flavor": ""
         },
         "effect": {
@@ -145,10 +145,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.2",
     "coreVersion": "11.315",
     "createdTime": 1699665133609,
-    "modifiedTime": 1699669717386,
+    "modifiedTime": 1700189005062,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!kAYaDz2QSX02tCsx"
