@@ -114,9 +114,8 @@ export class OpsItem extends Item {
   }
 
   async rollActionCheck(checkData){
-    console.debug(checkData)
     // Check resource consumption and override
-    let ammoCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.resourceAvailableCheck(getProperty(this,`system.actions.${checkData.actionID}.ammo`));
+    let ammoCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.resourceAvailableCheck(checkData.ammo?checkData.ammo:getProperty(this,`system.actions.${checkData.actionID}.ammo`));
     let cpCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.actor.cpAvailableCheck(checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     if (!ammoCheck || !cpCheck){
       await Dialog.confirm({
@@ -154,7 +153,7 @@ export class OpsItem extends Item {
 
     // Perform resource consumption
     if (!(checkData.event && checkData.event.altKey)){
-      await this.resourceConsume(getProperty(this,`system.actions.${checkData.actionID}.ammo`));
+      await this.resourceConsume(checkData.ammo?checkData.ammo:getProperty(this,`system.actions.${checkData.actionID}.ammo`));
       await this.actor.attributeConsume('system.cp.value',checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     }
 
@@ -559,7 +558,7 @@ export class OpsItem extends Item {
       }
     }
     // Handle Ammo and CP/Ammo Label
-    mods.ammo = sourceAction.ammo?sourceAction.ammo:null;
+    mods.ammo = sourceAction.ammo?Number(sourceAction.ammo):null;
     let ammoLabel;
     switch (tweakedThis.type){
       case 'weapon':

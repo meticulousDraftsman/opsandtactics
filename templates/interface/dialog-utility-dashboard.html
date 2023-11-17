@@ -13,34 +13,50 @@
                 {{/if}}
             </div>
         </fieldset>
-        <hr>
-        <div class="grid grid-2col flex-group-center">
-            {{#if item}}
-            <fieldset class="action-item">
-                <div class="flex-group-center">
-                    <a class="resource-label utility-roll">{{#if (eq action.check.type 'otherUtility')}}Roll{{else}}Check{{/if}}: {{formula}}</a>
-                </div>
-            </fieldset>
-            <div class="flexcol">
+        <fieldset>
+            <legend class="resource-label">
+                {{action.name}}
+            </legend>
+            <div class="flex-group-center">
+                {{#if item}}
                 <fieldset class="action-item">
                     <div class="flex-group-center">
-                        <a class="resource-label effect-roll">{{utilityMods.effectGood.primaryLabel}}</a>
+                        <a class="resource-label utility-roll">{{#if (eq action.check.type 'otherUtility')}}Roll{{else}}Check{{/if}}: {{formula}}</a>
                     </div>
                 </fieldset>
-            </div>
-            {{else}}
-            <fieldset class="grid-span-2 action-item">
-                <div class="flex-group-center">
-                    <a class="resource-label utility-roll">Check: {{formula}}</a>
+                <i>{{action.check.flavor}}</i>
+                <div class="flexcol">
+                    <fieldset class="action-item">
+                        <div class="flex-group-center">
+                            <a class="resource-label effect-roll">{{utilityMods.effectGood.primaryLabel}}</a>
+                        </div>
+                    </fieldset>
+                </div>
+                <i>{{action.effect.flavor}}</i>
+                {{else}}
+                <fieldset class="grid-span-2 action-item">
+                    <div class="flex-group-center">
+                        <a class="resource-label utility-roll">Check: {{formula}}</a>
+                    </div>
+                </fieldset>
+                <i>{{action.check.flavor}}</i>
+                {{/if}}
+            </div> 
+            {{#if (or (eq item.type 'object') (eq item.type 'magic'))}}
+            <fieldset>
+                <legend class="resource-label">Resource Usage</legend>
+                <div class="grid grid-6col flex-group-center">
+                    <input class="grid-span-4" type="text" value="{{magLabel}}" readonly>
+                    <span>Cost</span>
+                    <input type="text" name="tweaks.item.system.actions.{{target}}.ammo" value="{{action.ammo}}">
                 </div>
             </fieldset>
             {{/if}}
-        </div> 
-        <hr>
+        </fieldset>
         {{#if (or item skill)}}
         <fieldset class="collapse-parent">
             <legend class="resource-label">
-                {{action.name}} Modifiers <a data-tooltip="Toggle Utility Detail Display"><i class="fas fa-list collapse-toggle" data-collapse="dashUtility"></i></a>
+                Action Modifiers <a data-tooltip="Toggle Utility Detail Display"><i class="fas fa-list collapse-toggle" data-collapse="dashUtility"></i></a>
             </legend>
             <div class="dashUtility {{#if collapses.dashUtility}}collapse{{/if}}">
                 <div class="grid grid-2col">

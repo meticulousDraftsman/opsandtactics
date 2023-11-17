@@ -81,59 +81,73 @@
                 </fieldset>
             </div>
         </fieldset>
-        <hr>
-        <div class="grid grid-2col flex-group-center">
-            <fieldset class="action-item">
-                <div class="flex-group-center">
-                    <a class="resource-label attack-roll">Attack: {{formula}}</a>
+        <fieldset>
+            <legend class="resource-label">
+                {{tweaks.attack.name}}
+            </legend>
+            <div class="grid grid-2col flex-group-center">
+                <fieldset class="action-item">
+                    <div class="flex-group-center">
+                        <a class="resource-label attack-roll">Attack: {{formula}}</a>
+                    </div>
+                </fieldset>
+                <div class="flexcol">
+                    <fieldset class="action-item">
+                        <div class="flex-group-center">
+                            <a class="resource-label damage-roll" data-good-bad="good">
+                                {{#if (or attackMods.effectGood.secondary attackMods.effectGood.extra)}}
+                                ({{attackMods.effectGood.primaryLabel}}) 
+                                {{else}}
+                                {{attackMods.effectGood.primaryLabel}}
+                                {{/if}}
+                                {{#if attackMods.effectGood.secondary}}
+                                , ({{attackMods.effectGood.secondaryLabel}})
+                                {{/if}}                                        
+                                {{#if attackMods.effectGood.extra}}
+                                , ({{attackMods.effectGood.extraLabel}})
+                                {{/if}}   
+                            </a>
+                        </div>
+                    </fieldset>
+                    {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}
+                    <fieldset class="action-item">
+                        <div class="flex-group-center">
+                            <a class="resource-label damage-roll" data-good-bad="bad">
+                                {{#if (and attackMods.effectBad.primary (or attackMods.effectBad.secondary attackMods.effectBad.extra))}}
+                                ({{attackMods.effectBad.primaryLabel}}) 
+                                {{else}}
+                                {{attackMods.effectBad.primaryLabel}}
+                                {{/if}}
+                                {{#if attackMods.effectBad.secondary}}
+                                , ({{attackMods.effectBad.secondaryLabel}})
+                                {{/if}}                                        
+                                {{#if attackMods.effectBad.extra}}
+                                , ({{attackMods.effectBad.extraLabel}})
+                                {{/if}}  
+                            </a>
+                        </div>
+                    </fieldset>
+                    {{/if}}
+                </div>
+                <i>{{action.check.flavor}}</i>
+                <i>{{action.effect.flavor}}</i>
+            </div>
+            <fieldset class="grid-span-2">
+                <legend class="resource-label">Resource Usage</legend>
+                <div class="grid grid-6col flex-group-center">
+                    <input class="grid-span-4" type="text" value="{{magLabel}}" readonly>
+                    <span>Cost</span>
+                    <input type="text" name="tweaks.item.system.actions.{{target}}.ammo" value="{{action.ammo}}">
                 </div>
             </fieldset>
-            <div class="flexcol">
-                <fieldset class="action-item">
-                    <div class="flex-group-center">
-                        <a class="resource-label damage-roll" data-good-bad="good">
-                            {{#if (or attackMods.effectGood.secondary attackMods.effectGood.extra)}}
-                            ({{attackMods.effectGood.primaryLabel}}) 
-                            {{else}}
-                            {{attackMods.effectGood.primaryLabel}}
-                            {{/if}}
-                            {{#if attackMods.effectGood.secondary}}
-                            , ({{attackMods.effectGood.secondaryLabel}})
-                            {{/if}}                                        
-                            {{#if attackMods.effectGood.extra}}
-                            , ({{attackMods.effectGood.extraLabel}})
-                            {{/if}}   
-                        </a>
-                    </div>
-                </fieldset>
-                {{#if (or attackMods.effectBad.primary attackMods.effectBad.secondary)}}
-                <fieldset class="action-item">
-                    <div class="flex-group-center">
-                        <a class="resource-label damage-roll" data-good-bad="bad">
-                            {{#if (and attackMods.effectBad.primary (or attackMods.effectBad.secondary attackMods.effectBad.extra))}}
-                            ({{attackMods.effectBad.primaryLabel}}) 
-                            {{else}}
-                            {{attackMods.effectBad.primaryLabel}}
-                            {{/if}}
-                            {{#if attackMods.effectBad.secondary}}
-                            , ({{attackMods.effectBad.secondaryLabel}})
-                            {{/if}}                                        
-                            {{#if attackMods.effectBad.extra}}
-                            , ({{attackMods.effectBad.extraLabel}})
-                            {{/if}}  
-                        </a>
-                    </div>
-                </fieldset>
-                {{/if}}
-            </div>
-        </div>
-        <hr>
+        </fieldset>
         <fieldset class="collapse-parent">
             <legend class="resource-label">
-                {{tweaks.attack.name}} Modifiers <a data-tooltip="Toggle Attack Detail Display"><i class="fas fa-list collapse-toggle" data-collapse="dashAttack"></i></a>
+                Attack Modifiers <a data-tooltip="Toggle Attack Detail Display"><i class="fas fa-list collapse-toggle" data-collapse="dashAttack"></i></a>
             </legend>
             <div class="dashAttack {{#if collapses.dashAttack}}collapse{{/if}}">
                 <div class="grid grid-2col">
+
                     <fieldset>
                         <legend class="resource-label">
                             To-Hit: {{attackMods.checkTotal}}

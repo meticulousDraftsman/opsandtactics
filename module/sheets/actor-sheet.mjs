@@ -1014,11 +1014,16 @@ export class OpsActorSheet extends ActorSheet {
         effect: tripleID[2],
         active: {}
       }
-      for (let [key,entry] of Object.entries(item.system.magazine.preLoad.cartridges)){
-        tweaks.ammo.active[key] = {name:entry.name,check:(`cartridges.${key}`==tripleID[2]),recoil:(`cartridges.${key}`==tripleID[2])}
+      if (item.system.magazine.preLoad){
+        for (let [key,entry] of Object.entries(item.system.magazine.preLoad.cartridges)){
+          tweaks.ammo.active[key] = {name:entry.name,check:(`cartridges.${key}`==tripleID[2]),recoil:(`cartridges.${key}`==tripleID[2])}
+        }
       }
+      else (
+        item.system.magazine.preLoad = {}
+      )
     }
-    if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('none') || item.system.actions[actionID].check.type.includes('noChat')){
+    if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('noChat')){
       new AttackDashboardApp(tweaks,{source:item,target:actionID}).rollAttack(event)
     }
     else{
@@ -1037,7 +1042,7 @@ export class OpsActorSheet extends ActorSheet {
       utility: item.system.actions[actionID]
     }
     if (tweaks.utility.check.type=='skill' && tweaks.utility.check.source!='') tweaks.skill = this.actor.items.get(tweaks.utility.check.source)
-    if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('none') || item.system.actions[actionID].check.type.includes('noChat')){
+    if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('noChat')){
       new UtilityDashboardApp(tweaks,{sourceItem:item,sourceSkill:tweaks.skill,target:actionID}).rollUtility(event)
     }
     else{
@@ -1141,7 +1146,7 @@ class AttackDashboardApp extends FormApplication {
       }
     }
     this.object.item = mergeObject(tempSource,this.object.item);
-    if (this.object.ammo){
+    if (this.object.ammo && !isEmpty(this.options.source.system.magazine.preLoad)){
       mergeObject(this.object.item.system.magazine.loaded,duplicate(getProperty(this.options.source.system.magazine.preLoad,this.object.ammo.effect)))
       let tempCheck = 0;
       let tempRecoil = 0;
@@ -1237,6 +1242,29 @@ class AttackDashboardApp extends FormApplication {
         }
       }
     }
+    context.magLabel = [];
+    if (this.options.source.type=='magic'){
+      context.magLabel = context.magLabel.concat(this.options.source.listMagazines().entries)
+    }
+    else {
+      for (let exin of Object.values(this.options.source.listMagazines())){
+        context.magLabel = context.magLabel.concat(exin.entries)
+      }
+    }
+    context.magLabel = context.magLabel.find(mag => mag?.id==this.options.source.system.magazine.source)?.label
+    if (context.magLabel===undefined){
+      switch (this.options.source.type){
+        case 'weapon':
+          context.magLabel = context.magLabel = this.options.source.system.magazine.type=='unlimited'?'Unlimited':(this.options.source.system.magazine.type=='coolant'?'Uncooled':'Unloaded');
+          break;
+        case 'object':
+          context.magLabel = context.magLabel = this.options.source.system.magazine.type=='unlimited'?'Unlimited':'Empty';
+          break;
+        case 'magic':
+          context.magLabel = context.magLabel = this.options.source.system.magazine.type=='unlimited'?'Unlimited':(this.options.source.system.magazine.type=='mental'?`Mental Limit [${this.options.source.actor.system.magic.mlUsed}/${this.options.source.actor.system.ml.max}]`:'Empty');
+          break;
+      }
+    }
     context.situational = getProperty(this.object,'situation')
     context.offenseTotal = Number(getProperty(this.object,'offense.high')?this.object.offense.high:0) + Number(getProperty(this.object,'offense.seen')?this.object.offense.seen:0) + Number(getProperty(this.object,'offense.flank')?this.object.offense.flank:0) + Number(getProperty(this.object,'offense.stance')?this.object.offense.stance:0) + Number(getProperty(this.object,'offense.face')?this.object.offense.face:0) + Math.floor(Number(getProperty(this.object,'offense.range')?this.object.offense.range:0) * -2 * Number(getProperty(this.object,'offense.rangeMult')?this.object.offense.rangeMult:1))
     context.defenseTotal = Number(getProperty(this.object,'defense.pin')?this.object.defense.pin:0) + Number(getProperty(this.object,'defense.stun')?this.object.defense.stun:0) + Number(getProperty(this.object,'defense.climb')?this.object.defense.climb:0) + Number(getProperty(this.object,'defense.stance')?this.object.defense.stance:0)
@@ -1264,6 +1292,7 @@ class AttackDashboardApp extends FormApplication {
     if (context.formula!==null){
       context.formula = `${context.formula}${context.situational?` +(${context.situational})`:''}${context.offenseTotal?` +(${context.offenseTotal})`:''}${context.defenseTotal?` -(${context.defenseTotal})`:''}`;
     }
+    //console.debug(context)
     return context;
   }
 
@@ -1274,10 +1303,11 @@ class AttackDashboardApp extends FormApplication {
     html.find('.damage-roll').click(this.rollDamage.bind(this));
   }
 
-  rollAttack(event){
+  async rollAttack(event){
     event.preventDefault();
     const context = this.getData();
-    this.options.source.rollActionCheck({modifier:context.formula,missChance:context.missChance,event:event,actionID:context.target,cp:context.attackMods.cp});
+    await this.options.source.rollActionCheck({modifier:context.formula,missChance:context.missChance,event:event,actionID:context.target,cp:context.attackMods.cp,ammo:context.attackMods.ammo});
+    this.render()
   }
   rollDamage(event){
     event.preventDefault()
@@ -1350,6 +1380,29 @@ class UtilityDashboardApp extends FormApplication {
       utilityMods: this.options.sourceItem.actionSum(this.options.target,this.object.item),
       lists: {}
     }
+    context.magLabel = [];
+    if (this.options.sourceItem){
+      if (this.options.sourceItem.type=='magic'){
+        context.magLabel = context.magLabel.concat(this.options.sourceItem.listMagazines().entries)
+      }
+      else {
+        for (let exin of Object.values(this.options.sourceItem.listMagazines())){
+          context.magLabel = context.magLabel.concat(exin.entries)
+        }
+      }
+      context.magLabel = context.magLabel.find(mag => mag?.id==this.options.sourceItem.system.magazine.source)?.label
+      if (context.magLabel===undefined){
+        switch (this.options.sourceItem.type){
+          case 'object':
+            context.magLabel = context.magLabel = this.options.sourceItem.system.magazine.type=='unlimited'?'Unlimited':'Empty';
+            break;
+          case 'magic':
+            context.magLabel = context.magLabel = this.options.sourceItem.system.magazine.type=='unlimited'?'Unlimited':(this.options.sourceItem.system.magazine.type=='mental'?`Mental Limit [${this.options.sourceItem.actor.system.magic.mlUsed}/${this.options.sourceItem.actor.system.ml.max}]`:'Empty');
+            break;
+        }
+      }
+    }
+
     context.situational = getProperty(this.object,'situation')
     if (this.options.sourceSkill) {
       context.skillMods = this.options.sourceSkill.skillSum(this.object.skill)
@@ -1361,6 +1414,7 @@ class UtilityDashboardApp extends FormApplication {
     if (context.formula!==null){
       context.formula = `${context.formula}${context.situational?` +(${context.situational})`:''}`;
     }
+    //console.debug(context)
     return context;
   }
   activateListeners(html){
@@ -1369,10 +1423,11 @@ class UtilityDashboardApp extends FormApplication {
     html.find('.utility-roll').click(this.rollUtility.bind(this));
     html.find('.effect-roll').click(this.rollEffect.bind(this));
   }
-  rollUtility(event){
+  async rollUtility(event){
     event.preventDefault();
     const context = this.getData();
-    this.options.sourceItem.rollActionCheck({modifier:context.formula,event:event,actionID:context.target,cp:context.utilityMods.cp});
+    await this.options.sourceItem.rollActionCheck({modifier:context.formula,event:event,actionID:context.target,cp:context.utilityMods.cp,ammo:context.utilityMods.ammo});
+    this.render()
   }
   rollEffect(event){
     event.preventDefault()
