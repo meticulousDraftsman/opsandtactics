@@ -1,4 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
+import {ResourceTransferApp} from "../documents/item.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -582,6 +583,7 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.item-input').change(this._onItemInput.bind(this));
     html.find('.item-checkbox').change(this._onItemCheckbox.bind(this));
     html.find('.item-toggle').click(this._onItemToggle.bind(this));
+    html.find('.resource-transfer').click(this._onResourceTransfer.bind(this));
     // Toggle visibility of a collapsible element
     html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
     // Toggle an actor property
@@ -1080,6 +1082,13 @@ export class OpsActorSheet extends ActorSheet {
     else{
       new ActionDashboardApp(tweaks,{actor:this.actor,name:checkName,sourceSkill:tweaks.skill,target:checkID,height:(checkID=='skill'?340:180),width:((checkID=='skill' || checkID=='reflex')?520:260)}).render(true);
     }
+  }
+
+  _onResourceTransfer(event){
+    event.preventDefault()
+    const itemID = event.currentTarget.dataset.itemId;
+    const initialID = event.currentTarget.dataset.initialId.split(',');
+    new ResourceTransferApp({resourceLeft:[initialID[0],initialID[1]].join(','),resourceRight:'',transfer:1},{actor:this.actor,item:this.actor.items.get(itemID)}).render(true);
   }
 
   /**

@@ -41,7 +41,7 @@
                             <option value="both">Both</option>
                         {{/select}}
                     </select>
-                    <a class="resource-label" data-tooltip="Transfer Ammo"><i class="fa-solid fa-right-left"></i></a>
+                    <a class="resource-label resource-transfer" data-initial-id="{{system.magazine.source}}" data-tooltip="Transfer Ammo"><i class="fa-solid fa-right-left"></i></a>
                     <select class="{{#if (eq system.magazine.type 'coolant')}}grid-span-4{{else}}grid-span-6{{/if}} flex-group-center" name="system.magazine.source" data-dtype="String">
                     {{#select system.magazine.source}}
                         <option value="">{{#if (eq system.magazine.type 'coolant')}}Uncooled{{else}}Unloaded{{/if}}</option>

@@ -1,0 +1,86 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <section class="sheet-body">
+        <div class="grid grid-9col">
+            <div class="grid-span-4">
+                <fieldset>
+                    <select class="flex-group-center" name="resourceLeft" data-tooltip="Value: {{leftObject.value}}">
+                        {{#select resourceBroker.resourceLeft}}
+                            <option value="">Select Resource</option>
+                            {{#each resourceLists}}
+                                {{#if this.entries.length}}
+                                    <optgroup label="{{this.label}}">
+                                        {{selectOptions this.entries selected=@root.resourceBroker.resourceLeft nameAttr="id" labelAttr="label"}}
+                                    </optgroup>
+                                {{/if}}
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                    {{#if (eq leftObject.type 'cartridge')}}
+                        {{#each leftObject.cartridges}}
+                            <fieldset>
+                                <legend>
+                                    <a class="resource-label clone-cartridge" data-side="left" data-cartridge="{{@key}}" data-tooltip="Clone Cartridge">{{this.name}} <i class="fa-solid fa-clone"></i><i class="fa-solid fa-arrow-right"></i></a>
+                                </legend>
+                                <p>{{numberFormat this.stats.check sign=true}} To-Hit, {{numberFormat this.stats.recoil sign=true}} Recoil, {{numberFormat this.stats.error sign=true}}% Error Range</p>
+                                <p><i>{{this.flavor}}</i></p>
+                                {{#if (or this.stats.good.primary this.stats.good.secondary this.stats.good.extra)}}
+                                    <p>{{#if this.stats.good.primary}}{{this.stats.good.primary}} {{this.stats.good.primaryFlavor}}{{#if (or this.stats.good.secondary this.stats.good.extra)}} + {{/if}}{{/if}}{{#if this.stats.good.secondary}}{{this.stats.good.secondary}} {{this.stats.good.secondaryFlavor}}{{#if this.stats.good.extra}} + {{/if}}{{/if}}{{this.stats.good.extra}} Damage</p>
+                                {{/if}}
+                                {{#if (or this.stats.bad.primary this.stats.bad.secondary this.stats.bad.extra)}}
+                                    <p>{{#if this.stats.bad.primary}}{{this.stats.bad.primary}} {{this.stats.bad.primaryFlavor}}{{#if (or this.stats.bad.secondary this.stats.bad.extra)}} + {{/if}}{{/if}}{{#if this.stats.bad.secondary}}{{this.stats.bad.secondary}} {{this.stats.bad.secondaryFlavor}}{{#if this.stats.bad.extra}} + {{/if}}{{/if}}{{this.stats.bad.extra}} Damage</p>
+                                {{/if}}
+                            </fieldset>
+                        {{/each}}
+                    {{/if}}
+                </fieldset>
+            </div>
+            <div>
+                <fieldset class="flex-group-center">
+                    <input type="text" name="transfer" value="{{resourceBroker.transfer}}" placeholder="0">
+                    <div class="flexrow flex-group-center">
+                        <a class="resource-transfer" data-direction="left" data-transfer="all" data-tooltip="Transfer All from Right"><i class="fa-solid fa-angles-left"></i></a>
+                        <span></span>
+                        <a class="resource-transfer" data-direction="left" data-transfer="{{resourceBroker.transfer}}" data-tooltip="Transfer {{resourceBroker.transfer}} from Right"><i class="fa-solid fa-angle-left"></i></a>
+                        <span></span>
+                        <a class="resource-transfer" data-direction="right" data-transfer="{{resourceBroker.transfer}}" data-tooltip="Transfer {{resourceBroker.transfer}} from Left"><i class="fa-solid fa-angle-right"></i></a>
+                        <span></span>
+                        <a class="resource-transfer" data-direction="right" data-transfer="all" data-tooltip="Transfer All from Left"><i class="fa-solid fa-angles-right"></i></a>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="grid-span-4">
+                <fieldset>
+                    <select class="flex-group-center" name="resourceRight" data-tooltip="Value: {{rightObject.value}}">
+                        {{#select resourceBroker.resourceRight}}
+                            <option value="">Select Resource</option>
+                            {{#each resourceLists}}
+                                {{#if this.entries.length}}
+                                    <optgroup label="{{this.label}}">
+                                        {{selectOptions this.entries selected=@root.resourceBroker.resourceRight nameAttr="id" labelAttr="label"}}
+                                    </optgroup>
+                                {{/if}}
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                    {{#if (eq rightObject.type 'cartridge')}}
+                    {{#each rightObject.cartridges}}
+                        <fieldset>
+                            <legend>
+                                <a class="resource-label clone-cartridge" data-side="right" data-cartridge="{{@key}}" data-tooltip="Clone Cartridge"><i class="fa-solid fa-arrow-left"></i><i class="fa-solid fa-clone"></i> {{this.name}} </a>
+                            </legend>
+                            <p>{{numberFormat this.stats.check sign=true}} To-Hit, {{numberFormat this.stats.recoil sign=true}} Recoil, {{numberFormat this.stats.error sign=true}}% Error Range</p>
+                            <p><i>{{this.flavor}}</i></p>
+                            {{#if (or this.stats.good.primary this.stats.good.secondary this.stats.good.extra)}}
+                                <p>{{#if this.stats.good.primary}}{{this.stats.good.primary}} {{this.stats.good.primaryFlavor}}{{#if (or this.stats.good.secondary this.stats.good.extra)}} + {{/if}}{{/if}}{{#if this.stats.good.secondary}}{{this.stats.good.secondary}} {{this.stats.good.secondaryFlavor}}{{#if this.stats.good.extra}} + {{/if}}{{/if}}{{this.stats.good.extra}} Damage</p>
+                            {{/if}}
+                            {{#if (or this.stats.bad.primary this.stats.bad.secondary this.stats.bad.extra)}}
+                                <p>{{#if this.stats.bad.primary}}{{this.stats.bad.primary}} {{this.stats.bad.primaryFlavor}}{{#if (or this.stats.bad.secondary this.stats.bad.extra)}} + {{/if}}{{/if}}{{#if this.stats.bad.secondary}}{{this.stats.bad.secondary}} {{this.stats.bad.secondaryFlavor}}{{#if this.stats.bad.extra}} + {{/if}}{{/if}}{{this.stats.bad.extra}} Damage</p>
+                            {{/if}}
+                        </fieldset>
+                    {{/each}}
+                {{/if}}
+                </fieldset>
+            </div>
+        </div>
+    </section>
+</form>

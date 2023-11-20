@@ -65,15 +65,19 @@
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
                 <div class="grid grid-10col action-pane {{#if item.system.minimized}}collapse{{/if}}">
-                    <div class="grid-span-4 flex-group-center">
+                    <div class="grid-span-5 flex-group-center">
                         <div class="grid grid-5col flex-group-center">
                             <span>Range</span>
                             <input type="text" value="{{item.system.range}}" readonly>
-                            <span class="grid-start-5">Uses</span>
+                            {{#if (eq this.system.magazine.type 'unlimited')}}
+                            <span class="grid-start-5"></span>
+                            {{else}}
+                            <a class="grid-start-5 resource-label resource-transfer" data-item-id="{{item._id}}" data-initial-id="{{item.system.magazine.source}}">Uses <i class="fa-solid fa-right-left"></i></a>
+                            {{/if}}
                         </div>
                     </div>
                     {{#if (eq item.system.magazine.type "consumable")}}
-                    <select class="grid-span-6 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                    <select class="grid-span-5 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
                         {{#select item.system.magazine.source}}
                         <option value="">Empty</option>
                         {{#each item.magazines}}
@@ -127,19 +131,23 @@
                     <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
                 <div class="grid grid-10col action-pane flex-group-center {{#if item.system.minimized}}collapse{{/if}}">
-                    <div class="grid-span-4 flex-group-center">
+                    <div class="grid-span-5 flex-group-center">
                         <div class="grid grid-5col flex-group-center">
                             <span>Range</span>
                             <input type="text" value="{{item.system.range}}" readonly>
-                            {{#unless (eq item.system.magazine.type "mental")}}
-                            <span class="grid-start-5">Charges</span>
-                            {{else}}
+                            {{#if (eq this.system.magazine.type 'unlimited')}}
+                            <span class="grid-start-5"></span>
+                            {{/if}}
+                            {{#if (eq this.system.magazine.type 'magic')}}
+                            <a class=" grid-start-4 grid-span-2 resource-label resource-transfer" data-item-id="{{item._id}}" data-initial-id="{{item.system.magazine.source}}">Charges <i class="fa-solid fa-right-left"></i></a>
+                            {{/if}}
+                            {{#if (eq item.system.magazine.type 'mental')}}
                             <span class="grid-start-4 grid-span-2">Mental Limit</span>
-                            {{/unless}}
+                            {{/if}}
                         </div>
                     </div>
                     {{#if (eq item.system.magazine.type "magic")}}
-                    <select class="grid-span-6 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                    <select class="grid-span-5 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
                             {{selectOptions item.magazines.entries selected=item.system.magazine.source nameAttr="id" labelAttr="label" blank="Blank"}}
                     </select>
                     {{/if}}

@@ -912,3 +912,203 @@ export class OpsItem extends Item {
     if(updates) return this.updateSource(updates);
   }
 }
+
+export class ResourceTransferApp extends FormApplication {
+  static get defaultOptions(){
+    return mergeObject(super.defaultOptions, {
+      classes: ['opsandtactics','sheet','item'],
+      template: 'systems/opsandtactics/templates/interface/dialog-resource-transfer.html',
+      width: 800,
+      height: 300,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      resizable: true
+    })
+  }
+  get title(){
+    return 'Managing Resource Values';
+  }
+  getData(){
+    const context = {
+      resourceBroker: this.object,
+      resourceLists: {
+        consumable: {
+          label: 'Consumables',
+          entries: []
+        },
+        cartridge: {
+          label: 'Cartridges',
+          entries: []
+        },
+        coolant: {
+          label: 'Coolants',
+          entries: []
+        },
+        magic: {
+          label: 'Magics',
+          entries: []
+        }
+      },
+      leftID: this.object.resourceLeft.split(','),
+      rightID: this.object.resourceRight.split(',')
+    }
+    if (this.options.actor) {
+      for (let i of this.options.actor.items){
+        if (getProperty(i,'system.gear.resources')){
+          for (let [key,entry] of Object.entries(i.system.gear.resources)){
+            switch (entry.type){
+              case 'consumable':
+              case 'cartridge':
+              case 'coolant':
+              case 'magic':
+                context.resourceLists[entry.type].entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?entry.value:(entry.type=='coolant'?'Cool':0)}${entry.max?('/'+entry.max):''}]`,id:`${i.id},system.gear.resources.${key}`});
+                break;
+            }
+          }
+        }
+      }
+      if (this.object.resourceLeft){
+        context.leftObject = getProperty(this.options.actor.items.filter(item => item._id == context.leftID[0])[0],context.leftID[1]);
+      }
+      if (this.object.resourceRight){
+        context.rightObject = getProperty(this.options.actor.items.filter(item => item._id == context.rightID[0])[0],context.rightID[1]);
+      }
+    }
+    else {
+      for (let [key, entry] of Object.entries(getProperty(this.options.item,'system.gear.resources'))){
+        switch (entry.type){
+          case 'consumable':
+          case 'cartridge':
+          case 'coolant':
+          case 'magic':
+            context.resourceLists[entry.type].entries.push({label:`${entry.name?entry.name:''} [${entry.value?entry.value:(entry.type=='coolant'?'Cool':0)}${entry.max?('/'+entry.max):''}]`,id:`${this.options.item.id},system.gear.resources.${key}`});
+            break;
+        }
+      }
+      if (this.object.resourceLeft){
+        context.leftObject = getProperty(this.options.item,context.leftID[1]);
+      }
+      if (this.object.resourceRight){
+        context.rightObject = getProperty(this.options.item,context.rightID[1]);
+      }
+    }
+    //console.debug(context);
+    return context;
+  }
+  activateListeners(html){
+    super.activateListeners(html)
+    html.find('.clone-cartridge').click(this._onCloneCartridge.bind(this));
+    html.find('.resource-transfer').click(this._onResourceTransfer.bind(this));
+  }
+  async _onResourceTransfer(event){
+    event.preventDefault();
+    const context = this.getData();
+    const updateLeft = {};
+    let leftItem;
+    const updateRight = {};
+    let rightItem;
+    let value = event.currentTarget.dataset.transfer;
+    switch (event.currentTarget.dataset.direction){
+      case 'left':
+        if (value=="all"){
+          if (this.object.resourceRight){
+            value = Number(getProperty(context.rightObject,'value'));
+          } 
+          else {
+            return;
+          }          
+        }
+        value = Number(value);
+        if (this.object.resourceLeft){
+          if (this.options.actor){
+            leftItem = this.options.actor.items.filter(item => item._id == context.leftID[0])[0];
+          }
+          else {
+            leftItem = this.options.item;
+          }          
+          updateLeft[`${context.leftID[1]}.value`] = getProperty(leftItem,`${context.leftID[1]}.value`) + value;
+          await leftItem.update(updateLeft);
+        }
+        if (this.object.resourceRight){
+          if (this.options.actor){
+            rightItem = this.options.actor.items.filter(item => item._id == context.rightID[0])[0];
+          }
+          else {
+            rightItem = this.options.item;
+          }          
+          updateRight[`${context.rightID[1]}.value`] = getProperty(rightItem,`${context.rightID[1]}.value`) - value;
+          await rightItem.update(updateRight);
+        }
+        break;
+      case 'right':
+        if (value=="all"){
+          if (this.object.resourceLeft){
+            value = Number(getProperty(context.leftObject,'value'));
+          } 
+          else {
+            return;
+          }          
+        }
+        value = Number(value);
+        if (this.object.resourceLeft){
+          if (this.options.actor){
+            leftItem = this.options.actor.items.filter(item => item._id == context.leftID[0])[0];
+          }
+          else {
+            leftItem = this.options.item;
+          }      
+          updateLeft[`${context.leftID[1]}.value`] = getProperty(leftItem,`${context.leftID[1]}.value`) - value;
+          await leftItem.update(updateLeft);
+        }
+        if (this.object.resourceRight){
+          if (this.options.actor){
+            rightItem = this.options.actor.items.filter(item => item._id == context.rightID[0])[0];
+          }
+          else {
+            rightItem = this.options.item;
+          }  
+          updateRight[`${context.rightID[1]}.value`] = getProperty(rightItem,`${context.rightID[1]}.value`) + value;
+          await rightItem.update(updateRight);
+        }
+        break;
+    }
+    this.render(true);
+  }
+  async _onCloneCartridge(event){
+    event.preventDefault();
+    const context = this.getData();
+    if (getProperty(context,'leftObject.type')!='cartridge' || getProperty(context,'rightObject.type')!='cartridge') return;
+    const side = event.currentTarget.dataset.side;
+    const cartridgeKey = event.currentTarget.dataset.cartridge;
+    const updateData = {};
+    let targetItem;
+    switch (side){
+      case 'left':
+        updateData[`${context.rightID[1]}.cartridges.${randomID(8)}`] = getProperty(context.leftObject.cartridges,cartridgeKey);
+        if (this.options.actor){
+          targetItem = this.options.actor.items.filter(item => item._id == context.rightID[0])[0];
+        }
+        else {
+          targetItem = this.options.item;
+        }        
+        break;
+      case 'right':
+        updateData[`${context.leftID[1]}.cartridges.${randomID(8)}`] = getProperty(context.rightObject.cartridges,cartridgeKey);
+        if (this.options.actor){
+          targetItem = this.options.actor.items.filter(item => item._id == context.leftID[0])[0];
+        }
+        else {
+          targetItem = this.options.item;
+        }
+        break;
+    }
+    await targetItem.update(updateData);
+    this.render(true);
+  }
+  _updateObject(event, formData){
+    for (let [key,entry] of Object.entries(expandObject(formData))){
+      setProperty(this.object,key,entry);
+    }
+    this.render();
+  }
+}

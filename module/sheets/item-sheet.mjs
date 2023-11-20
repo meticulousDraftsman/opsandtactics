@@ -1,5 +1,6 @@
 import {OpsAction, Protection, ResourceConsumable, ResourceCartridge, Cartridge, ResourceCoolant, ResourceMagic, ResourceSpacecraft, SkillMod, WeaponAttack, WeaponMod } from "../schema/item-schema.mjs";
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
+import {ResourceTransferApp} from "../documents/item.mjs";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -174,6 +175,7 @@ export class OpsItemSheet extends ItemSheet {
     // Transfer bullets to/from internal magazines
     html.find('.mag-load').click(this._onMagLoad.bind(this));
     // Pull a bullet from a loaded magazine into the internal chamber
+    html.find('.resource-transfer').click(this._onResourceTransfer.bind(this));
     html.find('.chamber-round').click(this._onChamberRound.bind(this));
     html.find('.attack-edit').click(this._editAttackMod.bind(this));
     html.find('.cartridge-edit').click(this._editCartridge.bind(this));
@@ -202,6 +204,11 @@ export class OpsItemSheet extends ItemSheet {
       no: () => {},
       defaultYes: true
     });
+  }
+  _onResourceTransfer(event){
+    event.preventDefault()
+    const initialID = event.currentTarget.dataset.initialId.split(',');
+    new ResourceTransferApp({resourceLeft:[initialID[0],initialID[1]].join(','),resourceRight:'',transfer:1},{actor:this.actor?this.actor:undefined,item:this.object}).render(true);
   }
 
   async _onMagLoad(event){

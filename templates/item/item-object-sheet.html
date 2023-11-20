@@ -40,7 +40,7 @@
                   <option value="both">Both</option>
               {{/select}}
           </select>
-          <a class="resource-label" data-tooltip="Transfer Uses"><i class="fa-solid fa-right-left"></i></a>
+          <a class="resource-label resource-transfer" data-initial-id="{{system.magazine.source}}" data-tooltip="Transfer Uses"><i class="fa-solid fa-right-left"></i></a>
           <select class="grid-span-6 flex-group-center" name="system.magazine.source" data-dtype="String">
           {{#select system.magazine.source}}
               <option value="">Unloaded</option>
