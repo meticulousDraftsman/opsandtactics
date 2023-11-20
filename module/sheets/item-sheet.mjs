@@ -208,7 +208,7 @@ export class OpsItemSheet extends ItemSheet {
   _onResourceTransfer(event){
     event.preventDefault()
     const initialID = event.currentTarget.dataset.initialId.split(',');
-    new ResourceTransferApp({resourceLeft:[initialID[0],initialID[1]].join(','),resourceRight:'',transfer:1},{actor:this.actor?this.actor:undefined,item:this.object}).render(true);
+    new ResourceTransferApp({resourceLeft:[initialID[0],initialID[1]].join(','),resourceRight:'',transfer:1,cp:null},{actor:this.actor?this.actor:undefined,item:this.object}).render(true);
   }
 
   async _onMagLoad(event){

@@ -1072,6 +1072,9 @@ export class ResourceTransferApp extends FormApplication {
         }
         break;
     }
+    if (this.options.actor && this.object.cp){
+      this.options.actor.attributeConsume('system.cp.value',this.object.cp)
+    }
     this.render(true);
   }
   async _onCloneCartridge(event){

@@ -1088,7 +1088,7 @@ export class OpsActorSheet extends ActorSheet {
     event.preventDefault()
     const itemID = event.currentTarget.dataset.itemId;
     const initialID = event.currentTarget.dataset.initialId.split(',');
-    new ResourceTransferApp({resourceLeft:[initialID[0],initialID[1]].join(','),resourceRight:'',transfer:1},{actor:this.actor,item:this.actor.items.get(itemID)}).render(true);
+    new ResourceTransferApp({resourceLeft:[initialID[0],initialID[1]].join(','),resourceRight:'',transfer:1,cp:null},{actor:this.actor,item:this.actor.items.get(itemID)}).render(true);
   }
 
   /**

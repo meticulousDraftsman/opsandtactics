@@ -36,6 +36,7 @@
             </div>
             <div>
                 <fieldset class="flex-group-center">
+                    <legend>Ammo</legend>
                     <input type="text" name="transfer" value="{{resourceBroker.transfer}}" placeholder="0">
                     <div class="flexrow flex-group-center">
                         <a class="resource-transfer" data-direction="left" data-transfer="all" data-tooltip="Transfer All from Right"><i class="fa-solid fa-angles-left"></i></a>
@@ -46,6 +47,10 @@
                         <span></span>
                         <a class="resource-transfer" data-direction="right" data-transfer="all" data-tooltip="Transfer All from Left"><i class="fa-solid fa-angles-right"></i></a>
                     </div>
+                </fieldset>
+                <fieldset class="flex-group-center">
+                    <legend>CP per Transfer</legend>
+                    <input type="text" name="cp" value="{{resourceBroker.cp}}" placeholder="0">
                 </fieldset>
             </div>
             <div class="grid-span-4">
