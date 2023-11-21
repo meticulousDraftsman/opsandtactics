@@ -221,33 +221,8 @@ export class OpsActor extends Actor {
         let crewDoc = fromUuidSync(entry.uuid);
         entry.name = crewDoc.name;
         entry.init = crewDoc.system.stats.init.value;
-        entry.attackBase = crewDoc.system.stats.bab.value + crewDoc.abilityMod(entry.attackAbility) + entry.attackMisc;
+        entry.attackBase = crewDoc.system.stats.bab.value;
         entry.skillBase = entry.skill? crewDoc.items.get(entry.skill).skillSum().total : 0;
-      }
-    }
-    // Tally up vehicle actions
-    for (let [key, entry] of Object.entries(systemData.actions)){
-      if (entry.check.type != 'message'){
-        entry.check.mid = Number(getProperty(systemData,`vehicle.crew.${entry.source}.${entry.check.type}Base`))
-        entry.check.total = `${entry.check.mid>=0?'+':''}${entry.check.mid}`;
-        if (entry.check.type=='skill'){
-          entry.check.mid += systemData.stats.maneuver.value;
-          if (systemData.stats.maneuver.value!=0) entry.check.total += ` ${systemData.stats.maneuver.value>=0?'+':''}${systemData.stats.maneuver.value}`;
-        }
-        else {
-          entry.check.mid += systemData.stats.maneuver.speed;
-          if (systemData.stats.maneuver.speed!=0) entry.check.total += ` ${systemData.stats.maneuver.speed>=0?'+':''}${systemData.stats.maneuver.speed}`;
-        }
-        if (entry.check.misc) entry.check.total += ` ${(entry.check.misc.charAt(0)=='-' || entry.check.misc.charAt(0)=='+')?'':'+'}${entry.check.misc}`;
-      }
-      if (entry.ammo?.source){
-        const dualID = entry.ammo.source.split(',');
-        const resource = getProperty(this.items.get(dualID[0]),dualID[1]);
-        entry.linked = {
-          type: (resource?.type ?? 'quantity'),
-          value: resource.value,
-          max: resource?.max
-        };
       }
     }
   }

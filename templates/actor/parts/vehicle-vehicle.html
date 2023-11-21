@@ -113,19 +113,12 @@
                 {{else}}
                 <li class="item">
                 <fieldset class="action-item grid grid-9col flex-group-center">
-                    <a class="item-control actor-edit grid-span-3" data-actor-uuid="{{this.uuid}}"><i class="fas fa-edit"></i> {{this.name}}</a>
-                    <span>Skill</span>
+                    <a class="item-control actor-edit grid-span-5" data-actor-uuid="{{this.uuid}}"><i class="fas fa-edit"></i> {{this.name}}</a>
                     <select class="grid-span-4 flex-group-center" name="system.vehicle.crew.{{@key}}.skill" data-dtype="String">
                         {{selectOptions this.listSkills selected=this.skill nameAttr="value" labelAttr="label" blank="Skill"}}
                     </select>
-                    <a class="crew-unlink" data-target="{{@key}}"><i class="fas fa-unlink"></i></a>
-                    <input type="text" class="grid-span-3" name="system.vehicle.crew.{{@key}}.note" value="{{this.note}}" placeholder="Notes" data-dtype="String">
-                    <span class="grid-start-4">Attack</span>
-                    <input type="text" name="system.vehicle.crew.{{@key}}.attackMisc" value="{{this.attackMisc}}" placeholder="Misc" data-dtype="Number">
-                    <select class="flex-group-center grid-span-2" name="system.vehicle.crew.{{@key}}.attackAbility" data-dtype="String">
-                        {{selectOptions @root.OATS.abilityShort selected=this.attackAbility localize=true blank="Ability"}}
-                    </select>
-                    <input type="text" value="{{numberFormat this.attackBase sign=true}}" readonly>
+                    <input type="text" class="grid-span-8" name="system.vehicle.crew.{{@key}}.note" value="{{this.note}}" placeholder="Notes" data-dtype="String">
+                    <a class="crew-unlink" data-target="{{@key}}" data-tooltip="Unlink Crew Member"><i class="fas fa-unlink"></i></a>
                 </fieldset>
                 </li>
                 {{/if}}

@@ -363,7 +363,7 @@ export class OpsActorSheet extends ActorSheet {
       {value: 7, label: 'Top: All Out'}
     ]
     // Parse linked crew members
-    context.crew = [{value:'generic', label: 'Crew Quality'}]
+    context.crew = [];
     context.drivers = [];
     context.attackers = [{value: 'generic', label: `Crew Quality (${systemData.stats.bab.value>=0?'+':''}${Number(systemData.stats.bab.value)})`}];
     context.skillers = [{value: 'generic', label: `Crew Quality (${systemData.stats.skillBase>=0?'+':''}${Number(systemData.stats.skillBase)})`}]
