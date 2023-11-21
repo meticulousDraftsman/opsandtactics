@@ -209,7 +209,8 @@ export class OpsActor extends Actor {
     }
     // Calculate total defense, maneuever, and cost
     systemData.def.value = systemData.def.innate + systemData.def.misc + systemData.def.speed;
-    systemData.stats.maneuver.value = systemData.stats.maneuver.innate + systemData.stats.maneuver.misc + systemData.stats.maneuver.speed;
+    systemData.stats.maneuver.value = systemData.stats.maneuver.innate + systemData.stats.maneuver.misc;
+    systemData.stats.maneuver.check = systemData.stats.maneuver.value + systemData.stats.maneuver.speed;
     systemData.details.cost.value = systemData.details.cost.innate + systemData.details.cost.misc
     // Calculate total initiative
     systemData.stats.init.value = systemData.stats.init.innate + fromUuidSync(systemData.stats.init.driver)?.system.stats.init.value;
@@ -227,8 +228,8 @@ export class OpsActor extends Actor {
     // Tally up vehicle actions
     for (let [key, entry] of Object.entries(systemData.actions)){
       if (entry.check.type != 'message'){
-        entry.check.mid = Number(systemData.vehicle.crew[entry.source][`${entry.check.type}Base`])
-        entry.check.total = `${entry.check.mid}`;
+        entry.check.mid = Number(getProperty(systemData,`vehicle.crew.${entry.source}.${entry.check.type}Base`))
+        entry.check.total = `${entry.check.mid>=0?'+':''}${entry.check.mid}`;
         if (entry.check.type=='skill'){
           entry.check.mid += systemData.stats.maneuver.value;
           if (systemData.stats.maneuver.value!=0) entry.check.total += ` ${systemData.stats.maneuver.value>=0?'+':''}${systemData.stats.maneuver.value}`;
@@ -392,7 +393,7 @@ export class OpsActor extends Actor {
   }
 
   cpAvailableCheck(cost){
-    if (cost==0) return true;
+    if (cost==0 || !hasProperty(this,'system.cp.value')) return true;
     return (this.system.cp.value-cost >= -this.system.cp.temp)
   }
   async attributeConsume(path,cost){
@@ -412,6 +413,7 @@ export class OpsActor extends Actor {
    * @returns {Number} The ability's modifier
    */
   abilityMod(source){
+    
     switch (source){
       case '':
       case undefined:
@@ -419,12 +421,12 @@ export class OpsActor extends Actor {
           return 0;
       case 'foc':
       case 'pow':
-          return getProperty(this,`system.abilities.str.${source}`);
+          return getProperty(this,`system.abilities.str.${source}`) ?? 0;
       case 'mrk':
       case 'agi':
-          return getProperty(this,`system.abilities.dex.${source}`);
+          return getProperty(this,`system.abilities.dex.${source}`) ?? 0;
       default:
-          return getProperty(this,`system.abilities.${source}.mod`);
+          return getProperty(this,`system.abilities.${source}.mod`) ?? 0;
     }  
   }
   wagerPenalty(){

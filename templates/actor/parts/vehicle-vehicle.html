@@ -96,16 +96,19 @@
                 Crew <a class="crew-link" data-tooltip="Link character as crew"><i class="fas fa-link"></i></a>
             </legend>
             <ol class="items-list">
-                {{#each system.vehicle.crew}}
-                {{#if (eq @key "generic")}}
                 <li class="item">
-                <fieldset class="action-item grid grid-9col flex-group-center">
-                    <span class="grid-span-3">NPC Crew Quality</span>
-                    <span class="grid-span-2">Check Modifier</span>
-                    <input type="text" name="system.vehicle.crew.{{@key}}.skillBase" value="{{this.skillBase}}" data-dtype="Number">
-                    <span class="grid-span-2">Attack Bonus</span>
-                    <input type="text" name="system.vehicle.crew.{{@key}}.attackBase" value="{{this.attackBase}}" data-dtype="Number">
-                </fieldset>
+                    <fieldset class="action-item grid grid-9col flex-group-center">
+                        <span class="grid-span-3">NPC Crew Quality</span>
+                        <span class="grid-span-2">Check Modifier</span>
+                        <input type="text" name="system.stats.skillBase" value="{{@root.system.stats.skillBase}}" data-dtype="Number">
+                        <span class="grid-span-2">Attack Bonus</span>
+                        <input type="text" name="system.stats.bab.value" value="{{@root.system.stats.bab.value}}" data-dtype="Number">
+                    </fieldset>
+                </li>
+                {{#each system.vehicle.crew}}
+                {{#if (eq @key 'generic')}}
+                <li>
+                    <a class="crew-unlink" data-target="{{@key}}">Delete vestigal generic crew <i class="fas fa-trash"></i></a>
                 </li>
                 {{else}}
                 <li class="item">

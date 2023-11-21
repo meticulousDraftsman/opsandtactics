@@ -116,7 +116,7 @@ export class OpsItem extends Item {
   async rollActionCheck(checkData){
     // Check resource consumption and override
     let ammoCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.resourceAvailableCheck(checkData.ammo?checkData.ammo:getProperty(this,`system.actions.${checkData.actionID}.ammo`));
-    let cpCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.actor.cpAvailableCheck(checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
+    let cpCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : checkData.actor?checkData.actor.cpAvailableCheck(checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp):this.actor.cpAvailableCheck(checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     if (!ammoCheck || !cpCheck){
       await Dialog.confirm({
         title: "Insufficient Resources",
@@ -132,7 +132,7 @@ export class OpsItem extends Item {
     if(!ammoCheck || !cpCheck) return;
     
     // Prep data for roll
-    const rollData = this.actor.getRollData();
+    const rollData = checkData.actor?checkData.actor.getRollData():this.actor.getRollData();
     
     const rollConfig = {
       mod: checkData.modifier?checkData.modifier:this.actionSum(checkData.actionID,checkData.tweaks?checkData.tweaks:{}).checkTotal,
@@ -154,7 +154,7 @@ export class OpsItem extends Item {
     // Perform resource consumption
     if (!(checkData.event && checkData.event.altKey)){
       await this.resourceConsume(checkData.ammo?checkData.ammo:getProperty(this,`system.actions.${checkData.actionID}.ammo`));
-      await this.actor.attributeConsume('system.cp.value',checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
+      await checkData.actor?checkData.actor.attributeConsume('system.cp.value',checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp):this.actor.attributeConsume('system.cp.value',checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     }
 
     return roll;
@@ -228,7 +228,7 @@ export class OpsItem extends Item {
     await this.update({[path]:(getProperty(this,path)-cost)});
   }
   rollDamage(damageData){
-    const rollData = this.actor.getRollData();
+    const rollData = damageData.actor?damageData.actor.getRollData():this.actor.getRollData();
     const loadedMag = damageData.loaded?damageData.loaded:getProperty(this,'system.magazine.loaded');
     console.debug(loadedMag)
     const rollConfig = {
@@ -294,6 +294,24 @@ export class OpsItem extends Item {
   actionSum(actionKey,tweaks={}){
     const tweakedThis = mergeObject(this.toObject(false),tweaks);
     const sourceAction = getProperty(tweakedThis,`system.actions.${actionKey}`);
+    let actingActor = null;
+    switch (this.actor?.type){
+      case 'character':
+        actingActor = this.actor;
+        break;
+      case 'vehicle':
+        if (this.checkType(sourceAction.check.type)==='utility'){
+          actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.uuid`))
+          if (actingActor && sourceAction.check.type==='skill') sourceAction.check.source = getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.skill`)
+        }
+        else {
+          actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.attacker}.uuid`))
+        }
+        if (actingActor==null) actingActor = this.actor;
+        break;
+      default:
+        actingActor = this.actor;
+    }
     const mods = {
       checkNum: 0,
       checkParts: [],
@@ -313,11 +331,11 @@ export class OpsItem extends Item {
     // If we can't just null it out...
     else {
       // Start with the inherent input from the attack
-      if (sourceAction.effect.inherent) mods.effectParts.push(new Roll(`${sourceAction.effect.inherent}`,(this.actor?.getRollData() || {})))
+      if (sourceAction.effect.inherent) mods.effectParts.push(new Roll(`${sourceAction.effect.inherent}`,(actingActor?.getRollData() || {})))
       // Add the actor's ability score if present
-      if (this.actor){
+      if (actingActor){
         let abilityScale = sourceAction.effect?.scaleAbility || 1;
-        let scaledAbility = Math.floor(this.actor.abilityMod(sourceAction.effect.ability) * abilityScale);
+        let scaledAbility = Math.floor(actingActor.abilityMod(sourceAction.effect.ability) * abilityScale);
         if (scaledAbility!=0) mods.effectParts.push(new Roll(`${scaledAbility}`))
       }
       
@@ -607,12 +625,12 @@ export class OpsItem extends Item {
             mods.recoil += r.value?Number(r.value):null;
           }
         }
-        if (this.actor && (mods.recoil!=null || mods.reduction!=null)){
-          if (getProperty(this.actor,'system.stats.recoil.value')>0){
-            mods.reduction += this.actor.system.stats.recoil.value;
+        if (actingActor && (mods.recoil!=null || mods.reduction!=null)){
+          if (getProperty(actingActor,'system.stats.recoil.value')>0){
+            mods.reduction += actingActor.system.stats.recoil.value;
           }
-          else if (getProperty(this.actor,'system.stats.recoil.value')<0){
-            mods.recoil += this.actor.system.stats.recoil.value;
+          else if (getProperty(actingActor,'system.stats.recoil.value')<0){
+            mods.recoil += actingActor.system.stats.recoil.value;
           }
         }
       }
@@ -629,7 +647,7 @@ export class OpsItem extends Item {
     // Ammo Impact
     if (hasProperty(tweakedThis,'system.magazine.loaded.stats.check') && sourceAction.check.ammo) mods.checkNum += Number(tweakedThis.system.magazine.loaded.stats.check);
     // If owned by an actor, add their ability modifier to num
-    if (this.actor) mods.checkNum += this.actor.abilityMod(sourceAction.check.ability);
+    if (actingActor) mods.checkNum += actingActor.abilityMod(sourceAction.check.ability);
     if (hasProperty(sourceAction,'check.mods')){
       for (let [,c] of Object.entries(sourceAction.check.mods)){
         // If mod isn't active, skip it
@@ -645,7 +663,7 @@ export class OpsItem extends Item {
     }
     // Attacks add BAB, and recoil if present
     if (sourceAction.check.type==='melee' || sourceAction.check.type==='ranged' || sourceAction.check.type==='otherAttack'){
-      if (this.actor) mods.checkNum += Number(getProperty(this.actor,'system.stats.bab.value'));
+      if (actingActor) mods.checkNum += Number(getProperty(actingActor,'system.stats.bab.value'));
       if (hasProperty(sourceAction,'recoil')) mods.checkNum += Math.min(mods.recoil+mods.reduction,0);
     }
     //Totals
@@ -656,10 +674,15 @@ export class OpsItem extends Item {
     // Skill rolls just pull the skill modifier
     else if (sourceAction.check.type==='skill'){
       if (sourceAction.check.source==''){
-        mods.checkTotal = '+0';
+        if (getProperty(actingActor,'system.stats.skillBase')){
+          mods.checkTotal = actingActor.system.stats.skillBase>=0?'+'+actingActor.system.stats.skillBase:actingActor.system.stats.skillBase;
+        }
+        else {
+          mods.checkTotal = '+0';
+        }
       }
       else{
-        let skillMod = this?.actor.items.get(sourceAction.check.source)?.skillSum().total;
+        let skillMod = actingActor?.items?.get(sourceAction.check.source)?.skillSum().total;
         mods.checkTotal = !Number.isNaN(skillMod)?skillMod:'-404';
       }
     }

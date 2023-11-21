@@ -1,86 +1,256 @@
 <fieldset>
     <legend class="resource-label">
-        Skill Checks <a class="action-create"><i class="fas fa-plus"></i></a>
+        <div class="grid grid-2col flex-group-center">
+            <span>Mounted Utility</span>
+            <select name="system.vehicle.skiller" class="flex-group-center">
+                {{selectOptions skillers selected=system.vehicle.skiller nameAttr="value" labelAttr="label"}}
+            </select>
+        </div>
     </legend>
     <ol class="items-list">
-        {{#each system.actions}}
-        {{#if (eq this.check.type "skill")}}
-        <li>
-            <fieldset class="grid grid-12col action-item flex-group-center">
-                <legend class="flexrow flex-group-left action-legend">
-                    <input class="flex3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
-                    <select name="system.actions.{{@key}}.check.type" class="flex-group-center flex2">
-                        {{#select this.check.type}}
-                            <option value="skill">Skill</option>
-                            <option value="attack">Attack</option>
-                            <option value="message">Message</option>
-                        {{/select}}
-                        </select>
-                    <div class="flex-group-center">
-                        <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
-                    </div>
+        {{#each utility as |item id|}}
+        <li class="item" data-item-id="{{item._id}}">
+            <fieldset class="action-item">
+                <legend class="action-legend item-context" data-item-id="{{item._id}}">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
+                    <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
                 </legend>
-                <select name="system.actions.{{@key}}.source" class="grid-span-3 flex-group-center">
-                    {{selectOptions @root.attackers selected=this.source nameAttr="value" labelAttr="label"}}
-                </select>
-                <span>CP</span>
-                <input type="text" name="system.actions.{{@key}}.cp" value="{{this.cp}}" placeholder="0" data-dtype="Number">   
-                <span>Cost</span>
-                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.cost" value="{{this.ammo.cost}}" placeholder="0" data-dtype="Number">            
-                <select class="grid-span-3 flex-group-left" name="system.actions.{{@key}}.ammo.source" data-dtype="String">
-                {{#select this.ammo.source}}
-                    <option value="">Self</option>
-                    {{#each @root.resOptions}}
-                    {{#if this.entries.length}}
-                    <optgroup label="{{this.label}}">
-                        {{selectOptions this.entries selected=this.ammo.source nameAttr="id" labelAttr="name"}}
-                    </optgroup>
+                <div class="grid grid-10col action-pane {{#if item.system.minimized}}collapse{{/if}}">
+                    <div class="grid-span-5 flex-group-center">
+                        <div class="grid grid-5col flex-group-center">
+                            <span>Range</span>
+                            <input type="text" value="{{item.system.range}}" readonly>
+                            {{#if (eq this.system.magazine.type 'unlimited')}}
+                            <span class="grid-start-5"></span>
+                            {{else}}
+                            <a class="grid-start-5 resource-label resource-transfer" data-item-id="{{item._id}}" data-initial-id="{{item.system.magazine.source}}">Uses <i class="fa-solid fa-right-left"></i></a>
+                            {{/if}}
+                        </div>
+                    </div>
+                    {{#if (eq item.system.magazine.type "consumable")}}
+                    <select class="grid-span-5 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                        {{#select item.system.magazine.source}}
+                        <option value="">Empty</option>
+                        {{#each item.magazines}}
+                        {{#if this.entries.length}}
+                        <optgroup label="{{this.label}}">
+                            {{selectOptions this.entries nameAttr="id" labelAttr="label"}}
+                        </optgroup>
+                        {{/if}}
+                        {{/each}}
+                        {{/select}}
+                    </select>
                     {{/if}}
-                    {{/each}}
-                {{/select}}
-                </select>
-                <div class="flexrow flex-group-center grid-span-2">
-                {{#if this.ammo.source}}
-                    {{#if (eq this.linked.type "quantity")}}
-                        <input class="item-input" type="text" data-target-prop="value" data-target-id="{{this.ammo.source}}" value="{{this.linked.value}}" data-dtype="Number" placeholder="Quantity">
+                    {{#if (eq item.system.magazine.type "unlimited")}}
+                    <i class="grid-span-2 fas fa-infinity"></i>
                     {{/if}}
-                    {{#if (eq this.linked.type "coolant")}}
-                        <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.ammo.source}}" value="{{this.linked.value}}" data-dtype="Number" placeholder="Heat">
-                        <span>/</span>
-                        <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="Max" data-dtype="Number">
-                    {{/if}}
-                    {{#if (or (eq this.linked.type "consumable") (eq this.linked.type "magic"))}}
-                        <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.ammo.source}}" value="{{this.linked.value}}" data-dtype="Number" placeholder="Value">
-                        <span>/</span>
-                        <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.ammo.source}}" value="{{this.linked.max}}" data-dtype="Number" placeholder="Max">
-                    {{/if}}
-                {{else}}                
-                        <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.value" value="{{this.ammo.value}}" placeholder="0" data-dtype="Number">
-                        <span>/</span>
-                        <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="0" data-dtype="Number">
-                {{/if}}
+                    <ol class="grid-span-10 items-list flex-group-center">
+                        {{#each item.system.actions}}
+                        {{#if this.active}}
+                        {{#if (eq this.type "utility")}}
+                        <li class="item grid grid-5col">
+                            <div class="grid-span-4 flexrow">
+                                <a class="item-utility-dash resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (eq this.check.type 'skill')}}Skill Check{{/if}}{{#if (eq this.check.type 'generic')}}Generic Check{{/if}}{{#if (eq this.check.type 'otherUtility')}}Other Roll{{/if}}{{#if (eq this.check.type 'noneUtility')}}Utility Message{{/if}}{{#if (eq this.check.type 'noChatUtility')}}Utility Resources{{/if}}">{{this.mods.checkTotal}}{{#if @root.system.stats.maneuver.check}}{{numberFormat @root.system.stats.maneuver.check sign=true}}{{/if}} {{this.name}}</a>
+                                <div class="flexcol flex2 flex-group-center">
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Utility Roll">
+                                        {{this.mods.effectGood.primaryLabel}}
+                                    </a>
+                                </div>
+                            </div>
+                            <span>{{this.mods.cpAmmoLabel}}</span>
+                        </li>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                    </ol>
                 </div>
-                <input type="text" value="{{numberFormat this.check.mid sign=true}}" data-tooltip="With MAN and Speed" readonly>
-                <input type="text" class="grid-span-2" name="system.actions.{{@key}}.check.misc" value="{{this.check.misc}}" placeholder="Misc" data-dtype="String">
-                <input type="text" class="grid-span-8" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
-                <a class="vehicle-check resource-label" data-check-id="{{@key}}" data-roll-type="{{this.check.type}}"><i class="fas fa-dice"></i></a>
-                <input type="text" class="grid-span-3" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect" data-dtype="String">
-                <input type="text" class="grid-span-8" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
-                <a class="rollable resource-label" data-roll="{{this.effect.misc}}" data-label="{{this.name}}: {{this.effect.flavor}}"><i class="fas fa-dice"></i></a>
             </fieldset>
-            </li>
-        {{/if}}
+        </li>
         {{/each}}
     </ol>
 </fieldset>
 <fieldset>
     <legend class="resource-label">
-        Attacks
+        <div class="grid grid-2col flex-group-center">
+            <span>Mounted Offense</span>
+            <select name="system.vehicle.attacker" class="flex-group-center">
+                {{selectOptions attackers selected=system.vehicle.attacker nameAttr="value" labelAttr="label"}}
+            </select>
+        </div>
     </legend>
     <ol class="items-list">
-        {{#each system.actions}}
-        {{#if (eq this.check.type "attack")}}
-        <li>
+        {{#each offense.weapons as |item id|}}
+        <li class="item" data-item-id="{{item._id}}">
+            <fieldset class="action-item">
+                <legend class="action-legend item-context" data-item-id="{{item._id}}">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
+                    <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
+                </legend>
+                <div class="grid grid-10col action-pane flex-group-center {{#if item.system.minimized}}collapse{{/if}}">
+                    <div class="grid-span-5 flex-group-center">
+                        <div class="grid grid-5col flex-group-center">
+                            <span>Range</span>
+                            <input type="text" value="{{item.system.range}}" readonly>
+                            <a class="resource-label rollable" data-roll="1d100" data-label="{{this.name}} {{item.system.error}}% Error Range" data-tooltip="Roll for Jam Potential">Error</a>
+                            <input type="text" value="{{item.system.error}}%" readonly>
+                            {{#if (eq this.system.magazine.type 'unlimited')}}
+                            <span></span>
+                            {{else}}
+                            <a class="resource-label resource-transfer" data-item-id="{{item._id}}" data-initial-id="{{item.system.magazine.source}}">{{#if (eq this.system.magazine.type 'coolant')}}Heat{{else}}Ammo{{/if}} <i class="fa-solid fa-right-left"></i></a>
+                            {{/if}}
+                        </div>
+                    </div>
+                    
+                    {{#if (or (eq item.system.magazine.type "consumable") (eq item.system.magazine.type "cartridge"))}}
+                    <select class="grid-span-5 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                        {{#select item.system.magazine.source}}
+                        <option value="">Unloaded</option>
+                        {{#each item.magazines}}
+                        {{#if this.entries.length}}
+                        <optgroup label="{{this.label}}">
+                            {{selectOptions this.entries nameAttr="id" labelAttr="label"}}
+                        </optgroup>
+                        {{/if}}
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                    {{#if (eq item.system.magazine.type "coolant")}}
+                    <div class="grid-span-5 flexrow flex-group-center">
+                        <select class="flex3 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                            {{#select item.system.magazine.source}}
+                            <option value="">Uncooled</option>
+                            {{#each item.magazines}}
+                            {{#if this.entries.length}}
+                            <optgroup label="{{this.label}}">
+                                {{selectOptions this.entries nameAttr="id" labelAttr="label"}}
+                            </optgroup>
+                            {{/if}}
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                        <span class="flex0">/</span>
+                        <input type="text" class="flex1" value="{{item.system.magazine.heatBase}}" data-dtype="Number" readonly/>
+                    </div>
+                    {{/if}}
+                    {{#if (eq item.system.magazine.type "unlimited")}}
+                    <i class="grid-start-7 grid-span-2 fas fa-infinity"></i>
+                    {{/if}}
+                    <ol class="grid-span-10 items-list flex-group-center">
+                        {{#each item.system.actions}}
+                        {{#if this.active}}
+                        <li class="item grid grid-5col">
+                            <div class="grid-span-4 flexrow">
+                                <a class="item-attack-dash resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}}{{#if @root.system.stats.maneuver.speed}}{{numberFormat @root.system.stats.maneuver.speed sign=true}}{{/if}} {{this.name}}</a>
+                                <div class="flexcol flex2 flex-group-center">
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="{{#if this.mods.effectBad.primary}}Good {{/if}}Damage Roll">
+                                        {{#if (or this.mods.effectGood.secondary this.mods.effectGood.extra)}}
+                                        ({{this.mods.effectGood.primaryLabel}}) 
+                                        {{else}}
+                                        {{this.mods.effectGood.primaryLabel}}
+                                        {{/if}}
+                                        {{#if this.mods.effectGood.secondary}}
+                                        , ({{this.mods.effectGood.secondaryLabel}})
+                                        {{/if}}                                        
+                                        {{#if this.mods.effectGood.extra}}
+                                        , ({{this.mods.effectGood.extraLabel}})
+                                        {{/if}}     
+                                    </a>
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="bad" data-tooltip="Bad Damage Roll">
+                                        {{#if (and this.mods.effectBad.primary (or this.mods.effectBad.secondary this.mods.effectBad.extra))}}
+                                        ({{this.mods.effectBad.primaryLabel}}) 
+                                        {{else}}
+                                        {{this.mods.effectBad.primaryLabel}}
+                                        {{/if}}
+                                        {{#if this.mods.effectBad.secondary}}
+                                        , ({{this.mods.effectBad.secondaryLabel}})
+                                        {{/if}}                                        
+                                        {{#if this.mods.effectBad.extra}}
+                                        , ({{this.mods.effectBad.extraLabel}})
+                                        {{/if}}  
+                                    </a>
+                                </div>
+
+                            </div>
+                            <span>{{this.mods.cpAmmoLabel}}</span>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </fieldset>
+        </li>
+        {{/each}}
+        {{#if (and offense.weapons.length offense.objects.length)}}
+        <hr>
+        {{/if}}
+        {{#each offense.objects as |item id|}}
+        <li class="item" data-item-id="{{item._id}}">
+            <fieldset class="action-item">
+                <legend class="action-legend item-context" data-item-id="{{item._id}}">
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}</a>
+                    <a class="item-control item-toggle" data-target-id="{{this._id}}" data-target-prop="system.minimized" data-tooltip="Minimize Item"><i class="{{#if this.system.minimized}}fas fa-eye{{else}}fas fa-eye-slash{{/if}}"></i></a>
+                </legend>
+                <div class="grid grid-10col action-pane {{#if item.system.minimized}}collapse{{/if}}">
+                    <div class="grid-span-5 flex-group-center">
+                        <div class="grid grid-5col flex-group-center">
+                            <span>Range</span>
+                            <input type="text" value="{{item.system.range}}" readonly>
+                            {{#if (eq this.system.magazine.type 'unlimited')}}
+                            <span class="grid-start-5"></span>
+                            {{else}}
+                            <a class="grid-start-5 resource-label resource-transfer" data-item-id="{{item._id}}" data-initial-id="{{item.system.magazine.source}}">Uses <i class="fa-solid fa-right-left"></i></a>
+                            {{/if}}
+                        </div>
+                    </div>
+                    {{#if (eq item.system.magazine.type "consumable")}}
+                    <select class="grid-span-5 flex-group-center item-input" data-target-prop="system.magazine.source" data-target-id="{{item._id}}" data-dtype="String">
+                        {{#select item.system.magazine.source}}
+                        <option value="">Empty</option>
+                        {{#each item.magazines}}
+                        {{#if this.entries.length}}
+                        <optgroup label="{{this.label}}">
+                            {{selectOptions this.entries nameAttr="id" labelAttr="label"}}
+                        </optgroup>
+                        {{/if}}
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
+                    {{#if (eq item.system.magazine.type "unlimited")}}
+                    <i class="grid-start-7 grid-span-2 fas fa-infinity"></i>
+                    {{/if}}
+                    <ol class="grid-span-10 items-list flex-group-center">
+                        {{#each item.system.actions}}
+                        {{#if this.active}}
+                        {{#if (eq this.type "attack")}}
+                        <li class="item grid grid-5col">
+                            <div class="grid-span-4 flexrow">
+                                <a class="item-attack-dash resource-label flex-group-left" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-tooltip="{{#if (or (eq this.check.type 'melee') (eq this.check.type 'ranged'))}}Attack Roll{{/if}}{{#if (eq this.check.type 'noneAttack')}}Attack Message{{/if}}{{#if (eq this.check.type 'noChatAttack')}}Attack Resources{{/if}}">{{this.mods.checkTotal}}{{#if @root.system.stats.maneuver.speed}}{{numberFormat @root.system.stats.maneuver.speed sign=true}}{{/if}} {{this.name}}</a>
+                                <div class="flexcol flex2 flex-group-center">
+                                    <a class="damage-roll resource-label" data-item-id="{{../_id}}" data-action-id="{{@key}}" data-good-bad="good" data-tooltip="Damage Roll">
+                                        {{this.mods.effectGood.primaryLabel}}
+                                    </a>
+                                </div>
+                            </div>
+                            <span>{{this.mods.cpAmmoLabel}}</span>
+                        </li>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </fieldset>            
+        </li>
+        {{/each}}
+    </ol>
+</fieldset>
+{{#if system.actions}}
+<hr>
+<span>Delete These</span>
+<ol class="items-list">
+    {{#each system.actions}}
+    <li>
         <fieldset class="grid grid-12col action-item flex-group-center">
             <legend class="flexrow flex-group-left action-legend">
                 <input class="flex3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
@@ -135,89 +305,13 @@
                     <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="0" data-dtype="Number">
             {{/if}}
             </div>
-            <input type="text" value="{{numberFormat this.check.mid sign=true}}" data-tooltip="With Speed" readonly>
-            <input type="text" class="grid-span-2" name="system.actions.{{@key}}.check.misc" value="{{this.check.misc}}" placeholder="Misc" data-dtype="String">
-            <input type="text" class="grid-span-8" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Check Flavor" data-dtype="String">
-            <a class="vehicle-check resource-label" data-check-id="{{@key}}" data-roll-type="{{this.check.type}}"><i class="fas fa-dice"></i></a>
+            <input type="text" class="grid-span-11" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Chat Message" data-dtype="String">
+
             <input type="text" class="grid-span-3" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect" data-dtype="String">
             <input type="text" class="grid-span-8" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
-            <a class="rollable resource-label" data-roll="{{this.effect.misc}}" data-label="{{this.name}}: {{this.effect.flavor}}"><i class="fas fa-dice"></i></a>
+
         </fieldset>
-        </li>
-        {{/if}}
-        {{/each}}
-    </ol>
-</fieldset>
-<fieldset>
-    <legend class="resource-label">
-        Utility
-    </legend>
-    <ol class="items-list">
-        {{#each system.actions}}
-        {{#if (eq this.check.type "message")}}
-        <li>
-            <fieldset class="grid grid-12col action-item flex-group-center">
-                <legend class="flexrow flex-group-left action-legend">
-                    <input class="flex3" type="text" name="system.actions.{{@key}}.name" value="{{this.name}}" placeholder="Name" data-dtype="String">
-                    <select name="system.actions.{{@key}}.check.type" class="flex-group-center flex2">
-                        {{#select this.check.type}}
-                            <option value="skill">Skill</option>
-                            <option value="attack">Attack</option>
-                            <option value="message">Message</option>
-                        {{/select}}
-                        </select>
-                    <div class="flex-group-center">
-                        <a class="action-delete" data-target="{{@key}}"><i class="fas fa-trash"></i></a>
-                    </div>
-                </legend>
-                <select name="system.actions.{{@key}}.source" class="grid-span-3 flex-group-center">
-                    {{selectOptions @root.attackers selected=this.source nameAttr="value" labelAttr="label"}}
-                </select>
-                <span>CP</span>
-                <input type="text" name="system.actions.{{@key}}.cp" value="{{this.cp}}" placeholder="0" data-dtype="Number">   
-                <span>Cost</span>
-                <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.cost" value="{{this.ammo.cost}}" placeholder="0" data-dtype="Number">            
-                <select class="grid-span-3 flex-group-left" name="system.actions.{{@key}}.ammo.source" data-dtype="String">
-                {{#select this.ammo.source}}
-                    <option value="">Self</option>
-                    {{#each @root.resOptions}}
-                    {{#if this.entries.length}}
-                    <optgroup label="{{this.label}}">
-                        {{selectOptions this.entries selected=this.ammo.source nameAttr="id" labelAttr="name"}}
-                    </optgroup>
-                    {{/if}}
-                    {{/each}}
-                {{/select}}
-                </select>
-                <div class="flexrow flex-group-center grid-span-2">
-                {{#if this.ammo.source}}
-                    {{#if (eq this.linked.type "quantity")}}
-                        <input class="item-input" type="text" data-target-prop="value" data-target-id="{{this.ammo.source}}" value="{{this.linked.value}}" data-dtype="Number" placeholder="Quantity">
-                    {{/if}}
-                    {{#if (eq this.linked.type "coolant")}}
-                        <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.ammo.source}}" value="{{this.linked.value}}" data-dtype="Number" placeholder="Heat">
-                        <span>/</span>
-                        <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="Max" data-dtype="Number">
-                    {{/if}}
-                    {{#if (or (eq this.linked.type "consumable") (eq this.linked.type "magic"))}}
-                        <input class="flex3 item-input" type="text" data-target-prop="value" data-target-id="{{this.ammo.source}}" value="{{this.linked.value}}" data-dtype="Number" placeholder="Value">
-                        <span>/</span>
-                        <input class="flex3 item-input" type="text" data-target-prop="max" data-target-id="{{this.ammo.source}}" value="{{this.linked.max}}" data-dtype="Number" placeholder="Max">
-                    {{/if}}
-                {{else}}                
-                        <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.value" value="{{this.ammo.value}}" placeholder="0" data-dtype="Number">
-                        <span>/</span>
-                        <input class="flex3" type="text" name="system.actions.{{@key}}.ammo.max" value="{{this.ammo.max}}" placeholder="0" data-dtype="Number">
-                {{/if}}
-                </div>
-                <input type="text" class="grid-span-11" name="system.actions.{{@key}}.check.flavor" value="{{this.check.flavor}}" placeholder="Chat Message" data-dtype="String">
-                <a class="vehicle-check resource-label" data-check-id="{{@key}}" data-roll-type="{{this.check.type}}"><i class="fas fa-dice"></i></a>
-                <input type="text" class="grid-span-3" name="system.actions.{{@key}}.effect.misc" value="{{this.effect.misc}}" placeholder="Effect" data-dtype="String">
-                <input type="text" class="grid-span-8" name="system.actions.{{@key}}.effect.flavor" value="{{this.effect.flavor}}" placeholder="Effect Flavor" data-dtype="String">
-                <a class="rollable resource-label" data-roll="{{this.effect.misc}}" data-label="{{this.name}}: {{this.effect.flavor}}"><i class="fas fa-dice"></i></a>
-            </fieldset>
-        </li>
-        {{/if}}
-        {{/each}}
-    </ol>
-</fieldset>
+    </li>
+    {{/each}}
+</ol>
+{{/if}}

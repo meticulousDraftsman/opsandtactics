@@ -194,6 +194,8 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                         }
                     }
                 }),
+                attacker: new field.StringField(),
+                skiller: new field.StringField(),
                 passengers: new field.StringField(),
                 speed: new field.NumberField()
             }),
@@ -206,6 +208,10 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                     driver: new field.StringField()
                     // total:
                 }),
+                bab: new field.SchemaField({
+                    value: new field.NumberField()
+                }),
+                skillBase: new field.NumberField(),
                 maneuver: new field.SchemaField({
                     innate: new field.NumberField(),
                     misc: new field.NumberField()

@@ -365,8 +365,8 @@ export class OpsActorSheet extends ActorSheet {
     // Parse linked crew members
     context.crew = [{value:'generic', label: 'Crew Quality'}]
     context.drivers = [];
-    context.attackers = [{value: 'generic', label: `Crew Quality (${systemData.vehicle.crew.generic.attackBase>=0?'+':''}${systemData.vehicle.crew.generic.attackBase})`}];
-    context.skillers = [{value: 'generic', label: `Crew Quality (${systemData.vehicle.crew.generic.skillBase>=0?'+':''}${systemData.vehicle.crew.generic.skillBase})`}]
+    context.attackers = [{value: 'generic', label: `Crew Quality (${systemData.stats.bab.value>=0?'+':''}${Number(systemData.stats.bab.value)})`}];
+    context.skillers = [{value: 'generic', label: `Crew Quality (${systemData.stats.skillBase>=0?'+':''}${Number(systemData.stats.skillBase)})`}]
     for (let [key, entry] of Object.entries(systemData.vehicle.crew)) {
       if (key == 'generic') continue;
       let crewDoc = fromUuidSync(entry.uuid);
@@ -394,6 +394,10 @@ export class OpsActorSheet extends ActorSheet {
         label: 'Consumable',
         entries: []
       },
+      cartridge: {
+        label: 'Cartridge',
+        entries: []
+      },
       coolant: {
         label: 'Coolant',
         entries: []
@@ -408,6 +412,12 @@ export class OpsActorSheet extends ActorSheet {
       }
     };
     const resOptions = duplicate(resObjects);
+    const mounted = [];
+    const offense = {
+      weapons: [],
+      objects: [],
+    };
+    const utility = [];
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
@@ -437,9 +447,62 @@ export class OpsActorSheet extends ActorSheet {
           if (res.type!='consumable' || res?.available) resOptions[res.type].entries.push(tempRes)
         }
       }
+      // Append to offense items
+      //if (i.type=='weapon' && !isEmpty(i.system.actions)) e;
+      // Append to utility items
     }
     context.gear = gear;
     context.nestedGear = this._nestContainers(gear,gearFail);
+    if (context.nestedGear.Worn){
+      for (let i1 of context.nestedGear.Worn.children){
+        mounted.push(context.actor.items.get(i1._id))
+        for (let i2 of i1?.children){
+          mounted.push(context.actor.items.get(i2._id))
+          for (let i3 of i2?.children){
+            mounted.push(context.actor.items.get(i3._id))
+            for (let i4 of i3?.children){
+              mounted.push(context.actor.items.get(i4._id))
+            }
+          }
+        }
+      }
+    }
+    // Iterate through mounted items specifically
+    for (let i of mounted){
+      // Append weapons.
+      if (i.type === 'weapon') {
+        for (let [key,a] of Object.entries(i.system.actions)){
+          a.mods = context.actor.items.get(i._id).actionSum(key);
+        }
+        i.magazines = context.actor.items.get(i._id).listMagazines();
+        i.system.error = i.system.errorBase;
+        if (getProperty(i,'system.magazine.loaded.stats.error')) i.system.error += getProperty(i,'system.magazine.loaded.stats.error');
+        offense.weapons.push(i);
+      }
+      // Append objects
+      if (i.type === 'object'){
+        i.magazines = context.actor.items.get(i._id).listMagazines();
+        if(!isEmpty(getProperty(i,'system.actions'))){
+          if (i.system.magazine.type != 'unlimited'){
+            if(i.system.magazine.source){
+              let dualID = i.system.magazine.source.split(',')
+              let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
+              i.system.magazine.value = getProperty(loadedMag,`${dualID[1]}.value`);
+              i.system.magazine.max = getProperty(loadedMag,`${dualID[1]}.max`);  
+            }
+          }
+          let attackFlag = false;
+          for (let [key,a] of Object.entries(i.system.actions)){
+            a.mods = context.actor.items.get(i._id).actionSum(key);
+            if (a.type==='attack' && a.active) attackFlag = true;
+          }
+          if (attackFlag) offense.objects.push(i);
+          utility.push(i);
+        }
+      }
+    }
+    context.offense = offense;
+    context.utility = utility;
     context.resObjects = resObjects;
     context.resOptions = resOptions;
   }
@@ -1025,11 +1088,24 @@ export class OpsActorSheet extends ActorSheet {
         item.system.magazine.preLoad = {}
       )
     }
+    let actingActor = null;
+    switch (this.actor?.type){
+      case 'character':
+        actingActor = this.actor;
+        break;
+      case 'vehicle':
+        actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.attacker}.uuid`))
+        if (actingActor==null) actingActor = this.actor;
+        if (this.actor.system.stats.maneuver.speed) tweaks.situation = `${this.actor.system.stats.maneuver.speed>=0?'+':''}${this.actor.system.stats.maneuver.speed}[Speed]`;
+        break;
+      default:
+        actingActor = this.actor;
+    }
     if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('noChat')){
       new AttackDashboardApp(tweaks,{source:item,target:actionID}).rollAttack(event)
     }
     else{
-      new AttackDashboardApp(tweaks,{source:item,target:actionID}).render(true)
+      new AttackDashboardApp(tweaks,{source:item,actor:actingActor,target:actionID}).render(true)
     }
     
   }
@@ -1043,12 +1119,26 @@ export class OpsActorSheet extends ActorSheet {
       skill: null,
       utility: item.system.actions[actionID]
     }
+    let actingActor = null;
+    switch (this.actor?.type){
+      case 'character':
+        actingActor = this.actor;
+        break;
+      case 'vehicle':
+        actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.uuid`))
+        if (actingActor && tweaks.utility.check.type==='skill') tweaks.utility.check.source = getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.skill`)
+        if (actingActor==null) actingActor = this.actor;
+        tweaks.situation = `${this.actor.system.stats.maneuver.speed?`${this.actor.system.stats.maneuver.speed>=0?'+':''}${this.actor.system.stats.maneuver.speed}[Speed]`:''}${this.actor.system.stats.maneuver.value?`${this.actor.system.stats.maneuver.value>=0?'+':''}${this.actor.system.stats.maneuver.value}[Maneuver]`:''}`
+        break;
+      default:
+        actingActor = this.actor;
+    }
     if (tweaks.utility.check.type=='skill' && tweaks.utility.check.source!='') tweaks.skill = this.actor.items.get(tweaks.utility.check.source)
     if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('noChat')){
-      new UtilityDashboardApp(tweaks,{sourceItem:item,sourceSkill:tweaks.skill,target:actionID}).rollUtility(event)
+      new UtilityDashboardApp(tweaks,{sourceItem:item,sourceSkill:tweaks.skill,actor:actingActor,target:actionID}).rollUtility(event)
     }
     else{
-      new UtilityDashboardApp(tweaks,{sourceItem:item,sourceSkill:tweaks.skill,target:actionID}).render(true)
+      new UtilityDashboardApp(tweaks,{sourceItem:item,sourceSkill:tweaks.skill,actor:actingActor,target:actionID}).render(true)
     }
   }
   _onActionDash(event){
@@ -1138,7 +1228,7 @@ class AttackDashboardApp extends FormApplication {
     });
   }
   get title(){
-    return `${this.options.source.actor.name} tweaking execution of ${this.options.source.system.actions[this.options.target].name} from ${this.options.source.name}`;
+    return `${this.options.actor.name} tweaking execution of ${this.options.source.system.actions[this.options.target].name} from ${this.options.source.name}`;
   }
   collapseStates = {
     dashAttack: true
@@ -1270,7 +1360,7 @@ class AttackDashboardApp extends FormApplication {
           context.magLabel = context.magLabel = this.options.source.system.magazine.type=='unlimited'?'Unlimited':'Empty';
           break;
         case 'magic':
-          context.magLabel = context.magLabel = this.options.source.system.magazine.type=='unlimited'?'Unlimited':(this.options.source.system.magazine.type=='mental'?`Mental Limit [${this.options.source.actor.system.magic.mlUsed}/${this.options.source.actor.system.ml.max}]`:'Empty');
+          context.magLabel = context.magLabel = this.options.source.system.magazine.type=='unlimited'?'Unlimited':(this.options.source.system.magazine.type=='mental'?`Mental Limit [${this.options.actor.system.magic.mlUsed}/${this.options.actor.system.ml.max}]`:'Empty');
           break;
       }
     }
@@ -1316,13 +1406,13 @@ class AttackDashboardApp extends FormApplication {
   async rollAttack(event){
     event.preventDefault();
     const context = this.getData();
-    await this.options.source.rollActionCheck({modifier:context.formula,missChance:context.missChance,event:event,actionID:context.target,cp:context.attackMods.cp,ammo:context.attackMods.ammo});
+    await this.options.source.rollActionCheck({modifier:context.formula,missChance:context.missChance,event:event,actionID:context.target,cp:context.attackMods.cp,ammo:context.attackMods.ammo,actor:this.options.actor});
     this.render()
   }
   rollDamage(event){
     event.preventDefault()
     const context = this.getData()
-    this.options.source.rollDamage({loaded:context.tweaks.item.system.magazine.loaded,actionID:context.target,useAmmo:context.action.effect.ammo,goodBad:event.currentTarget.dataset.goodBad,mods:context.attackMods})
+    this.options.source.rollDamage({loaded:context.tweaks.item.system.magazine.loaded,actionID:context.target,useAmmo:context.action.effect.ammo,goodBad:event.currentTarget.dataset.goodBad,mods:context.attackMods,actor:this.options.actor})
   }
 
   _onToggleCollapse(event){
@@ -1367,7 +1457,7 @@ class UtilityDashboardApp extends FormApplication {
     });
   }
   get title(){
-    return `${this.options.sourceItem.actor.name} tweaking execution of ${this.options.sourceItem.system.actions[this.options.target].name} from ${this.options.sourceItem.name}`;
+    return `${this.options.actor.name} tweaking execution of ${this.options.sourceItem.system.actions[this.options.target].name} from ${this.options.sourceItem.name}`;
   }
   collapseStates = {
     dashUtility: true
@@ -1407,7 +1497,7 @@ class UtilityDashboardApp extends FormApplication {
             context.magLabel = context.magLabel = this.options.sourceItem.system.magazine.type=='unlimited'?'Unlimited':'Empty';
             break;
           case 'magic':
-            context.magLabel = context.magLabel = this.options.sourceItem.system.magazine.type=='unlimited'?'Unlimited':(this.options.sourceItem.system.magazine.type=='mental'?`Mental Limit [${this.options.sourceItem.actor.system.magic.mlUsed}/${this.options.sourceItem.actor.system.ml.max}]`:'Empty');
+            context.magLabel = context.magLabel = this.options.sourceItem.system.magazine.type=='unlimited'?'Unlimited':(this.options.sourceItem.system.magazine.type=='mental'?`Mental Limit [${this.options.actor.system.magic.mlUsed}/${this.options.actor.system.ml.max}]`:'Empty');
             break;
         }
       }
@@ -1436,13 +1526,13 @@ class UtilityDashboardApp extends FormApplication {
   async rollUtility(event){
     event.preventDefault();
     const context = this.getData();
-    await this.options.sourceItem.rollActionCheck({modifier:context.formula,event:event,actionID:context.target,cp:context.utilityMods.cp,ammo:context.utilityMods.ammo});
+    await this.options.sourceItem.rollActionCheck({modifier:context.formula,event:event,actionID:context.target,cp:context.utilityMods.cp,ammo:context.utilityMods.ammo,actor:this.options.actor});
     this.render()
   }
   rollEffect(event){
     event.preventDefault()
     const context = this.getData()
-    this.options.sourceItem.rollDamage({actionID:context.target,goodBad:'good',mods:context.utilityMods})
+    this.options.sourceItem.rollDamage({actionID:context.target,goodBad:'good',mods:context.utilityMods,actor:this.options.actor})
   }
   _onToggleCollapse(event){
     event.preventDefault();
@@ -1523,6 +1613,9 @@ class ActionDashboardApp extends FormApplication {
       case 'reflex':
       case 'will':
         context.formula = `${this.options.actor.system.saves[this.options.target].value>=0?'+':''}${this.options.actor.system.saves[this.options.target].value}`;
+        break;
+      case 'vehicle':
+        context.formula = `${this.options.actor.system.actions[this.option.target].check.total}`
         break;
       default:
         context.formula = `${this.options.actor.abilityMod(this.options.target)>=0?'+':''}${this.options.actor.abilityMod(this.options.target)}`
