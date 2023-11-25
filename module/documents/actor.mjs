@@ -137,6 +137,7 @@ export class OpsActor extends Actor {
     }
     systemData.magic.mlMisc = systemData.magic.mods.subtotal
     systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + systemData.magic.mlCant + systemData.magic.mlMisc;
+    systemData.ml.value = systemData.magic.mlUsed;
     // Calculate Skill Points
     systemData.stats.skills.points = (3 + systemData.abilities.int.mod) * (systemData.stats.level.value + 4);
     // Tally Character Option Impacts
