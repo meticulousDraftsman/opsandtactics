@@ -441,12 +441,12 @@ class AttackEditApp extends FormApplication {
     if (getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
       for (let imp of ['check','effect','dice','recoil','cp']){
-        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:this.object.system.actions[this.options.target][imp]?.mods[key]?.active}
+        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)};
       }
     }
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
       for (let imp of ['check','effect','dice','recoil','cp']){
-        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)} 
+        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)} ;
       }
     }
     return context;
