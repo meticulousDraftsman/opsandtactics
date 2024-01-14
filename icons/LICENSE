@@ -2,211 +2,377 @@
 SVG Icons from Game-Icons.net
 ==============================================
 
-The opsandtactics system for Foundry Virtual Tabletop includes icon artwork licensed from Game-icons.net under the Creative Commons license. These icons are packaged with and provided for use in the opsandtactics system under their respective licenses, as noted below.
+The opsandtactics system for Foundry Virtual Tabletop includes icon artwork licensed from Game-icons.net under the Creative Commons license. 
+These icons are packaged with and provided for use in the opsandtactics system under their respective licenses, as noted below.
 
-/svg/transparent/astronaut-helmet.svg - "Astronaut helmet" by Delapouite under CC BY 3.0
-/svg/transparent/balaclave.svg - "Balaclava" by Skoll under CC BY 3.0
-/svg/transparent/bandit.svg - "Bandit" by Delapouite under CC BY 3.0
-/svg/transparent/cowled.svg - "Cowled" by Lorc under CC BY 3.0
-/svg/transparent/hoodie.svg - "Hoodie" by Delapouite under CC BY 3.0
-/svg/transparent/mustache.svg - "Mustache" by Delapouite under CC BY 3.0
-/svg/transparent/police-officer-head.svg - "Police officer head" by Delapouite under CC BY 3.0
-/svg/transparent/spy.svg - "Spy" by Delapouite under CC BY 3.0
+The following icons are by Carl Olsen under CC BY 3.0
+==============================================
+/abstract/flame.webp - "Flame"
 
-/svg/transparent/airplane.svg - "Airplane" by Skoll under CC BY 3.0
-/svg/transparent/ambulance.svg - "Ambulance" by Delapouite under CC BY 3.0
-/svg/transparent/apc.svg - "APC" by Skoll under CC BY 3.0
-/svg/transparent/bus.svg - "Bus" by Delapouite under CC BY 3.0
-/svg/transparent/caravan.svg - "Caravan" by Delapouite under CC BY 3.0
-/svg/transparent/city-car.svg - "City car" by Delapouite under CC BY 3.0
-/svg/transparent/bike.svg - "Dutch bike" by Delapouite under CC BY 3.0
-/svg/transparent/flatbed.svg - "Flatbed" by Skoll under CC BY 3.0
-/svg/transparent/flatbed-covered.svg - "Flatbed covered" by Skoll under CC BY 3.0
-/svg/transparent/helicopter.svg - "Helicopter" by Delapouite under CC BY 3.0
-/svg/transparent/jeep.svg - "Jeep" by Delapouite under CC BY 3.0
-/svg/transparent/jet-fighter.svg - "Jet fighter" by Delapouite under CC BY 3.0
-/svg/transparent/race-car.svg - "Race car" by Skoll under CC BY 3.0
-/svg/transparent/scooter.svg - "Scooter" by Delapouite under CC BY 3.0
-/svg/transparent/surfer-van.svg - "Surfer van" by Delapouite under CC BY 3.0
-/svg/transparent/tank.svg - "Tank" by Lorc under CC BY 3.0
-/svg/transparent/truck.svg - "Truck" by Delapouite under CC BY 3.0
+/weapons/other/crossbow.webp - "Crossbow"
+==============================================
 
-/svg/transparent/defense-satellite.svg - "Defense Satellite" by Delapouite under CC BY 3.0
-/svg/transparent/interceptor-ship.svg - "Interceptor ship" by Delapouite under CC BY 3.0
-/svg/transparent/rocket.svg - "Rocket" by Lorc under CC BY 3.0
-/svg/transparent/scout-ship.svg - "Scout ship" by Delapouite under CC BY 3.0
-/svg/transparent/spaceship.svg - "Spaceship" by Delapouite under CC BY 3.0
-/svg/transparent/space-shuttle.svg - "Space shuttle" by Delapouite under CC BY 3.0
-/svg/transparent/starfighter.svg - "Starfighter" by Delapouite under CC BY 3.0
-/svg/transparent/ufo.svg - "UFO" by Delapouite under CC BY 3.0
+The following icons are by Caro Asercion under CC BY 3.0
+==============================================
+/containers/bags/rolling-suitcase.webp - "Rolling suitcase"
 
-/svg/transparent/kneeling.svg - "Coronation" by Delapouite under CC BY 3.0
-/svg/transparent/prone.svg - "Half body crawling" by Delapouite under CC BY 3.0
+/gear/supplies/soda-bottle.webp - "Soda bottle"
 
-/svg/3d-hammer.svg - "3D Hammer" by Delapouite under CC BY 3.0
-/svg/ak47.svg - "AK47" by Skoll under CC BY 3.0
-/svg/ak47u.svg - "AK47u" by Skoll under CC BY 3.0
-/svg/baseball-bat.svg - "Baseball bat" by Delapouite under CC BY 3.0
-/svg/bat-leth.svg - "Bat'leth" by Delapouite under CC BY 3.0
-/svg/baton.svg - "Baton" by Skoll under CC BY 3.0
-/svg/battle-axe.svg - "Battle axe" by Lorc under CC BY 3.0
-/svg/bayonet.svg - "Bayonet" by Skoll under CC BY 3.0
-/svg/bo.svg - "Bo" by Delapouite under CC BY 3.0
-/svg/bordered-shield.svg - "Bordered shield" by Lorc under CC BY 3.0
-/svg/bowie-knife.svg - "Bowie knife" by Lorc under CC BY 3.0
-/svg/brass-knuckles.svg - "Brass knuckles" by Delapouite under CC BY 3.0
-/svg/broadhead-arrow.svg - "Broadhead arrow" by Lorc under CC BY 3.0
-/svg/c96.svg - "C96" by Skoll under CC BY 3.0
-/svg/cannon-ball.svg - "Cannon ball" by Lorc under CC BY 3.0
-/svg/chainsaw.svg - "Chainsaw" by Delapouite under CC BY 3.0
-/svg/claw-hammer.svg - "Claw hammer" by Lorc under CC BY 3.0
-/svg/colt-m1911.svg - "Colt M1911" by Skoll under CC BY 3.0
-/svg/crossbow.svg - "Crossbow" by Carl Olsen under CC BY 3.0
-/svg/crossed-chains.svg - "Crossed chains" by Lorc under CC BY 3.0
-/svg/cz-skorpion.svg - "CZ Skorpion" by Skoll under CC BY 3.0
-/svg/desert-eagle.svg - "Desert Eagle" by Skoll under CC BY 3.0
-/svg/famas.svg - "Famas" by Skoll under CC BY 3.0
-/svg/fire-axe.svg - "Fire axe" by Lorc under CC BY 3.0
-/svg/flail.svg - "Flail" by Delapouite under CC BY 3.0
-/svg/gun-stock.svg - "Gun stock" by Delapouite under CC BY 3.0
-/svg/flanged-mace.svg - "Flanged mace" by Delapouite under CC BY 3.0
-/svg/flat-hammer.svg - "Flat hammer" by Lorc under CC BY 3.0
-/svg/fn-fal.svg - "FN FAL" by Skoll under CC BY 3.0
-/svg/fountain-pen.svg - "Fountain pen" by Lorc under CC BY 3.0
-/svg/gladius.svg - "Gladius" by Skoll under CC BY 3.0
-/svg/glock.svg - "Glock" by Skoll under CC BY 3.0
-/svg/gunshot.svg - "Gunshot" by Lorc under CC BY 3.0
-/svg/gun-stock.svg - "Gun stock" by Delapouite under CC BY 3.0
-/svg/hatchet.svg - "Hatchet" by Delapouite under CC BY 3.0
-/svg/katana.svg - "Katana" by Delapouite under CC BY 3.0
-/svg/laser-blast.svg - "Laser blast" by Lorc under CC BY 3.0
-/svg/lead-pipe.svg - "Lead pipe" by Delapouite under CC BY 3.0
-/svg/lee-enfield.svg - "Lee Enfield" by Skoll under CC BY 3.0
-/svg/lightning-arc.svg - "Lightning arc" by Lorc under CC BY 3.0
-/svg/light-saber.svg - "Light Sabers" by Delapouite under CC BY 3.0
-/svg/luger.svg - "Luger" by Skoll under CC BY 3.0
-/svg/m3-grease-gun.svg - "M3 Grease Gun" by Skoll under CC BY 3.0
-/svg/mac-10.svg - "Mac 10" by Skoll under CC BY 3.0
-/svg/mp-40.svg - "MP40" by Skoll under CC BY 3.0
-/svg/mp5.svg - "MP5" by Skoll under CC BY 3.0
-/svg/mp5k.svg - "MP5K" by Skoll under CC BY 3.0
-/svg/musket.svg - "Musket" by Skoll under CC BY 3.0
-/svg/p90.svg - "P90" by Skoll under CC BY 3.0
-/svg/panzerfaust.svg - "Panzerfaust" by Delapouite under CC BY 3.0
-/svg/pocket-bow.svg - "Pocket bow" by Lorc under CC BY 3.0
-/svg/punch.svg - "Punch" by Lorc under CC BY 3.0
-/svg/revolver.svg - "Revolver" by Skoll under CC BY 3.0
-/svg/riot-shield.svg - "Riot shield" by Lorc under CC BY 3.0
-/svg/round-shield.svg - "Round shield" by Willdabeast under CC BY 3.0
-/svg/sabre.svg - "Crossed sabers" by Lorc under CC BY 3.0
-/svg/sawed-off-shotgun.svg - "Sawed-off shotgun" by Delapouite under CC BY 3.0
-/svg/sai.svg - "Sai" by Delapouite under CC BY 3.0
-/svg/shuriken.svg - "Shuriken" by Lorc under CC BY 3.0
-/svg/spectre-m4.svg - "Spectre M4" by Skoll under CC BY 3.0
-/svg/steyr-aug.svg - "Steyr AUG" by Skoll under CC BY 3.0
-/svg/switchblade.svg - "Switchblade" by Skoll under CC BY 3.0
-/svg/tec-9.svg - "TEC 9" by Skoll under CC BY 3.0
-/svg/telescopic-baton.svg - "Telescopic baton" by Skoll under CC BY 3.0
-/svg/thompson-m1928.svg - "Thompson M1928" by Skoll under CC BY 3.0
-/svg/two-handed-sword.svg - "Two handed sword" by Delapouite under CC BY 3.0
-/svg/walther-ppk.svg - "Walther PPK" by Skoll under CC BY 3.0
-/svg/war-pick.svg - "War pick" by Delapouite under CC BY 3.0
-/svg/whip.svg - "Whip" by Lorc under CC BY 3.0
-/svg/winchester-rifle.svg - "Winchester rifle" by Skoll under CC BY 3.0
-/svg/wizard-staff.svg - "Wizard staff" by Lorc under CC BY 3.0
-/svg/zat-gun.svg - "Zat gun" by Delapouite under CC BY 3.0
+/gear/tools/froe-and-mallet.webp - "Froe and mallet"
+/gear/tools/soldering-iron.webp - "Soldering iron"
+/gear/tools/test-tube-rack.webp - "Test tube rack"
+==============================================
 
-/svg/artillery-shell.svg - "Artillery shell" by Quoting under CC BY 3.0
-/svg/dynamite.svg - "Dynamite" by Delapouite under CC BY 3.0
-/svg/fertilizer-bag.svg - "Fertilizer bag" by Delapouite under CC BY 3.0
-/svg/flash-grenade.svg - "Flash grenade" by Lorc under CC BY 3.0
-/svg/grenade.svg - "Grenade" by Lorc under CC BY 3.0
-/svg/molotov.svg - "Molotov" by Lorc under CC BY 3.0
-/svg/stun-grenade.svg - "Stun grenade" by Delapouite under CC BY 3.0
+The following icons are by DarkZaitzev under CC BY 3.0
+==============================================
+/abstract/death-juice.webp - "Death Juice"
+==============================================
 
-/svg/abdominal-armor.svg - "Abdominal armor" by Delapouite under CC BY 3.0
-/svg/armor-vest.svg - "Armor vest" by Lorc under CC BY 3.0
-/svg/brodie-helmet.svg - "Brodie helmet" by Skoll under CC BY 3.0
-/svg/chain-mail.svg - "Chain mail" by Willdabeast under CC BY 3.0
-/svg/fish-scales.svg - "Fish scales" by Delapouite under CC BY 3.0
-/svg/flat-platform.svg - "Flat platform" by Delapouite under CC BY 3.0
-/svg/full-motorcycle-helmet.svg - "Full motorcycle helmet" by Delapouite under CC BY 3.0
-/svg/kevlar-vest.svg - "Kevlar vest" by Skoll under CC BY 3.0
-/svg/knee-pad.svg - "Knee pad" by Delapouite under CC BY 3.0
-/svg/metal-scales.svg - "Metal scales" by Lorc under CC BY 3.0
-/svg/plastron.svg - "Plastron" by Lorc under CC BY 3.
-/svg/samus-helmet.svg - "Samus helmet" by Delapouite under CC BY 3.0
-/svg/shieldcomb.svg - "Shieldcomb" by Lorc under CC BY 3.0
-/svg/sleeveless-jacket.svg - "Sleeveless jacket" by Delapouite under CC BY 3.0
-/svg/space-suit.svg - "Space suit" by Lorc under CC BY 3.0
-/svg/stalhelm.svg - "Stalhelm" by Skoll under CC BY 3.0
-/svg/trench-body-armor.svg - "Trench body armor" by Skoll under CC BY 3.0
+The following icons are by Delapouite under CC BY 3.0
+==============================================
+/svg/character/astronaut-helmet.svg - "Astronaut helmet"
+/svg/character/bandit.svg - "Bandit"
+/svg/character/hoodie.svg - "Hoodie"
+/svg/character/mustache.svg - "Mustache"
+/svg/character/police-officer-head.svg - "Police officer head"
+/svg/character/spy.svg - "Spy"
 
-/svg/backpack.svg - "Backpack" by Delapouite under CC BY 3.0
-/svg/cannister.svg - "Cannister" by Lorc under CC BY 3.0
-/svg/cardboard-box-closed.svg - "Cardboard box closed" by Delapouite under CC BY 3.0
-/svg/cargo-crate.svg - "Cargo crate" by Delapouite under CC BY 3.0
-/svg/compact-disc.svg - "Compact Disc" by Delapouite under CC BY 3.0
-/svg/disc.svg - "Disc" by Lorc under CC BY 3.0
-/svg/dna2.svg - "DNA 2" by Lorc under CC BY 3.0
-/svg/duffel-bag.svg - "Duffel bag" by Delapouite under CC BY 3.0
-/svg/gym-bag.svg - "Gym bag" by Delapouite under CC BY 3.0
-/svg/jerrycan.svg - "Jerrycan" by Delapouite under CC BY 3.0
-/svg/oil-drum.svg - "Oil Drum" by Skoll under CC BY 3.0
-/svg/rolling-suitcase.svg - "Rolling suitcase" by Caro Asercion under CC BY 3.0
-/svg/school-bag.svg - "School bag" by Delapouite under CC BY 3.0
-/svg/suitcase.svg - "Suitcase" by Delapouite under CC BY 3.0
-/svg/toolbox.svg - "Toolbox" by Delapouite under CC BY 3.0
-/svg/usb-key.svg - "USB key" by Delapouite under CC BY 3.0
-/svg/water-flask.svg - "Water flask" by Delapouite under CC BY 3.0
+/svg/vehicle/ambulance.svg - "Ambulance"
+/svg/vehicle/bus.svg - "Bus"
+/svg/vehicle/caravan.svg - "Caravan"
+/svg/vehicle/city-car.svg - "City car"
+/svg/vehicle/bike.svg - "Dutch bike"
+/svg/vehicle/helicopter.svg - "Helicopter"
+/svg/vehicle/jeep.svg - "Jeep"
+/svg/vehicle/jet-fighter.svg - "Jet fighter"
+/svg/vehicle/scooter.svg - "Scooter"
+/svg/vehicle/surfer-van.svg - "Surfer van"
+/svg/vehicle/truck.svg - "Truck"
 
-/svg/batteries.svg - "Batteries" by Lorc under CC BY 3.0
-/svg/bullets.svg - "Bullets" by Lorc under CC BY 3.0
-/svg/cooler.svg - "Cooler" by Delapouite under CC BY 3.0
-/svg/cylinder.svg - "Chaingun" by sbed under CC BY 3.0
-/svg/drink-me.svg - "Drink me" by Lorc under CC BY 3.0
-/svg/magazine.svg - "Machine gun magazine" by Delapouite under CC BY 3.0
-/svg/medicine-pills.svg - "Medicine Pills" by Delapouite under CC BY 3.0
-/svg/quill-ink.svg - "Quill and ink" by Lorc under CC BY 3.0
-/svg/quiver.svg - "Quiver" by Delapouite under CC BY 3.0
-/svg/shotgun-rounds.svg - "Shotgun rounds" by Delapouite under CC BY 3.0
-/svg/sticking-plaster.svg - "Sticking plaster" by Lorc under CC BY 3.0
+/svg/spacecraft/defense-satellite.svg - "Defense Satellite"
+/svg/spacecraft/interceptor-ship.svg - "Interceptor ship"
+/svg/spacecraft/scout-ship.svg - "Scout ship"
+/svg/spacecraft/spaceship.svg - "Spaceship"
+/svg/spacecraft/space-shuttle.svg - "Space shuttle"
+/svg/spacecraft/starfighter.svg - "Starfighter"
+/svg/spacecraft/ufo.svg - "UFO"
 
-/svg/black-book.svg - "Black book" by Willdabeast under CC BY 3.0
-/svg/book-cover.svg - "Book cover" by Lorc under CC BY 3.0
-/svg/bookshelf.svg - "Bookshelf" by Delapouite under CC BY 3.0
-/svg/cigar.svg - "Cigar" by Delapouite under CC BY 3.0
-/svg/cigarette.svg - "Cigarette" by Delapouite under CC BY 3.0
-/svg/cube.svg - "Cube" by Delapouite under CC BY 3.0
-/svg/flashlight.svg - "Flashlight" by Delapouite under CC BY 3.0
-/svg/laptop.svg - "Laptop" by Delapouite under CC BY 3.0
-/svg/metal-bar.svg - "Metal bar" by Lorc under CC BY 3.0
-/svg/notebook.svg - "Notebook" by Delapouite under CC BY 3.0
-/svg/papers.svg - "Papers" by Lorc under CC BY 3.0
-/svg/passport.svg - "Passport" by Delapouite under CC BY 3.0
-/svg/pc.svg - "PC" by Skoll under CC BY 3.0
-/svg/screwdriver.svg - "Screwdriver" by Lorc under CC BY 3.0
-/svg/secret-book.svg - "Secret Book" by Delapouite under CC BY 3.0
-/svg/smartphone.svg - "Smartphone" by Skoll under CC BY 3.0
-/svg/tablet.svg - "Tablet" by Skoll under CC BY 3.0
-/svg/walkie-talkie.svg - "Walkie Talkie" by Delapouite under CC BY 3.0
-/svg/white-book.svg - "White book" by Willdabeast under CC BY 3.0
+/svg/kneeling.svg - "Coronation"
+/svg/prone.svg - "Half body crawling"
 
-/svg/all-seeing-eye.svg - "All seeing eye" by Delapouite under CC BY 3.0
-/svg/chemical-bolt.svg - "Chemical bolt" by Lorc under CC BY 3.0
-/svg/crystalize.svg - "Crystalize" by Lorc under CC BY 3.0
-/svg/death-note.svg - "Death note" by Lorc under CC BY 3.0
-/svg/defilibrate.svg - "Defilibrate" by Lorc under CC BY 3.0
-/svg/explosion-rays.svg - "Explosion rays" by Lorc under CC BY 3.0
-/svg/flame.svg - "Flame" by Carl Olsen under CC BY 3.0
-/svg/ice-cube.svg - "Ice Cube" by Lorc under CC BY 3.0
-/svg/lightning-branches.svg - "Lightning branches" by Lorc under CC BY 3.0
-/svg/shadow-follower.svg - "Shadow follower" by Lorc under CC BY 3.0
-/svg/shadow-grasp.svg - "Shadow grasp" by Lorc under CC BY 3.0
-/svg/smoking-orb.svg - "Smoking orb" by Lorc under CC BY 3.0
-/svg/sparkles.svg - "Sparkles" by Delapouite under CC BY 3.0
-/svg/splashy-stream.svg - "Splashy stream" by Lorc under CC BY 3.0
-/svg/static.svg - "Static" by Lorc under CC BY 3.0
+/abstract/all-seeing-eye.webp - "All seeing eye"
+/abstract/bookshelf.webp - "Bookshelf"
+/abstract/caduceus.webp - "Caduceus"
+/abstract/credits-currency.webp - "Credits currency"
+/abstract/cube.webp - "Cube"
+/abstract/fishing.webp - "Fishing"
+/abstract/flat-platform.webp - "Flat platform"
+/abstract/sparkles.webp - "Sparkles"
 
-/svg/fishing.svg - "Fishing" by Delapouite under CC BY 3.0
-/svg/fishing-pole.svg - "Fishing pole" by Delapouite under CC BY 3.0
+/containers/bags/backpack.webp - "Backpack"
+/containers/bags/duffel-bag.webp - "Duffel bag"
+/containers/bags/gym-bag.webp - "Gym bag"
+/containers/bags/school-bag.webp - "School bag"
+/containers/bags/shoulder-bag.webp - "Shoulder bag"
+/containers/bags/suitcase.webp - "Suitcase"
+/containers/bags/wallet.webp - "Wallet"
+
+/containers/boxes/cardboard-box-closed.webp - "Cardboard box closed"
+/containers/boxes/cargo-crate.webp - "Cargo crate"
+/containers/boxes/chest.webp - "Chest"
+/containers/boxes/cooler.webp - "Cooler"
+/containers/boxes/toolbox.webp - "Toolbox"
+/containers/boxes/wooden-crate.webp - "Wooden crate"
+
+/containers/data/compact-disc.webp - "Compact Disc"
+/containers/data/film-strip.webp - "Film strip"
+/containers/data/usb-key.webp - "USB key"
+
+/containers/liquids/barrel.webp - "Barrel"
+/containers/liquids/jerrycan.webp - "Jerrycan"
+/containers/liquids/water-bottle.webp - "Water bottle"
+/containers/liquids/water-flask.webp - "Water flask"
+/containers/liquids/water-gallon.webp - "Water gallon"
+
+/gear/equipment/binoculars.webp - "Binoculars"
+/gear/equipment/flashlight.webp - "Flashlight"
+/gear/equipment/gas-stove.webp - "Gas Stove"
+/gear/equipment/laptop.webp - "Laptop"
+/gear/equipment/lighter.webp - "Lighter"
+/gear/equipment/rope-coil.webp - "Rope coil"
+/gear/equipment/torch.webp - "Torch"
+/gear/equipment/walkie-talkie.webp - "Walkie Talkie"
+
+/gear/medical/cigar.webp - "Cigar"
+/gear/medical/cigarette.webp - "Cigarette"
+/gear/medical/first-aid-kit.webp - "First aid kit"
+/gear/medical/pill-bottle.webp - "Medicine Pills"
+/gear/medical/remedy.webp - "Remedy"
+
+/gear/objects/banknote.webp - "Banknote"
+/gear/objects/fire-extinguisher.webp - "Fire extinguisher"
+/gear/objects/freemasonry.webp - "Freemasonry"
+/gear/objects/notebook.webp - "Notebook"
+/gear/objects/passport.webp - "Passport"
+/gear/objects/secret-book.webp - "Secret Book"
+/gear/objects/swipe-card.webp - "Swipe card"
+
+/gear/supplies/booze.webp - "Booze"
+/gear/supplies/canned-fish.webp - "Canned fish"
+/gear/supplies/chips-bag.webp - "Chips bag"
+/gear/supplies/donut.webp - "Donut"
+/gear/supplies/fertilizer-bag.webp - "Fertilizer bag"
+/gear/supplies/grain.webp - "Grain"
+/gear/supplies/matchbox.webp - "Matchbox"
+
+/gear/tools/concrete-bag.webp - "Concrete bag"
+/gear/tools/fishing-pole.webp - "Fishing pole"
+/gear/tools/lockpicks.webp - "Lockpicks"
+/gear/tools/swiss-army-knife.webp - "Swiss army knife"
+
+/weapons/ammo/energy-tank.webp - "Energy tank"
+/weapons/ammo/magazine.webp - "Machine gun magazine"
+/weapons/ammo/quiver.webp - "Quiver"
+/weapons/ammo/shotgun-rounds.webp - "Shotgun rounds"
+
+/weapons/archaic/bo.webp - "Bo"
+/weapons/archaic/flail.webp - "Flail"
+/weapons/archaic/flanged-mace.webp - "Flanged mace"
+/weapons/archaic/hatchet.webp - "Hatchet"
+/weapons/archaic/katana.webp - "Katana"
+/weapons/archaic/nunchaku.webp - "Nunchaku"
+/weapons/archaic/sai.webp - "Sai"
+/weapons/archaic/two-handed-sword.webp - "Two handed sword"
+/weapons/archaic/war-pick.webp - "War pick"
+
+/weapons/explosive/claymore-explosive.webp - "Claymore explosive"
+/weapons/explosive/dynamite.webp - "Dynamite"
+/weapons/explosive/stun-grenade.webp - "Stun grenade"
+
+/weapons/gun/sawed-off-shotgun.webp - "Sawed-off shotgun"
+
+/weapons/other/armored-boomerang.webp - "Armored boomerang"
+/weapons/other/bat-leth.webp - "Bat'leth"
+/weapons/other/boomerang.webp - "Boomerang"
+/weapons/other/chainsaw.webp - "Chainsaw"
+/weapons/other/flamethrower.webp - "Flamethrower"
+/weapons/other/hunting-bolas.webp - "Hunting bolas"
+/weapons/other/light-saber.webp - "Light Sabers"
+/weapons/other/panzerfaust.webp - "Panzerfaust"
+/weapons/other/zat-gun.webp - "Zat gun"
+
+/weapons/simple/3d-hammer.webp - "3D Hammer"
+/weapons/simple/baseball-bat.webp - "Baseball bat"
+/weapons/simple/brass-knuckles.webp - "Brass knuckles"
+/weapons/simple/crowbar.webp - "Crowbar"
+/weapons/simple/gun-stock.webp - "Gun stock"
+/weapons/simple/lead-pipe.webp - "Lead pipe"
+
+/wearables/armor/abdominal-armor.webp - "Abdominal armor"
+/wearables/armor/fish-scales.webp - "Fish scales"
+/wearables/armor/knee-pad.webp - "Knee pad"
+/wearables/armor/sleeveless-jacket.webp - "Sleeveless jacket"
+
+/wearables/clothing/jacket.webp - "Moncler jacket"
+/wearables/clothing/t-shirt.webp - "T shirt"
+
+/wearables/headgear/full-motorcycle-helmet.webp - "Full motorcycle helmet"
+/wearables/headgear/samus-helmet.webp - "Samus helmet"
+==============================================
+
+The following icons are by Lorc under CC BY 3.0
+==============================================
+/svg/character/cowled.svg - "Cowled"
+
+/svg/vehicle/tank.svg - "Tank"
+
+/svg/spacecraft/rocket.svg - "Rocket"
+
+/abstract/campfire.webp - "Campfire"
+/abstract/cannon-ball.webp - "Cannon ball"
+/abstract/celebration-fire.webp - "Celebration fire"
+/abstract/chemical-bolt.webp - "Chemical bolt"
+/abstract/crystalize.webp - "Crystalize"
+/abstract/death-note.webp - "Death note"
+/abstract/defilibrate.webp - "Defilibrate"
+/abstract/dna.webp - "DNA 2"
+/abstract/explosion-rays.webp - "Explosion rays"
+/abstract/fireball.webp - "Fireball"
+/abstract/gunshot.webp - "Gunshot"
+/abstract/hospital-cross.webp - "Hospital cross"
+/abstract/ice-cube.webp - "Ice Cube"
+/abstract/laser-blast.webp - "Laser blast"
+/abstract/lightning-branches.webp - "Lightning branches"
+/abstract/scales.webp - "Scales"
+/abstract/shadow-follower.webp - "Shadow follower"
+/abstract/shadow-grasp.webp - "Shadow grasp"
+/abstract/shieldcomb.webp - "Shieldcomb"
+/abstract/smoking-orb.webp - "Smoking orb"
+/abstract/splashy-stream.webp - "Splashy stream"
+/abstract/static.webp - "Static"
+
+/containers/bags/knapsack.webp - "Knapsack"
+
+/containers/data/disc.webp - "Disc"
+
+/containers/liquids/canister.webp - "Cannister"
+/containers/liquids/chemical-tank.webp - "Chemical tank"
+/containers/liquids/quill-ink.webp - "Quill and ink"
+/containers/liquids/vial.webp - "Drink me"
+/containers/liquids/wine-glass.webp - "Wine glass"
+
+/gear/equipment/aerosol.webp - "Aerosol"
+/gear/equipment/candle-light.webp - "Candle light"
+/gear/equipment/lantern-flame.webp - "Lantern flame"
+
+/gear/medical/adhesive-bandage.webp - "Sticking plaster"
+/gear/medical/pill.webp - "Pill"
+/gear/medical/poison-bottle.webp - "Poison bottle"
+/gear/medical/scalpel.webp - "Scalpel"
+/gear/medical/syringe-empty.webp - "Syringe"
+/gear/medical/syringe-full.webp - "Hypodermic test"
+
+/gear/objects/book-cover.webp - "Book cover"
+/gear/objects/compass.webp - "Compass"
+/gear/objects/metal-bar.webp - "Metal bar"
+
+/gear/supplies/batteries.webp - "Batteries"
+/gear/supplies/cheese-wedge.webp - "Cheese wedge"
+/gear/supplies/chemical-drop.webp - "Chemical drop"
+/gear/supplies/match-head.webp - "Match head"
+/gear/supplies/papers.webp - "Papers"
+/gear/supplies/powder.webp - "Powder"
+/gear/supplies/sliced-bread.webp - "Sliced bread"
+
+/gear/tools/screwdriver.webp - "Screwdriver"
+/gear/tools/spade.webp - "Spade"
+/gear/tools/spanner.webp - "Spanner"
+/gear/tools/stone-crafting.webp - "Stone crafting"
+
+/weapons/ammo/broadhead-arrow.webp - "Broadhead arrow"
+/weapons/ammo/bullets.webp - "Bullets"
+
+/weapons/archaic/battle-axe.webp - "Battle axe"
+/weapons/archaic/crossed-chains.webp - "Crossed chains"
+/weapons/archaic/fire-axe.webp - "Fire axe"
+/weapons/archaic/flat-hammer.webp - "Flat hammer"
+/weapons/archaic/sabre.webp - "Crossed sabers"
+/weapons/archaic/whip.webp - "Whip"
+/weapons/archaic/wizard-staff.webp - "Wizard staff"
+
+/weapons/explosive/flash-grenade.webp - "Flash grenade"
+/weapons/explosive/grenade.webp - "Grenade"
+/weapons/explosive/molotov.webp - "Molotov"
+
+/weapons/other/fountain-pen.webp - "Fountain pen"
+/weapons/other/lightning-arc.webp - "Lightning arc"
+/weapons/other/pocket-bow.webp - "Pocket bow"
+/weapons/other/shuriken.webp - "Shuriken"
+
+/weapons/simple/bordered-shield.webp - "Bordered shield"
+/weapons/simple/bowie-knife.webp - "Bowie knife"
+/weapons/simple/claw-hammer.webp - "Claw hammer"
+/weapons/simple/punch.webp - "Punch"
+/weapons/simple/riot-shield.webp - "Riot shield"
+/weapons/simple/stiletto.webp - "Stiletto"
+
+/wearables/armor/armor-vest.webp - "Armor vest"
+/wearables/armor/metal-scales.webp - "Metal scales"
+/wearables/armor/plastron.webp - "Plastron"
+/wearables/armor/space-suit.webp - "Space suit"
+
+/wearables/headgear/domino-mask.webp - "Domino mask"
+==============================================
+
+The following icons are by Lucas under CC BY 3.0
+==============================================
+/wearables/clothing/cloak.webp - "Cloak"
+==============================================
+
+The following icons are by Quoting under CC BY 3.0
+==============================================
+/weapons/ammo/artillery-shell.webp - "Artillery shell"
+==============================================
+
+The following icons are by rihlsul under CC BY 3.0
+==============================================
+/gear/supplies/chocolate-bar.webp - "Chocolate bar"
+==============================================
+
+The following icons are by sbed under CC BY 3.0
+==============================================
+/gear/supplies/battery-pack.webp - "Battery pack empty"
+
+/weapons/ammo/cylinder.webp - "Chaingun"
+==============================================
+
+The following icons are by Skoll under CC BY 3.0
+==============================================
+/svg/character/balaclave.svg - "Balaclava"
+
+/svg/vehicle/airplane.svg - "Airplane"
+/svg/vehicle/apc.svg - "APC"
+/svg/vehicle/flatbed.svg - "Flatbed"
+/svg/vehicle/flatbed-covered.svg - "Flatbed covered"
+/svg/vehicle/race-car.svg - "Race car"
+
+/containers/liquids/oil-drum.webp - "Oil Drum"
+
+/gear/equipment/pc.webp - "PC"
+/gear/equipment/smartphone.webp - "Smartphone"
+/gear/equipment/tablet.webp - "Tablet"
+
+/gear/tools/trench-spade.webp - "Trench spade"
+
+/weapons/archaic/bayonet.webp - "Bayonet"
+/weapons/archaic/gladius.webp - "Gladius"
+
+/weapons/gun/ak47.webp - "AK47"
+/weapons/gun/ak47u.webp - "AK47u"
+/weapons/gun/c96.webp - "C96"
+/weapons/gun/colt-m1911.webp - "Colt M1911"
+/weapons/gun/cz-skorpion.webp - "CZ Skorpion"
+/weapons/gun/desert-eagle.webp - "Desert Eagle"
+/weapons/gun/famas.webp - "Famas"
+/weapons/gun/fn-fal.webp - "FN FAL"
+/weapons/gun/glock.webp - "Glock"
+/weapons/gun/lee-enfield.webp - "Lee Enfield"
+/weapons/gun/luger.webp - "Luger"
+/weapons/gun/m3-grease-gun.webp - "M3 Grease Gun"
+/weapons/gun/mac-10.webp - "Mac 10"
+/weapons/gun/mp5.webp - "MP5"
+/weapons/gun/mp5k.webp - "MP5K"
+/weapons/gun/mp-40.webp - "MP40"
+/weapons/gun/musket.webp - "Musket"
+/weapons/gun/p90.webp - "P90"
+/weapons/gun/revolver.webp - "Revolver"
+/weapons/gun/spectre-m4.webp - "Spectre M4"
+/weapons/gun/steyr-aug.webp - "Steyr AUG"
+/weapons/gun/tec-9.webp - "TEC 9"
+/weapons/gun/thompson-m1928.webp - "Thompson M1928"
+/weapons/gun/uzi.webp - "Uzi"
+/weapons/gun/walther-ppk.webp - "Walther PPK"
+/weapons/gun/winchester-rifle.webp - "Winchester rifle"
+
+/weapons/simple/baton.webp - "Baton"
+/weapons/simple/switchblade.webp - "Switchblade"
+/weapons/simple/telescopic-baton.webp - "Telescopic baton"
+
+/wearables/armor/kevlar-vest.webp - "Kevlar vest"
+/wearables/armor/trench-body-armor.webp - "Trench body armor"
+
+/wearables/clothing/dress.webp - "Dress"
+
+/wearables/headgear/brodie-helmet.webp - "Brodie helmet"
+/wearables/headgear/stalhelm.webp - "Stalhelm"
+==============================================
+
+The following icons are by Willdabeast under CC BY 3.0
+==============================================
+/gear/objects/black-book.webp - "Black book"
+/gear/objects/white-book.webp - "White book"
+
+/weapons/simple/round-shield.webp - "Round shield"
+
+/wearables/armor/chain-mail.webp - "Chain mail"
+==============================================
