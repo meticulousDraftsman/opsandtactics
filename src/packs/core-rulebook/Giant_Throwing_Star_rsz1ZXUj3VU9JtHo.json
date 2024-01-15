@@ -2,7 +2,7 @@
   "folder": "NWMAd77ogmBFnbgh",
   "name": "Giant Throwing Star",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/shuriken.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/shuriken.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -102,10 +102,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699220747030,
-    "modifiedTime": 1699676225148,
+    "modifiedTime": 1705314156625,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "rsz1ZXUj3VU9JtHo",

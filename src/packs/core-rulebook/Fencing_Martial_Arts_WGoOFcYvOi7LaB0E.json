@@ -1,7 +1,7 @@
 {
   "name": "Fencing Martial Arts",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.02gA5fFJOdsPh4LS]{Archaic Weapon Proficiency (Fencing Swords)}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When wielding a sabre, cutlass, rapier, parrying dagger, sai, or jitte, the character receives a +2 bonus against all Disarm attempts to disarm the wielder and a +1 bonus against all attacks against their weapon. The character also gains a +2 attack bonus to all called shot attacks against arms and legs made when attacking with a sabre, cutlass, rapier, or parrying dagger and the Critical Threat range for any of these weapons is 13-18.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">The Critical Threat range for a sabre, cutlass, rapier, or parrying dagger is 14-18</span>.</p>",
     "summary": "+2 Disarm bonus, +1 weapon defense, +2 called shot bonus, 13-18 crit"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699637745402,
+    "modifiedTime": 1705304446141,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "WGoOFcYvOi7LaB0E",

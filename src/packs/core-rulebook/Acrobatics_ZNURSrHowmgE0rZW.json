@@ -3,7 +3,7 @@
   "name": "Acrobatics",
   "type": "skill",
   "_id": "ZNURSrHowmgE0rZW",
-  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
   "system": {
     "ranks": null,
     "focus": "unfocus",
@@ -23,10 +23,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.1",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699855507629,
-    "modifiedTime": 1700033719436,
+    "modifiedTime": 1705309934144,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!ZNURSrHowmgE0rZW"

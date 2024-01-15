@@ -1,7 +1,7 @@
 {
   "name": "Push Blade",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/switchblade.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/switchblade.webp",
   "system": {
     "description": "<p>This blade extends in line with the wielder&rsquo;s arm when held in a clenched fist. Push blades and punch daggers use touch defense instead of normal defense. An improvised version is a corkscrew.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646298231,
+    "modifiedTime": 1705313611059,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bzyozDBgUhFKWEe2",

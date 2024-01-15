@@ -1,7 +1,7 @@
 {
   "name": "Marine Spacesuit (Shield)",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/shieldcomb.svg",
+  "img": "systems/opsandtactics/icons/abstract/shieldcomb.webp",
   "system": {
     "description": "<p>This spacesuit is an upgraded version of the standard spacesuit, built for military and police use. It protects the user from the harmful radiation and vacuum of space. It is a full body suit that has its own life support system that negates any temperature effects, as well as an emergency 72 hour air tank, a full sun visor, and a communication radio. It also has a mount to mount and use any plasarm, lasarm, elarm, or caseless firearm. Mounting a weapon to the marine spacesuit allows it to be fired hands free, and negates the recoil penalty for any weapon that is mounted to the marine space suit. A character can also wield large or larger weapons in their hands, taking a penalty on the attack roll equal to the armor penalty. This suit also has servos built into it, allowing it to stand on its own with no force or strength required to wear this armor. If a character has the Heavy Armor Proficiency feat, the CP loss is reduced to 3. This armor has 12 MOLLE slots, but they can be removed at time of purchase for no cost, and can soak 60 points of plasma or electric damage before it requires a new coolant pack. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the head, arms, legs, feet and hands of the wearer, providing DR and Defense to all listed areas. If a marine spacesuit loses all of its AP, it is depressurized and can no longer protect its wearer from the environment. This armor is hardened against EMP.</p>",
     "layer": "shield",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686630581,
+    "modifiedTime": 1705315212219,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "Pzoris4AIRejiogc",

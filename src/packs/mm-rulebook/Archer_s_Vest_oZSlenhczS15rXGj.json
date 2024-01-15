@@ -1,7 +1,7 @@
 {
   "name": "Archer's Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/abdominal-armor.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/abdominal-armor.webp",
   "system": {
     "description": "<p>This lightweight armor is specifically optimized for archers and crossbow users, providing a built in quiver that holds 20 arrows or bolts and provides light protection while being light and maneuverable.</p>",
     "layer": "worn",
@@ -35,7 +35,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 4,
       "cost": 11,
       "quality": "",
@@ -64,10 +64,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699690059150,
+    "modifiedTime": 1705314454805,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "CcJCIm7Kqgn8k9Br",

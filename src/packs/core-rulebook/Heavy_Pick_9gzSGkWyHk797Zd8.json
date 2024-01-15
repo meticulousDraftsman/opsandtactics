@@ -1,7 +1,7 @@
 {
   "name": "Heavy Pick",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/war-pick.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/war-pick.webp",
   "system": {
     "description": "<p>A larger, two-handed version of the light pick. An improvised version of this weapon might include a miner&rsquo;s pickaxe.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699645873161,
+    "modifiedTime": 1705313049456,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "4A0983jrLQH0C1T9",

@@ -1,7 +1,7 @@
 {
   "name": "Mobility",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p>AGI +1, @UUID[Compendium.opsandtactics.core-rulebook.Item.CKneys8gSF9WR76j]{Dodge}</p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character no longer provokes AoO when moving out of a threatened square.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Characters provoke AoO when moving out of a threatened square.</span></p><p></p>",
     "summary": "Moving no longer provokes AoO"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699637849692,
+    "modifiedTime": 1705304508200,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "lvI7qfcX2qKYsiiW",

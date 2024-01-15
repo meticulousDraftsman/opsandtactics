@@ -1,7 +1,7 @@
 {
   "name": "Close Combat Shotgunner",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.YIIZnklXaHYDx9Iq]{Shotgun Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When targeting an adjacent opponent with any shotgun the character takes no ranged attack penalties, and when firing a shotgun with a folded folding, or fixed folding stock or a pistol grip, the character does not take any penalties to their attack from the stock.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">When using most shotguns against an adjacent opponent, the character takes a -6 penalty on all ranged attacks. A character without this feat has the range increment penalty doubled for all attacks with a folded folding, or fixed folding stock or a pistol grip</span>.</p>",
     "summary": "No close combat penalty, no penalty for no stock"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699640039972,
+    "modifiedTime": 1705304809383,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "gxasTv5lvZAfTOmR",

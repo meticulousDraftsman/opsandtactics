@@ -1,7 +1,7 @@
 {
   "name": "Acme Overseer Automatic",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/glock.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/glock.webp",
   "system": {
     "description": "<h3>Acme Overseer Automatic</h3><p>Upgrade Points: Frame, Barrel, 1 Tactical.</p><p>Three 17 round magazines.</p><h3>Preset Action (PA)</h3><p>Preset Action, the action is at half-cock giving a light trigger pull. Preset Action firearms are considered semi-automatic firearms. All single shot attacks have a +1 attack bonus.</p><h3>Fully Automatic (Auto)</h3><p>Stands for fully automatic where the firearm will continue to fire as long as the trigger is pressed down. The firearm can perform autofire, suppressive fire, sweepfire, sprayfire, or burst fire attacks.</p><p>Slow (S) autofire means the weapon has a slow rate of fire. Slow autofire fires less rounds per second, giving a more controllable rate of fire. Slow autofire can perform single shot attacks, double tap attacks and potshot attacks, but can’t perform burst fire attacks.</p><p>Medium (M) autofire has a standard rate of fire. It has no penalties or bonuses to its attacks.</p><p>Fast (F) autofire fires more rounds per second, putting more bullets downrange. It has a -2 attack penalty to all autofire, suppressive fire, burst fire, sweepfire, and sprayfire attacks, but gains +1 dice damage on all autofire, suppressive fire, burst fire, sweepfire and sprayfire attacks.</p>",
     "type": "",
@@ -484,10 +484,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1700006469042,
+    "modifiedTime": 1705312517630,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "X9V3aPgdHzi6OkOq",

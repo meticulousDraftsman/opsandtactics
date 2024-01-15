@@ -1,7 +1,7 @@
 {
   "name": "Rifle Ace",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MjNoL6QtM0Nptxsw]{Rifle Specialis}t, @UUID[Compendium.opsandtactics.core-rulebook.Item.q2CTcyiqF0ovbeZH]{Rifle and SMG Reloader},</p><h3>Benefit</h3><p>Twice per round when the character is wielding an assault, battle, carbine, or target rifle, or sub-machine gun, and is targeted by any ranged attack, the character may immediately make a single ranged attack targeted at the creature that originally attacked them using their wielded assault, battle, carbine, or target rifle, or sub-machine gun. This attack may be any standard attack, and may not use any called shot attack modifiers. This attack can not cost more than 8 Combat Points. Both of these attacks are resolved at the same time. Also, when readying an attack with an assault, battle, carbine, or target rifle, or sub-machine gun the Combat Point cost is 2 less.</p><h3>Special</h3><p>If a character selects the Rifle Ace Feat, they may not select the Rifle Expert Feat.</p>",
     "summary": "Twice per round fire back when targeted, -2 CP to ready"
@@ -17,10 +17,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682893944008,
-    "modifiedTime": 1699636776451,
+    "modifiedTime": 1705304335817,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "yy3qadOIF6qMcsPf",

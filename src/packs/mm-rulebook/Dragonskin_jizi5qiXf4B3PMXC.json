@@ -1,7 +1,7 @@
 {
   "name": "Dragonskin",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/fish-scales.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/fish-scales.webp",
   "system": {
     "description": "<p>Dragonskin is armor that is composed of small ceramic plates that are stitched together with strong thread, creating a flexible, protective layer, in a vest like package.</p>",
     "layer": "worn",
@@ -43,7 +43,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 20,
       "cost": 50,
       "quality": "",
@@ -64,10 +64,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699690074210,
+    "modifiedTime": 1705314462388,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "CcJCIm7Kqgn8k9Br",

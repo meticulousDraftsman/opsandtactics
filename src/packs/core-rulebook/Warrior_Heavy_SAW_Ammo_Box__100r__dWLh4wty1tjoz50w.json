@@ -2,7 +2,7 @@
   "folder": "Xr2Suzxa2frN3SHU",
   "name": "Warrior Heavy SAW Ammo Box (100r)",
   "type": "object",
-  "img": "systems/opsandtactics/icons/svg/magazine.svg",
+  "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -74,10 +74,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1700005960720,
-    "modifiedTime": 1700007357335,
+    "modifiedTime": 1705312785189,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "dWLh4wty1tjoz50w",

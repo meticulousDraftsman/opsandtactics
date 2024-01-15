@@ -1,7 +1,7 @@
 {
   "name": "Microwire Knife",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/gladius.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/stiletto.webp",
   "system": {
     "description": "<p>A knife that consists of a simple flat piece of metal that is lined on the edge with a thin, tightly drawn microwire making this knife extremely sharp and unable to be dulled. Microwire knives can not accept any upgrade on their contact. Microwire knives are considered field knives for the purpose of feats and equipment.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699687017241,
+    "modifiedTime": 1705315648808,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bY5g91OyylH41l8l",

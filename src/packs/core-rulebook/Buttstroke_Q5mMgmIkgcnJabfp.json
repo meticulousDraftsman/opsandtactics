@@ -1,7 +1,7 @@
 {
   "name": "Buttstroke",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/gun-stock.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/gun-stock.webp",
   "system": {
     "description": "<p>A buttstroke is not a melee weapon in the traditional sense, rather using the butt of a longarm to strike a target. While buttstroking is an improvised weapon, it does not incur the penalties for being one, nor will it break if used as a weapon. All weapons with a fixed stock can be used to buttstroke. If a character provokes an AoO on a character wielding a longarm that can buttstroke, that character can use the buttstroke to perform their AoO. A buttstroke can not be upgraded with any melee upgrades.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646415914,
+    "modifiedTime": 1705313422274,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "Gx9seR2WtHyqyAP1",

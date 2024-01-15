@@ -2,7 +2,7 @@
   "folder": "B9mEMVLfTaz65GI6",
   "name": "Brick",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/metal-bar.svg",
+  "img": "systems/opsandtactics/icons/gear/supplies/metal-bar.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -294,10 +294,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699220680123,
-    "modifiedTime": 1699675293496,
+    "modifiedTime": 1705310859555,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "e7EvJDdRHVJyOZ9p",

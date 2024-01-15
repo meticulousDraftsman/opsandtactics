@@ -1,7 +1,7 @@
 {
   "name": "Container Enchant",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Enchantment) 4 ranks</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When scribing Enchantment spells with this modification, the mage is able to cast an enchantment spell on an ammunition container, pouch or magazine, granting all ammunition placed in that container the enchantment, until the Enchantment spell dies. If a round of ammunition is taken out of the container, it will stay enchanted for one round after it was removed. This modification adds 4 SP to the spell’s cost</span>.</p><h3>Normal</h3><p><span class=\"fontstyle0\">Ammunition must be enchanted directly, or wrapped in package paper with an enchantment, which is then opened</span>.</p><h3>Special</h3><p><span class=\"fontstyle0\">This modification will not work on internal magazines, but will work on objects that actually hold ammunition, such as speedloaders, stripper clips, box magazines, cartridge wallets, bandoleers, quivers, shell and cartridge belts, refill tubes, and bullet bags, as well as MOLLE shell, utility, quiver and cased ammunition pouches, and shell and cartridge loops. Grenades, both thrown and fired, rocket launcher rockets and mortars may not benefit from the container enchantment. When enchanting uses to the container, a single use is a single shot. Using any multi-shot attacks requires enough uses to enchant every round used in the multi-shot attack to gain the benefits of the enchantment. When enchanting timed, the uses of the container are unlimited in that time frame</span>.</p>",
     "summary": "Enchant a container and it's contents"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690477953,
+    "modifiedTime": 1705305379796,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "aVyuCD9nZt4OdrvL",

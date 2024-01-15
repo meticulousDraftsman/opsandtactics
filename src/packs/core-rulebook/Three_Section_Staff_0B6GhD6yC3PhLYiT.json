@@ -1,7 +1,7 @@
 {
   "name": "Three-Section Staff",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/crossed-chains.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/nunchaku.webp",
   "system": {
     "description": "<p>Originally a farm implement for threshing grain, this weapon is composed of three sections of wood of equal lengths, joined at the ends by chain, leather, or rope. The three- section staff requires two hands to use. Improvised versions of this unique weapon are extremely unlikely. A character can strike opponents up to 10&rsquo; away with a three-section staff.</p>\n<p>The three-section staff is a double weapon. A character can fight with it as if fighting with two weapons, but if they do, the character incurs all the normal attack penalties associated with fighting with two weapons, as if using a one-handed weapon and a Small weapon.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699644151234,
+    "modifiedTime": 1705312971025,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "1nRSdfNgNgj6ekfV",

@@ -1,7 +1,7 @@
 {
   "name": "Short Staff",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/bo.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/bo.webp",
   "system": {
     "description": "<p>A short staff is roughly waist- to chest-high on its wielder. A classic example is the jo stick. Improvised versions of this weapon include ski poles and the remains of a long staff cut in two. Short staffs can be used to perform trip attacks. Shortstaffs are considered double weapons and can be used to two weapon fight.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699644959308,
+    "modifiedTime": 1705313009986,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "3rt54XL14ahH5bvr",

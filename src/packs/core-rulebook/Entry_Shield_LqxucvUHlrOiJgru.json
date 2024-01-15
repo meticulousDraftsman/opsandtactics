@@ -1,7 +1,7 @@
 {
   "name": "Entry Shield",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/riot-shield.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/riot-shield.webp",
   "system": {
     "description": "<p>A shield used in high risk situations to protect against enemy fire. An entry shield provides three-quarters cover in one direction. A shield may be used to melee attack. Improvised versions of entry shields include heavy steel plates. Entry shields can not be disarmed.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646502086,
+    "modifiedTime": 1705313582526,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "P20UXV3dIgURBUOF",

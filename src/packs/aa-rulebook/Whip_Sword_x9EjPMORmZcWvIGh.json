@@ -1,7 +1,7 @@
 {
   "name": "Whip Sword",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/switchblade.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/switchblade.webp",
   "system": {
     "description": "<p>A sword that is connected with a wire that runs through various links that make up the sword, which can be retracted and extended at will. A character may switch a whip sword&rsquo;s form for 1 CP. Whip swords come with a tactical sheath.</p>\n<p><strong>Sword Form:</strong> When the whip sword is in this mode, it is considered a shortsword and gains any benefits that a shortsword would gain from feats and abilities.</p>\n<p><strong>Whip Form:</strong> When a whip sword is in this mode, it is considered a bullwhip and gains any benefits that a bullwhip would gain from feats and abilities.</p>",
     "type": "",
@@ -272,10 +272,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699688337273,
+    "modifiedTime": 1705315530859,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "VBNIwQso1JehhQmJ",

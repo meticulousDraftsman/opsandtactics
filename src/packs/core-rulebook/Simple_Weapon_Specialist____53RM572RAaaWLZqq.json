@@ -1,7 +1,7 @@
 {
   "name": "Simple Weapon Specialist ()",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<p><span class=\"fontstyle0\">Choose a simple melee weapon</span> </p><h3>Prerequisites</h3><p><span class=\"fontstyle0\">When attacking with the chosen weapon the Combat Point cost to attack is reduced by 1</span>.</p><h3>Benefits</h3><p><span class=\"fontstyle0\">A character may take this feat multiple times. Each time a character takes the feat, they select a different weapon.</span> </p>",
     "summary": "-1 CP cost to attack"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699640171201,
+    "modifiedTime": 1705304842569,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "53RM572RAaaWLZqq",

@@ -1,7 +1,7 @@
 {
   "name": "Garotte",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/hunting-bolas.webp",
   "system": {
     "description": "<p>This weapon consists of a short cord, often with handles at each end. It is used to improve leverage when choking someone from behind and grants a +10 equipment bonus to all grapple checks to strangle. Improvised versions of this weapon include shoelaces and lengths of extension cord. Garrotes require two hands to use.</p>",
     "type": "",
@@ -82,10 +82,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681671191675,
-    "modifiedTime": 1699674820835,
+    "modifiedTime": 1705314334344,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "rqomdRuljmpWelrn",

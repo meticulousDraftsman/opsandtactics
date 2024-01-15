@@ -1,7 +1,7 @@
 {
   "name": "Melee (Huge)",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/katana.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -219,10 +219,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699679376520,
-    "modifiedTime": 1700189590048,
+    "modifiedTime": 1705312020898,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "RVD5EHO83OhhlawF",

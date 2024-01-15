@@ -1,7 +1,7 @@
 {
   "name": "Machine Gun Ace",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.i5Xz1hjImCHirF7l]{Machine Gun Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.iGdDH3k6zt6mBOsA]{General Purpose Machine Gunner}, @UUID[Compendium.opsandtactics.core-rulebook.Item.46U1CPOMY8hwoZSD]{Close Combat Machine Gunner}, @UUID[Compendium.opsandtactics.core-rulebook.Item.3sr5p717BmTjji8x]{Machine Gun Reloader}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">Once per round when firing a LMG or GPMG and making an attack that targets an area, the character may choose one creature in that area. The chosen creature doubles the cost to move in the the attack’s area for one round. Additionally, when making a sweeping fire attack, the character may choose to change it’s area of effect in one of the following ways:</span></p><ul><li><p><span class=\"fontstyle0\">Make a line starting at the character and extending to the maximum range of the sweeping fire attack. Creatures in this line are excluded from the attack’s area.</span></p></li><li><p><span class=\"fontstyle0\">Change the area of effect to a burst centered on the character instead of a cone, but reduce it’s maximum range by half.</span></p></li></ul><h3>Special</h3><p><span class=\"fontstyle0\">If a character selects the Machine Gun Ace Feat, they<br>may not select the Machine Gun Expert Feat</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
     "summary": "Modify Sweepfire area of effect, 2x movement cost for target in AoE."
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699639294717,
+    "modifiedTime": 1705304600816,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "M8kz2bDgEqr4YIab",

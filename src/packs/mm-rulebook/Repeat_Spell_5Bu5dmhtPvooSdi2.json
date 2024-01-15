@@ -1,7 +1,7 @@
 {
   "name": "Repeat Spell",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 4 Ranks</span> </p><h3>Benefits</h3><p><span class=\"fontstyle0\">When casting a spell with this modification, the mage is able to cast the effects of the spell multiple times from the same spell. When the spell is released, the mage has a number of charges of the spell equal to the modifier put on the spell, which may then be released at will. The caster must release all charges before their turn is over, or they lose all leftover charges. The effects of the charges are identical, and the mage must roll each charge, as if they were casting from multiple spells. A mage does not have to target the same target with all charges. This modification adds 4 SP to the spell’s cost per charge put on the spell.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">In order to target multiple targets with the same spell, a mage must have multiple copies of the same spell and spend Combat points releasing and aiming each one</span>.</p><h3>Special</h3><p><span class=\"fontstyle0\">A mage may put this modification on a spell multiple times. The Combat Points for aiming and releasing a spell are the same as if it were a single spell.</span></p>",
     "summary": "Duplicate a casted spell"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690477953,
+    "modifiedTime": 1705305373804,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "5Bu5dmhtPvooSdi2",

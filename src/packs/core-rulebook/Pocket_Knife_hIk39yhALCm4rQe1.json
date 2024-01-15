@@ -1,7 +1,7 @@
 {
   "name": "Pocket Knife",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/switchblade.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/switchblade.webp",
   "system": {
     "description": "<p>A pocket knife is a knife that is deposited in the pocket, or in a small sheath that is usually worn all day or carried all day. A pocket knife is 3-6&rdquo; long. Examples are numerous in nature. Improvised versions of this weapon include ice picks, letter openers, straight razors, and screwdrivers. Pocket knives come with a tactical sheath.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679554270,
+    "modifiedTime": 1705313751096,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "zqCKOIcFCrcCvKOl",

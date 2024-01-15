@@ -1,7 +1,7 @@
 {
   "name": "Psiblade Proficiency",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prequisites</h3><p><span class=\"fontstyle0\">Psionics (Any) 2 ranks</span></p><h3>Benefit</h3><p><span class=\"fontstyle0\">The character can use any single bladed, curved hilt psiblade or double bladed psiblades without penalty.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Characters without this feat take a -4 penalty on attack rolls made with single bladed and curved hilt psiblades, and a -8 on double bladed psiblades.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">A character with Archaic Weapon Proficiency (Combat Swords or Fencing Swords) only takes a -2 penalty on attack rolls when using a single bladed psiblade.</span></p><h3>Tutoring</h3><p>Time: 3 Days</p><p>Benefit: <span class=\"fontstyle0\">Attack penalty when using single bladed psiblades is reduced to -2. Attack penalty when using double bladed psiblades is reduced to -6. If the character has Archaic Weapon Proficiency (Combat Swords or Fencing Swords) the penalty is reduced to -1 for single bladed psiblades.</span></p><p></p>",
     "summary": "Use psiblades without penalty"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690816045,
+    "modifiedTime": 1705305592715,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "u5uPp2qYPln7aoOz",

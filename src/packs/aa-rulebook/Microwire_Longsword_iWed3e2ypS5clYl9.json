@@ -1,7 +1,7 @@
 {
   "name": "Microwire Longsword",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/two-handed-sword.webp",
   "system": {
     "description": "<p>These bear a strong resemblance to their medieval counterparts, but have been upgraded with futuristic improvements, such as improved grip handles with a soft rubber coating and the addition of a microwire to the edge of the blade, increasing their effectiveness. Microwire axes and swords can not accept any upgrade on their contact. Microwire swords and axes are considered to be the same kind of weapons as their non- microwire counterparts. Microwire swords come with a tactical sheath.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699688151743,
+    "modifiedTime": 1705315542302,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "VBNIwQso1JehhQmJ",

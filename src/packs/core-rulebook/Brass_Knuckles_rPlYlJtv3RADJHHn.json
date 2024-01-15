@@ -1,7 +1,7 @@
 {
   "name": "Brass Knuckles",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/brass-knuckles.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/brass-knuckles.webp",
   "system": {
     "description": "<p>These pieces of molded metal fit over the outside of a character&rsquo;s fingers and allow him or her to deal lethal damage with an unarmed strike instead of non-lethal damage. A strike with brass knuckles is otherwise considered an unarmed attack. When used by a character with the Brawl, Improved Brawl, or Street Fighting feat, brass knuckles increase the base damage dealt by an unarmed strike by +2. An improvised version of this weapon is a set of heavy finger rings.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646295412,
+    "modifiedTime": 1705313630042,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bzyozDBgUhFKWEe2",

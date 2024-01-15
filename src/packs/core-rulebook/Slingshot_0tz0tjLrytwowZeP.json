@@ -3,7 +3,7 @@
   "name": "Slingshot",
   "type": "weapon",
   "_id": "0tz0tjLrytwowZeP",
-  "img": "systems/opsandtactics/icons/svg/whip.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/whip.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -128,10 +128,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699674179028,
-    "modifiedTime": 1700189388989,
+    "modifiedTime": 1705314090833,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!0tz0tjLrytwowZeP"

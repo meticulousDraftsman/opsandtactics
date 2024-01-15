@@ -1,7 +1,7 @@
 {
   "name": "MOLLE Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/sleeveless-jacket.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/sleeveless-jacket.webp",
   "system": {
     "description": "<p>This tactical gear is covered in MOLLE, which allows different accessories to be mounted according to the user&rsquo;s specifications. the MOLLE vest is also printed in camouflage patterns: woodland, desert, winter, urban (gray patterned), and black are available. When worn in an appropriate setting, and is all matching, it grants a +2 bonus on Stealth checks. This armor has 12 MOLLE slots, but they can be removed at time of purchase for no cost.</p>\n<h3>Special Notes</h3>\n<p>This Armor can accept a single set of Armor Plates.</p>",
     "layer": "worn",
@@ -22,7 +22,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 3,
       "cost": 8,
       "quality": "",
@@ -43,10 +43,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585516201,
+    "modifiedTime": 1705309091900,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "UheU78K0VNNEbBBy",

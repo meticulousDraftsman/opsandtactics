@@ -1,7 +1,7 @@
 {
   "name": "Plasma Plate",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/shieldcomb.svg",
+  "img": "systems/opsandtactics/icons/abstract/shieldcomb.webp",
   "system": {
     "description": "<p>These plates consist of a plasma array that is used to defend against plasma and electric damage. They, like all plasma technology, require coolant packs in order to use, but provide decent protection against plasma and electric damage. They can soak 20 points of plasma or electric damage before requiring a coolant pack change. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>",
     "layer": "shield",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 2,
       "cost": 15,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681666976778,
-    "modifiedTime": 1699686670116,
+    "modifiedTime": 1705314857344,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "QrB2DLyRKtBLgHdd",

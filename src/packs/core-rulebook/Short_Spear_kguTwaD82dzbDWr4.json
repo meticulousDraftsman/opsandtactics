@@ -1,7 +1,7 @@
 {
   "name": "Short Spear",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/broadhead-arrow.svg",
+  "img": "systems/opsandtactics/icons/weapons/ammo/broadhead-arrow.webp",
   "system": {
     "description": "<p>A short spear is roughly waist- to chest-high on its wielder. A classic example is the hasta. Improvised versions of this weapon include hiking poles and the remains of a long spear cut in two. A character can strike opponents up to 10&rsquo; away with a short spear, but can&rsquo;t use it against an adjacent foe. Short spears can be used to perform trip attacks.</p>",
     "type": "",
@@ -588,10 +588,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679435140,
+    "modifiedTime": 1705313229791,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "g808B4Ewc2QxTQdp",

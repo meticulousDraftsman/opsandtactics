@@ -1,7 +1,7 @@
 {
   "name": "Tranquilizer Rifle",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/lee-enfield.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/lee-enfield.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -314,10 +314,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699666499574,
-    "modifiedTime": 1700189062257,
+    "modifiedTime": 1705313965825,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "VeoPuZjw8j65tEg1",

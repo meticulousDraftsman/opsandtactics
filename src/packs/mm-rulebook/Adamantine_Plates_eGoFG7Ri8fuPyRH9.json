@@ -1,7 +1,7 @@
 {
   "name": "Adamantine Plates",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/cube.svg",
+  "img": "systems/opsandtactics/icons/abstract/cube.webp",
   "system": {
     "description": "<p>These plates are made from Adamantine, designed to give long lasting, strong protection against stabbing and piercing at the cost of weight and speed.</p>",
     "layer": "plate",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 9.5,
       "cost": 40,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681666976778,
-    "modifiedTime": 1699690136331,
+    "modifiedTime": 1705314529813,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "Mzv2SjnGvJ3RgEcC",

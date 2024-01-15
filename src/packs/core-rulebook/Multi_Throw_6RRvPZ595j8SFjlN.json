@@ -1,7 +1,7 @@
 {
   "name": "Multi-Throw",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.7mVBPbMawQ47bTbY]{Brutal Throw}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When already making an attack with a throwing knife/star, glave, throwing axe, brick, or giant throwing star, the character may throw the same kind of weapon they made the attack with, at the same target with a -4 penalty to attack. If the attack is successful, it deals +1 damage die to that target.</span></p>",
     "summary": "Thrown weapon double tap"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699641068705,
+    "modifiedTime": 1705305140033,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "6RRvPZ595j8SFjlN",

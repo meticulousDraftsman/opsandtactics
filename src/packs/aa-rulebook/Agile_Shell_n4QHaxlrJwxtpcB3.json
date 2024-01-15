@@ -1,14 +1,14 @@
 {
   "name": "Agile Shell",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/space-suit.webp",
   "system": {
     "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Agile Shells are vulnerable to electrical, fire, and cold attacks, and take twice as much damage from all electrical, fire and cold attacks and all effects with electrical damage are doubled in duration.</li>\n<li>All augmentations cost 50% less for an Agile Shell.</li>\n<li>Agile Shells have built in augmentative vision with 2 Ram and 5 HDD.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Agile Shells have a base Combat Point score of 18.</li>\n<li>An Agile Shell's CHP formula is CON Score - 2.</li>\n<li>Agile Shells have a natural +1 dodge bonus to Defense.</li>\n</ul>\n<h3>Shell</h3>\n<p>The shell is the physical aspect of a synthetic, housing all of their physical abilities and statistics. The shell houses the Strength, Dexterity, and Constitution for the synthetic. The physical appearance of the shell varies greatly due to the personality and wealth of the synthetic, with some having a decidedly artificial appearance while others looking and even feeling natural in all aspects. Shells usually take a sentient-like appearance with a torso, two arms, and two legs. This is primarily done to be compatible with the various augmentations and equipment, and secondarily out of the unconscious narcissistic habit of their creators to design what is familiar. They can feasibly look like any race. Due to the mechanical, structural, and electrical nature of the shell, it does not heal or recover damage like natural creatures. A synth can change their shell for 100 WP, and it takes 1 day for the change to be completed. The only exception to this is the Frail shell. Frail shells are free and it takes 20 minutes to change into or out of. The limbs of a synthetic&rsquo;s shell can accept upgrades as though they were cyberlimbs, with a limit of 2 upgrades per limb. They may still replace these limbs with actual cyberlimbs as normal, with all of the benefits and penalties that they entail.</p>",
     "summary": ""
   },
   "effects": [
     {
-      "icon": "systems/opsandtactics/icons/svg/space-suit.svg",
+      "icon": "systems/opsandtactics/icons/wearables/armor/space-suit.webp",
       "origin": "Item.jQRYd1c2qI16TUOk",
       "duration": {
         "startTime": null,
@@ -25,26 +25,22 @@
         {
           "key": "system.details.race",
           "mode": 2,
-          "value": "-Agile",
-          "priority": null
+          "value": "-Agile"
         },
         {
           "key": "system.cp.max",
           "mode": 5,
-          "value": "18",
-          "priority": null
+          "value": "18"
         },
         {
           "key": "system.health.chp.formula",
           "mode": 5,
-          "value": "(@con.score)-2",
-          "priority": null
+          "value": "(@con.score)-2"
         },
         {
           "key": "system.def.dodge.synth",
           "mode": 2,
-          "value": "1",
-          "priority": null
+          "value": "1"
         }
       ],
       "tint": null,
@@ -61,10 +57,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681245218514,
-    "modifiedTime": 1699689484914,
+    "modifiedTime": 1705306541375,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "VhzxhHgIa9nVLBFX",

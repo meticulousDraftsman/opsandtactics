@@ -1,7 +1,7 @@
 {
   "name": "Concealable Fight Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/plastron.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/plastron.webp",
   "system": {
     "description": "<p>This is a variation on the standard Kevlar vest is worn by most law enforcement officers under their uniform shirts, sacrificing some ballistic damage protection to protect against swords and arrows.</p>\n<h3>Special Notes</h3>\n<p>Grants a +4 bonus to Stealth checks when hiding the armor.</p>",
     "layer": "worn",
@@ -35,7 +35,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 4,
       "cost": 20,
       "quality": "",
@@ -56,10 +56,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585491563,
+    "modifiedTime": 1705308942256,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "g7HwcKEMx8hl1MoU",

@@ -1,7 +1,7 @@
 {
   "name": "Great Sword",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/two-handed-sword.webp",
   "system": {
     "description": "<p>A great sword is a massive two-handed sword is reminiscent of an iron beam with a handle and a cutting edge. A character can strike opponents up to 10&rsquo; away with a great sword. A classic example is the German zweih&auml;nder. Improvised versions of this unique weapon are extremely unlikely. Great swords come with a tactical sheath.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679416331,
+    "modifiedTime": 1705313161105,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PVVjOMkBFXUvHywS",

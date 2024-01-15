@@ -1,7 +1,7 @@
 {
   "name": "Deflect Form Focus",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.jViibXrHmQKko0gM]{Basic Defensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attempting the Deflect Reaction, the character may attempt to deflect sprayfire, sweepfire, pulsefire, double tap, and burst fire attacks</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">A character may not attempt to deflect sprayfire, sweepfire, pulsefire, double tap, or burst fire attacks.</span></p>",
     "summary": "Deflect autofire attacks"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699691595859,
+    "modifiedTime": 1705305680003,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "gAJy77Uf1u1MAm8m",

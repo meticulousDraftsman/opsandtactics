@@ -2,7 +2,7 @@
   "folder": "YxpNrIGilYHyqNmT",
   "name": "Oak Aetherrod",
   "type": "object",
-  "img": "systems/opsandtactics/icons/svg/bo.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/bo.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -50,10 +50,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699729506193,
-    "modifiedTime": 1699729745708,
+    "modifiedTime": 1705314700170,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "p6oOewv0vvGYsD1q",

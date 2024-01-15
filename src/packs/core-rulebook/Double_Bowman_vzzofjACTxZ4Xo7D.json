@@ -1,7 +1,7 @@
 {
   "name": "Double Bowman",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.02gA5fFJOdsPh4LS]{Archaic Weapon Proficiency (Bows)}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When already making an attack with a bow, the character may fire a second arrow at the same target with a -4 penalty to attack. If the attack is successful, it deals +2 damage die to that target.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
     "summary": "Bow doubletap"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699636403729,
+    "modifiedTime": 1705304263989,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "vzzofjACTxZ4Xo7D",

@@ -1,7 +1,7 @@
 {
   "name": "Emergency Plasma System",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/cannister.svg",
+  "img": "systems/opsandtactics/icons/weapons/ammo/energy-tank.webp",
   "system": {
     "description": "<p>The EPS is a light, last ditch alternative to standard plasma armor worn by detectives and those that need protection against plasma weapons, but not need to be visibly known. Whenever the wearer is attacked successfully with a plasma attack, even a critical strike, the EPS deploys a one time use shield that blocks a single plasma or electrical attack regardless of the amount of damage the attack dealt. The downside to this is that the EPS only can be used once before the coolant pack has to be replaced.</p>\n<h3>Special Notes</h3>\n<p>This armor is hardened against EMP</p>",
     "layer": "shield",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 0.8,
       "cost": 16,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686437436,
+    "modifiedTime": 1705315285621,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "M7iTtl3EbLRs5ZxP",

@@ -1,7 +1,7 @@
 {
   "name": "Armor Mastery",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.C2XqnHFuueEKzcCV]{Light Armor Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.hQPpJFTJTE6xAnzB]{Medium Armor Proficiency}, </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.NC1C4sviEMYRlexM]{Heavy Armor Proficiency}, and @UUID[Compendium.opsandtactics.core-rulebook.Item.JMRH5xl1sYrXol2Q]{Armor Optimization}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character reduces the Combat Points penalty by half rounded down, and receives a +1 to the maximum AGI limit for armor they are proficient in. They also receive a +5 to the AP score of the armor they are wearing. This bonus only applies while the character is wearing the armor and the character is proficient in that armor, and once he removes the armor, the armor loses this bonus.</span></p>",
     "summary": "Half CP Cost, +1 Max AGI, +5 AP"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699636503870,
+    "modifiedTime": 1705304283032,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "jCVh3l723Dn5Hw8g",

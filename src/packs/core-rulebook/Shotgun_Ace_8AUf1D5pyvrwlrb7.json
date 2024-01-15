@@ -1,7 +1,7 @@
 {
   "name": "Shotgun Ace",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.YIIZnklXaHYDx9Iq]{Shotgun Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When firing a bolt, pump, lever, semi- or fully automatic shotgun, the Combat Point cost for a no-miss shot is 5 less. When using this feat, a no-miss shot may not be combined with a called shot. Additionally, when using a bolt, pump, lever, semi- or fully automatic shotgun, the character may make one standard melee buttstroke or bayonet attack with it for 0 CP, once per round.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">If a character selects the Shotgun Ace Feat, they may not select the Shotgun Expert Feat.</span></p>",
     "summary": "-5 CP to No-miss shot, Free melee attack with shotgun once per round."
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699639913476,
+    "modifiedTime": 1705304825839,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "8AUf1D5pyvrwlrb7",

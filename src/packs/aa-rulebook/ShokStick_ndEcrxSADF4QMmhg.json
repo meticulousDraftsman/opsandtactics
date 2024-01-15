@@ -1,7 +1,7 @@
 {
   "name": "ShokStick",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/telescopic-baton.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/telescopic-baton.webp",
   "system": {
     "description": "<p>A light club with the added ability of shocking whatever is struck. On a successful hit the ShokStick deals 1d3 points of electricity damage (do not add the character’s POW bonus for the electric damage) and the target must make a Fortitude Saving Throw [TN10] or be Paralyzed for 1d2 rounds. This weapon has the retractable melee weapon upgrade.ShokSticks are considered light clubs for the purpose of feats and equipment.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699735315475,
+    "modifiedTime": 1705315630304,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bY5g91OyylH41l8l",

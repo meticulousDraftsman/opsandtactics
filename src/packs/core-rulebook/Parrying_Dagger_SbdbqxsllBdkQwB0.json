@@ -1,7 +1,7 @@
 {
   "name": "Parrying Dagger",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/gladius.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/gladius.webp",
   "system": {
     "description": "<p>Parrying daggers are a category of small handheld knives, designed to be used as off-hand weapons in conjunction with a single-handed sword such as a rapier or sabre. As the name implies they were designed to parry or defend. An improvised version of this weapon is extremely unlikely. Parrying daggers come with a tactical sheath.</p>\n<p>When used by a character with the Two Weapon Reaction feat, a parrying dagger grants a +2 Miscellaneous bonus to DEF, and when fighting defensively or using the parry reaction, the character gets an additional +2 to DEF.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679455357,
+    "modifiedTime": 1705313281233,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "mrO4buxOppmG6qqP",

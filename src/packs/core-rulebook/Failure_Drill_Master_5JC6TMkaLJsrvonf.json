@@ -1,7 +1,7 @@
 {
   "name": "Failure Drill Master",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.2pgKluxik8zEQWK5]{Double Tap Proficiency}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">Up to twice per round, when a character executes a successful double tap attack, they can make a single shot attack for 0 Combat Points. Normal penalties and bonuses apply for this attack. This attack takes an additional round of ammunition beyond the two rounds used for double tap, and can not be performed if the firearm does not have it to use. This attack must be taken before the character’s turn ends.</span></p>",
     "summary": "Free attack twice per round after doubletap"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699639670330,
+    "modifiedTime": 1705304740187,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "5JC6TMkaLJsrvonf",

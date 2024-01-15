@@ -3,7 +3,7 @@
   "name": "Light Rimless Handgun Ammo Can",
   "type": "object",
   "_id": "oxd17sXMsFuZNmip",
-  "img": "systems/opsandtactics/icons/svg/cardboard-box-closed.svg",
+  "img": "systems/opsandtactics/icons/containers/boxes/cardboard-box-closed.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -120,10 +120,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699680549678,
-    "modifiedTime": 1699680681257,
+    "modifiedTime": 1705310658694,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!oxd17sXMsFuZNmip"

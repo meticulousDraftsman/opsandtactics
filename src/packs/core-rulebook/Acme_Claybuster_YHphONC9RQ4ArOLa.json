@@ -1,7 +1,7 @@
 {
   "name": "Acme Claybuster",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/sawed-off-shotgun.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/sawed-off-shotgun.webp",
   "system": {
     "description": "<h3>Acme Claybuster</h3><p>Upgrade Points: Frame, Barrel.</p><p>Fixed stock and a removable choke barrel. Not affected by Error Range from ammunition.</p><h3>Single</h3><p>The firearm can only hold a single round and must be reloaded after every shot. Single shot firearms can perform single shot and potshot attacks.</p>",
     "type": "",
@@ -905,10 +905,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699669082096,
+    "modifiedTime": 1705312635326,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "fLjmJN8GvZ2FAFzR",

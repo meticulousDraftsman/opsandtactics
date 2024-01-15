@@ -1,7 +1,7 @@
 {
   "name": "Taser 7",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/lightning-arc.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/lightning-arc.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -472,10 +472,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699670120642,
-    "modifiedTime": 1700189276248,
+    "modifiedTime": 1705314055601,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "YpIYXY0DqVpNZQy6",

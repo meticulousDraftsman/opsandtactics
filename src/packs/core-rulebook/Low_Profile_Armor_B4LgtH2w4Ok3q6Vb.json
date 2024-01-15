@@ -1,7 +1,7 @@
 {
   "name": "Low-Profile Armor",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/plastron.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/plastron.webp",
   "system": {
     "description": "<p>This set of body armor is visually indistin- guishable from a common vest, sweater, pullover, suit coat, or jacket. Often used by employees of corporations, particularly those employed as security or bodyguard personnel.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 2,
       "cost": 18,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585478821,
+    "modifiedTime": 1705308976286,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "3jEv5mDKg3PRhEQr",

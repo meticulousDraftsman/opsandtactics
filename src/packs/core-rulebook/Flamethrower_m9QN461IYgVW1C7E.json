@@ -3,7 +3,7 @@
   "name": "Flamethrower",
   "type": "weapon",
   "_id": "m9QN461IYgVW1C7E",
-  "img": "systems/opsandtactics/icons/svg/flame.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/flamethrower.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -145,10 +145,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699664336353,
-    "modifiedTime": 1699674829491,
+    "modifiedTime": 1705314285369,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!m9QN461IYgVW1C7E"

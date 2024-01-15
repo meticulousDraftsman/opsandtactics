@@ -1,7 +1,7 @@
 {
   "name": "Dreadnought Recurve Bow",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/pocket-bow.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/pocket-bow.webp",
   "system": {
     "description": "<p>A bow that has tips that curve away from the archer when the bow is strung. By definition, the difference between recurve and other bows is that the string touches a section of the limb when the bow is strung. A recurve bow stores more energy and delivers energy more efficiently than an equivalent straight-limbed bow, giving a greater amount of energy and hence speed to the arrow. If the character does not have the required modifier for a recurve bow, they can only make Light Pull attacks with that bow. A character adds their POW bonus, up to a maximum of +6, to all damage rolls when using recurve bows.</p>",
     "type": "",
@@ -227,10 +227,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681646395557,
-    "modifiedTime": 1699669490030,
+    "modifiedTime": 1705313850093,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "FGFpPjwlKFqX2Pri",

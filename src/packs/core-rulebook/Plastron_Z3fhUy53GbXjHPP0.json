@@ -1,7 +1,7 @@
 {
   "name": "Plastron",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/plastron.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/plastron.webp",
   "system": {
     "description": "<p>Fencers wear this quilted canvas armor, which protects the torso, arms, and groin against parries, thrust, and swipes from foils, epees, and sabres.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms of the wearer, providing DR and Defense to all listed areas.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 3,
       "cost": 10,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585429282,
+    "modifiedTime": 1705309249570,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "gMx1J0qOaPk1DblG",

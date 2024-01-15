@@ -1,7 +1,7 @@
 {
   "name": "Wrist Wraps",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/punch.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/punch.webp",
   "system": {
     "description": "<p>These are cloth wrist wraps with padding and a velcro strap that is used to secure them to the wearer, often used for all types of fighting while still allowing use of the hands for other issues, or even use other weapons while wearing them. An unarmed strike with wrist wrap&rsquo;s damage is non-lethal. When used by a character with the Brawl, Improved Brawl, or Street Fighting feat, wrist wraps increase the base damage dealt by an unarmed strike by +1. An improvised version of these are tightly wrapped cloth bandages. Wrist wraps have no upgrade points.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646296790,
+    "modifiedTime": 1705313621141,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bzyozDBgUhFKWEe2",

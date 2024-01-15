@@ -1,7 +1,7 @@
 {
   "name": "Macahuitl",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/chainsaw.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/chainsaw.webp",
   "system": {
     "description": "<p>A maquahuitl is a weapon shaped like a wooden sword, that has its sides embedded with prismatic blades made from obsidian. It was similar to a large wooden club with cuts in the side to hold the sharpened obsidian, and can be used to both inflict ripping slashing damage, or bludgeoning damage. When using a maquahuitl, the player must declare what kind of damage they are attempting to inflict. This weapon has two sets of damage types, damage values and Critical Threat levels, which is determined by which damage the character chooses to inflict. Maquahuitls can not perform thrust attacks.</p>",
     "type": "",
@@ -397,10 +397,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699647225605,
+    "modifiedTime": 1705313140020,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PVVjOMkBFXUvHywS",

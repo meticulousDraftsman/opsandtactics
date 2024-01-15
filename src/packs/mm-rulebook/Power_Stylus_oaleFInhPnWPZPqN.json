@@ -1,7 +1,7 @@
 {
   "name": "Power Stylus",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 4 Ranks, @UUID[Compendium.opsandtactics.mm-rulebook.Item.CEdyF0fS2BRXlARl]{Practiced Stylus}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attacking with a stylus, a mage can choose to gain +1 damage dice per character level. If they do, the range increment of their stylus is halved.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">The features of this feat may not be combined with the Ranged Stylus Feat</span>.</p>",
     "summary": "Halve range for double damage die"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690620686,
+    "modifiedTime": 1705305354834,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "oaleFInhPnWPZPqN",

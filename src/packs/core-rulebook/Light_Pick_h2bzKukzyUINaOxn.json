@@ -1,7 +1,7 @@
 {
   "name": "Light Pick",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/war-pick.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/war-pick.webp",
   "system": {
     "description": "<p>A weapon designed to concentrate its force on a small penetrating point in order to defeat armor. It is a small, one-handed instrument that includes a single point. An improvised version of this weapon might include rock cutting picks.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699645824894,
+    "modifiedTime": 1705313058389,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "4A0983jrLQH0C1T9",

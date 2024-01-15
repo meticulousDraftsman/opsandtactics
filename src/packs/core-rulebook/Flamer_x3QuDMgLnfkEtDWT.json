@@ -2,7 +2,7 @@
   "folder": "VHdtOuLDUZTGg9KL",
   "name": "Flamer",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/flame.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/flamethrower.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -103,10 +103,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699664336353,
-    "modifiedTime": 1699674830505,
+    "modifiedTime": 1705314279595,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "x3QuDMgLnfkEtDWT",

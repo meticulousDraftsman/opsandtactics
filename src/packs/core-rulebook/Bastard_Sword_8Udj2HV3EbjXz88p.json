@@ -1,7 +1,7 @@
 {
   "name": "Bastard Sword",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/katana.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/katana.webp",
   "system": {
     "description": "<p>A bastard sword is a long, narrow sword which often features a handle designed for easy two-handed use. A classic example is a katana. An improvised version of this weapon is a lumber saw. Bastard swords come with a tactical sheath.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679399618,
+    "modifiedTime": 1705313193166,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PVVjOMkBFXUvHywS",

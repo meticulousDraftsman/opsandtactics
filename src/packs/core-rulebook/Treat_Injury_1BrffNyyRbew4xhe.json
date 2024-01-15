@@ -3,7 +3,7 @@
   "name": "Treat Injury",
   "type": "skill",
   "_id": "1BrffNyyRbew4xhe",
-  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
   "system": {
     "ranks": null,
     "focus": "unfocus",
@@ -30,10 +30,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1700004606531,
-    "modifiedTime": 1700005586871,
+    "modifiedTime": 1705309882825,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!1BrffNyyRbew4xhe"

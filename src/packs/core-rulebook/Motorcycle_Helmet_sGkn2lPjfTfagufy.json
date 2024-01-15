@@ -1,7 +1,7 @@
 {
   "name": "Motorcycle Helmet",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/full-motorcycle-helmet.svg",
+  "img": "systems/opsandtactics/icons/wearables/headgear/full-motorcycle-helmet.webp",
   "system": {
     "description": "<p>These helmets come in various sizes and colors and protect the wearer from wind and small objects when moving at a fast pace, as well as when falling.</p>",
     "layer": "other",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 1.9,
       "cost": 5,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681772113880,
-    "modifiedTime": 1699585722033,
+    "modifiedTime": 1705309456990,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WHnsEWcIDLGdsbgY",

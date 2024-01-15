@@ -1,7 +1,7 @@
 {
   "name": "Bolt Case",
   "type": "object",
-  "img": "systems/opsandtactics/icons/svg/quiver.svg",
+  "img": "systems/opsandtactics/icons/weapons/ammo/quiver.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -143,10 +143,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699650885940,
-    "modifiedTime": 1699685398123,
+    "modifiedTime": 1705310753278,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "egC1tYH2huSZzCak",

@@ -1,7 +1,7 @@
 {
   "name": "Acme Target Plinker",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/colt-m1911.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/colt-m1911.webp",
   "system": {
     "description": "<h3>Acme Target Plinker</h3>\n<p>Upgrade Points: Frame, Barrel.</p>\n<p>Three 8 round magazines.</p>\n<p>-2 to Stealth to hide weapon.</p>\n<h3>Single Action (SA)</h3>\n<p>Single Action requires the hammer to be pulled back before firing again. Single action firearms that take box magazines or have internal magazines are considered semi- automatic firearms. All Single Action firearms gain a +1 attack bonus on all single shot and potshot attacks. Single Action firearms with cylinders cost +1 Combat Points when performing a single shot attack.</p>",
     "type": "",
@@ -227,10 +227,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1700006389544,
+    "modifiedTime": 1705312212426,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "sAu9JRHd1pCrGJ4V",

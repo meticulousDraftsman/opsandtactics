@@ -5,7 +5,7 @@
     "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.YIIZnklXaHYDx9Iq]{Shotgun Specialist}</p><h3>Benefit</h3><p>When firing a single shot shotgun or double-barrel OxU or SxS shotgun, the character receives a +3 attack bonus.</p>",
     "summary": "+3 attack"
   },
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "effects": [],
   "ownership": {
     "default": 0,
@@ -17,10 +17,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682808955087,
-    "modifiedTime": 1699639997585,
+    "modifiedTime": 1705304815881,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "ZO7E7f39Vgfgt0WX",

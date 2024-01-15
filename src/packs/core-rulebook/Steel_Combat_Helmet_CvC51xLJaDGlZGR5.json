@@ -1,7 +1,7 @@
 {
   "name": "Steel Combat Helmet",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/brodie-helmet.svg",
+  "img": "systems/opsandtactics/icons/wearables/headgear/brodie-helmet.webp",
   "system": {
     "description": "<p>&nbsp;A surplus helmet from wars gone by, having fallen out of favor in light of new lighter and sturdier options. They can be found in thrift stores and army-navy stores alike.</p>",
     "layer": "other",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 3,
       "cost": 3,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681772448708,
-    "modifiedTime": 1699585741271,
+    "modifiedTime": 1705309416832,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WHnsEWcIDLGdsbgY",

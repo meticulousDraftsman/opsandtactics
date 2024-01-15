@@ -1,7 +1,7 @@
 {
   "name": "Brawl",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Benefit </h3><p>When making an unarmed attack, the character receives a +1 bonus on attack rolls, and the character deals non-lethal bludgeoning damage equal to 1d6+POW modifier Normal Unarmed attacks normally deal non-lethal bludgeoning damage equal to 1d3+POW modifier </p><h3>Special </h3><p>Characters with natural melee weapons can use this feat to increase their natural melee weapon’s damage by one damage dice, but that damage becomes non-lethal, unless modified by another feat.</p>",
     "summary": "+1 attack unarmed, 1d6 or +1d"
@@ -17,10 +17,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682891533411,
-    "modifiedTime": 1699584196171,
+    "modifiedTime": 1705305236824,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "BfQrisONp9zLTEW3",

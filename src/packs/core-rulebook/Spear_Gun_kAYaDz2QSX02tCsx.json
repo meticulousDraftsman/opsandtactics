@@ -3,7 +3,7 @@
   "name": "Spear Gun",
   "type": "weapon",
   "_id": "kAYaDz2QSX02tCsx",
-  "img": "systems/opsandtactics/icons/svg/panzerfaust.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/panzerfaust.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -145,10 +145,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699665133609,
-    "modifiedTime": 1700189005062,
+    "modifiedTime": 1705313922484,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!kAYaDz2QSX02tCsx"

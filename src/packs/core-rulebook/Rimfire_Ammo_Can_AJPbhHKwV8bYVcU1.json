@@ -3,7 +3,7 @@
   "name": "Rimfire Ammo Can",
   "type": "object",
   "_id": "AJPbhHKwV8bYVcU1",
-  "img": "systems/opsandtactics/icons/svg/cardboard-box-closed.svg",
+  "img": "systems/opsandtactics/icons/containers/boxes/cardboard-box-closed.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -212,10 +212,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699680115933,
-    "modifiedTime": 1699680454446,
+    "modifiedTime": 1705310616786,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!AJPbhHKwV8bYVcU1"

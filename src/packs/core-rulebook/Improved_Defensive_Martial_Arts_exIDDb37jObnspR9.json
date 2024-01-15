@@ -3,10 +3,10 @@
   "name": "Improved Defensive Martial Arts",
   "type": "feature",
   "_id": "exIDDb37jObnspR9",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "summary": "+4 Bludgeoning DR",
-    "description": "<h3>Prerequisites</h3><p>CON 13, @UUID[Compendium.opsandtactics.core-rulebook.Item.peeewBkpYgDt0ybt]{Defensive Martial Arts}</p><h3>Benefit</h3><p>The character gains 4/Bludgeoning DR.</p><h3>Special</h3><p>This DR is added to the original feat.</p>"
+    "description": "<h3>Prerequisites</h3><p>CON 13, @UUID[Compendium.opsandtactics.core-rulebook.Item.peeewBkpYgDt0ybt]{Defensive Martial Arts}</p><h3>Benefit</h3><p>The character gains 4/Bludgeoning DR.</p><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.UXyLrGRJkyliwVU2]{Improved Defensive Martial Arts}</p><h3>Special</h3><p>This DR is added to the original feat.</p>"
   },
   "effects": [],
   "sort": 550000,
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699584288908,
-    "modifiedTime": 1699641350030,
+    "modifiedTime": 1705309589608,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!exIDDb37jObnspR9"

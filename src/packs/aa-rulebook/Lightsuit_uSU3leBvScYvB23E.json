@@ -1,7 +1,7 @@
 {
   "name": "Lightsuit",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/space-suit.webp",
   "system": {
     "description": "<p>This spacesuit is comprised of a thin, flexible light material that protects against the vacuum and radiation of space, while still allowing for freedom of movement. It is fully sealed and has a tank that can hold up to 12 hours of breathable oxygen.</p>\n<h3>Special Notes</h3>\n<p>If a character takes any damage wearing a lightsuit, it is depressurized and can no longer protect its wearer from the environment.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 3.8,
       "cost": 40,
       "quality": "",
@@ -55,10 +55,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686480812,
+    "modifiedTime": 1705315187241,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "DfWd9C4dZqLQ7afG",

@@ -1,7 +1,7 @@
 {
   "name": "Whip Chain",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/crossed-chains.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/crossed-chains.webp",
   "system": {
     "description": "<p>A whip chain is a flexible weapon is similar to a three-section staff, featuring 8-10 short metal bars, connected by 3-4 links of chain. It is wielded much like a whip, with a single handle at one end. An improvised version of this weapon might consist of links of steel cable. Because a chain can wrap around an enemy&rsquo;s leg or other limb, a character can make a trip attack with it. If the character is tripped during their own trip attempt, the character can drop the chain to avoid being tripped. When using a chain, the character receives a +2 equipment bonus when attempting to trip, or disarm (including the roll to avoid being disarmed if the character fails to disarm the opponent). A whip chain has a maximum range of 15&rsquo;.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699643864022,
+    "modifiedTime": 1705312979488,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "1nRSdfNgNgj6ekfV",

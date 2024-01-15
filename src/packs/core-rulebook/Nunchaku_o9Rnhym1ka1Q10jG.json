@@ -1,7 +1,7 @@
 {
   "name": "Nunchaku",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/crossed-chains.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/nunchaku.webp",
   "system": {
     "description": "<p>A popular martial arts weapon, the nunchaku is made of two wooden shafts connected by a short length of rope or chain. Improvised versions of this unique weapon are extremely unlikely. .</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699644101028,
+    "modifiedTime": 1705312955108,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "1nRSdfNgNgj6ekfV",

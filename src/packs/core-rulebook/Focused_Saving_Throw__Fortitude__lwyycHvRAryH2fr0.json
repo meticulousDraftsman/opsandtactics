@@ -1,14 +1,14 @@
 {
   "name": "Focused Saving Throw (Fortitude)",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Benefit </h3><p>Select Fortitude, Will, or Reflex The character gains a +4 bonus on the selected Saving Throw.</p><h3>Special </h3><p>This feat can be taken multiple times. Each time it is taken, it applies to a different Saving Throw.</p>",
     "summary": "+4 Fortitude"
   },
   "effects": [
     {
-      "icon": "systems/opsandtactics/icons/svg/notebook.svg",
+      "icon": "systems/opsandtactics/icons/gear/objects/notebook.webp",
       "origin": "Item.RTRNRgQVMe3EYyS5",
       "duration": {
         "startTime": null,
@@ -47,10 +47,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1683318590623,
-    "modifiedTime": 1699583713129,
+    "modifiedTime": 1705305039557,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "3ZiXr5MZ2VINUTgv",

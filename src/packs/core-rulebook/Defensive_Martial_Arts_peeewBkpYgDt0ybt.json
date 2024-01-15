@@ -3,10 +3,10 @@
   "name": "Defensive Martial Arts",
   "type": "feature",
   "_id": "peeewBkpYgDt0ybt",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "summary": "DR 2/Bludgeoning",
-    "description": "<h3>Prerequisites </h3><p>CON 13</p><h3>Benefit </h3><p>The character gains 2/Bludgeoning DR.</p>"
+    "description": "<h3>Prerequisites</h3><p>CON 13</p><h3>Benefit</h3><p>The character gains 2/Bludgeoning DR.</p><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.GsNVF7ptdRfANL95]{Defensive Martial Arts}</p>"
   },
   "effects": [],
   "sort": 350000,
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699584216354,
-    "modifiedTime": 1699584252438,
+    "modifiedTime": 1705309606483,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!peeewBkpYgDt0ybt"

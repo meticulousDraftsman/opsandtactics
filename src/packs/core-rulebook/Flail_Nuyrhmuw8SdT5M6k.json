@@ -1,7 +1,7 @@
 {
   "name": "Flail",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/flail.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/flail.webp",
   "system": {
     "description": "<p>This weapon consists of a spiked iron ball attached to an iron or wooden rod by a long piece of chain. When attacking a target using a shield, the target gains no benefits from the shield. No improvised weapons mimic this unique weapon.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699645768157,
+    "modifiedTime": 1705313082326,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "4XsAbYKQ4eAkxpsQ",

@@ -1,7 +1,7 @@
 {
   "name": "Light Duty Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/kevlar-vest.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/kevlar-vest.webp",
   "system": {
     "description": "<p>A lightweight tactical vest with Kevlar designed for extended use by riot police and forces on alert for potential attack. This tactical gear is covered in MOLLE, which allows different accessories to be mounted according to the user&rsquo;s specifications. This armor has 5 MOLLE slots, but they can be removed at time of purchase for no cost.</p>",
     "layer": "worn",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 5,
       "cost": 30,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585556699,
+    "modifiedTime": 1705309123156,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WHd08lYEpAXd9nXz",

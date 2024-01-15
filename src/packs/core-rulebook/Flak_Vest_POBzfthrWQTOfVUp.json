@@ -1,7 +1,7 @@
 {
   "name": "Flak Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/sleeveless-jacket.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/sleeveless-jacket.webp",
   "system": {
     "description": "<p>&nbsp;A flak vest is a light vest worn by aircraft personnel to protect against flak cannons, but can also be used to protect against grenades.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 2,
       "cost": 3,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585514206,
+    "modifiedTime": 1705309079875,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "UheU78K0VNNEbBBy",

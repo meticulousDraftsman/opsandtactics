@@ -1,7 +1,7 @@
 {
   "name": "DA/SA (Small)",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/walther-ppk.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/walther-ppk.webp",
   "system": {
     "description": "<h3>Weapon</h3>\n<p>Upgrade Points:</p>\n<h3>Double Action/Single Action (DA/SA)</h3>\n<p>Double Action/Single Action where the first shot is a heavy double action pull and the second is a crisp single action pull. DA/SA firearms are considered semi-automatic firearms. All single shot attacks after the first gain a +1 attack bonus. The first shot has no bonus or penalty, but the hammer may be cocked back for 1 Combat Points, giving a +1 attack bonus for the first shot.</p>",
     "type": "",
@@ -307,10 +307,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699679052775,
+    "modifiedTime": 1705311322264,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "ownership": {

@@ -1,7 +1,7 @@
 {
   "name": "Surface Vehicle Operations",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<p><span class=\"fontstyle0\">Select a class of surface vehicle (heavy wheeled, boats, or tracked). The character is proficient at operating that class of vehicle.</span></p><ul><li><p><span class=\"fontstyle0\">Heavy wheeled class includes all kinds of semi-trucks and tractor-trailers, as well as wheeled construction vehicles (such as earth movers) and wheeled armored vehicles (such as some armored personnel carriers).</span></p></li><li><p><span class=\"fontstyle0\">Boats are engine-powered water vessels designed for operation by a single person and usually no more than 100 feet in length.</span></p></li><li><p><span class=\"fontstyle0\">Tracked vehicles include bulldozers and tanks and other military vehicles</span></p></li></ul><h3>Prerequisites</h3><p><span class=\"fontstyle0\">Drive 5+</span></p><h3>Benefit</h3><p><span class=\"fontstyle0\">The character takes no penalty on Drive checks or attack rolls made when operating a surface vehicle of the selected class.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Characters without this feat take a -4 penalty on Drive checks made to operate a surface vehicle that falls under any of these classes, and to attacks made with vehicle weapons. There is no penalty for operating a general-purpose surface vehicle.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">A character may take this feat up to three times. Each time the character takes the feat, they select a different class of surface vehicle.</span></p><p></p>",
     "summary": "Pilot and attack with specialized vehicles with no penalties"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699584466130,
+    "modifiedTime": 1705305307922,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "PiK4T2P6rQspiBoB",

@@ -1,7 +1,7 @@
 {
   "name": "Halberd",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/flat-hammer.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/flat-hammer.webp",
   "system": {
     "description": "<p>A halberd consists of an axe blade topped with a spike mounted on a long shaft very much like a spear. Has a hook on the opposite end, for grasping long reaching enemies. Halberds may be used to bash, slash or thrust, and as such the user may select what kind of damage they wish to use before attacking. A character can strike opponents up to 10&rsquo; away with a halberd, but can&rsquo;t use it against an adjacent foe. Halberds can be used to perform trip attacks.</p>",
     "type": "",
@@ -410,10 +410,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699647351715,
+    "modifiedTime": 1705313220924,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "g808B4Ewc2QxTQdp",

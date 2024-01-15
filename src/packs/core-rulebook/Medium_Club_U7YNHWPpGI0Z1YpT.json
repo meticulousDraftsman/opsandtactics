@@ -1,7 +1,7 @@
 {
   "name": "Medium Club",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/baton.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/baton.webp",
   "system": {
     "description": "<p>A medium club is between 8&rdquo; and 12&rdquo; long, lighter than 3 pounds, and can be used with one hand. There are countless examples, including such deliberately crafted items as escrime sticks, metal batons, and police clubs. Improvised versions of this weapon include frying pans, pool cues, and small tree branches. Medium clubs only take a -2 attack penalty when being used in a non-lethal manner.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646466133,
+    "modifiedTime": 1705313662991,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "lYxxYdaBltQvBVwZ",

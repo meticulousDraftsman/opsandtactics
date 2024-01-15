@@ -1,7 +1,7 @@
 {
   "name": "Steel Plates",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/flat-platform.svg",
+  "img": "systems/opsandtactics/icons/abstract/flat-platform.webp",
   "system": {
     "description": "<p>These are heavy steel inserts, used for multiple rifle round hits, at the cost of weight.</p>",
     "layer": "plate",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 5.5,
       "cost": 10,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681666976778,
-    "modifiedTime": 1699585686543,
+    "modifiedTime": 1705309495720,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "dKLwzFHHzVt2sSwk",

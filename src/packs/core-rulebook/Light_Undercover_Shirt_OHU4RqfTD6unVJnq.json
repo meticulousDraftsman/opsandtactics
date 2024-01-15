@@ -1,7 +1,7 @@
 {
   "name": "Light Undercover Shirt",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/chain-mail.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/chain-mail.webp",
   "system": {
     "description": "<p>Designed for deep undercover work where the user must not appear to be armed or armored, this garment consist of a t-shirt with a band of Kevlar sewn in around the torso.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 1.4,
       "cost": 13,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585476208,
+    "modifiedTime": 1705309004264,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "3jEv5mDKg3PRhEQr",

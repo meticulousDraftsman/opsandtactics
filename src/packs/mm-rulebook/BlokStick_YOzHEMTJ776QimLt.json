@@ -1,7 +1,7 @@
 {
   "name": "BlokStick",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/telescopic-baton.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/telescopic-baton.webp",
   "system": {
     "description": "<p>A blokstick is a baton that increases the difficulty of using the magical abilities of creatures that it strikes. Creatures struck by this weapon must make a Will Saving Throw [TN 20]. Failure means that casting spells, using psionic powers, and reciting incantations cost +2 Combat Points. This last for 2d6 rounds. Striking a character already affected by this effect does not grant another saving throw, but it does allow the striker to reroll the duration time, replacing the old duration. This weapon has the retractable melee weapon upgrade. BlokSticks are considered light clubs for the purpose of feats and equipment.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699735268234,
+    "modifiedTime": 1705314656786,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "VGn2dP7bgniMUukB",

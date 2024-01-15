@@ -1,7 +1,7 @@
 {
   "name": "Polaran",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/ice-cube.svg",
+  "img": "systems/opsandtactics/icons/abstract/dna.webp",
   "system": {
     "description": "<p>Polarans have a Natural Energy Resistance to cold. They gain 5/Cold DR.</p>",
     "layer": "other",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682370413636,
-    "modifiedTime": 1699686786857,
+    "modifiedTime": 1705314825860,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "G8ZV4c3hkH7zpTfy",

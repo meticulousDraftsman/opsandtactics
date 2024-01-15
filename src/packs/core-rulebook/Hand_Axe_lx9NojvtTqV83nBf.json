@@ -1,7 +1,7 @@
 {
   "name": "Hand Axe",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/hatchet.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/hatchet.webp",
   "system": {
     "description": "<p>A hand axe is a light single-bladed axe normally used in one hand. An improvised version of this is a hatchet, throwing axe or a camp axe.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699643545562,
+    "modifiedTime": 1705312925404,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "nWonf7r74hdM4vok",

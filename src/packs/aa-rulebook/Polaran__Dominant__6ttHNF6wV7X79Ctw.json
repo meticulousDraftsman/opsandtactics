@@ -1,14 +1,14 @@
 {
   "name": "Polaran (Dominant)",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "img": "systems/opsandtactics/icons/abstract/dna.webp",
   "system": {
     "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Polarans are immune to cold environments. They do not have to make a Saving Throw against cold environments.</li>\n<li>Polarans are weak to hot environments. The Fortitude Saving Throw to resist hot environments is doubled.</li>\n<li>Polarans receive the extra feat Second Wind at 1st level for free, even if they do not meet the prerequisites</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Polarans are Medium sized creatures.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy polaran typically stands between 5-6&frac12;&rsquo;, and weighs between 130-180 lbs. The men and women are generally the same height. Polaran skin tone ranges from a pale flesh tone all the way to a snow white, and their hair ranges from a faint grey to bright white, with some possessing naturally blue hair, with silver and white being more common, almost exclusively straight and long. Eye color is also unique, ranging from a deep teal all the way to a deep dark blue, to assist in the snow. The average polaran lifespan is 110 years, reaching physical adulthood between the ages of 17-22.</p>\n<h3>Language</h3>\n<p>The native language of a Polaran is Polar, but Trade Bant is an often taught language, for trade.</p>\n<h3>Names</h3>\n<p>Polarans have two names, The first name being a given name, and is used to refer to the particular polar, the second name being their family name, that denotes their immediate family.</p>",
     "summary": ""
   },
   "effects": [
     {
-      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "icon": "systems/opsandtactics/icons/abstract/dna.webp",
       "origin": "Item.VfoJEbTPJP2z6cqt",
       "duration": {
         "startTime": null,
@@ -25,14 +25,12 @@
         {
           "key": "system.details.race",
           "mode": 2,
-          "value": "Polaran",
-          "priority": null
+          "value": "Polaran"
         },
         {
           "key": "system.details.size",
           "mode": 5,
-          "value": "Medium",
-          "priority": null
+          "value": "Medium"
         }
       ],
       "tint": null,
@@ -53,10 +51,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681848685014,
-    "modifiedTime": 1699689471123,
+    "modifiedTime": 1705306493436,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "5V6XWHlTiGbQ4ozo",

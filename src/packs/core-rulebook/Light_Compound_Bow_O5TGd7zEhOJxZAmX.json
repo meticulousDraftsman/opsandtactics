@@ -1,7 +1,7 @@
 {
   "name": "Light Compound Bow",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/pocket-bow.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/pocket-bow.webp",
   "system": {
     "description": "<p>A bow that uses a levering system of cables and pulleys to bend its limbs. Compound bows are used for hunting, Olympic archery, and general target practice. If the character does not have the required modifier for a compound bow, they can not use this bow at all.</p>",
     "type": "",
@@ -227,10 +227,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681646395557,
-    "modifiedTime": 1699669592121,
+    "modifiedTime": 1705313871830,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "FGFpPjwlKFqX2Pri",

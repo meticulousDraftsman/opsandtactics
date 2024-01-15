@@ -1,7 +1,7 @@
 {
   "name": "Cutlass",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/sabre.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/sabre.webp",
   "system": {
     "description": "<p>A short, broad sabre with a straight or slightly curved blade sharpened on the cutting edge and a hilt often featuring a solid cupped or basket shaped guard. An improvised version of this weapon would be extremely unlikely. Cutlasses come with a tactical sheath.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679450552,
+    "modifiedTime": 1705313297046,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "mrO4buxOppmG6qqP",

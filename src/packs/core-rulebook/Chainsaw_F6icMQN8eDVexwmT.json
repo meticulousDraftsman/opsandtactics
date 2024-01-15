@@ -1,7 +1,7 @@
 {
   "name": "Chainsaw",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/chainsaw.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/chainsaw.webp",
   "system": {
     "description": "<p>Military and police units use powered saws to cut through fences and open doors rapidly. They are sometimes pressed into service as weapons, often by people who watch too many movies. Improvised versions of this unique weapon do not exist. Chainsaws can not accept contact upgrades.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699674822098,
+    "modifiedTime": 1705314327180,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "rqomdRuljmpWelrn",

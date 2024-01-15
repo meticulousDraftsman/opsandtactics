@@ -1,7 +1,7 @@
 {
   "name": "Microwire Chainsaw",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/chainsaw.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/chainsaw.webp",
   "system": {
     "description": "<p>This weapon is a shrunken down version of a chainsaw exchanging the large, loud gasoline engine and big hooked teeth for a small electric motor with a microwire blade. Microwire chainsaws can not accept any upgrade on their contact. This blade may also be used as a bayonet on any weapon with a bayonet lug. Microwire chainsaws require the Exotic Melee Weapons Proficiency feat in order to be used without a &minus;4 attack penalty, even when used as a bayonet.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699688424695,
+    "modifiedTime": 1705315660096,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "gmrVDtvakVfO7Gsi",

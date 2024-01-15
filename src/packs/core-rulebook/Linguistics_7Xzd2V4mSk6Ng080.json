@@ -3,7 +3,7 @@
   "name": "Linguistics",
   "type": "skill",
   "_id": "7Xzd2V4mSk6Ng080",
-  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
   "system": {
     "ranks": null,
     "focus": "focus",
@@ -23,10 +23,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699999684715,
-    "modifiedTime": 1700005586871,
+    "modifiedTime": 1705309910990,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!7Xzd2V4mSk6Ng080"

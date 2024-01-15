@@ -1,7 +1,7 @@
 {
   "name": "Nullsteel Plates",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/flat-platform.svg",
+  "img": "systems/opsandtactics/icons/abstract/flat-platform.webp",
   "system": {
     "description": "<p>These plates are made from Nullsteel, designed to give additional ballistic and stabbing protection without the weight.</p>",
     "layer": "plate",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 0.1,
       "cost": 22,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681666976778,
-    "modifiedTime": 1699690089924,
+    "modifiedTime": 1705314539837,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "Mzv2SjnGvJ3RgEcC",

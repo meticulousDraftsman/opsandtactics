@@ -1,7 +1,7 @@
 {
   "name": "Split Stylus",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 4 Ranks, @UUID[Compendium.opsandtactics.mm-rulebook.Item.CEdyF0fS2BRXlARl]{Practiced Stylus}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attacking with a stylus, a mage can choose to target multiple targets equal to how many damage dice their stylus has. If they do, they roll an attack roll for every target. On all targets they successfully attack, they can chose to split up their damage dice between all of the targets, equal to the total amount of damage dice their stylus has, and roll their damage for each selected target.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">A mage must have at least 2 damage dice in order to use the benefits from this feat.</span></p>",
     "summary": "Attack multiple targets with one stylus attack"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690656961,
+    "modifiedTime": 1705305348229,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "P39748ALkcsm4Xf7",

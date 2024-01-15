@@ -1,7 +1,7 @@
 {
   "name": "Pistol Expert",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.pTE8c8BZNlsYPWTN]{Handgun Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.PjWBnexrl6cy31Qc]{Handgun Reloader}, @UUID[Compendium.opsandtactics.core-rulebook.Item.mwsYkls3YGpYe3WO]{Skilled Pistol Magazine User}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When firing a holdout, backup, full-size, or target handgun that uses magazines or has an internal magazine, or machine pistol, the Combat Point cost is 2 less. When clearing a jammed holdout, backup, full-size, or target handgun that uses magazines, or machine pistol, the Combat Point cost is 9 less. When attempting to repair a holdout, backup, full-size, or target handgun that uses magazines, or a machine pistol, the character receives a +6 bonus. Also, a character receives +1 damage dice when performing a double tap attack with any semi-automatic holdout, backup, full-size, or target handgun that uses magazines. Also, a character receives +2 damage dice when performing an autofire, burst fire, sprayfire, or sweepfire attack with a machine pistol.</span></p>",
     "summary": "-2 CP, +1 double damage die, +2 autofire damage die"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699638065557,
+    "modifiedTime": 1705304559975,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "nQ8uJOvzSL4GDD4T",

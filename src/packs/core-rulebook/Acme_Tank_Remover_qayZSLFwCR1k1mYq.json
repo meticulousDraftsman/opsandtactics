@@ -1,7 +1,7 @@
 {
   "name": "Acme Tank Remover",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/panzerfaust.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/panzerfaust.webp",
   "system": {
     "description": "<h3>Acme Tank Remover</h3><p>Upgrade Points: None.</p><p>Unreloadable. This weapon has a splash damage of 30ft.</p><h3>Single</h3><p>The firearm can only hold a single round and must be reloaded after every shot. Single shot firearms can perform single shot and potshot attacks.</p>",
     "type": "",
@@ -141,10 +141,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699602872826,
+    "modifiedTime": 1705312460091,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "aUrAW3ng0udmOKI5",

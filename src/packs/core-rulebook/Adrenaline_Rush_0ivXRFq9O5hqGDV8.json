@@ -1,7 +1,7 @@
 {
   "name": "Adrenaline Rush",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.jAxQosHivblcnpQV]{Toughness}, CON 13</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">Once per hour, the character may gain extra CHP equal to their CON score / 2 for 5 rounds.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">When the effect ends, and the character would be dying if the hit points were removed, the character instead drops to 0 CHP, in stabilized condition.</span></p>",
     "summary": "Gain temp CHP once per hour."
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699637818366,
+    "modifiedTime": 1705304532119,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "0ivXRFq9O5hqGDV8",

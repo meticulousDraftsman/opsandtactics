@@ -3,7 +3,7 @@
   "name": "Pepper Spray",
   "type": "weapon",
   "_id": "84qRYl4AF1TMyc01",
-  "img": "systems/opsandtactics/icons/svg/chemical-bolt.svg",
+  "img": "systems/opsandtactics/icons/gear/equipment/aerosol.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -103,10 +103,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699665571160,
-    "modifiedTime": 1700189032801,
+    "modifiedTime": 1705314030156,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!84qRYl4AF1TMyc01"

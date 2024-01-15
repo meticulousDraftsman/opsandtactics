@@ -3,7 +3,7 @@
   "name": "Heavy Rimless Handgun Ammo Can",
   "type": "object",
   "_id": "l4sCvCwxjeEdLSQX",
-  "img": "systems/opsandtactics/icons/svg/cardboard-box-closed.svg",
+  "img": "systems/opsandtactics/icons/containers/boxes/cardboard-box-closed.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -258,10 +258,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699681370867,
-    "modifiedTime": 1699681635698,
+    "modifiedTime": 1705310665120,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!l4sCvCwxjeEdLSQX"

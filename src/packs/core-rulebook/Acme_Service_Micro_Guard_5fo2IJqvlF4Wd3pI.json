@@ -1,7 +1,7 @@
 {
   "name": "Acme Service Micro Guard",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/glock.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/glock.webp",
   "system": {
     "description": "<h3>Acme Service Micro Guard</h3>\n<p>Upgrade Points: Frame, Barrel.</p>\n<p>Three 9 round magazines.</p>\n<h3>Preset Action (PA)</h3>\n<p>Preset Action, the action is at half-cock giving a light trigger pull. Preset Action firearms are considered semi-automatic firearms. All single shot attacks have a +1 attack bonus.</p>",
     "type": "",
@@ -227,10 +227,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1700006040562,
+    "modifiedTime": 1705312192028,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "sAu9JRHd1pCrGJ4V",

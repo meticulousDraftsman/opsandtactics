@@ -1,7 +1,7 @@
 {
   "name": "Practiced Stylus",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 2 Ranks</span> </p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attacking with a stylus, the Combat Point cost is reduced by 2</span>.</p>",
     "summary": "-2 CP cost to attack with stylus"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699770450068,
+    "modifiedTime": 1705305357854,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "CEdyF0fS2BRXlARl",

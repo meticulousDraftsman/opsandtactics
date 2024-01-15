@@ -1,7 +1,7 @@
 {
   "name": "Motorcyle Jacket",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/sleeveless-jacket.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/sleeveless-jacket.webp",
   "system": {
     "description": "<p>This is the bare minimum for the modern motorcyclist and consists of leather gloves and a leather motorcycle jacket. It grants the wearer a +1 to Fortitude Saving Throws made to resist the effects of cold weather. Motorcycle Jackets have two pockets than can hold 1.5 lbs of equipment that is Tiny sized or smaller each.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and hands of the<br>wearer, providing DR and Defense to all listed areas.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 2,
       "cost": 6,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585399273,
+    "modifiedTime": 1705309299686,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "gMx1J0qOaPk1DblG",

@@ -1,7 +1,7 @@
 {
   "name": "Sap",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/batteries.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/wizard-staff.webp",
   "system": {
     "description": "<p>This weapon consists of a soft leather sack loaded with lead shot. It is typically brought down on the back of an opponent&rsquo;s head, knocking them out cold. Improvised versions of this weapon include sweat socks stuffed with rolls of quarters or marbles. This weapon does non-lethal damage only.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646497930,
+    "modifiedTime": 1705313387435,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PvbxImHFcHUZNxea",

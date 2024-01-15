@@ -1,7 +1,7 @@
 {
   "name": "Dragonbreed",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/fish-scales.svg",
+  "img": "systems/opsandtactics/icons/abstract/dna.webp",
   "system": {
     "description": "<p>Dragonbreeds may select cold, fire, concussive, acid, or electricity. They gain a natural energy resistance against the selected type of damage that grants them 3 DR against all damage of that type. This selection is permanent.</p>",
     "layer": "other",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682371028336,
-    "modifiedTime": 1699690148536,
+    "modifiedTime": 1705314513417,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "tCqXXANj2srOvFQj",

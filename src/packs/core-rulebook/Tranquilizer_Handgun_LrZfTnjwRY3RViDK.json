@@ -1,7 +1,7 @@
 {
   "name": "Tranquilizer Handgun",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/luger.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/luger.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -244,10 +244,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699666499574,
-    "modifiedTime": 1700189048613,
+    "modifiedTime": 1705314005160,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "LrZfTnjwRY3RViDK",

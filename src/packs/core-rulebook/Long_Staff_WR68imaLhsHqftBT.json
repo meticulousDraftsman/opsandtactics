@@ -1,7 +1,7 @@
 {
   "name": "Long Staff",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/bo.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/bo.webp",
   "system": {
     "description": "<p>A long staff ranges from 3-6&rsquo; taller than its wielder. A classic example is the bo stick. Improvised versions of this weapon include flagpoles and long pipes. A character can strike opponents up to 10&rsquo; away with a long staff. Long staffs can be used to perform trip attacks. Long staffs are considered double weapons and can be used to two weapon fight</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699644860562,
+    "modifiedTime": 1705313029080,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "3rt54XL14ahH5bvr",

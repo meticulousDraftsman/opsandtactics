@@ -1,7 +1,7 @@
 {
   "name": "Long Spear",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/broadhead-arrow.svg",
+  "img": "systems/opsandtactics/icons/weapons/ammo/broadhead-arrow.webp",
   "system": {
     "description": "<p>A long spear ranges from 3-6&rsquo; taller than its wielder. Classic examples are pike or naginata. Improvised versions of this weapon include flagpoles with points and long pipes with sharp ends. A character can strike opponents up to 15&rsquo; away with a long spear, but can&rsquo;t use it against an adjacent foe. Long spears can be used to perform trip attacks.</p>",
     "type": "",
@@ -588,10 +588,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679431520,
+    "modifiedTime": 1705313239405,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "g808B4Ewc2QxTQdp",

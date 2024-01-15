@@ -1,7 +1,7 @@
 {
   "name": "Motorcyle Cut",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/sleeveless-jacket.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/sleeveless-jacket.webp",
   "system": {
     "description": "<p>This is a thick leather vest worn by motorcyclists, a particular common sight on motorcycle club members. They have hidden pockets that contain a holster-sheath that will hold one Small or smaller sized weapon, and a pouch that can hold 2 magazines or speedloaders. Any objects in these pockets gain a +1 to Stealth checks to hide these objects.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 1.3,
       "cost": 5,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585401833,
+    "modifiedTime": 1705309283821,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "gMx1J0qOaPk1DblG",

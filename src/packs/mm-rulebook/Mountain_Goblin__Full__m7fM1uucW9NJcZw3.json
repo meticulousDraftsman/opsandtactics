@@ -1,14 +1,14 @@
 {
   "name": "Mountain Goblin (Full)",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "img": "systems/opsandtactics/icons/abstract/dna.webp",
   "system": {
     "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Mountain goblins are Small sized creatures. They gain a -1 size penalty to all melee attack rolls.</li>\n<li>Mountain goblins can use any ranged weapon as if it were one size smaller. This only applies to using, not concealing.</li>\n<li>Mountain goblins can not use Colossal or Gargantuan sized weapons, take a -6 attack penalty when using all Huge weapons, take a -2 attack penalty when using all Large sized weapons, and take a -1 penalty when using all Medium sized weapons.</li>\n<li>Mountain goblins receive the extra feat Improved Initiative at 1st level for free.</li>\n<li>Mountain goblins posess Low-Light vision, allowing them to see twice as far in poor lighting conditions, as well asdistinguish colors, even in dim lighting.</li>\n<li>Mountain goblins receive the extra feat Danger Sense at 1st level for free.</li>\n<li>Mountain goblins receive the extra feat Skill Focus (Craft (Any)) at 1st level for free.</li>\n<li>Mountain Goblins can select Karkarash Proper, Karkarash Technical, or Karkarash Gutter as their native language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Mountain goblins are Small sized creatures. They gain a +1 size bonus to Defense.</li>\n<li>When calculating the carrying capacity for a mountain goblin, multiply all carrying capacity values by .75. This carrying capacity reduction includes the calculation for small creatures.</li>\n<li>Mountain goblins have a Mental Limit equal to <code>((6+WIS Score)xCL) + 35</code>.</li>\n<li>Mountain goblins have a base Combat Point score of 16.</li>\n<li>Mountain goblins CHP formula is <code>CON Score</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy mountain goblin typically stands between 4&frac12;-5&rsquo;, and weighs between 70-120 lbs. The males are slightly larger than the females. Goblin skin tone ranges in the grays, browns, and greens, and their hair ranges from dark brown to black, usually in a coarse, curly texture. The average goblin lifespan is 75 years, reaching physical adulthood between the ages of 14-19.</p>\n<h3>Language</h3>\n<p>The native language of a mountain goblin is Karkarash Technical, though many of them also speak Karkarash Proper or Karkarash Gutter.</p>\n<h3>Names</h3>\n<p>Mountain goblins generally have a single name, that spells out their personal name, their family name, and a much wider area called their mountain name, signifying what mountain or mountain region they hail from.</p>",
     "summary": ""
   },
   "effects": [
     {
-      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "icon": "systems/opsandtactics/icons/abstract/dna.webp",
       "origin": "Item.TyrYkQBgrdOX3KRt",
       "duration": {
         "startTime": null,
@@ -25,38 +25,32 @@
         {
           "key": "system.details.race",
           "mode": 5,
-          "value": "Mountain Goblin",
-          "priority": null
+          "value": "Mountain Goblin"
         },
         {
           "key": "system.def.size",
           "mode": 5,
-          "value": "1",
-          "priority": null
+          "value": "1"
         },
         {
           "key": "system.stats.carrying.formula",
           "mode": 5,
-          "value": "(@str.score)*3",
-          "priority": null
+          "value": "(@str.score)*3"
         },
         {
           "key": "system.ml.formula",
           "mode": 5,
-          "value": "((6+@wis.score)*@lvl)+35",
-          "priority": null
+          "value": "((6+@wis.score)*@lvl)+35"
         },
         {
           "key": "system.cp.max",
           "mode": 5,
-          "value": "16",
-          "priority": null
+          "value": "16"
         },
         {
           "key": "system.health.chp.formula",
           "mode": 5,
-          "value": "(@con.score)",
-          "priority": null
+          "value": "(@con.score)"
         }
       ],
       "tint": null,
@@ -73,10 +67,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681242301062,
-    "modifiedTime": 1699689857086,
+    "modifiedTime": 1705306038701,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "0Dclfx8RnmbfM8Y0",

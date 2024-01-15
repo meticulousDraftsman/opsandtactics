@@ -1,7 +1,7 @@
 {
   "name": "Red Man Suit",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/space-suit.webp",
   "system": {
     "description": "<p>This heavily padded suit is used primarily for unarmed and blunt-weapon melee combat training, allowing opponents to throw full-force blows without injuring their training partners.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 12,
       "cost": 24,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585599353,
+    "modifiedTime": 1705309219488,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WBHh8q8AosHoSTNP",

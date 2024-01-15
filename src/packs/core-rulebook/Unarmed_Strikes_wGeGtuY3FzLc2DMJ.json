@@ -1,7 +1,7 @@
 {
   "name": "Unarmed Strikes",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/punch.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/punch.webp",
   "system": {
     "description": "<p>This encompasses kicks, punches, elbows, knees, and headbutts. This is not a weapon in the traditional sense, but rather a way for a character to attack without any weapons at all. An unarmed strike&rsquo;s damage is non-lethal. Unarmed strikes are touch attacks, and use touch defense instead of normal defense. Unarmed attacks are considered attacks made with a small weapon. Unarmed strikes are not considered simple weapons for the purpose of feats, and have no upgrade points.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646293789,
+    "modifiedTime": 1705313638399,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bzyozDBgUhFKWEe2",

@@ -1,7 +1,7 @@
 {
   "name": "Injection Knife",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/switchblade.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/switchblade.webp",
   "system": {
     "description": "<p>An injection knife is a knife that has a CO<sub>2</sub> cartridge in the handle. When stabbed into an object, a small button can be pressed (for 1 Combat Points) that will inject freezing cold CO<sub>2</sub> into its target. It has an internal magazine of one and requires a new CO<sub>2</sub> cartridge for every use. Improvised versions of this unique weapon do not exist. Critical Strikes from this weapon only change the initial blade damage and not the Cold damage. Injection knives come with a tactical sheath.</p>",
     "type": "",
@@ -398,10 +398,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679563507,
+    "modifiedTime": 1705313718788,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "zqCKOIcFCrcCvKOl",

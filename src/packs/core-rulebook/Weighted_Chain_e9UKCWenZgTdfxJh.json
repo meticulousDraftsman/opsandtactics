@@ -1,7 +1,7 @@
 {
   "name": "Weighted Chain",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/crossed-chains.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/crossed-chains.webp",
   "system": {
     "description": "<p>A weighted chain consists of a light 10-15&rsquo; chain and a set of metal weights used to entangle an opponent, or their weapon. It can be whirled quickly, striking with hard blows from the weights. An improvised version of this weapon is a pair of horseshoes tied to the ends of a rope. The weighted chain can be used as a double weapon. A character can fight with it as if fighting with two weapons, incurring all the normal attack penalties as if using a one-handed weapon and a Small weapon. In this case the weapon&rsquo;s reach is reduced by 5&rsquo;. A character can strike opponents up to 10&rsquo; away with a weighted chain.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699643789408,
+    "modifiedTime": 1705312988012,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "1nRSdfNgNgj6ekfV",

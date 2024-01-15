@@ -1,7 +1,7 @@
 {
   "name": "Sabre",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/sabre.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/sabre.webp",
   "system": {
     "description": "<p>A sword that has a curved, single-edged blade and a rather large handguard, covering the knuckles of the hand as well as the thumb and forefinger. Sabres may be used to slash or thrust, and as such the user may select what kind of damage they wish to use before attacking. An improvised version of this weapon would be extremely unlikely. Sabres come with a tactical sheath.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699644460857,
+    "modifiedTime": 1705313304911,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "mrO4buxOppmG6qqP",

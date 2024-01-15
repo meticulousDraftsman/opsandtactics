@@ -1,7 +1,7 @@
 {
   "name": "High Quality Evokalloy Plates (Physical)",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/flat-platform.svg",
+  "img": "systems/opsandtactics/icons/abstract/flat-platform.webp",
   "system": {
     "description": "<p>These plates are made from high quality evokalloys, that provide protection against a single selected evocational element. The character can select fire, concussive, acid, cold, or electrical damage. The elemental damage does not reduce AP when it provides it&rsquo;s protection.</p>",
     "layer": "plate",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 5.2,
       "cost": 32,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681666976778,
-    "modifiedTime": 1699690125280,
+    "modifiedTime": 1705314559534,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "Mzv2SjnGvJ3RgEcC",

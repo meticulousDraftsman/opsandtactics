@@ -1,7 +1,7 @@
 {
   "name": "Acme Warrior Bayonet",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/bayonet.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/bayonet.webp",
   "system": {
     "description": "<h3>Rifle Bayonet</h3><p>The statistics given describe a bayonet fixed at the end of a longarm with an appropriate mount. With the bayonet fixed, the longarm becomes a double weapon, club-like at one end and spear-like at the other. A character can fight with it as if fighting with two weapons, but if the character does so, they incur all the normal attack penalties associated with fighting with two weapons, as if using a one-handed weapon and a Small weapon. Any survival knife, combat knife, or field knife can be used as a bayonet, taking the damage dice and damage type of the selected knife with a +1 damage die, and any contact upgrades that were placed on the knife transfer over to the rifle bayonet. The clublike end of a rifle bayonet is a buttstroke and incurs all the bonuses and penalties of one. A character can strike opponents up to 10’ away with the blade end of a rifle bayonet, but can’t use it against an adjacent foe.</p><h3>Survival Knife</h3><p>A typical fighting knife and also represents a variety of field weapons like cutting daggers and bayonets. Improvised versions of this weapon include broken bottles and kitchen knives. Survival knives come with a tactical sheath.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699645046573,
+    "modifiedTime": 1705313248240,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "g808B4Ewc2QxTQdp",

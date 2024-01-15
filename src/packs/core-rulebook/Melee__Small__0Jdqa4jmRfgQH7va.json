@@ -1,7 +1,7 @@
 {
   "name": "Melee (Small)",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/bowie-knife.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/bowie-knife.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -219,10 +219,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699679376520,
-    "modifiedTime": 1700189513107,
+    "modifiedTime": 1705311958564,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "0Jdqa4jmRfgQH7va",

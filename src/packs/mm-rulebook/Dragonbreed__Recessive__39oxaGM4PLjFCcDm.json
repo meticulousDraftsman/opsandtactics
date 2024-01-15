@@ -1,14 +1,14 @@
 {
   "name": "Dragonbreed (Recessive)",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/dna2.svg",
+  "img": "systems/opsandtactics/icons/abstract/dna.webp",
   "system": {
     "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Dragonbreeds are carnivores. Consuming food out of this diet causes them to become sickened for 24 hours.</li>\n<li>Dragonbreeds can select Tiahma or Lungdao as their native language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Dragonbreeds have a base Combat Point score of 13.</li>\n<li>Dragonbreeds CHP formula is <code>CON Score +3</code>.</li>\n</ul>\n<h3>Dragons</h3>\n<p>All dragons have tails that can be targeted. They have the same targeting rules as legs. Any armor that provides protection to legs, will also provide protection to tails.</p>\n<h3>Physical Description</h3>\n<p>A healthy dragonbreed typically stands between 5&frac34;-7&rsquo;, and weighs between 180-350 lbs. The males are significantly larger than the females, usually towering a good foot above them. Male and female dragonbreed begin to grow out their claws as they reach adulthood. These claws are considered a badge of adulthood, and are well taken care of. Dragonbreed have thin scales covering their body, which can range in a multitude of colors, but the most common colors being red, blue, green, yellow, brown, and black. Dragonbreed do not have hair. The average dragonbreed lifespan is 340 years, reaching physical adulthood between the ages of 40-45.</p>\n<h3>Language</h3>\n<p>The native language of a dragonbreed depends on their background. The will often speak Tiahma or Lungdao.</p>\n<h3>Names</h3>\n<p>Dragonbreeds have one name, given to them at birth. This name can span multiple words, however.</p>",
     "summary": ""
   },
   "effects": [
     {
-      "icon": "systems/opsandtactics/icons/svg/dna2.svg",
+      "icon": "systems/opsandtactics/icons/abstract/dna.webp",
       "origin": "Item.zS0jXga6Qoca176p",
       "duration": {
         "startTime": null,
@@ -25,20 +25,17 @@
         {
           "key": "system.details.race",
           "mode": 2,
-          "value": "-Dragonbreed",
-          "priority": null
+          "value": "-Dragonbreed"
         },
         {
           "key": "system.cp.max",
           "mode": 5,
-          "value": "13",
-          "priority": null
+          "value": "13"
         },
         {
           "key": "system.health.chp.formula",
           "mode": 5,
-          "value": "(@con.score)+3",
-          "priority": null
+          "value": "(@con.score)+3"
         }
       ],
       "tint": null,
@@ -55,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1677901192920,
-    "modifiedTime": 1699689915381,
+    "modifiedTime": 1705306194448,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "ownership": {

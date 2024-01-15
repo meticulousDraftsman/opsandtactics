@@ -1,7 +1,7 @@
 {
   "name": "Rapid Form Focus",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency }</span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.MHXQ6uBfaRCgUfgW]{Basic Offensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When using a psiblade, a character may attack with a psiblade at a -1 Combat Point cost. If they do, they do not use their POW when calculating damage. This reduction applies to all attacks that take benefit of this Combat Point reduction.</span></p>",
     "summary": "Trade POW bonus for -1 CP cost to attack"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699691224077,
+    "modifiedTime": 1705305630342,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "XGxd5T4lqfPVTwF1",

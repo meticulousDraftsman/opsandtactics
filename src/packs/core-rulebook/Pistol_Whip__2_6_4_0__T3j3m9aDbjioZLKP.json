@@ -1,7 +1,7 @@
 {
   "name": "Pistol Whip (2.6-4.0)",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/colt-m1911.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/glock.webp",
   "system": {
     "description": "<p>Not a melee weapon in the traditional sense, rather using the side of a handgun to strike a target. While pistol whipping is an improvised weapon, it does not incur the penalties for being one, nor will it break if used as a weapon. If a character provokes an AoO on a character wielding a handgun that can pistol whip, that character can use the pistol whip to perform their AoO. A pistol whip can not be upgraded with any melee upgrades. Adds the character&rsquo;s POW modifier to the damage as normal.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681642282810,
-    "modifiedTime": 1699749597964,
+    "modifiedTime": 1705313506466,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "Gx9seR2WtHyqyAP1",

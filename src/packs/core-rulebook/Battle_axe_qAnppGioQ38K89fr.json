@@ -1,7 +1,7 @@
 {
   "name": "Battle-axe",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/battle-axe.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/battle-axe.webp",
   "system": {
     "description": "<p>A battle-axe is generally a double-bladed axe, swung heavily to cut deep into objects. An improvised version is a fire axe.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699643398715,
+    "modifiedTime": 1705312942858,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "nWonf7r74hdM4vok",

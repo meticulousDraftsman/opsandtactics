@@ -1,7 +1,7 @@
 {
   "name": "Subdermal Implants",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/metal-scales.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/metal-scales.webp",
   "system": {
     "description": "<p>These implants are flexible plasteel plates, planted under the skin. They protect against all forms of melee damage, granting a DR of 3/Bludgeoning, Slashing, and Piercing naturally. The DR is only for attacks toward the user&rsquo;s chest.</p>",
     "layer": "other",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682370541707,
-    "modifiedTime": 1699686740660,
+    "modifiedTime": 1705314848794,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "G8ZV4c3hkH7zpTfy",

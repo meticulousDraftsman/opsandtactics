@@ -1,7 +1,7 @@
 {
   "name": "Swordsman's Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/abdominal-armor.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/abdominal-armor.webp",
   "system": {
     "description": "<p>This vest is optimized for the everyday swordsman composed of metal plates in between a thick cloth vest in a modern style. It also includes a spot specifically for a sword scabbard and a tactical sheath on the chest for any Small or smaller melee weapon.</p>",
     "layer": "worn",
@@ -35,7 +35,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 4.5,
       "cost": 23,
       "quality": "",
@@ -56,10 +56,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699690064141,
+    "modifiedTime": 1705314470219,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "CcJCIm7Kqgn8k9Br",

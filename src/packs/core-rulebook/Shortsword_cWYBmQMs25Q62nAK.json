@@ -1,7 +1,7 @@
 {
   "name": "Shortsword",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/gladius.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/gladius.webp",
   "system": {
     "description": "<p>A shortsword is a short-bladed sword that is heavily weighted toward the handle. A classic example is a wakizashi. A modern version is a machete and an improvised version is a garden spade.</p>",
     "type": "",
@@ -234,10 +234,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699642280469,
+    "modifiedTime": 1705313202770,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PVVjOMkBFXUvHywS",

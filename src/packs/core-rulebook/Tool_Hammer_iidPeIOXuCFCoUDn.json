@@ -1,7 +1,7 @@
 {
   "name": "Tool Hammer",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/claw-hammer.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/claw-hammer.webp",
   "system": {
     "description": "<p>A household hammer that can be found in any hardware store in the world. Improvised versions of this weapon include short lengths of pipe, stone statuettes, and tire irons.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646480848,
+    "modifiedTime": 1705313561459,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "LH0LbNJ3PYMEhUt0",

@@ -1,7 +1,7 @@
 {
   "name": "Magical Journeyman ()",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<p><span class=\"fontstyle0\">Choose a Spellschool.</span></p><h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.UDNR29IgRZEHsxEz]{Magical Apprentice(Chosen Spellschool)}, </span><span class=\"fontstyle2\"><strong>and</strong> </span><span class=\"fontstyle0\">Spellschool (Chosen Spellschool) 7 ranks</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When scribing spells in the chosen spellschool, the SP cost is 3 less</span></p><h3>Special</h3><p><span class=\"fontstyle0\">This feat stacks with any other spell cost reduction feats. This feat can be taken multiple times. Each time it is taken, it applies to a different spellschool.</span></p>",
     "summary": "-3 SP cost for chosen spellschool"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690707752,
+    "modifiedTime": 1705305551048,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "QP3umHqNoPgfTImu",

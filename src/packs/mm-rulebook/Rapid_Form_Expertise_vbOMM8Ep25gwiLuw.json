@@ -1,7 +1,7 @@
 {
   "name": "Rapid Form Expertise",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.MHXQ6uBfaRCgUfgW]{Basic Offensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.XGxd5T4lqfPVTwF1]{Rapid Form Focus}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.tbBRjXDVRbf2ZsHH]{Intermediate Offensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When using a psiblade or plasblade, for every three successful melee attacks a character completes, the character immediately receives one additional attack for no Combat Points. The extra attack is with the same weapon and at the same bonus as the attack as the previous three attacks. Also, the Combat Point Cost to Heavy attack is reduced by 1 and the cost to Full attack is reduced by 2 when using a psiblade or plasblade.</span></p>",
     "summary": "1 Free attack every three hits, -1 CP to heavy attack, -2 CP to full attack"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699691260971,
+    "modifiedTime": 1705305627446,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "vbOMM8Ep25gwiLuw",

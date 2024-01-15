@@ -5,7 +5,7 @@
     "description": "<p><span class=\"fontstyle0\">Choose an Incantation Skill</span></p><h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.C63jPLVFm4iUGNLT]{Reciter (Chosen Skill)}, </span><span class=\"fontstyle2\"><strong>and</strong> </span><span class=\"fontstyle0\">Incantation (Chosen Skill) 7 ranks</span></p><h3>Benefit</h3><p>When creating incantation recipes in the selected skill, the IP cost is reduced by 3</p><h3>Special</h3><p>This feat stacks with any other incantation recipe cost reduction feats. This feat can be taken multiple times. Each time it is taken, it applies to a different incantation skill.</p>",
     "summary": "-3 IP cost"
   },
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "effects": [],
   "ownership": {
     "default": 0,
@@ -20,10 +20,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682808448685,
-    "modifiedTime": 1699691888663,
+    "modifiedTime": 1705305576086,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "eZiXzUJE0r9r4RJn",

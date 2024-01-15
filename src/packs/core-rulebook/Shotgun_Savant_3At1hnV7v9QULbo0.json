@@ -1,7 +1,7 @@
 {
   "name": "Shotgun Savant",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.YIIZnklXaHYDx9Iq]{Shotgun Specialist}, @UUID[Compendium.opsandtactics.core-rulebook.Item.gxasTv5lvZAfTOmR]{Close Combat Shotgunner}, </span><span class=\"fontstyle2\"><strong>and</strong> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.8AUf1D5pyvrwlrb7]{Shotgun Ace} </span><span class=\"fontstyle2\"><strong>or</strong> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.x7tLR5HfcbPS1xRy]{Shotgun Expert}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">On your turn once per round when attacking with a bolt, pump, lever, semi- or fully automatic shotgun, the character gains an additional 7 CP that can be spent on movement actions if the attack reduced a creature to 0 CHP or less and that creature is within in the weapon’s first two range increments. The Combat Points that are given must be used on movement. Movement using the additional combat points that are given does not provoke attacks of opportunity.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">If a character selects the Shotgun Savant Feat, they may not select the Shotgun Master Feat.</span></p>",
     "summary": "7 CP cleave for movement once per round"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699639946381,
+    "modifiedTime": 1705304821768,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "3At1hnV7v9QULbo0",

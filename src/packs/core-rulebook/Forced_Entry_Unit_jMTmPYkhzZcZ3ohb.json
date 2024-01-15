@@ -1,7 +1,7 @@
 {
   "name": "Forced Entry Unit",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/space-suit.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/space-suit.webp",
   "system": {
     "description": "<p>This armor consist of heavy torso jacket, with trauma plate holders that cover the chest and back, neck and groin guards, and arm protection. This tactical gear is covered in MOLLE, which allows different accessories to be mounted on to the user&rsquo;s specifications. This armor has 8 MOLLE slots, but they can be removed at time of purchase for no cost.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and hands of the<br>wearer, providing DR and Defense to all listed areas. This Armor<br>can accept a single set of Armor Plates.</p>",
     "layer": "worn",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 22,
       "cost": 50,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585618299,
+    "modifiedTime": 1705309180765,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WBHh8q8AosHoSTNP",

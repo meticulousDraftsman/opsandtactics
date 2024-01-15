@@ -1,7 +1,7 @@
 {
   "name": "Special Response Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/kevlar-vest.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/kevlar-vest.webp",
   "system": {
     "description": "<p>Built like the tactical vest, but incorporating groin and neck protection as well as trauma plates over the chest and back. This tactical gear is covered in MOLLE, which allows different accessories to be mounted according to the user&rsquo;s specifications. This armor has 7 MOLLE slots, but they can be removed at time of purchase for no cost.</p>\n<h3>Special Notes</h3>\n<p>This Armor can accept a single set of Armor Plates.</p>",
     "layer": "worn",
@@ -35,7 +35,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 17,
       "cost": 45,
       "quality": "",
@@ -56,10 +56,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585612010,
+    "modifiedTime": 1705309193907,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WBHh8q8AosHoSTNP",

@@ -1,7 +1,7 @@
 {
   "name": "Stun Gun",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/lightning-arc.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/lightning-arc.webp",
   "system": {
     "description": "<p>Although the name suggests a ranged weapon, a stun gun requires physical contact to affect its target. The Taser is a ranged weapon with a similar effect. On a successful hit, the stun gun deals 1d3 Electricity damage (do not add the character&rsquo;s POW bonus), and the target must make a Fortitude Saving Throw [TN15] or be paralyzed for 1d6 rounds. Improvised versions of this weapon include cattle prods and electric cords with stripped insulation.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699734813057,
+    "modifiedTime": 1705313342798,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PvbxImHFcHUZNxea",

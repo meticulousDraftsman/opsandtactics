@@ -1,10 +1,10 @@
 {
   "name": "Intermediate Offensive Form",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.MHXQ6uBfaRCgUfgW]{Basic Offensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.4k8uVqjPvwmxogAK]{Precision Form Focus} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.XGxd5T4lqfPVTwF1]{Rapid Form Focus}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character can throw their psiblade or plasblade, which has the same damage, a range of 20’, and is considered a Small thrown weapon when used in this manner. Also, when using a psiblade or plasblade, a character may increase the Combat Point cost of a standard melee attack by +1. If they do, they gain a +1 damage bonus for every +1 increase of Combat Point cost.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">As long as a character has Combat Points to spend during their turn, they are free to add to the cost to attack. Also, when using a psiblade to attack any object or armor that has plasma damage reduction, the damage given immediately goes into soak and the damage to soak is doubled, even if it does not breach the object or armors damage reduction.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Plasma damage that connects with Plasma damage reduction does not move to soak unless the damage is more than the damage reduction.</span></p>",
-    "summary": "Throw psiblade, Spend CP for bonus damage, 2x damage to soak"
+    "summary": "Throw psiblade, Spend CP for bonus damage, psiplades deal 2x damage to soak"
   },
   "effects": [],
   "folder": "OGYPBbHEhg0JrXAA",
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699691123787,
+    "modifiedTime": 1705305789138,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "tbBRjXDVRbf2ZsHH",

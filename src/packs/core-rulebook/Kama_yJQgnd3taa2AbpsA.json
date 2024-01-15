@@ -1,7 +1,7 @@
 {
   "name": "Kama",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/war-pick.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/war-pick.webp",
   "system": {
     "description": "<p>A kama is a wooden shaft with a scythe blade extending at a right angle out from the shaft. The character receives a +1 bonus when using a kama to disarm an enemy. Improvised versions of this unique weapon are extremely unlikely.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699645914256,
+    "modifiedTime": 1705313040088,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "4A0983jrLQH0C1T9",

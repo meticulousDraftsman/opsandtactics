@@ -1,7 +1,7 @@
 {
   "name": "Tactical Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/kevlar-vest.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/kevlar-vest.webp",
   "system": {
     "description": "<p>The standard body armor for police tactical units, this vest provides full torso protection in the toughest flexible protective materials available. This tactical gear is covered in MOLLE, which allows different accessories to be mounted according to the user&rsquo;s specifications. This armor has 6 MOLLE slots, but they can be removed at time of purchase for no cost.</p>\n<h3>Special Note</h3>\n<p>This Armor can accept a single set of Armor Plates.</p>",
     "layer": "worn",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 9,
       "cost": 32,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585571044,
+    "modifiedTime": 1705309104509,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WHd08lYEpAXd9nXz",

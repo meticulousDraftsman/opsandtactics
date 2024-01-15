@@ -1,7 +1,7 @@
 {
   "name": "Broadsword",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/two-handed-sword.webp",
   "system": {
     "description": "<p>A broadsword features a slightly shorter and heavier blade than a bastard sword. An improvised version is the blade of a paper cutter. Broadswords come with a tactical sheath.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679409112,
+    "modifiedTime": 1705313184323,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PVVjOMkBFXUvHywS",

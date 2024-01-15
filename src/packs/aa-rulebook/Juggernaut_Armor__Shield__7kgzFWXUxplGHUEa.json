@@ -1,7 +1,7 @@
 {
   "name": "Juggernaut Armor (Shield)",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/shieldcomb.svg",
+  "img": "systems/opsandtactics/icons/abstract/shieldcomb.webp",
   "system": {
     "description": "<p>This armor is a reconfiguring of the forced entry unit, for a primary threat of plasarms being the focus, instead of firearms. This tactical gear is covered in MOLLE, which allows different accessories to be mounted on to the user&rsquo;s specifications. This armor has 8 MOLLE slots, but they can be removed at time of purchase for no cost, and can soak 50 points of plasma or electric damage before it requires a new coolant pack. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and hands of the wearer, providing DR and Defense to all listed areas. This armor can accept a single set of armor plates. This armor is hardened against EMP.</p>",
     "layer": "shield",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686613081,
+    "modifiedTime": 1705315230759,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "Pzoris4AIRejiogc",

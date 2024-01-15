@@ -1,7 +1,7 @@
 {
   "name": "Compressed Spell",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 4 Ranks</span> </p><h3>Benefits</h3><p><span class=\"fontstyle0\">When scribing a spell, a mage can compress the spell down and make it more efficient without loss of productivity, reducing the Mental Limit required for the spell. All spells scribed under this spell modification only require ½ the normal Mental Limit. This modification doubles the time it takes to scribe the spell, and increases the Combat Point cost to cast the spell by +1</span>.</p>",
     "summary": "Halve mental limit cost in exchange for +1 CP to cast"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690477953,
+    "modifiedTime": 1705305366014,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "a0AhAcdyc4Cy2MCt",

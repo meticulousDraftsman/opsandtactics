@@ -1,7 +1,7 @@
 {
   "name": "Improved Two-Weapon Melee Fighting",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">STR 13, @UUID[Compendium.opsandtactics.core-rulebook.Item.aFfVrifmKKT9Rpzw]{Two-Weapon Melee Fighting}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">The character’s penalties for fighting with two melee weapons are reduced by 4 for the primary hand and 8 for the off hand.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">If the character has the Two Weapon Ranged Fighting feat, they can mix both Ranged and Melee weapons. The benefits of the Improved Two Weapon Melee Fighting replace the benefits of the Two Weapon Melee Fighting feat.</span></p>",
     "summary": "Reduce two-weapon fighting penalties further"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699641215003,
+    "modifiedTime": 1705305176182,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "gJjLGDq4Vb3WHKx4",

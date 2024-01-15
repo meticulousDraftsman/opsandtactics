@@ -1,7 +1,7 @@
 {
   "name": "Heavy Club",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/baseball-bat.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/baseball-bat.webp",
   "system": {
     "description": "<p>A heavy club is between 12-24&rdquo; long, weighs between 2-4 pounds, and requires the use of two hands. The classic modern example is the wooden baseball bat. Improvised versions of this weapon include chairs, crowbars, heavy tree branches, and lengths of thick cable. Heavy clubs only take a -2 attack penalty when being used in a non-lethal manner.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646467204,
+    "modifiedTime": 1705313653951,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "lYxxYdaBltQvBVwZ",

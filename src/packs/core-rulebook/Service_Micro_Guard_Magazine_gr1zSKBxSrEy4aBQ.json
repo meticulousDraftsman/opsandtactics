@@ -3,7 +3,7 @@
   "name": "Service Micro Guard Magazine",
   "type": "object",
   "_id": "gr1zSKBxSrEy4aBQ",
-  "img": "systems/opsandtactics/icons/svg/magazine.svg",
+  "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -74,10 +74,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1700005960720,
-    "modifiedTime": 1700006126773,
+    "modifiedTime": 1705312781663,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!gr1zSKBxSrEy4aBQ"

@@ -1,7 +1,7 @@
 {
   "name": "Light Wood Shield",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/round-shield.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/round-shield.webp",
   "system": {
     "description": "<p>A combat shield is a shield made for fighting with melee weapons, and provide a movable, added protection. They usually encompass a wooden backing with a loose cloth or rope loop, and a solid metal or wood handle, that is used to keep the shield attached to the chosen arm. Combat shields may be used for standard attacks. Combat shields may be used in an offhand without penalty, and do not count as fighting with two weapons. Using a shield allows a character to perform the Stumble reaction. Combat shields can not be disarmed.</p>\n<p>Wood shields are shields that use exposed wood that come into contact.</p>\n<p>Light wood shields provide one-half cover in one direction, grant an additional +2 equipment bonus to defense when fighting defensively and a +4 Fortitude Saving Throw bonus when performing the Brace reaction. Light wood shields do not provide cover against any weapons that provide Plasma or Ballistic damage, or any ranged weapon that provides Fire damage.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699729106836,
+    "modifiedTime": 1705314611592,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "SL5sI5SDhwhKfQzr",

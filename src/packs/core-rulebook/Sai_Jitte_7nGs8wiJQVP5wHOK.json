@@ -1,7 +1,7 @@
 {
   "name": "Sai/Jitte",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/sai.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/sai.webp",
   "system": {
     "description": "<p>A sai is a weapon that has a pointed, prong shaped metal baton, with two curved prongs called yoku projecting from the handle, that are used to trapping strikes and blocking attacks. A jitte is a single shafted sai with a small hook protruding upward, used to block, catch, and even break swords. The character receives a +6 bonus when using a sai or jitte to disarm an enemy using a Combat or Fencing Sword.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699644681357,
+    "modifiedTime": 1705313289191,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "mrO4buxOppmG6qqP",

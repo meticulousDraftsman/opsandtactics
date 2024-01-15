@@ -1,7 +1,7 @@
 {
   "name": "Precision Form Expertise",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.MHXQ6uBfaRCgUfgW]{Basic Offensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.4k8uVqjPvwmxogAK]{Precision Form Focus}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.tbBRjXDVRbf2ZsHH]{Intermediate Offensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">A character gains an additional +4 attack bonus to all Called Shot attacks against arms and legs made when attacking with a psiblade or plasblade, gains a +4 attack bonus to all Called Shot attacks against hands and feet when attacking with a psiblade or plasblade, and the character suffers no attack penalty when Aggressive attacking with a psiblade or plasblade. Also, when attacking an object, the character gains a +4 attack bonus and ignores 2 points of hardness.</span></p><h3><span class=\"fontstyle0\">Normal</span></h3><p><span class=\"fontstyle0\">Aggressive attacks have an attack penalty of -2.</span></p>",
     "summary": "+4 Called Shot bonus, No penalty to aggressive attack, sunder bonus"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699691377534,
+    "modifiedTime": 1705305658270,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "v8voUausr79B1bTE",

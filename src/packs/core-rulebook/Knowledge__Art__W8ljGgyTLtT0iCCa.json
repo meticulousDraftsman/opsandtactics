@@ -2,7 +2,7 @@
   "folder": "9fCxpnsLWZqWSm9W",
   "name": "Knowledge (Art)",
   "type": "skill",
-  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
   "system": {
     "ranks": null,
     "focus": "unfocus",
@@ -26,10 +26,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699927766250,
-    "modifiedTime": 1700005586871,
+    "modifiedTime": 1705309805164,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "W8ljGgyTLtT0iCCa",

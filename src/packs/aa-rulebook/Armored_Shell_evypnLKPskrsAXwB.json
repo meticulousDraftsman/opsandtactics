@@ -1,7 +1,7 @@
 {
   "name": "Armored Shell",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/metal-scales.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/metal-scales.webp",
   "system": {
     "description": "<p>Armored Shells have a natural 2/Ballistic, Bludgeoning, Slashing, Piercing, and 1/Electric, Plasma damage reduction.</p>",
     "layer": "other",
@@ -56,10 +56,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682370541707,
-    "modifiedTime": 1699686716486,
+    "modifiedTime": 1705314836515,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "G8ZV4c3hkH7zpTfy",

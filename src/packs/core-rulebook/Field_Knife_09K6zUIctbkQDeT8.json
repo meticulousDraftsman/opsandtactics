@@ -1,7 +1,7 @@
 {
   "name": "Field Knife",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/bowie-knife.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/bowie-knife.webp",
   "system": {
     "description": "<p>A field knife is a larger knife, usually with a thick, single edged hearty blade that is used in the field, for camping. Improvised versions of this weapon include cleavers and kitchen knives. Field knives come with a tactical sheath.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679546793,
+    "modifiedTime": 1705313778152,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "zqCKOIcFCrcCvKOl",

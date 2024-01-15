@@ -3,7 +3,7 @@
   "name": ".68 Paintball Can",
   "type": "object",
   "_id": "SMpSG1ZHrKGFieLw",
-  "img": "systems/opsandtactics/icons/svg/oil-drum.svg",
+  "img": "systems/opsandtactics/icons/containers/liquids/water-gallon.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -189,10 +189,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699684594987,
-    "modifiedTime": 1699735193835,
+    "modifiedTime": 1705310771574,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!SMpSG1ZHrKGFieLw"

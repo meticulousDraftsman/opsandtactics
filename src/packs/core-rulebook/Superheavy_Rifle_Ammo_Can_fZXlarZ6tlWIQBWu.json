@@ -3,7 +3,7 @@
   "name": "Superheavy Rifle Ammo Can",
   "type": "object",
   "_id": "fZXlarZ6tlWIQBWu",
-  "img": "systems/opsandtactics/icons/svg/cardboard-box-closed.svg",
+  "img": "systems/opsandtactics/icons/containers/boxes/cardboard-box-closed.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -281,10 +281,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699683924444,
-    "modifiedTime": 1699684205494,
+    "modifiedTime": 1705310679438,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!fZXlarZ6tlWIQBWu"

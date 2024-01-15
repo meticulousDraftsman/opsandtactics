@@ -1,7 +1,7 @@
 {
   "name": "Motorcycle Armor",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/abdominal-armor.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/abdominal-armor.webp",
   "system": {
     "description": "<p>This suit of modern armor is worn by motorcyclist to protect from falls. It includes gloves and a motorcycle jacket. It grants the wearer a +1 to Fortitude Saving Throws made to resist the effects of cold weather.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and hands of the<br>wearer, providing DR and Defense to all listed areas.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 5,
       "cost": 11,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585441422,
+    "modifiedTime": 1705309353209,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "jt9oPECwYhQzORJp",

@@ -1,7 +1,7 @@
 {
   "name": "Heavy Metal Shield",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/bordered-shield.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/bordered-shield.webp",
   "system": {
     "description": "<p>A combat shield is a shield made for fighting with melee weapons, and provide a movable, added protection. They usually encompass a wooden backing with a loose cloth or rope loop, and a solid metal or wood handle, that is used to keep the shield attached to the chosen arm. Combat shields may be used for standard attacks. Combat shields may be used in an offhand without penalty, and do not count as fighting with two weapons. Using a shield allows a character to perform the Stumble reaction. Combat shields can not be disarmed.</p>\n<p>Metal shields have a metal overlay, usually steel, that provides durable protection against blows.</p>\n<p>Heavy metal shields provide half cover in one direction<br>and a +10 Fortitude Saving Throw bonus when<br>performing the Brace reaction.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699729328902,
+    "modifiedTime": 1705314620048,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "SL5sI5SDhwhKfQzr",

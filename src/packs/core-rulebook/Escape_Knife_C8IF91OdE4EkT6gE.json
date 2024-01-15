@@ -1,7 +1,7 @@
 {
   "name": "Escape Knife",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/switchblade.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/switchblade.webp",
   "system": {
     "description": "<p>An easily hidden blade, commonly stashed in a place where the owner might be able to grab it when tied up. Improvised versions of this weapon include prison shivs, throwing knives, and pieces of broken glass. Escape knives come with a tactical sheath.</p>",
     "type": "",
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699679556280,
+    "modifiedTime": 1705313743832,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "zqCKOIcFCrcCvKOl",

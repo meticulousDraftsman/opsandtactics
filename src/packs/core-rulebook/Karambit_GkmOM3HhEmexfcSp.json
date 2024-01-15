@@ -1,7 +1,7 @@
 {
   "name": "Karambit",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/bowie-knife.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/bowie-knife.webp",
   "system": {
     "description": "<p>A Karambit is a curved knife with a blade on both the inner and outer portion of the contact with a loop on the end, that is used to cut, grapple, and flip in a dynamic fashion. Improvised versions of this unique weapon are extremely unlikely. When grappling with a karambit, the weapon automatically deals it&rsquo;s damage for every successful grapple check. Attacking with a karambit cost +1 Combat Point. Karambits can not perform thrust attacks. Karambits come with a tactical sheath.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699646443392,
+    "modifiedTime": 1705313726831,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "zqCKOIcFCrcCvKOl",

@@ -1,7 +1,7 @@
 {
   "name": "Stun Shield",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/lightning-arc.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/lightning-arc.webp",
   "system": {
     "description": "<p>A shield composed of high impact plastic, complete with inlaid electrical contacts, that when the shield is activated, will shock and incapacitate the person struck. A stun shield provides one-quarter cover in one direction. A stun shield has to be activated, which costs 2 Combat Points. On a successful hit with an activated shield, the stun shield deals 1d3 points of Electricity damage (do not add the character&rsquo;s POW bonus) and the target must make a Fortitude Saving Throw [TN13] or be paralyzed for 1d2 rounds. Stun shields can not be disarmed.</p>",
     "type": "",
@@ -386,10 +386,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699734837037,
+    "modifiedTime": 1705313574025,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "P20UXV3dIgURBUOF",

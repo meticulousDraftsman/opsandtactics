@@ -1,7 +1,7 @@
 {
   "name": "Brawler's Cut",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/sleeveless-jacket.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/sleeveless-jacket.webp",
   "system": {
     "description": "<p>This stylish leather vest is worn by street fighters, and other individuals who may have to engage in combat and fight. The vest has small, light metal plates sewn into the chest and back of the vest (to protect against slashing weapons) which are then lined with a non-Newtonian fluid to help absorb the shock of bludgeoning weapons. It is further reinforced to take more damage than a standard vest. It also has hidden pockets that contain a holster-sheath that will hold one Small or smaller sized weapon, and a pouch that can hold 2 magazines or speedloaders.</p>",
     "layer": "worn",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 1.3,
       "cost": 9,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686415603,
+    "modifiedTime": 1705315315263,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "7ZwyV47wFrp75544",

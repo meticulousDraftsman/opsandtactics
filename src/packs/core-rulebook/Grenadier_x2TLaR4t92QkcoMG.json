@@ -1,7 +1,7 @@
 {
   "name": "Grenadier",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Benefits</h3><p><span class=\"fontstyle0\">The character gains a +3 attack bonus on all attacks made using a thrown explosive or splash weapon.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
     "summary": "+3 when throwing grenade or splash weapon"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699583860508,
+    "modifiedTime": 1705305149626,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "x2TLaR4t92QkcoMG",

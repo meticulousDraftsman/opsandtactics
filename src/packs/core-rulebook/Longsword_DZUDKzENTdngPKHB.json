@@ -1,7 +1,7 @@
 {
   "name": "Longsword",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/two-handed-sword.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/two-handed-sword.webp",
   "system": {
     "description": "<p>A longsword is sword with a long blade, often used with two hands. A Classic example is a Japanese &macr;odachi. An improvised version might be a piece of rebar. Longswords may be used to slash or thrust, and as such the user may select what kind of damage they wish to use before attacking. Longswords come with a tactical sheath.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699642843298,
+    "modifiedTime": 1705313173154,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "PVVjOMkBFXUvHywS",

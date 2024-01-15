@@ -1,7 +1,7 @@
 {
   "name": "SikStick",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/telescopic-baton.svg",
+  "img": "systems/opsandtactics/icons/weapons/simple/telescopic-baton.webp",
   "system": {
     "description": "<p>A light club that, when struck against a creature, sends vibrations to upset their GI tract causing nausea. On a successful hit the target must make a Fortitude Saving Throw [TN20] or be Sickened for 1d4+1 rounds. This weapon has the retractable melee weapon upgrade. SikSticks are considered light clubs for the purpose of feats and equipment.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699735357537,
+    "modifiedTime": 1705315622278,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bY5g91OyylH41l8l",

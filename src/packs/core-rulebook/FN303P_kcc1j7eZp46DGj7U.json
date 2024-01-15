@@ -1,7 +1,7 @@
 {
   "name": "FN303P",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/desert-eagle.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/desert-eagle.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -254,10 +254,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.2",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699672089737,
-    "modifiedTime": 1700189382055,
+    "modifiedTime": 1705314099020,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "kcc1j7eZp46DGj7U",

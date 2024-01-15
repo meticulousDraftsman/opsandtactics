@@ -1,7 +1,7 @@
 {
   "name": "Fluid Plates",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/jerrycan.svg",
+  "img": "systems/opsandtactics/icons/containers/liquids/chemical-tank.webp",
   "system": {
     "description": "<p>These are not plates in the truest sense, rather a semi-solid non-Newtonian fluid in a formed shape that absorbs shock, providing very good protection against blunt force trauma.</p>",
     "layer": "plate",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 1.3,
       "cost": 10,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681666976778,
-    "modifiedTime": 1699686660110,
+    "modifiedTime": 1705314917275,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "QrB2DLyRKtBLgHdd",

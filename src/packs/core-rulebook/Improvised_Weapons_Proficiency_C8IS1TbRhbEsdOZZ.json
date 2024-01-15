@@ -1,7 +1,7 @@
 {
   "name": "Improvised Weapons Proficiency",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Benefit</h3><p><span class=\"fontstyle0\">The character is considered proficient with all improvised weapons that the character would not be proficient with under normal means. The GM decides which improvised weapon fits into which category. Also, the chance for an improvised weapon to break is reduced to 20%.</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Without this feat, a character takes a -2 non-proficient penalty with all improvised weapons. Improvised weapons have a 50% chance of breaking.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
     "summary": "Become proficient with improvised weapons, and are more durable"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699584663840,
+    "modifiedTime": 1705305288847,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "C8IS1TbRhbEsdOZZ",

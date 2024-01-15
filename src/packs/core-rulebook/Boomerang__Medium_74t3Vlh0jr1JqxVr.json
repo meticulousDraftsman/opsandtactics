@@ -2,7 +2,7 @@
   "folder": "NWMAd77ogmBFnbgh",
   "name": "Boomerang, Medium",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/wizard-staff.svg",
+  "img": "systems/opsandtactics/icons/weapons/other/boomerang.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -102,10 +102,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699220794167,
-    "modifiedTime": 1699675586610,
+    "modifiedTime": 1705314266772,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "74t3Vlh0jr1JqxVr",

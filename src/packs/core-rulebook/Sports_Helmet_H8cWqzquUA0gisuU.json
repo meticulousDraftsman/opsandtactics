@@ -1,7 +1,7 @@
 {
   "name": "Sports Helmet",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/full-motorcycle-helmet.svg",
+  "img": "systems/opsandtactics/icons/wearables/headgear/full-motorcycle-helmet.webp",
   "system": {
     "description": "<p>Used in various sporting events to protect the wearer&rsquo;s head.</p>",
     "layer": "other",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 2,
       "cost": 2,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681772214993,
-    "modifiedTime": 1699585720883,
+    "modifiedTime": 1705309450899,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "WHnsEWcIDLGdsbgY",

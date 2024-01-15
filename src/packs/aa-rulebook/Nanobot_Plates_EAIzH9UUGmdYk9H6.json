@@ -1,7 +1,7 @@
 {
   "name": "Nanobot Plates",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/fertilizer-bag.svg",
+  "img": "systems/opsandtactics/icons/gear/supplies/fertilizer-bag.webp",
   "system": {
     "description": "<p>These plates are infused with self replicating nanobots that will slowly restore the health of the armor plate once it is damage. It will restore 1d6+2 AP every 12 hours.</p>",
     "layer": "plate",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Medium",
+      "size": "fine",
       "weight": 1.6,
       "cost": 45,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681666976778,
-    "modifiedTime": 1699686661835,
+    "modifiedTime": 1705315007519,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "QrB2DLyRKtBLgHdd",

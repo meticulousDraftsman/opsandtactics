@@ -1,7 +1,7 @@
 {
   "name": "Stealthsuit",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/chain-mail.svg",
+  "img": "systems/opsandtactics/icons/wearables/headgear/domino-mask.webp",
   "system": {
     "description": "<p>A stealthsuit is a full bodysuit that is littered with tiny LEDs and sensors that adapt to whatever is nearby. When a character wearing this armor stops moving for 1 round, the armor shifts its colors that not only mirror the surrounding area, but compliment it as well. When this happens, the character wearing the armor gains an immediate +18 bonus on all Stealth checks to avoid being seen. The armor can also be used to blend in the open, causing a slight optical illusion and an appearance of invisibility. When the armor is worn normally, it grants a 15% Concealment bonus against all ranged attacks.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the head, arms, legs, feet and hands of the wearer, providing DR and Defense to all listed areas.</p>",
     "layer": "worn",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 1.2,
       "cost": 50,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686482238,
+    "modifiedTime": 1705315200960,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "DfWd9C4dZqLQ7afG",

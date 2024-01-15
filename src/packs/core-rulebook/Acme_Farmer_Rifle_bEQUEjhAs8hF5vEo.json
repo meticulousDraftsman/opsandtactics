@@ -1,7 +1,7 @@
 {
   "name": "Acme Farmer Rifle",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/lee-enfield.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/lee-enfield.webp",
   "system": {
     "description": "<h3>Acme Farmer Rifle</h3><p>Upgrade Points: Frame, Barrel, Optic.</p><p>Fixed stock and four 10 round magazine.</p><h3>Self Loading (SL)</h3><p>Each pull of the trigger reloads the firearm. It is synonymous with semi-automatic, and self-loading firearms are considered semi-automatic firearms.</p>",
     "type": "",
@@ -320,10 +320,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1700006956737,
+    "modifiedTime": 1705312584937,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "G7uHnpc0DNT0FlF3",

@@ -1,7 +1,7 @@
 {
   "name": "Acme Hunter Rifle",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/winchester-rifle.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/winchester-rifle.webp",
   "system": {
     "description": "<h3>Acme Hunter Rifle</h3><p>Upgrade Points: Frame, Barrel.</p><p>Fixed stock. Not affected by Error Range from ammunition.</p><h3>Lever Action</h3><p>The firearm has a lever that must be worked after each shot. Attacks cost +3 Combat Points when firing from a prone position, but −1 Combat Points when performing single shot attacks. Lever action firearms can perform single shot and potshot attacks.</p>",
     "type": "",
@@ -287,10 +287,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1699668804250,
+    "modifiedTime": 1705312589465,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "G7uHnpc0DNT0FlF3",

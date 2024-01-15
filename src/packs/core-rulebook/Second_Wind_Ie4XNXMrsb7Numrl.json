@@ -1,7 +1,7 @@
 {
   "name": "Second Wind",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.jAxQosHivblcnpQV]{Toughness}</p><h3>Benefit</h3><p>Once per hour, the character can restore a number of XHP equal to his CON score.</p>",
     "summary": "Restore CON XHP once per hour"
@@ -17,10 +17,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682891877933,
-    "modifiedTime": 1699637872891,
+    "modifiedTime": 1705304498082,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "ii9NKpCX96yrDtuu",

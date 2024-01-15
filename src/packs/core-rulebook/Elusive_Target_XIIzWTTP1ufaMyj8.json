@@ -1,7 +1,7 @@
 {
   "name": "Elusive Target",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">AGI +2, @UUID[Compendium.opsandtactics.core-rulebook.Item.x0nG5fvFuZUAMz05]{Evasive Martial Arts}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">fighting an opponent or multiple opponents in melee, other opponents attempting to target the character with ranged attacks take a -4 penalty. This penalty is in addition to the normal -4 penalty for firing into melee, making the penalty to target to character -8.</span></p><h3>Special</h3><p><span class=\"fontstyle0\">An opponent with the Precise Shot feat has the penalty lessened to -6 when targeting the character.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
     "summary": "Double penalties for shooting into melee"
@@ -17,10 +17,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699639551050,
+    "modifiedTime": 1705304671042,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "XIIzWTTP1ufaMyj8",

@@ -1,7 +1,7 @@
 {
   "name": "Personal Combat Armor",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/trench-body-armor.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/trench-body-armor.webp",
   "system": {
     "description": "<p>The Pattern Personal Armor, is the standard ballistic protective armor system for a wide variety of combat effective persons. It is designed to balance lightness and comfort with optimum protection. Inside of the back plate of the armor is an integrated vital sign sensor which displays the health of the individual. The personal combat armor also has a mount for a tactical flashlight, that can be turned off or on through any interface software.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the legs of the wearer, providing DR and Defense to all listed areas</p>",
     "layer": "worn",
@@ -39,7 +39,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 16,
       "cost": 85,
       "quality": "",
@@ -60,10 +60,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686542023,
+    "modifiedTime": 1705315105344,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "C9RrNQrxG7BPZXfq",

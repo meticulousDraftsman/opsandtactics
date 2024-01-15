@@ -1,7 +1,7 @@
 {
   "name": "Toggle Spell",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 6 Ranks</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When casting a spell with this modification that has a duration, the mage is able to ’turn off’ the spell’s effects, pausing that duration until the spell returns to being active. It costs 7 combat points to either pause a spell or resume it, and the entire round counts against the duration in either case. Effects that can discern spell effects still perceive the spell when paused. This modification adds 5 SP to the spell’s cost.</span></p>",
     "summary": "Toggle spell effects to save turns in use"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690477953,
+    "modifiedTime": 1705305345430,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "Ps4Iy3Bw8OM9FiEg",

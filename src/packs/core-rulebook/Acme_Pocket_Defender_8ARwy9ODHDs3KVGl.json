@@ -1,7 +1,7 @@
 {
   "name": "Acme Pocket Defender",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/walther-ppk.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/walther-ppk.webp",
   "system": {
     "description": "<h3>Acme Pocket Defender</h3>\n<p>Upgrade Points: Frame.</p>\n<p>Two 6 round magazines.</p>\n<h3>Double Action Only (DAO)</h3>\n<p>Double Action Only is similar to DA but the hammer can not be cocked back. Double Action Only firearms are considered semi-automatic firearms.</p>",
     "type": "",
@@ -227,10 +227,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1700005898263,
+    "modifiedTime": 1705312198442,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "sAu9JRHd1pCrGJ4V",

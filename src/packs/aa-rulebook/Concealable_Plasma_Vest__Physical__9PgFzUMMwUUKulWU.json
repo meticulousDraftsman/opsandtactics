@@ -1,7 +1,7 @@
 {
   "name": "Concealable Plasma Vest (Physical)",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/plastron.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/plastron.webp",
   "system": {
     "description": "<p>The concealable plasma vest is a light, comfortable vest that is worn normally under clothing primarily to defend against plasma attacks. This armor can soak 15 points of plasma or electric damage before it requires a new coolant pack. This armor protects against all stunning effects from any attack that also deals electric damage while the armor can soak plasma or electric damage. It takes 3 rounds for the plasma shields to recharge after a new coolant pack has been inserted.</p>\n<h3>Special Notes</h3>\n<p>This armor is hardened against EMP</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 2.3,
       "cost": 23,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699686440995,
+    "modifiedTime": 1705315253661,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "M7iTtl3EbLRs5ZxP",

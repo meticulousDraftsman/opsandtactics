@@ -1,7 +1,7 @@
 {
   "name": "Light Football Pads",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/knee-pad.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/knee-pad.webp",
   "system": {
     "description": "<p>This suit of armor is worn by professional and amateur players alike, and includes shoulder, leg, and arm pads. This type is normally worn by running backs and quarterbacks, sacrificing extra armor for range of motion.</p>\n<h3>Special Notes</h3>\n<p>This armor protects the arms and legs of the wearer, providing DR and Defense to all listed areas.</p>",
     "layer": "worn",
@@ -27,7 +27,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 4,
       "cost": 5,
       "quality": "",
@@ -48,10 +48,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585415322,
+    "modifiedTime": 1705309267001,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "gMx1J0qOaPk1DblG",

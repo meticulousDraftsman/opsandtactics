@@ -5,7 +5,7 @@
     "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}</p><h3>Benefit</h3><p>Reloading any shotgun with a magazine costs 2 Combat Points. Reloading any shotgun from loose rounds or refilling a magazine costs 1 Combat Points per round loaded. Once per turn, a character may load a shell directly into the barrel of a semi-automatic, pump, bolt, or lever action shotgun for no Combat Points, ejecting the chambered round on the ground.</p><h3>Advanced Arms</h3><p>Reloading a coolant pack into a Beamcaster costs 2 CP.</p>",
     "summary": "2 CP to reload shotgun mags, 1 CP for loose rounds, chamber swap"
   },
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "effects": [],
   "ownership": {
     "default": 0,
@@ -17,10 +17,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1682808986646,
-    "modifiedTime": 1699685710646,
+    "modifiedTime": 1705304802737,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "ZO7E7f39Vgfgt0WX",

@@ -2,7 +2,7 @@
   "folder": "Z2BPRQxhHg4VIbJ9",
   "name": "Craft (Visual Art)",
   "type": "skill",
-  "img": "systems/opsandtactics/icons/svg/bookshelf.svg",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
   "system": {
     "ranks": null,
     "focus": "unfocus",
@@ -35,10 +35,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699857983996,
-    "modifiedTime": 1700005586871,
+    "modifiedTime": 1705309766356,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "CjXfTjaZH2TX5Uv1",

@@ -3,7 +3,7 @@
   "name": "Oak Aetherwand",
   "type": "object",
   "_id": "svmL2wVo1plhPmQP",
-  "img": "systems/opsandtactics/icons/svg/bo.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/bo.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -50,10 +50,10 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699729506193,
-    "modifiedTime": 1699729640915,
+    "modifiedTime": 1705314692560,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_key": "!items!svmL2wVo1plhPmQP"

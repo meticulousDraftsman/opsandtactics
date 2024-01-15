@@ -2,7 +2,7 @@
   "folder": "NWMAd77ogmBFnbgh",
   "name": "Throwing Axe",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/hatchet.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/hatchet.webp",
   "system": {
     "minimized": false,
     "magazine": {
@@ -294,10 +294,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699220656362,
-    "modifiedTime": 1699675866434,
+    "modifiedTime": 1705314213671,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "LjKMPKJiQmWGj4Fl",

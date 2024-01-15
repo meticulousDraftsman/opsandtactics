@@ -2,7 +2,7 @@
   "folder": "YxpNrIGilYHyqNmT",
   "name": "Oak Aetherstaff",
   "type": "object",
-  "img": "systems/opsandtactics/icons/svg/bo.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/bo.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -50,10 +50,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1699729506193,
-    "modifiedTime": 1699729799891,
+    "modifiedTime": 1705314682490,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "ftZIzjEHeihS2p4j",

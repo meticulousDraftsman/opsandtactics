@@ -1,7 +1,7 @@
 {
   "name": "Club Expert",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.core-rulebook.Item.53RM572RAaaWLZqq]{Simple Weapon Specialist (Light Club, Medium Club or Heavy Club)}, @UUID[Compendium.opsandtactics.core-rulebook.Item.uR1tAu3dJH914reS]{Blunt Specialist}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When wielding the club chosen from the Simple Weapon Specialist feat, the Critical Threat range for the selected weapon is 13-18.</span></p>",
     "summary": "13-18 crit range"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699640378685,
+    "modifiedTime": 1705304868172,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "irG9y0r2UamMxo7Z",

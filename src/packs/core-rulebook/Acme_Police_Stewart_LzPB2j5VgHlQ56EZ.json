@@ -1,7 +1,7 @@
 {
   "name": "Acme Police Stewart",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/mp5.svg",
+  "img": "systems/opsandtactics/icons/weapons/guns/mp5.webp",
   "system": {
     "description": "<h3>Acme Police Stewart</h3><p>Upgrade Points: Frame, Barrel.</p><p>Fixed Stock and three 35 round magazines.</p><h3>Self Loading (SL)</h3><p>Each pull of the trigger reloads the firearm. It is synonymous with semi-automatic, and self-loading firearms are considered semi-automatic firearms.</p><h3>Burst fire (2RB/3RB) </h3><p>Stands for burst fire, in 2RB and 3RB variants. 2RB Stands for 2 round burst, which allows the firearm to perform 2 round burst fire attacks, and 3RB stands for 3 round burst, which allows the firearm to perform 3 round burst fire attacks.</p><h3>Fully Automatic (Auto)</h3><p>Stands for fully automatic where the firearm will continue to fire as long as the trigger is pressed down. The firearm can perform autofire, suppressive fire, sweepfire, sprayfire, or burst fire attacks.</p><p>Slow (S) autofire means the weapon has a slow rate of fire. Slow autofire fires less rounds per second, giving a more controllable rate of fire. Slow autofire can perform single shot attacks, double tap attacks and potshot attacks, but can’t perform burst fire attacks.</p><p>Medium (M) autofire has a standard rate of fire. It has no penalties or bonuses to its attacks.</p><p>Fast (F) autofire fires more rounds per second, putting more bullets downrange. It has a -2 attack penalty to all autofire, suppressive fire, burst fire, sweepfire, and sprayfire attacks, but gains +1 dice damage on all autofire, suppressive fire, burst fire, sweepfire and sprayfire attacks.</p>",
     "type": "",
@@ -848,10 +848,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.0",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1700006522203,
+    "modifiedTime": 1705312529241,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "X9V3aPgdHzi6OkOq",

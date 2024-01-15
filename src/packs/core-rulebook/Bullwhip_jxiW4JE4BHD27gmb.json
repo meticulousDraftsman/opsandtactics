@@ -1,7 +1,7 @@
 {
   "name": "Bullwhip",
   "type": "weapon",
-  "img": "systems/opsandtactics/icons/svg/whip.svg",
+  "img": "systems/opsandtactics/icons/weapons/archaic/whip.webp",
   "system": {
     "description": "<p>A bullwhip is a single-tailed whip, usually made of braided leather or nylon, designed as a tool for working with livestock or competition. A character can strike opponents up to 15&rsquo; away with a bullwhip. Bullwhips can be used to perform trip attacks, and do not provoke AoO when doing so. If the character is tripped during their own trip attempt, the character can drop the whip to avoid being tripped. When using a whip, the character receives a +2 bonus on their opposed attack roll when attempting to disarm an opponent, including the roll to keep from being disarmed if the character fails to disarm the opponent.</p>",
     "type": "",
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1699643732742,
+    "modifiedTime": 1705312996185,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "1nRSdfNgNgj6ekfV",

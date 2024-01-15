@@ -1,7 +1,7 @@
 {
   "name": "Field Vest",
   "type": "armor",
-  "img": "systems/opsandtactics/icons/svg/kevlar-vest.svg",
+  "img": "systems/opsandtactics/icons/wearables/armor/kevlar-vest.webp",
   "system": {
     "description": "<p>This vest is an updated version of the flak vest, increasing it&rsquo;s protection against shrapnel and providing some light ballistic protection at the cost of weight. This armor was created by Blackghost</p>\n<h3>Special Notes</h3>\n<p>This Armor can accept a single set of Armor Plates.</p>",
     "layer": "worn",
@@ -31,7 +31,7 @@
         "value": 1,
         "available": false
       },
-      "size": "Large",
+      "size": "fine",
       "weight": 5,
       "cost": 18,
       "quality": "",
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1699585533781,
+    "modifiedTime": 1705309058635,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "UheU78K0VNNEbBBy",

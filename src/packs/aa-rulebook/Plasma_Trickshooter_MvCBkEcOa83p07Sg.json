@@ -1,7 +1,7 @@
 {
   "name": "Plasma Trickshooter",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.CbH9UMxgrmEr8tFh]{Personal Plasmas Proficiency}, @UUID[Compendium.opsandtactics.aa-rulebook.Item.I2ulORBcKU6kkakv]{Advanced Plasmas Proficiency}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When performing a bounceshot attack the penalty for attacking into the flank or rear area when guiding the bounced shot is reduced by 5</span>.</p>",
     "summary": "Reduced facing penalties for bouncshot"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699686123360,
+    "modifiedTime": 1705305740300,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "MvCBkEcOa83p07Sg",

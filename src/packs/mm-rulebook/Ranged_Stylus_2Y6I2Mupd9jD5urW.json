@@ -1,7 +1,7 @@
 {
   "name": "Ranged Stylus",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">Spellschool (Any) 4 Ranks, @UUID[Compendium.opsandtactics.mm-rulebook.Item.CEdyF0fS2BRXlARl]{Practiced Stylus}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attacking with a stylus, a mage can choose to double the range increment of their stylus. If they do, they receive a -1 damage penalty for every 2 damage dice they have, rounded down</span></p><h3>Special</h3><p><span class=\"fontstyle0\">A mage must have at least 2 damage dice in order to use the benefits from this feat. The features of this feat may not be combined with the Power Stylus Feat.</span></p><p></p>",
     "summary": "Trade damage for double range"
@@ -18,10 +18,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699690584241,
+    "modifiedTime": 1705305360510,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "2Y6I2Mupd9jD5urW",

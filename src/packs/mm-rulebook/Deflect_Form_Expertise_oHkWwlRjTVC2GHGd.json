@@ -1,7 +1,7 @@
 {
   "name": "Deflect Form Expertise",
   "type": "feature",
-  "img": "systems/opsandtactics/icons/svg/notebook.svg",
+  "img": "systems/opsandtactics/icons/gear/objects/notebook.webp",
   "system": {
     "description": "<h3>Prerequisites</h3><p><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.mm-rulebook.Item.u5uPp2qYPln7aoOz]{Psiblade Proficiency} </span><span class=\"fontstyle2\"><em>or</em> </span><span class=\"fontstyle0\">@UUID[Compendium.opsandtactics.aa-rulebook.Item.M1Cbm2LJqmpzRAFq]{Plasma Blade Proficiency}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.jViibXrHmQKko0gM]{Basic Defensive Form}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.gAJy77Uf1u1MAm8m]{Deflect Form Focus}, @UUID[Compendium.opsandtactics.mm-rulebook.Item.XMcusmiFwpjpi36m]{Intermediate Defensive Form}</span></p><h3>Benefits</h3><p><span class=\"fontstyle0\">When attempting the Deflect reaction against plasarms, a character may aim the deflection at a specific target. If the character is successful at deflecting the attack, they may attempt a Ranged Attack with a -4 penalty against any target that is within their line of sight. If this attack is successful, the attack is directed at this target instead. Additionally, they may deflect attacks coming from their left and right flanks in addition to their front</span></p><h3>Normal</h3><p><span class=\"fontstyle0\">Deflect reactions may only be attempted if they are facing the attack.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
     "summary": "Deflect attacks from flanks, redirect deflected plasma attacks"
@@ -21,10 +21,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.2.7",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1699691626761,
+    "modifiedTime": 1705305676822,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "oHkWwlRjTVC2GHGd",
