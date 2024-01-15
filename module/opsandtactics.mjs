@@ -254,12 +254,12 @@ function _manageOpsStatusEffects(){
     {
       "id":"kneeling",
       "name":"Kneeling",
-      "icon":"systems/opsandtactics/icons/svg/transparent/kneeling.svg"
+      "icon":"systems/opsandtactics/icons/svg/kneeling.svg"
     },
     {
       "id":"prone",
       "name":"Prone",
-      "icon":"systems/opsandtactics/icons/svg/transparent/prone.svg"
+      "icon":"systems/opsandtactics/icons/svg/prone.svg"
     }
   )
 }

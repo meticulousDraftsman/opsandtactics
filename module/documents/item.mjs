@@ -745,6 +745,10 @@ export class OpsItem extends Item {
     return mods;    
   }
 
+  spaceSum(actionKey,tweaks={}){
+    
+  }
+
   listMagazines(){
     const magazines = {};
     // Unlimited-use and actions that cost ML don't need a magazine list
@@ -919,10 +923,10 @@ export class OpsItem extends Item {
           updates["img"] = CONFIG.OATS.armorIcons[Math.floor(Math.random()*CONFIG.OATS.armorIcons.length)];
           break;
         case 'skill':
-          updates["img"] = `systems/opsandtactics/icons/svg/bookshelf.svg`;
+          updates["img"] = `systems/opsandtactics/icons/abstract/bookshelf.webp`;
           break;
         case 'feature':
-          updates["img"] = `systems/opsandtactics/icons/svg/notebook.svg`;
+          updates["img"] = `systems/opsandtactics/icons/gear/objects/notebook.webp`;
           break;
         case 'magic':
           updates["img"] = CONFIG.OATS.magicIcons[Math.floor(Math.random()*CONFIG.OATS.magicIcons.length)];
