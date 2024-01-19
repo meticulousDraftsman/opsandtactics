@@ -1,0 +1,64 @@
+{
+  "folder": "jhwXP9HPr5gU3AKq",
+  "name": "Starter Custom Pen, Xtra Fine",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/other/fountain-pen.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "ea2hcPM5": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Spells"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Often expensive, these upscale fountain pens provide a more personalized touch whether scribing spells, or writing notes or letters. A fountain pen has three parts that can each be customized in various ways: The Nib, which is the tip of the pen used to write with, the Body, which is the external shell of the pen which holds the other parts together, and the Reservoir, which is the part of the pen which actually holds the ink.</span></p><p><span class=\"fontstyle0\">Sold cheaply in many office stores, this fountain pen has a plastic or aluminum body, a Fine or Xtra Fine Steel Nib and comes with a package of disposable ink cartridges.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><strong>Nib: </strong><span class=\"fontstyle0\">A fountain pen using an Xtra Fine nib can scribe 50% more spells than a fine nib, but any ink bonuses are halved.</span></p><p><strong>Nib Material: </strong><span class=\"fontstyle0\">Steel Nibs are the standard nib used in most modern entry level fountain pens, and have no special rules regarding their use other than their width.</span></p><p><strong>Body: </strong><span class=\"fontstyle0\">Available in a wide range of colors and styles, even some that glow in the dark, these pen bodies are great for people who like to have multiple different pens for different purposes, whether it’s for note taking, calligraphy, or color coding of pens with different kinds of ink. Plastic and Aluminum pen bodies are not suitable as styli.</span></p><p><strong>Reservoir: </strong><span class=\"fontstyle0\">Disposable cartridges hold enough ink to scribe up to 10 spells. Unlike piston cartridges, they can’t be refilled and have to be thrown away when empty. Despite this, they’re mass produced and usually economical, though ink selection is more limited.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.EsMt7f71ZFYP0b2M"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "7Iakl3EJdRgpgi6N",
+  "sort": 0,
+  "_key": "!items!7Iakl3EJdRgpgi6N"
+}

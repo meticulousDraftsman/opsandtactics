@@ -1,0 +1,77 @@
+{
+  "folder": "pQTJTHApIcDC5Tcx",
+  "name": "Caltrops",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/objects/freemasonry.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {
+      "XQzoezas": {
+        "name": "Scatter Caltrops",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Caltrops are four-pronged steel spikes designed so that one prong is pointing up when the caltrop rests on a surface. A character scatters caltrops on the ground to injure opponents, or at least slow them down. One bag of twenty-five caltrops covers a single 5’ square. Each time a creature moves through a square containing caltrops at any rate greater than 15 feet a turn or each round a creature spends fighting in such an area, the caltrops make a touch attack roll (BAB +0). A caltrop deals 1 point of damage on a successful hit, and the injury reduces foot speed to 2 Combat Points per 5’ (a successful Treat Injury check [TN15] or one day’s rest removes this penalty). Improvised versions of this weapon include jacks and d4 gaming dice. These improvised weapons do not work on vehicles, however. See the avoid hazard stunt for the effect of caltrops on vehicles.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.1LZ3i9uIsUbdjNA7"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642239714,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "CJDLFv45N7fWJIpQ",
+  "sort": 0,
+  "_key": "!items!CJDLFv45N7fWJIpQ"
+}

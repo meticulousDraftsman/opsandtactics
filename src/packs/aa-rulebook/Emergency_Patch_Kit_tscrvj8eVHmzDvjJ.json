@@ -1,0 +1,56 @@
+{
+  "folder": "RNCaFGLLQJq1XyyU",
+  "name": "Emergency Patch Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/papers.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.2,
+      "tons": false,
+      "cost": 5,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p>This kit contains an adjustable conductive heat applicator and many segments of material, each impregnated with strong, heat activated adhesives and attached to a long adjustable handle. This kit allows a character to repressurize a compromised spacesuit or MOPP suit. It takes one minute to repair a depressurized or compromised suit. Because the repair is fragile and intended for emergencies, it can’t withstand any sort of wear. If the character wearing the repaired suit takes any amount of damage, the suit is again depressurized and compromised.</p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.FJi0vwH9ezd4HGnI"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642026972,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "tscrvj8eVHmzDvjJ",
+  "sort": 0,
+  "_key": "!items!tscrvj8eVHmzDvjJ"
+}

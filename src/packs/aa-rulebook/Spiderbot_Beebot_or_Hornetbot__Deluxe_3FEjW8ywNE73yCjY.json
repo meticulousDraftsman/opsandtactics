@@ -1,0 +1,56 @@
+{
+  "folder": "5tHIheZdeLepiDK3",
+  "name": "Spiderbot Beebot or Hornetbot, Deluxe",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/objects/compass.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 2,
+      "tons": false,
+      "cost": 13,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Spiderbots, beebots, and hornetbots are small, semi-sentient robots that can perform a variety of simple tasks. Spiderbots, beebots, and hornetbots have two modes; Deployed and Storage. In Storage mode, a spiderbot looks like a metal puck, about the size of a large hockey puck, while a beebot or hornetbot looks like a round ball, about the size of a softball. When deployed, spiderbots take on the appearance of a little metal spider, complete with 8 wire legs and a single, glowing LED eye, while hornetbots and beebots take on the appearance of a large bee or hornet, complete with clear translucent wings, 6 wire legs, and a single glowing LED eye. Spiderbots, beebots, and hornetbots can turn off their LED eye at their own choosing, or at a command by their handler. They are usually black, but a spiderbot, beebot, or hornetbot can be purchased in any color configuration.<br></span></p><p><span class=\"fontstyle0\">All spiderbots, beebots, and hornetbots are equipped with a basic camera right under the eye and a microphone, and can respond to verbal commands in a single language that is selected when the bot is purchased. Spiderbots, beebots, and hornetbots can respond to commands as if they were an animal under the Animal Handing skill, but Animal Handling skill is not required to command and manage a spiderbot, a hornetbot, or a beebot. A spiderbot, hornetbot, or beebot can respond to Attack (If it possesses an upgrade that allows it to attack) Come, Defend (If it possesses an upgrade that allows it to attack), Guard (if it possesses an upgrade that allows it to attack), Heel, Fetch (if it possesses an upgrade that allows it to pick up objects), Stay, and Seek. Spiderbots have 8 CP per turn, can walk and adhere to walls and ceilings, while beebots and hornetbots have 7 CP per turn and can walk and fly up to 25’ from the ground.</span></p><p><span class=\"fontstyle0\">Spiderbots, hornetbots, and beebots can have upgrades installed on them, that can enhance their utility. Deluxe models bots can have three upgrades installed on them at one time. Spiderbots have 3 HP, a DEF of 14, and 8 CP. Beebots and hornetbots have 1 HP, a DEF of 15, and 7 CP. A spiderbot, beebot or hornetbot can function for 8 hours before it needs to be recharged. Spiderbots, beebots, and hornetbots can be interfaced. It takes 5 minutes for upgrades to be replaced, installed or uninstalled.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.ozguaUePzotOQeZZ"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642030111,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "3FEjW8ywNE73yCjY",
+  "sort": 0,
+  "_key": "!items!3FEjW8ywNE73yCjY"
+}

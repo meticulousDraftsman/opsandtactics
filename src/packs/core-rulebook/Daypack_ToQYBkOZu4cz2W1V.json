@@ -1,0 +1,56 @@
+{
+  "folder": "eWb3b83VOKi7hqLO",
+  "name": "Daypack",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/bags/school-bag.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This is a small backpack, the sort often used by students to carry their books around, or by outdoor enthusiasts on short hikes. It holds 15 lbs worth of objects that are Medium size or smaller, and fits comfortably over one shoulder in a messenger type style or on both shoulders in a traditional pack type</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.EhhmGx8jtS0HhcAI"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642205635,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ToQYBkOZu4cz2W1V",
+  "sort": 0,
+  "_key": "!items!ToQYBkOZu4cz2W1V"
+}

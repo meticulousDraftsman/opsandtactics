@@ -1,0 +1,19 @@
+{
+  "name": "Spell Components",
+  "sorting": "a",
+  "folder": "B7LqoYZAVywdM8UP",
+  "type": "Item",
+  "_id": "JsOBrCMIPNynLgTa",
+  "sort": 700000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705449655083,
+    "modifiedTime": 1705642183985,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!JsOBrCMIPNynLgTa"
+}

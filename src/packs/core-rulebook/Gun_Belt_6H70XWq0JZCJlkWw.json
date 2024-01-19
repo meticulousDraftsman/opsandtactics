@@ -1,0 +1,56 @@
+{
+  "folder": "Mjio0L2Z6Ml2f4Zf",
+  "name": "Gun Belt",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/clothing/ring.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 3,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A device used to hold or restrict the undesired movement of a firearm, most commonly in a location where it can be easily withdrawn for immediate use. Holsters allow a character to draw a firearm for 3 Combat Points. Holsters are generally available for all Medium or smaller firearms. A character can not have more than 5 belt devices on their belt at one time, including holsters, holders, caddys, and sheaths</span>.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span class=\"fontstyle0\">A loose leather holster that allows the gun to sit comfortably in the holster, commonly used with single action revolvers, but it can be purchased for any Medium or smaller gun. The single gun holster holds one gun and 36 extra cartridges on the belt, and the dual gun holster holds two guns and 24 extra cartridges on the belt. The shotgun version of this holster can hold a single gun, and 15 shotgun shells. Using a gun belt eliminates the need to spend CP to reach into a pack to retrieve ammunition. Wearing a gun belt disallows the wearing of a belt holster, quick draw holster, tactical holster, concealed carry holster, undercover holster, battle belt or a cartridge belt, when worn.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.9j9vlicT75c2SbkT"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "6H70XWq0JZCJlkWw",
+  "sort": 0,
+  "_key": "!items!6H70XWq0JZCJlkWw"
+}

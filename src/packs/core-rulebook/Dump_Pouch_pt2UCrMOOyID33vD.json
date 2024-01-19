@@ -1,0 +1,56 @@
+{
+  "folder": "XtyQyZFneXRdogaH",
+  "name": "Dump Pouch",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/bags/knapsack.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 0.4,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\"><strong>(2 slots)</strong> </span></p><p><span class=\"fontstyle2\">This pouch is used to retain empty magazines and speedloaders, keeping them on one’s equipment and removing the need to go retrieve them after use. This pouch can hold up to ten magazines or speedloaders with a capacity of 60 rounds or less per magazine or speedloader. It cost no CP to drop a magazine or speedloader into the pouch, but cost 9 CP per item to remove a magazine or speedloader from the pouch, due to it’s retention design.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.6wMxK5G4JWxTdjUT"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642232891,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "pt2UCrMOOyID33vD",
+  "sort": 0,
+  "_key": "!items!pt2UCrMOOyID33vD"
+}

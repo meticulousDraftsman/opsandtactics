@@ -1,0 +1,273 @@
+{
+  "name": "Type 1X BC",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/abstract/laser-blast.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><p>F E O</p><h3>Laser Arms</h3><p>Laser arms are an off-shoot of plasma arms, using the same kind of technology but instead of firing a bolt of plasma, the plasma core powers a high powered laser emitter. Lasers have the benefit of also defeating traditional style armor, with the added benefit of not being able to be deflected by psiblades or plasma blades. Like plasarms, the plasma energy core they have has the downside of generating a significant amount of heat when fired and must be cooled efficiently and constantly. Laser arms generate more energy than their plasma counterparts, but as such, require more coolant. Lasarms also have the downside of being closer ranged, where the power of the shot will be depreciated as the range increases.</p><p>Lasarms use the same coolant technology that plasarms use, and suffers the exact same limitations as plasarms in this manner. The coolant packs are interchangeable with any lasarm, and can be reused if they are allowed to cool for 24 hours, or 4 hours, if they are submerged in a specially made chiller. A lasarm’s number of shots is dependent on its Heat, which is how much heat it can transfer into its coolant pack before it becomes too hot to use. Any lasarm that generates enough heat to meet or exceed its Heat, immediately shuts down unless a fresh coolant pack is put into the lasarm, similar to how a magazine works in a firearm.</p><p>Laser weapons, like plasma weapons also are built differently from standard firearms, also lacking barrels instead possessing emitters. The emitter is usually red, green, or blue, and will give a bright flash of the color from the muzzle, when fired. Laser weapons don’t have stock upgrades, as the stock is built into the lasarm. This stock is unable to take any upgrades. A lasarm can accept two emitter upgrades and four frame upgrades. Lasarms can fit and use the same kinds of holsters, slings, and other outward tactical equipment.</p><p>Because they are sensitive pieces of technology, as opposed to firearm counterparts, they can not be used to pistol whip or buttstroke and any attempt to do so will immediately cause the lasarm to become damaged and require repairs (Complex, TN25), using the Craft (Electronics) skill. Any damage to the weapon will also immediately cause the lasarm to become damaged and require repairs (Complex, TN25), using the Craft (Electronics) skill.</p><p>Lasarms require the Personal Plasmas Proficiency feat to use without a −4 attack penalty and to change out coolant packs.</p><p>All lasarms are plasma damage weapons and have a critical threat range of 16-18, unless otherwise noted.</p><p>Lasarms function like shotguns using shot, in that the range increment gives a penalty to both ranged attack rolls and damage rolls.</p><p>Lasarms with the single firing mode can perform potshot attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "coolant",
+      "source": "",
+      "insideOut": "external",
+      "heatBase": 45
+    },
+    "range": "50ft",
+    "crit": 16,
+    "weaponMods": {
+      "ofW2ZaRi": {
+        "name": "Infrared Emitter",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      },
+      "ezQDk8ng": {
+        "name": "Scour Emitter",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Enables Scourshot"
+      },
+      "d33zEUrq": {
+        "name": "Patrol Sling",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Sling weapon for 5 CP"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        }
+      },
+      "PetNmDBI": {
+        "name": "Scourshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noneAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": "Strikes all within a 15ft cone"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 15,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      },
+      "zHjHm9QJ": {
+        "name": "Replace Coolant Pack",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 3.4,
+      "cost": 60,
+      "quality": "",
+      "restriction": "M&P",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "3d8",
+    "flavorBase": "Plasma"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.DTkEMO3xNABNiUgW"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1705642049466,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "hOpVxjcfsGcAKj8a",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "SGMvq08lZSJR6Nkj",
+  "sort": 0,
+  "_key": "!items!SGMvq08lZSJR6Nkj"
+}

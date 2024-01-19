@@ -1,0 +1,55 @@
+{
+  "folder": "W8oaLxa2me4NSAIo",
+  "name": "Quills and Reed Pens",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/liquids/quill-ink.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 0,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.FjOA4eV8Cl6JmnMI"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "jdsUf5N9YGvisAHF",
+  "sort": 0,
+  "_key": "!items!jdsUf5N9YGvisAHF"
+}

@@ -1,0 +1,117 @@
+{
+  "folder": "RNCaFGLLQJq1XyyU",
+  "name": "Handheld Grappler",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/gear/equipment/rope-coil.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "consumable",
+      "insideOut": "both",
+      "loaded": {},
+      "heatBase": 0,
+      "source": ""
+    },
+    "range": "60ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "j4AZgtsq": {
+        "name": "Shoot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": false,
+          "mods": {},
+          "inherent": "",
+          "ability": "mrk",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": false,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.1,
+      "tons": false,
+      "cost": 10,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "S0UZRhYg": {
+          "type": "consumable",
+          "value": 0,
+          "max": 3,
+          "available": true,
+          "name": "Int Magazine"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "damageBase": "1d6",
+    "flavorBase": "Slashing",
+    "importFilter": "",
+    "importMod": "",
+    "description": "<p><span style=\"font-family: Roboto, sans-serif\">A handheld grappler is a device that has a 60’ spool of braided, coated steel wire that is attached to a hook-claw, used to swing, pull, or wrap around objects. It can also be fired in any object with 2 or less Hardness, securing itself to that object. It has a powerful motor that will wind the spool back up at the rate of 15’ per turn. The wire can hold up to 400 lbs indefinitely, or up to 500 lbs for 5 turns. It uses 9x19mm blanks to fire the hook-claw, and has an internal magazine of 3. It costs 4 Combat Points to fire the grappler, and when fired at a creature, deals 1d6 slashing damage. A successful attack means that the creature is captured by the grappler.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.xdtvcyJ6WoZJGGRH"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705510897385,
+    "modifiedTime": 1705642026972,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "dXqOzN0bYA4oyWz6",
+  "sort": 0,
+  "_key": "!items!dXqOzN0bYA4oyWz6"
+}

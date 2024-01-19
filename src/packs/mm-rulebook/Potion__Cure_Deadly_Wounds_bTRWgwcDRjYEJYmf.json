@@ -1,0 +1,102 @@
+{
+  "folder": "YTjVhPGAAObeXGJB",
+  "name": "Potion, Cure Deadly Wounds",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/remedy.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.4,
+      "tons": false,
+      "cost": 12,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "zOpSq1vB": {
+          "type": "consumable",
+          "value": 2,
+          "max": 2,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {
+      "Nt1sasOF": {
+        "name": "Drink Potion",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "5d4",
+          "ability": "",
+          "flavor": "CHP Heal"
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      },
+      "2GxSciC2": {
+        "name": "Effect 2",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "-4 Bleed Dice"
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": null
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.9phqUANItMR4WVY2"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642186054,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "bTRWgwcDRjYEJYmf",
+  "sort": 0,
+  "_key": "!items!bTRWgwcDRjYEJYmf"
+}

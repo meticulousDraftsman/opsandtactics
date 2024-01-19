@@ -1,0 +1,56 @@
+{
+  "folder": "pQTJTHApIcDC5Tcx",
+  "name": "Parachute, Sports",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/headgear/brodie-helmet.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 8,
+      "tons": false,
+      "cost": 25,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A parachute is a device used to slow down an object in free fall through an atmosphere. They come in various types, based on use, but all stop fall damage from heights greater than 100’ and reduce falling damage by 1 die per round spent descending.</span> </p><p></p><p><span class=\"fontstyle0\">A rectangular aerobatic parachute. Consumer models tend to be brightly-colored for aesthetic appeal and emergency visibility, but a character can purchase a darker parachute at request. Sports parachutes allow a character to glide at 200 feet per round forward as they fall, as well as make a turn after moving 100 feet.</span> </p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.NbyZbSMKvpZpxCWw"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642239714,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "cAF3nritvHdDIMPB",
+  "sort": 0,
+  "_key": "!items!cAF3nritvHdDIMPB"
+}

@@ -1,0 +1,56 @@
+{
+  "folder": "zX1ToeUGUbt5mz03",
+  "name": "Bandolier, Grenade",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/clothing/ring.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 2,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A strap of leather or nylon webbing that is worn around the shoulder and holds ammunition or objects. Commonly worn when hunting or to carry more items readily available. Using a bandolier eliminates the need to spend CP to reach into a pack to retrieve a stored object but also makes it clearly visible.</span></p><p>A grenade bandolier <span class=\"fontstyle0\">holds 8 grenades of either the thrown or fired variety</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.vAUeaIKAYGtmuh1W"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "Vi3NtFqrHnjAvMiM",
+  "sort": 0,
+  "_key": "!items!Vi3NtFqrHnjAvMiM"
+}

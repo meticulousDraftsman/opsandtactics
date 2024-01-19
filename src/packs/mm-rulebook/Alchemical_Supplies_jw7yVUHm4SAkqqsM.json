@@ -1,0 +1,19 @@
+{
+  "name": "Alchemical Supplies",
+  "sorting": "a",
+  "folder": "B7LqoYZAVywdM8UP",
+  "type": "Item",
+  "_id": "jw7yVUHm4SAkqqsM",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705449664297,
+    "modifiedTime": 1705642168333,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!jw7yVUHm4SAkqqsM"
+}

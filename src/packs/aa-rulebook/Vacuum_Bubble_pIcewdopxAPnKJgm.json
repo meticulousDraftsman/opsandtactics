@@ -1,0 +1,56 @@
+{
+  "folder": "RNCaFGLLQJq1XyyU",
+  "name": "Vacuum Bubble",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/liquids/canister.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.7,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A vacuum bubble is a deployable bubble that, when deployed, completely encloses and protects a single creature from the vacuum and radiation of space. When not deployed, it is in a small canister with a button. To use, the creature holds the canister and presses the button. The bubble deploys from the canister and encapsulates the creature in a self-sealing bubble. There is no exit, and the creature must either be cut from the bubble, or must cut themselves out from the bubble. The bubble also has it’s own air supply, and has 12 hours of air available for a single creature. The bubble is one time use only, and may not be reused once cut open.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.2HuUIZU2dx2B0FUK"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642026972,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "pIcewdopxAPnKJgm",
+  "sort": 0,
+  "_key": "!items!pIcewdopxAPnKJgm"
+}

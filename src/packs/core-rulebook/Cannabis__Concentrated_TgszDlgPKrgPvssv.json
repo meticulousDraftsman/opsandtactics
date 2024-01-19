@@ -1,0 +1,76 @@
+{
+  "folder": "59pjAvNuiASSyrwo",
+  "name": "Cannabis, Concentrated",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/cigarette.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": null,
+      "tons": false,
+      "cost": 8,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "I"
+    },
+    "actions": {
+      "Oz7hqfYY": {
+        "name": "Smoke",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "2d3+1",
+          "ability": "",
+          "flavor": "Potency effects"
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": null
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A genus of flowering plants that has long been used for fiber (hemp), seed and seed oils, medicinal purposes, and as a recreational drug. A character may smoke one dose of cannabis and roll a set of dice dependent on the potency. This roll is both the penalty to Will Saving Throws and their AGI modifier and a bonus to their XHP. The effect lasts for 5d12 minutes. Should the AGI penalty exceed the character’s DEX score, it is treated as 0 until the drug’s effect wears off. There are 50 doses in 0.1 lbs of cannabis. Any amount less than 50 doses is considered weightless.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.NsSDkKk4UVLlPXrS"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642235244,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "TgszDlgPKrgPvssv",
+  "sort": 0,
+  "_key": "!items!TgszDlgPKrgPvssv"
+}

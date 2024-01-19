@@ -1,0 +1,56 @@
+{
+  "folder": "a3FzG8BHs3ix9PCS",
+  "name": "Disguise Kit, Standard",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/headgear/domino-mask.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 35,
+      "tons": false,
+      "cost": 10,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Small disguise kit plus 2 or 3 changes of casual clothing, colored contact lenses, wigs, incidental props (eye patches, gold teeth, glasses, etc.), hair net or bandanna, soap and hand towels, hair dyes and colors (whitener, highlights, etc.)</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.3v9Wt7sr8hDj9pJr"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642226645,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ph58LJVBeX2N1PYQ",
+  "sort": 0,
+  "_key": "!items!ph58LJVBeX2N1PYQ"
+}

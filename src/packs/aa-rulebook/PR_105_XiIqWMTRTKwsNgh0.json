@@ -1,0 +1,370 @@
+{
+  "name": "PR-105",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/abstract/cannon-ball.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><p>F E O 5T</p><h3>Plasma Arms</h3><p>Plasma arms are guns that fire bolts of superheated plasma at a target, burning a hole in any traditional style armor the target may be wearing. Because of their plasma energy core, these weapons generate significant amounts of heat that must be cooled efficiently and constantly.</p><p>The coolant issue was solved by introducing a coolant pack into the main plasma core of the weapon, that can be ejected when it is too hot, and replaced with a fresh one. The core of the coolant core is a refrigerant gel that surrounds a liquid nitrogen core. The coolant cores are interchangeable with any plasarm, and can be reused if they are allowed to cool for 24 hours, or 4 hours, if they are submerged in a specially made chiller. A plasarm’s number of shots is dependent on its Heat, which is how much heat it can transfer into its coolant pack before it becomes too hot to use. Any plasarm that generates enough heat to meet or exceed its Heat immediately shuts down unless a fresh coolant pack is put into the plasarm, similar to how a magazine works in a firearm.</p><p>Plasma weapons behave unlike any kind of firearm, allowing them to be used in ways unlike a normal firearm. Plasma arms can be charged, where the energy is released but the containment field for the emitter is kept on intentionally, causing the plasma to stew and grow hotter, before being released for a devastating attack against a single target, but generate far more heat than a single shot would. Charging a plasma weapon too long will cause it to engage a failsafe and shut down for 5 minutes, while the weapon reboots, recalibrates, and checks its coolant stores.</p><p>Plasma weapons, if the mode exists for the model, can be set to pulse, that works similarly to a firearm’s burst fire setting, as well as a bounce shot, that allows a user to bounce the plasma off of a wall and attack characters around corners. Plasma weapons also can be used to fire a continuous stream of plasma, coating a nearby area in superheated plasma that is unable to be avoided, as well as be used to instead firing a large bolt of plasma energy to cover a large area with energy.</p><p>Plasma weapons are built differently from standard firearm. The major difference is that plasma weapons lack barrels, they instead they have emitters, that glow a warm blue, green, red, yellow, orange, or violet when not in use and fire bolts of plasma of the same color as their emitter. The color of the emitter is entirely dependent on the manufacturer, and varies from place to place. Plasma weapons don’t have stock upgrades, as the stock is built into the plasarm. This stock is unable to take any upgrades. A plasarm can accept three emitter upgrades and six frame upgrades. Plasarms can, however, fit and use the same kinds of holsters, slings, and other outward tactical equipment.</p><p>Because they are sensitive pieces of technology, as opposed to firearm counterparts, they can not be used to pistol whip or buttstroke and any attempt to do so will immediately cause the plasarm to become damaged and require repairs (Complex, TN25), using the Craft (Electronics) skill. Any damage to the weapon will also immediately cause the plasarm to become damaged and require repairs (Complex, TN25), using the Craft (Electronics) skill.</p><p>Like many great discoveries, it was accidentally discovered that an activated psiblade or plasma blade has the ability to deflect plasma fire. A skilled individual can even aim the deflected blast, but training to do this is something very few skilled individuals actually attempt because of the danger involved. Plasma blades and psiblades can also swat bullets, and thrown weapons out of the air, though these are instantly destroyed rather than deflected.</p><p>Plasarms require the Personal Plasmas Proficiency to use without a −4 attack penalty, and to change out coolant packs.</p><p>All plasarms are plasma damage weapons and have a critical threat range of 16-18, unless otherwise noted.</p><p>All plasarms when purchased have a single standard coolant pack installed.</p><p>Plasarms with the semi-automatic firing mode can perform potshot attacks, and double-tap attacks, and have an effective Caliber Recoil Penalty of 0. When performing a double tap attack, Plasarms have a —3 attack penalty.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "coolant",
+      "source": "",
+      "insideOut": "external",
+      "heatBase": 65
+    },
+    "range": "75ft",
+    "crit": 16,
+    "weaponMods": {
+      "vZfevpf7": {
+        "name": "Glow Emitter",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Permanent, 15' radius illumination"
+      },
+      "lB4Ye6HL": {
+        "name": "Pulse Emitter",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Enables Pulseshots"
+      },
+      "rJCasXEL": {
+        "name": "Bounce Emitter",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Enables Bounceshots"
+      },
+      "WeHTMuIa": {
+        "name": "Patrol Sling",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Sling weapon for 5 CP"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 7,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        }
+      },
+      "xkazHUhJ": {
+        "name": "Double Tap",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-3",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 1,
+            "bar": 3,
+            "more": 2,
+            "per": 3,
+            "scale": 1
+          },
+          "mods": {}
+        }
+      },
+      "lWIdGx53": {
+        "name": "Bounceshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "-6",
+          "ability": "mrk",
+          "flavor": "Guide shot from bounced square as though standing there"
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 4,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        }
+      },
+      "mKgXI1lC": {
+        "name": "Pulseshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "-6",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "+4",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 5,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      },
+      "vPAsnHsU": {
+        "name": "Replace Coolant Pack",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 2.6,
+      "cost": 32,
+      "quality": "",
+      "restriction": "R",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "2d8+2",
+    "flavorBase": "Plasma"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.07mrcWujgEBK3JSE"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1705642037158,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "3T2gm7GUM3paQ5ql",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "XiIqWMTRTKwsNgh0",
+  "sort": 0,
+  "_key": "!items!XiIqWMTRTKwsNgh0"
+}

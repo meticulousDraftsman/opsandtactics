@@ -1,0 +1,19 @@
+{
+  "name": "Psionic Incense",
+  "sorting": "a",
+  "folder": "B7LqoYZAVywdM8UP",
+  "type": "Item",
+  "_id": "E1PZsTWLRHW3SH7Y",
+  "sort": 600000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705449673585,
+    "modifiedTime": 1705642181180,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!E1PZsTWLRHW3SH7Y"
+}

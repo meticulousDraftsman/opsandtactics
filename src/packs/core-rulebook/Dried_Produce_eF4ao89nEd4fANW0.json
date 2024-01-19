@@ -1,0 +1,64 @@
+{
+  "folder": "6gphhrhPVXxZctMf",
+  "name": "Dried Produce",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/fertilizer-bag.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 6,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "zMTZtOCH": {
+          "type": "consumable",
+          "value": 6,
+          "max": 6,
+          "available": true,
+          "name": "Pounds"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">These are freeze dried vegetables and fruits that have had moisture removed from them to increase their dry storage life. They can be re-hydrated with water and consumed, or used as an ingredient. The price listed is for 6 lbs of mixed dried produce. 1 lb of re-hydrated produce will feed a character for 2 NV.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.9TtgaUGrZvOOi8lr"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642223474,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "eF4ao89nEd4fANW0",
+  "sort": 0,
+  "_key": "!items!eF4ao89nEd4fANW0"
+}

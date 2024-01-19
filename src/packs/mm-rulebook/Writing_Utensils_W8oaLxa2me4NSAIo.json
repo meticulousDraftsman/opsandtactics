@@ -1,0 +1,19 @@
+{
+  "name": "Writing Utensils",
+  "sorting": "a",
+  "folder": "JsOBrCMIPNynLgTa",
+  "type": "Item",
+  "_id": "W8oaLxa2me4NSAIo",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705460923354,
+    "modifiedTime": 1705642183849,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!W8oaLxa2me4NSAIo"
+}

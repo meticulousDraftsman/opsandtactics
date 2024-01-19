@@ -1,0 +1,88 @@
+{
+  "folder": "zX1ToeUGUbt5mz03",
+  "name": "Magazine (Placeholder)",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "27tSR76s": {
+          "type": "cartridge",
+          "value": 0,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "GHMdNTWB": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ""
+            }
+          },
+          "name": "Magazine 0"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A device that stores cartridges in an encasing, that is removable from the firearm. The magazine functions by moving the cartridges stored in the magazine into a position where they may be loaded into the chamber by the action of the firearm. For weapons that use a removable magazine, a character can purchase extras. Loading these extra magazines ahead of time and keeping them in a handy place makes it easy to reload a weapon in combat. The price and capacity of a removable magazine is listed with the weapon’s statistics.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.GKo5zTtmVZrhni77"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "4cYvf9CYvh016MAL",
+  "sort": 0,
+  "_key": "!items!4cYvf9CYvh016MAL"
+}

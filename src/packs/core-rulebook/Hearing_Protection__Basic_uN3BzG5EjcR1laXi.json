@@ -1,0 +1,64 @@
+{
+  "folder": "pQTJTHApIcDC5Tcx",
+  "name": "Hearing Protection, Basic",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/abstract/cube.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "nlK5vSYx": {
+          "type": "consumable",
+          "value": 500,
+          "max": 500,
+          "available": true,
+          "name": "Plugs"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Hearing protection are plugs, earmuffs, or molded inserts that protect the wearer against loud noises, often worn by people firing firearms or working with heavy machinery. As a general rule, hearing loss due to gunfire is not modeled in Ops and Tactics, but wearing hearing protection can protect against unexpected loud noises</span>.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span class=\"fontstyle0\">Encompasses foam plugs, wax balls, and fingers stuck in ears. When worn, they grant a +2 bonus to all Saving Throws against being deafened or stunned from loud noises</span>.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.AFLiYJqHsGdy1di1"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642239714,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "uN3BzG5EjcR1laXi",
+  "sort": 0,
+  "_key": "!items!uN3BzG5EjcR1laXi"
+}

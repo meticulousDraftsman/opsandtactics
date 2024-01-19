@@ -1,0 +1,203 @@
+{
+  "folder": "Vtd5PJwJybuFE0iT",
+  "name": ".28 Caseless Ammo Can",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/objects/swipe-card.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "EJmSjCDL": {
+          "type": "cartridge",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "cartridges": {
+            "Z7dBL2HL": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "1d12+3",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            },
+            "kTpBYXpV": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "1d12+5",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "1d12+1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "JHP",
+              "flavor": ""
+            },
+            "vaKzptRl": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "1d12+6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "1d12-1",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Frangible",
+              "flavor": ""
+            },
+            "K3RCX4kJ": {
+              "stats": {
+                "check": 1,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "1d12+3",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Tracer",
+              "flavor": "With Multishot Attacks"
+            },
+            "mcGamuWK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "2d12+3",
+                  "primaryFlavor": "Ballistic Piercing",
+                  "secondary": "4",
+                  "secondaryFlavor": " Ballistic",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "4",
+                  "primaryFlavor": " Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "AP",
+              "flavor": ""
+            },
+            "dbo1GzAz": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -4,
+                "good": {
+                  "primary": "1d12-2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Match Grade",
+              "flavor": ""
+            }
+          },
+          "name": "Caseless"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.yNBCsFWrmVsfKX4u"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705360266372,
+    "modifiedTime": 1705641965607,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "CXBcLpmnXmbi6Nml",
+  "sort": 0,
+  "_key": "!items!CXBcLpmnXmbi6Nml"
+}

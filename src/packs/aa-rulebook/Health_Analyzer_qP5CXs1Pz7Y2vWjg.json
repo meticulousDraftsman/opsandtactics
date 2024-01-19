@@ -1,0 +1,56 @@
+{
+  "folder": "RNCaFGLLQJq1XyyU",
+  "name": "Health Analyzer",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/equipment/smartphone.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 0.5,
+      "tons": false,
+      "cost": 10,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A health analyzer is a device that is used to quickly assess and aid a medical professional. It reduces the time taken to perform all Treat Injury actions by ¾.</span> </p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.xLtyx8lQPA6oDoOV"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642026972,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "qP5CXs1Pz7Y2vWjg",
+  "sort": 0,
+  "_key": "!items!qP5CXs1Pz7Y2vWjg"
+}

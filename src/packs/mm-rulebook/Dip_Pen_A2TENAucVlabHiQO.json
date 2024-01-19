@@ -1,0 +1,55 @@
+{
+  "folder": "W8oaLxa2me4NSAIo",
+  "name": "Dip Pen",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/other/fountain-pen.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 4,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.ZRpYLeV5srtagHqg"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "A2TENAucVlabHiQO",
+  "sort": 0,
+  "_key": "!items!A2TENAucVlabHiQO"
+}

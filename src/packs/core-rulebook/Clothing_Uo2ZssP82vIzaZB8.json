@@ -1,0 +1,19 @@
+{
+  "name": "Clothing",
+  "sorting": "a",
+  "folder": "E6cup5QS5keFGFx2",
+  "type": "Item",
+  "_id": "Uo2ZssP82vIzaZB8",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704437366061,
+    "modifiedTime": 1705516335829,
+    "lastModifiedBy": "wpVp6AIxxpFGCgYs"
+  },
+  "_key": "!folders!Uo2ZssP82vIzaZB8"
+}

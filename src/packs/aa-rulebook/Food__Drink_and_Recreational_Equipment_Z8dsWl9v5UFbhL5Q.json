@@ -1,0 +1,19 @@
+{
+  "name": "Food, Drink and Recreational Equipment",
+  "sorting": "a",
+  "folder": "eVWJQQcCXuOIccOo",
+  "type": "Item",
+  "_id": "Z8dsWl9v5UFbhL5Q",
+  "sort": 700000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705449765716,
+    "modifiedTime": 1705641984413,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!Z8dsWl9v5UFbhL5Q"
+}

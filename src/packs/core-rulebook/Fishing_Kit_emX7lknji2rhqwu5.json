@@ -1,0 +1,56 @@
+{
+  "folder": "C5qJr4TOMX49dSYL",
+  "name": "Fishing Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/tools/fishing-pole.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 2,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A fishing kit is a kit used to fish leisurely, or in survival situations when one needs to survive out in the wilderness. </span></p><p><span class=\"fontstyle0\">The fishing kit includes one compact fishing pole with a small reel, 300’ of 5lb test line, and various weights, hooks, and lures for use with multiple types of fish. </span></p><p><span class=\"fontstyle0\">A character can use this kit by making a Knowledge (Survival) check [TN15] to catch 2d4 NV worth of fresh meat in the form of fish every hour, as long as there is an area nearby with fish that they can catch.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.W8cZ3y7FARV003K9"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642237406,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "emX7lknji2rhqwu5",
+  "sort": 0,
+  "_key": "!items!emX7lknji2rhqwu5"
+}

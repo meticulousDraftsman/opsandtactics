@@ -1,0 +1,19 @@
+{
+  "name": "MRE",
+  "sorting": "a",
+  "folder": "5kXbDTNhOSQ0jDVw",
+  "type": "Item",
+  "_id": "8tN6Zh6VBAWWVWnz",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705438464031,
+    "modifiedTime": 1705642223383,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!8tN6Zh6VBAWWVWnz"
+}

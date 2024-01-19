@@ -1,0 +1,64 @@
+{
+  "folder": "6gphhrhPVXxZctMf",
+  "name": "Dried Noodles",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/cloth.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 8,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "WFzcwDgB": {
+          "type": "consumable",
+          "value": 40,
+          "max": 40,
+          "available": true,
+          "name": "Packs"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">These are freeze dried instant noodles that come in a pack. They can be eaten raw, though somewhat unpalatable when eaten this way, or they can be boiled with water, and the flavor package added for a simple, decently tasting meal, especially when coupled with dried vegetables. Due to their low cost, they can sustain someone for very low price, though they also lack in nutritional value. The price listed is for 40 packs. A single pack of noodles will feed a character 2 NV.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.AdAZ5A1QH77OioeD"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642223474,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "uuqNMmtAPXcwHTN8",
+  "sort": 0,
+  "_key": "!items!uuqNMmtAPXcwHTN8"
+}

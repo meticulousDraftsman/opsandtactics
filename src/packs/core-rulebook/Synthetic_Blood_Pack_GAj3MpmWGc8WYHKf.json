@@ -1,0 +1,56 @@
+{
+  "folder": "bdSsJJ7q5OazB0wx",
+  "name": "Synthetic Blood Pack",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/liquids/water-flask.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Synthetic blood packs are shelf stable, sterile universal blood packs that are created in a lab, and used to aid in recovery. When using the Long Term Care action from the Treat Injury skill, a blood pack grants an additional 15 HP per day in healing. When using the Restore Hit Points action from the Treat Injury Skill, a blood pack grants an additional 3d4 HP of healing. When using the Surgery action from the Treat Injury skill, a blood pack reduces the time to recovery from fatigue, and the time required to complete a surgery, by half. A blood pack contains 4 units of synthetic blood. A character must have blood to benefit from synthetic blood packs.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.P0PxTg1zYoI8r6zm"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642229370,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "GAj3MpmWGc8WYHKf",
+  "sort": 0,
+  "_key": "!items!GAj3MpmWGc8WYHKf"
+}

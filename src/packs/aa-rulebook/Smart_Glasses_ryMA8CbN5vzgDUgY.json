@@ -1,0 +1,56 @@
+{
+  "folder": "3vliwPR1ziydzGp0",
+  "name": "Smart Glasses",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/headgear/sunglasses.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.5,
+      "tons": false,
+      "cost": 25,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><strong>RAM: 2</strong></p><p><strong>Storage: 3</strong></p><p><span class=\"fontstyle0\">Augmentative vision is eyewear that superimposes information over the user’s field of vision. This can be anything from directions for cooking to a HUD tracking health, status conditions, and targets. The features available to the set of eyewear is dependent on what kind of modules are installed in the eyewear and what is currently activated. AV hardware has two major areas of module slot storage: RAM and Storage. All AV hardware is controlled through voice commands or through an interfaced device. Augmentative vision are considered computers, and can load software.<br>The RAM represents how many module slots can be used at the same time. RAM is measured in module slots, and the module uses the same amount of module slots of RAM as it does of hard drive space. When a module is activated, it uses RAM slots equal to how many storage slots it takes up, in RAM. When it is deactivated, it no longer takes up that spot in RAM, but is still located in storage.<br>The Storage represents how many modules can be stored on the<br>AV hardware at one time. A module is installed onto the storage,<br>and is activated at will. The module will always sit in storage unless<br>it is uninstalled.<br>All augmentative vision comes with the base software module, that contains the software necessary to load additional modules, as well as a web browser, camera with both normal and UV filters (still and video recording), microphone, bone conduction transducer to play audio to the wearer, an audio and video player, clock, local weather, and a GPS navigation system. It takes up no storage or RAM slots and is always active.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span class=\"fontstyle0\">Smart glasses are augmentation hardware that has been sleekly concealed in a pair of normal looking eye-glasses. They superimpose all of the information on the glasses, allowing the user to use these glasses in everyday wear, but are not as rugged for rough use.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.DMgRGe7fxmdmuQpk"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642066596,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ryMA8CbN5vzgDUgY",
+  "sort": 0,
+  "_key": "!items!ryMA8CbN5vzgDUgY"
+}

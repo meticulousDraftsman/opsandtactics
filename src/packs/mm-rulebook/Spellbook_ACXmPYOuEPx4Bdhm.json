@@ -1,0 +1,56 @@
+{
+  "folder": "xEBl2NDwkxCNl76Z",
+  "name": "Spellbook",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/objects/book-cover.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This isn’t truly a writing medium, but rather a means to keep loose pages together. The spell book is built from loose leaf pages that are purchased on their own. The spell book can hold up to 300 loose leaf pages, and has a slot for a single writing utensil, a stylus, and space for a small lock. Pages can be freely added or removed from the spell book. This is a simple leather spell book, more ornate versions can cost more.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.T9x26dGZwzLQbgx4"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ACXmPYOuEPx4Bdhm",
+  "sort": 0,
+  "_key": "!items!ACXmPYOuEPx4Bdhm"
+}

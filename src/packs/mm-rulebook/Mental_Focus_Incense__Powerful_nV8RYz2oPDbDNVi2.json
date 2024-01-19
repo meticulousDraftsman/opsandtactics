@@ -1,0 +1,64 @@
+{
+  "folder": "E1PZsTWLRHW3SH7Y",
+  "name": "Mental Focus Incense, Powerful",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/abstract/smoking-orb.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "0jAFHGyo": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Incense Sticks"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">All psions are required to meditate for 1 hour every day. Psions can enhance their abilities by meditating during this hour with psionic focused incense burning. Incense is is aromatic biotic material that releases fragrant smoke when burnt. When burned during meditation, it grants a psion a particular boost to their psionic power in some way, as noted below. Using more than one incense at a time grants no bonuses, and the character is considered Sickened for 1 hour.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span class=\"fontstyle0\">Mental focus incense increases the amount of Psionic Power (PP) a Psion can use beyond their natural skill, temporary elevating their powers for a limited amount of uses. After meditating with a Mental Focus Incense, a Psion can use +5 more PP per power for a number of uses, dependent on the level of potency. Powerful incense can use the bonus 10 times. A psion does not have to use all of the bonus PP given in order to trigger the bonus’s use; using even a single bonus point counts as a use. These bonuses last until the psion has to meditate again</span>.</p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.nKMGpw9TURL7QEhl"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642181140,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "nV8RYz2oPDbDNVi2",
+  "sort": 0,
+  "_key": "!items!nV8RYz2oPDbDNVi2"
+}

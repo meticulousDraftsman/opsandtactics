@@ -1,0 +1,56 @@
+{
+  "folder": "PpqEcLaJ8UYLIP0U",
+  "name": "Portable Digital Storage Device, Fine",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/data/usb-key.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Digital storage devices are devices that store digital data. They hold software modules and data. They come in two forms: Portable and Fixed.<br></span></p><p><span class=\"fontstyle0\">Portable digital storage devices are devices of magnetic, optical, or solid state media that are easily moved between computers, usually utilizing a port on the machine of a desktop, notebook, tablet, or phone. They can hold and store modules and data, but due to the limited bandwidth these devices have, software modules can not be run from them</span></p><p><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\">RAM: </strong>0</span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\">Storage: </strong>2</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.SQvrrLnLhZa6Af5s"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642217770,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "eHaXzHOLwDHJu61T",
+  "sort": 0,
+  "_key": "!items!eHaXzHOLwDHJu61T"
+}

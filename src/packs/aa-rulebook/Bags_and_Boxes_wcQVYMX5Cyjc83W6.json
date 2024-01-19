@@ -1,0 +1,19 @@
+{
+  "name": "Bags and Boxes",
+  "sorting": "a",
+  "folder": "eVWJQQcCXuOIccOo",
+  "type": "Item",
+  "_id": "wcQVYMX5Cyjc83W6",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705449718074,
+    "modifiedTime": 1705642020130,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!wcQVYMX5Cyjc83W6"
+}

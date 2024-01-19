@@ -1,0 +1,19 @@
+{
+  "name": "Handguns",
+  "sorting": "a",
+  "folder": "fkWQwvfdJfrFlh0K",
+  "type": "Item",
+  "_id": "hSRl2pX3fAff9oJE",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705349305438,
+    "modifiedTime": 1705641915014,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!hSRl2pX3fAff9oJE"
+}

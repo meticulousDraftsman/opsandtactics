@@ -1,0 +1,56 @@
+{
+  "folder": "Z8dsWl9v5UFbhL5Q",
+  "name": "Nutrient Paste",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/grain.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 5,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Nutrient paste is a grey, semi-solid paste that provides a person with all of the nutrients they need for a day, regardless of their dietary restrictions, though lacking any taste whatsoever. It is packaged in foil retort pouches, and can be eaten cold or hot, and do not have any expiration date as long as they remain unopened. A single pouch provides 8 NV. Nutrient paste pouches are suitable for carnivores, omnivores, and herbivores. The price listed is for a pack of 5 packs.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.7sP2Z2Q5EM0XgBQ9"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642057538,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "YIriveBrI5DBEvCv",
+  "sort": 0,
+  "_key": "!items!YIriveBrI5DBEvCv"
+}

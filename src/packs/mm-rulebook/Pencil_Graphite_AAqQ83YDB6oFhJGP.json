@@ -1,0 +1,63 @@
+{
+  "folder": "JsOBrCMIPNynLgTa",
+  "name": "Pencil Graphite",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/matchbox.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "Q5M3ygwF": {
+          "type": "consumable",
+          "value": 160,
+          "max": 160,
+          "available": true,
+          "name": "Sticks"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.n0OmteYaAorMfvOz"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "AAqQ83YDB6oFhJGP",
+  "sort": 0,
+  "_key": "!items!AAqQ83YDB6oFhJGP"
+}

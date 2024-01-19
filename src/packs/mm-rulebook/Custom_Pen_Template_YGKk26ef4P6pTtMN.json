@@ -1,0 +1,64 @@
+{
+  "folder": "jhwXP9HPr5gU3AKq",
+  "name": "Custom Pen Template",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/other/fountain-pen.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "uw0ouF0M": {
+          "type": "consumable",
+          "value": null,
+          "max": null,
+          "available": true,
+          "name": "Reservoir"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Often expensive, these upscale fountain pens provide a more personalized touch whether scribing spells, or writing notes or letters. A fountain pen has three parts that can each be customized in various ways: The Nib, which is the tip of the pen used to write with, the Body, which is the external shell of the pen which holds the other parts together, and the Reservoir, which is the part of the pen which actually holds the ink.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><strong>Nib:</strong></p><p><strong>Nib Material:</strong></p><p><strong>Body:</strong></p><p><strong>Reservoir:</strong></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.Pi9mRNorU1do20GF"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "YGKk26ef4P6pTtMN",
+  "sort": 0,
+  "_key": "!items!YGKk26ef4P6pTtMN"
+}

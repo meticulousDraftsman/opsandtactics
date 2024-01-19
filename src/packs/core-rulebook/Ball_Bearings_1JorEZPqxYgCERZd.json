@@ -1,0 +1,77 @@
+{
+  "folder": "pQTJTHApIcDC5Tcx",
+  "name": "Ball Bearings",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/abstract/chemical-bolt.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {
+      "UTqFx4OA": {
+        "name": "Scatter Bearings",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Ball bearings are little metal balls, often used to maintain the separation between bearing races, for bearings. One bag of 100 ball bearings covers a single 5’ square thoroughly. Each time a creature moves through a square containing ball bearings or each round a creature spends fighting in such an area, the character makes a Reflex Saving Throw [TN16] or be knocked prone. Improvised versions of this weapon include marbles.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.uT50Ej6or43ApfOP"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642239714,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "1JorEZPqxYgCERZd",
+  "sort": 0,
+  "_key": "!items!1JorEZPqxYgCERZd"
+}

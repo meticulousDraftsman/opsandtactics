@@ -1,0 +1,19 @@
+{
+  "name": "Analgesics/Painkillers",
+  "sorting": "a",
+  "folder": "bdSsJJ7q5OazB0wx",
+  "type": "Item",
+  "_id": "a6SkWJ1UnWMupEwn",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705442639423,
+    "modifiedTime": 1705642229271,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!a6SkWJ1UnWMupEwn"
+}

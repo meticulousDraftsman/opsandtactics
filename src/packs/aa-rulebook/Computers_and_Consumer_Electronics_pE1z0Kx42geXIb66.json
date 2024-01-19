@@ -1,0 +1,19 @@
+{
+  "name": "Computers and Consumer Electronics",
+  "sorting": "a",
+  "folder": "eVWJQQcCXuOIccOo",
+  "type": "Item",
+  "_id": "pE1z0Kx42geXIb66",
+  "sort": 800000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705515751494,
+    "modifiedTime": 1705642063386,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!pE1z0Kx42geXIb66"
+}

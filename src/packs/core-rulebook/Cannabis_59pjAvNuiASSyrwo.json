@@ -1,0 +1,19 @@
+{
+  "name": "Cannabis",
+  "sorting": "a",
+  "folder": "wkbtac2X1nFvLTnN",
+  "type": "Item",
+  "_id": "59pjAvNuiASSyrwo",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705447088800,
+    "modifiedTime": 1705642235150,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!59pjAvNuiASSyrwo"
+}

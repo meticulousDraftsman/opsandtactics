@@ -1,0 +1,19 @@
+{
+  "name": "Survival, Security and Professional Gear",
+  "sorting": "a",
+  "folder": "E6cup5QS5keFGFx2",
+  "type": "Item",
+  "_id": "pQTJTHApIcDC5Tcx",
+  "sort": 1100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704437419903,
+    "modifiedTime": 1705642239840,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!pQTJTHApIcDC5Tcx"
+}

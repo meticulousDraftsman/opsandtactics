@@ -1,0 +1,64 @@
+{
+  "folder": "G2bntgwoqK7hpNnM",
+  "name": "Pesh",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/cigar.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "wnnXmaOT": {
+          "type": "consumable",
+          "value": 3,
+          "max": 3,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": "I"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Pesh is a genus of leafy purple-colored plants that has seen sudden surge and use as a magical enhancement and as a recreational drug. It is denoted by its tendency to sparkle in light due to the small crystal deposits that form on adult plant leaves. A character may smoke 0.1 lb of pesh for a +35 bonus to their Mental Limit and a 1d3 penalty to their DEX modifier and Will Saving Throw. The effect lasts for 2d4 hours. When a character has spells, powers, or invocations that currently occupy the bonus Mental Limit when the effect ends, they immediately lose at least 25 Mental Limit worth of spells, invocations, and powers, chosen at random by the GM. If they smoke again, they regain these lost spells, powers and invocations. Pesh is packaged in 0.1 lb packs of shredded, dried pesh leaves</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.vgdJiBLJi0UY4yXI"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642178472,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "5wo7JmoL9Kxa2S75",
+  "sort": 0,
+  "_key": "!items!5wo7JmoL9Kxa2S75"
+}

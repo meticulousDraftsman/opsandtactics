@@ -1,0 +1,56 @@
+{
+  "folder": "a3FzG8BHs3ix9PCS",
+  "name": "First Aid Kit, Deluxe",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/first-aid-kit.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 80,
+      "tons": false,
+      "cost": 15,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "+1",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Standard first aid kit plus portable defibrillator, intravenous blood expander and fluid packs, oxygen tank and mask, backboard, cervical collar, local anesthetic solution, field surgical tools. This kit can be used as a surgery kit.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.Tx4sFULkIRGOGn8w"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642226645,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "CWTzERyZTesGkKTh",
+  "sort": 0,
+  "_key": "!items!CWTzERyZTesGkKTh"
+}

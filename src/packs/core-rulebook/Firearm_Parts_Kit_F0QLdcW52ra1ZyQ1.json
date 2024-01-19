@@ -1,0 +1,56 @@
+{
+  "folder": "C5qJr4TOMX49dSYL",
+  "name": "Firearm Parts Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/tools/screwdriver.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 10,
+      "tons": false,
+      "cost": 20,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A firearms parts kit is a collection of various firearm components, such as barrels, stocks, receivers, frames, pins, springs, and other miscellaneous hardware pieces used for creating firearms. Because it has a lot of the necessary components, lots of labor can be saved. A firearm parts kit grants a +20 equipment bonus when building a firearm, but is consumed after it has been used.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.BLbAfKnrlzMbRKlZ"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642237406,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "F0QLdcW52ra1ZyQ1",
+  "sort": 0,
+  "_key": "!items!F0QLdcW52ra1ZyQ1"
+}

@@ -1,0 +1,64 @@
+{
+  "folder": "bdSsJJ7q5OazB0wx",
+  "name": "Cold Packs",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/abstract/ice-cube.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.4,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "CeiB13dl": {
+          "type": "consumable",
+          "value": 8,
+          "max": 8,
+          "available": true,
+          "name": "Packs"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A cold pack is a strong plastic bag filled with water and a packet of ammonium nitrate that is suspended within it. When broken, it becomes very cold. It heals 2d3 damage per 10 minutes and can only be used to restore XHP that was lost by bludgeoning, fire, plasma, or non-lethal damage. Cold Packs can also be used in conjunction with the Treat Injury skill when Stabilizing a Dying Character. When using the Stabilize Dying Character action from the Treat Injury Skill, a Cold Pack heals the character 1d3 HP. The price listed is for eight packs, and the packs last for 1 hour.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.AGojXhACkkeXa0b2"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642229370,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "DQvFVycJB18QiREe",
+  "sort": 0,
+  "_key": "!items!DQvFVycJB18QiREe"
+}

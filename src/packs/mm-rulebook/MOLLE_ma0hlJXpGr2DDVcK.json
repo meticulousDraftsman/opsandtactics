@@ -1,0 +1,19 @@
+{
+  "name": "MOLLE",
+  "sorting": "a",
+  "folder": "B7LqoYZAVywdM8UP",
+  "type": "Item",
+  "_id": "ma0hlJXpGr2DDVcK",
+  "sort": 400000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705449700210,
+    "modifiedTime": 1705642176098,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!ma0hlJXpGr2DDVcK"
+}

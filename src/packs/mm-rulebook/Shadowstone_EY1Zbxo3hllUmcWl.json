@@ -1,0 +1,56 @@
+{
+  "folder": "6gnNXEIASFKO7cnA",
+  "name": "Shadowstone",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/metal-bar.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.2,
+      "tons": false,
+      "cost": 5,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Magical materials are materials that act counter to standard material behavior, and have properties that are beneficial and desired. When upgrading or building a weapon out of a magical material, the contact, the handle, or both, may be built out of the material, so long as the contact or handle is made or can be made from a comparable material. The price increase is per contact, or handle; making a weapon out of both doubles this cost. Nonballistic ammunition can also be made of these materials, the cost of this being for one full set of what is sold (for example, Arrows are sold in sets of 20 arrows). The cost is for a single area. When upgrading materials on a weapon, no upgrade points are used and the weapon retains it’s full prior upgrades that were on it previously.</span></p><p></p><p><span class=\"fontstyle0\">Shadowstone is a cloudy purple crystal that has a faint glow to it. Shadowstone has the ability to store incantations, which can be given to non-invokers to use. Each shadowstone can hold one incantation, that can be used once. Incantations are stored in the shadowstone by whispering the incantation to the stone. The activator of the shadowstone receives any effects the incantation grants. Shadowstones can also store a single recipe, which can be used by the invoker that stored the recipe. The cost is for a single shadowstone</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.5Hs4D7haGzVBCpNC"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642173567,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "EY1Zbxo3hllUmcWl",
+  "sort": 0,
+  "_key": "!items!EY1Zbxo3hllUmcWl"
+}

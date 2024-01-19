@@ -1,0 +1,19 @@
+{
+  "name": "General Kits",
+  "sorting": "a",
+  "folder": "E6cup5QS5keFGFx2",
+  "type": "Item",
+  "_id": "a3FzG8BHs3ix9PCS",
+  "sort": 600000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704437381775,
+    "modifiedTime": 1705516335829,
+    "lastModifiedBy": "wpVp6AIxxpFGCgYs"
+  },
+  "_key": "!folders!a3FzG8BHs3ix9PCS"
+}

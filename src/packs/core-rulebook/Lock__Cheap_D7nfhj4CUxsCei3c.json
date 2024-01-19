@@ -1,0 +1,56 @@
+{
+  "folder": "pQTJTHApIcDC5Tcx",
+  "name": "Lock, Cheap",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/archaic/crossed-chains.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.9,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A lock is a mechanical device used to secure doors, gates, lids, or bags from being accessed by people who do not have access. All locks come with a set of two keys; More can be purchased by the person buying the lock for 1 WP for 4 additional keys. Locks can also be purchased in both mechanical style, and electronic style. Mechanical style uses metal keys to unlock the lock, while electronic style uses electronic key fobs to unlock the lock. Locks generally fail open; defeating the lock using picks means the mechanism opens, allowing unlimited attempts to pick them. Locks can be purchased that instead Fail Closed, where failure to pick the lock properly causes it to jam closed and will not open even with the key, called a lockout. Purchasing a lock that Fails Closed cost twice as much as a normal lock.</span></p><p></p><p><span class=\"fontstyle0\">Cheap locks include briefcase locks, combination locks, and weak padlocks. When these devices fail closed, they can be triggered four times before a lockout. 0 Hardness, 1 HP, Break [TN10], Disable Device [TN20].</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.8eXXFbJ4TdteGhiK"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642239714,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "D7nfhj4CUxsCei3c",
+  "sort": 0,
+  "_key": "!items!D7nfhj4CUxsCei3c"
+}

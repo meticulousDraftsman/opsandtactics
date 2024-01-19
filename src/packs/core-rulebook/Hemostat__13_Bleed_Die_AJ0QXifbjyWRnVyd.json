@@ -1,0 +1,85 @@
+{
+  "folder": "lmP7qw2gzGR30tRc",
+  "name": "Hemostat, 13 Bleed Die",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/pill.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 11,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "ZGGxizfL": {
+          "type": "consumable",
+          "value": 2,
+          "max": 2,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {
+      "4YIakesX": {
+        "name": "Use Dose",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "-13 Bleed Dice"
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">These medicines promote the clotting of blood. They reduce the bleed damage based on the level of the hemostat. The price listed is for two doses</span>.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.zd4zauMcTdx2NsGY"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642229370,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "AJ0QXifbjyWRnVyd",
+  "sort": 0,
+  "_key": "!items!AJ0QXifbjyWRnVyd"
+}

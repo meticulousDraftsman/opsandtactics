@@ -1,0 +1,85 @@
+{
+  "folder": "k1HaeJt9P4fw3uHl",
+  "name": "Opiod, 4d10+1",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/pill.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 15,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "Cue00Azy": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": "I"
+    },
+    "actions": {
+      "PTwed6iL": {
+        "name": "Take Dose",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "4d10+1",
+          "ability": "",
+          "flavor": "HP Recovered"
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">These medicines allow a character to ignore pain, and allow them to continue fighting, but only for a limited time. These are much stronger versions of the over the counter painkillers and as such require proper documentation to possess. When the effects wear off, the healing effect of the opioid goes with it. Opioids can be given to a character with at least 1 CHP. Opioids will restore both CHP and XHP, but will always restore CHP before XHP. A character can not gain more CHP or XHP than their maximum. The price listed is for one dose and each dose lasts for 1d3 hours. After taking a single dose, the character takes 1 CON damage that heals normally.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.bTuRmoftd6N9dYat"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642235244,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "tuhOdGwQy6bLifC4",
+  "sort": 0,
+  "_key": "!items!tuhOdGwQy6bLifC4"
+}

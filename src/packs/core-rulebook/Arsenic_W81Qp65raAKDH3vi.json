@@ -1,0 +1,103 @@
+{
+  "folder": "wQOLGKmJ5uFxJAu1",
+  "name": "Arsenic",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/poison-bottle.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1,
+      "tons": false,
+      "cost": 8,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "P9vAtXoJ": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": "R"
+    },
+    "actions": {
+      "NqmgXsN5": {
+        "name": "Primary Damage",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "TN 15 Save"
+        },
+        "effect": {
+          "inherent": "1d4",
+          "ability": "",
+          "flavor": "STR Damage"
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": null
+        }
+      },
+      "L4j5HoD1": {
+        "name": "Secondary Damage",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "TN 15 Save"
+        },
+        "effect": {
+          "inherent": "2d4",
+          "ability": "",
+          "flavor": "CON Damage"
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": null
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Poisons are chemical substances that can cause disturbances to organisms, usually by chemical reaction or other activity on the molecular scale, when a sufficient quantity is absorbed by an organism. While nearly any substance ingested, injected, or inhaled into the body technically counts as a poison, the poisons listed here are specifically listed for their effects. The price listed is for 5 doses in a synthesized solid, liquid poison stored in a bottle, or a gas stored in a pressurized cylinder</span>.</p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.ZU2oULXiUuylBVus"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642229370,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "W81Qp65raAKDH3vi",
+  "sort": 0,
+  "_key": "!items!W81Qp65raAKDH3vi"
+}

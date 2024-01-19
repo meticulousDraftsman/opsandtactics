@@ -1,0 +1,84 @@
+{
+  "folder": "ObeHGdFsbS4xkkCt",
+  "name": "Juice",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/syringe-full.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 7,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "qtueKBOK": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": "R"
+    },
+    "actions": {
+      "wpmVPyE6": {
+        "name": "Use Dose",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "TN 15 FORT Save vs CHP Damage"
+        },
+        "effect": {
+          "inherent": "2d3",
+          "ability": "",
+          "flavor": "CP Gained/CHP Damage"
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A thick white liquid used by only the most disciplined of soldiers and adventurers to push themselves to the upper limits of their combat effectiveness or fools who believe they are disciplined and strong enough to handle it.<br>A character may inject themselves or be injected with one dose of Juice to gain 2d3 additional Combat Points every round for 2 minutes. The character may inject subsequent doses to lengthen the time this bonus last by 1 minute, but does not grant any additional Combat Points. After each dose is injected, a character immediately makes a Fortitude Saving Throw [TN15]. If a character fails this Saving Throw, they take CHP damage equal to the Combat Point bonus they received. The TN increases by 5 for each dose of Juice or Boost taken within 6 weeks of the first dose. Juice is packaged in single dose ampules.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.jIA9r1BICwgp8sHQ"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642044326,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "84mgxRsNo95IZed2",
+  "sort": 0,
+  "_key": "!items!84mgxRsNo95IZed2"
+}

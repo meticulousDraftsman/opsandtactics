@@ -1,0 +1,19 @@
+{
+  "name": "Sheathes",
+  "sorting": "a",
+  "folder": "zX1ToeUGUbt5mz03",
+  "type": "Item",
+  "_id": "H5QGlQCZNdhpsPD4",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705418401400,
+    "modifiedTime": 1705642241737,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!H5QGlQCZNdhpsPD4"
+}

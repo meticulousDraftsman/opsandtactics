@@ -1,0 +1,56 @@
+{
+  "folder": "vNJuYkYRxtNId7KU",
+  "name": "Machinegun Rig",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/armor/sleeveless-jacket.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 2,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Load Bearing Equipment is equipment used to carry a fighting load, and keep it handy at all times. When using a LBE rig, the weight of all weapons and equipment in the rig is halved. LBE gear can be worn over any armor that doesn’t have any MOLLE slots or attachments. They are also printed in camouflage patterns: woodland, desert, winter, urban (gray patterned), and black are available. When worn in an appropriate setting, LBE gear grants a +2 bonus on Stealth checks. Using LBE gear eliminates the need to spend CP to reach into a pocket or bag to retrieve ammunition or magazines/speedloaders stored on the LBE gear, but not holstered weapons or items.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span class=\"fontstyle0\">A machinegun rig has spaces for two linked boxes or magazines with a capacity of 300 rounds or less, two canteen pouches, two grenade loops that can hold a single grenade each, and a utility pouch that can comfortably hold 6 lbs of Small or smaller objects.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.F8pL8ZU0x9guTGEg"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "NRk2X6MeNaxjtlva",
+  "sort": 0,
+  "_key": "!items!NRk2X6MeNaxjtlva"
+}

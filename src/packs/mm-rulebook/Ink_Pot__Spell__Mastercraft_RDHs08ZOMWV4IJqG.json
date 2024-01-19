@@ -1,0 +1,64 @@
+{
+  "folder": "i2ouVRQbO4sfLxl4",
+  "name": "Ink Pot, Spell, Mastercraft",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/liquids/vial.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 80,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "Z9ZYWqKo": {
+          "type": "consumable",
+          "value": 80,
+          "max": 80,
+          "available": true,
+          "name": "Spells"
+        }
+      },
+      "quality": "",
+      "restriction": "R"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">Ink is a gel, sol, or solution that contains at least one colorant, such as a dye or pigment, and is used to color a surface to produce an image, text, or design. Ink is used in spellcrafting to produce the necessary runes to create spells. Ink can be purchased in three sizes: Bottles, Pots and Vials. A vial of ink contains 1/8th unit of ink, and is enough to scribe 10 spells or refill a fountain pen 1 time. A pot of ink contains 1 unit of ink, and is enough to scribe 80 spells or refill a fountain pen 8 times. A bottle of ink contains 2 units of ink, and is enough to scribe 160 spells or refill a fountain pen 16 times.</span></span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\">Spell inks are inks that are crafted from natural materials and allow a mage to bring out the most in their spells. They grant bonus SP for their selected spell schools, and do not require the skill points, nor do they go towards the total spell points spent per spell, or per day, however when used with a different school, instead provide penalties for any other school, which count against the maximum spell points per spell when used.</span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\"><br class=\"Apple-interchange-newline\" style=\"box-sizing: border-box; user-select: text;\">Mastercraft Spell Ink</strong> +10 SP to selected Spellschool when using that ink to scribe spells, -10 SP penalty if used for any other spellschool.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.aa6cgrMuyIcpIvrh"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "RDHs08ZOMWV4IJqG",
+  "sort": 0,
+  "_key": "!items!RDHs08ZOMWV4IJqG"
+}

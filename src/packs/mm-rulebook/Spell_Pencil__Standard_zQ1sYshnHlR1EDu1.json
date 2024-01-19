@@ -1,0 +1,56 @@
+{
+  "folder": "W8oaLxa2me4NSAIo",
+  "name": "Spell Pencil, Standard",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/equipment/pencil.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">Spell pencils are pencils that have graphite that is impregnated with a fine metal alloy, increasing the longevity of a written spell. They increase the number of times a spell can be released before it deteriorates, for their selected spell schools, adding to the total number of castings given by the specific writing surface, but reduce the total amount of SP that can be used on the spell, to a minimum of 1 SP. This reduction is after any feats, skills, or racial abilities. Like standard pencils, they can only write on wood pulp, cotton, waterproof, or bonewood paper. This bonus is only given for a<br style=\"box-sizing: border-box; user-select: text;\">specific spellschool. Each pencil last for 25 spells before the graphite<br style=\"box-sizing: border-box; user-select: text;\">lead needs to be replaced.</span></span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\">Standard Spell Pencil</strong> </span></span><span class=\"fontstyle2\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">+2 Castings to selected spellschool when<br style=\"box-sizing: border-box; user-select: text;\">using that pencil to scribe spells, -4 SP penalty to the total spell’s<br style=\"box-sizing: border-box; user-select: text;\">max cost.</span></span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.y3DAyKYXq4Ub2KYB"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "zQ1sYshnHlR1EDu1",
+  "sort": 0,
+  "_key": "!items!zQ1sYshnHlR1EDu1"
+}

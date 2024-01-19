@@ -1,0 +1,19 @@
+{
+  "name": "Sniper Rifles",
+  "sorting": "a",
+  "folder": "8G6CUvbopWoCVIc3",
+  "type": "Item",
+  "_id": "cPx5MnVHQIJUHowU",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705240230344,
+    "modifiedTime": 1705642037091,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!cPx5MnVHQIJUHowU"
+}

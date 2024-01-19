@@ -1,0 +1,56 @@
+{
+  "folder": "dlaDAcEazZK6SmJx",
+  "name": "Night Vision Goggles",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/headgear/goggles.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.6,
+      "tons": false,
+      "cost": 7,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Night vision goggles are goggles that use passive light gathering to improve vision in near-dark and dark conditions. They grant the user the ability to see in darkness, but because of the restricted view, grant a -5 penalty to all sight based perception checks made by someone wearing them. When in complete darkness, NVGs must either be used with an infrared illuminator (+8 to the cost), or use another source of infrared light. Using either of these sources of infrared light grants fully illuminated vision as normal</span>.</p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.SkFPgrpVroVUnPMt"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642220931,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "s8YpAa6rKLX1zEQL",
+  "sort": 0,
+  "_key": "!items!s8YpAa6rKLX1zEQL"
+}

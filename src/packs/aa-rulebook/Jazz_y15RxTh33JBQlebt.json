@@ -1,0 +1,85 @@
+{
+  "folder": "ObeHGdFsbS4xkkCt",
+  "name": "Jazz",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/syringe-full.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 5,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "4t6Z3PCM": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": "I"
+    },
+    "actions": {
+      "vnYLJTJl": {
+        "name": "Use Dose",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "TN 17 FORT Save"
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A thick blue liquid used by academics, engineers, and mages<br>as a study aid and performance enhancer. A character may inject or be injected with one dose of Jazz to halve the time it takes to complete any Craft, Disable Device, Technology Use, or Demolitions check. This effect lasts for 12 hours per dose. After each injection, a character makes a Fortitude Saving Throw [TN17] to avoid taking a -4 penalty to all Craft, Disable Device, or Demolitions checks. This penalty lasts for 1 week after Jazz was taken, and each dose before that time resets the time and increases the penalty by -4. Jazz is packaged in single dose ampules</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.LIOT1HK1ZVFFJw28"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642044326,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "y15RxTh33JBQlebt",
+  "sort": 0,
+  "_key": "!items!y15RxTh33JBQlebt"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Plasarms",
+  "sorting": "a",
+  "folder": "0ygMPpQxNMJJva7p",
+  "type": "Item",
+  "_id": "8G6CUvbopWoCVIc3",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705240168309,
+    "modifiedTime": 1705641984413,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!8G6CUvbopWoCVIc3"
+}

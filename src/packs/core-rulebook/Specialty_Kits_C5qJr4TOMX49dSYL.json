@@ -1,0 +1,19 @@
+{
+  "name": "Specialty Kits",
+  "sorting": "a",
+  "folder": "E6cup5QS5keFGFx2",
+  "type": "Item",
+  "_id": "C5qJr4TOMX49dSYL",
+  "sort": 1000000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704437387501,
+    "modifiedTime": 1705642237513,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!C5qJr4TOMX49dSYL"
+}

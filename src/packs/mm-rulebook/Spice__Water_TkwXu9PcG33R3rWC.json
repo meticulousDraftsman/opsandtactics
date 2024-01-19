@@ -1,0 +1,56 @@
+{
+  "folder": "G2bntgwoqK7hpNnM",
+  "name": "Spice, Water",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/powder.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "R"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Spice is a chemical a concoction of aromatics that have been desiccated and sealed in an airtight airtight glass bottle, that enhance psionic powers. It has a multitude of tradenames, but all try to incorporate the name spice in them, for identification by interested parties. Spice is taken by uncapping the bottle, and inhaling in the fumes given off by the aromatics. Each bottle contains enough spice for 1 dose. The effects of the spice are determined by the element of spice, as listed below</span>.</p><p><span class=\"fontstyle0\">Water spice has a sparkling blue color to it, and seems to be always flowing and moving. Water Spice enhances Fluid Dynamics. While under the effects of Water Spice, psions do not have to suspend water to use the powers, instead opting to use 8 units of their own blood instead. Additionally, all dice values, ranges, and durations are doubled. Every time a character uses any power under Fluid Dynamics, they take 1d3 HP of damage. While under the effects of Water Spice, the character’s eyes glow blue.</span> </p><p><span style=\"font-family: Roboto, sans-serif\">The effects of spice last for 3 hours. After the effect wears off, the character is considered Inebriated for 1 hour. If a character takes another dose of spice while under the effects of spice, they receive the new effects and the duration time resets back to 3 hours, they lose the abilities of the old effects, and are immediately considered Inebriated for 1 hour.</span><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.nmlAT0dfspZWNGYL"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642178472,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "TkwXu9PcG33R3rWC",
+  "sort": 0,
+  "_key": "!items!TkwXu9PcG33R3rWC"
+}

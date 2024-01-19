@@ -1,0 +1,64 @@
+{
+  "folder": "xEBl2NDwkxCNl76Z",
+  "name": "Wood Pulp Paper, Ream",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/papers.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 2.5,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "3EzY10jW": {
+          "type": "consumable",
+          "value": 1000,
+          "max": 1000,
+          "available": true,
+          "name": "Sheets"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span style=\"font-family: Roboto, sans-serif\">This type of paper is what most people think of when talking about paper, and encompasses paper such as notebook paper, bulk printer paper, and your standard legal tablet paper. While cheap and plentiful, it is extremely fragile, with a single point of damage to the paper, or being dropped in water or other damp material will render both the paper and the spell written on it completely useless. They are also one time use, as the energy from the spell releasing ignites and burns the paper. This paper comes in 1,000 page reams, or in 10 packs of 100 page spiral bound or sewn bound books.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.UChdwcY3nRiSi7xq"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "LdSIVVXwuSDuI3bN",
+  "sort": 0,
+  "_key": "!items!LdSIVVXwuSDuI3bN"
+}

@@ -1,0 +1,64 @@
+{
+  "folder": "5kXbDTNhOSQ0jDVw",
+  "name": "Cigarettes",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/cigarette.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "5dvqOCZB": {
+          "type": "consumable",
+          "value": 200,
+          "max": 200,
+          "available": true,
+          "name": "Cigarettes"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A cigarette is a small roll of finely cut tobacco leaves wrapped in a cylinder of thin paper for smoking.  Smoking a pack of cigarettes or a single cigar causes 1 XHP damage per pack smoked. If a character loses their last non-lethal hit point due to smoking, they are nauseated for two hours and gain that hit point back after those two hours. The price listed is for a carton of cigarettes, which contains 10 packs of 20 cigarettes each.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.fGf41RVDPXxdOu7C"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642223474,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "Xfs3ofHEDpBSX7qX",
+  "sort": 0,
+  "_key": "!items!Xfs3ofHEDpBSX7qX"
+}

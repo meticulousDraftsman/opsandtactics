@@ -1,0 +1,56 @@
+{
+  "folder": "a3FzG8BHs3ix9PCS",
+  "name": "Visual Arts Kit, Deluxe",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/equipment/paint-brush.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "gargantuan",
+      "weight": 25,
+      "tons": false,
+      "cost": 25,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Standard visual art kit, plus plaster mix, pure pigments, mortar and pestle, water based paints, digital color analyzer, large cloth canvas, large brushes, paper of various textures and materials, hammer and chisel, and a beret</span>.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.hvWD7cu4y3gHNTMZ"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642226645,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ZLSqrOz3h94j5FZ5",
+  "sort": 0,
+  "_key": "!items!ZLSqrOz3h94j5FZ5"
+}

@@ -1,0 +1,56 @@
+{
+  "folder": "C5qJr4TOMX49dSYL",
+  "name": "Surgery Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/first-aid-kit.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 35,
+      "tons": false,
+      "cost": 40,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A surgery kit is a kit used for performing surgery, such as pulling out bullets and closing up wounds. </span></p><p><span class=\"fontstyle0\">It contains a box of latex gloves, surgical scissors, scalpels and extra blades, surgical needles and suturing thread, forceps, a small box of 20 disposable syringes, gauze (pads and rolls), sponges, surgical tape, cotton swabs (dry and alcohol-saturated), disinfectant solution, sedative pills, head mounted pen flashlight, a small pack of surgical masks, sterile draping cloth, plastic safety goggles, surgical staple gun, local anesthetic and antibiotics, blood coagulant solution, suction bulb, clamps, intravenous blood expander, fluid packs, a rib spreader, bone saws, a heart monitor, a defibrillator, intravenous blood packs, an anesthesia tank and mask, and an oxygen tank and mask. </span></p><p><span class=\"fontstyle0\">A surgery kit grants a +4 equipment bonus while performing a surgery.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.yb7QFPjCTI6oX0Ui"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642237406,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "61waVJD8dGT9obVS",
+  "sort": 0,
+  "_key": "!items!61waVJD8dGT9obVS"
+}

@@ -1,0 +1,56 @@
+{
+  "folder": "820OR02HSiQ73O7L",
+  "name": "Coolant Pack Chiller, Small",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/boxes/cooler.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 2,
+      "tons": false,
+      "cost": 6,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This is a powered, non-portable chiller that will chill coolant packs, ensuring that they are in a ready to use state, as well as cool down hot packs at an increased rate. Any hot pack placed in this chiller will take no more than 4 hours to be completely chilled and ready for use. A small chiller can store 6 packs.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.IvebmMqKnEIsefO7"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642002467,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "AYb3CtqSgfX4PQWr",
+  "sort": 0,
+  "_key": "!items!AYb3CtqSgfX4PQWr"
+}

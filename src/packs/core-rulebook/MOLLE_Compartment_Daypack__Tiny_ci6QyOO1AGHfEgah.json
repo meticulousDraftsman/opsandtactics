@@ -1,0 +1,56 @@
+{
+  "folder": "eWb3b83VOKi7hqLO",
+  "name": "MOLLE Compartment Daypack, Tiny",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/bags/shoulder-bag.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.7,
+      "tons": false,
+      "cost": 6,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This is a a backpack that bears a very similar outward appearance to a normal backpack or day pack, but has MOLLE attachments hidden in a secret compartment. The secret compartment is it’s own compartment and does not affect or use the capacity of the standard compartment, granting a +15 bonus to stealth checks when hiding any weapon or object within it. The secret compartment can be revealed for 3 Combat Points. The tiny pack can hold 4 lbs of objects that are Small or smaller size and has 2 MOLLE slots</span>. <span class=\"fontstyle0\">This pack fits comfortably over one shoulder in a messenger type style or on both shoulders in a traditional pack type.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.vDwxj1tCB16l76tL"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642205635,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ci6QyOO1AGHfEgah",
+  "sort": 0,
+  "_key": "!items!ci6QyOO1AGHfEgah"
+}

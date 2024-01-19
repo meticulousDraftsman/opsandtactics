@@ -1,0 +1,56 @@
+{
+  "folder": "S4iz83GNUWy5bQuD",
+  "name": "Liquid Tank Upgrade",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/liquids/vial.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.2,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This upgrade gives the bot an airtight, pressurized tank that can hold 1 unit of any liquid. The tank has a glass lining, that allows it to hold corrosive liquids as well. It also equips the bot with a variety of sprayers, allowing it to spew the liquid from its front in a variety of ways, as well as a suction tube that allows it to draw liquid within itself for later use.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.5hEJjO1nXfJoTnxE"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642030111,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "k8c9AIeIDJqDHBu8",
+  "sort": 0,
+  "_key": "!items!k8c9AIeIDJqDHBu8"
+}

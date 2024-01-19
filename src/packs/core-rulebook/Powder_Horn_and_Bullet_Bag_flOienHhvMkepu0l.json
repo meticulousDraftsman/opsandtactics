@@ -1,0 +1,88 @@
+{
+  "folder": "zX1ToeUGUbt5mz03",
+  "name": "Powder Horn and Bullet Bag",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/bags/duffel-bag.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 2,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "R8i4jqE5": {
+          "type": "cartridge",
+          "value": 0,
+          "max": 60,
+          "available": true,
+          "cartridges": {
+            "sjGTVreG": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ""
+            }
+          },
+          "name": "Bullet Bag"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A powder horn is a leather, ivory, bone, or metal container that holds 1.0 lb of black powder. A bullet bag is a leather bag that holds 60 lead balls for black powder weapons.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.YYPEXCEifNNDnKTU"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "flOienHhvMkepu0l",
+  "sort": 0,
+  "_key": "!items!flOienHhvMkepu0l"
+}

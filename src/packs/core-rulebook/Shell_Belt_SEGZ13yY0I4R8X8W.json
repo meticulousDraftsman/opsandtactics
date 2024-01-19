@@ -1,0 +1,88 @@
+{
+  "folder": "zX1ToeUGUbt5mz03",
+  "name": "Shell Belt",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/clothing/ring.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "i8PWe89E": {
+          "type": "cartridge",
+          "value": 0,
+          "max": 25,
+          "available": true,
+          "cartridges": {
+            "4HWUHsoD": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": ""
+            }
+          },
+          "name": "Belt"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A belt that is specially made to hold 25 shotgun shells for quick access but disallows the wearing of any holster or gunbelt when worn. Using a shell belt eliminates the need to spend CP to reach into a pack to retrieve ammunition.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.Irdv4HTEOLgFBfG1"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "SEGZ13yY0I4R8X8W",
+  "sort": 0,
+  "_key": "!items!SEGZ13yY0I4R8X8W"
+}

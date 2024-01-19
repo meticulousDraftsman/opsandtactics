@@ -1,0 +1,56 @@
+{
+  "folder": "C5qJr4TOMX49dSYL",
+  "name": "Diving Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/headgear/safety-glasses.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 25,
+      "tons": false,
+      "cost": 15,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A diving kit contains a single wetsuit, fins, weights, a dive computer, a face mask, and SCUBA gear. It grants a +10 equipment bonus to all Athletics checks to swim, extends the time one can swim to 3 hours per check, and allows a character to breathe underwater for 3 hours</span>.</p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.msz2j6li3HRmTh9R"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642237406,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "4NxwFUoQswnFOAL9",
+  "sort": 0,
+  "_key": "!items!4NxwFUoQswnFOAL9"
+}

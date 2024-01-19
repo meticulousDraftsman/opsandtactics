@@ -1,0 +1,19 @@
+{
+  "name": "Antiseptics",
+  "sorting": "a",
+  "folder": "bdSsJJ7q5OazB0wx",
+  "type": "Item",
+  "_id": "Jhif7pZLYB2IIZai",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705442667376,
+    "modifiedTime": 1705642229271,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!Jhif7pZLYB2IIZai"
+}

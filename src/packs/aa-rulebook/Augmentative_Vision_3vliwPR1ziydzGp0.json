@@ -1,0 +1,19 @@
+{
+  "name": "Augmentative Vision",
+  "sorting": "a",
+  "folder": "UqspprVeAgxG5fZu",
+  "type": "Item",
+  "_id": "3vliwPR1ziydzGp0",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705497617836,
+    "modifiedTime": 1705642066545,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!3vliwPR1ziydzGp0"
+}

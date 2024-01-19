@@ -1,0 +1,56 @@
+{
+  "folder": "pQTJTHApIcDC5Tcx",
+  "name": "Lock, Average",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/archaic/crossed-chains.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.9,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A lock is a mechanical device used to secure doors, gates, lids, or bags from being accessed by people who do not have access. All locks come with a set of two keys; More can be purchased by the person buying the lock for 1 WP for 4 additional keys. Locks can also be purchased in both mechanical style, and electronic style. Mechanical style uses metal keys to unlock the lock, while electronic style uses electronic key fobs to unlock the lock. Locks generally fail open; defeating the lock using picks means the mechanism opens, allowing unlimited attempts to pick them. Locks can be purchased that instead Fail Closed, where failure to pick the lock properly causes it to jam closed and will not open even with the key, called a lockout. Purchasing a lock that Fails Closed cost twice as much as a normal lock.</span></p><p></p><p><span class=\"fontstyle0\">Average locks include home deadbolt locks and standard padlocks. When these devices fail closed, they can be triggered three times before a lockout. 3 Hardness, 5 HP, Break [TN15], Disable Device [TN25].</span> </p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.nXBQ4423iZdTLG3y"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642239714,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "qnfSmJNRMkpch4Mo",
+  "sort": 0,
+  "_key": "!items!qnfSmJNRMkpch4Mo"
+}

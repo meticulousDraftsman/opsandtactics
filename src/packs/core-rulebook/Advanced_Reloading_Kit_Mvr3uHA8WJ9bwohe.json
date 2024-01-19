@@ -1,0 +1,56 @@
+{
+  "folder": "C5qJr4TOMX49dSYL",
+  "name": "Advanced Reloading Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/objects/freemasonry.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "huge",
+      "weight": 90,
+      "tons": false,
+      "cost": 70,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This is the more advanced version of a basic reloading kit, containing contains all of the tools necessary for reloading small arms ammunition, including an automatic powder trickler, a turret reloading press with case, bullet and primer feeders, a digital scale, a case cleaner and polisher, a case resizer, a bullet puller and ballistics reference manuals, as well as the various dies needed to reload all kinds of ammunition. It allows a character to reload ammunition at a much faster rate and more accurately than the basic kit. It reduces the time it takes to reload a batch<br>of ammo to 2 hours, and grants a +3 bonus to all Craft checks<br>involving reloading.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.SgTztiupsegO41iP"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642237406,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "Mvr3uHA8WJ9bwohe",
+  "sort": 0,
+  "_key": "!items!Mvr3uHA8WJ9bwohe"
+}

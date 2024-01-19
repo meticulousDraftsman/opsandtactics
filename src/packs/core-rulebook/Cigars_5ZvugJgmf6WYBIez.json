@@ -1,0 +1,64 @@
+{
+  "folder": "5kXbDTNhOSQ0jDVw",
+  "name": "Cigars",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/cigar.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.2,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "dvl4glbo": {
+          "type": "consumable",
+          "value": 20,
+          "max": 20,
+          "available": true,
+          "name": "Cigars"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A cigar is a tightly-rolled bundle of dried and fermented tobacco that is ignited so that its smoke may be drawn into the mouth. Smoking a pack of cigarettes or a single cigar causes 1 XHP damage per pack smoked. If a character loses their last non-lethal hit point due to smoking, they are nauseated for two hours and gain that hit point back after those two hours. The price listed is for a box of 20 cigars.</span><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.64WAGtKM5WjWQJrc"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642223474,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "5ZvugJgmf6WYBIez",
+  "sort": 0,
+  "_key": "!items!5ZvugJgmf6WYBIez"
+}

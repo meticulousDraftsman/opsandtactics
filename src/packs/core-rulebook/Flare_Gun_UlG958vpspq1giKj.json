@@ -1,0 +1,201 @@
+{
+  "folder": "pQTJTHApIcDC5Tcx",
+  "name": "Flare Gun",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/abstract/cannon-ball.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "consumable",
+      "insideOut": "internal",
+      "loaded": {},
+      "heatBase": 0,
+      "source": "j3EtyLZgBBcrYGly,system.gear.resources.R5ldrnMf"
+    },
+    "range": "40ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "UARvhNwD": {
+        "name": "Singleshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "mrk",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      },
+      "jLne7tXG": {
+        "name": "Potshot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "-6",
+          "ability": "mrk",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      },
+      "YWaWYY3Y": {
+        "name": "Reload",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 0,
+        "cp": {
+          "inherent": 2,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 0.6,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "R5ldrnMf": {
+          "type": "consumable",
+          "value": 0,
+          "max": 1,
+          "available": true,
+          "name": "Internal Chamber"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "damageBase": "1d4",
+    "flavorBase": "Fire",
+    "importFilter": "",
+    "importMod": "",
+    "description": "<p><span class=\"fontstyle0\">When fired into the air at night, a flare illuminates a 60’ radius as if lit by daylight for 10 rounds. When used as a signal, a flare may be spotted at a distance of 5 miles with a successful Perception check, [TN20] during the day or [TN15] at night. A flare gun may also be used as a weapon, having a maximum range of 40’ and doing 1d4 Fire damage. Anyone shot with a flare gun must make a Reflex Saving Throw [TN15] or be caught on fire. A flare gun can also ignite flammable material and fluids.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.j3EtyLZgBBcrYGly"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705435122559,
+    "modifiedTime": 1705642239714,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "UlG958vpspq1giKj",
+  "sort": 0,
+  "_key": "!items!UlG958vpspq1giKj"
+}

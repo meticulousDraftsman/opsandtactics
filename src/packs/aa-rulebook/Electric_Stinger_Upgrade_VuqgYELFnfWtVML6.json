@@ -1,0 +1,109 @@
+{
+  "folder": "S4iz83GNUWy5bQuD",
+  "name": "Electric Stinger Upgrade",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/abstract/lightning-branches.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "coolant",
+      "insideOut": "both",
+      "loaded": {},
+      "heatBase": 2,
+      "source": ""
+    },
+    "range": "10ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "cPxrLkGo": {
+        "name": "Shoot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {},
+          "inherent": "2",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 18,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "L"
+    },
+    "damageBase": "2d8+1",
+    "flavorBase": "Electric",
+    "importFilter": "",
+    "importMod": "",
+    "description": "<p><span class=\"fontstyle0\">This upgrade gives the bot the ability to fire a bolt of electricity at a target. This upgrade uses coolant packs, and must be reloaded by the owner. The bot cannot reload its coolant pack. The bot has a +2 attack bonus, and using this attack costs 5 CP and has a range of 10’, a Heat rating of 2, and a wattage of 40 kW (2d8+1). The bot can take advantage of any effects coolant packs may give.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.0AMIapsRuoxI0RCi"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705514944418,
+    "modifiedTime": 1705642030111,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "VuqgYELFnfWtVML6",
+  "sort": 0,
+  "_key": "!items!VuqgYELFnfWtVML6"
+}

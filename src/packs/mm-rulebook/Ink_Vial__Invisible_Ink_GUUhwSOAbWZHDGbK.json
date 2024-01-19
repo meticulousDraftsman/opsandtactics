@@ -1,0 +1,113 @@
+{
+  "folder": "i2ouVRQbO4sfLxl4",
+  "name": "Ink Vial, Invisible Ink",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/liquids/quill-ink.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 8,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 5,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "Z9ZYWqKo": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 1 Spells"
+        },
+        "yJkRhysL": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 2 Spells"
+        },
+        "ndzsaxXZ": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 3 Spells"
+        },
+        "QEPPIvPH": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 4 Spells"
+        },
+        "E3uPiU30": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 5 Spells"
+        },
+        "rbZ02EiD": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 6 Spells"
+        },
+        "8GNv3Y4S": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 7 Spells"
+        },
+        "EzihhFf1": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Vial 8 Spells"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Ink is a gel, sol, or solution that contains at least one colorant, such as a dye or pigment, and is used to color a surface to produce an image, text, or design. Ink is used in spellcrafting to produce the necessary runes to create spells. Ink can be purchased in three sizes: Bottles, Pots and Vials. A vial of ink contains 1/8th unit of ink, and is enough to scribe 10 spells or refill a fountain pen 1 time. A pot of ink contains 1 unit of ink, and is enough to scribe 80 spells or refill a fountain pen 8 times. A bottle of ink contains 2 units of ink, and is enough to scribe 160 spells or refill a fountain pen 16 times.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span class=\"fontstyle0\">Invisible ink is ink that disappears after it has been written, allowing for spells that cannot be deciphered as they cannot be read. Because a mage has no point of reference, it grants a -2 SP penalty for all spell pools when writing a spell with it.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.H4B826wsiinhVcsY"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "GUUhwSOAbWZHDGbK",
+  "sort": 0,
+  "_key": "!items!GUUhwSOAbWZHDGbK"
+}

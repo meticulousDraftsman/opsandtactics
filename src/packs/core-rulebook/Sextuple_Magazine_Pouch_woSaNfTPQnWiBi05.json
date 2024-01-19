@@ -1,0 +1,56 @@
+{
+  "folder": "XtyQyZFneXRdogaH",
+  "name": "Sextuple Magazine Pouch",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/bags/knapsack.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\"><strong>(4 slot)</strong> </span></p><p><span class=\"fontstyle2\">This pouch can hold six rifle, machine pistol, or SMG magazines with a capacity of 60 rounds or less, or a shotgun magazine with a capacity of 10 rounds or less. Using magazine pouches negates the necessity to spend CP to reach into a pack to retrieve magazines/speedloaders.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.nKqiZdSkk9I0aeEJ"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642232891,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "woSaNfTPQnWiBi05",
+  "sort": 0,
+  "_key": "!items!woSaNfTPQnWiBi05"
+}

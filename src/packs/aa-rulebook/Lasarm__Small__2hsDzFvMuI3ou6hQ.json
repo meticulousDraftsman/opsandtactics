@@ -146,7 +146,7 @@
         },
         "ammo": 8,
         "cp": {
-          "inherent": null,
+          "inherent": 5,
           "mods": {}
         }
       },
@@ -394,10 +394,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1705315493890,
+    "modifiedTime": 1705316829846,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "ownership": {

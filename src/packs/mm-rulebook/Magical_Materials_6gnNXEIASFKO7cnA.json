@@ -1,0 +1,19 @@
+{
+  "name": "Magical Materials",
+  "sorting": "a",
+  "folder": "B7LqoYZAVywdM8UP",
+  "type": "Item",
+  "_id": "6gnNXEIASFKO7cnA",
+  "sort": 300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705449683953,
+    "modifiedTime": 1705642173608,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!6gnNXEIASFKO7cnA"
+}

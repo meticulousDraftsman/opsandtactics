@@ -1,0 +1,56 @@
+{
+  "folder": "Uo2ZssP82vIzaZB8",
+  "name": "Fatigues, Mild",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/clothing/t-shirt.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 2,
+      "tons": false,
+      "cost": 6,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Called “battle dress uniforms” (or BDUs) in the United States Armed Forces, these are worn by hardened veterans and wannabes alike. They’re rugged, comfortable, and provide lots of pockets. They are also printed in various camouflage patterns: woodland, desert, winter, urban (gray patterned), and black are available. When worn in an appropriate setting, fatigues grant a +2 bonus on Stealth checks</span>.</p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.wnlapjUTSfzTH8u5"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642211990,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "whyQgLxtAiRDhzlX",
+  "sort": 0,
+  "_key": "!items!whyQgLxtAiRDhzlX"
+}

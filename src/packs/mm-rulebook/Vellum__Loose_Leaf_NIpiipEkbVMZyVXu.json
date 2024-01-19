@@ -1,0 +1,64 @@
+{
+  "folder": "xEBl2NDwkxCNl76Z",
+  "name": "Vellum, Loose Leaf",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/papers.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 20,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "q6l47iv6": {
+          "type": "consumable",
+          "value": 50,
+          "max": 50,
+          "available": true,
+          "name": "Sheets"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Vellum is high quality parchment, usually made of calfskin. It is some of the highest quality paper that any mage can get their hands on, with spells being able to be cast a total of 8 times before the paper breaks down. Like parchment, it can be washed and cleaned and reused, if need be. Vellum can be purchases in loose pages of 50.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.J8LifG5xIgJRqJj5"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "NIpiipEkbVMZyVXu",
+  "sort": 0,
+  "_key": "!items!NIpiipEkbVMZyVXu"
+}

@@ -1,0 +1,63 @@
+{
+  "folder": "W8oaLxa2me4NSAIo",
+  "name": "Disposable Ballpoint Pen, Waterproof",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/equipment/pencil.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 6,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "X1VwNRjJ": {
+          "type": "consumable",
+          "value": 2,
+          "max": 2,
+          "available": true,
+          "name": "Pens"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.UxfuRe3pCN6FLT5V"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "0BoTKU1EEo3LodE9",
+  "sort": 0,
+  "_key": "!items!0BoTKU1EEo3LodE9"
+}

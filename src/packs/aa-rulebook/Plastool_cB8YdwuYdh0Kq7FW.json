@@ -1,0 +1,56 @@
+{
+  "folder": "RNCaFGLLQJq1XyyU",
+  "name": "Plastool",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/tools/soldering-iron.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.3,
+      "tons": false,
+      "cost": 25,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A tool-like device with a low powered emitter and plasma core. Unlike plasarms, these are specially built tools that are primarily made for repairs, rapid fabrication in remote locations, and to weld and fuse metal objects, make quick repairs on ships, and a host of other benefits.<br>Plastools use tool emitters, which are special emitters that will not fit on a plasarm. These emitters are interchangeable and can be swapped for 4 CP. Plastools also use coolant packs like plasarms and can take all of the benefits that coolant packs can give. Plastools come with both Flame and Tool Emitters.<br>Plastools have different wattage ratings, which can be increased and decreased by the user. This affects the Heat rating. Decreasing or increasing the wattage rating takes 1 minute. A Plastool must be completely cooled from full Heat in order to change wattage.<br>• </span><span class=\"fontstyle2\"><strong>Flame Emitter</strong> </span><span class=\"fontstyle0\">This resembles a fusion-powered scramjet with a small hollow tank for heating fuel air. Turns the plastool into a cutting tool suitable for destroying locks, carving holes in metal, and a host of other uses. The plastool may also be used as a simple melee weapon in this fashion. The flame emitter runs on heat, and uses 1 Heat every 6 seconds of use. When using this emitter against an object, the emitter ignores 5 points of Hardness, and rolls the damage for the wattage rating.<br>• </span><span class=\"fontstyle2\"><strong>Repair Emitter</strong> </span><span class=\"fontstyle0\">A specialized emitter that that can emulate a vast number of tools. This turns the plastool into a variable toolkit that can be used to Repair using the Craft (Mechanical) and Craft (Structural) skills. The plastool grants its Repair Bonus to these checks for 1 hour per Heat</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p></p><table><tbody><tr><td data-colwidth=\"91\"><p>Repair Bonus</p></td><td data-colwidth=\"56\"><p>Wattage</p></td><td data-colwidth=\"39\"><p>Heat</p></td></tr><tr><td data-colwidth=\"91\"><p>1d4-1</p></td><td data-colwidth=\"56\"><p>10 kW</p></td><td data-colwidth=\"39\"><p>10</p></td></tr><tr><td data-colwidth=\"91\"><p>1d4</p></td><td data-colwidth=\"56\"><p>15 kW</p></td><td data-colwidth=\"39\"><p>8</p></td></tr><tr><td data-colwidth=\"91\"><p>1d4+1</p></td><td data-colwidth=\"56\"><p>25 kW</p></td><td data-colwidth=\"39\"><p>6</p></td></tr><tr><td data-colwidth=\"91\"><p>2d4</p></td><td data-colwidth=\"56\"><p>35 kW</p></td><td data-colwidth=\"39\"><p>4</p></td></tr><tr><td data-colwidth=\"91\"><p>2d4+1</p></td><td data-colwidth=\"56\"><p>40 kW</p></td><td data-colwidth=\"39\"><p>2</p></td></tr></tbody></table>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.GlkQtInlWwOj2cr5"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642026972,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "cB8YdwuYdh0Kq7FW",
+  "sort": 0,
+  "_key": "!items!cB8YdwuYdh0Kq7FW"
+}

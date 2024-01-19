@@ -1,0 +1,56 @@
+{
+  "folder": "dlaDAcEazZK6SmJx",
+  "name": "Infrared Goggles",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/headgear/goggles.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.3,
+      "tons": false,
+      "cost": 40,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Infrared goggles are goggles that use heat signatures to locate targets. They grant the user the ability to see any target that is warmer than their surroundings in darkness, but because of the restricted view, grant a -5 penalty to all sight based perception checks made by someone wearing them. Mounts can be purchased to mount the IRGs to a combat helmet, at +1 WP to the cost.</span> </p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.Gf82WQZpc2N5aUjv"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642220931,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "94rNKIykfySAZEkP",
+  "sort": 0,
+  "_key": "!items!94rNKIykfySAZEkP"
+}

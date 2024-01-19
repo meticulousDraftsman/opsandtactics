@@ -1,0 +1,19 @@
+{
+  "name": "Upgrades",
+  "sorting": "a",
+  "folder": "5tHIheZdeLepiDK3",
+  "type": "Item",
+  "_id": "S4iz83GNUWy5bQuD",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705499515254,
+    "modifiedTime": 1705642030071,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!S4iz83GNUWy5bQuD"
+}

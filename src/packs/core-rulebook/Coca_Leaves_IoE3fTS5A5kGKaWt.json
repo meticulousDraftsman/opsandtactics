@@ -1,0 +1,64 @@
+{
+  "folder": "wkbtac2X1nFvLTnN",
+  "name": "Coca Leaves",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/papers.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "0hBaCbhZ": {
+          "type": "consumable",
+          "value": 16,
+          "max": 16,
+          "available": true,
+          "name": "Leaves"
+        }
+      },
+      "quality": "",
+      "restriction": "R"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p>T<span class=\"fontstyle0\">he leafy part of the coca plant, chewed to reduce tiredness and encourage recuperation. A character may chew a leaf for up to 1 hour. If a character is exhausted, they are now fatigued. If a character is fatigued, it takes half the amount of time to become well rested. Sold in packs of 16 leaves.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.9rIe3iPqXHFPLRFT"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642235244,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "IoE3fTS5A5kGKaWt",
+  "sort": 0,
+  "_key": "!items!IoE3fTS5A5kGKaWt"
+}

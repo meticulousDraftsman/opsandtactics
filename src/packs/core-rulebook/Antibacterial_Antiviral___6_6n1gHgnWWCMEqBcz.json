@@ -1,0 +1,85 @@
+{
+  "folder": "GSwUCfSBrPIrIalV",
+  "name": "Antibacterial/Antiviral, +6",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/medicines.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 12,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "Mo2NLVqh": {
+          "type": "consumable",
+          "value": 3,
+          "max": 3,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {
+      "6iU1P6QN": {
+        "name": "Take Dose",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">An antibacterial is a compound or substance that kills or slows down the growth of bacteria. Antiviral drugs are a class of medication used specifically for treating viral infections. Both are used to combat against diseases, and grant a bonus to Fortitude Saving Throws toward disease. The cost of the drug is dependent on the actual Fortitude Saving Throw of the disease. The price listed is for three doses. Antibacterials and Antivirals can also be used in conjunction with the Treat Injury skill when Restoring Hit Points. When using the Restore Hit Points action from the Treat Injury Skill, Antibacterials and Antivirals grants a bonus to recovered HP equal to 3 times the bonus of the selected medicine.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.QI6TVBhk3NTr577j"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642229370,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "6n1gHgnWWCMEqBcz",
+  "sort": 0,
+  "_key": "!items!6n1gHgnWWCMEqBcz"
+}

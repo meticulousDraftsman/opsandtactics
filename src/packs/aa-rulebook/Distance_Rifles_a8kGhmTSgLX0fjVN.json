@@ -1,0 +1,19 @@
+{
+  "name": "Distance Rifles",
+  "sorting": "a",
+  "folder": "fkWQwvfdJfrFlh0K",
+  "type": "Item",
+  "_id": "a8kGhmTSgLX0fjVN",
+  "sort": 400000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705349326231,
+    "modifiedTime": 1705641915014,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!a8kGhmTSgLX0fjVN"
+}

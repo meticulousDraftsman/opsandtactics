@@ -1,0 +1,19 @@
+{
+  "name": "SMGs",
+  "sorting": "a",
+  "folder": "fkWQwvfdJfrFlh0K",
+  "type": "Item",
+  "_id": "nZw2ugkgthvln0Nh",
+  "sort": 500000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705349310134,
+    "modifiedTime": 1705641915014,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!nZw2ugkgthvln0Nh"
+}

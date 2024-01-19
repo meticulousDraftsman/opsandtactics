@@ -1,0 +1,313 @@
+{
+  "name": "M15T Integral Shotgun",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/abstract/gunshot.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><h3>Preset Action (PA)</h3><p>Preset Action, the action is at half-cock giving a light trigger pull. Preset Action firearms are considered semi-automatic firearms. All single shot attacks have a +1 attack bonus.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "external",
+      "heatBase": 0
+    },
+    "range": "15ft",
+    "crit": 16,
+    "weaponMods": {
+      "g2YOf9Yr": {
+        "name": "Fortified Frame",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      },
+      "O5mQLeJa": {
+        "name": "Standard Laser (Single)",
+        "check": "+1",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Attack bonus to single shots within first range increment, cannot combine with other sight attack bonuses, Permanent"
+      },
+      "7TOd8OaG": {
+        "name": "Standard Laser (Potshot)",
+        "check": "+2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Attack bonus to potshots within first range increment, cannot combine with other sight attack bonuses, Permanent"
+      },
+      "RZlLSHim": {
+        "name": "Red Dot Sight",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Permanent, Placeholder"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "1",
+          "ability": "mrk",
+          "mods": {
+            "O5mQLeJa": {
+              "active": true
+            },
+            "7TOd8OaG": {
+              "active": false
+            },
+            "g2YOf9Yr": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-5",
+          "ability": "mrk",
+          "mods": {
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": true
+            },
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "RZlLSHim": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            },
+            "RZlLSHim": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            },
+            "RZlLSHim": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            },
+            "RZlLSHim": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "g2YOf9Yr": {
+              "active": false
+            },
+            "O5mQLeJa": {
+              "active": false
+            },
+            "7TOd8OaG": {
+              "active": false
+            },
+            "RZlLSHim": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": null,
+      "cost": null,
+      "quality": "",
+      "restriction": "R",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.JgwaJSHSMz1gUi3R"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1705641915081,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "hSRl2pX3fAff9oJE",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "DQJArbyIPSBqxJjT",
+  "sort": 0,
+  "_key": "!items!DQJArbyIPSBqxJjT"
+}

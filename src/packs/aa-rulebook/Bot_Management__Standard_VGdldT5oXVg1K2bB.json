@@ -1,0 +1,56 @@
+{
+  "folder": "pE1z0Kx42geXIb66",
+  "name": "Bot Management, Standard",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/data/compact-disc.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0,
+      "tons": false,
+      "cost": 7,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Software modules are programs installed that give the user of a computer a bonus to various things, dependent on what they are programmed to do.<br></span></p><p><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\">Standard</strong> A standard module contains most of the core features that most would find useful, leaving out only a few specialized programs. This module provides a +3 to all bonuses listed in the module description unless specified otherwise and takes up 2 storage slots.</span></p><p></p><p><span style=\"font-family: Roboto, sans-serif\">This module allows the management of spiderbots, beebots, and hornetbots, to control them, as well as interact with any built in hardware that they possess, such as cameras, microphones, or other sensory hardware pieces. This module grants the user the ability to send the bot to a specific geolocation using the GPS, or to a reference point using the bot’s camera. The Standard module allows for the control of 4 bots</span><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.9gihbkiNiMuNYXOq"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642063328,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "VGdldT5oXVg1K2bB",
+  "sort": 0,
+  "_key": "!items!VGdldT5oXVg1K2bB"
+}

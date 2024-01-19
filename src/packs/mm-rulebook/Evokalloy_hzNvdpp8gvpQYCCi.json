@@ -1,0 +1,56 @@
+{
+  "folder": "6gnNXEIASFKO7cnA",
+  "name": "Evokalloy",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/metal-bar.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 5.3,
+      "tons": false,
+      "cost": 120,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Magical materials are materials that act counter to standard material behavior, and have properties that are beneficial and desired. When upgrading or building a weapon out of a magical material, the contact, the handle, or both, may be built out of the material, so long as the contact or handle is made or can be made from a comparable material. The price increase is per contact, or handle; making a weapon out of both doubles this cost. Nonballistic ammunition can also be made of these materials, the cost of this being for one full set of what is sold (for example, Arrows are sold in sets of 20 arrows). The cost is for a single area. When upgrading materials on a weapon, no upgrade points are used and the weapon retains it’s full prior upgrades that were on it previously.</span></p><p>The WP cost and weight listed in the item's statistics is the cost and weight for a Medium sized ingot of the material.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span style=\"font-family: Roboto, sans-serif\">Elemetals and Evokalloys Elemetals are base metals that are attuned to one of the five evocational elements. They’re simply too hard and brittle to be used on their own and are often alloyed with iron and carbon. Firearm barrels, melee weapons with metal contacts, and arrow and crossbow heads can all be made with Evokalloys, imparting the characteristics of the metal on the ammunition or the weapon. Evokalloys come in two forms, standard and high quality. Standard quality alloys are undetectable at first glance, only when tapped or struck will their energy be known. High quality alloys have waves of either blue, red, yellow, green, or white through the metal, and are quite noticeable even at a cursory glance. Melee weapons made with standard quality Evokalloys have a 400% cost increase per area, and grant a +1 cold, fire, concussive, acid, or electric damage bonus. Melee weapons made with high quality Evokalloys have a 700% cost increase per area, and grant a +3 cold, fire, concussive, acid, or electric damage bonus. Firearm barrels made from standard quality Evokalloys cost 100% of the firearm’s cost and grant a +1 cold, fire, concussive, acid, or electric damage bonus to any round fired through that barrel, and firearm barrels made from high quality Evokalloys cost 150% of the firearm’s cost and grant a +3 cold, fire, concussive, acid, or electric damage bonus to any round fired through that barrel.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.WPZQH0Qib0iFVRBV"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642173567,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "hzNvdpp8gvpQYCCi",
+  "sort": 0,
+  "_key": "!items!hzNvdpp8gvpQYCCi"
+}

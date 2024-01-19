@@ -1,0 +1,64 @@
+{
+  "folder": "JsOBrCMIPNynLgTa",
+  "name": "Formatting Ink, Felt Pen",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/equipment/paint-brush.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "P4Nz8SNS": {
+          "type": "consumable",
+          "value": 8,
+          "max": 8,
+          "available": true,
+          "name": "Pages"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This is a brightly colored, fluorescent and chemiluminescent ink that is used in the creation of formatted paper. It is brightly colored to make it clear even at a glance, even under black-light or in the dark. It comes in felt tip pins and ink vials, bottles and pots. Any character with more than 5 ranks in a single spellschool can craft their own formatting paper. One felt pin can format 8 pages. It takes 5 minutes to format a single page.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.htnMiK754lJ8krX9"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "VG0U0CZvfWzy5XPD",
+  "sort": 0,
+  "_key": "!items!VG0U0CZvfWzy5XPD"
+}

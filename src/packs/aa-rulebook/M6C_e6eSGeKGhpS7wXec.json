@@ -1,0 +1,214 @@
+{
+  "name": "M6C",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/guns/glock.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><p>F B O 1T</p><h3>Preset Action (PA)</h3><p>Preset Action, the action is at half-cock giving a light trigger pull. Preset Action firearms are considered semi-automatic firearms. All single shot attacks have a +1 attack bonus.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "external",
+      "heatBase": 0
+    },
+    "range": "40ft",
+    "crit": 16,
+    "weaponMods": {
+      "1Z0WgMqe": {
+        "name": "Tactical Flashlight",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Placeholder, Permanent"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "1",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-5",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      },
+      "lla0OcKp": {
+        "name": "Double Tap",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -3,
+          "mods": {},
+          "active": true,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 1,
+            "bar": 3,
+            "more": 2,
+            "per": 3,
+            "scale": 1
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 2.5,
+      "cost": 30,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": "-1 Stealth to hide weapon"
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.FmqDq1ola8sp0EOt"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1705641915081,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "hSRl2pX3fAff9oJE",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "e6eSGeKGhpS7wXec",
+  "sort": 0,
+  "_key": "!items!e6eSGeKGhpS7wXec"
+}

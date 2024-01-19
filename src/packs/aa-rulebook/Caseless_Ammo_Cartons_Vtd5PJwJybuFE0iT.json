@@ -1,0 +1,19 @@
+{
+  "name": "Caseless Ammo Cartons",
+  "sorting": "a",
+  "folder": "8SI4Tf2FTJXJwI6X",
+  "type": "Item",
+  "_id": "Vtd5PJwJybuFE0iT",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705360258407,
+    "modifiedTime": 1705641965668,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!Vtd5PJwJybuFE0iT"
+}

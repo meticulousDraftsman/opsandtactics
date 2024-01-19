@@ -1,0 +1,19 @@
+{
+  "name": "Medicines and Narcotics",
+  "sorting": "a",
+  "folder": "eVWJQQcCXuOIccOo",
+  "type": "Item",
+  "_id": "ObeHGdFsbS4xkkCt",
+  "sort": 600000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705497575595,
+    "modifiedTime": 1705642044380,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!ObeHGdFsbS4xkkCt"
+}

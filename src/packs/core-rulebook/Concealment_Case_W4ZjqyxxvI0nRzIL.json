@@ -1,0 +1,56 @@
+{
+  "folder": "zX1ToeUGUbt5mz03",
+  "name": "Concealment Case",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/bags/gym-bag.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 4,
+      "tons": false,
+      "cost": 5,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": "+10 to hide large or smaller weapon"
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A case disguised as an inconspicuous object, such as a guitar case, violin case or sports bag, that has a secret compartment for storing a Large or smaller weapon. A concealment case can comfortably hold a single Large weapon, two Medium weapons, four Small weapons, eight Tiny weapons, or sixteen Diminutive weapons. The case grants a +10 bonus to Stealth checks when hiding a Large or smaller weapon within it</span>.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.2g6ycfEJM1urH0qu"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "W4ZjqyxxvI0nRzIL",
+  "sort": 0,
+  "_key": "!items!W4ZjqyxxvI0nRzIL"
+}

@@ -1,0 +1,71 @@
+{
+  "folder": "W8oaLxa2me4NSAIo",
+  "name": "Crayons",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/containers/boxes/cardboard-box-closed.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "2ViYwVBd": {
+          "type": "consumable",
+          "value": 240,
+          "max": 240,
+          "available": true,
+          "name": "Crayons"
+        },
+        "frtLJmbD": {
+          "type": "consumable",
+          "value": 8,
+          "max": 8,
+          "available": true,
+          "name": "Crayon Uses"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Crayons are sticks of colored wax, used for writing and artwork. They are often given to young children to color books, but have been used by professional artist as well. Crayons are useful for writing on hard, glossy surfaces such as glass, but they are very sensitive to heat, and will melt if exposed to heat even briefly. A crayon will last for 8 spells. Crayons come in a box of 240 crayons.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.swJE1yNYgzkuguWx"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "C4Wmn0q59SooFRPN",
+  "sort": 0,
+  "_key": "!items!C4Wmn0q59SooFRPN"
+}

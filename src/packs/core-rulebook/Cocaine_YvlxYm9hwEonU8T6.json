@@ -1,0 +1,56 @@
+{
+  "folder": "wkbtac2X1nFvLTnN",
+  "name": "Cocaine",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/powder.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": 80,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "I"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Cocaine is the processed version of the coca plant, used as a strong stimulant. It is primarily used as a recreational drug. A character may ingest, inject, or inhale one dose of cocaine (0.01 lb) to gain 5 additional Combat Points every round for 1 minute. The character may ingest, inject, or inhale subsequent doses to lengthen the time this bonus lasts by 1 minute, but it does not grant any additional Combat Points. After each dose is ingested, injected, or inhaled, a character immediately makes a Fortitude Saving Throw [TN25]. If a character fails this Saving Throw, they take CHP damage equal to the Combat Point bonus they received. The TN increases by 5 for each dose of Cocaine taken within 6 weeks of the first dose. There are 8 doses in 0.1 lbs of cocaine. Any amount less than 8 doses is considered weightless</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.SmFgnIl2R7S2M4Nw"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642235244,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "YvlxYm9hwEonU8T6",
+  "sort": 0,
+  "_key": "!items!YvlxYm9hwEonU8T6"
+}

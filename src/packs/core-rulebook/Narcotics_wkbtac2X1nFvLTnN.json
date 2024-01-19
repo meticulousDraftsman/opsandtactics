@@ -1,0 +1,19 @@
+{
+  "name": "Narcotics",
+  "sorting": "a",
+  "folder": "E6cup5QS5keFGFx2",
+  "type": "Item",
+  "_id": "wkbtac2X1nFvLTnN",
+  "sort": 900000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704437460128,
+    "modifiedTime": 1705516335829,
+    "lastModifiedBy": "wpVp6AIxxpFGCgYs"
+  },
+  "_key": "!folders!wkbtac2X1nFvLTnN"
+}

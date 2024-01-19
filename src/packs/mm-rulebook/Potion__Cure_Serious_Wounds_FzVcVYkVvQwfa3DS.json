@@ -1,0 +1,122 @@
+{
+  "folder": "YTjVhPGAAObeXGJB",
+  "name": "Potion, Cure Serious Wounds",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/remedy.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.4,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "zOpSq1vB": {
+          "type": "consumable",
+          "value": 2,
+          "max": 2,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {
+      "Nt1sasOF": {
+        "name": "Drink Potion",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "2d4",
+          "ability": "",
+          "flavor": "XHP Heal"
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      },
+      "2GxSciC2": {
+        "name": "Effect 2",
+        "active": true,
+        "check": {
+          "type": "noneAttack",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "1d4",
+          "ability": "",
+          "flavor": "CHP Heal"
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": null
+        }
+      },
+      "ESumbvpS": {
+        "name": "Effect 3",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "-2 Bleed Dice"
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": null
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">These potions are premade potions, crafted for widespread consumption. They are often best enjoyed chilled. All potions effects last for 2 rounds.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.8RwQuJjpOPGVrT9E"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642186054,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "FzVcVYkVvQwfa3DS",
+  "sort": 0,
+  "_key": "!items!FzVcVYkVvQwfa3DS"
+}

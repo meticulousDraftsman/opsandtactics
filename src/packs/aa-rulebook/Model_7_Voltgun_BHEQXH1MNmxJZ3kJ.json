@@ -1,0 +1,157 @@
+{
+  "name": "Model 7 Voltgun",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/abstract/lightning-branches.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><p>F E</p><h3>Electric Arms</h3><p>Electric arms, called ‘‘Ells’’, ‘‘Volters’’, or ‘‘Elarms’’, are an off- shoot of plasma arms, using the same kind of technology to power an electrical resonant transformer, that produces high voltage AC electricity, which is aimed in a loose direction to electrocute and severely burn targets within a specified area. Electric arms have the benefit of also defeating traditional style armor, with the added benefit of not being able to be deflected by psiblades, as well as striking a wider target instead of specifically aiming at a particular target. Like plasarms, the plasma energy core they have has the downside of generating a significant amount of heat when fired and must be cooled efficiently and constantly. Electric arms generate far more energy than their plasma counterparts, requiring more coolant. Electric arms are extremely close range, maxing out their intended range very quickly.</p><p>Elarms use the same coolant technology that plasarms use, and suffer the exact same limitations as plasarms in this manner. The coolant packs are interchangeable with any electric weapon, and can be reused if they are allowed to cool for 24 hours, or 4 hours, if they are submerged in a specially made chiller. An elarm’s number of shots is dependent on its Heat, which is how much heat it can transfer into its coolant pack before it becomes too hot to use. Any elarm that generates enough heat to meet or exceed its Heat, immediately shuts down unless a fresh coolant pack is put into the elarm, similar to how a magazine works in a firearm.</p><p>Electric weapons, like plasma weapons also are built differently from standard firearms, also lacking barrels instead possessing emitters. Electric weapons don’t have stock upgrades, as the stock is built into the elarm. This stock is unable to take any upgrades. An elarm can accept two emitter upgrades and three frame upgrades. Elarms fit and use the same kinds of holsters, slings, and other outward tactical equipment.</p><p>Because they are sensitive pieces of technology, as opposed to firearm counterparts, they can not be used to pistol whip or buttstroke and any attempt to do so will immediately cause the elarm to become damaged and require repairs (Complex, TN25) , using the Craft (Electronics) skill. Any damage to the weapon will also immediately cause the elarm to become damaged and require repairs (Complex, TN25), using the Craft (Electronics) skill.</p><p>Elarms require the Personal Plasmas Proficiency feat to use without a −4 attack penalty and to change out coolant packs.</p><p>All elarms are electric damage weapons and have a critical threat range of 16-18, unless otherwise noted.</p><p>Elarms function like flamethrowers, in that they have a maximum range, and target an area instead of a singular target. The standard emitter fires in a 5-foot wide arc with a range as long as the range of the elarm, that deals the wattage damage in electricity to all creatures and objects in its path. No attack roll is necessary. Any creature caught in the line of fire can make a Reflex Saving Throw [TN25] to take half damage.</p><p>Elarms may not perform potshot attacks.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "coolant",
+      "source": "",
+      "insideOut": "external",
+      "heatBase": 7
+    },
+    "range": "20ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "5ft line as long as range",
+          "type": "noneAttack",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "Reflex Saving Throw [TN25] for half",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {},
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 6,
+          "mods": {}
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {},
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        }
+      },
+      "vPAsnHsU": {
+        "name": "Replace Coolant Pack",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "noChatAttack",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 4,
+          "mods": {}
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1.1,
+      "cost": 33,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "3d8",
+    "flavorBase": "Electricity"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.sxU8p9JapjIZ10iL"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1705642053287,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "folder": "bPCsnUDX0JhCzwms",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "BHEQXH1MNmxJZ3kJ",
+  "sort": 0,
+  "_key": "!items!BHEQXH1MNmxJZ3kJ"
+}

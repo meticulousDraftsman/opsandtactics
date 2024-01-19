@@ -1,0 +1,19 @@
+{
+  "name": "Drinks",
+  "sorting": "a",
+  "folder": "5kXbDTNhOSQ0jDVw",
+  "type": "Item",
+  "_id": "iiHnUobrw44KhQ61",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705438489752,
+    "modifiedTime": 1705642223383,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!iiHnUobrw44KhQ61"
+}

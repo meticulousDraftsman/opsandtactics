@@ -1,0 +1,85 @@
+{
+  "folder": "ObeHGdFsbS4xkkCt",
+  "name": "Boost",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/medical/syringe-full.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "XqKlTrGw": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": "L"
+    },
+    "actions": {
+      "PFYvbgAi": {
+        "name": "New Action",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "TN 5 FORT Save vs CHP Damage"
+        },
+        "effect": {
+          "inherent": "1d3",
+          "ability": "",
+          "flavor": "CP Gained/CHP Damage"
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": null
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A thick grey liquid that is used by soldiers, adventurers, and criminals to increase their combat effectiveness for a short amount of time. It is a diluted version of Juice that is marketed as a safer alternative.</span><br><span class=\"fontstyle0\"><br>A character may inject themselves or be injected with one dose of Boost to gain 1d3 additional CP every round for 1 minute. The character may inject subsequent doses to lengthen the time this bonus lasts by 1 minute, but it does not grant any additional Combat Points. After each dose is injected, a character immediately makes a Fortitude Saving Throw [TN5]. If a character fails this Saving Throw they take CHP damage equal to the Combat Point bonus they received. The TN increases by 5 for each dose of Boost or Juice taken within 3 weeks of the first dose. Boost is packaged in single dose ampoules.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.U61b0DH77JAfAJKw"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642044326,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "pJoq08P86PZAyYa2",
+  "sort": 0,
+  "_key": "!items!pJoq08P86PZAyYa2"
+}

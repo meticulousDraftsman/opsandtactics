@@ -1,0 +1,64 @@
+{
+  "folder": "jhwXP9HPr5gU3AKq",
+  "name": "Standard Fountain Pen, Medium",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/other/fountain-pen.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 9,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "gMMIx7d3": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "name": "Reservoir"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Often expensive, these upscale fountain pens provide a more personalized touch whether scribing spells, or writing notes or letters. A fountain pen has three parts that can each be customized in various ways: The Nib, which is the tip of the pen used to write with, the Body, which is the external shell of the pen which holds the other parts together, and the Reservoir, which is the part of the pen which actually holds the ink.</span> </p><p><span class=\"fontstyle0\">These pens are the standard among serious fountain pen users. Featuring a hardwood pen body, a fine or medium steel nib, and a piston cartridge, this versatile pen is ready for most writing tasks.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><strong>Nib: </strong><span class=\"fontstyle0\">A medium nib creates a deeply colored line, but uses more ink than a fine nib. A medium nib can scribe only 70% as many Spells per fill as a fine nib, but gains +1 additional SP when using Spell Ink of the appropriate school, and a -4 additional penalty when using spell ink of an inappropriate school.</span></p><p><strong>Nib Material: </strong><span style=\"font-family: Roboto, sans-serif\">Steel Nibs are the standard nib used in most modern entry level fountain pens, and have no special rules regarding their use other than their width.</span></p><p><strong>Body: </strong><span class=\"fontstyle0\">Available in many varieties, from oak to maple, these hardwood pens are the standard pen body material.</span></p><p><strong>Reservoir: </strong><span class=\"fontstyle0\">This Pen Cartridge holds enough ink to scribe up to 10 spells before needing to be refilled. The pen is refilled by suction caused by it’s internal piston.</span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.zXv5RiKBPGlRcpmj"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "JgSFDkEpxO2g0VrW",
+  "sort": 0,
+  "_key": "!items!JgSFDkEpxO2g0VrW"
+}

@@ -1,0 +1,127 @@
+{
+  "folder": "xEBl2NDwkxCNl76Z",
+  "name": "Wood Pulp Paper, Book",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/objects/white-book.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 10,
+        "available": false
+      },
+      "size": "small",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "mWvSBZ1y": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 1, Sheets"
+        },
+        "McNEVC17": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 2, Sheets"
+        },
+        "2Qhjbxz9": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 3, Sheets"
+        },
+        "GRtb1xmb": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 4, Sheets"
+        },
+        "BayRiMIa": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 5, Sheets"
+        },
+        "d1Bl9Aaf": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 6, Sheets"
+        },
+        "IY2dsmyM": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 7, Sheets"
+        },
+        "wVrrbk9W": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 8, Sheets"
+        },
+        "e9BCNO7q": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 9, Sheets"
+        },
+        "Zh1DRs45": {
+          "type": "consumable",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "name": "Book 10, Sheets"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">This type of paper is what most people think of when talking about paper, and encompasses paper such as notebook paper, bulk printer paper, and your standard legal tablet paper. While cheap and plentiful, it is extremely fragile, with a single point of damage to the paper, or being dropped in water or other damp material will render both the paper and the spell written on it completely useless. They are also one time use, as the energy from the spell releasing ignites and burns the paper. This paper comes in 1,000 page reams, or in 10 packs of 100 page spiral bound or sewn bound books.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.Le8NNcX6i1MgSStJ"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "qAA8nnzSIqpwaYiO",
+  "sort": 0,
+  "_key": "!items!qAA8nnzSIqpwaYiO"
+}

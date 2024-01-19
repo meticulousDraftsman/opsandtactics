@@ -1,0 +1,56 @@
+{
+  "folder": "Uo2ZssP82vIzaZB8",
+  "name": "Uniform",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/wearables/armor/chain-mail.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "medium",
+      "weight": 3,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">From the cable guy to a senior Air Force officer, people on the job tend to wear uniforms, making such clothing an essential part of some disguises since a uniform inclines people to trust the wearer. Wearing a uniform grants a +2 circumstance bonus on all applicable Presence checks. The price of the uniform is based on what particular uniform a character is trying to acquire and is set by the GM</span>.</p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.Y629sQ2A4RaUVeS2"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642211990,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ur3J5tO20OlqJ2tH",
+  "sort": 0,
+  "_key": "!items!ur3J5tO20OlqJ2tH"
+}

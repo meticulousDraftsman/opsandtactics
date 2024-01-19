@@ -1,0 +1,56 @@
+{
+  "folder": "zX1ToeUGUbt5mz03",
+  "name": "Double Magazine Clip",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/tools/screwdriver.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Sometimes referred to as a “jungle-style magazine”, this accessory binds two machine pistol, rifle, SMG, machine gun, or shotgun box magazines together for quicker reloading, allowing the user to perform one reload at 1 less Combat Point, and negates the need to reach into a pack to retrieve the stored magazine. The character must be proficient in the weapon he is using in order to take advantage of this accessory. A character may also duct tape two magazines together for the same effect but the weapon gets a -5 penalty to Stealth checks to hide the weapon when using this method. The clip must be purchased for a specific type of magazine, and is not compatible with any other magazine. The clip can not hold two magazines that have a capacity of more than 50 cased rounds, or 10 shelled rounds</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.GwIiIgH3SlITmrEE"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "F6wGniYG5mYdJLxs",
+  "sort": 0,
+  "_key": "!items!F6wGniYG5mYdJLxs"
+}

@@ -1,0 +1,56 @@
+{
+  "folder": "jhwXP9HPr5gU3AKq",
+  "name": "Starter Custom Pen, Fine",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/weapons/other/fountain-pen.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Often expensive, these upscale fountain pens provide a more personalized touch whether scribing spells, or writing notes or letters. A fountain pen has three parts that can each be customized in various ways: The Nib, which is the tip of the pen used to write with, the Body, which is the external shell of the pen which holds the other parts together, and the Reservoir, which is the part of the pen which actually holds the ink.</span></p><p><span class=\"fontstyle0\">Sold cheaply in many office stores, this fountain pen has a plastic or aluminum body, a Fine or Xtra Fine Steel Nib and comes with a package of disposable ink cartridges.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><strong>Nib: </strong><span class=\"fontstyle0\">A fine nib can scribe the standard number of spells per unit of ink, and applies the standard bonuses from any ink used.</span></p><p><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\">Nib Material: </strong></span><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">Steel Nibs are the standard nib used in most modern entry level fountain pens, and have no special rules regarding their use other than their width.</span></span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\">Body: </strong></span><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">Available in a wide range of colors and styles, even some that glow in the dark, these pen bodies are great for people who like to have multiple different pens for different purposes, whether it’s for note taking, calligraphy, or color coding of pens with different kinds of ink. Plastic and Aluminum pen bodies are not suitable as styli.</span></span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\"><strong style=\"box-sizing: border-box; user-select: text;\">Reservoir: </strong></span><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">Disposable cartridges hold enough ink to scribe up to 10 spells. Unlike piston cartridges, they can’t be refilled and have to be thrown away when empty. Despite this, they’re mass produced and usually economical, though ink selection is more limited</span></span></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.xF3e1CpaVyfi30UV"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642183909,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "aBTGylQE4dj2R09o",
+  "sort": 0,
+  "_key": "!items!aBTGylQE4dj2R09o"
+}

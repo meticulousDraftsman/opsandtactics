@@ -1,0 +1,234 @@
+{
+  "name": "Combat Sheath, Small",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/archaic/bo.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "unlimited",
+      "insideOut": "both",
+      "loaded": {},
+      "heatBase": 0
+    },
+    "range": "5ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "O1TQAmqs": {
+        "name": "Light",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "foc",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "-3",
+          "ability": "pow",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 2,
+          "mods": {}
+        }
+      },
+      "fD6Lg61p": {
+        "name": "Standard",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "foc",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "pow",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 3,
+          "mods": {}
+        }
+      },
+      "vn8u8l2c": {
+        "name": "Heavy",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "foc",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "pow",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 1,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      },
+      "hKb8WHXH": {
+        "name": "Full",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "melee",
+          "ammo": true,
+          "mods": {},
+          "inherent": "",
+          "ability": "foc",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {},
+          "inherent": "+4",
+          "ability": "pow",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": 2,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": true,
+          "mods": {}
+        },
+        "ammo": null,
+        "cp": {
+          "inherent": 10,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 1.1,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "damageBase": "1d4",
+    "flavorBase": "Bludgeoning",
+    "importFilter": "",
+    "importMod": "",
+    "description": "<p><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">A sheath is a device used to restrict the movement of a melee weapon, most commonly located where it can easily withdrawn for immediate use, and kept out of the way when not being used. Sheaths are generally available for all large or smaller melee weapons. A character can not have more than 5 belt devices on their belt at one time, including holsters, holders, caddys, and sheaths.</span></span></p><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span class=\"fontstyle0\" style=\"box-sizing: border-box; user-select: text;\"><span style=\"font-family: Roboto, sans-serif\">This sheath is reinforced with a steel lining on the outside of the sheath, allowing it to be used as a weapon, if need be. Sheaths are considered one size smaller than weapons they carry. The damage of a combat sheath is determined by the size of the weapon it carries. Sheaths are considered simple weapons for the purpose of feats and proficiency.</span></span></p>"
+  },
+  "effects": [],
+  "folder": "H5QGlQCZNdhpsPD4",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.gIwtVd7aKBEFIACz"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1699679376520,
+    "modifiedTime": 1705642241856,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "iNV2OsNOAbC3Fwik",
+  "sort": 0,
+  "_key": "!items!iNV2OsNOAbC3Fwik"
+}

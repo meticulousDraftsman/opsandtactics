@@ -1,0 +1,56 @@
+{
+  "folder": "C5qJr4TOMX49dSYL",
+  "name": "Gunsmithing Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/tools/screwdriver.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 20,
+      "tons": false,
+      "cost": 20,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">Most gunsmiths assemble their toolkits gradually as their skills grow. This kit represents a complete collection typical for an experienced gunsmith, including watchmaker’s screwdrivers, metal files, clamps, punches, a small hammer, and a micrometer calipers. </span></p><p><span class=\"fontstyle0\">It also contains a firearm cleaning kit with brushes and rods suitable for all calibers and barrel lengths. </span></p><p><span class=\"fontstyle0\">A gunsmithing kit grants a +5 equipment bonus when repairing a firearm, building firearms, or when performing upgrades on any firearm.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.ByOIm21njL9u7k5I"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642237406,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "uQO7Z4NBfGD9A1wE",
+  "sort": 0,
+  "_key": "!items!uQO7Z4NBfGD9A1wE"
+}

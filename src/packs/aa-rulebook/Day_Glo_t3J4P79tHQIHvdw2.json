@@ -1,0 +1,85 @@
+{
+  "folder": "ObeHGdFsbS4xkkCt",
+  "name": "Day-Glo",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/supplies/chemical-drop.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "NxXT7ABJ": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Doses"
+        }
+      },
+      "quality": "",
+      "restriction": "I"
+    },
+    "actions": {
+      "I7FoP9Cr": {
+        "name": "Use Dose",
+        "active": true,
+        "check": {
+          "type": "noneUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": "TN 5 FORT vs Blindness"
+        },
+        "effect": {
+          "inherent": "1d4+1",
+          "ability": "",
+          "flavor": "Minutes Darkvision"
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 3
+        }
+      }
+    },
+    "range": "5ft",
+    "magazine": {
+      "type": "consumable",
+      "source": ""
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">DGBX (more commonly known as Day-glo) is an optical drug that is one of the byproducts of making Moonbeam, that is taken by dropping the liquid directly into the eyes.<br></span></p><p><span class=\"fontstyle0\">A character may use one eyedropper, granting Darkvision for 1d4+1 minutes. During this effect, the character is Blinded in normal light if they are not wearing welding goggles, sunglasses, or any other type of equipment that dims lighting until they are no longer in normal light. A character that is hit by a stun grenade, illusionary effect, or anything that would require a roll to resist blindness or cause blindness is immediately Blinded for the duration of the effect, regardless of any protective equipment. After 1 use a character must make a Fortitude Saving Throw [TN5] or go blind permanently. This TN increases by 5 for each dose of Day-glo taken within 3 weeks of the first dose. Day-glo is packaged in single-use eyedropper bottles.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.vEIvDRsk43xsTaCV"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642044326,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "t3J4P79tHQIHvdw2",
+  "sort": 0,
+  "_key": "!items!t3J4P79tHQIHvdw2"
+}

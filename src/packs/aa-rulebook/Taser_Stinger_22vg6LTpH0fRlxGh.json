@@ -1,0 +1,116 @@
+{
+  "folder": "S4iz83GNUWy5bQuD",
+  "name": "Taser Stinger",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/other/lightning-arc.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "type": "consumable",
+      "insideOut": "both",
+      "loaded": {},
+      "heatBase": 0,
+      "source": ""
+    },
+    "range": "10ft",
+    "crit": 16,
+    "errorBase": 0,
+    "weaponMods": {},
+    "actions": {
+      "UEsQO1yy": {
+        "name": "Shoot",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": false,
+          "mods": {},
+          "inherent": "2",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": false,
+          "mods": {},
+          "inherent": "1d6",
+          "ability": "",
+          "flavor": "TN 15 FORT Save vs Paralysis"
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "ammo": false,
+          "mods": {}
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 12,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "16LCDB6z": {
+          "type": "consumable",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "name": "Taser Cartridge"
+        }
+      },
+      "quality": "",
+      "restriction": "L"
+    },
+    "damageBase": "",
+    "flavorBase": "",
+    "importFilter": "",
+    "importMod": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.0sfK4d9qgvJG7pzB"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705514798474,
+    "modifiedTime": 1705642030111,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "22vg6LTpH0fRlxGh",
+  "sort": 0,
+  "_key": "!items!22vg6LTpH0fRlxGh"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "MGs",
+  "sorting": "a",
+  "folder": "fkWQwvfdJfrFlh0K",
+  "type": "Item",
+  "_id": "t43UHdNDsoCyQarS",
+  "sort": 300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1705349316655,
+    "modifiedTime": 1705641915014,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!t43UHdNDsoCyQarS"
+}

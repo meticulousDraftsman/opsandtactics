@@ -1,0 +1,56 @@
+{
+  "folder": "C5qJr4TOMX49dSYL",
+  "name": "Forgery Kit",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/equipment/paint-brush.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "gargantuan",
+      "weight": 120,
+      "tons": false,
+      "cost": 20,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p><span class=\"fontstyle0\">A forgery kit is used in the finer points of creating fake documents, for creating borders, stamps, and papers. It includes a fine-edge knife set, ink pads with various inks, blank stamps, colored pens, paint and fine brushes, stencils, a magnifying glass, a disposable camera, a scale, calipers, tweezers, fine-grain sandpaper, a document scanner, a laminator, a foil press, a shrink wrapper, a table arm lamp with magnifying glass, holographic film, currency/document manual, a display case, a personal printing press, and casting supplies and various molding materials (plaster, plastic, etc.). It grants a +6 equipment bonus while creating forgeries.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.NTOgca8gdxkSGTRu"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1704705890458,
+    "modifiedTime": 1705642237406,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "KUipfuD1BNHqpgM7",
+  "sort": 0,
+  "_key": "!items!KUipfuD1BNHqpgM7"
+}

@@ -32,6 +32,7 @@ The following icons are by Delapouite under CC BY 3.0
 ==============================================
 /svg/characters/astronaut-helmet.svg - "Astronaut helmet"
 /svg/characters/bandit.svg - "Bandit"
+/svg/characters/cctv-camera.svg - "CCTV Camera"
 /svg/characters/hoodie.svg - "Hoodie"
 /svg/characters/mustache.svg - "Mustache"
 /svg/characters/police-officer-head.svg - "Police officer head"
@@ -95,8 +96,10 @@ The following icons are by Delapouite under CC BY 3.0
 /containers/liquids/water-gallon.webp - "Water gallon"
 
 /gear/equipment/binoculars.webp - "Binoculars"
+/gear/equipment/camera.webp - "Photo camera"
 /gear/equipment/flashlight.webp - "Flashlight"
 /gear/equipment/gas-stove.webp - "Gas Stove"
+/gear/equipment/handcuffs.webp - "Handcuffs"
 /gear/equipment/laptop.webp - "Laptop"
 /gear/equipment/lighter.webp - "Lighter"
 /gear/equipment/rope-coil.webp - "Rope coil"
@@ -106,20 +109,24 @@ The following icons are by Delapouite under CC BY 3.0
 /gear/medical/cigar.webp - "Cigar"
 /gear/medical/cigarette.webp - "Cigarette"
 /gear/medical/first-aid-kit.webp - "First aid kit"
+/gear/medical/medicines.webp - "Medicines"
 /gear/medical/pill-bottle.webp - "Medicine Pills"
 /gear/medical/remedy.webp - "Remedy"
 
 /gear/objects/banknote.webp - "Banknote"
 /gear/objects/fire-extinguisher.webp - "Fire extinguisher"
 /gear/objects/freemasonry.webp - "Freemasonry"
+/gear/objects/holster.webp - "Cowboy holster"
 /gear/objects/notebook.webp - "Notebook"
 /gear/objects/passport.webp - "Passport"
 /gear/objects/secret-book.webp - "Secret Book"
+/gear/objects/sheath.webp - "Scabbard"
 /gear/objects/swipe-card.webp - "Swipe card"
 
 /gear/supplies/booze.webp - "Booze"
 /gear/supplies/canned-fish.webp - "Canned fish"
 /gear/supplies/chips-bag.webp - "Chips bag"
+/gear/supplies/cloth.webp - "Rolled cloth"
 /gear/supplies/donut.webp - "Donut"
 /gear/supplies/fertilizer-bag.webp - "Fertilizer bag"
 /gear/supplies/grain.webp - "Grain"
@@ -128,6 +135,8 @@ The following icons are by Delapouite under CC BY 3.0
 /gear/tools/concrete-bag.webp - "Concrete bag"
 /gear/tools/fishing-pole.webp - "Fishing pole"
 /gear/tools/lockpicks.webp - "Lockpicks"
+/gear/tools/paint-brush.webp - "Paint brush"
+/gear/tools/pencil.webp - "Pencil"
 /gear/tools/swiss-army-knife.webp - "Swiss army knife"
 
 /weapons/ammo/energy-tank.webp - "Energy tank"
@@ -174,9 +183,13 @@ The following icons are by Delapouite under CC BY 3.0
 /wearables/armor/sleeveless-jacket.webp - "Sleeveless jacket"
 
 /wearables/clothing/jacket.webp - "Moncler jacket"
+/wearables/clothing/ring.webp - "Ring"
 /wearables/clothing/t-shirt.webp - "T shirt"
 
 /wearables/headgear/full-motorcycle-helmet.webp - "Full motorcycle helmet"
+/wearables/headgear/goggles.webp - "Steampunk goggles"
+/wearables/headgear/safety-glasses.webp - "Protection glasses"
+/wearables/headgear/sunglassess.webp - "Sunglasses"
 /wearables/headgear/samus-helmet.webp - "Samus helmet"
 ==============================================
 
@@ -192,6 +205,7 @@ The following icons are by Lorc under CC BY 3.0
 /abstract/cannon-ball.webp - "Cannon ball"
 /abstract/celebration-fire.webp - "Celebration fire"
 /abstract/chemical-bolt.webp - "Chemical bolt"
+/abstract/circuitry.webp - "Circuitry"
 /abstract/crystalize.webp - "Crystalize"
 /abstract/death-note.webp - "Death note"
 /abstract/defilibrate.webp - "Defilibrate"
@@ -364,6 +378,7 @@ The following icons are by Skoll under CC BY 3.0
 /wearables/clothing/dress.webp - "Dress"
 
 /wearables/headgear/brodie-helmet.webp - "Brodie helmet"
+/wearables/headgear/gas-mask.webp - "Gas mask"
 /wearables/headgear/stalhelm.webp - "Stalhelm"
 ==============================================
 
