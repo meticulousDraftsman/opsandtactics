@@ -17,8 +17,8 @@
     "weaponMods": {
       "3VINI8EY": {
         "name": "Swipe",
-        "check": "-2",
-        "effect": "",
+        "check": "",
+        "effect": "-2",
         "dice": null,
         "recoil": null,
         "cp": 1,
@@ -324,10 +324,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1705313759260,
+    "modifiedTime": 1705703637291,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "zqCKOIcFCrcCvKOl",

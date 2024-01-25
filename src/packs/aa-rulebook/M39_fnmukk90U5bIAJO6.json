@@ -7,9 +7,9 @@
     "type": "",
     "magazine": {
       "loaded": {},
-      "type": "unlimited",
+      "type": "cartridge",
       "source": "",
-      "insideOut": "both",
+      "insideOut": "external",
       "heatBase": 0
     },
     "range": "5ft",
@@ -544,7 +544,7 @@
     "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1705641915081,
+    "modifiedTime": 1706140112453,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "nZw2ugkgthvln0Nh",

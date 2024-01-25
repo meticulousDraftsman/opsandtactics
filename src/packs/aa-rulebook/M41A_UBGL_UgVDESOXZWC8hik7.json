@@ -8,7 +8,7 @@
     "magazine": {
       "loaded": {},
       "type": "cartridge",
-      "source": "lF9X31sT2WcLbgIv,system.gear.resources.b1gdFxBB,cartridges.K2WRuieG",
+      "source": "",
       "insideOut": "internal",
       "heatBase": 0
     },
@@ -182,7 +182,7 @@
           "type": "cartridge",
           "value": 0,
           "max": 3,
-          "available": true,
+          "available": false,
           "cartridges": {
             "K2WRuieG": {
               "stats": {
@@ -229,7 +229,7 @@
     "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1705641915081,
+    "modifiedTime": 1706140031980,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "fjrg5jN3cPVlDlaZ",

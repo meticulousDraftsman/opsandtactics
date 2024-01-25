@@ -1,8 +1,8 @@
 {
   "folder": "Vtd5PJwJybuFE0iT",
-  "name": ".40 Caseless Ammo Can",
+  "name": ".28 Caseless Ammo Carton",
   "type": "object",
-  "img": "systems/opsandtactics/icons/gear/objects/swipe-card.webp",
+  "img": "systems/opsandtactics/icons/abstract/cube.webp",
   "system": {
     "minimized": false,
     "gear": {
@@ -31,9 +31,9 @@
               "stats": {
                 "check": 0,
                 "error": 0,
-                "recoil": -5,
+                "recoil": -4,
                 "good": {
-                  "primary": "2d12+6",
+                  "primary": "1d12+3",
                   "primaryFlavor": "Ballistic",
                   "secondary": "",
                   "secondaryFlavor": "",
@@ -54,16 +54,16 @@
               "stats": {
                 "check": 0,
                 "error": 0,
-                "recoil": -5,
+                "recoil": -4,
                 "good": {
-                  "primary": "2d12+8",
+                  "primary": "1d12+5",
                   "primaryFlavor": "Ballistic",
                   "secondary": "",
                   "secondaryFlavor": "",
                   "extra": ""
                 },
                 "bad": {
-                  "primary": "2d12+4",
+                  "primary": "1d12+1",
                   "primaryFlavor": "Ballistic",
                   "secondary": "",
                   "secondaryFlavor": "",
@@ -77,16 +77,16 @@
               "stats": {
                 "check": 0,
                 "error": 0,
-                "recoil": -5,
+                "recoil": -4,
                 "good": {
-                  "primary": "2d12+9",
+                  "primary": "1d12+6",
                   "primaryFlavor": "Ballistic",
                   "secondary": "",
                   "secondaryFlavor": "",
                   "extra": ""
                 },
                 "bad": {
-                  "primary": "2d12+2",
+                  "primary": "1d12-1",
                   "primaryFlavor": "Ballistic",
                   "secondary": "",
                   "secondaryFlavor": "",
@@ -100,10 +100,10 @@
               "stats": {
                 "check": 1,
                 "error": 0,
-                "recoil": -5,
+                "recoil": -4,
                 "good": {
-                  "primary": "2d12+6",
-                  "primaryFlavor": "Ballistic",
+                  "primary": "1d12+3",
+                  "primaryFlavor": "",
                   "secondary": "",
                   "secondaryFlavor": "",
                   "extra": ""
@@ -117,23 +117,23 @@
                 }
               },
               "name": "Tracer",
-              "flavor": "With Multishot attacks"
+              "flavor": "With Multishot Attacks"
             },
             "mcGamuWK": {
               "stats": {
                 "check": 0,
                 "error": 0,
-                "recoil": -5,
+                "recoil": -4,
                 "good": {
-                  "primary": "2d12",
+                  "primary": "2d12+3",
                   "primaryFlavor": "Ballistic Piercing",
-                  "secondary": "1d12+6",
-                  "secondaryFlavor": "Ballistic",
+                  "secondary": "4",
+                  "secondaryFlavor": " Ballistic",
                   "extra": ""
                 },
                 "bad": {
-                  "primary": "1d12+6",
-                  "primaryFlavor": "Ballistic",
+                  "primary": "4",
+                  "primaryFlavor": " Ballistic",
                   "secondary": "",
                   "secondaryFlavor": "",
                   "extra": ""
@@ -146,9 +146,9 @@
               "stats": {
                 "check": 0,
                 "error": 0,
-                "recoil": -5,
+                "recoil": -4,
                 "good": {
-                  "primary": "2d12+1",
+                  "primary": "1d12-2",
                   "primaryFlavor": "Ballistic",
                   "secondary": "",
                   "secondaryFlavor": "",
@@ -182,7 +182,7 @@
   "effects": [],
   "flags": {
     "core": {
-      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.sSqqpI86cIrAWl23"
+      "sourceId": "Compendium.every-goddamn-item-in-ops-and-tactics.every-goddamn-item-in-ops-and-tactics.Item.yNBCsFWrmVsfKX4u"
     }
   },
   "_stats": {
@@ -190,14 +190,14 @@
     "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1705360266372,
-    "modifiedTime": 1705641965607,
+    "modifiedTime": 1706139586472,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
   },
-  "_id": "dD6HGC3XFGbGk1uL",
+  "_id": "CXBcLpmnXmbi6Nml",
   "sort": 0,
-  "_key": "!items!dD6HGC3XFGbGk1uL"
+  "_key": "!items!CXBcLpmnXmbi6Nml"
 }

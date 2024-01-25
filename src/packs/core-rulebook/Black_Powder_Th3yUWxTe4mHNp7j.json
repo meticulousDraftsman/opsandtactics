@@ -1,5 +1,5 @@
 {
-  "folder": "zX1ToeUGUbt5mz03",
+  "folder": "1PmA4vdWypdlb6Oj",
   "name": "Black Powder",
   "type": "object",
   "img": "systems/opsandtactics/icons/gear/supplies/powder.webp",
@@ -23,19 +23,78 @@
       "resources": {
         "I66BU2Rb": {
           "type": "consumable",
-          "value": null,
-          "max": null,
+          "value": 30,
+          "max": 30,
           "available": true,
-          "name": "Powder"
+          "name": ""
         }
       },
       "quality": "",
       "restriction": ""
     },
-    "actions": {},
+    "actions": {
+      "Xiawae9L": {
+        "name": "Light Load",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 0.5,
+        "cp": {
+          "inherent": 12
+        }
+      },
+      "C89IOpFQ": {
+        "name": "Normal Load",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 12
+        }
+      },
+      "bP68c7fe": {
+        "name": "Heavy Load",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 12
+        }
+      }
+    },
     "range": "5ft",
     "magazine": {
-      "type": "unlimited"
+      "type": "consumable",
+      "source": ""
     },
     "crit": 16,
     "description": "<p><span class=\"fontstyle0\">The propulsion used to propel the lead balls down the barrel.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
@@ -51,7 +110,7 @@
     "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642241856,
+    "modifiedTime": 1705864762375,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "ownership": {
@@ -59,6 +118,6 @@
     "qUf9EhhQBxZF46Rx": 3
   },
   "_id": "Th3yUWxTe4mHNp7j",
-  "sort": 0,
+  "sort": 1000000,
   "_key": "!items!Th3yUWxTe4mHNp7j"
 }

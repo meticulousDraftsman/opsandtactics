@@ -17,8 +17,8 @@
     "weaponMods": {
       "Eas5NSrp": {
         "name": "Swipe Attack",
-        "check": "-2",
-        "effect": "",
+        "check": "",
+        "effect": "-2",
         "dice": null,
         "recoil": null,
         "cp": 1,
@@ -496,10 +496,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1699220660482,
-    "modifiedTime": 1705314222983,
+    "modifiedTime": 1705703702799,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "_id": "YyN1NhPY2eQDAXH8",

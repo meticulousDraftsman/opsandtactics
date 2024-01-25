@@ -9,7 +9,7 @@
       "loaded": {},
       "type": "cartridge",
       "source": "",
-      "insideOut": "external",
+      "insideOut": "internal",
       "heatBase": 0
     },
     "range": "15ft",
@@ -279,7 +279,40 @@
         "parent": "Loose",
         "note": ""
       },
-      "resources": {},
+      "resources": {
+        "CSRBCIgf": {
+          "type": "cartridge",
+          "value": null,
+          "max": 1,
+          "available": false,
+          "cartridges": {
+            "vufpJWZU": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "12 Gauge",
+              "flavor": ""
+            }
+          },
+          "name": "Internal Magazine"
+        }
+      },
       "tons": false,
       "capital": false
     },
@@ -299,7 +332,7 @@
     "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1705641915081,
+    "modifiedTime": 1706140029147,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "hSRl2pX3fAff9oJE",

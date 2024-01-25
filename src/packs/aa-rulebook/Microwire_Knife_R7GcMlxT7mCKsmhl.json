@@ -14,7 +14,17 @@
     },
     "range": "5ft",
     "crit": 14,
-    "weaponMods": {},
+    "weaponMods": {
+      "hGZAnIDl": {
+        "name": "Thrust Attack",
+        "check": "",
+        "effect": "-2",
+        "dice": null,
+        "recoil": null,
+        "cp": 1,
+        "description": "Deal Piercing"
+      }
+    },
     "actions": {
       "yqmwlhNc": {
         "name": "Light",
@@ -230,10 +240,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1705315648808,
+    "modifiedTime": 1705703895704,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "bY5g91OyylH41l8l",

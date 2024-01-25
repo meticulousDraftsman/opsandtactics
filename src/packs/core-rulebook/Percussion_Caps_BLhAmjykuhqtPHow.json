@@ -1,5 +1,5 @@
 {
-  "folder": "zX1ToeUGUbt5mz03",
+  "folder": "1PmA4vdWypdlb6Oj",
   "name": "Percussion Caps",
   "type": "object",
   "img": "systems/opsandtactics/icons/gear/medical/pill-bottle.webp",
@@ -26,16 +26,37 @@
           "value": 500,
           "max": 500,
           "available": true,
-          "name": "Caps"
+          "name": ""
         }
       },
       "quality": "",
       "restriction": ""
     },
-    "actions": {},
+    "actions": {
+      "7tYycosz": {
+        "name": "Apply Cap",
+        "active": true,
+        "check": {
+          "type": "noChatUtility",
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": null
+        }
+      }
+    },
     "range": "5ft",
     "magazine": {
-      "type": "unlimited"
+      "type": "consumable",
+      "source": ""
     },
     "crit": 16,
     "description": "<p><span class=\"fontstyle0\">A percussion cap is a cap used to ignite all percussion firearms. Percussion caps come in 500 cap tins.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
@@ -51,7 +72,7 @@
     "systemVersion": "0.2.8",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642241856,
+    "modifiedTime": 1705864762375,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "ownership": {
@@ -59,6 +80,6 @@
     "qUf9EhhQBxZF46Rx": 3
   },
   "_id": "BLhAmjykuhqtPHow",
-  "sort": 0,
+  "sort": 1100000,
   "_key": "!items!BLhAmjykuhqtPHow"
 }

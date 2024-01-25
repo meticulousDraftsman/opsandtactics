@@ -1,0 +1,89 @@
+{
+  "name": "MS9 Magazine",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 6,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.3,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "uV7SSpEJ": {
+          "type": "cartridge",
+          "value": 10,
+          "max": 10,
+          "available": true,
+          "cartridges": {
+            "31uCQc6e": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -8,
+                "good": {
+                  "primary": "4d12+4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": ""
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<h3>Compatible Firearms</h3><ul><li><p>MS9 Series</p></li></ul>"
+  },
+  "_id": "w3tLEMqItUyXxifg",
+  "img": "systems/opsandtactics/icons/gear/objects/swipe-card.webp",
+  "effects": [],
+  "folder": "Ap3n784DNjeqgXkS",
+  "sort": 143750,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Actor.py2Xt1almd5F8g6I.Item.POZgy3GCmadkG0BX"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.8",
+    "coreVersion": "11.315",
+    "createdTime": 1706139361453,
+    "modifiedTime": 1706142979401,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!items!w3tLEMqItUyXxifg"
+}
