@@ -571,7 +571,7 @@ export class OpsActorSheet extends ActorSheet {
     for (let [key,layer] of Object.entries(nestedGear)){
       layer.pounds = layer.weight.toLocaleString()
       layer.tons = (layer.weight / 2000).toLocaleString()
-      if (layer.children.length == 0 && key != 'Loose') delete nestedGear[key];
+      //if (layer.children.length == 0 && key != 'Loose') delete nestedGear[key];
     }
     return nestedGear;
   }
@@ -622,6 +622,86 @@ export class OpsActorSheet extends ActorSheet {
       charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
       await this.actor.update(updateData);
       await dropActor.update(charData);   
+    }
+  }
+  async _onDropItem(event, data){
+    if (!this.actor.isOwner) return false;
+    const item = await Item.implementation.fromDropData(data);
+    const itemData = item.toObject();
+
+    // Handle item sorting within the same Actor
+    if ( this.actor.uuid === item.parent?.uuid ) return this._onSortItem(event, itemData);
+
+    // Set category parent if dropping gear onto category
+    const dropTarget = event.target.closest("[data-item-id]");
+    if (dropTarget && ['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1 && getProperty(itemData,'system.gear.physical')) itemData.system.gear.location.parent = dropTarget.dataset.itemId;
+
+    // If item is gear with children, handle all that mess
+    if ((event.shiftKey || event.ctrlKey) && getProperty(item,'system.gear.location.children.length')){
+      this._nestedGearDrop(item, dropTarget);
+    }
+    else {
+      // Create the owned item
+      return this._onDropItemCreate(itemData);
+    }
+  }
+
+  async _nestedGearDrop(item1,dropTarget){
+    // Original actor from drag source for finding items
+    const sourceActor = await fromUuid(item1.parent?.uuid);
+    const sourceItems = sourceActor.items;
+    // Item data and new created item for parent
+    const dataLayer1 = item1.toObject();
+    if (dropTarget && ['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1 && getProperty(dataLayer1,'system.gear.physical')) dataLayer1.system.gear.location.parent = dropTarget.dataset.itemId;
+    const layer1 = await this.actor.createEmbeddedDocuments("Item", [dataLayer1], {render: false});
+    // Item, item data, and new created item for first layer of children
+    for (let i = 0; i < getProperty(item1,'system.gear.location.children.length'); i++){
+      const item2 = sourceItems.get(item1.system.gear.location.children[i]);
+      const dataLayer2 = item2.toObject();
+      dataLayer2.system.gear.location.parent = layer1[0]._id;
+      const layer2 = await this.actor.createEmbeddedDocuments("Item", [dataLayer2], {render: false});
+      // Item, item data, and new created item for second layer of children
+      for (let i = 0; i < getProperty(item2,'system.gear.location.children.length'); i++){
+        const item3 = sourceItems.get(item2.system.gear.location.children[i]);
+        const dataLayer3 = item3.toObject();
+        dataLayer3.system.gear.location.parent = layer2[0]._id;
+        const layer3 = await this.actor.createEmbeddedDocuments("Item", [dataLayer3], {render: false});
+        // Item, item data, and new created item for third layer of children
+        for (let i = 0; i < getProperty(item3,'system.gear.location.children.length'); i++){
+          const item4 = sourceItems.get(item3.system.gear.location.children[i]);
+          const dataLayer4 = item4.toObject();
+          dataLayer4.system.gear.location.parent = layer3[0]._id;
+          await this.actor.createEmbeddedDocuments("Item", [dataLayer4], {render: false});
+        }
+      }
+    }
+    this.render()
+  }
+
+  async _onSortItem(event, itemData){
+    // Get the drag source and drop target
+    const items = this.actor.items;
+    const source = items.get(itemData._id);
+    const dropTarget = event.target.closest("[data-item-id]");
+    if ( !dropTarget ) return;
+    if (['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1){
+      if (hasProperty(source, 'system.gear')) await source.update({['system.gear.location.parent']: dropTarget.dataset.itemId});
+      return;
+    }
+    else {
+      if (event.shiftKey || event.ctrlKey){
+        const target = items.get(dropTarget.dataset.itemId);
+        // Don't nest if both items aren't physical
+        if (!hasProperty(source, 'system.gear') || !hasProperty(target,'system.gear')) return;
+        // Don't self-nest
+        if (source.id === target.id) return;
+        // Set drop target as container parent
+        await source.update({['system.gear.location.parent']: target.id});
+      }
+      else {
+        super._onSortItem(event,itemData);
+      }
+      
     }
   }
 

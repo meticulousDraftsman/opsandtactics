@@ -38,6 +38,12 @@ export class OpsItem extends Item {
         }
       }
     }
+    if (hasProperty(systemData,'gear') && this.actor){
+      systemData.gear.location.children = [];
+      for (let i of this.actor.items){
+        if (getProperty(i,'system.gear.location.parent') == this.id) systemData.gear.location.children.push(i.id)
+      }
+    }
   }
 
   _prepareSkillData(itemData){
@@ -890,7 +896,7 @@ export class OpsItem extends Item {
   // Pre-creation
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
-    // Assign default image based on type
+    // Assign default name based on type
     const updates = {};
     if (!hasProperty(data,'system')){
       switch(this.type){
@@ -914,6 +920,7 @@ export class OpsItem extends Item {
           break;
       }
     }
+    // Assign default image based on type
     if (!hasProperty(data,'img')){
       switch(this.type){
         case 'weapon':

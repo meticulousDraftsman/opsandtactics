@@ -1,6 +1,6 @@
 {{#each nestedGear}}
 <fieldset class="collapse-parent">
-  <legend class="resource-label">
+  <legend class="resource-label" data-item-id="{{@key}}">
     {{this.label}} Items [{{#if (eq @root.actor.type "spacecraft")}}{{this.tons}} tons{{else}}{{this.pounds}} lbs{{/if}}] {{#if @first}}<a class="item-control item-create" data-tooltip="Create {{this.label}} item" data-type="object"><i class="fas fa-plus"></i></a>{{/if}} <a data-tooltip="Toggle {{this.label}} Item Display"><i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i></a>
   </legend>
   <ol class="items-list flex-group-left {{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
