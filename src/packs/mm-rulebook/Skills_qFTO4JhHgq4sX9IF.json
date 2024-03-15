@@ -1,0 +1,19 @@
+{
+  "name": "Skills",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "qFTO4JhHgq4sX9IF",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.10",
+    "coreVersion": "11.315",
+    "createdTime": 1710481882328,
+    "modifiedTime": 1710481882328,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!qFTO4JhHgq4sX9IF"
+}

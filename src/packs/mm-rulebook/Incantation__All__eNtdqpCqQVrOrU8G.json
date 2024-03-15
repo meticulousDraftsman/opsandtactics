@@ -1,0 +1,47 @@
+{
+  "name": "Incantation (All)",
+  "type": "skill",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
+  "system": {
+    "ranks": null,
+    "focus": "focus",
+    "armor": {
+      "active": 0
+    },
+    "mods": {
+      "qfWUtPuS": {
+        "type": "syn",
+        "value": null,
+        "active": true,
+        "name": "Knowledge (Arcane Lore)"
+      }
+    },
+    "ability": "cha",
+    "description": "<h1><span class=\"fontstyle0\">Incantations (CHA)</span></h1><p><span class=\"fontstyle0\">You are skilled at using your words to control the world around you through mysticism.<br></span></p><p><span class=\"fontstyle0\">This skill encompasses several categories, each of them treated as a separate skill: Heirloom, Hex, Shadow Defense, Shadow Offense, Shadow Control, and Strike.<br></span></p><p><span class=\"fontstyle0\">An Invoker, like a Mage and Psion, uses Mental Limit. Unlike mages, Invokers may use their abilities as long as they are conscious, and can afford the Combat Point cost to use their abilities.<br></span></p><p><span class=\"fontstyle0\">Invokers memorize recipes, which are strings of words that are used to cast incantations. Keeping a set of recipes has an ML cost of (3×CL)+3. An Invoker may keep ((3+CHA Modifier)×CL) recipes. When an Invoker casts an incantation, Mental Limit is used equal to the cost of the incantation. Invokers unable to provide this Mental Limit cost can not use their recipe. On the following turn, the Invoker’s used Mental Limit is decreased by 10% of their total Mental Limit, rounded up. When an Invoker would like to clear their mind and their Mental Limit, they may meditate for 1 hour to do as such, freeing their mind of all Mental Limit cost. Although cants are languages, they are mostly useless for communication, as all cants lack nouns.<br></span></p><p><span class=\"fontstyle0\">When creating a recipe, a character can use as many Incantation Points(IP) per incantation as they have total Skill Modifier in, plus any equipment or feats that may give them bonuses to Incantation Points.<br></span></p><p><span class=\"fontstyle0\">To use Cants, the character first decides what Cant language, and then what dialect they decide to use. They then choose the effects, based on how many incantation points they can spend total. If the character has enough skill modifiers in the specified Cant, and a free recipe slot, then the character creates the recipe. Each recipe takes 5 minutes to create. Recipes may not be changed on the fly, but must be recreated in order to change.<br></span></p><p><span class=\"fontstyle0\">Invokers speak their incantation by reciting the recipes from memory to draw the incantation out and use its effects. Because of this, the time it takes to cast is entirely dependent on how complex the incantation is.</span></p><table class=\"NormalTable\"><tbody><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\"><strong>IP cost</strong></span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\"><strong>Time Taken</strong></span></p></td></tr><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">0</span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">4 CP</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">1-4</span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">5 CP</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">5-8</span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">6 CP</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">9-10</span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">7 CP</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">11-13</span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">8 CP</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">14-16</span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">9 CP</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">17+</span></p></td><td><p style=\"text-align: center;\"><span class=\"fontstyle0\">10 CP</span></p></td></tr></tbody></table><p></p>"
+  },
+  "effects": [],
+  "folder": "qFTO4JhHgq4sX9IF",
+  "ownership": {
+    "default": 0,
+    "R98HvK3emILE6RIU": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "23254ba5842af36f441e0cac6bbce96565884aad",
+      "sourceId": "Item.QzoYx1lOzyjRYkeu"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.10",
+    "coreVersion": "11.315",
+    "createdTime": 1706640525204,
+    "modifiedTime": 1710483802629,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "eNtdqpCqQVrOrU8G",
+  "sort": 0,
+  "_key": "!items!eNtdqpCqQVrOrU8G"
+}

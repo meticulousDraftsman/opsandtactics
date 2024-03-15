@@ -14,7 +14,8 @@ export class OpsActorSheet extends ActorSheet {
       template: "systems/opsandtactics/templates/actor/actor-sheet.html",
       width: 700,
       height: 700,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "character" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "character" }],
+      dragDrop: [{dragSelector: [".item-list .item"], dropSelector: null}]
     });
   }
 
@@ -602,6 +603,9 @@ export class OpsActorSheet extends ActorSheet {
       }
     }
     return super.close(options)
+  }
+  async _onDrop(event){
+    super._onDrop(event);
   }
   async _onDropActor(event, data) {
     super._onDropActor(event, data);

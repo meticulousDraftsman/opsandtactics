@@ -1,0 +1,47 @@
+{
+  "name": "Psionics (All)",
+  "type": "skill",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
+  "system": {
+    "ranks": null,
+    "focus": "focus",
+    "armor": {
+      "active": 0
+    },
+    "mods": {
+      "2ADxD5oi": {
+        "type": "syn",
+        "value": null,
+        "active": true,
+        "name": "Knowledge (Arcane Lore)"
+      }
+    },
+    "ability": "wis",
+    "description": "<h1><span class=\"fontstyle0\">Psionics (WIS)</span> </h1><p>You are skilled at using your mind to affect either yourself or the world around you.<br></p><p>This skill encompasses seven categories, each of them treated as a separate skill: Fluid Dynamics, Plasma Dynamics, Telekinesis, Telepathy, and Psychometabolism<br></p><p>A Psion, like a Mage, uses Mental Limit. Unlike mages, Psions may use their abilities as long as they are conscious, and can afford the Combat Point cost to use their abilities, but they must meditate for 8 hours and prepare their mind for use. After this initial meditation, it only takes 1 hour a day to maintain this meditation. If this meditation is not maintained, then a Psion must spend 8 hours meditating and gaining focus over again. Psionics requires Mental Limit to use, and costs <span class=\"fontstyle0\" style=\"font-size:10pt;\"><strong>(2×Character Level)+25</strong></span><span class=\"fontstyle2\">. Psions unable to provide this Mental Limit cost can not use their powers. When a Psion would like to clear their mind and their Mental Limit, they may meditate for 1 hour to do as such, freeing their mind of the Mental Limit cost.<br></span></p><p><span class=\"fontstyle2\">Psions may use their powers at will, with no need to prepare recipes like Invokers, or spells like Mages. Psionic Points are PP, and a character can use a power with enhancements up to the Skill modifier in that particular power that they have.</span> </p>"
+  },
+  "effects": [],
+  "folder": "qFTO4JhHgq4sX9IF",
+  "ownership": {
+    "default": 0,
+    "R98HvK3emILE6RIU": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "8f62b0ed390b2595b4188e58fe3b1b3ad9f134c2",
+      "sourceId": "Item.88Wz5hYgzZZ4ceYJ"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.10",
+    "coreVersion": "11.315",
+    "createdTime": 1706640499158,
+    "modifiedTime": 1710481895095,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "2cqy1SqbiGFJiWsl",
+  "sort": 0,
+  "_key": "!items!2cqy1SqbiGFJiWsl"
+}

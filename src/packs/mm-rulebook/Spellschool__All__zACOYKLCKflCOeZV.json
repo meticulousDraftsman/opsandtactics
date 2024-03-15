@@ -1,0 +1,47 @@
+{
+  "name": "Spellschool (All)",
+  "type": "skill",
+  "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
+  "system": {
+    "ranks": null,
+    "focus": "focus",
+    "armor": {
+      "active": 0
+    },
+    "mods": {
+      "2kHt4kTX": {
+        "type": "syn",
+        "value": null,
+        "active": true,
+        "name": "Knowledge (Arcane Lore)"
+      }
+    },
+    "ability": "int",
+    "description": "<h1><span class=\"fontstyle0\">Spellschool (INT)</span></h1><p><span class=\"fontstyle0\">You are skilled at scribing spells in the mathematical language of magecraft and understanding magical scribing. This skill encompasses eight categories, each of them treated as a separate skill: Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Necromancy, and Transmutation.<br></span></p><p><span class=\"fontstyle0\">Spellschool skills are specifically focused on crafting spells and reading crafted spells. In order to scribe a spell, a character must have a writing medium and a writing utensil that will write on that medium. A character has a limited amount of spells that they can scribe and keep on retention at one time, called their Mental Limit.<br></span></p><p><span class=\"fontstyle0\">The quality of the writing surface determines how many times a mage can use the same writing surface. Cheaper surfaces, such as plain copy paper, are burned up after a single use, while more permanent surfaces, such as concrete or brick, can literally be used an unlimited amount of times.<br></span></p><p><span class=\"fontstyle0\">A character may at any time destroy (usually through fire) any spell they have to regain the global Mental Limit back, and reuse them towards another spell. A character can also scribe more spells than they have Mental Limit, and this new Mental Limit use overwrites the old Mental Limit that was used, and can not be retrieved back without rescribing that spell. When doing this, the character must select complete spells to overwrite, and the spells selected must have at least the same Mental Limit cost as the new spell written.<br></span></p><p><span class=\"fontstyle0\">SP are Spell Points, and when scribing a spell, a character can use as many SP per spell as they have total skill modifier for in that spellschool, plus any equipment or feats that may give them bonuses to spell points. Spells can be scribed on any surface that can be written on or engraved in.</span></p><table class=\"NormalTable\"><tbody><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\"><strong>Size</strong></span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\"><strong>Spells</strong></span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">Small</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">1</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">Medium</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">2</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">Large</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">4</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">Huge</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">8</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">Gargantuan</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">16</span></p></td></tr></tbody></table><p><span class=\"fontstyle0\">To scribe a spell, the character first decides what spellschool and then what sub-school they decide to use. They then choose the effects, based on how many spell points they can spend total and how many they have left from their Mental Limit. If the character has enough skill modifiers in the specified Spellschool and Mental Limit space to scribe the spell, then the character scribes the scroll. All spells have a base cost which is the bare minimum that must be spent in order to access any of the higher spell enhancements. Even if a character does not want the base cost’s effect, it still must be paid for. Many base cost have multiple options, that must be chosen when creating the spell. The cost of the spell, when adding up increasing cost, is absolute not cumulative.</span></p><p><span class=\"fontstyle0\">Spells with ranged components have absolute ranges unless otherwise noted.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><p><span class=\"fontstyle0\">Some spellschools have cantrips, that can be scribed and released independent of the base cost. Unless otherwise noted, cantrips cannot receive any enhancements, however, cantrips can be added to a larger spell, to receive the effect of the cantrip.</span></p><table class=\"NormalTable\"><tbody><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\"><strong>SP Cost</strong></span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\"><strong>Time Taken</strong></span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">0</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">3 Combat Points</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">1-2</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">9 Combat Points</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">3-5</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">5 Minutes</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">6-7</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">10 Minutes</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">8-10</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">20 Minutes</span></p></td></tr><tr><td><p style=\"text-align: center\"><span class=\"fontstyle0\">11+</span></p></td><td><p style=\"text-align: center\"><span class=\"fontstyle0\">5 Minutes per SP</span></p></td></tr></tbody></table><p><span class=\"fontstyle0\">When scribing for more than 8 hours at a time, a character becomes fatigued. When scribing for more than 12 hours at a time, a character becomes exhausted.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "folder": "qFTO4JhHgq4sX9IF",
+  "ownership": {
+    "default": 0,
+    "R98HvK3emILE6RIU": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "588f9c97f9df0c2773e7d65f86ac521af5e895a7",
+      "sourceId": "Item.wvbDS3XutQ6mjjdP"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.10",
+    "coreVersion": "11.315",
+    "createdTime": 1706640046223,
+    "modifiedTime": 1710483991698,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "zACOYKLCKflCOeZV",
+  "sort": 0,
+  "_key": "!items!zACOYKLCKflCOeZV"
+}

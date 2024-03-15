@@ -41,7 +41,7 @@
         },
         "ammo": null,
         "cp": {
-          "inherent": 3,
+          "inherent": 2,
           "mods": {}
         },
         "display": true,
@@ -86,7 +86,7 @@
         },
         "ammo": null,
         "cp": {
-          "inherent": 4,
+          "inherent": 3,
           "mods": {}
         },
         "display": true,
@@ -131,7 +131,7 @@
         },
         "ammo": null,
         "cp": {
-          "inherent": 6,
+          "inherent": 5,
           "mods": {}
         },
         "display": true,
@@ -176,7 +176,7 @@
         },
         "ammo": null,
         "cp": {
-          "inherent": 11,
+          "inherent": 10,
           "mods": {}
         },
         "display": true,
@@ -230,10 +230,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.2.10",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1705314611592,
+    "modifiedTime": 1708651604608,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
   "folder": "SL5sI5SDhwhKfQzr",
