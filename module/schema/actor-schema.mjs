@@ -77,6 +77,9 @@ export class OpsCharacter extends foundry.abstract.DataModel {
                 wager: new field.NumberField({initial:0}),
                 armorPenalty: new field.EmbeddedDataField(Mods),
                 skills: new field.SchemaField({
+                    ability: new field.StringField({initial:"int",nullable:false}),
+                    startingMult: new field.NumberField({initial:5,nullable:false}),
+                    base: new field.NumberField({initial:3,nullable:false})
                 }),
                 level: new field.SchemaField({
                     value: new field.NumberField({initial:1}),
