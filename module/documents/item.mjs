@@ -119,6 +119,16 @@ export class OpsItem extends Item {
     }
   }
 
+  _selfDestruct(){
+    Dialog.confirm({
+      title: "Delete Confirmation",
+      content: "Delete item from owning Actor?",
+      yes: () => {this.delete()},
+      no: () => {},
+      defaultYes: true
+    });
+  }
+
   async rollActionCheck(checkData){
     // Check resource consumption and override
     let ammoCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.resourceAvailableCheck(checkData.ammo?checkData.ammo:getProperty(this,`system.actions.${checkData.actionID}.ammo`));

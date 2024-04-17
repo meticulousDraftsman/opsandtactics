@@ -197,13 +197,7 @@ export class OpsItemSheet extends ItemSheet {
 
   _selfDestruct(event){
     event.preventDefault();
-    Dialog.confirm({
-      title: "Delete Confirmation",
-      content: "Delete item from owning Actor?",
-      yes: () => {this.object.delete()},
-      no: () => {},
-      defaultYes: true
-    });
+    this.object._selfDestruct()
   }
   _onResourceTransfer(event){
     event.preventDefault()

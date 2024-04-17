@@ -781,6 +781,14 @@ export class OpsActorSheet extends ActorSheet {
           const item = this.actor.items.get(event[0].dataset.itemId)
           Item.createDocuments([item.toObject()])
         }
+      },
+      {
+        name: 'Delete',
+        icon: '<i class="fas fa-trash"></i>',
+        callback: event => {
+          const item = this.actor.items.get(event[0].dataset.itemId)
+          item._selfDestruct();
+        }
       }
     ])
     //html.find('.item-edit').on('contextmenu',this._itemContextMenu.bind(this));
