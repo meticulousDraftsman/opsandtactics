@@ -315,4 +315,12 @@ OATS.magicIcons = [
   'systems/opsandtactics/icons/weapons/other/fountain-pen.webp',
   'systems/opsandtactics/icons/abstract/flat-platform.webp',
   'systems/opsandtactics/icons/gear/medical/adhesive-bandage.webp'
+];
+
+OATS.characterDefaultItems = [
+  "Compendium.opsandtactics.core-rulebook.Item.KQLOGO7C1Qui7n0o",
+  "Compendium.opsandtactics.core-rulebook.Item.7Xzd2V4mSk6Ng080",
+  "Compendium.opsandtactics.core-rulebook.Item.MdEAfqyUxnKiwOlJ",
+  "Compendium.opsandtactics.core-rulebook.Item.5mLJb8AIi1iIpNgu",
+  "Compendium.opsandtactics.core-rulebook.Item.wGeGtuY3FzLc2DMJ"
 ]

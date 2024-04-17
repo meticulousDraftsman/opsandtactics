@@ -744,6 +744,12 @@ export class OpsActor extends Actor {
     switch (this.type){
       case 'character':
         if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.characterActions;
+        if (!hasProperty(data,'items')){
+          updates['items'] = []
+          for (let sid of CONFIG.OATS.characterDefaultItems){
+            updates['items'].push((await fromUuid(sid)).toObject());
+          }
+        }
         if (!hasProperty(data,'img')){
           updates['img'] = CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)];
           updates['prototypeToken.texture.src'] = updates['img'];
