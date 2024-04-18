@@ -1,0 +1,54 @@
+{
+  "folder": "h9pGg2LsUcsldZ91",
+  "name": "Tactical Flashlight, Strobe",
+  "type": "object",
+  "img": "systems/opsandtactics/icons/gear/equipment/flashlight.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "diminutive",
+      "weight": 0.6,
+      "tons": false,
+      "cost": 4,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p>This is a flashlight that attaches to a firearm. It comes in one of four styles:</p><p><strong>Strobe Output </strong>Strobe has dual modes; one mode that projects light out in a 20’ cone in front of the firearm, and the other mode that strobes the light to temporary blind. When any creature is within 20’ of the light and is looking in its direction, they must make a Will Saving Throw [TN12] or be blinded for 1 round. This may only be attempted once per creature per combat.</p><p>Switching the light on or off, or changing modes costs 1 Combat Point.</p><p>All tactical flashlights can be purchased with infrared or ultraviolet modes, increasing the WP cost by 2 per extra mode. When in infrared mode, the flashlight has its range multiplied by 6.</p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.13",
+    "coreVersion": "11.315",
+    "createdTime": 1713453377487,
+    "modifiedTime": 1713453774787,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "3H5PLQZcVhXHGv5H",
+  "sort": 0,
+  "_key": "!items!3H5PLQZcVhXHGv5H"
+}

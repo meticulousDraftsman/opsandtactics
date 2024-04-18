@@ -1,19 +1,19 @@
 {
-  "name": "Weapon Accessories",
-  "sorting": "a",
+  "name": "Weapon Upgrades",
+  "sorting": "m",
   "folder": "E6cup5QS5keFGFx2",
   "type": "Item",
-  "_id": "zX1ToeUGUbt5mz03",
-  "sort": 1125000,
+  "_id": "h9pGg2LsUcsldZ91",
+  "sort": 1150000,
   "color": null,
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
     "systemVersion": "0.2.13",
     "coreVersion": "11.315",
-    "createdTime": 1704437408086,
-    "modifiedTime": 1713453344088,
+    "createdTime": null,
+    "modifiedTime": 1713453653439,
     "lastModifiedBy": "qUf9EhhQBxZF46Rx"
   },
-  "_key": "!folders!zX1ToeUGUbt5mz03"
+  "_key": "!folders!h9pGg2LsUcsldZ91"
 }
