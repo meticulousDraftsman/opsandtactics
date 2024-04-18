@@ -100,7 +100,7 @@ export class OpsActor extends Actor {
     // Calculate Defense
     systemData.def.value = 10 + systemData.def.equip.value + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc.value + systemData.def.dodge.value;
     systemData.def.touch = 10 + systemData.abilities.dex.agi + systemData.def.size + systemData.def.move + systemData.def.misc.value + systemData.def.dodge.value;
-    systemData.def.flat = 10 + systemData.def.equip.value + Math.max(0,systemData.abilities.dex.agi) + systemData.def.size + systemData.def.move + systemData.def.misc.value;
+    systemData.def.flat = 10 + systemData.def.equip.value + Math.min(0,systemData.abilities.dex.agi) + systemData.def.size + systemData.def.move + systemData.def.misc.value;
 
     //Calculate Initiative Modifier
     //console.debug(systemData.stats.init.subtotal)
