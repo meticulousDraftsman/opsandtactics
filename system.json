@@ -44,6 +44,13 @@
             "system": "opsandtactics",
             "path": "packs/mm-rulebook",
             "type": "Item"
+        },
+        {
+            "name": "procedural",  
+            "label": "Procedural",
+            "system": "opsandtactics",
+            "path": "packs/procedural",
+            "type": "RollTable"
         }
     ],
     "packFolders": [
@@ -54,7 +61,8 @@
                 "system-reference",
                 "core-rulebook",
                 "mm-rulebook",
-                "aa-rulebook"
+                "aa-rulebook",
+                "procedural"
             ]
         }
     ],
