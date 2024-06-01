@@ -25,6 +25,7 @@ jobs:
       - run: fvtt package pack "core-rulebook" --in "src/packs/core-rulebook" --out "packs"
       - run: fvtt package pack "mm-rulebook" --in "src/packs/mm-rulebook" --out "packs"
       - run: fvtt package pack "aa-rulebook" --in "src/packs/aa-rulebook" --out "packs"
+      - run: fvtt package pack "procedural" --in "src/packs/procedural" --out "packs"
 
 
       - name: Zip Creation
