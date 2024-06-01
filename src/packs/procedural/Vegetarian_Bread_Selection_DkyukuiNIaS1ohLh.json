@@ -1,0 +1,402 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Vegetarian Bread Selection",
+  "_id": "DkyukuiNIaS1ohLh",
+  "img": "icons/consumables/grains/bread-loaf-orange.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        1,
+        4
+      ],
+      "drawn": false,
+      "_id": "MwTthJ5yGT6E9eGq",
+      "text": "Cornbread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.MwTthJ5yGT6E9eGq"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        5,
+        8
+      ],
+      "drawn": false,
+      "_id": "umcct1PXnilAkiwG",
+      "text": "Tortillas (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.umcct1PXnilAkiwG"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        9,
+        12
+      ],
+      "drawn": false,
+      "_id": "YCxZRGRjGfqvrGNW",
+      "text": "Crackers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.YCxZRGRjGfqvrGNW"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        13,
+        16
+      ],
+      "drawn": false,
+      "_id": "hCMWUj4Y2FdLgr4c",
+      "text": "Vegetable Crackers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.hCMWUj4Y2FdLgr4c"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        17,
+        20
+      ],
+      "drawn": false,
+      "_id": "FVkCspY9owOsYjVA",
+      "text": "Multigrain Snack Bread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.FVkCspY9owOsYjVA"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        21,
+        24
+      ],
+      "drawn": false,
+      "_id": "3qzLMnQaKkV5zOeS",
+      "text": "Baked Snack Crackers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.3qzLMnQaKkV5zOeS"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        25,
+        28
+      ],
+      "drawn": false,
+      "_id": "xpImeYQR6SNh3nsg",
+      "text": "Snack Bread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.xpImeYQR6SNh3nsg"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        29,
+        32
+      ],
+      "drawn": false,
+      "_id": "BOy1gVXhqlsELcgf",
+      "text": "Filled Bakery Item, Cinnamon Bun (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.BOy1gVXhqlsELcgf"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        33,
+        36
+      ],
+      "drawn": false,
+      "_id": "i0rt8pwagUda0LSZ",
+      "text": "Filled Bakery Item, Yellow Snack Cake (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.i0rt8pwagUda0LSZ"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        37,
+        40
+      ],
+      "drawn": false,
+      "_id": "ttXUnrHf8m45cuzk",
+      "text": "Filled Bakery Item, Coconut Cake (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.ttXUnrHf8m45cuzk"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        41,
+        44
+      ],
+      "drawn": false,
+      "_id": "c4eXgpZkgBmOPW97",
+      "text": "Toaster Pastries (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.c4eXgpZkgBmOPW97"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        45,
+        48
+      ],
+      "drawn": false,
+      "_id": "7krvqp2zq2KyHypH",
+      "text": "Chipotle Tortillas (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.7krvqp2zq2KyHypH"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        49,
+        52
+      ],
+      "drawn": false,
+      "_id": "IYmfqnhzbBObhMIh",
+      "text": "Toasted Corn Kernels (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.IYmfqnhzbBObhMIh"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        53,
+        56
+      ],
+      "drawn": false,
+      "_id": "ydxPgeNqdduxRDJU",
+      "text": "D’s Nut Bread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.ydxPgeNqdduxRDJU"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        57,
+        60
+      ],
+      "drawn": false,
+      "_id": "HrF65YpAO2aVvHAa",
+      "text": "Italian Bread Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.HrF65YpAO2aVvHAa"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        61,
+        64
+      ],
+      "drawn": false,
+      "_id": "3uQ0Dwka8yeIAYJJ",
+      "text": "Flat Bread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.3uQ0Dwka8yeIAYJJ"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        65,
+        68
+      ],
+      "drawn": false,
+      "_id": "BGJwPlAqs7TKovOV",
+      "text": "Bagel (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.BGJwPlAqs7TKovOV"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        69,
+        72
+      ],
+      "drawn": false,
+      "_id": "JoVKdFzmi0srzgZh",
+      "text": "Hamburger Bun (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.JoVKdFzmi0srzgZh"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        73,
+        76
+      ],
+      "drawn": false,
+      "_id": "nRvGxg4eUOeHP2Qv",
+      "text": "Maple Muffin Top (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.nRvGxg4eUOeHP2Qv"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        77,
+        80
+      ],
+      "drawn": false,
+      "_id": "uL9FdLzJItuERGZe",
+      "text": "Chocolate Banana Nut Muffin Top (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.uL9FdLzJItuERGZe"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        81,
+        84
+      ],
+      "drawn": false,
+      "_id": "F1uwVeprUHHcpiJO",
+      "text": "Blueberry Muffin Top (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.F1uwVeprUHHcpiJO"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        85,
+        88
+      ],
+      "drawn": false,
+      "_id": "sa6CS7jfV54qfmEL",
+      "text": "Chocolate Muffin Top (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.sa6CS7jfV54qfmEL"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        89,
+        92
+      ],
+      "drawn": false,
+      "_id": "jB9gEymCMhkKtqYQ",
+      "text": "Raspberry Muffin Top (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.jB9gEymCMhkKtqYQ"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        93,
+        96
+      ],
+      "drawn": false,
+      "_id": "gvclsiAJideR91Hy",
+      "text": "Strawberry Muffin Top (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.gvclsiAJideR91Hy"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        97,
+        100
+      ],
+      "drawn": false,
+      "_id": "Sr8R9nN7cZ05lVA5",
+      "text": "Cheesecake Muffin Top (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_key": "!tables.results!DkyukuiNIaS1ohLh.Sr8R9nN7cZ05lVA5"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 75000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717221893185,
+    "modifiedTime": 1717229300884,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!DkyukuiNIaS1ohLh"
+}

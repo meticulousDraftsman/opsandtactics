@@ -1,0 +1,59 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Omnivore Spread Selection",
+  "_id": "qouWBoQbEidWnZiG",
+  "img": "icons/consumables/food/bowl-stew-tofu-potato-red.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Vegetarian Spread Selection",
+      "documentId": "ugAYzvsehQfexjCc",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "HwEF3ZP5ERmcAexq",
+      "flags": {},
+      "_key": "!tables.results!qouWBoQbEidWnZiG.HwEF3ZP5ERmcAexq"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Meat Spread Selection",
+      "documentId": "AD0Eolg1wzii3wzz",
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_id": "iMAYXIKzaoDPHRgC",
+      "flags": {},
+      "_key": "!tables.results!qouWBoQbEidWnZiG.iMAYXIKzaoDPHRgC"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 99610,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717224625061,
+    "modifiedTime": 1717230577261,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d2",
+  "_key": "!tables!qouWBoQbEidWnZiG"
+}

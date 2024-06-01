@@ -1,0 +1,19 @@
+{
+  "name": "Flavored Spreads",
+  "sorting": "a",
+  "folder": "n60bFRKjXIenmmIv",
+  "type": "RollTable",
+  "_id": "ZxgaKUoeOaCMLNGT",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": null,
+    "modifiedTime": 1717223078704,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!ZxgaKUoeOaCMLNGT"
+}

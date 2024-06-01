@@ -1,0 +1,779 @@
+{
+  "name": "Sour Candy",
+  "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "cmyfNuQjK72npr7b",
+      "text": "Apple Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.cmyfNuQjK72npr7b"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "3jI5PRGkvlY9vwAd",
+      "text": "Grape Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.3jI5PRGkvlY9vwAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "n2Vtw5Ra0dJr8feH",
+      "text": "Apricot Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.n2Vtw5Ra0dJr8feH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "7aRZsvCy8DeaUfQC",
+      "text": "Avocado Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.7aRZsvCy8DeaUfQC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "YnYUWmXy3zR5mUDB",
+      "text": "Banana Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.YnYUWmXy3zR5mUDB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "76txJMqbU2Pa4lXf",
+      "text": "Huckleberry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.76txJMqbU2Pa4lXf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "TXaZHF1bdkHujWoD",
+      "text": "Passionfruit Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.TXaZHF1bdkHujWoD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "8XZeJxDuvU553yfh",
+      "text": "Papaya Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.8XZeJxDuvU553yfh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "tkjlQHZUE7OcaaUc",
+      "text": "Tangerine Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.tkjlQHZUE7OcaaUc"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "nNHdDbmTtrBMvH5y",
+      "text": "Jackfruit Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.nNHdDbmTtrBMvH5y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "54J0zQSR4AVif0D2",
+      "text": "Persimmon Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.54J0zQSR4AVif0D2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "boW6ryCmty8gZHFP",
+      "text": "Blackberry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.boW6ryCmty8gZHFP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eJ4Ty8Za6RgBTddx",
+      "text": "Blueberry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.eJ4Ty8Za6RgBTddx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "HRqFrwhprB8UPcsk",
+      "text": "Juniper Berry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.HRqFrwhprB8UPcsk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "pVX3UxI8J0PS2M5P",
+      "text": "Kiwi Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.pVX3UxI8J0PS2M5P"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "qNb8hwVDkpUjxalW",
+      "text": "Pineapple Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.qNb8hwVDkpUjxalW"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWSNxwdC6QQDCAty",
+      "text": "Pumpkin Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.GWSNxwdC6QQDCAty"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "8YZOxemhohFDm7pM",
+      "text": "Cantaloupe Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.8YZOxemhohFDm7pM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "oqXjqJBITRwqiHN9",
+      "text": "Cucumber Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.oqXjqJBITRwqiHN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "K6QxKwxWvcVOetOH",
+      "text": "Currant Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.K6QxKwxWvcVOetOH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "AUiwxPuXR8yZ8FGq",
+      "text": "Lime Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.AUiwxPuXR8yZ8FGq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "jgbx9iRN37lOzN5F",
+      "text": "Cherry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.jgbx9iRN37lOzN5F"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jo2oPtS7zkyUaVuA",
+      "text": "Cranberry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.Jo2oPtS7zkyUaVuA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "avxsWAwxOvXJbz0n",
+      "text": "Mango Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.avxsWAwxOvXJbz0n"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "e5kKAL1sMIMigHs4",
+      "text": "Orange Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.e5kKAL1sMIMigHs4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "8ddCpjywexHcZ3fb",
+      "text": "Fig Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.8ddCpjywexHcZ3fb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "8GgIKZr1yJW0l5nx",
+      "text": "Honeydew Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.8GgIKZr1yJW0l5nx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "rUWG3EL2Ub9um1yG",
+      "text": "Dragonfruit Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.rUWG3EL2Ub9um1yG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "wIJXTmGNxZaKZpzb",
+      "text": "Gooseberry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.wIJXTmGNxZaKZpzb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "Er0iJ67DsAPWw2jk",
+      "text": "Coconut Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.Er0iJ67DsAPWw2jk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "VGEbL7wC4ZrvG1eJ",
+      "text": "Tomato Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.VGEbL7wC4ZrvG1eJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "ABQQL6RmLPlXqxFu",
+      "text": "Watermelon Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.ABQQL6RmLPlXqxFu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "7bzJMap4tcsuIBtX",
+      "text": "Raspberry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.7bzJMap4tcsuIBtX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "GLPHoYhie2aNAMc9",
+      "text": "Pomegranate Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.GLPHoYhie2aNAMc9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "TRcjJLUw5U0goz6g",
+      "text": "Plum Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.TRcjJLUw5U0goz6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "hTkF6x1QB2GeqPyS",
+      "text": "Peach Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.hTkF6x1QB2GeqPyS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "JsuLvJwxlfjJMmNL",
+      "text": "Bell Pepper Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.JsuLvJwxlfjJMmNL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "Iarua9IyIjkUUuPI",
+      "text": "Lemon Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.Iarua9IyIjkUUuPI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "XsVwiHmDX86G594v",
+      "text": "Nectarine Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.XsVwiHmDX86G594v"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "s7eAOjsrg2CnFZuu",
+      "text": "Pear Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.s7eAOjsrg2CnFZuu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvAen3QODehYcsf",
+      "text": "Star Fruit Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.tLvAen3QODehYcsf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "BzJ2C6bjIB7KWr1e",
+      "text": "Strawberry Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.BzJ2C6bjIB7KWr1e"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "3AONBkii8sMyJIV3",
+      "text": "Celery Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.3AONBkii8sMyJIV3"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "AjhQgBdPacfhIy8D",
+      "text": "Peppermint Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.AjhQgBdPacfhIy8D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "6POHzZ5pcloSb3IF",
+      "text": "Kolanut Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.6POHzZ5pcloSb3IF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "EPtr3eXsYn7njgNU",
+      "text": "Almond Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.EPtr3eXsYn7njgNU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "A3fXI2RXzEnel4oT",
+      "text": "Coffee Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.A3fXI2RXzEnel4oT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "qR2ubz6diDdY9SZq",
+      "text": "Ginger Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.qR2ubz6diDdY9SZq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "owQC2804Un6FgiMO",
+      "text": "Lychee Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.owQC2804Un6FgiMO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "RT0ZYABqdrjRVyBO",
+      "text": "Sassafrass Sour Candy (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!KI1X12Mn51ENJZ9X.RT0ZYABqdrjRVyBO"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": "rTIMQ0jeATlqHTZR",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223122384,
+    "modifiedTime": 1717225643721,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "KI1X12Mn51ENJZ9X",
+  "sort": 0,
+  "_key": "!tables!KI1X12Mn51ENJZ9X"
+}

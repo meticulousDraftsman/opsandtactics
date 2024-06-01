@@ -1,0 +1,155 @@
+{
+  "folder": "bJMIv7ooXXbZGQlV",
+  "name": "Omnivore Single Meal MRE",
+  "_id": "fAoCMvIPD4qMjp7B",
+  "img": "icons/containers/boxes/box-gift-white.webp",
+  "description": "<p>All MREs come in a hefty plastic pouch, thick and large enough to hold 4 units (32 oz) of water. Each component is individual sealed against air and water.</p><p>Accessory packets contain salt, pepper, hot sauce, toilet paper, freeze dried coffee, powdered creamer, sugar, hand cleaner, a flameless radiation heater, and a sturdy MRE spoon.</p>",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Entree Selection",
+      "documentId": "thVhccXCh4Us6saK",
+      "img": "icons/consumables/food/bowl-stew-brown.webp",
+      "_id": "TD9TKlPBbunDWISY",
+      "flags": {},
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.TD9TKlPBbunDWISY"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Side Dish Selection",
+      "documentId": "An6aLNTeFMUwmHqh",
+      "img": "icons/consumables/food/bowl-stew-tofu-potato-brown.webp",
+      "_id": "q97bux9zRc0F0ZF3",
+      "flags": {},
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.q97bux9zRc0F0ZF3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Bread Selection",
+      "documentId": "V3Q5N5rSGrqKkoZo",
+      "img": "icons/consumables/grains/donut-baked-brown.webp",
+      "_id": "MLrThxcDxuYopjEX",
+      "flags": {},
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.MLrThxcDxuYopjEX"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Spread Selection",
+      "documentId": "qouWBoQbEidWnZiG",
+      "img": "icons/consumables/food/bowl-stew-tofu-potato-red.webp",
+      "_id": "6VoWpjPo7zZtOPbp",
+      "flags": {},
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.6VoWpjPo7zZtOPbp"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Dessert Selection",
+      "documentId": "u8Htk3FWFKmgaEgU",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "bUGlJ1A1ualrULKl",
+      "flags": {},
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.bUGlJ1A1ualrULKl"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Composition",
+      "documentId": "KxQRSyWyBjnKcfbS",
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_id": "dM2xJbVfjrAfKnjc",
+      "flags": {},
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.dM2xJbVfjrAfKnjc"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Selection",
+      "documentId": "CXmKrtF4kwWVBbQ3",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "Gyax7BMukrStYJEf",
+      "flags": {},
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.Gyax7BMukrStYJEf"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "183gdSBca5lAAnHI",
+      "text": "Accessory Packet",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/tools/cooking/soup-ladle.webp",
+      "_key": "!tables.results!fAoCMvIPD4qMjp7B.183gdSBca5lAAnHI"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717229858391,
+    "modifiedTime": 1717229942831,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d1",
+  "_key": "!tables!fAoCMvIPD4qMjp7B"
+}

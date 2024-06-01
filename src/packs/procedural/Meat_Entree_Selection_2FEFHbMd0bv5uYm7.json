@@ -1,0 +1,1527 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Meat Entree Selection",
+  "_id": "2FEFHbMd0bv5uYm7",
+  "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "ofcq802IHLLnWNpx",
+      "text": "Beef Taco Filling (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.ofcq802IHLLnWNpx"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "5EAtLGLAU7OpBXo2",
+      "text": "Cajun Rice &amp; Sausage (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.5EAtLGLAU7OpBXo2"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "ZcTi8WGn8vPn48Ty",
+      "text": "Beef Steak (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.ZcTi8WGn8vPn48Ty"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "Z53QW4lo7KjfUr43",
+      "text": "Pork Patty (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Z53QW4lo7KjfUr43"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "K0KibTb7JmilDB7u",
+      "text": "Grilled Chicken (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.K0KibTb7JmilDB7u"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "PmoaW7dIXrCP6B3w",
+      "text": "Chicken With Curry Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.PmoaW7dIXrCP6B3w"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ZQQQIthBMfelaCDW",
+      "text": "Pasta With Vegetables in Tomato Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.ZQQQIthBMfelaCDW"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "TeuA2CJuEPAhMMBx",
+      "text": "Chicken Á La King (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.TeuA2CJuEPAhMMBx"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "dmhUu3wE1hBy6nb5",
+      "text": "Chicken With Salsa (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.dmhUu3wE1hBy6nb5"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "bMBB5sLBTOpBu0IK",
+      "text": "Chicken With Noodles (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.bMBB5sLBTOpBu0IK"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "LgCsHsswwiRcrYi6",
+      "text": "Hash Brown Potatoes with Bacon, Peppers &amp; Onions (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.LgCsHsswwiRcrYi6"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "BPk37b0Q0f47B0oX",
+      "text": "Pork Sausage With Gravy (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.BPk37b0Q0f47B0oX"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "pCzkis6hpobP8PQ2",
+      "text": "Grilled Jalapeno Pepper Jack Beef Patty (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.pCzkis6hpobP8PQ2"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "7jpNhU11RzCw4iuu",
+      "text": "Pork &amp; Greens (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.7jpNhU11RzCw4iuu"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "wXxWOcRZVwUzF3QH",
+      "text": "Beef Diced With Gravy (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.wXxWOcRZVwUzF3QH"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "t2RzXsgbxhr4dEm3",
+      "text": "Meatballs Beef &amp; Rice in Tomato Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.t2RzXsgbxhr4dEm3"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "E3dawYeKoiLsevf3",
+      "text": "Corned Beef Hash (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.E3dawYeKoiLsevf3"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "gibHM7aDzSNV0b4k",
+      "text": "Salmon With Rice &amp; Vegetables (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.gibHM7aDzSNV0b4k"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "VmGgN75kj0t07UKY",
+      "text": "Chicken Parmesan (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.VmGgN75kj0t07UKY"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "dUh5syrxpNA3lpcK",
+      "text": "Jalapeño Pepper Jack Beef Patty (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.dUh5syrxpNA3lpcK"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "_id": "vDS08aNIRz3ammsi",
+      "text": "Pork Salad (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.vDS08aNIRz3ammsi"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "_id": "Di4MZNqKJiT729Bb",
+      "text": "Vegetarian Taco Pasta (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Di4MZNqKJiT729Bb"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "_id": "KpV3mKPkxbqNVvVk",
+      "text": "Escalloped Potatoes with Ham (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.KpV3mKPkxbqNVvVk"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "_id": "lQA3gLahbdejdVcO",
+      "text": "Beef Slices in BBQ Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.lQA3gLahbdejdVcO"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "_id": "zwUyvuUClbt3yMwA",
+      "text": "Tuna Steak (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.zwUyvuUClbt3yMwA"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "_id": "iqoyb4VSMcM2Uu42",
+      "text": "Maple Sausage (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.iqoyb4VSMcM2Uu42"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "_id": "JLbuw1pnkpbal0aZ",
+      "text": "Saute Of Rabbit (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.JLbuw1pnkpbal0aZ"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "_id": "nqoQGzWcrtsgi49h",
+      "text": "Pork Chow Mein (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.nqoQGzWcrtsgi49h"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "_id": "L2eVKVcW1Miuyc7z",
+      "text": "Beef &amp; Black Beans (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.L2eVKVcW1Miuyc7z"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "_id": "dhmEkzl77jIi14it",
+      "text": "Jambalaya (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.dhmEkzl77jIi14it"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "_id": "DWKCCf04IzKokiVb",
+      "text": "Pork &amp; Lentils (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.DWKCCf04IzKokiVb"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "_id": "9Lu8mUljY5FcSXIB",
+      "text": "Beef Roast With Vegetables (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.9Lu8mUljY5FcSXIB"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "_id": "VnA4sB4dhgo2erCi",
+      "text": "Sausage &amp; Lentils (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.VnA4sB4dhgo2erCi"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWsDhBYyxG4Qv5x5",
+      "text": "Omelet With Ham (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.GWsDhBYyxG4Qv5x5"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "_id": "cgXErjxyDtfWkFIA",
+      "text": "Ham &amp; Chicken Loaf (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.cgXErjxyDtfWkFIA"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "_id": "gsdPOXCRETgx4MTW",
+      "text": "Meatballs With Marinara Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.gsdPOXCRETgx4MTW"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "_id": "culHoHV1mmuIx3V8",
+      "text": "Island Chicken (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.culHoHV1mmuIx3V8"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        38,
+        38
+      ],
+      "drawn": false,
+      "_id": "lp1sMnZ1bufFV8E1",
+      "text": "Chicken Loaf (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.lp1sMnZ1bufFV8E1"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        39,
+        39
+      ],
+      "drawn": false,
+      "_id": "IiutIOzbwOvkKwGm",
+      "text": "Beef Salad (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.IiutIOzbwOvkKwGm"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "_id": "2ys9qfkw0uv9Pl1o",
+      "text": "Chicken, Egg Noodles, &amp; Vegetables, in Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.2ys9qfkw0uv9Pl1o"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        41,
+        41
+      ],
+      "drawn": false,
+      "_id": "sYWZsppqquIOIGVG",
+      "text": "Shepard’s Pie (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.sYWZsppqquIOIGVG"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        42,
+        42
+      ],
+      "drawn": false,
+      "_id": "U7bxvFieprUIfaSd",
+      "text": "Sloppy Joe Filling (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.U7bxvFieprUIfaSd"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        43,
+        43
+      ],
+      "drawn": false,
+      "_id": "OtHqbqZD6KtMOZhG",
+      "text": "Stewed Beef &amp; Carrots (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.OtHqbqZD6KtMOZhG"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        44,
+        44
+      ],
+      "drawn": false,
+      "_id": "1jRlPlRlP6hNqi9f",
+      "text": "Lemon Pepper Tuna (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.1jRlPlRlP6hNqi9f"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        45,
+        45
+      ],
+      "drawn": false,
+      "_id": "Sj5HPTnQ4upLq4wJ",
+      "text": "Buffalo Chicken (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Sj5HPTnQ4upLq4wJ"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        46,
+        46
+      ],
+      "drawn": false,
+      "_id": "WkyQqCKyQoKSnZWh",
+      "text": "Meat Chili (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.WkyQqCKyQoKSnZWh"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        47,
+        47
+      ],
+      "drawn": false,
+      "_id": "Nkw8r8jfXnzHE3Vr",
+      "text": "Chicken Tetrazzini (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Nkw8r8jfXnzHE3Vr"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        48,
+        48
+      ],
+      "drawn": false,
+      "_id": "QjnLPjg6sl4ENCnK",
+      "text": "Seafood Risotto (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.QjnLPjg6sl4ENCnK"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        49,
+        49
+      ],
+      "drawn": false,
+      "_id": "XmV2P7MUryafA0CJ",
+      "text": "Jerk Pork Chop with Noodles (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.XmV2P7MUryafA0CJ"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        50,
+        50
+      ],
+      "drawn": false,
+      "_id": "H88lZDVG0u8E8ClK",
+      "text": "Spicy Chicken Stew (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.H88lZDVG0u8E8ClK"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        51,
+        51
+      ],
+      "drawn": false,
+      "_id": "hozA1oomNVJDA1Rc",
+      "text": "Meat Loaf with Gravy (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.hozA1oomNVJDA1Rc"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        52,
+        52
+      ],
+      "drawn": false,
+      "_id": "Zf0tX2Jm7C5ul0C7",
+      "text": "Escalloped Potatoes with Ham (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Zf0tX2Jm7C5ul0C7"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        53,
+        53
+      ],
+      "drawn": false,
+      "_id": "Nt2rLdYV9zDuMX0M",
+      "text": "Turkey Breast With Gravy &amp; Potatoes (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Nt2rLdYV9zDuMX0M"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        54,
+        54
+      ],
+      "drawn": false,
+      "_id": "DrglfL80QXTRsbUt",
+      "text": "Chicken &amp; Rice (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.DrglfL80QXTRsbUt"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        55,
+        55
+      ],
+      "drawn": false,
+      "_id": "tjI3FtqDoIOmDhQU",
+      "text": "Country Captain Chicken (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.tjI3FtqDoIOmDhQU"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        56,
+        56
+      ],
+      "drawn": false,
+      "_id": "0nIzH8X0rPtlxlWA",
+      "text": "Sausages With Beans (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.0nIzH8X0rPtlxlWA"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        57,
+        57
+      ],
+      "drawn": false,
+      "_id": "I3TjfOPnEdFtfGZC",
+      "text": "Beef Brisket (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.I3TjfOPnEdFtfGZC"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        58,
+        58
+      ],
+      "drawn": false,
+      "_id": "wVCZdidulxuTCDq3",
+      "text": "Pork Rib (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.wVCZdidulxuTCDq3"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        59,
+        59
+      ],
+      "drawn": false,
+      "_id": "TTpAhHdSSj38ykNq",
+      "text": "Grilled Beefsteak (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.TTpAhHdSSj38ykNq"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        60,
+        60
+      ],
+      "drawn": false,
+      "_id": "m3HS9STepk8jb17p",
+      "text": "Mutton Stew Flageolets (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.m3HS9STepk8jb17p"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        61,
+        61
+      ],
+      "drawn": false,
+      "_id": "2dnRnFAXehjqlo3K",
+      "text": "Spaghetti With Meat Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.2dnRnFAXehjqlo3K"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        62,
+        62
+      ],
+      "drawn": false,
+      "_id": "gchqQkZbe09kjeXS",
+      "text": "Pork With Rice in BBQ Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.gchqQkZbe09kjeXS"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        63,
+        63
+      ],
+      "drawn": false,
+      "_id": "U872NVBhSjCtRpBn",
+      "text": "Boneless Pork Chop (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.U872NVBhSjCtRpBn"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        64,
+        64
+      ],
+      "drawn": false,
+      "_id": "QMacKz87WostAPR5",
+      "text": "Pork Spare Ribs (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.QMacKz87WostAPR5"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        65,
+        65
+      ],
+      "drawn": false,
+      "_id": "LEoG6gXuW1XQ8vMx",
+      "text": "Chicken With Cavatelli (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.LEoG6gXuW1XQ8vMx"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        66,
+        66
+      ],
+      "drawn": false,
+      "_id": "O22P4dXWs4fnduYP",
+      "text": "Chili With Beans (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.O22P4dXWs4fnduYP"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        67,
+        67
+      ],
+      "drawn": false,
+      "_id": "GmyFwD0PviNPRaeF",
+      "text": "Southwest Beef &amp; Black Beans (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.GmyFwD0PviNPRaeF"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        68,
+        68
+      ],
+      "drawn": false,
+      "_id": "dqtO4QCHKYgH0U8J",
+      "text": "Tuna With Noodles (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.dqtO4QCHKYgH0U8J"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        69,
+        69
+      ],
+      "drawn": false,
+      "_id": "YAnUl8qG0RLy8lH0",
+      "text": "Pepperoni Pizza (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.YAnUl8qG0RLy8lH0"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        70,
+        70
+      ],
+      "drawn": false,
+      "_id": "HN56lNMGaHbWr3by",
+      "text": "Beef Goulash (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.HN56lNMGaHbWr3by"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        71,
+        71
+      ],
+      "drawn": false,
+      "_id": "aKuBuX38kQzUzhDv",
+      "text": "Turkey Diced With Gravy (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.aKuBuX38kQzUzhDv"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        72,
+        72
+      ],
+      "drawn": false,
+      "_id": "5gPW0TcffXI7Cmn2",
+      "text": "Beef Teriyaki (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.5gPW0TcffXI7Cmn2"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        73,
+        73
+      ],
+      "drawn": false,
+      "_id": "Yt2R5YbZVlk26uP7",
+      "text": "Meatballs in BBQ sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Yt2R5YbZVlk26uP7"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        74,
+        74
+      ],
+      "drawn": false,
+      "_id": "gI3Lyie8G3W3IGxz",
+      "text": "Chili With Beans (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.gI3Lyie8G3W3IGxz"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        75,
+        75
+      ],
+      "drawn": false,
+      "_id": "SGTKXJz2Riv0uzoC",
+      "text": "Cheese &amp; Vegetable Omelet (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.SGTKXJz2Riv0uzoC"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        76,
+        76
+      ],
+      "drawn": false,
+      "_id": "A9nDRNZuznPMV4y7",
+      "text": "Boneless Pork Chop with Noodles (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.A9nDRNZuznPMV4y7"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        77,
+        77
+      ],
+      "drawn": false,
+      "_id": "SAjQaWe6IRocCyDA",
+      "text": "Smoky Sausages (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.SAjQaWe6IRocCyDA"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        78,
+        78
+      ],
+      "drawn": false,
+      "_id": "zwe4ekae7nuYZLDd",
+      "text": "Chicken Pesto Pasta (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.zwe4ekae7nuYZLDd"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        79,
+        79
+      ],
+      "drawn": false,
+      "_id": "inFjGcSZ9XKRNh6k",
+      "text": "Tuna Salad (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.inFjGcSZ9XKRNh6k"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        80,
+        80
+      ],
+      "drawn": false,
+      "_id": "bG7FZyWbJPDTXZVp",
+      "text": "Beef Patty (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.bG7FZyWbJPDTXZVp"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        81,
+        81
+      ],
+      "drawn": false,
+      "_id": "DjObfBd51NMEHJeG",
+      "text": "Beef with Mushrooms (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.DjObfBd51NMEHJeG"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        82,
+        82
+      ],
+      "drawn": false,
+      "_id": "qT6nhcrrdHLgDLMR",
+      "text": "Ham Slices (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.qT6nhcrrdHLgDLMR"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        83,
+        83
+      ],
+      "drawn": false,
+      "_id": "TJcbdLY0fWU8OdFf",
+      "text": "Chicken Fajita (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.TJcbdLY0fWU8OdFf"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        84,
+        84
+      ],
+      "drawn": false,
+      "_id": "mEl4Gdsj3vdw7BPw",
+      "text": "Chili Macaroni (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.mEl4Gdsj3vdw7BPw"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        85,
+        85
+      ],
+      "drawn": false,
+      "_id": "Nq5iVXveVC5oLZa8",
+      "text": "Pasta with Alfredo Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.Nq5iVXveVC5oLZa8"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        86,
+        86
+      ],
+      "drawn": false,
+      "_id": "lvIFXJpcVJak1tKl",
+      "text": "Beef Stew (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.lvIFXJpcVJak1tKl"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        87,
+        87
+      ],
+      "drawn": false,
+      "_id": "xmQ3bhxaygdO7bFj",
+      "text": "Vegetable Manicotti (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.xmQ3bhxaygdO7bFj"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        88,
+        88
+      ],
+      "drawn": false,
+      "_id": "wKdmBur533ow7Qpn",
+      "text": "Bean &amp; Rice Burrito (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.wKdmBur533ow7Qpn"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        89,
+        89
+      ],
+      "drawn": false,
+      "_id": "4JvTmQqGcQJYGDTw",
+      "text": "Sweet and Spicy Beef Strips (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.4JvTmQqGcQJYGDTw"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        90,
+        90
+      ],
+      "drawn": false,
+      "_id": "3iSUtBbX8XfiP2Du",
+      "text": "Stewed Lamb (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.3iSUtBbX8XfiP2Du"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        91,
+        91
+      ],
+      "drawn": false,
+      "_id": "zzFnqTghWgm1xFUi",
+      "text": "Stewed Chicken (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.zzFnqTghWgm1xFUi"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        92,
+        92
+      ],
+      "drawn": false,
+      "_id": "6BXcVq1MS9wzsvYp",
+      "text": "Stewed Beef (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.6BXcVq1MS9wzsvYp"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        93,
+        93
+      ],
+      "drawn": false,
+      "_id": "4md9hYytr5jv2jfx",
+      "text": "Beef Ground with Spiced Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.4md9hYytr5jv2jfx"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        94,
+        94
+      ],
+      "drawn": false,
+      "_id": "JuMzXO82Lg18RFiD",
+      "text": "Chicken Stew (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.JuMzXO82Lg18RFiD"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        95,
+        95
+      ],
+      "drawn": false,
+      "_id": "y4bTXz8jPsj8Xl6z",
+      "text": "Beef Ravioli (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.y4bTXz8jPsj8Xl6z"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        96,
+        96
+      ],
+      "drawn": false,
+      "_id": "g12SUFnOcMXSBZBi",
+      "text": "Ginger Beef Strips (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.g12SUFnOcMXSBZBi"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        97,
+        97
+      ],
+      "drawn": false,
+      "_id": "jXvKZgi540c0iokA",
+      "text": "Chicken with Dumplings (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.jXvKZgi540c0iokA"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        98,
+        98
+      ],
+      "drawn": false,
+      "_id": "8hiuLIqJR0kcla91",
+      "text": "Chicken Stewed in Red Wine (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.8hiuLIqJR0kcla91"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        99,
+        99
+      ],
+      "drawn": false,
+      "_id": "aKUg8aONnzTgwWpn",
+      "text": "Chicken Chunks (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.aKUg8aONnzTgwWpn"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "UHkTT0W1I8aPsjm1",
+      "text": "Shredded BBQ Beef (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_key": "!tables.results!2FEFHbMd0bv5uYm7.UHkTT0W1I8aPsjm1"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717195875845,
+    "modifiedTime": 1717220554611,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!2FEFHbMd0bv5uYm7"
+}

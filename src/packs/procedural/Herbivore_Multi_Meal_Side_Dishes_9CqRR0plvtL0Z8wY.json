@@ -1,0 +1,75 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Herbivore Multi Meal Side Dishes",
+  "_id": "9CqRR0plvtL0Z8wY",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Side Dish Selection",
+      "documentId": "5QsA6d9iaNouAALO",
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_id": "8o6UQtRq3KHs0GDB",
+      "flags": {},
+      "_key": "!tables.results!9CqRR0plvtL0Z8wY.8o6UQtRq3KHs0GDB"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Side Dish Selection",
+      "documentId": "5QsA6d9iaNouAALO",
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_id": "BaeN0Y7OVijmcTfV",
+      "flags": {},
+      "_key": "!tables.results!9CqRR0plvtL0Z8wY.BaeN0Y7OVijmcTfV"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        91,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Side Dish Selection",
+      "documentId": "5QsA6d9iaNouAALO",
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_id": "i67ZeN4aOZqvhVuv",
+      "flags": {},
+      "_key": "!tables.results!9CqRR0plvtL0Z8wY.i67ZeN4aOZqvhVuv"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717221316776,
+    "modifiedTime": 1717222990466,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!9CqRR0plvtL0Z8wY"
+}

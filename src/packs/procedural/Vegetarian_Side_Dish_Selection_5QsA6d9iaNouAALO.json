@@ -1,0 +1,777 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Vegetarian Side Dish Selection",
+  "_id": "5QsA6d9iaNouAALO",
+  "img": "icons/consumables/fruit/apple-ripe-red.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "BBsUtOrpw0zWAgLf",
+      "text": "Nut Raisin Mix (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.BBsUtOrpw0zWAgLf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "1WCcuW2m5Q14PCxY",
+      "text": "Dried Cranberries (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.1WCcuW2m5Q14PCxY"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "gcQRUih80t88pVkN",
+      "text": "Dried Dates (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.gcQRUih80t88pVkN"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "s1hxdVDdI9iRVngC",
+      "text": "Dried Figs (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.s1hxdVDdI9iRVngC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "vWjuzmQErs1JhMWQ",
+      "text": "Dried Peaches (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.vWjuzmQErs1JhMWQ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "OSKZGVuSazV8WjBh",
+      "text": "Dried Pears (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.OSKZGVuSazV8WjBh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "UhVkQCVeSKn353Uz",
+      "text": "Dried Raisins (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.UhVkQCVeSKn353Uz"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "acf11cRcIpC9EVVC",
+      "text": "Dried Currants (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.acf11cRcIpC9EVVC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "5OOzENJAKLJ9UJ0u",
+      "text": "Dried Blueberries (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.5OOzENJAKLJ9UJ0u"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "sQv1qwY31Qxe4Po0",
+      "text": "Dried Meatapples (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.sQv1qwY31Qxe4Po0"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "rqXFgo1nFzJcsSYK",
+      "text": "Dried Mangos (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.rqXFgo1nFzJcsSYK"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "xhY1OdHl6PsK9uwf",
+      "text": "Dried Apples (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.xhY1OdHl6PsK9uwf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eU9WTLfrzo7cflWO",
+      "text": "Dried Pineapples (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.eU9WTLfrzo7cflWO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "TCH8CWq6LukecjyM",
+      "text": "Dried Apricots (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.TCH8CWq6LukecjyM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "2fwUt7UEGcD774XD",
+      "text": "Mixed Dried Fruit (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.2fwUt7UEGcD774XD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "hxu1tQ4tqcLmS6Cv",
+      "text": "Trail Mix (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.hxu1tQ4tqcLmS6Cv"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "CG1PjH94mFPnWD0Q",
+      "text": "Baked Beans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.CG1PjH94mFPnWD0Q"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "zc9k0ZnJSCb7tEzL",
+      "text": "Applesauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.zc9k0ZnJSCb7tEzL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "RaXx2VH5eO8bh2Y1",
+      "text": "Meatapple sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.RaXx2VH5eO8bh2Y1"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "38KRTG6t6DkLNo4C",
+      "text": "Yellow Rice (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.38KRTG6t6DkLNo4C"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "mOHW5aYSBc9aysug",
+      "text": "White Rice (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.mOHW5aYSBc9aysug"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "APvMR9s9yw3P9BAb",
+      "text": "Mixed Rice (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.APvMR9s9yw3P9BAb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jj47coTMPGn7x1Cf",
+      "text": "Spiced Rice and Beans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.Jj47coTMPGn7x1Cf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "PfrcG9wECEGhIlQb",
+      "text": "Risotto (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.PfrcG9wECEGhIlQb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "rM5dHDwh1MY9132O",
+      "text": "Mashed Potatoes with Butter (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.rM5dHDwh1MY9132O"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "RwN4sOvlmZNp6Cxy",
+      "text": "Corn Kernels (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.RwN4sOvlmZNp6Cxy"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "pUWRnD2HcWphE6Sh",
+      "text": "Black Beans in Seasoned Sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.pUWRnD2HcWphE6Sh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "ZzvY5BJkfDXvBsC4",
+      "text": "Au Gratin Potatoes (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.ZzvY5BJkfDXvBsC4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "1pCHllhOR1yhtpsw",
+      "text": "Fruit Cocktail (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.1pCHllhOR1yhtpsw"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "SavHlyr2RsnjPO1u",
+      "text": "Spiced Apples (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.SavHlyr2RsnjPO1u"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "gNbHqpdPhhohe2I9",
+      "text": "Spiced Pears (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.gNbHqpdPhhohe2I9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "yKIQJnAFQBK2aJP9",
+      "text": "Apple First Strike Bar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.yKIQJnAFQBK2aJP9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "fImxa5K5CjzJ0Obg",
+      "text": "Chocolate First Strike Bar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.fImxa5K5CjzJ0Obg"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "3eZGZKYQYFDob5wI",
+      "text": "Raspberry First Strike Bar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.3eZGZKYQYFDob5wI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "ajCe8Is6O5pvNl8R",
+      "text": "Cran-Raspberry First Strike Bar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.ajCe8Is6O5pvNl8R"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "JkO2CYdfFoGaWeQ8",
+      "text": "Peanut Butter First Strike Bar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.JkO2CYdfFoGaWeQ8"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "ZZ1dQlcm1KrvoYrn",
+      "text": "Mocha First Strike Bar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.ZZ1dQlcm1KrvoYrn"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "jtW6pIIx4OYfqRSv",
+      "text": "Fig Fruit Bars (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.jtW6pIIx4OYfqRSv"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "tXs0KStCLwO5cPYY",
+      "text": "Pickles (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.tXs0KStCLwO5cPYY"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "X67CisPJwE9KtCe5",
+      "text": "Cheese Filled Crackers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.X67CisPJwE9KtCe5"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "vsaqkCTu9Q8jghQJ",
+      "text": "Peanut Butter Filled Crackers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.vsaqkCTu9Q8jghQJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "U1TbGhbxrvdIl3H8",
+      "text": "Spicy Filled Crackers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.U1TbGhbxrvdIl3H8"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "UPCJDzTnRceTyYuB",
+      "text": "Pizza Flavored Filled Crackers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.UPCJDzTnRceTyYuB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "bt9f240xCOlZLhQr",
+      "text": "Salt and Pepper Pretzel Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.bt9f240xCOlZLhQr"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "BU4AR8H2YKxOBYhU",
+      "text": "Honey Mustard Pretzel Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.BU4AR8H2YKxOBYhU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "sQIQoc8fh7hrvwHg",
+      "text": "Cheese Flavored Pretzel Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.sQIQoc8fh7hrvwHg"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "o9WyfB7sVZfPxrms",
+      "text": "Buffalo Wing Flavored Pretzel Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.o9WyfB7sVZfPxrms"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "bCHNdDwd41zEtJyX",
+      "text": "Jalapeno Flavored Pretzel Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.bCHNdDwd41zEtJyX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "drxlMNfYq1En4oAg",
+      "text": "Buttermilk Ranch Flavored Pretzel Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.drxlMNfYq1En4oAg"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "ADBgM4RTPEEOSyaP",
+      "text": "Honey BBQ Flavored Pretzel Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_key": "!tables.results!5QsA6d9iaNouAALO.ADBgM4RTPEEOSyaP"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 50000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717220583553,
+    "modifiedTime": 1717229297403,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!5QsA6d9iaNouAALO"
+}

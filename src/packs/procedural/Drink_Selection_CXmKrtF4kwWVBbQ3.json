@@ -1,0 +1,427 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Drink Selection",
+  "_id": "CXmKrtF4kwWVBbQ3",
+  "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        1,
+        4
+      ],
+      "drawn": false,
+      "text": "Juice",
+      "documentId": "OaTovtlBnMpvIYix",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "N3TSofsl1ejwTS57",
+      "flags": {},
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.N3TSofsl1ejwTS57"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        5,
+        8
+      ],
+      "drawn": false,
+      "_id": "N6ApdDv2hgDxFIGW",
+      "text": "Water",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.N6ApdDv2hgDxFIGW"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        9,
+        12
+      ],
+      "drawn": false,
+      "text": "Energy Drink",
+      "documentId": "9JRU6hyNAkiPzSGS",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "1CKP3QFFA9nSHXIa",
+      "flags": {},
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.1CKP3QFFA9nSHXIa"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        13,
+        16
+      ],
+      "drawn": false,
+      "text": "Electrolyte Drink",
+      "documentId": "YVml15tzEzqOau8b",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "XCesKPHqNtV5UddI",
+      "flags": {},
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.XCesKPHqNtV5UddI"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        17,
+        20
+      ],
+      "drawn": false,
+      "_id": "oEXvp2eXGHzYc5Db",
+      "text": "Green Tea",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.oEXvp2eXGHzYc5Db"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        21,
+        24
+      ],
+      "drawn": false,
+      "_id": "ELRwysZJVYRrjMqI",
+      "text": "Black Tea",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.ELRwysZJVYRrjMqI"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        25,
+        28
+      ],
+      "drawn": false,
+      "_id": "sEe8z6BPDgfvcwmN",
+      "text": "Herbal Tea",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.sEe8z6BPDgfvcwmN"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        29,
+        32
+      ],
+      "drawn": false,
+      "_id": "8lKeknBvmG6YVWoI",
+      "text": "Lemon Tea",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.8lKeknBvmG6YVWoI"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        33,
+        36
+      ],
+      "drawn": false,
+      "_id": "RuKxyAaha0apYHq8",
+      "text": "Peppermint Tea",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.RuKxyAaha0apYHq8"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        37,
+        40
+      ],
+      "drawn": false,
+      "_id": "LKMBGeb6euobOihc",
+      "text": "Vodka",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.LKMBGeb6euobOihc"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        41,
+        44
+      ],
+      "drawn": false,
+      "_id": "10PZ6KVcCj50QVaB",
+      "text": "Tequila",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.10PZ6KVcCj50QVaB"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        45,
+        48
+      ],
+      "drawn": false,
+      "_id": "D59rCA6GYJAGEvYe",
+      "text": "Gin",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.D59rCA6GYJAGEvYe"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        49,
+        52
+      ],
+      "drawn": false,
+      "_id": "vZc83R4qS2oMpGGU",
+      "text": "Brandy",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.vZc83R4qS2oMpGGU"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        53,
+        56
+      ],
+      "drawn": false,
+      "_id": "eQFmSRh7Apb3WkLg",
+      "text": "Wine",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.eQFmSRh7Apb3WkLg"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        57,
+        60
+      ],
+      "drawn": false,
+      "_id": "nzHmZA4jGkYPeksO",
+      "text": "Beer",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.nzHmZA4jGkYPeksO"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        61,
+        64
+      ],
+      "drawn": false,
+      "_id": "XICyiPYG3w0O8fPn",
+      "text": "Bourbon",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.XICyiPYG3w0O8fPn"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        65,
+        68
+      ],
+      "drawn": false,
+      "_id": "padXq3DK4xLhWGbC",
+      "text": "Rum",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.padXq3DK4xLhWGbC"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        69,
+        72
+      ],
+      "drawn": false,
+      "_id": "fN2dSxpJUzXIC4y2",
+      "text": "Moonshine",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.fN2dSxpJUzXIC4y2"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        73,
+        76
+      ],
+      "drawn": false,
+      "_id": "CbBvodFWadBrhVmM",
+      "text": "Liqueur",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.CbBvodFWadBrhVmM"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        77,
+        80
+      ],
+      "drawn": false,
+      "_id": "mfULs2vw9b1gQ8cd",
+      "text": "Grain Alcohol",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.mfULs2vw9b1gQ8cd"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        81,
+        84
+      ],
+      "drawn": false,
+      "_id": "7xEJvlzIRPNUqfsH",
+      "text": "Lemonade",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.7xEJvlzIRPNUqfsH"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        85,
+        88
+      ],
+      "drawn": false,
+      "text": "Soda",
+      "documentId": "a7xzVBD2bYv41cch",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "i5sxmjZuVQ7oaRk5",
+      "flags": {},
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.i5sxmjZuVQ7oaRk5"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        89,
+        92
+      ],
+      "drawn": false,
+      "_id": "CkINh2bxaofHONAn",
+      "text": "Standard Milk",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.CkINh2bxaofHONAn"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        93,
+        96
+      ],
+      "drawn": false,
+      "_id": "sSj4PvNUzZf47o6O",
+      "text": "Almond Milk",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.sSj4PvNUzZf47o6O"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 4,
+      "range": [
+        97,
+        100
+      ],
+      "drawn": false,
+      "_id": "rfJqOCG3GmgZfhKA",
+      "text": "Soy Milk",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!CXmKrtF4kwWVBbQ3.rfJqOCG3GmgZfhKA"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 1700000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717228524663,
+    "modifiedTime": 1717229139052,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!CXmKrtF4kwWVBbQ3"
+}

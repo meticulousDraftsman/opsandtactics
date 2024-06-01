@@ -1,0 +1,612 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Meat Side Dish Selection",
+  "_id": "Yd1w8GnouCP23lmq",
+  "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "486tzJP6Z7SqVX0o",
+      "text": "Teriyaki Beef Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.486tzJP6Z7SqVX0o"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "WVb9Ubd9grRVywA4",
+      "text": "Peppered Beef Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.WVb9Ubd9grRVywA4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "J3O3KxE8aWVIpW2D",
+      "text": "Lemon Pepper Beef Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.J3O3KxE8aWVIpW2D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "89ucfwdEIXbKBNNf",
+      "text": "Garlic Beef Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.89ucfwdEIXbKBNNf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "RCSc0sQeWViDVzmQ",
+      "text": "Honey Beef Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.RCSc0sQeWViDVzmQ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "n8ys6isyzUdaVmBa",
+      "text": "Spicy Beef Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.n8ys6isyzUdaVmBa"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "nDS0ejAuFM2MLhBL",
+      "text": "Hard Boiled Eggs (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.nDS0ejAuFM2MLhBL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "3pH1K2XuW1ru7kSK",
+      "text": "Tuna Packet (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.3pH1K2XuW1ru7kSK"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "t57iy5Lg3VDKtOoj",
+      "text": "Smoked Turkey Nuggets (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.t57iy5Lg3VDKtOoj"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "u4I5R04zLc3jFgS6",
+      "text": "Teriyaki Turkey Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.u4I5R04zLc3jFgS6"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "cBkSC9eISHVjWedz",
+      "text": "Peppered Turkey Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.cBkSC9eISHVjWedz"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "HRlrHGxNGTSQygEB",
+      "text": "Honey Turkey Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.HRlrHGxNGTSQygEB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "unvyYjcB0hpIHzPp",
+      "text": "Spicy Turkey Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.unvyYjcB0hpIHzPp"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "zx8XXfsVEFj7BBXY",
+      "text": "Teriyaki Beef Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.zx8XXfsVEFj7BBXY"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "nVS7KbUmoem6fwjB",
+      "text": "Peppered Beef Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.nVS7KbUmoem6fwjB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "PAPnbPQGuy6Bed08",
+      "text": "Honey Beef Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.PAPnbPQGuy6Bed08"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "FVyQ3UsMyBD6lNk2",
+      "text": "Spicy Beef Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.FVyQ3UsMyBD6lNk2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "b9O6DGFWosi6S1u7",
+      "text": "Teriyaki Elk Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.b9O6DGFWosi6S1u7"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "jWDRnarlvk0E6TUq",
+      "text": "Peppered Elk Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.jWDRnarlvk0E6TUq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "fivCB2ykTk6qAT8k",
+      "text": "Honey Elk Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.fivCB2ykTk6qAT8k"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "egHRvUdiIdmQQY7X",
+      "text": "Spicy Elk Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.egHRvUdiIdmQQY7X"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "LGCzaNS93Un7XFU8",
+      "text": "Teriyaki Venison Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.LGCzaNS93Un7XFU8"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "hGnh3oCFI4FyKao9",
+      "text": "Peppered Venison Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.hGnh3oCFI4FyKao9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "G7EgKiWQy0Mzouf5",
+      "text": "Honey Venison Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.G7EgKiWQy0Mzouf5"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "7ohRs2TSthNpkyup",
+      "text": "Spicy Venison Jerky (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.7ohRs2TSthNpkyup"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "SXAGtLR4Ab7ySsAd",
+      "text": "Pepperoni Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.SXAGtLR4Ab7ySsAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "LIhga6Do3JPj0lN9",
+      "text": "Salami Sticks (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.LIhga6Do3JPj0lN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "5fXIn0qMUzELa4eX",
+      "text": "Pickled Sausage (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.5fXIn0qMUzELa4eX"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        57,
+        61
+      ],
+      "drawn": false,
+      "_id": "Ry0FiXdnKQut8a10",
+      "text": "Pickled Herring in Mustard (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.Ry0FiXdnKQut8a10"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        62,
+        66
+      ],
+      "drawn": false,
+      "_id": "RklvisUNRNhESUHy",
+      "text": "Pickled Herring in Vegetable Oil (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.RklvisUNRNhESUHy"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        67,
+        71
+      ],
+      "drawn": false,
+      "_id": "QbETP394D8SSEF4e",
+      "text": "Anchovies in Mustard (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.QbETP394D8SSEF4e"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "2Dawp7zs3HCHuXLR",
+      "text": "Anchovies in Tomato Sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.2Dawp7zs3HCHuXLR"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "HQCbe2kxqk1x4mA8",
+      "text": "Anchovies in Vegetable Oil (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.HQCbe2kxqk1x4mA8"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "XhQFNwiklpEJiwul",
+      "text": "Sardines in Mustard (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.XhQFNwiklpEJiwul"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "LCVbaK9ui2hQLZtr",
+      "text": "Sardines in Tomato Sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.LCVbaK9ui2hQLZtr"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        91,
+        94
+      ],
+      "drawn": false,
+      "_id": "RReLbaq5EmhQbf2P",
+      "text": "Sardines in Vegetable Oil (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.RReLbaq5EmhQbf2P"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        95,
+        98
+      ],
+      "drawn": false,
+      "_id": "5qJ5sCrvNj3jdSx9",
+      "text": "Dried Sardines (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.5qJ5sCrvNj3jdSx9"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        99,
+        99
+      ],
+      "drawn": false,
+      "_id": "wwP9FiNypyDO96iO",
+      "text": "Smoked Salmon (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.wwP9FiNypyDO96iO"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "wB7B9zt6y5wM8pea",
+      "text": "Poached Trout (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_key": "!tables.results!Yd1w8GnouCP23lmq.wB7B9zt6y5wM8pea"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717219725326,
+    "modifiedTime": 1717229312791,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!Yd1w8GnouCP23lmq"
+}

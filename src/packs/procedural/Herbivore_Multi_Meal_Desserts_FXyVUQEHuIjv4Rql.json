@@ -1,0 +1,75 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Herbivore Multi Meal Desserts",
+  "_id": "FXyVUQEHuIjv4Rql",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Dessert Selection",
+      "documentId": "MxMck7A8hhEG7c2o",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "rCNoOahQsg09NAlP",
+      "flags": {},
+      "_key": "!tables.results!FXyVUQEHuIjv4Rql.rCNoOahQsg09NAlP"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Dessert Selection",
+      "documentId": "MxMck7A8hhEG7c2o",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "2MGv2gPrbLTuI86i",
+      "flags": {},
+      "_key": "!tables.results!FXyVUQEHuIjv4Rql.2MGv2gPrbLTuI86i"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        76,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Dessert Selection",
+      "documentId": "MxMck7A8hhEG7c2o",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "6KLpz2WuaAMkx2hz",
+      "flags": {},
+      "_key": "!tables.results!FXyVUQEHuIjv4Rql.6KLpz2WuaAMkx2hz"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717226707572,
+    "modifiedTime": 1717226744597,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!FXyVUQEHuIjv4Rql"
+}

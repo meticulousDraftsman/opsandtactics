@@ -1,0 +1,19 @@
+{
+  "name": "Ingredients",
+  "sorting": "m",
+  "folder": "bJMIv7ooXXbZGQlV",
+  "type": "RollTable",
+  "_id": "WB9SeA30k97bLJKw",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717194544499,
+    "modifiedTime": 1717220550447,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!WB9SeA30k97bLJKw"
+}

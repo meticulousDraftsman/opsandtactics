@@ -1,0 +1,59 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Omnivore Entree Selection",
+  "_id": "thVhccXCh4Us6saK",
+  "img": "icons/consumables/food/bowl-stew-brown.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Meat Entree Selection",
+      "documentId": "2FEFHbMd0bv5uYm7",
+      "img": "icons/consumables/meat/hock-leg-red-brown.webp",
+      "_id": "n99KHzaFZhNV3prR",
+      "flags": {},
+      "_key": "!tables.results!thVhccXCh4Us6saK.n99KHzaFZhNV3prR"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Vegetarian Entree Selection",
+      "documentId": "vUqtZnwS956e6nM8",
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_id": "DnFcN8c68clWfvHF",
+      "flags": {},
+      "_key": "!tables.results!thVhccXCh4Us6saK.DnFcN8c68clWfvHF"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 96875,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717198639978,
+    "modifiedTime": 1717230571381,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d2",
+  "_key": "!tables!thVhccXCh4Us6saK"
+}

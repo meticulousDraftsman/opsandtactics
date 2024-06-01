@@ -1,0 +1,779 @@
+{
+  "name": "Jam",
+  "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "cmyfNuQjK72npr7b",
+      "text": "Apple Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.cmyfNuQjK72npr7b"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "3jI5PRGkvlY9vwAd",
+      "text": "Grape Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.3jI5PRGkvlY9vwAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "n2Vtw5Ra0dJr8feH",
+      "text": "Apricot Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.n2Vtw5Ra0dJr8feH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "7aRZsvCy8DeaUfQC",
+      "text": "Avocado Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.7aRZsvCy8DeaUfQC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "YnYUWmXy3zR5mUDB",
+      "text": "Banana Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.YnYUWmXy3zR5mUDB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "76txJMqbU2Pa4lXf",
+      "text": "Huckleberry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.76txJMqbU2Pa4lXf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "TXaZHF1bdkHujWoD",
+      "text": "Passionfruit Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.TXaZHF1bdkHujWoD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "8XZeJxDuvU553yfh",
+      "text": "Papaya Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.8XZeJxDuvU553yfh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "tkjlQHZUE7OcaaUc",
+      "text": "Tangerine Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.tkjlQHZUE7OcaaUc"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "nNHdDbmTtrBMvH5y",
+      "text": "Jackfruit Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.nNHdDbmTtrBMvH5y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "54J0zQSR4AVif0D2",
+      "text": "Persimmon Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.54J0zQSR4AVif0D2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "boW6ryCmty8gZHFP",
+      "text": "Blackberry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.boW6ryCmty8gZHFP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eJ4Ty8Za6RgBTddx",
+      "text": "Blueberry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.eJ4Ty8Za6RgBTddx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "HRqFrwhprB8UPcsk",
+      "text": "Juniper Berry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.HRqFrwhprB8UPcsk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "pVX3UxI8J0PS2M5P",
+      "text": "Kiwi Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.pVX3UxI8J0PS2M5P"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "qNb8hwVDkpUjxalW",
+      "text": "Pineapple Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.qNb8hwVDkpUjxalW"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWSNxwdC6QQDCAty",
+      "text": "Pumpkin Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.GWSNxwdC6QQDCAty"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "8YZOxemhohFDm7pM",
+      "text": "Cantaloupe Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.8YZOxemhohFDm7pM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "oqXjqJBITRwqiHN9",
+      "text": "Cucumber Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.oqXjqJBITRwqiHN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "K6QxKwxWvcVOetOH",
+      "text": "Currant Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.K6QxKwxWvcVOetOH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "AUiwxPuXR8yZ8FGq",
+      "text": "Lime Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.AUiwxPuXR8yZ8FGq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "jgbx9iRN37lOzN5F",
+      "text": "Cherry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.jgbx9iRN37lOzN5F"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jo2oPtS7zkyUaVuA",
+      "text": "Cranberry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.Jo2oPtS7zkyUaVuA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "avxsWAwxOvXJbz0n",
+      "text": "Mango Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.avxsWAwxOvXJbz0n"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "e5kKAL1sMIMigHs4",
+      "text": "Orange Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.e5kKAL1sMIMigHs4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "8ddCpjywexHcZ3fb",
+      "text": "Fig Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.8ddCpjywexHcZ3fb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "8GgIKZr1yJW0l5nx",
+      "text": "Honeydew Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.8GgIKZr1yJW0l5nx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "rUWG3EL2Ub9um1yG",
+      "text": "Dragonfruit Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.rUWG3EL2Ub9um1yG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "wIJXTmGNxZaKZpzb",
+      "text": "Gooseberry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.wIJXTmGNxZaKZpzb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "Er0iJ67DsAPWw2jk",
+      "text": "Coconut Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.Er0iJ67DsAPWw2jk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "VGEbL7wC4ZrvG1eJ",
+      "text": "Tomato Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.VGEbL7wC4ZrvG1eJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "ABQQL6RmLPlXqxFu",
+      "text": "Watermelon Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.ABQQL6RmLPlXqxFu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "7bzJMap4tcsuIBtX",
+      "text": "Raspberry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.7bzJMap4tcsuIBtX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "GLPHoYhie2aNAMc9",
+      "text": "Pomegranate Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.GLPHoYhie2aNAMc9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "TRcjJLUw5U0goz6g",
+      "text": "Plum Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.TRcjJLUw5U0goz6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "hTkF6x1QB2GeqPyS",
+      "text": "Peach Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.hTkF6x1QB2GeqPyS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "JsuLvJwxlfjJMmNL",
+      "text": "Bell Pepper Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.JsuLvJwxlfjJMmNL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "Iarua9IyIjkUUuPI",
+      "text": "Lemon Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.Iarua9IyIjkUUuPI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "XsVwiHmDX86G594v",
+      "text": "Nectarine Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.XsVwiHmDX86G594v"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "s7eAOjsrg2CnFZuu",
+      "text": "Pear Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.s7eAOjsrg2CnFZuu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvAen3QODehYcsf",
+      "text": "Star Fruit Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.tLvAen3QODehYcsf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "BzJ2C6bjIB7KWr1e",
+      "text": "Strawberry Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.BzJ2C6bjIB7KWr1e"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "3AONBkii8sMyJIV3",
+      "text": "Celery Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.3AONBkii8sMyJIV3"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "AjhQgBdPacfhIy8D",
+      "text": "Peppermint Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.AjhQgBdPacfhIy8D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "6POHzZ5pcloSb3IF",
+      "text": "Kolanut Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.6POHzZ5pcloSb3IF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "EPtr3eXsYn7njgNU",
+      "text": "Almond Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.EPtr3eXsYn7njgNU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "A3fXI2RXzEnel4oT",
+      "text": "Coffee Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.A3fXI2RXzEnel4oT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "qR2ubz6diDdY9SZq",
+      "text": "Ginger Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.qR2ubz6diDdY9SZq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "owQC2804Un6FgiMO",
+      "text": "Lychee Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.owQC2804Un6FgiMO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "RT0ZYABqdrjRVyBO",
+      "text": "Sassafrass Jam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!IKv6xBUdoe45HxyS.RT0ZYABqdrjRVyBO"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": "ZxgaKUoeOaCMLNGT",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223122384,
+    "modifiedTime": 1717223718008,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "IKv6xBUdoe45HxyS",
+  "sort": 200000,
+  "_key": "!tables!IKv6xBUdoe45HxyS"
+}

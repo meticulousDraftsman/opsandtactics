@@ -1,0 +1,779 @@
+{
+  "name": "Jellybeans",
+  "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "cmyfNuQjK72npr7b",
+      "text": "Apple Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.cmyfNuQjK72npr7b"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "3jI5PRGkvlY9vwAd",
+      "text": "Grape Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.3jI5PRGkvlY9vwAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "n2Vtw5Ra0dJr8feH",
+      "text": "Apricot Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.n2Vtw5Ra0dJr8feH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "7aRZsvCy8DeaUfQC",
+      "text": "Avocado Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.7aRZsvCy8DeaUfQC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "YnYUWmXy3zR5mUDB",
+      "text": "Banana Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.YnYUWmXy3zR5mUDB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "76txJMqbU2Pa4lXf",
+      "text": "Huckleberry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.76txJMqbU2Pa4lXf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "TXaZHF1bdkHujWoD",
+      "text": "Passionfruit Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.TXaZHF1bdkHujWoD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "8XZeJxDuvU553yfh",
+      "text": "Papaya Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.8XZeJxDuvU553yfh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "tkjlQHZUE7OcaaUc",
+      "text": "Tangerine Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.tkjlQHZUE7OcaaUc"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "nNHdDbmTtrBMvH5y",
+      "text": "Jackfruit Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.nNHdDbmTtrBMvH5y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "54J0zQSR4AVif0D2",
+      "text": "Persimmon Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.54J0zQSR4AVif0D2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "boW6ryCmty8gZHFP",
+      "text": "Blackberry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.boW6ryCmty8gZHFP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eJ4Ty8Za6RgBTddx",
+      "text": "Blueberry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.eJ4Ty8Za6RgBTddx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "HRqFrwhprB8UPcsk",
+      "text": "Juniper Berry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.HRqFrwhprB8UPcsk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "pVX3UxI8J0PS2M5P",
+      "text": "Kiwi Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.pVX3UxI8J0PS2M5P"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "qNb8hwVDkpUjxalW",
+      "text": "Pineapple Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.qNb8hwVDkpUjxalW"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWSNxwdC6QQDCAty",
+      "text": "Pumpkin Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.GWSNxwdC6QQDCAty"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "8YZOxemhohFDm7pM",
+      "text": "Cantaloupe Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.8YZOxemhohFDm7pM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "oqXjqJBITRwqiHN9",
+      "text": "Cucumber Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.oqXjqJBITRwqiHN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "K6QxKwxWvcVOetOH",
+      "text": "Currant Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.K6QxKwxWvcVOetOH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "AUiwxPuXR8yZ8FGq",
+      "text": "Lime Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.AUiwxPuXR8yZ8FGq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "jgbx9iRN37lOzN5F",
+      "text": "Cherry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.jgbx9iRN37lOzN5F"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jo2oPtS7zkyUaVuA",
+      "text": "Cranberry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.Jo2oPtS7zkyUaVuA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "avxsWAwxOvXJbz0n",
+      "text": "Mango Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.avxsWAwxOvXJbz0n"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "e5kKAL1sMIMigHs4",
+      "text": "Orange Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.e5kKAL1sMIMigHs4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "8ddCpjywexHcZ3fb",
+      "text": "Fig Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.8ddCpjywexHcZ3fb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "8GgIKZr1yJW0l5nx",
+      "text": "Honeydew Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.8GgIKZr1yJW0l5nx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "rUWG3EL2Ub9um1yG",
+      "text": "Dragonfruit Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.rUWG3EL2Ub9um1yG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "wIJXTmGNxZaKZpzb",
+      "text": "Gooseberry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.wIJXTmGNxZaKZpzb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "Er0iJ67DsAPWw2jk",
+      "text": "Coconut Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.Er0iJ67DsAPWw2jk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "VGEbL7wC4ZrvG1eJ",
+      "text": "Tomato Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.VGEbL7wC4ZrvG1eJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "ABQQL6RmLPlXqxFu",
+      "text": "Watermelon Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.ABQQL6RmLPlXqxFu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "7bzJMap4tcsuIBtX",
+      "text": "Raspberry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.7bzJMap4tcsuIBtX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "GLPHoYhie2aNAMc9",
+      "text": "Pomegranate Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.GLPHoYhie2aNAMc9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "TRcjJLUw5U0goz6g",
+      "text": "Plum Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.TRcjJLUw5U0goz6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "hTkF6x1QB2GeqPyS",
+      "text": "Peach Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.hTkF6x1QB2GeqPyS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "JsuLvJwxlfjJMmNL",
+      "text": "Bell Pepper Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.JsuLvJwxlfjJMmNL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "Iarua9IyIjkUUuPI",
+      "text": "Lemon Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.Iarua9IyIjkUUuPI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "XsVwiHmDX86G594v",
+      "text": "Nectarine Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.XsVwiHmDX86G594v"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "s7eAOjsrg2CnFZuu",
+      "text": "Pear Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.s7eAOjsrg2CnFZuu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvAen3QODehYcsf",
+      "text": "Star Fruit Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.tLvAen3QODehYcsf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "BzJ2C6bjIB7KWr1e",
+      "text": "Strawberry Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.BzJ2C6bjIB7KWr1e"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "3AONBkii8sMyJIV3",
+      "text": "Celery Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.3AONBkii8sMyJIV3"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "AjhQgBdPacfhIy8D",
+      "text": "Peppermint Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.AjhQgBdPacfhIy8D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "6POHzZ5pcloSb3IF",
+      "text": "Kolanut Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.6POHzZ5pcloSb3IF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "EPtr3eXsYn7njgNU",
+      "text": "Almond Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.EPtr3eXsYn7njgNU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "A3fXI2RXzEnel4oT",
+      "text": "Coffee Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.A3fXI2RXzEnel4oT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "qR2ubz6diDdY9SZq",
+      "text": "Ginger Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.qR2ubz6diDdY9SZq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "owQC2804Un6FgiMO",
+      "text": "Lychee Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.owQC2804Un6FgiMO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "RT0ZYABqdrjRVyBO",
+      "text": "Sassafrass Jellybeans (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!IMuvo19hPmQCNvcX.RT0ZYABqdrjRVyBO"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": "rTIMQ0jeATlqHTZR",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223122384,
+    "modifiedTime": 1717225684195,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "IMuvo19hPmQCNvcX",
+  "sort": 300000,
+  "_key": "!tables!IMuvo19hPmQCNvcX"
+}

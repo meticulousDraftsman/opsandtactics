@@ -1,0 +1,91 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Herbivore Multi Meal Spread Items",
+  "_id": "Y6afoXtHTuQ5SwEG",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Spread Selection",
+      "documentId": "ugAYzvsehQfexjCc",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "wNT6xoXKeBBnuFX5",
+      "flags": {},
+      "_key": "!tables.results!Y6afoXtHTuQ5SwEG.wNT6xoXKeBBnuFX5"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Spread Selection",
+      "documentId": "ugAYzvsehQfexjCc",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "aeStCxaQ3DeVz3QC",
+      "flags": {},
+      "_key": "!tables.results!Y6afoXtHTuQ5SwEG.aeStCxaQ3DeVz3QC"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Spread Selection",
+      "documentId": "ugAYzvsehQfexjCc",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "jru9GorefleNqZ70",
+      "flags": {},
+      "_key": "!tables.results!Y6afoXtHTuQ5SwEG.jru9GorefleNqZ70"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        76,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Spread Selection",
+      "documentId": "ugAYzvsehQfexjCc",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "kvbc7hqsgTlslp8l",
+      "flags": {},
+      "_key": "!tables.results!Y6afoXtHTuQ5SwEG.kvbc7hqsgTlslp8l"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717224798829,
+    "modifiedTime": 1717224834704,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!Y6afoXtHTuQ5SwEG"
+}

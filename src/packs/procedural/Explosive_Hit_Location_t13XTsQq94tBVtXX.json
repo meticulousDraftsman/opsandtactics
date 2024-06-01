@@ -1,0 +1,119 @@
+{
+  "name": "Explosive Hit Location",
+  "img": "icons/skills/wounds/injury-body-pain-gray.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "bVoCgzBQQcNWdafd",
+      "text": "Chest",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+      "_key": "!tables.results!t13XTsQq94tBVtXX.bVoCgzBQQcNWdafd"
+    },
+    {
+      "type": 0,
+      "weight": 22,
+      "range": [
+        11,
+        32
+      ],
+      "drawn": false,
+      "_id": "PgLeslFr5tqP0kAN",
+      "text": "Left Arm and Hand",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/skills/wounds/bone-broken-marrow-red.webp",
+      "_key": "!tables.results!t13XTsQq94tBVtXX.PgLeslFr5tqP0kAN"
+    },
+    {
+      "type": 0,
+      "weight": 22,
+      "range": [
+        33,
+        54
+      ],
+      "drawn": false,
+      "_id": "yQhaBRcM0t3NPwVp",
+      "text": "Right Arm and Hand",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/skills/wounds/bone-broken-marrow-red.webp",
+      "_key": "!tables.results!t13XTsQq94tBVtXX.yQhaBRcM0t3NPwVp"
+    },
+    {
+      "type": 0,
+      "weight": 22,
+      "range": [
+        55,
+        76
+      ],
+      "drawn": false,
+      "_id": "SxHrD0gIL5BY670S",
+      "text": "Left Leg and Foot",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/skills/wounds/bone-broken-knee-beam.webp",
+      "_key": "!tables.results!t13XTsQq94tBVtXX.SxHrD0gIL5BY670S"
+    },
+    {
+      "type": 0,
+      "weight": 22,
+      "range": [
+        77,
+        98
+      ],
+      "drawn": false,
+      "_id": "TXVI42Ky3ezfwJ8K",
+      "text": "Right Leg and Foot",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/skills/wounds/bone-broken-knee-beam.webp",
+      "_key": "!tables.results!t13XTsQq94tBVtXX.TXVI42Ky3ezfwJ8K"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "kEBdiheIlCAYwsjj",
+      "text": "Head",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+      "_key": "!tables.results!t13XTsQq94tBVtXX.kEBdiheIlCAYwsjj"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": null,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1708206553767,
+    "modifiedTime": 1717231125589,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "t13XTsQq94tBVtXX",
+  "sort": 0,
+  "_key": "!tables!t13XTsQq94tBVtXX"
+}

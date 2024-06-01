@@ -1,0 +1,75 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Omnivore Multi Meal Side Dishes",
+  "_id": "lwMm4HCEZh4jCHIu",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Side Dish Selection",
+      "documentId": "An6aLNTeFMUwmHqh",
+      "img": "icons/consumables/food/bowl-stew-tofu-potato-brown.webp",
+      "_id": "RcKQ8JL75ckRTBmG",
+      "flags": {},
+      "_key": "!tables.results!lwMm4HCEZh4jCHIu.RcKQ8JL75ckRTBmG"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Side Dish Selection",
+      "documentId": "An6aLNTeFMUwmHqh",
+      "img": "icons/consumables/food/bowl-stew-tofu-potato-brown.webp",
+      "_id": "KJexkwD569yywPcQ",
+      "flags": {},
+      "_key": "!tables.results!lwMm4HCEZh4jCHIu.KJexkwD569yywPcQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        91,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Side Dish Selection",
+      "documentId": "An6aLNTeFMUwmHqh",
+      "img": "icons/consumables/food/bowl-stew-tofu-potato-brown.webp",
+      "_id": "E2yGSP1aaqzpJQA4",
+      "flags": {},
+      "_key": "!tables.results!lwMm4HCEZh4jCHIu.E2yGSP1aaqzpJQA4"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717222776404,
+    "modifiedTime": 1717224383549,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!lwMm4HCEZh4jCHIu"
+}

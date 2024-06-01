@@ -1,0 +1,155 @@
+{
+  "folder": "bJMIv7ooXXbZGQlV",
+  "name": "Carnivore Single Meal MRE",
+  "_id": "E42dHiJIFQsz6BWy",
+  "img": "icons/containers/chest/chest-simple-box-red.webp",
+  "description": "<p>All MREs come in a hefty plastic pouch, thick and large enough to hold 4 units (32 oz) of water. Each component is individual sealed against air and water.</p><p>Accessory packets contain salt, pepper, hot sauce, toilet paper, freeze dried coffee, powdered creamer, sugar, hand cleaner, a flameless radiation heater, and a sturdy MRE spoon.</p>",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Meat Entree Selection",
+      "documentId": "2FEFHbMd0bv5uYm7",
+      "img": "icons/consumables/food/bowl-ribs-meat-rice-mash-brown-white.webp",
+      "_id": "dPe1bgcJoGJnFwPf",
+      "flags": {},
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.dPe1bgcJoGJnFwPf"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Meat Side Dish Selection",
+      "documentId": "Yd1w8GnouCP23lmq",
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_id": "Bnd8ULZdbHuxRdMb",
+      "flags": {},
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.Bnd8ULZdbHuxRdMb"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Meat Bread Selection",
+      "documentId": "8l3jl5PLdoXVn64m",
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_id": "l42v1pssVVYYZQ8S",
+      "flags": {},
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.l42v1pssVVYYZQ8S"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Meat Spread Selection",
+      "documentId": "AD0Eolg1wzii3wzz",
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_id": "7KbLbYBCdGKW7Pp8",
+      "flags": {},
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.7KbLbYBCdGKW7Pp8"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Meat Dessert Selection",
+      "documentId": "FOc8OD9Pm67W0Yqe",
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_id": "41RJz7V0P5kaT178",
+      "flags": {},
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.41RJz7V0P5kaT178"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Composition",
+      "documentId": "KxQRSyWyBjnKcfbS",
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_id": "VO6uv7lGHi4X1ih9",
+      "flags": {},
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.VO6uv7lGHi4X1ih9"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Selection",
+      "documentId": "CXmKrtF4kwWVBbQ3",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "qUKYd1IgljZMTrXL",
+      "flags": {},
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.qUKYd1IgljZMTrXL"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "Wq3kzAbbZu3FlxHJ",
+      "text": "Accessory Pack",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/tools/cooking/soup-ladle.webp",
+      "_key": "!tables.results!E42dHiJIFQsz6BWy.Wq3kzAbbZu3FlxHJ"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717230288293,
+    "modifiedTime": 1717230361947,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d1",
+  "_key": "!tables!E42dHiJIFQsz6BWy"
+}

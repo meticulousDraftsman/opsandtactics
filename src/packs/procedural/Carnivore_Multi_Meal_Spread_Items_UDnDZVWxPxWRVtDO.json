@@ -1,0 +1,91 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Carnivore Multi Meal Spread Items",
+  "_id": "UDnDZVWxPxWRVtDO",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Spread Selection",
+      "documentId": "AD0Eolg1wzii3wzz",
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_id": "JiQ9vDUMRiWpvK1x",
+      "flags": {},
+      "_key": "!tables.results!UDnDZVWxPxWRVtDO.JiQ9vDUMRiWpvK1x"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Spread Selection",
+      "documentId": "AD0Eolg1wzii3wzz",
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_id": "Dp6YSEMC6t25vzCF",
+      "flags": {},
+      "_key": "!tables.results!UDnDZVWxPxWRVtDO.Dp6YSEMC6t25vzCF"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Spread Selection",
+      "documentId": "AD0Eolg1wzii3wzz",
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_id": "maGP53WR8yhaX8qu",
+      "flags": {},
+      "_key": "!tables.results!UDnDZVWxPxWRVtDO.maGP53WR8yhaX8qu"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        76,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Spread Selection",
+      "documentId": "AD0Eolg1wzii3wzz",
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_id": "D2kwcMKPLXqlrp6D",
+      "flags": {},
+      "_key": "!tables.results!UDnDZVWxPxWRVtDO.D2kwcMKPLXqlrp6D"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717224737789,
+    "modifiedTime": 1717224782599,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!UDnDZVWxPxWRVtDO"
+}

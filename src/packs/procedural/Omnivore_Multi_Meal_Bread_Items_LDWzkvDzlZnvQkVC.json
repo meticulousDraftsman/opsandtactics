@@ -1,0 +1,59 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Omnivore Multi Meal Bread Items",
+  "_id": "LDWzkvDzlZnvQkVC",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Bread Selection",
+      "documentId": "V3Q5N5rSGrqKkoZo",
+      "img": "icons/consumables/grains/donut-baked-brown.webp",
+      "_id": "NdSVgwWSWP6x2Bso",
+      "flags": {},
+      "_key": "!tables.results!LDWzkvDzlZnvQkVC.NdSVgwWSWP6x2Bso"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        36,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Bread Selection",
+      "documentId": "V3Q5N5rSGrqKkoZo",
+      "img": "icons/consumables/grains/donut-baked-brown.webp",
+      "_id": "r7yBWNUU0xn3xpJX",
+      "flags": {},
+      "_key": "!tables.results!LDWzkvDzlZnvQkVC.r7yBWNUU0xn3xpJX"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717222866390,
+    "modifiedTime": 1717224374203,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!LDWzkvDzlZnvQkVC"
+}

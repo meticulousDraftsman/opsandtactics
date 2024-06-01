@@ -1,0 +1,75 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Omnivore Multi Meal Desserts",
+  "_id": "4UsW63MZCOBpvGr6",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Dessert Selection",
+      "documentId": "u8Htk3FWFKmgaEgU",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "pT4hpd7QS8SvQxhw",
+      "flags": {},
+      "_key": "!tables.results!4UsW63MZCOBpvGr6.pT4hpd7QS8SvQxhw"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Dessert Selection",
+      "documentId": "u8Htk3FWFKmgaEgU",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "bhJkCMwqd1A7WGfS",
+      "flags": {},
+      "_key": "!tables.results!4UsW63MZCOBpvGr6.bhJkCMwqd1A7WGfS"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        76,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Dessert Selection",
+      "documentId": "u8Htk3FWFKmgaEgU",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "vr5UGi8skA0JK77w",
+      "flags": {},
+      "_key": "!tables.results!4UsW63MZCOBpvGr6.vr5UGi8skA0JK77w"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717226759190,
+    "modifiedTime": 1717226788060,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!4UsW63MZCOBpvGr6"
+}

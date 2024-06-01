@@ -1,0 +1,177 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Meat Spread Selection",
+  "_id": "AD0Eolg1wzii3wzz",
+  "img": "icons/consumables/meat/steak-alien-orange.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "VwHBLI3x0XdzhZWh",
+      "text": "Salmon Pate (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.VwHBLI3x0XdzhZWh"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "zogjwXzuYT5cZWgX",
+      "text": "Mackerel Pate (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.zogjwXzuYT5cZWgX"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        21,
+        30
+      ],
+      "drawn": false,
+      "_id": "I2aKhKVyQLm6tP3l",
+      "text": "Canned Beef (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.I2aKhKVyQLm6tP3l"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        31,
+        40
+      ],
+      "drawn": false,
+      "_id": "8ZKZhkmSgMhAMQB8",
+      "text": "Duck Pate (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.8ZKZhkmSgMhAMQB8"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        41,
+        50
+      ],
+      "drawn": false,
+      "_id": "OMAe4Qk0gJdJ4IHX",
+      "text": "Liver Pate (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.OMAe4Qk0gJdJ4IHX"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        51,
+        60
+      ],
+      "drawn": false,
+      "_id": "UT9PsepVeyPYW8cZ",
+      "text": "Pork Pate (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.UT9PsepVeyPYW8cZ"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        61,
+        70
+      ],
+      "drawn": false,
+      "_id": "XD4ENQrIJ9HqjuAd",
+      "text": "Pork Pate And Mushrooms (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.XD4ENQrIJ9HqjuAd"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        71,
+        80
+      ],
+      "drawn": false,
+      "_id": "iGIiihCOO1isGqyY",
+      "text": "Pork Ham Pate (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.iGIiihCOO1isGqyY"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        81,
+        90
+      ],
+      "drawn": false,
+      "_id": "pE3X1sfjA27vtQQl",
+      "text": "Tuna Fish Pate (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.pE3X1sfjA27vtQQl"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        91,
+        100
+      ],
+      "drawn": false,
+      "_id": "uYO0Y4agJtSFLwQG",
+      "text": "Spreadable Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/steak-alien-orange.webp",
+      "_key": "!tables.results!AD0Eolg1wzii3wzz.uYO0Y4agJtSFLwQG"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 187500,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717224283059,
+    "modifiedTime": 1717229319361,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!AD0Eolg1wzii3wzz"
+}

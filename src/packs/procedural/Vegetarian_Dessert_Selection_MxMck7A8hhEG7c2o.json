@@ -1,0 +1,781 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Vegetarian Dessert Selection",
+  "_id": "MxMck7A8hhEG7c2o",
+  "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "fi68KdJyOtzcjfWT",
+      "text": "Some Multivitamins (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.fi68KdJyOtzcjfWT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "qHbHHiBsAfN3kYkY",
+      "text": "Bubble Gum (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.qHbHHiBsAfN3kYkY"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "T4vm0SmPbExQZX6N",
+      "text": "Sugar Free Gum (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.T4vm0SmPbExQZX6N"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "hXReC7gmTbk0lXtM",
+      "text": "Electrolyte Gum (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.hXReC7gmTbk0lXtM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "r23RjmPfSPnFTu59",
+      "text": "Chocolate Bar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.r23RjmPfSPnFTu59"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "6a8eXFdtE7a61Ddm",
+      "text": "Caramel (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.6a8eXFdtE7a61Ddm"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "kntZ4fzDidPDYlIL",
+      "text": "Malt Balls (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.kntZ4fzDidPDYlIL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "kWbMqwJFYuiFbpaV",
+      "text": "Gum Drops (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.kWbMqwJFYuiFbpaV"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "F8ju9DLptB1DT1Jy",
+      "text": "Charms (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.F8ju9DLptB1DT1Jy"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "dCuRnlvPcr7hqPHQ",
+      "text": "Jaw Breakers (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.dCuRnlvPcr7hqPHQ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "nUSaSScd69FoCJeA",
+      "text": "Boiled Potato (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.nUSaSScd69FoCJeA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "tqiLIxYqZRM0uxh2",
+      "text": "Ice Cream (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.tqiLIxYqZRM0uxh2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "MrHuhXTUAc3CWQlM",
+      "text": "A Pouch Of Astronaut Ice Cream (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.MrHuhXTUAc3CWQlM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "eLgFO7iGWqqyJgn1",
+      "text": "Apple Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.eLgFO7iGWqqyJgn1"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "8RavDVaWYhj58Zzm",
+      "text": "Cherry Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.8RavDVaWYhj58Zzm"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "yPABDymEAezYD21G",
+      "text": "Bananna Cream Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.yPABDymEAezYD21G"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "wwWGxS5d2kTzINy8",
+      "text": "Bean Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.wwWGxS5d2kTzINy8"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "kp7iguscTDZpOUkF",
+      "text": "Blackberry Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.kp7iguscTDZpOUkF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "NZL8InPALJGDECJm",
+      "text": "Blueberry Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.NZL8InPALJGDECJm"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "oDshu9mLI9I4KZQG",
+      "text": "Boysenberry Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.oDshu9mLI9I4KZQG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "VLikZ80E7fdDRn3y",
+      "text": "Cheese Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.VLikZ80E7fdDRn3y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "x1XL2Nm2XYcICw6g",
+      "text": "Coconut Cream Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.x1XL2Nm2XYcICw6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "0adUs0gmjLPubqE8",
+      "text": "Key Lime Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.0adUs0gmjLPubqE8"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "3B3cJ3arNfvYKMMi",
+      "text": "Lemon Meringue Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.3B3cJ3arNfvYKMMi"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "TRrI7TTS2oHpjpxz",
+      "text": "Peach Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.TRrI7TTS2oHpjpxz"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "CG2bLRmYtlVioAV9",
+      "text": "Pecan Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.CG2bLRmYtlVioAV9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "UtYJs7BUV5Svm7Hl",
+      "text": "Pumpkin Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.UtYJs7BUV5Svm7Hl"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "8j020y0LwcAx3L07",
+      "text": "Raisin Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.8j020y0LwcAx3L07"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "J5Xjm1XsFIXHDAY9",
+      "text": "Raspberry Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.J5Xjm1XsFIXHDAY9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "qNvUDbKN1XGMQ0ZI",
+      "text": "Rhubarb Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.qNvUDbKN1XGMQ0ZI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "3YL25jsHfVolMO0Q",
+      "text": "Chocolate Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.3YL25jsHfVolMO0Q"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "pMyoCUwG7AX8PKMZ",
+      "text": "Rice Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.pMyoCUwG7AX8PKMZ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "oSTyLbZBPooqBpO9",
+      "text": "Vanilla Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.oSTyLbZBPooqBpO9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "yYDFqOtQ7mBvdQRt",
+      "text": "Butterscotch Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.yYDFqOtQ7mBvdQRt"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "r0yQiobtrBauw9rD",
+      "text": "Coconut Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.r0yQiobtrBauw9rD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "8QAFYJC58Zloqosv",
+      "text": "Figgy Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.8QAFYJC58Zloqosv"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvat4cGXdV20NAS",
+      "text": "Pistachio Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.tLvat4cGXdV20NAS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "onuOXbaUPnXXJtWo",
+      "text": "Tapioca Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.onuOXbaUPnXXJtWo"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "CeV20ZUaGtP4lHrO",
+      "text": "Butter Pecan Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.CeV20ZUaGtP4lHrO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "RIrhUBkXLuWIrZyV",
+      "text": "Pecan Sandy Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.RIrhUBkXLuWIrZyV"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "pj1S5BqyrnMo3H7O",
+      "text": "Chocolate Chip Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.pj1S5BqyrnMo3H7O"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "OFR7kC2syPiz5EZp",
+      "text": "Chocolate Sandwich Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.OFR7kC2syPiz5EZp"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "QWpkOS0tSV8vzOJ6",
+      "text": "Fortune Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.QWpkOS0tSV8vzOJ6"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "IW1XxsaBENJrYPMa",
+      "text": "Peanut Butter Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.IW1XxsaBENJrYPMa"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "FQewA77TCAbBE6DV",
+      "text": "Snickerdoodle Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.FQewA77TCAbBE6DV"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "zoxa36KWNm4Tdgpk",
+      "text": "Sugar Cookies (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.zoxa36KWNm4Tdgpk"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "text": "Hard Candy",
+      "documentId": "USSftjNqa4PbuGXy",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "539qJNIienqDGaoX",
+      "flags": {},
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.539qJNIienqDGaoX"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "text": "Jellybeans",
+      "documentId": "IMuvo19hPmQCNvcX",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "CP0nH9gSkVWkmhYT",
+      "flags": {},
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.CP0nH9gSkVWkmhYT"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "text": "Lollypop",
+      "documentId": "gfnEEufJnmQGa1gh",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "S3gScZrrEX4n9leA",
+      "flags": {},
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.S3gScZrrEX4n9leA"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "text": "Sour Candy",
+      "documentId": "KI1X12Mn51ENJZ9X",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "RjTe8ZcAvlzQ5uiy",
+      "flags": {},
+      "_key": "!tables.results!MxMck7A8hhEG7c2o.RjTe8ZcAvlzQ5uiy"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 93750,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717225583201,
+    "modifiedTime": 1717229307435,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!MxMck7A8hhEG7c2o"
+}

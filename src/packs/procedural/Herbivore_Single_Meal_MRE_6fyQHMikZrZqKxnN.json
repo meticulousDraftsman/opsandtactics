@@ -1,0 +1,155 @@
+{
+  "folder": "bJMIv7ooXXbZGQlV",
+  "name": "Herbivore Single Meal MRE",
+  "_id": "6fyQHMikZrZqKxnN",
+  "img": "icons/containers/boxes/box-gift-blue.webp",
+  "description": "<p>All MREs come in a hefty plastic pouch, thick and large enough to hold 4 units (32 oz) of water. Each component is individual sealed against air and water.</p><p>Accessory packets contain salt, pepper, hot sauce, toilet paper, freeze dried coffee, powdered creamer, sugar, hand cleaner, a flameless radiation heater, and a sturdy MRE spoon.</p>",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Vegetarian Entree Selection",
+      "documentId": "vUqtZnwS956e6nM8",
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_id": "WYMPndUsL4NA4sQ3",
+      "flags": {},
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.WYMPndUsL4NA4sQ3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Vegetarian Side Dish Selection",
+      "documentId": "5QsA6d9iaNouAALO",
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_id": "2CYy36CMO1VbE2gV",
+      "flags": {},
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.2CYy36CMO1VbE2gV"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Vegetarian Bread Selection",
+      "documentId": "DkyukuiNIaS1ohLh",
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_id": "Z6te2OzFAm9GCrts",
+      "flags": {},
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.Z6te2OzFAm9GCrts"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Vegetarian Spread Selection",
+      "documentId": "ugAYzvsehQfexjCc",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "i3c78GcXG6Abf08L",
+      "flags": {},
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.i3c78GcXG6Abf08L"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Vegetarian Dessert Selection",
+      "documentId": "MxMck7A8hhEG7c2o",
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_id": "td7O55dbCfXxqvYZ",
+      "flags": {},
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.td7O55dbCfXxqvYZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Composition",
+      "documentId": "KxQRSyWyBjnKcfbS",
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_id": "5EqssX7OJiL2wJm2",
+      "flags": {},
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.5EqssX7OJiL2wJm2"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Selection",
+      "documentId": "CXmKrtF4kwWVBbQ3",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "U9GjBkggyTkcfUFJ",
+      "flags": {},
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.U9GjBkggyTkcfUFJ"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "g4Q5AhV9bGw9Q6UY",
+      "text": "Accessory Packet",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/tools/cooking/soup-ladle.webp",
+      "_key": "!tables.results!6fyQHMikZrZqKxnN.g4Q5AhV9bGw9Q6UY"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": -100000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717197898015,
+    "modifiedTime": 1717229871270,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d1",
+  "_key": "!tables!6fyQHMikZrZqKxnN"
+}

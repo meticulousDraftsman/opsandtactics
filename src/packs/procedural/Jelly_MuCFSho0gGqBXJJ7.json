@@ -1,0 +1,779 @@
+{
+  "name": "Jelly",
+  "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "cmyfNuQjK72npr7b",
+      "text": "Apple Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.cmyfNuQjK72npr7b"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "3jI5PRGkvlY9vwAd",
+      "text": "Grape Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.3jI5PRGkvlY9vwAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "n2Vtw5Ra0dJr8feH",
+      "text": "Apricot Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.n2Vtw5Ra0dJr8feH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "7aRZsvCy8DeaUfQC",
+      "text": "Avocado Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.7aRZsvCy8DeaUfQC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "YnYUWmXy3zR5mUDB",
+      "text": "Banana Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.YnYUWmXy3zR5mUDB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "76txJMqbU2Pa4lXf",
+      "text": "Huckleberry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.76txJMqbU2Pa4lXf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "TXaZHF1bdkHujWoD",
+      "text": "Passionfruit Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.TXaZHF1bdkHujWoD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "8XZeJxDuvU553yfh",
+      "text": "Papaya Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.8XZeJxDuvU553yfh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "tkjlQHZUE7OcaaUc",
+      "text": "Tangerine Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.tkjlQHZUE7OcaaUc"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "nNHdDbmTtrBMvH5y",
+      "text": "Jackfruit Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.nNHdDbmTtrBMvH5y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "54J0zQSR4AVif0D2",
+      "text": "Persimmon Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.54J0zQSR4AVif0D2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "boW6ryCmty8gZHFP",
+      "text": "Blackberry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.boW6ryCmty8gZHFP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eJ4Ty8Za6RgBTddx",
+      "text": "Blueberry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.eJ4Ty8Za6RgBTddx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "HRqFrwhprB8UPcsk",
+      "text": "Juniper Berry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.HRqFrwhprB8UPcsk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "pVX3UxI8J0PS2M5P",
+      "text": "Kiwi Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.pVX3UxI8J0PS2M5P"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "qNb8hwVDkpUjxalW",
+      "text": "Pineapple Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.qNb8hwVDkpUjxalW"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWSNxwdC6QQDCAty",
+      "text": "Pumpkin Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.GWSNxwdC6QQDCAty"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "8YZOxemhohFDm7pM",
+      "text": "Cantaloupe Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.8YZOxemhohFDm7pM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "oqXjqJBITRwqiHN9",
+      "text": "Cucumber Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.oqXjqJBITRwqiHN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "K6QxKwxWvcVOetOH",
+      "text": "Currant Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.K6QxKwxWvcVOetOH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "AUiwxPuXR8yZ8FGq",
+      "text": "Lime Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.AUiwxPuXR8yZ8FGq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "jgbx9iRN37lOzN5F",
+      "text": "Cherry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.jgbx9iRN37lOzN5F"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jo2oPtS7zkyUaVuA",
+      "text": "Cranberry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.Jo2oPtS7zkyUaVuA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "avxsWAwxOvXJbz0n",
+      "text": "Mango Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.avxsWAwxOvXJbz0n"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "e5kKAL1sMIMigHs4",
+      "text": "Orange Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.e5kKAL1sMIMigHs4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "8ddCpjywexHcZ3fb",
+      "text": "Fig Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.8ddCpjywexHcZ3fb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "8GgIKZr1yJW0l5nx",
+      "text": "Honeydew Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.8GgIKZr1yJW0l5nx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "rUWG3EL2Ub9um1yG",
+      "text": "Dragonfruit Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.rUWG3EL2Ub9um1yG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "wIJXTmGNxZaKZpzb",
+      "text": "Gooseberry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.wIJXTmGNxZaKZpzb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "Er0iJ67DsAPWw2jk",
+      "text": "Coconut Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.Er0iJ67DsAPWw2jk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "VGEbL7wC4ZrvG1eJ",
+      "text": "Tomato Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.VGEbL7wC4ZrvG1eJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "ABQQL6RmLPlXqxFu",
+      "text": "Watermelon Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.ABQQL6RmLPlXqxFu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "7bzJMap4tcsuIBtX",
+      "text": "Raspberry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.7bzJMap4tcsuIBtX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "GLPHoYhie2aNAMc9",
+      "text": "Pomegranate Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.GLPHoYhie2aNAMc9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "TRcjJLUw5U0goz6g",
+      "text": "Plum Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.TRcjJLUw5U0goz6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "hTkF6x1QB2GeqPyS",
+      "text": "Peach Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.hTkF6x1QB2GeqPyS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "JsuLvJwxlfjJMmNL",
+      "text": "Bell Pepper Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.JsuLvJwxlfjJMmNL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "Iarua9IyIjkUUuPI",
+      "text": "Lemon Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.Iarua9IyIjkUUuPI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "XsVwiHmDX86G594v",
+      "text": "Nectarine Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.XsVwiHmDX86G594v"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "s7eAOjsrg2CnFZuu",
+      "text": "Pear Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.s7eAOjsrg2CnFZuu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvAen3QODehYcsf",
+      "text": "Star Fruit Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.tLvAen3QODehYcsf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "BzJ2C6bjIB7KWr1e",
+      "text": "Strawberry Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.BzJ2C6bjIB7KWr1e"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "3AONBkii8sMyJIV3",
+      "text": "Celery Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.3AONBkii8sMyJIV3"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "AjhQgBdPacfhIy8D",
+      "text": "Peppermint Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.AjhQgBdPacfhIy8D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "6POHzZ5pcloSb3IF",
+      "text": "Kolanut Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.6POHzZ5pcloSb3IF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "EPtr3eXsYn7njgNU",
+      "text": "Almond Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.EPtr3eXsYn7njgNU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "A3fXI2RXzEnel4oT",
+      "text": "Coffee Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.A3fXI2RXzEnel4oT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "qR2ubz6diDdY9SZq",
+      "text": "Ginger Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.qR2ubz6diDdY9SZq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "owQC2804Un6FgiMO",
+      "text": "Lychee Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.owQC2804Un6FgiMO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "RT0ZYABqdrjRVyBO",
+      "text": "Sassafrass Jelly (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!MuCFSho0gGqBXJJ7.RT0ZYABqdrjRVyBO"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": "ZxgaKUoeOaCMLNGT",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223122384,
+    "modifiedTime": 1717223704708,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "MuCFSho0gGqBXJJ7",
+  "sort": 300000,
+  "_key": "!tables!MuCFSho0gGqBXJJ7"
+}

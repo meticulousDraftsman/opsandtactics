@@ -1,0 +1,779 @@
+{
+  "name": "Soda",
+  "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "cmyfNuQjK72npr7b",
+      "text": "Apple Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.cmyfNuQjK72npr7b"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "3jI5PRGkvlY9vwAd",
+      "text": "Grape Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.3jI5PRGkvlY9vwAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "n2Vtw5Ra0dJr8feH",
+      "text": "Apricot Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.n2Vtw5Ra0dJr8feH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "7aRZsvCy8DeaUfQC",
+      "text": "Avocado Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.7aRZsvCy8DeaUfQC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "YnYUWmXy3zR5mUDB",
+      "text": "Banana Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.YnYUWmXy3zR5mUDB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "76txJMqbU2Pa4lXf",
+      "text": "Huckleberry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.76txJMqbU2Pa4lXf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "TXaZHF1bdkHujWoD",
+      "text": "Passionfruit Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.TXaZHF1bdkHujWoD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "8XZeJxDuvU553yfh",
+      "text": "Papaya Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.8XZeJxDuvU553yfh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "tkjlQHZUE7OcaaUc",
+      "text": "Tangerine Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.tkjlQHZUE7OcaaUc"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "nNHdDbmTtrBMvH5y",
+      "text": "Jackfruit Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.nNHdDbmTtrBMvH5y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "54J0zQSR4AVif0D2",
+      "text": "Persimmon Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.54J0zQSR4AVif0D2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "boW6ryCmty8gZHFP",
+      "text": "Blackberry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.boW6ryCmty8gZHFP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eJ4Ty8Za6RgBTddx",
+      "text": "Blueberry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.eJ4Ty8Za6RgBTddx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "HRqFrwhprB8UPcsk",
+      "text": "Juniper Berry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.HRqFrwhprB8UPcsk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "pVX3UxI8J0PS2M5P",
+      "text": "Kiwi Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.pVX3UxI8J0PS2M5P"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "qNb8hwVDkpUjxalW",
+      "text": "Pineapple Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.qNb8hwVDkpUjxalW"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWSNxwdC6QQDCAty",
+      "text": "Pumpkin Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.GWSNxwdC6QQDCAty"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "8YZOxemhohFDm7pM",
+      "text": "Cantaloupe Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.8YZOxemhohFDm7pM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "oqXjqJBITRwqiHN9",
+      "text": "Cucumber Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.oqXjqJBITRwqiHN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "K6QxKwxWvcVOetOH",
+      "text": "Currant Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.K6QxKwxWvcVOetOH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "AUiwxPuXR8yZ8FGq",
+      "text": "Lime Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.AUiwxPuXR8yZ8FGq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "jgbx9iRN37lOzN5F",
+      "text": "Cherry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.jgbx9iRN37lOzN5F"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jo2oPtS7zkyUaVuA",
+      "text": "Cranberry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.Jo2oPtS7zkyUaVuA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "avxsWAwxOvXJbz0n",
+      "text": "Mango Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.avxsWAwxOvXJbz0n"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "e5kKAL1sMIMigHs4",
+      "text": "Orange Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.e5kKAL1sMIMigHs4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "8ddCpjywexHcZ3fb",
+      "text": "Fig Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.8ddCpjywexHcZ3fb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "8GgIKZr1yJW0l5nx",
+      "text": "Honeydew Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.8GgIKZr1yJW0l5nx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "rUWG3EL2Ub9um1yG",
+      "text": "Dragonfruit Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.rUWG3EL2Ub9um1yG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "wIJXTmGNxZaKZpzb",
+      "text": "Gooseberry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.wIJXTmGNxZaKZpzb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "Er0iJ67DsAPWw2jk",
+      "text": "Coconut Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.Er0iJ67DsAPWw2jk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "VGEbL7wC4ZrvG1eJ",
+      "text": "Tomato Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.VGEbL7wC4ZrvG1eJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "ABQQL6RmLPlXqxFu",
+      "text": "Watermelon Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.ABQQL6RmLPlXqxFu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "7bzJMap4tcsuIBtX",
+      "text": "Raspberry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.7bzJMap4tcsuIBtX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "GLPHoYhie2aNAMc9",
+      "text": "Pomegranate Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.GLPHoYhie2aNAMc9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "TRcjJLUw5U0goz6g",
+      "text": "Plum Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.TRcjJLUw5U0goz6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "hTkF6x1QB2GeqPyS",
+      "text": "Peach Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.hTkF6x1QB2GeqPyS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "JsuLvJwxlfjJMmNL",
+      "text": "Bell Pepper Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.JsuLvJwxlfjJMmNL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "Iarua9IyIjkUUuPI",
+      "text": "Lemon Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.Iarua9IyIjkUUuPI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "XsVwiHmDX86G594v",
+      "text": "Nectarine Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.XsVwiHmDX86G594v"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "s7eAOjsrg2CnFZuu",
+      "text": "Pear Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.s7eAOjsrg2CnFZuu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvAen3QODehYcsf",
+      "text": "Star Fruit Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.tLvAen3QODehYcsf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "BzJ2C6bjIB7KWr1e",
+      "text": "Strawberry Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.BzJ2C6bjIB7KWr1e"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "3AONBkii8sMyJIV3",
+      "text": "Celery Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.3AONBkii8sMyJIV3"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "AjhQgBdPacfhIy8D",
+      "text": "Peppermint Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.AjhQgBdPacfhIy8D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "6POHzZ5pcloSb3IF",
+      "text": "Kolanut Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.6POHzZ5pcloSb3IF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "EPtr3eXsYn7njgNU",
+      "text": "Almond Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.EPtr3eXsYn7njgNU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "A3fXI2RXzEnel4oT",
+      "text": "Coffee Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.A3fXI2RXzEnel4oT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "qR2ubz6diDdY9SZq",
+      "text": "Ginger Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.qR2ubz6diDdY9SZq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "owQC2804Un6FgiMO",
+      "text": "Lychee Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.owQC2804Un6FgiMO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "RT0ZYABqdrjRVyBO",
+      "text": "Sassafrass Soda",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_key": "!tables.results!a7xzVBD2bYv41cch.RT0ZYABqdrjRVyBO"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": "Jno6LTc6uothF1Y4",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223122384,
+    "modifiedTime": 1717227941463,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "a7xzVBD2bYv41cch",
+  "sort": 0,
+  "_key": "!tables!a7xzVBD2bYv41cch"
+}

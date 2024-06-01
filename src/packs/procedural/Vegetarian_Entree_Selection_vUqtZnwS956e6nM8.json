@@ -1,0 +1,597 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Vegetarian Entree Selection",
+  "_id": "vUqtZnwS956e6nM8",
+  "img": "icons/consumables/food/bowl-salad-green.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        1,
+        4
+      ],
+      "drawn": false,
+      "_id": "3g6x8wWXb32LAbqe",
+      "text": "Vegetarian Taco Pasta (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.3g6x8wWXb32LAbqe"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        5,
+        7
+      ],
+      "drawn": false,
+      "_id": "nF8dqyVPpmsAhZVw",
+      "text": "Two Servings of Lentil Stew (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.nF8dqyVPpmsAhZVw"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        8,
+        10
+      ],
+      "drawn": false,
+      "_id": "VSUYSBWMNwsdbjDe",
+      "text": "Two Servings of Barley Stew (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.VSUYSBWMNwsdbjDe"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        11,
+        13
+      ],
+      "drawn": false,
+      "_id": "sxrMQkg3VFJCm7oK",
+      "text": "Two Servings of Yellow Rice (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.sxrMQkg3VFJCm7oK"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        14,
+        16
+      ],
+      "drawn": false,
+      "_id": "N5YHpvHIdgWwmC76",
+      "text": "Two Servings of Herb Rice (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.N5YHpvHIdgWwmC76"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        17,
+        19
+      ],
+      "drawn": false,
+      "_id": "MjzoCL8Uyx36ygqM",
+      "text": "Two Servings of Red Beans &amp; Rice (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.MjzoCL8Uyx36ygqM"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        20,
+        22
+      ],
+      "drawn": false,
+      "_id": "tAgyjFLJb0T7iSli",
+      "text": "Two Servings of Red Beans &amp; Rice  with Tomato Sauce (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.tAgyjFLJb0T7iSli"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        23,
+        25
+      ],
+      "drawn": false,
+      "_id": "cVNkrU3fR1RvpmDB",
+      "text": "Two Servings of Peas in Tomato Sauce (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.cVNkrU3fR1RvpmDB"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        26,
+        28
+      ],
+      "drawn": false,
+      "_id": "9QVzozxcnKTbLBT9",
+      "text": "Two Servings of Beans with Potatoes (3 NV per Serving)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.9QVzozxcnKTbLBT9"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "_id": "MtxO7BYTd3Ln2uys",
+      "text": "Ratatouille (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.MtxO7BYTd3Ln2uys"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "_id": "0dTsDglvkfxCZEm1",
+      "text": "Spicy Penna Pasta (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.0dTsDglvkfxCZEm1"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "RN4iKI748vyR1Tyw",
+      "text": "Cheese Cannelloni (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.RN4iKI748vyR1Tyw"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "yywwo233A13u82dX",
+      "text": "Curry with Carrots and Potatoes (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.yywwo233A13u82dX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "ICokEvZHkt6awPux",
+      "text": "Veggie Burger with BBQ Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.ICokEvZHkt6awPux"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "_id": "elhqYty38Vy74btn",
+      "text": "Cheese Tortellini (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.elhqYty38Vy74btn"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        38,
+        39
+      ],
+      "drawn": false,
+      "_id": "sW02bDImafDjpYxo",
+      "text": "Pasta with Vegetables In Alfredo Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.sW02bDImafDjpYxo"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "_id": "dKlAucosTr99PBbU",
+      "text": "Vegetable Lasagna (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.dKlAucosTr99PBbU"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        41,
+        43
+      ],
+      "drawn": false,
+      "_id": "K3O6SDoRBjWicNQB",
+      "text": "Elbow Macaroni in Tomato Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.K3O6SDoRBjWicNQB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        44,
+        45
+      ],
+      "drawn": false,
+      "_id": "zXgsfWsnOHiaMkFK",
+      "text": "Vegetable Crumbles with Pasta in Taco Sauce (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.zXgsfWsnOHiaMkFK"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        46,
+        46
+      ],
+      "drawn": false,
+      "_id": "N6fX7Wto5NBa3URP",
+      "text": "Manicotti With Vegetables (4 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.N6fX7Wto5NBa3URP"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        47,
+        49
+      ],
+      "drawn": false,
+      "_id": "RzQlPjnzQnoWhFrF",
+      "text": "Two Packs of Dried Noodles (Chicken Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.RzQlPjnzQnoWhFrF"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        50,
+        52
+      ],
+      "drawn": false,
+      "_id": "JDHYKvQXpp8Y65co",
+      "text": "Two Packs of Dried Noodles (Beef Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.JDHYKvQXpp8Y65co"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        53,
+        55
+      ],
+      "drawn": false,
+      "_id": "fdMEvfV1gGJt2zRE",
+      "text": "Two Packs of Dried Noodles (Pork Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.fdMEvfV1gGJt2zRE"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        56,
+        58
+      ],
+      "drawn": false,
+      "_id": "ca4N2EZsa2p22awT",
+      "text": "Two Packs of Dried Noodles (Shrimp Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.ca4N2EZsa2p22awT"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        59,
+        61
+      ],
+      "drawn": false,
+      "_id": "o7oIZYGDEWbY0Iur",
+      "text": "Two Packs of Dried Noodles (Chili Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.o7oIZYGDEWbY0Iur"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        62,
+        64
+      ],
+      "drawn": false,
+      "_id": "vlZdetcLGhE9bbRa",
+      "text": "Two Packs of Dried Noodles (Cheese Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.vlZdetcLGhE9bbRa"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        65,
+        69
+      ],
+      "drawn": false,
+      "_id": "YHkdb9unYgI8LF6E",
+      "text": "Two Packs of Dried Noodles (Curry Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.YHkdb9unYgI8LF6E"
+    },
+    {
+      "type": 0,
+      "weight": 4,
+      "range": [
+        70,
+        73
+      ],
+      "drawn": false,
+      "_id": "LpYsb1jNadZXFJ9x",
+      "text": "Two Packs of Dried Noodles (Lime Shrimp Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.LpYsb1jNadZXFJ9x"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        74,
+        76
+      ],
+      "drawn": false,
+      "_id": "Gs4nMXUmNakoWArR",
+      "text": "Two Packs of Dried Noodles (Creamy Chicken Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.Gs4nMXUmNakoWArR"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        77,
+        79
+      ],
+      "drawn": false,
+      "_id": "oOi17ddnIveSEtHe",
+      "text": "Two Packs of Dried Noodles (Lime Chili Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.oOi17ddnIveSEtHe"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        80,
+        82
+      ],
+      "drawn": false,
+      "_id": "cpbNuStn8vfiiqjA",
+      "text": "Two Packs of Dried Noodles (Mushroom Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.cpbNuStn8vfiiqjA"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        83,
+        85
+      ],
+      "drawn": false,
+      "_id": "5gtiyS4gnfhak4Zr",
+      "text": "Two Packs of Dried Noodles (Picante Beef Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.5gtiyS4gnfhak4Zr"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        86,
+        88
+      ],
+      "drawn": false,
+      "_id": "2fc9mbazBVVEWqOq",
+      "text": "Two Packs of Dried Noodles (Picante Chicken Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.2fc9mbazBVVEWqOq"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        89,
+        91
+      ],
+      "drawn": false,
+      "_id": "UDoF6cVYrdO4tyco",
+      "text": "Two Packs of Dried Noodles (Roast Chicken Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.UDoF6cVYrdO4tyco"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        92,
+        94
+      ],
+      "drawn": false,
+      "_id": "z3m3AV7fWdrrHXy6",
+      "text": "Two Packs of Dried Noodles (Roast Beef Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.z3m3AV7fWdrrHXy6"
+    },
+    {
+      "type": 0,
+      "weight": 3,
+      "range": [
+        95,
+        97
+      ],
+      "drawn": false,
+      "_id": "SsZkZuK86aJokYDT",
+      "text": "Two Packs of Dried Noodles (Sriracha Chicken Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.SsZkZuK86aJokYDT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        98,
+        99
+      ],
+      "drawn": false,
+      "_id": "mXmwMlioQgft4ysb",
+      "text": "Two Packs of Dried Noodles (Chicken Tortilla Flavor, 2 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.mXmwMlioQgft4ysb"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "gWxHHG21GiV2jOzz",
+      "text": "Two Packs of Dried Vegetables (1 NV per Pack)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/bowl-salad-green.webp",
+      "_key": "!tables.results!vUqtZnwS956e6nM8.gWxHHG21GiV2jOzz"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717194603317,
+    "modifiedTime": 1717220557846,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!vUqtZnwS956e6nM8"
+}

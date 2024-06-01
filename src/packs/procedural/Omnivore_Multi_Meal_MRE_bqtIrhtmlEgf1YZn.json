@@ -1,0 +1,235 @@
+{
+  "folder": "bJMIv7ooXXbZGQlV",
+  "name": "Omnivore Multi Meal MRE",
+  "_id": "bqtIrhtmlEgf1YZn",
+  "img": "icons/containers/boxes/box-gift-white.webp",
+  "description": "<p>All MREs come in a hefty plastic pouch, thick and large enough to hold 4 units (32 oz) of water. Each component is individual sealed against air and water.</p><p>Accessory packets contain salt, pepper, hot sauce, toilet paper, freeze dried coffee, powdered creamer, sugar, hand cleaner, a flameless radiation heater, and a sturdy MRE spoon.</p>",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Entree Selection",
+      "documentId": "thVhccXCh4Us6saK",
+      "img": "icons/consumables/food/bowl-stew-brown.webp",
+      "_id": "qzVr5hkR0jTtIGgP",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.qzVr5hkR0jTtIGgP"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Entree Selection",
+      "documentId": "thVhccXCh4Us6saK",
+      "img": "icons/consumables/food/bowl-stew-brown.webp",
+      "_id": "4IwCHaVye2eKd9su",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.4IwCHaVye2eKd9su"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Multi Meal Side Dishes",
+      "documentId": "lwMm4HCEZh4jCHIu",
+      "img": "icons/sundries/gaming/dice-runed-tan.webp",
+      "_id": "C28bZ5FFMhlQR7U1",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.C28bZ5FFMhlQR7U1"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Multi Meal Bread Items",
+      "documentId": "LDWzkvDzlZnvQkVC",
+      "img": "icons/sundries/gaming/dice-runed-tan.webp",
+      "_id": "wGLba3sbARFMHwEE",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.wGLba3sbARFMHwEE"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Multi Meal Spread Items",
+      "documentId": "A2BmyeQiC3nDYcVa",
+      "img": "icons/sundries/gaming/dice-runed-tan.webp",
+      "_id": "BMfonm9eN5YoXqph",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.BMfonm9eN5YoXqph"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Omnivore Multi Meal Desserts",
+      "documentId": "4UsW63MZCOBpvGr6",
+      "img": "icons/sundries/gaming/dice-runed-tan.webp",
+      "_id": "23Ox4mN0Kf9bG9b2",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.23Ox4mN0Kf9bG9b2"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Composition",
+      "documentId": "KxQRSyWyBjnKcfbS",
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_id": "zSR6s1zTqPnJ9ecu",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.zSR6s1zTqPnJ9ecu"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Selection",
+      "documentId": "CXmKrtF4kwWVBbQ3",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "q3mXAHwZnA1piTXU",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.q3mXAHwZnA1piTXU"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Composition",
+      "documentId": "KxQRSyWyBjnKcfbS",
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_id": "RHYSiQXifHVwxMox",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.RHYSiQXifHVwxMox"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Selection",
+      "documentId": "CXmKrtF4kwWVBbQ3",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "gLWx9bhXoskkbY24",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.gLWx9bhXoskkbY24"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Composition",
+      "documentId": "KxQRSyWyBjnKcfbS",
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_id": "WwbuH0XMC072dZNo",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.WwbuH0XMC072dZNo"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Drink Selection",
+      "documentId": "CXmKrtF4kwWVBbQ3",
+      "img": "icons/consumables/drinks/alcohol-spirits-bottle-blue.webp",
+      "_id": "egQLPfEDIR9ymZk4",
+      "flags": {},
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.egQLPfEDIR9ymZk4"
+    },
+    {
+      "type": 0,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "IPJgBr7uIlSU9ZSL",
+      "text": "3 Accessory Packs",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/tools/cooking/soup-ladle.webp",
+      "_key": "!tables.results!bqtIrhtmlEgf1YZn.IPJgBr7uIlSU9ZSL"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717229965048,
+    "modifiedTime": 1717230243926,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d1",
+  "_key": "!tables!bqtIrhtmlEgf1YZn"
+}

@@ -1,0 +1,330 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Vegetarian Spread Selection",
+  "_id": "ugAYzvsehQfexjCc",
+  "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        16,
+        20
+      ],
+      "drawn": false,
+      "_id": "OPLBavT3BkFRxtqW",
+      "text": "Crunchy Peanut Butter (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.OPLBavT3BkFRxtqW"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "_id": "YCC14ZXLYMvrW48k",
+      "text": "Creamy Peanut Butter (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.YCC14ZXLYMvrW48k"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "_id": "GVJOkRe8grAAeuEN",
+      "text": "Mayonnaise (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.GVJOkRe8grAAeuEN"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "_id": "LEP2T74SHezOApnO",
+      "text": "Bacon Flavored Cheese Spread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.LEP2T74SHezOApnO"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "_id": "CAuoWaYizHEZnLnS",
+      "text": "Cheddar Cheese Spread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.CAuoWaYizHEZnLnS"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "_id": "13hgmWIUJdfWJfkZ",
+      "text": "Jalapeno Cheese Spread (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.13hgmWIUJdfWJfkZ"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "_id": "M7feKYAh8TVqSCjb",
+      "text": "Table Syrup (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.M7feKYAh8TVqSCjb"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "_id": "CTSScIbIwMMmGBT6",
+      "text": "Maple Syrup (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.CTSScIbIwMMmGBT6"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "_id": "SplcEKpz0DGh9HwG",
+      "text": "Mustard (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.SplcEKpz0DGh9HwG"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "_id": "NrIrjrp9j9xr2dva",
+      "text": "Ketchup (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.NrIrjrp9j9xr2dva"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "_id": "T3jOgX7GrdPXC9Od",
+      "text": "BBQ Sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.T3jOgX7GrdPXC9Od"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "_id": "sOO3XtVV1Ie6qx0x",
+      "text": "Ranch Dressing (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.sOO3XtVV1Ie6qx0x"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "_id": "dLgEHpjMX1XjaXua",
+      "text": "Tartar Sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.dLgEHpjMX1XjaXua"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_id": "RFxFA3RlpopTMMp7",
+      "text": "Teriyaki Sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.RFxFA3RlpopTMMp7"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_id": "tiXaLHSN8L3g9N7Z",
+      "text": "Malt Vinegar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.tiXaLHSN8L3g9N7Z"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        91,
+        95
+      ],
+      "drawn": false,
+      "_id": "AjEkJs768WeKKUq0",
+      "text": "Apple Cider Vinegar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.AjEkJs768WeKKUq0"
+    },
+    {
+      "type": 0,
+      "weight": 5,
+      "range": [
+        96,
+        100
+      ],
+      "drawn": false,
+      "_id": "Bnpkm2QnxuSNPp92",
+      "text": "Fish Sauce (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!ugAYzvsehQfexjCc.Bnpkm2QnxuSNPp92"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 5,
+      "range": [
+        1,
+        5
+      ],
+      "drawn": false,
+      "text": "Jelly",
+      "documentId": "MuCFSho0gGqBXJJ7",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "klNaWC7IXJYKBo9u",
+      "flags": {},
+      "_key": "!tables.results!ugAYzvsehQfexjCc.klNaWC7IXJYKBo9u"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 5,
+      "range": [
+        6,
+        10
+      ],
+      "drawn": false,
+      "text": "Jam",
+      "documentId": "IKv6xBUdoe45HxyS",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "P7fYPFzeOxYWwEo3",
+      "flags": {},
+      "_key": "!tables.results!ugAYzvsehQfexjCc.P7fYPFzeOxYWwEo3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 5,
+      "range": [
+        11,
+        15
+      ],
+      "drawn": false,
+      "text": "Chutney",
+      "documentId": "xqraI1n8Zk4gyo6j",
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_id": "zrQLsqMoJ7QzTdtp",
+      "flags": {},
+      "_key": "!tables.results!ugAYzvsehQfexjCc.zrQLsqMoJ7QzTdtp"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 87500,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223639595,
+    "modifiedTime": 1717229303893,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!ugAYzvsehQfexjCc"
+}

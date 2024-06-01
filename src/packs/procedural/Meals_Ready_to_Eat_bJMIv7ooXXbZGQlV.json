@@ -1,0 +1,19 @@
+{
+  "name": "Meals Ready to Eat",
+  "sorting": "m",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "bJMIv7ooXXbZGQlV",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717197643782,
+    "modifiedTime": 1717229509581,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_key": "!folders!bJMIv7ooXXbZGQlV"
+}

@@ -1,0 +1,192 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Meat Dessert Selection",
+  "_id": "FOc8OD9Pm67W0Yqe",
+  "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "_id": "JPGyUmwympXjZGll",
+      "text": "Multivitamins (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.JPGyUmwympXjZGll"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "_id": "PDRpQDBayuit1huE",
+      "text": "Bubble Gum (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.PDRpQDBayuit1huE"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        21,
+        30
+      ],
+      "drawn": false,
+      "_id": "EMiK6AbyJ7xEKlxm",
+      "text": "Sugar Free Gum (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.EMiK6AbyJ7xEKlxm"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        31,
+        40
+      ],
+      "drawn": false,
+      "_id": "O3ZBIDnvEyRxm08G",
+      "text": "Electrolyte Gum (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.O3ZBIDnvEyRxm08G"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        41,
+        50
+      ],
+      "drawn": false,
+      "_id": "ckYfYNsYs4pX4Imb",
+      "text": "Caviar (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.ckYfYNsYs4pX4Imb"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        51,
+        60
+      ],
+      "drawn": false,
+      "_id": "O3KL1adS5kFL432O",
+      "text": "Black Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.O3KL1adS5kFL432O"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        61,
+        70
+      ],
+      "drawn": false,
+      "_id": "kUBnIVoaZpdIPSHN",
+      "text": "Blood Pudding (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.kUBnIVoaZpdIPSHN"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        71,
+        80
+      ],
+      "drawn": false,
+      "_id": "VLdvmzLePRHzqhwd",
+      "text": "Pork Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.VLdvmzLePRHzqhwd"
+    },
+    {
+      "type": 0,
+      "weight": 10,
+      "range": [
+        81,
+        90
+      ],
+      "drawn": false,
+      "_id": "Wl9NdTrJ2JzkNK4S",
+      "text": "Pot Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.Wl9NdTrJ2JzkNK4S"
+    },
+    {
+      "type": 0,
+      "weight": 9,
+      "range": [
+        91,
+        99
+      ],
+      "drawn": false,
+      "_id": "ksXlLaCrXJ0kNzqa",
+      "text": "Chicken And Mushroom Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.ksXlLaCrXJ0kNzqa"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "_id": "EbLrlT3oMnpjxQ6B",
+      "text": "Meat Pie (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_key": "!tables.results!FOc8OD9Pm67W0Yqe.EbLrlT3oMnpjxQ6B"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 193750,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717224926795,
+    "modifiedTime": 1717229325560,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!FOc8OD9Pm67W0Yqe"
+}

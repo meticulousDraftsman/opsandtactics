@@ -1,0 +1,59 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Omnivore Side Dish Selection",
+  "_id": "An6aLNTeFMUwmHqh",
+  "img": "icons/consumables/food/bowl-stew-tofu-potato-brown.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Meat Side Dish Selection",
+      "documentId": "Yd1w8GnouCP23lmq",
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_id": "3yQ5TZBiT0YfnE3L",
+      "flags": {},
+      "_key": "!tables.results!An6aLNTeFMUwmHqh.3yQ5TZBiT0YfnE3L"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Vegetarian Side Dish Selection",
+      "documentId": "5QsA6d9iaNouAALO",
+      "img": "icons/consumables/fruit/apple-ripe-red.webp",
+      "_id": "4KqEHjM5iC5deejC",
+      "flags": {},
+      "_key": "!tables.results!An6aLNTeFMUwmHqh.4KqEHjM5iC5deejC"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 98438,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717221381059,
+    "modifiedTime": 1717230573209,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d2",
+  "_key": "!tables!An6aLNTeFMUwmHqh"
+}

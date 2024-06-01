@@ -1,0 +1,252 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Meat Bread Selection",
+  "_id": "8l3jl5PLdoXVn64m",
+  "img": "icons/consumables/meat/roast-bone-red-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        1,
+        7
+      ],
+      "drawn": false,
+      "_id": "50zhAS6JKqRzBODW",
+      "text": "Kobold Kibble (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.50zhAS6JKqRzBODW"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        8,
+        14
+      ],
+      "drawn": false,
+      "_id": "1Zhqt6qYAFzBCOOH",
+      "text": "Classic Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.1Zhqt6qYAFzBCOOH"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        15,
+        21
+      ],
+      "drawn": false,
+      "_id": "v01VcNLBzEKGOSKI",
+      "text": "Hot &amp; Spicy Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.v01VcNLBzEKGOSKI"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        22,
+        28
+      ],
+      "drawn": false,
+      "_id": "ZSZPFUURFdiZXfxD",
+      "text": "Jalapeno Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.ZSZPFUURFdiZXfxD"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        29,
+        35
+      ],
+      "drawn": false,
+      "_id": "Ykto6ewHbFIep2JF",
+      "text": "Black Pepper Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.Ykto6ewHbFIep2JF"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        36,
+        42
+      ],
+      "drawn": false,
+      "_id": "oU9llZ7X3w2m34Mh",
+      "text": "Lite Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.oU9llZ7X3w2m34Mh"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        43,
+        49
+      ],
+      "drawn": false,
+      "_id": "rLXsncELQdVfM6Xf",
+      "text": "Oven Roasted Turkey Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.rLXsncELQdVfM6Xf"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        50,
+        56
+      ],
+      "drawn": false,
+      "_id": "ZsvE7Jfy78TiBxD3",
+      "text": "Hickory Smoked Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.ZsvE7Jfy78TiBxD3"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        57,
+        63
+      ],
+      "drawn": false,
+      "_id": "H8wNJMRBfVk13W2X",
+      "text": "Bacon Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.H8wNJMRBfVk13W2X"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        64,
+        70
+      ],
+      "drawn": false,
+      "_id": "k6x3zHGsByci30x3",
+      "text": "Cheese Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.k6x3zHGsByci30x3"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        71,
+        77
+      ],
+      "drawn": false,
+      "_id": "MaTp62H2XJGkKZ9k",
+      "text": "Garlic Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.MaTp62H2XJGkKZ9k"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        78,
+        84
+      ],
+      "drawn": false,
+      "_id": "ca5OnPlRSGOfjc20",
+      "text": "Teriyaki Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.ca5OnPlRSGOfjc20"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        85,
+        91
+      ],
+      "drawn": false,
+      "_id": "dfLohqsBkppArnUD",
+      "text": "Chorizo Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.dfLohqsBkppArnUD"
+    },
+    {
+      "type": 0,
+      "weight": 7,
+      "range": [
+        92,
+        98
+      ],
+      "drawn": false,
+      "_id": "3g4VgZW5ffGUwaEP",
+      "text": "Macadamia Nut Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.3g4VgZW5ffGUwaEP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "CbTNehvemIqVSSrf",
+      "text": "Siracha Spam (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_key": "!tables.results!8l3jl5PLdoXVn64m.CbTNehvemIqVSSrf"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 175000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717222239080,
+    "modifiedTime": 1717229318455,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!8l3jl5PLdoXVn64m"
+}

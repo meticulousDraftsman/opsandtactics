@@ -1,0 +1,91 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Omnivore Multi Meal Spread Items",
+  "_id": "A2BmyeQiC3nDYcVa",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Spread Selection",
+      "documentId": "qouWBoQbEidWnZiG",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "9WCV3QPZ674xtFCp",
+      "flags": {},
+      "_key": "!tables.results!A2BmyeQiC3nDYcVa.9WCV3QPZ674xtFCp"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Spread Selection",
+      "documentId": "qouWBoQbEidWnZiG",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "fVt3lcTHGIU4nIts",
+      "flags": {},
+      "_key": "!tables.results!A2BmyeQiC3nDYcVa.fVt3lcTHGIU4nIts"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Spread Selection",
+      "documentId": "qouWBoQbEidWnZiG",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "8NiMxImDtBrvNBv6",
+      "flags": {},
+      "_key": "!tables.results!A2BmyeQiC3nDYcVa.8NiMxImDtBrvNBv6"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        76,
+        100
+      ],
+      "drawn": false,
+      "text": "Omnivore Spread Selection",
+      "documentId": "qouWBoQbEidWnZiG",
+      "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
+      "_id": "AcJ8Iwnkz2pCrDPI",
+      "flags": {},
+      "_key": "!tables.results!A2BmyeQiC3nDYcVa.AcJ8Iwnkz2pCrDPI"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717224850324,
+    "modifiedTime": 1717224885848,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!A2BmyeQiC3nDYcVa"
+}

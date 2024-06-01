@@ -1,0 +1,59 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Omnivore Bread Selection",
+  "_id": "V3Q5N5rSGrqKkoZo",
+  "img": "icons/consumables/grains/donut-baked-brown.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Vegetarian Bread Selection",
+      "documentId": "DkyukuiNIaS1ohLh",
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_id": "gDWj7Hb88iXKzxqf",
+      "flags": {},
+      "_key": "!tables.results!V3Q5N5rSGrqKkoZo.gDWj7Hb88iXKzxqf"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Meat Bread Selection",
+      "documentId": "8l3jl5PLdoXVn64m",
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_id": "8ggcLS068peSjwsl",
+      "flags": {},
+      "_key": "!tables.results!V3Q5N5rSGrqKkoZo.8ggcLS068peSjwsl"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 99219,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717222473517,
+    "modifiedTime": 1717230575360,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d2",
+  "_key": "!tables!V3Q5N5rSGrqKkoZo"
+}

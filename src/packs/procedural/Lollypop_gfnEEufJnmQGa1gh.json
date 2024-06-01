@@ -1,0 +1,779 @@
+{
+  "name": "Lollypop",
+  "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "cmyfNuQjK72npr7b",
+      "text": "Apple Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.cmyfNuQjK72npr7b"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "3jI5PRGkvlY9vwAd",
+      "text": "Grape Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.3jI5PRGkvlY9vwAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "n2Vtw5Ra0dJr8feH",
+      "text": "Apricot Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.n2Vtw5Ra0dJr8feH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "7aRZsvCy8DeaUfQC",
+      "text": "Avocado Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.7aRZsvCy8DeaUfQC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "YnYUWmXy3zR5mUDB",
+      "text": "Banana Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.YnYUWmXy3zR5mUDB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "76txJMqbU2Pa4lXf",
+      "text": "Huckleberry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.76txJMqbU2Pa4lXf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "TXaZHF1bdkHujWoD",
+      "text": "Passionfruit Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.TXaZHF1bdkHujWoD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "8XZeJxDuvU553yfh",
+      "text": "Papaya Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.8XZeJxDuvU553yfh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "tkjlQHZUE7OcaaUc",
+      "text": "Tangerine Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.tkjlQHZUE7OcaaUc"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "nNHdDbmTtrBMvH5y",
+      "text": "Jackfruit Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.nNHdDbmTtrBMvH5y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "54J0zQSR4AVif0D2",
+      "text": "Persimmon Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.54J0zQSR4AVif0D2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "boW6ryCmty8gZHFP",
+      "text": "Blackberry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.boW6ryCmty8gZHFP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eJ4Ty8Za6RgBTddx",
+      "text": "Blueberry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.eJ4Ty8Za6RgBTddx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "HRqFrwhprB8UPcsk",
+      "text": "Juniper Berry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.HRqFrwhprB8UPcsk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "pVX3UxI8J0PS2M5P",
+      "text": "Kiwi Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.pVX3UxI8J0PS2M5P"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "qNb8hwVDkpUjxalW",
+      "text": "Pineapple Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.qNb8hwVDkpUjxalW"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWSNxwdC6QQDCAty",
+      "text": "Pumpkin Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.GWSNxwdC6QQDCAty"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "8YZOxemhohFDm7pM",
+      "text": "Cantaloupe Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.8YZOxemhohFDm7pM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "oqXjqJBITRwqiHN9",
+      "text": "Cucumber Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.oqXjqJBITRwqiHN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "K6QxKwxWvcVOetOH",
+      "text": "Currant Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.K6QxKwxWvcVOetOH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "AUiwxPuXR8yZ8FGq",
+      "text": "Lime Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.AUiwxPuXR8yZ8FGq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "jgbx9iRN37lOzN5F",
+      "text": "Cherry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.jgbx9iRN37lOzN5F"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jo2oPtS7zkyUaVuA",
+      "text": "Cranberry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.Jo2oPtS7zkyUaVuA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "avxsWAwxOvXJbz0n",
+      "text": "Mango Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.avxsWAwxOvXJbz0n"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "e5kKAL1sMIMigHs4",
+      "text": "Orange Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.e5kKAL1sMIMigHs4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "8ddCpjywexHcZ3fb",
+      "text": "Fig Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.8ddCpjywexHcZ3fb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "8GgIKZr1yJW0l5nx",
+      "text": "Honeydew Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.8GgIKZr1yJW0l5nx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "rUWG3EL2Ub9um1yG",
+      "text": "Dragonfruit Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.rUWG3EL2Ub9um1yG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "wIJXTmGNxZaKZpzb",
+      "text": "Gooseberry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.wIJXTmGNxZaKZpzb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "Er0iJ67DsAPWw2jk",
+      "text": "Coconut Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.Er0iJ67DsAPWw2jk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "VGEbL7wC4ZrvG1eJ",
+      "text": "Tomato Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.VGEbL7wC4ZrvG1eJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "ABQQL6RmLPlXqxFu",
+      "text": "Watermelon Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.ABQQL6RmLPlXqxFu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "7bzJMap4tcsuIBtX",
+      "text": "Raspberry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.7bzJMap4tcsuIBtX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "GLPHoYhie2aNAMc9",
+      "text": "Pomegranate Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.GLPHoYhie2aNAMc9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "TRcjJLUw5U0goz6g",
+      "text": "Plum Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.TRcjJLUw5U0goz6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "hTkF6x1QB2GeqPyS",
+      "text": "Peach Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.hTkF6x1QB2GeqPyS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "JsuLvJwxlfjJMmNL",
+      "text": "Bell Pepper Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.JsuLvJwxlfjJMmNL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "Iarua9IyIjkUUuPI",
+      "text": "Lemon Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.Iarua9IyIjkUUuPI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "XsVwiHmDX86G594v",
+      "text": "Nectarine Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.XsVwiHmDX86G594v"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "s7eAOjsrg2CnFZuu",
+      "text": "Pear Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.s7eAOjsrg2CnFZuu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvAen3QODehYcsf",
+      "text": "Star Fruit Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.tLvAen3QODehYcsf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "BzJ2C6bjIB7KWr1e",
+      "text": "Strawberry Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.BzJ2C6bjIB7KWr1e"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "3AONBkii8sMyJIV3",
+      "text": "Celery Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.3AONBkii8sMyJIV3"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "AjhQgBdPacfhIy8D",
+      "text": "Peppermint Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.AjhQgBdPacfhIy8D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "6POHzZ5pcloSb3IF",
+      "text": "Kolanut Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.6POHzZ5pcloSb3IF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "EPtr3eXsYn7njgNU",
+      "text": "Almond Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.EPtr3eXsYn7njgNU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "A3fXI2RXzEnel4oT",
+      "text": "Coffee Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.A3fXI2RXzEnel4oT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "qR2ubz6diDdY9SZq",
+      "text": "Ginger Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.qR2ubz6diDdY9SZq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "owQC2804Un6FgiMO",
+      "text": "Lychee Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.owQC2804Un6FgiMO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "RT0ZYABqdrjRVyBO",
+      "text": "Sassafrass Lollypop (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/candy-pattie-pink-white.webp",
+      "_key": "!tables.results!gfnEEufJnmQGa1gh.RT0ZYABqdrjRVyBO"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": "rTIMQ0jeATlqHTZR",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223122384,
+    "modifiedTime": 1717225670310,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "gfnEEufJnmQGa1gh",
+  "sort": 200000,
+  "_key": "!tables!gfnEEufJnmQGa1gh"
+}

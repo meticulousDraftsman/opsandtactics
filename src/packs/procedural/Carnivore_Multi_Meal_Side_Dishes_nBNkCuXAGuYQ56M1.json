@@ -1,0 +1,75 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Carnivore Multi Meal Side Dishes",
+  "_id": "nBNkCuXAGuYQ56M1",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Side Dish Selection",
+      "documentId": "Yd1w8GnouCP23lmq",
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_id": "ywGbKzfcOc7iH8vv",
+      "flags": {},
+      "_key": "!tables.results!nBNkCuXAGuYQ56M1.ywGbKzfcOc7iH8vv"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Side Dish Selection",
+      "documentId": "Yd1w8GnouCP23lmq",
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_id": "DmY5kCPHj6CBTF0q",
+      "flags": {},
+      "_key": "!tables.results!nBNkCuXAGuYQ56M1.DmY5kCPHj6CBTF0q"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        91,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Side Dish Selection",
+      "documentId": "Yd1w8GnouCP23lmq",
+      "img": "icons/consumables/food/dried-meat-jerky-fish-red.webp",
+      "_id": "hzWQ4AX1glJwgDXE",
+      "flags": {},
+      "_key": "!tables.results!nBNkCuXAGuYQ56M1.hzWQ4AX1glJwgDXE"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717221518558,
+    "modifiedTime": 1717222961324,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!nBNkCuXAGuYQ56M1"
+}

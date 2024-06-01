@@ -1,0 +1,102 @@
+{
+  "folder": "WB9SeA30k97bLJKw",
+  "name": "Drink Composition",
+  "_id": "KxQRSyWyBjnKcfbS",
+  "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 20,
+      "range": [
+        1,
+        20
+      ],
+      "drawn": false,
+      "_id": "my982b9zjSJdl0Bw",
+      "text": "Powdered...",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_key": "!tables.results!KxQRSyWyBjnKcfbS.my982b9zjSJdl0Bw"
+    },
+    {
+      "type": 0,
+      "weight": 20,
+      "range": [
+        21,
+        40
+      ],
+      "drawn": false,
+      "_id": "RFGvjfIRWfSxBtza",
+      "text": "Canned...",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_key": "!tables.results!KxQRSyWyBjnKcfbS.RFGvjfIRWfSxBtza"
+    },
+    {
+      "type": 0,
+      "weight": 20,
+      "range": [
+        41,
+        60
+      ],
+      "drawn": false,
+      "_id": "skbhfNQIrvdqmM2v",
+      "text": "Bottled, Plastic...",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_key": "!tables.results!KxQRSyWyBjnKcfbS.skbhfNQIrvdqmM2v"
+    },
+    {
+      "type": 0,
+      "weight": 20,
+      "range": [
+        61,
+        80
+      ],
+      "drawn": false,
+      "_id": "S5DjgNZeBwSjpSyE",
+      "text": "Bottled, Glass...",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_key": "!tables.results!KxQRSyWyBjnKcfbS.S5DjgNZeBwSjpSyE"
+    },
+    {
+      "type": 0,
+      "weight": 20,
+      "range": [
+        81,
+        100
+      ],
+      "drawn": false,
+      "_id": "US2CbhcVv9qvZsoA",
+      "text": "Bagged...",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/drinks/wine-amphora-cup-gray.webp",
+      "_key": "!tables.results!KxQRSyWyBjnKcfbS.US2CbhcVv9qvZsoA"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 1600000,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717227159228,
+    "modifiedTime": 1717227759491,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!KxQRSyWyBjnKcfbS"
+}

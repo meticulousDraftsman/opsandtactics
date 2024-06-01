@@ -1,0 +1,59 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Carnivore Multi Meal Bread Items",
+  "_id": "oyof1bjlDgHXBcq3",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Bread Selection",
+      "documentId": "8l3jl5PLdoXVn64m",
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_id": "A9xqyVVxVqCvRy15",
+      "flags": {},
+      "_key": "!tables.results!oyof1bjlDgHXBcq3.A9xqyVVxVqCvRy15"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        36,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Bread Selection",
+      "documentId": "8l3jl5PLdoXVn64m",
+      "img": "icons/consumables/meat/roast-bone-red-white.webp",
+      "_id": "Iai85IHfeD501GIc",
+      "flags": {},
+      "_key": "!tables.results!oyof1bjlDgHXBcq3.Iai85IHfeD501GIc"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717222581144,
+    "modifiedTime": 1717224351396,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!oyof1bjlDgHXBcq3"
+}

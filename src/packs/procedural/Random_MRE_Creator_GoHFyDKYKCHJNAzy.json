@@ -1,0 +1,125 @@
+{
+  "name": "Random MRE Creator",
+  "img": "icons/containers/boxes/box-gift-white.webp",
+  "description": "<p>All MREs come in a hefty plastic pouch, thick and large enough to hold 4 units (32 oz) of water. Each component is individual sealed against air and water.</p><p>Accessory packets contain salt, pepper, hot sauce, toilet paper, freeze dried coffee, powdered creamer, sugar, hand cleaner, a flameless radiation heater, and a sturdy MRE spoon.</p>",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 17,
+      "range": [
+        1,
+        17
+      ],
+      "drawn": false,
+      "text": "Herbivore Single Meal MRE",
+      "documentId": "6fyQHMikZrZqKxnN",
+      "img": "icons/containers/boxes/box-gift-blue.webp",
+      "_id": "ERs1nXWAWQxr2igj",
+      "flags": {},
+      "_key": "!tables.results!GoHFyDKYKCHJNAzy.ERs1nXWAWQxr2igj"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 17,
+      "range": [
+        18,
+        34
+      ],
+      "drawn": false,
+      "text": "Herbivore Multi Meal MRE",
+      "documentId": "gI9cI4i95AWpLMyr",
+      "img": "icons/containers/boxes/box-gift-blue.webp",
+      "_id": "yFLxdc9qORfDE5no",
+      "flags": {},
+      "_key": "!tables.results!GoHFyDKYKCHJNAzy.yFLxdc9qORfDE5no"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 17,
+      "range": [
+        35,
+        51
+      ],
+      "drawn": false,
+      "text": "Omnivore Single Meal MRE",
+      "documentId": "fAoCMvIPD4qMjp7B",
+      "img": "icons/containers/boxes/box-gift-white.webp",
+      "_id": "l3IS3UNZQcNcP0hU",
+      "flags": {},
+      "_key": "!tables.results!GoHFyDKYKCHJNAzy.l3IS3UNZQcNcP0hU"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 17,
+      "range": [
+        52,
+        68
+      ],
+      "drawn": false,
+      "text": "Omnivore Multi Meal MRE",
+      "documentId": "bqtIrhtmlEgf1YZn",
+      "img": "icons/containers/boxes/box-gift-white.webp",
+      "_id": "9OJr4wv47gdKz7vg",
+      "flags": {},
+      "_key": "!tables.results!GoHFyDKYKCHJNAzy.9OJr4wv47gdKz7vg"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 17,
+      "range": [
+        69,
+        85
+      ],
+      "drawn": false,
+      "text": "Carnivore Single Meal MRE",
+      "documentId": "E42dHiJIFQsz6BWy",
+      "img": "icons/containers/chest/chest-simple-box-red.webp",
+      "_id": "jiIxI5mWxZ7CQDFO",
+      "flags": {},
+      "_key": "!tables.results!GoHFyDKYKCHJNAzy.jiIxI5mWxZ7CQDFO"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 15,
+      "range": [
+        86,
+        100
+      ],
+      "drawn": false,
+      "text": "Carnivore Multi Meal MRE",
+      "documentId": "cRjcFGejAWZCUGyn",
+      "img": "icons/containers/chest/chest-simple-box-red.webp",
+      "_id": "FZMNYApuHNbEjwHb",
+      "flags": {},
+      "_key": "!tables.results!GoHFyDKYKCHJNAzy.FZMNYApuHNbEjwHb"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717192452933,
+    "modifiedTime": 1717230889494,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "GoHFyDKYKCHJNAzy",
+  "sort": 0,
+  "_key": "!tables!GoHFyDKYKCHJNAzy"
+}

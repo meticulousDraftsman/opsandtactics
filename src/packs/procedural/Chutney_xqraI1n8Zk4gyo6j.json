@@ -1,0 +1,779 @@
+{
+  "name": "Chutney",
+  "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "cmyfNuQjK72npr7b",
+      "text": "Apple Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.cmyfNuQjK72npr7b"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "3jI5PRGkvlY9vwAd",
+      "text": "Grape Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.3jI5PRGkvlY9vwAd"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "n2Vtw5Ra0dJr8feH",
+      "text": "Apricot Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.n2Vtw5Ra0dJr8feH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "7aRZsvCy8DeaUfQC",
+      "text": "Avocado Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.7aRZsvCy8DeaUfQC"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_id": "YnYUWmXy3zR5mUDB",
+      "text": "Banana Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.YnYUWmXy3zR5mUDB"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_id": "76txJMqbU2Pa4lXf",
+      "text": "Huckleberry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.76txJMqbU2Pa4lXf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_id": "TXaZHF1bdkHujWoD",
+      "text": "Passionfruit Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.TXaZHF1bdkHujWoD"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_id": "8XZeJxDuvU553yfh",
+      "text": "Papaya Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.8XZeJxDuvU553yfh"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_id": "tkjlQHZUE7OcaaUc",
+      "text": "Tangerine Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.tkjlQHZUE7OcaaUc"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_id": "nNHdDbmTtrBMvH5y",
+      "text": "Jackfruit Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.nNHdDbmTtrBMvH5y"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_id": "54J0zQSR4AVif0D2",
+      "text": "Persimmon Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.54J0zQSR4AVif0D2"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_id": "boW6ryCmty8gZHFP",
+      "text": "Blackberry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.boW6ryCmty8gZHFP"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_id": "eJ4Ty8Za6RgBTddx",
+      "text": "Blueberry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.eJ4Ty8Za6RgBTddx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_id": "HRqFrwhprB8UPcsk",
+      "text": "Juniper Berry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.HRqFrwhprB8UPcsk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_id": "pVX3UxI8J0PS2M5P",
+      "text": "Kiwi Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.pVX3UxI8J0PS2M5P"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_id": "qNb8hwVDkpUjxalW",
+      "text": "Pineapple Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.qNb8hwVDkpUjxalW"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_id": "GWSNxwdC6QQDCAty",
+      "text": "Pumpkin Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.GWSNxwdC6QQDCAty"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_id": "8YZOxemhohFDm7pM",
+      "text": "Cantaloupe Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.8YZOxemhohFDm7pM"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_id": "oqXjqJBITRwqiHN9",
+      "text": "Cucumber Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.oqXjqJBITRwqiHN9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_id": "K6QxKwxWvcVOetOH",
+      "text": "Currant Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.K6QxKwxWvcVOetOH"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_id": "AUiwxPuXR8yZ8FGq",
+      "text": "Lime Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.AUiwxPuXR8yZ8FGq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_id": "jgbx9iRN37lOzN5F",
+      "text": "Cherry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.jgbx9iRN37lOzN5F"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_id": "Jo2oPtS7zkyUaVuA",
+      "text": "Cranberry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.Jo2oPtS7zkyUaVuA"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_id": "avxsWAwxOvXJbz0n",
+      "text": "Mango Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.avxsWAwxOvXJbz0n"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_id": "e5kKAL1sMIMigHs4",
+      "text": "Orange Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.e5kKAL1sMIMigHs4"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_id": "8ddCpjywexHcZ3fb",
+      "text": "Fig Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.8ddCpjywexHcZ3fb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_id": "8GgIKZr1yJW0l5nx",
+      "text": "Honeydew Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.8GgIKZr1yJW0l5nx"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_id": "rUWG3EL2Ub9um1yG",
+      "text": "Dragonfruit Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.rUWG3EL2Ub9um1yG"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_id": "wIJXTmGNxZaKZpzb",
+      "text": "Gooseberry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.wIJXTmGNxZaKZpzb"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_id": "Er0iJ67DsAPWw2jk",
+      "text": "Coconut Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.Er0iJ67DsAPWw2jk"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_id": "VGEbL7wC4ZrvG1eJ",
+      "text": "Tomato Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.VGEbL7wC4ZrvG1eJ"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_id": "ABQQL6RmLPlXqxFu",
+      "text": "Watermelon Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.ABQQL6RmLPlXqxFu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_id": "7bzJMap4tcsuIBtX",
+      "text": "Raspberry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.7bzJMap4tcsuIBtX"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_id": "GLPHoYhie2aNAMc9",
+      "text": "Pomegranate Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.GLPHoYhie2aNAMc9"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_id": "TRcjJLUw5U0goz6g",
+      "text": "Plum Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.TRcjJLUw5U0goz6g"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_id": "hTkF6x1QB2GeqPyS",
+      "text": "Peach Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.hTkF6x1QB2GeqPyS"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_id": "JsuLvJwxlfjJMmNL",
+      "text": "Bell Pepper Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.JsuLvJwxlfjJMmNL"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_id": "Iarua9IyIjkUUuPI",
+      "text": "Lemon Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.Iarua9IyIjkUUuPI"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_id": "XsVwiHmDX86G594v",
+      "text": "Nectarine Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.XsVwiHmDX86G594v"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_id": "s7eAOjsrg2CnFZuu",
+      "text": "Pear Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.s7eAOjsrg2CnFZuu"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_id": "tLvAen3QODehYcsf",
+      "text": "Star Fruit Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.tLvAen3QODehYcsf"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_id": "BzJ2C6bjIB7KWr1e",
+      "text": "Strawberry Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.BzJ2C6bjIB7KWr1e"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_id": "3AONBkii8sMyJIV3",
+      "text": "Celery Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.3AONBkii8sMyJIV3"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_id": "AjhQgBdPacfhIy8D",
+      "text": "Peppermint Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.AjhQgBdPacfhIy8D"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_id": "6POHzZ5pcloSb3IF",
+      "text": "Kolanut Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.6POHzZ5pcloSb3IF"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_id": "EPtr3eXsYn7njgNU",
+      "text": "Almond Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.EPtr3eXsYn7njgNU"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_id": "A3fXI2RXzEnel4oT",
+      "text": "Coffee Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.A3fXI2RXzEnel4oT"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_id": "qR2ubz6diDdY9SZq",
+      "text": "Ginger Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.qR2ubz6diDdY9SZq"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_id": "owQC2804Un6FgiMO",
+      "text": "Lychee Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.owQC2804Un6FgiMO"
+    },
+    {
+      "type": 0,
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_id": "RT0ZYABqdrjRVyBO",
+      "text": "Sassafrass Chutney (1 NV)",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/consumables/food/preserves-jam-jelly-jar-brown-red.webp",
+      "_key": "!tables.results!xqraI1n8Zk4gyo6j.RT0ZYABqdrjRVyBO"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "folder": "ZxgaKUoeOaCMLNGT",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717223122384,
+    "modifiedTime": 1717223732598,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_id": "xqraI1n8Zk4gyo6j",
+  "sort": 100000,
+  "_key": "!tables!xqraI1n8Zk4gyo6j"
+}

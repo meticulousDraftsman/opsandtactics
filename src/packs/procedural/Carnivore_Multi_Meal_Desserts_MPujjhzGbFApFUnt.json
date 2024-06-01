@@ -1,0 +1,75 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Carnivore Multi Meal Desserts",
+  "_id": "MPujjhzGbFApFUnt",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Dessert Selection",
+      "documentId": "FOc8OD9Pm67W0Yqe",
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_id": "QZLGXZaEwlpnM9Dc",
+      "flags": {},
+      "_key": "!tables.results!MPujjhzGbFApFUnt.QZLGXZaEwlpnM9Dc"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        26,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Dessert Selection",
+      "documentId": "FOc8OD9Pm67W0Yqe",
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_id": "3dwXdkzVCujiKoXz",
+      "flags": {},
+      "_key": "!tables.results!MPujjhzGbFApFUnt.3dwXdkzVCujiKoXz"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        76,
+        100
+      ],
+      "drawn": false,
+      "text": "Meat Dessert Selection",
+      "documentId": "FOc8OD9Pm67W0Yqe",
+      "img": "icons/consumables/food/candy-taffy-blue-white.webp",
+      "_id": "J9qHupUWGpZpZNHX",
+      "flags": {},
+      "_key": "!tables.results!MPujjhzGbFApFUnt.J9qHupUWGpZpZNHX"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717226619540,
+    "modifiedTime": 1717226651916,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!MPujjhzGbFApFUnt"
+}

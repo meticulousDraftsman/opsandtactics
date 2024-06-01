@@ -1,0 +1,59 @@
+{
+  "folder": "n60bFRKjXIenmmIv",
+  "name": "Herbivore Multi Meal Bread Items",
+  "_id": "cd4pwHz7k6jPG1nv",
+  "img": "icons/sundries/gaming/dice-runed-tan.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Bread Selection",
+      "documentId": "DkyukuiNIaS1ohLh",
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_id": "zdUKK8jnH9nqeYQj",
+      "flags": {},
+      "_key": "!tables.results!cd4pwHz7k6jPG1nv.zdUKK8jnH9nqeYQj"
+    },
+    {
+      "type": 2,
+      "documentCollection": "opsandtactics.procedural",
+      "weight": 1,
+      "range": [
+        36,
+        100
+      ],
+      "drawn": false,
+      "text": "Vegetarian Bread Selection",
+      "documentId": "DkyukuiNIaS1ohLh",
+      "img": "icons/consumables/grains/bread-loaf-orange.webp",
+      "_id": "vILfGQq5FmhLDCXv",
+      "flags": {},
+      "_key": "!tables.results!cd4pwHz7k6jPG1nv.vILfGQq5FmhLDCXv"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": false,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.2.14",
+    "coreVersion": "11.315",
+    "createdTime": 1717222653390,
+    "modifiedTime": 1717224363476,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "formula": "1d100",
+  "_key": "!tables!cd4pwHz7k6jPG1nv"
+}
