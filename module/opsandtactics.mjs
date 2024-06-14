@@ -473,11 +473,11 @@ async function handleWeaponMod(li,op){
 }
 async function disableActorEffects(li){
   const target = await game.actors.get(li.data("documentId"));
-  if (isEmpty(target.collections.effects)){
+  if (isEmpty(target.appliedEffects)){
     ui.notifications.info(`${target.name} has no Active Effects`)
     return null;
   } 
-  for (let ae of target.collections.effects){
+  for (let ae of target.appliedEffects){
     await ae.update({disabled:true})
   }
   ui.notifications.info(`All Active Effects disabled on ${target.name}`)
