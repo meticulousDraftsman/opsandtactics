@@ -1,0 +1,76 @@
+{
+  "folder": "8mYFvJvkgY6sh7Hx",
+  "name": "Bronze Helmet",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/headgear/brodie-helmet.webp",
+  "system": {
+    "layer": "other",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "proficient": true,
+    "cpLoss": null,
+    "protection": {
+      "ohPJxb3v": {
+        "value": 3,
+        "name": "Slashing"
+      },
+      "cgVwa91x": {
+        "value": 2,
+        "name": "Piercing"
+      },
+      "zCamuJFF": {
+        "value": 1,
+        "name": "Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 14,
+      "max": 14
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 2.3,
+      "tons": false,
+      "cost": 8,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">This helmet is made from a sheet of bronze, that while lighter than steel, provides less protection</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "3f1a39ee69835c29ad500c234a88839414b710a1"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471150360,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "208OW1BN4LqhzlrU",
+  "sort": 0,
+  "_key": "!items!208OW1BN4LqhzlrU"
+}

@@ -1,0 +1,76 @@
+{
+  "folder": "YUrwUzAmPC7I95Rs",
+  "name": "Bronze Chestplate",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/armor-vest.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 3,
+    "agiMax": 2,
+    "penalty": -4,
+    "proficient": true,
+    "cpLoss": 2,
+    "protection": {
+      "9TM5LPEf": {
+        "value": 4,
+        "name": "Slashing"
+      },
+      "k9VkaNri": {
+        "value": 3,
+        "name": "Piercing"
+      },
+      "8laJ2AbK": {
+        "value": 1,
+        "name": "Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 75,
+      "max": 75
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 26.4,
+      "tons": false,
+      "cost": 50,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle0\">This is a vest made from a single heavy piece of bronze bent into a chest protector.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "e1e74c38ce09f31b4ccab8f6e50f43985ae457ef"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471401338,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "Nq5GQtbvfQ9AjSD7",
+  "sort": 0,
+  "_key": "!items!Nq5GQtbvfQ9AjSD7"
+}

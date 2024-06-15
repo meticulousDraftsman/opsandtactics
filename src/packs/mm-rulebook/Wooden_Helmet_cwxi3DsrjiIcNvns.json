@@ -1,0 +1,68 @@
+{
+  "folder": "8mYFvJvkgY6sh7Hx",
+  "name": "Wooden Helmet",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/headgear/brodie-helmet.webp",
+  "system": {
+    "layer": "other",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "proficient": true,
+    "cpLoss": null,
+    "protection": {
+      "DI9JYEVp": {
+        "value": 1,
+        "name": "Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 5,
+      "max": 5
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 1.5,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">A helmet made of wood with cloth padding on the inside, providing rather light protection.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "ae25fcdcb7738a95c42fb181990aa2e4ab3e04c4"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471129393,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "cwxi3DsrjiIcNvns",
+  "sort": 0,
+  "_key": "!items!cwxi3DsrjiIcNvns"
+}

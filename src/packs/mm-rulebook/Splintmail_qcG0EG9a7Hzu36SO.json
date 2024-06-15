@@ -1,0 +1,72 @@
+{
+  "folder": "xtvRLkxeqt0YGXAt",
+  "name": "Splintmail",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/trench-body-armor.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 5,
+    "agiMax": 3,
+    "penalty": -3,
+    "proficient": true,
+    "cpLoss": 2,
+    "protection": {
+      "88yljIPS": {
+        "value": 7,
+        "name": "Slashing"
+      },
+      "nNsnagMO": {
+        "value": 4,
+        "name": "Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 110,
+      "max": 110
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 23.1,
+      "tons": false,
+      "cost": 60,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">Splint mail is armor made with splints of steel, providing maneuverability and protection primarily against swords.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "9c69166f15df08e7e136b53d40ce585264da79f9"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471214268,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "qcG0EG9a7Hzu36SO",
+  "sort": 0,
+  "_key": "!items!qcG0EG9a7Hzu36SO"
+}

@@ -1,0 +1,68 @@
+{
+  "folder": "8mYFvJvkgY6sh7Hx",
+  "name": "Lacquered Wood Helmet",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/headgear/brodie-helmet.webp",
+  "system": {
+    "layer": "other",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "proficient": true,
+    "cpLoss": null,
+    "protection": {
+      "II7ev60e": {
+        "value": 2,
+        "name": "Slashing, Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 9,
+      "max": 9
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 1.6,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">This helmet is made from hardwood that has had lacquer applied to it to give it strength.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "e56a6c8adafe8d07c12148a712af1393d39d9429"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471144294,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "9hzTTCwTz7WVC9SL",
+  "sort": 0,
+  "_key": "!items!9hzTTCwTz7WVC9SL"
+}

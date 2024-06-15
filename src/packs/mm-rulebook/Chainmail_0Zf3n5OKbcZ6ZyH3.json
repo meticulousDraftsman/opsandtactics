@@ -1,0 +1,72 @@
+{
+  "folder": "lX6k3JaQoF8fEhif",
+  "name": "Chainmail",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/chain-mail.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 3,
+    "agiMax": 3,
+    "penalty": -3,
+    "proficient": true,
+    "cpLoss": 2,
+    "protection": {
+      "wnaQt1zO": {
+        "value": 7,
+        "name": "Slashing"
+      },
+      "k5SjljP0": {
+        "value": 1,
+        "name": "Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 60,
+      "max": 60
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 15,
+      "tons": false,
+      "cost": 40,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">Chainmail is a continuation of the chain shirt, including pants and gauntlets.<br></span><span class=\"fontstyle0\"><strong>Special Notes</strong> </span><span class=\"fontstyle2\">This armor protects the arms and legs providing DR and Defense to all listed areas.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "a1ef8f2454166d5f527b31a57f9fe9ab536ed08e"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471356837,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "0Zf3n5OKbcZ6ZyH3",
+  "sort": 0,
+  "_key": "!items!0Zf3n5OKbcZ6ZyH3"
+}

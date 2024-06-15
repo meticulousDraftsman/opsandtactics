@@ -1,0 +1,68 @@
+{
+  "folder": "8mYFvJvkgY6sh7Hx",
+  "name": "Bone Helmet",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/headgear/brodie-helmet.webp",
+  "system": {
+    "layer": "other",
+    "active": false,
+    "def": null,
+    "agiMax": null,
+    "penalty": null,
+    "proficient": true,
+    "cpLoss": null,
+    "protection": {
+      "dpG7WZ80": {
+        "value": 2,
+        "name": "Slashing, Piercing, Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 10,
+      "max": 10
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 1.1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">This helmet is made from interlocking bones of a beast with a much larger head than the wearer.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "96add1f6d5f345d82fc5f0f1dfce9d0c478e65eb"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471083339,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "vxudINaiMwQQo4ZA",
+  "sort": 0,
+  "_key": "!items!vxudINaiMwQQo4ZA"
+}

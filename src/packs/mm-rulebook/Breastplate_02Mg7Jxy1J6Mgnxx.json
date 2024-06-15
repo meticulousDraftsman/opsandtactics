@@ -1,0 +1,76 @@
+{
+  "folder": "YUrwUzAmPC7I95Rs",
+  "name": "Breastplate",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/armor-vest.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 4,
+    "agiMax": 2,
+    "penalty": -5,
+    "proficient": true,
+    "cpLoss": 2,
+    "protection": {
+      "ejD7HWqD": {
+        "value": 9,
+        "name": "Slashing"
+      },
+      "t484rbkB": {
+        "value": 5,
+        "name": "Piercing"
+      },
+      "PgbYv3AN": {
+        "value": 2,
+        "name": "Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 90,
+      "max": 90
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 25,
+      "tons": false,
+      "cost": 50,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle0\">Essentially a vest made of metal, protecting the wearer’s chest from blows. It is made of one single solid sheet of metal.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "e530a3df72f48cd86fa9ea9e99985490898b7bc2"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471385122,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "02Mg7Jxy1J6Mgnxx",
+  "sort": 0,
+  "_key": "!items!02Mg7Jxy1J6Mgnxx"
+}

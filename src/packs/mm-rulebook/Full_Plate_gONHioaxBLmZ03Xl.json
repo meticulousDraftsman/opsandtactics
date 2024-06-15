@@ -1,0 +1,80 @@
+{
+  "folder": "xtvRLkxeqt0YGXAt",
+  "name": "Full Plate",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/space-suit.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 6,
+    "agiMax": 0,
+    "penalty": -8,
+    "proficient": true,
+    "cpLoss": 4,
+    "protection": {
+      "mEwCrtIr": {
+        "value": 12,
+        "name": "Slashing"
+      },
+      "uJvNGcVi": {
+        "value": 8,
+        "name": "Piercing"
+      },
+      "stxp8VkA": {
+        "value": 4,
+        "name": "Bludgeoning"
+      },
+      "XBjVJdPk": {
+        "value": 3,
+        "name": "Ballistic"
+      }
+    },
+    "ap": {
+      "value": 240,
+      "max": 240
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 37.5,
+      "tons": false,
+      "cost": 120,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">Full plate is a full set of armor, that protects all parts of the wearer except for the head.<br></span></p><p><span class=\"fontstyle0\"><strong>Special Notes</strong> </span><span class=\"fontstyle2\">This armor protects the arms, hands, legs, and feet of the wearer, providing DR and Defense to all listed areas.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "bb2a2b400d41d222c8d13dc45d20f9a6c410f807"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471203339,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "gONHioaxBLmZ03Xl",
+  "sort": 0,
+  "_key": "!items!gONHioaxBLmZ03Xl"
+}

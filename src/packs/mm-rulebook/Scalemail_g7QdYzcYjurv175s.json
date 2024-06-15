@@ -1,0 +1,76 @@
+{
+  "folder": "YUrwUzAmPC7I95Rs",
+  "name": "Scalemail",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/fish-scales.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 5,
+    "agiMax": 1,
+    "penalty": -4,
+    "proficient": true,
+    "cpLoss": 3,
+    "protection": {
+      "jaXGQcrt": {
+        "value": 6,
+        "name": "Slashing, Piercing"
+      },
+      "kLgWL5Di": {
+        "value": 5,
+        "name": "Bludgeoning"
+      },
+      "LrRvXk0x": {
+        "value": 1,
+        "name": "Ballistic"
+      }
+    },
+    "ap": {
+      "value": 80,
+      "max": 80
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 23.4,
+      "tons": false,
+      "cost": 58,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle0\">Armor that consists of overlapping metal plates. This design not only allows the armor to take an unusually large amount of abuse, but because the plates are not connected they act as a damper</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "6665413542739d7fae018076c406ce28faca4baf"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471412888,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "g7QdYzcYjurv175s",
+  "sort": 0,
+  "_key": "!items!g7QdYzcYjurv175s"
+}

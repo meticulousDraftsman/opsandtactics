@@ -1,0 +1,72 @@
+{
+  "folder": "dFY1IIOk5vcuH701",
+  "name": "Leather Vest",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/plastron.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 1,
+    "agiMax": 4,
+    "penalty": -2,
+    "proficient": true,
+    "cpLoss": 1,
+    "protection": {
+      "QbHSPq98": {
+        "value": 4,
+        "name": "Slashing"
+      },
+      "rAh7nSxG": {
+        "value": 2,
+        "name": "Piercing, Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 36,
+      "max": 36
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 5,
+      "tons": false,
+      "cost": 10,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">A light vest made of leather boiled to make it soft and malleable, then sewn together. Cow leather is the most common.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "997b670158bc86745a75017c339f518a1c468248"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471299875,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "KttjlzcIEDjh5Ebj",
+  "sort": 0,
+  "_key": "!items!KttjlzcIEDjh5Ebj"
+}

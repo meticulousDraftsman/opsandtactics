@@ -1,0 +1,72 @@
+{
+  "folder": "dFY1IIOk5vcuH701",
+  "name": "Studded Leather Vest",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/abdominal-armor.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 1,
+    "agiMax": 4,
+    "penalty": -2,
+    "proficient": true,
+    "cpLoss": 1,
+    "protection": {
+      "AHMYGs2k": {
+        "value": 5,
+        "name": "Slashing"
+      },
+      "J47EU2s0": {
+        "value": 2,
+        "name": "Piercing, Bludgeoning"
+      }
+    },
+    "ap": {
+      "value": 42,
+      "max": 42
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 6.3,
+      "tons": false,
+      "cost": 22,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">This vest is similar to the leather vest, but is studded and riveted together instead of sewn, giving it more resilience and strength</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "77894af60987bb094839b0c9d237da3534f731ad"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471284093,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "eBYzFapB3jck3pT5",
+  "sort": 0,
+  "_key": "!items!eBYzFapB3jck3pT5"
+}

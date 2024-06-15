@@ -1,0 +1,72 @@
+{
+  "folder": "dFY1IIOk5vcuH701",
+  "name": "Linothorax",
+  "type": "armor",
+  "img": "systems/opsandtactics/icons/wearables/armor/abdominal-armor.webp",
+  "system": {
+    "layer": "worn",
+    "active": false,
+    "def": 1,
+    "agiMax": 4,
+    "penalty": -1,
+    "proficient": true,
+    "cpLoss": 1,
+    "protection": {
+      "D9jZfbAy": {
+        "value": 5,
+        "name": "Piercing"
+      },
+      "hk9TtB8D": {
+        "value": 3,
+        "name": "Slashing"
+      }
+    },
+    "ap": {
+      "value": 40,
+      "max": 40
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 6,
+      "tons": false,
+      "cost": 16,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "description": "<p><span class=\"fontstyle2\">This is a vest made from linen glued together with layers of animal fats.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "j2TixXmEVffpyolM": 3,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "e313686e439bdfd068dd1086072c4e36a9f46926"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.1",
+    "coreVersion": "11.315",
+    "createdTime": 1718460974485,
+    "modifiedTime": 1718471281823,
+    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+  },
+  "_id": "jFXqtplDm2bknY9w",
+  "sort": 0,
+  "_key": "!items!jFXqtplDm2bknY9w"
+}
