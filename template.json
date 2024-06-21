@@ -1,8 +1,6 @@
 {
   "Actor": {
-    "types": ["character","vehicle","spacecraft"],
-    "character": {},
-    "spacecraft": {}
+    "types": ["character","vehicle"]
   },
   "Item": {
     "types": ["weapon","armor","skill","object","feature","magic"]
