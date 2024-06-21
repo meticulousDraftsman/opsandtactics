@@ -1,0 +1,52 @@
+{
+  "folder": "E6cup5QS5keFGFx2",
+  "name": "Equipment License",
+  "type": "object",
+  "_id": "uw3D13LyahiZDWza",
+  "img": "systems/opsandtactics/icons/gear/objects/passport.webp",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<h3>Purchasing a License</h3><p>To purchase a license or pay necessary fees, a character pays the fee on the chart, and waits the appropriate time. To expedite the process, the character may attempt a Knowledge (Business or Civics) check at the listed TN. Success results in the license being issued in 1d4 days. During character creation, a character only needs to purchase the license or pay the fee; the time required takes place before game play begins, however a character can only purchase a Licensed or Restricted license at character generation, unless a GM says otherwise. As a general rule, a character must obtain the appropriate license before buying a restricted object. When a character has purchased the appropriate license once, it is applicable for all items with the same rating and type, so a character does not have to purchase a license for each item of the same level, unless they are purchasing an illegal rated item. For Licensed, Restricted, and M&P licenses, a higher license grants the ability to purchase any object at the same restriction level or lower. Legitimate dealers will not sell objects to a character who does not have the necessary license. However, a character may be able to turn to the black market to obtain restricted objects without a license.</p><p>In some cases, a player may want to purchase an item that is above their license level. If the item in question is able to have its license level lowered through any upgrades, the player may purchase the item with the upgrades that would reduce its level, but they must purchase the item at the “New in Box” price.</p><table><tbody><tr><td><p>Registration Rating</p></td><td><p style=\"text-align: center\">Knowledge (Business or Civics) TN</p></td><td><p style=\"text-align: center\">Time Required</p></td><td><p style=\"text-align: center\">Cost</p></td></tr><tr><td><p>Licensed</p></td><td><p style=\"text-align: center\">15</p></td><td><p style=\"text-align: center\">5 days</p></td><td><p style=\"text-align: center\">5</p></td></tr><tr><td><p>Restricted</p></td><td><p style=\"text-align: center\">20</p></td><td><p style=\"text-align: center\">1 week</p></td><td><p style=\"text-align: center\">10</p></td></tr><tr><td><p>Military & Police</p></td><td><p style=\"text-align: center\">25</p></td><td><p style=\"text-align: center\">2 weeks</p></td><td><p style=\"text-align: center\">20</p></td></tr><tr><td><p>Illegal</p></td><td><p style=\"text-align: center\">30</p></td><td><p style=\"text-align: center\">3 weeks</p></td><td><p style=\"text-align: center\">12 per item</p></td></tr></tbody></table>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.3",
+    "coreVersion": "11.315",
+    "createdTime": 1718985030433,
+    "modifiedTime": 1718985341283,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_key": "!items!uw3D13LyahiZDWza"
+}

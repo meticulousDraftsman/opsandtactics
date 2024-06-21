@@ -1,5 +1,5 @@
 {
-  "name": "1 Core Weapon Mods",
+  "name": "Core Weapon Mods",
   "pages": [
     {
       "sort": -25000,
@@ -222,14 +222,14 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
+    "systemVersion": "0.3.3",
     "coreVersion": "11.315",
     "createdTime": 1679698713852,
-    "modifiedTime": 1699736393455,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1718989692004,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
-  "folder": null,
-  "sort": 0,
+  "folder": "aFQyG73kL7bGKONR",
+  "sort": 100000,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3

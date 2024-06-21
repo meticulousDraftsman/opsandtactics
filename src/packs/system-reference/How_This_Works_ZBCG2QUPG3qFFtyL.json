@@ -1,0 +1,201 @@
+{
+  "name": "How This Works",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "Weapon Mod Reference",
+      "type": "text",
+      "_id": "jFT9oELntYrDEjtA",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>When opening a Weapon item, the system looks through the journals in the world and in compendiums for those flagged as being a source of weapon mods. It then goes through their text pages and builds a list of weapon mods that are then available for the item to import copies of. The format it expects is:</p><pre><code>Weapon Mod Name | To-hit Modifier | Flat Damage | Extra Dice | Recoil Modifier | Combat Point Modifier | Description</code></pre><p>Each part with a pipe | between it, each mod on a new line. It groups these based on the name of the journal page- any pages with the same name will have their mods grouped together.</p><p>A GM can flag or unflag a journal that is unlocked for editing via right-click.</p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.3.3",
+        "coreVersion": "11.315",
+        "createdTime": null,
+        "modifiedTime": 1719002741429,
+        "lastModifiedBy": "awmzRJQcQXoX998M"
+      },
+      "_key": "!journal.pages!ZBCG2QUPG3qFFtyL.jFT9oELntYrDEjtA"
+    },
+    {
+      "sort": 200000,
+      "name": "Character Attributes for Active Effects",
+      "type": "text",
+      "_id": "O2ApSk9bVeSgDeuU",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Attributes marked with (Mod) have a special behavior meant for use with Active Effects. Mod Attributes have a built in 'misc' property, and during calculation of derived stats the value of this misc property <em>and any other sub-properties</em> added by Active Effects are summed together.</p><p>As an example, <code>system.def.equip</code> is a Mod Attribute. <code>system.def.equip.misc</code> exists for editing through the sheet, but if an Active Effect were to add some value to <code>system.def.equip.shieldFocus</code> (which did not exist until the Active Effect created it) then it would be included in the total value.</p><p>If a malformed active effect is preventing you from opening an actor, right click them in the sidebar and disable their active effects.</p><hr /><ul><li><p><code>system.health</code></p><ul><li><p><code>xhp</code> and <code>chp</code></p><ul><li><p><code>value</code>: What you apply incoming damage to</p></li><li><p><code>formula</code> and <code>mods</code> (Mod): Used to calculate max</p></li></ul></li><li><p><code>temp</code> and <code>notes</code>: For tracking purposes, not used in calculation</p></li><li><p><code>bleed</code>: Used to roll bleed dice</p></li><li><p><code>incoming</code>: Used to apply damage to health pools</p></li><li><p><code>damageReport</code>: Used to track damage application messages</p></li></ul></li><li><p><code>system.cp</code></p><ul><li><p><code>value</code>, <code>max</code>, and <code>temp</code>: For tracking purposes, not used in calculation</p></li><li><p><code>armor</code> (Mod): Included when calculating CP loss from worn armor</p></li></ul></li><li><p><code>system.def</code></p><ul><li><p><code>equip</code> (Mod), <code>size</code>, <code>move</code>, <code>misc</code> (Mod), and <code>dodge</code> (Mod): Used to calculate Defense</p></li></ul></li><li><p><code>system.stats</code></p><ul><li><p><code>init</code> (Mod): Included when calculating initiative modifier</p></li><li><p><code>bab</code> (Mod): Included when calculating base attack bonus</p></li><li><p><code>recoil</code> (Mod): Included when calculating recoil reduction/penalty</p></li><li><p><code>wager</code>: Included in both initiative and base attack modifiers</p></li><li><p><code>armorPenalty</code> (Mod): Included when calculating check penalties from worn armor</p></li><li><p><code>level</code></p><ul><li><p><code>value</code>: Used to calculate base attack bonus, personal capital, and (by default) XHP and ML</p></li><li><p><code>xp.value</code>: For tracking purposes</p></li></ul></li><li><p><code>carrying</code></p><ul><li><p><code>formula</code> and <code>mods</code> (Mod): Used to calculate carrying capacities</p></li></ul></li></ul></li><li><p><code>system.details</code></p><ul><li><p><code>biography</code>, <code>size</code>, <code>race</code>, and <code>occupation</code>: For tracking purposes</p></li></ul></li><li><p><code>system.ml</code></p><ul><li><p><code>formula</code>, <code>mods</code> (Mod), and <code>temp</code>: Used to calculate max</p></li></ul></li><li><p><code>system.magic</code></p><ul><li><p><code>psionFocus</code>: Used to determine ML spent by psionic focus</p></li><li><p><code>memorizedSets</code>: Used to determine ML spent by memorizing incantation recipe sets</p></li><li><p><code>mlCant</code>: For tracking ML used by invoking. What you apply mental resource usage and regain to</p></li><li><p><code>mods</code> (Mod) For tracking any other sources of ML usage</p></li></ul></li><li><p><code>system.abilities</code></p><ul><li><p><code>str</code></p><ul><li><p><code>score</code> and <code>modMods</code> (Mod): Used to calculate ability score modifier</p></li><li><p><code>foc</code>: Used to calculate Power</p></li></ul></li><li><p><code>dex</code></p><ul><li><p><code>score</code> and <code>modMods</code> (Mod): Used to calculate ability score modifier</p></li><li><p><code>mrk</code>: Used to calculate Agility</p></li></ul></li><li><p><code>con</code>, <code>int</code>, <code>wis</code>, and <code>cha</code></p><ul><li><p><code>score</code> and <code>modMods</code> (Mod): Used to calculate ability score modifier</p></li></ul></li></ul></li><li><p><code>system.saves</code></p><ul><li><p><code>fortitude</code>, <code>reflex</code>, and <code>will</code></p><ul><li><p><code>base</code> and <code>mods</code> (Mod): Used to calculate saving throw modifier</p></li><li><p><code>mult</code>: Multiplies base by itself</p></li></ul></li></ul></li><li><p><code>system.wealth</code></p><ul><li><p><code>description</code>: For tracking purposes</p></li><li><p><code>wp</code></p><ul><li><p><code>income</code>: Used to roll occupational wealth</p></li><li><p><code>notes</code>, <code>cash</code>, <code>credit</code>, <code>check</code>: For tracking purposes</p></li></ul></li><li><p><code>capital</code></p><ul><li><p><code>personal.hard</code>: For tracking purposes</p></li><li><p><code>external.total</code> and <code>external.hard</code>: for tracking purposes</p></li></ul></li></ul></li></ul>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.3.3",
+        "coreVersion": "11.315",
+        "createdTime": null,
+        "modifiedTime": 1719002829318,
+        "lastModifiedBy": "awmzRJQcQXoX998M"
+      },
+      "_key": "!journal.pages!ZBCG2QUPG3qFFtyL.O2ApSk9bVeSgDeuU"
+    },
+    {
+      "sort": -100000,
+      "name": "The Character Sheet",
+      "type": "text",
+      "_id": "b9ynmw2WNuVBlT9B",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<h1>Common Concepts</h1><h3>Delta Inputs</h3><p>Some inputs will parse a number with a + or - sign as a <em>difference</em>, and add or it to the current value rather than replacing it. To replace the value in these kinds of inputs, begin your entry with =. These inputs will automatically highlight their content when selected to help enter these delta inputs.</p><h3>Clickable Elements</h3><p>Parts of the sheet that 'do something' when clicked will highlight when moused over and generally be bold.</p><h3>Embedded Items</h3><p>Anywhere you can click to edit an item, you can right-click for additional options. You can create a duplicate of the item inside the actor, or copy it to the world sidebar itself. This is useful when setting up multiple similar items or ones that can be used by multiple characters.</p><h3>Checks, Effects, and Resource Consumption</h3><p>Available actions on the character sheet are often divided between a 'check' and an 'effect' roll. If the action consumes resources, the check will be what actually consumes them. To avoid consuming resources, hold <code>alt</code> when clicking on the check roll. To ignore any warnings about insufficient resources and potentially end up with negative numbers, hold <code>ctrl</code> when clicking on the check roll. To skip the dialog for adding/modifying situational modifiers, hold <code>shift</code> when clicking on the check roll.</p><h1>Sheet Header</h1><h3>Name and Token Image</h3><p>Newly-created actors will have a randomly-assigned icon for their image. So long as the token image is one of the random possibilities, updating it will update the prototype token image just like the default behavior in other systems.</p><h3>Health</h3><p>XHP and CHP are both Delta Inputs. They can also be altered by applying damage to them on the Defense tab. The Temp field is for reference and not used in calculations.</p><h3>Combat Points</h3><p>CP is a Delta Input. It can also be altered by the resource consumption of actions. The Max field is for reference and not used in calculations. The Temp field is used to determine how many Combat Points past zero can be spent without warning. Loss is derived from active Armor and can be deducted from the current value.</p><h3>Defense</h3><p>Defense, Flat-Footed Defense, and Touch Defense are all derived from other properties and shown here for easy reference.</p><h1>Character</h1><h3>Ability Scores</h3><p>The ability modifier for the six core abilities is calculated and displayed on the right. For the two ability scores with split modifiers, Strength and Dexterity, inputting the modifier for the Focus and Marksmanship will allocate the rest of the ability's modifier to Power and Agility, respectively. The labels are all rollable as generic ability checks.</p><h3>Saving Throws</h3><p>By expanding each display, you can edit the multiplier applied to each base save or input an arbitrary modifier. The main labels themselves are rollable.</p><h3>Skills</h3><p>Total spent skill points are displayed alongside total gained skill points. Each Skill item the character has is displayed can be edited, reordered, and its skill check rolled.</p><h1>Traits</h1><h3>Formulae</h3><p>Here is where the calculations are defined for maximum CHP, XHP, ML, and basic Encumbrance. These are usually modified by active effects from Feature items, but they can be manually adjusted as well.</p><h3>Modifiers</h3><p>Here is where the total modifiers for BAB, Initiative, and Recoil Reduction are displayed alongside the corresponding inputs for miscellaneous modifiers. The dropdown for Initiative Wagering is also present here, and automatically applies to initiative and attack.</p><h3>Character Option Point Results</h3><p>Here is where the player applies the effects from their spent C.O.P.s during character creation and leveling up. Each input field is for the total effect of any spent points, not for the points themselves.</p><h3>Traits and Feats</h3><p>Each Feature item the character has is displayed with its summary for reference and can be edited or reordered.</p><h1>Offense</h1><h3>Weapons, Objects, and Magic</h3><p>All Weapons are displayed, and any Objects or Magics with attack-type actions are also shown. All display mostly the same information for the three different item types. Within each category the items can be edited, reordered, or minimized.</p><p>Error range is displayed for Weapons, and the percentile chance for jamming potential can be rolled. Items that use ammunition or other consumable resources can choose their consumption source and open the resource transfer window.</p><p>Each displayed action lists its check, effect (if applicable), and any resources consumed by the check. Clicking on the check will open the dashboard to configure it before execution, and clicking the effect will simply roll it.</p><h1>Defense</h1><h3>Defense Modifiers</h3><p>The various factors that contribute to defense are editable here. Dodge, Equipment, and Miscellaneous are shown as totals alongside their miscellaneous inputs since they rely on other properties and can be targeted by active effects.</p><h3>Defense Impacts</h3><p>The total penalties incurred by every active piece of Armor present on the character. Max Agility automatically applies to the ability modifier, Armor Penalty is referenced by skills marked as sensitive to it, and CP Loss is available to deduct in the header.</p><h3>Extremity Damage</h3><p>A set of simple clickable toggles to mark whether a given limb is wounded or not. Purely for reference.</p><h3>Damage and Hit Points</h3><p>The number of bleed dice is a Delta Input and can be rolled, applying it to the incoming damage. Incoming Damage itself is a Delta Input, and by right clicking a roll message with a token selected you can add its value to the incoming damage as well. The notes field is for reference.</p><h3>Magical Protection, Plasma Shielding, Armor Plates, Worn Armor, Other Protection, and Inactive Protection</h3><p>Each Armor item the character has is displayed here in its relevant category and can be edited or reordered. Their current Armor Points or Soak can also be edited, and for armors with different kinds of protection the currently-applicable Damage Reduction can be selected.</p><h3>Applying Damage</h3><p>The icons accompanying XHP, CHP, and each Armor will take the incoming damage amount and apply it to the associated value depending on its type.</p><ul><li><p>XHP can't be negative, but CHP can.</p></li><li><p>Any Armor without a defined Armor Point/Soak maximum is treated as simple Damage Reduction, reducing the incoming damage.</p></li><li><p>Plasma Shielding applies its DR to the incoming damage first, potentially diffusing it entirely before starting to lose Soak.</p></li><li><p>All other Armors with defined pools of Armor Points spend their AP to reduce the incoming damage using their DR.</p></li><li><p>A dialog may pop up asking if the attacker is doing something special that would impact the damage application. Hold <code>shift</code> when clicking the icon to skip these.</p></li></ul><p>Each 'step' of applying the same chunk of damage will output its result to a chat message. Until the incoming damage is reduced entirely or another chat message interrupts it, the same message is updated with each step.</p><h1>Utility</h1><h3>Mental Limit</h3><p>The various factors that contribute to Mental Limit usage and capacity are displayed here. Miscellaneous costs can come from active effects or the provided input. Whether a character is psionically focused or memorizing a set of incantation recipes can be toggled. Temporary ML from drugs or other sources can be input. ML spent by invoking can be manually edited but will usually be altered by actions that spend it, and the icon will refund the amount that an invoker naturally regains every round. Mental limit from objects is derived from all objects with a magic resource that has an ML cost and nonzero uses remaining.</p><h3>Resources</h3><p>Items with available resources will be listed here for easy reference and editing.</p><ul><li><p>Quantity is displayed if marked as available for use.</p></li><li><p>Consumable, Cartridge, and Coolant resources can be marked available for use.</p></li><li><p>Magic resources are always available for use, and can optionally incur a ML cost when they have nonzero uses.</p></li><li><p>Generic resources are for reference only.</p></li></ul><h3>Character</h3><p>A list of general actions a character can perform along with their Combat Point costs and an arbitrary multiplier. Clicking the icon will deduct the total CP cost from the character.</p><h3>Objects</h3><p>Objects with utility actions will be listed here in much the same fashion as on the Offense tab.</p><h3>Magic</h3><p>All Magic items will be listed here in much the same fashion as on the Offense tab.</p><h1>Gear</h1><h3>Money</h3><p>Three fields are included for tracking wealth points if a single number isn't enough. All three are Delta Inputs, and the labels are simply suggestions. The notes are for reference. The income formula can be rolled by clicking the accompanying icon.</p><h3>Encumbrance</h3><p>Displays the light, medium, and heavy load capacity based on the formulae and any other effects.</p><h3>Capital</h3><p>Displays how much Personal Capital the character would have based on their Charisma score and Level, as well as inputs for any External Capital and how much each of those are tied up in hard assets.</p><h3>Loose Items, Worn Items, Carried Items, and Stored Items</h3><p>Each organizational category tallies the total weight of objects inside it. Items are displayed with their icons and any items that are nested within them, and can be edited or reordered.</p><p>Dragging an item onto a category label will move it to that category. Holding shift or control while dragging an item onto another item will set the latter as its parent.</p><h1>Biography</h1><p>Race and Size are often set by Active Effect but can be manually set. Everything except Level is purely for reference; Level is used to calculate the character's Base Attack Bonus.</p><h1>Active Effects</h1><h3>Temporary Effects, Passive Effects, and Inactive Effects</h3><p>Displays Every Active Effect present on the Character, as well as where it comes from. Each can be toggled active or inactive, edited, or deleted</p><h3>Unfiltered Item List</h3><p>Provided as a failsafe in case a misbehaving item isn't showing up anywhere else or can't be opened to delete it.</p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.3.3",
+        "coreVersion": "11.315",
+        "createdTime": null,
+        "modifiedTime": 1718992516822,
+        "lastModifiedBy": "awmzRJQcQXoX998M"
+      },
+      "_key": "!journal.pages!ZBCG2QUPG3qFFtyL.b9ynmw2WNuVBlT9B"
+    },
+    {
+      "sort": 0,
+      "name": "Item Types",
+      "type": "text",
+      "_id": "tfnsjIc7mbPxH1j4",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<h1>Common Concepts</h1><p>When owned by a character, a trash icon will be present in the item's own sheet in order to delete it.</p><h3>Physical Objects</h3><p>Weapons, Objects, and some Armors are 'physical objects' with a common set of properties. They have a Quantity, Size, Weight, Cost, Quality, License, Container, and Note. Quantity can potentially be uses as a resource, and it also affects the total displayed weight when owned by a character. Weight can be toggled between pounds and tons by clicking the icon. Cost can be toggled between wealth points and capital by clicking the icon. Container determines where the item is sorted on the character's Gear tab, either inside one of the main categories or 'inside' another item.</p><p>Physical Objects also have Resources. Each icon adds a resource of the corresponding type, besides Quantity which is always present.</p><ul><li><p>Quantity will be spent directly, and can be made available.</p></li><li><p>Consumable resources can have a value and maximum, and can be made available.</p></li><li><p>Cartridge resources can have a value and maximum, and can be made available.</p><ul><li><p>They can have multiple Bullets defined inside them that will impact the attacks and damage of weapons that use them.</p></li></ul></li><li><p>Coolant resources have a value, and can be made available</p></li><li><p>Magic resources can have a value and maximum as well as a constant Mental Limit cost when their value is nonzero, and are always available.</p></li><li><p>Generic resources can be non-numeric and are for reference only.</p></li></ul><h1>Weapon</h1><h3>Weapon Statistics</h3><p>Resource type determines what the weapon's attacks use as ammunition, if anything.</p><ul><li><p>Unlimited ignores any resource needs</p></li><li><p>Consumable uses consumable resources, which are simple numerical values.</p></li><li><p>Cartridge uses cartridge resources, which allows selecting individual bullets within a resource to impact the weapon's attacks.</p></li><li><p>Fusion uses coolant resources, which add heat up to the weapon's capacity instead of decrementing.</p></li></ul><p>Weapon Range is just for reference. Critical Range and Error Range % are used to display potential critical strikes and jams when rolling attack checks.</p><ul><li><p>An Internal magazine looks for resources within the same item, ignoring availability and other items.</p></li><li><p>An External magazine looks for resources within other items in the same actor, respecting availability.</p></li><li><p>Both combines the options of Internal and External.</p></li></ul><p>The transfer icon can be clicked to open the resource transfer window.</p><p>Empty Damage and type determine the base damage when not using cartridge ammo effects.</p><h3>Weapon Modifiers</h3><p>'Weapon Mod' is a catch-all term for things that can effect the to-hit, damage, recoil, or combat point cost of a weapon's attack. They might be feats, weapon upgrades and attachments, ammunition, or even magical enchantments. They're made to be easy to copy from the source, simple to edit within a given weapon, and applicable selectively to each aspect of each attack in the weapon. A weapon attachment that only gives an attack bonus to single-shot attacks can be toggled for only those attacks, a cartridge's recoil penalty can be marked only for multi-shot attacks where it applies, and so on and so forth.</p><p>New weapon mods can be made from scratch, or a source of weapon mods can be selected followed by an individual mod from that source to copy it. Each weapon mod within the item is then listed with its name, to-hit impact, flat damage impact, extra damage dice, recoil impact, and CP impact along with its description for reference.</p><p>Journals can be right-clicked to check if they are a source or weapon mods, or to toggle them as such.</p><h3>Attacks</h3><p>Here every attack in the weapon is listed.</p><ul><li><p>The Active checkbox determines whether the attack is displayed on the character sheet. The Details icon collapses the attack to make working with long attack lists easier. Ammo determines how much is consumed from whatever source the weapon is using.</p></li><li><p>Ranged or Melee Attack determines what situational modifiers apply to it. A Message simply outputs a chat message rather than rolling anything, and Resources Only spends the ammo and CP without any further indication.</p></li><li><p>To-Hit is clickable, opening the window for editing attack details on the To-Hit tab.</p><ul><li><p>The From Attack input is for any modifiers inherent to the attack itself, and the ability score dropdown for what ability modifier applies to the attack's accuracy.</p></li><li><p>Ammunition Effects toggles whether the loaded ammo will affect to-hit.</p></li><li><p>Weapon mods with an impact on to-hit are listed and can be toggled on or off.</p></li></ul></li><li><p>Recoil is clickable, opening the window for editing attack details on the Recoil tab.</p><ul><li><p>Recoil itself can be toggled on or off entirely. From attack is for the recoil inherent to the attack.</p></li><li><p>Ammunition Effects toggles whether the loaded ammo will affect recoil.</p></li><li><p>Weapon mods with an impact on recoil are listed and can be toggled on or off.</p></li></ul></li><li><p>CP is clickable, opening the window for editing attack details on the CP tab.</p><ul><li><p>The From Attack input is for the base combat point cost of the attack.</p></li><li><p>Weapon mods with an impact on combat point cost are listed and can be toggled on or off.</p></li></ul></li><li><p>Damage is clickable, opening the window for editing attack details on the Damage tab.</p><ul><li><p>The From Attack input is for any flat damage inherent to the attack itself, the ability score dropdown for what ability modifier is added to that flat damage, and a multiplier for the ability score.</p></li><li><p>The Ammo Scaling inputs determine how extra dice are granted based on the amount of dice from the ammunition or weapon base damage.</p></li><li><p>Ammunition Effects toggles whether the loaded ammo will provide its damage.</p></li><li><p>Weapon mods with an impact on damage are listed and can be toggled on or off. Flat damage and extra dice can be toggled separately.</p></li></ul><p>Flavor text inputs are displayed for the attack check roll/message and damage roll in the editing window.</p></li></ul><h1>Armor</h1><h3>Armor Statistics</h3><ul><li><p>The Active checkbox determines whether the armor's defense impacts should be applied to the character.</p></li><li><p>Defense Bonus, Max Agility, Armor Penalty, and CP Loss all contribute to the character's defense impacts if the armor is active. Note: A max agility of 0 is <em>not</em> the same as a max agility of none! Note: If a character is not proficient in armor they're wearing, delete the defense bonus.</p></li><li><p>The Physical checkbox determines whether the armor is a physical object that should be shown with the rest of the character's gear, or something like a plasma shield or magical effect.</p></li><li><p>Layer determines which category the armor is sorted into on the character sheet, as well as how it responds to applied damage.</p></li><li><p>Armor Points/Shield Soak determines the 'health' of the armor's protection. Leave blank for flat damage reduction.</p></li><li><p>Proficient/Non-Proficient Penalty determines which skills the armor's armor penalty applies to.</p></li></ul><h3>Protection</h3><p>An editable list of what damage types the armor protects against and how much damage reduction it applies to each.</p><h1>Skill</h1><h3>Total Modifier</h3><p>An Unfocused skill costs two skill points for every rank. Focused and Double-Focused skills costs one skill point for each rank, and Double-Focused skills receive a +1 to their Occupation bonus. The Ability dropdown selects which ability score applies to the skill, Ranks is how many skill ranks the character has in the skill, and the Armor Penalty checkbox determines whether the total modifier should be impacted by the character's Armor Penalty. Non-Proficient means the penalty only applies from non-proficient armors.</p><h3>Equipment, Miscellaneous, Occupational, and Synergy Modifiers</h3><p>Each category is a list of skill impacts with a name, modifier, and whether the modifier is active or not. This can be useful for a character with different sets of tools; they can toggle whether to apply the bonus from their handheld first aid kit or the surgery tools they have back at home base, for example.</p><p>Occupational bonuses must be created manually here.</p><p>Synergy bonuses are pre-populated where relevant, but must be input manually.</p><h1>Object</h1><h3>Object Actions</h3><p>Objects can have a variety of action types defined, both for attack and utility. Like weapons they can have a critical threat range. Unlike weapons, their choices for action resources are simplified.</p><ul><li><p>Unlimited Uses or Consumable determines whether the object uses resources or not. </p></li><li style=\"box-sizing:border-box;user-select:text\"><p style=\"box-sizing:border-box;user-select:text;margin:0.5em 0px\"><span style=\"font-family:Roboto, sans-serif\">An Internal magazine looks for resources within the same item, ignoring availability and other items.</span></p></li><li style=\"box-sizing:border-box;user-select:text\"><p style=\"box-sizing:border-box;user-select:text;margin:0.5em 0px\"><span style=\"font-family:Roboto, sans-serif\">An External magazine looks for resources within other items in the same actor, respecting availability.</span></p></li></ul><p>Object Actions are similar to weapon attacks but lack weapon mods or recoil, and their modifiers are almost all manually input.</p><ul><li><p>The Active checkbox determines whether the attack is displayed on the character sheet. CP cost is a manual input, and Cost determines how much is consumed from whatever source the object is using.</p></li><li><p>The check types labeled (Attack) behave the same as on weapons, and will make the action display on the Offense tab. The other check types will display the action on the Utility tab.</p></li><li><p>Skill Checks select a Skill item on the character to roll when the check is performed.</p></li><li><p>Generic Checks are exactly that, a plain 3d6 roll plus the action modifier and ability modifier.</p></li><li><p>Other Rolls just roll what's input with no preceding 3d6.</p></li><li><p>The (Utility) versions of Message and Resources work the same as for attacks.</p></li></ul><h1>Feature</h1><p>Features are mainly vehicles for reference text and potentially Active Effects that passively alter the character. Things like overriding the racial CHP formula, or the CHP and XHP bonuses from Toughness.</p><h1>Magic</h1><p>Magic Properties</p><p>Like Objects, Magics can have a variety of action types defined and have their own choices for resource expenditure.</p><ul><li><p>Unlimited Use is, again, exactly what it sounds like</p></li><li><p>Charges selects a Magic resource from an object the character owns, and deducts its cost from it.</p></li><li><p>Mental Limit on Use adds its cost to the character's Mental Limit Spent Invoking when used.</p></li></ul><p>Its actions are identical to Object actions in every way except for the lack of Skill Checks as an action type. Attack type actions are displayed on the Offense tab, everything else is displayed on the Utility Tab.</p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.3.3",
+        "coreVersion": "11.315",
+        "createdTime": null,
+        "modifiedTime": 1718998017787,
+        "lastModifiedBy": "awmzRJQcQXoX998M"
+      },
+      "_key": "!journal.pages!ZBCG2QUPG3qFFtyL.tfnsjIc7mbPxH1j4"
+    },
+    {
+      "sort": 50000,
+      "name": "Popup Windows",
+      "type": "text",
+      "_id": "pTtyjLTPDaM33yyw",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<h3><span style=\"font-family:Roboto, sans-serif\">Character Checks</span></h3><ul><li><p><span style=\"font-family:Roboto, sans-serif\">Ability Checks</span></p><ul><li><p>Simple input for any modifiers to the roll.</p></li></ul></li><li><p>Saving Throws</p><ul><li><p>Simple input for any modifiers to the roll. </p></li><li><p>Reflex saving throws have a dropdown to select a cover bonus.</p></li></ul></li><li><p>Skill Checks</p><ul><li><p>Simple input for any modifiers to the roll. </p></li><li><p>Expanding the Action Modifiers section allows temporary modification of the skill's modifiers, such as enabling or disabling certain equipment bonuses.</p></li></ul></li></ul><h3>Offense Checks</h3><ul><li><p>Simple input for any modifiers to the roll</p></li><li><p>Attack Modifiers are included as a bonus to-hit</p><ul><li><p>Situational modifiers such as attacking unseen</p></li><li><p>Positioning modifiers such as attacking into the defender's flank</p><ul><li><p>The actor's Kneeling or Prone status is reflected here</p></li></ul></li><li><p>Full range increments, with the multiplier applying to the total penalty</p></li></ul></li><li><p>Defense Modifiers are included as a penalty to-hit</p><ul><li><p>Situational modifiers such as being stunned</p></li><li><p>Positioning modifiers such as kneeling or being behind cover</p><ul><li><p>If an actor is targeted its Kneeling or Prone status is reflected here</p></li></ul></li><li><p>Cover or concealment can impose a miss chance</p></li></ul></li><li><p>The check itself</p><ul><li><p>Button to perform the check as configured, consuming any combat points and resources</p></li><li><p>Buttons to roll the effect as configured, potentially including 'good' and 'bad' damage from ammunition</p></li></ul></li><li><p>Resource Usage names the source of ammunition and allows tweaking the consumed amount</p></li><li><p>Expanding the Action Modifiers section allows temporary modification of the factors that go into the attack, from inherent bonuses to the recoil or damage of possible cartridges in a magazine to toggling weapon mod effects.</p></li></ul><h3>Defense Application</h3><ul><li><p>For plasma shielding, a popup allows for the impact of a psiblade using Offensive Form</p></li><li><p>For conventional armor, a popup allows for ignoring a certain amount of DR and multiplying how much AP is lost by the armor</p></li></ul><h3>Utility Checks</h3><ul><li style=\"box-sizing:border-box;user-select:text\"><p style=\"box-sizing:border-box;user-select:text;margin:0.5em 0px\"><span style=\"font-family:Roboto, sans-serif\">Simple input for any modifiers to the roll</span></p></li><li style=\"box-sizing:border-box;user-select:text\"><p>The check itself</p><ul><li style=\"box-sizing:border-box;user-select:text\"><p>Button to perform the check as configured, consuming any combat points and resources</p></li><li style=\"box-sizing:border-box;user-select:text\"><p>Button to roll the effect as configured</p></li></ul></li><li><p>Resource Usage names the source of ammunition and allows tweaking the consumed amount</p></li><li><p>Expanding the Action Modifiers section allows temporary modification of the factors that go into the action.</p></li></ul><h3>Turn Start Reminder</h3><ul><li><p>Button to refresh the actor's combat points to full</p></li><li><p>Button to reset any temporary combat points to zero</p></li><li><p>Button to spend the combat point loss to move incurred by armor</p></li><li><p>Button to reset movement bonus to defense to zero</p></li><li><p>Button to reset the initiative wager to zero</p></li><li><p>Button to regain mental limit spent on incantations according to the total mental limit capacity</p></li></ul>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1,
+        "awmzRJQcQXoX998M": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "opsandtactics",
+        "systemVersion": "0.3.3",
+        "coreVersion": "11.315",
+        "createdTime": 1718998033928,
+        "modifiedTime": 1719002628043,
+        "lastModifiedBy": "awmzRJQcQXoX998M"
+      },
+      "_key": "!journal.pages!ZBCG2QUPG3qFFtyL.pTtyjLTPDaM33yyw"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "JournalEntry.LuRbvO18D1wxIuRc"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.3.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681238179237,
+    "modifiedTime": 1719002829318,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3
+  },
+  "_id": "ZBCG2QUPG3qFFtyL",
+  "_key": "!journal!ZBCG2QUPG3qFFtyL"
+}

@@ -1,5 +1,5 @@
 {
-  "name": "2 AA Weapon Mods",
+  "name": "AA Weapon Mods",
   "pages": [
     {
       "sort": 100000,
@@ -108,14 +108,14 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.1.3",
-    "coreVersion": "11.314",
+    "systemVersion": "0.3.3",
+    "coreVersion": "11.315",
     "createdTime": 1679783501983,
-    "modifiedTime": 1699051531599,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1718989710628,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
-  "folder": null,
-  "sort": 0,
+  "folder": "aFQyG73kL7bGKONR",
+  "sort": 112500,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
