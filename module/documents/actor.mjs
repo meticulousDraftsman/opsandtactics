@@ -389,7 +389,6 @@ export class OpsActor extends Actor {
    * @returns {Number} The ability's modifier
    */
   abilityMod(source){
-    
     switch (source){
       case '':
       case undefined:
@@ -787,5 +786,74 @@ export class OpsActor extends Actor {
         break;
     }
     if(!isEmpty(updates)) return this.updateSource(updates);
+  }
+}  
+
+// Start of turn popup
+export class TurnStartDashboardApp extends FormApplication {
+  static get defaultOptions(){
+    return mergeObject(super.defaultOptions, {
+      classes: ['opsandtactics','sheet','item'],
+      template: 'systems/opsandtactics/templates/interface/dialog-turn-start-dashboard.html',
+      width: 300,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      resizable: false
+    });
+  }
+  get title(){
+    return `${this.object.name}'s turn is starting`;
+  }
+  getData(){
+    const context = {
+      OATS: CONFIG.OATS,
+      system: this.object.system
+    };
+    return context;
+  }
+  activateListeners(html){
+    super.activateListeners(html);
+    html.find('.refresh-cp').click(this._refreshCombatPoints.bind(this));
+    html.find('.temp-cp').click(this._tempCombatPoints.bind(this));
+    html.find('.armor-cp').click(this._armorCombatPoints.bind(this));
+    html.find('.move-def').click(this._moveDefense.bind(this));
+    html.find('.init-wager').click(this._initiativeWager.bind(this));
+    html.find('.mental-limit').click(this._mentalLimit.bind(this));
+  }
+  async _refreshCombatPoints(event){
+    event.preventDefault();
+    const updateData = {['system.cp.value']:this.object.system.cp.max};
+    await this.object.update(updateData);
+    this.render()
+  }
+  async _tempCombatPoints(event){
+    event.preventDefault();
+    const updateData = {['system.cp.temp']:null};
+    await this.object.update(updateData);
+    this.render()
+  }
+  async _armorCombatPoints(event){
+    event.preventDefault();
+    const updateData = {['system.cp.value']:this.object.system.cp.value - this.object.system.cp.armor.value};
+    await this.object.update(updateData);
+    this.render()
+  }
+  async _moveDefense(event){
+    event.preventDefault();
+    const updateData = {['system.def.move']:null};
+    await this.object.update(updateData);
+    this.render()
+  }
+  async _initiativeWager(event){
+    event.preventDefault();
+    const updateData = {['system.stats.wager']:0};
+    await this.object.update(updateData);
+    this.render()
+  }
+  async _mentalLimit(event){
+    event.preventDefault();
+    const updateData = {['system.magic.mlCant']:Math.max((this.object.system.magic.mlCant - Math.ceil(this.object.system.ml.max / 10)),0)};
+    await this.object.update(updateData);
+    this.render()
   }
 }

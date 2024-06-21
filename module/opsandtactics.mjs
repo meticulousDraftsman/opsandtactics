@@ -1,5 +1,5 @@
 // Import document classes.
-import { OpsActor } from "./documents/actor.mjs";
+import { OpsActor, TurnStartDashboardApp } from "./documents/actor.mjs";
 import { OpsItem } from "./documents/item.mjs";
 // Import sheet classes.
 import { OpsActorSheet } from "./sheets/actor-sheet.mjs";
@@ -56,6 +56,7 @@ Hooks.once('init', async function() {
   // Define custom Document classes
   CONFIG.Actor.documentClass = OpsActor;
   CONFIG.Item.documentClass = OpsItem;
+  CONFIG.Combat.documentClass = OpsCombat;
 
   // Assign custom DataModels
   CONFIG.Actor.dataModels['character'] = OpsCharacter;
@@ -110,6 +111,31 @@ Hooks.on("getJournalDirectoryEntryContext", addJournalContext);
 Hooks.on("getCompendiumEntryContext", addCompendiumContext);
 Hooks.on("getActorDirectoryEntryContext", addActorContext);
 Hooks.on("renderChatLog", (app, html, data) => OpsActor.addChatListeners(html));
+
+export default class OpsCombat extends Combat {
+  async _onUpdate(changed, options, userId){
+    await super._onUpdate(changed, options, userId);
+    if (options.direction === 1){
+      // Check to see if the combatant is owned by any users explicitly and if any of those owners are online
+      if (this.combatant.hasPlayerOwner && this.combatant.players.some((element) => element.active)){
+        const onlineOwners = this.combatant.players.filter((element) => element.active);
+        // Check to see if any of those online owners have the combatant selected as their character
+        if (onlineOwners.some((element) => element.character?.id == this.combatant.actorId)){
+          // If so, trigger for them
+          if (game.user.character?.id == this.combatant.actorId) new TurnStartDashboardApp(this.combatant.actor).render(true);
+        }
+        else {
+          // Otherwise, trigger for all online owners
+          if (onlineOwners.some((element) => element.isSelf)) new TurnStartDashboardApp(this.combatant.actor).render(true);
+        }
+      }
+      // If it doesn't have any owners or none of its owners are online, trigger for the GM
+      else {
+        if (game.users.activeGM.isSelf) new TurnStartDashboardApp(this.combatant.actor).render(true);
+      }
+    }
+  }
+}
 
 /* -------------------------------------------- */
 /*  Core Check Handling                         */
