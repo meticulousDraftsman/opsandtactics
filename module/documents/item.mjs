@@ -21,6 +21,7 @@ export class OpsItem extends Item {
     const systemData = itemData.system;
     if (itemData.type === 'skill') this._prepareSkillData(itemData);
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
+    if (itemData.type === 'armor') this._prepareArmorData(itemData);
     if (itemData.type === 'object') this._prepareObjectData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
 
@@ -102,6 +103,35 @@ export class OpsItem extends Item {
     }
     else {
       systemData.magazine.loaded = {stats:{good:{primary:systemData.damageBase,primaryFlavor:systemData.flavorBase}}};
+    }
+    if (systemData.magazine.type=='coolant' && systemData.magazine.source!='' && this.actor){
+      let dualID = systemData.magazine.source.split(',');
+      let loadedCool = getProperty(this.actor.items.filter(item => item._id == dualID[0])[0],dualID[1])
+      if (loadedCool?.heat > 0 && loadedCool?.heat < 1) {
+        systemData.magazine.heatMax = systemData.magazine.heatBase * loadedCool.heat;
+      }
+      else {
+        systemData.magazine.heatMax = systemData.magazine.heatBase + loadedCool?.heat;
+      }
+    }
+    else {
+      systemData.magazine.heatMax = systemData.magazine.heatBase;
+    }
+  }
+  _prepareArmorData(itemData){
+    const systemData = itemData.system;
+    if (systemData.coolant!= '' && this.actor){
+      let dualID = systemData.coolant.split(',');
+      let loadedCool = getProperty(this.actor.items.filter(item => item._id == dualID[0])[0],dualID[1])
+      if (loadedCool?.soak > 0 && loadedCool?.soak < 1) {
+        systemData.ap.soak = systemData.ap.max * loadedCool?.soak;
+      }
+      else {
+        systemData.ap.soak = systemData.ap.max + loadedCool?.soak;
+      }
+    }
+    else {
+      systemData.ap.soak = systemData.ap.max
     }
   }
   _prepareObjectData(itemData){
@@ -206,7 +236,7 @@ export class OpsItem extends Item {
         if (!this.system.magazine.source) return false;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.heatBase);
+        return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.heatMax);
       case 'consumable':
       case 'cartridge':
       case 'magic':
@@ -767,6 +797,29 @@ export class OpsItem extends Item {
 
   listMagazines(){
     const magazines = {};
+    // Armors just need coolant packs
+    if (this.type=='armor'){
+      magazines.internal = {label:'Internal',entries:[]};
+      // Check for internal coolant resources
+      if (hasProperty(this,'system.gear.resources')){
+        for (let [key, entry] of Object.entries(this.system.gear.resources)){
+          if (entry.type==='coolant') magazines.internal.entries.push({label:`[${entry.value?(entry.value):'Cool'}] ${entry.name?entry.name:''}`,id:`${this.id},system.gear.resources.${key}`})
+        }
+      }
+      if (this.actor){
+        magazines.external = {label:'External',entries:[]};
+        // Check for external coolant resources
+        for (let i of this.actor.items){
+          if (objectsEqual(this.system,i.system)) continue;
+          if (getProperty(i,'system.gear.resources')){
+            for (let [key,entry] of Object.entries(i.system.gear.resources)){
+              if (entry.type==='coolant' && entry.available) magazines.external.entries.push({label:`[${entry.value?(entry.value):'Cool'}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
+            }
+          }
+        }
+      }
+      return magazines;      
+    }
     // Unlimited-use and actions that cost ML don't need a magazine list
     if (this.system.magazine.type=='unlimited' || this.system.magazine.type=='mental') return magazines;
     // Magic that uses charges can only look externally and doesn't need to differentiate
@@ -776,11 +829,12 @@ export class OpsItem extends Item {
         for (let i of this.actor.items){
           if (getProperty(i,'system.gear.resources')){
             for (let [key,entry] of Object.entries(i.system.gear.resources)){
-              if (entry.type==='magic') magazines.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}]`,id:`${i.id},system.gear.resources.${key}`});
+              if (entry.type==='magic') magazines.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
             }
           }
         }
       }
+      return magazines;
     }
     // Everything else builds an internal/external list based on what they use
     if (this.system.magazine.insideOut!='external'){
@@ -788,23 +842,23 @@ export class OpsItem extends Item {
       switch (this.system.magazine.type){
         case 'consumable':
           if (!hasProperty(this,'system.gear')) break;
-          magazines.internal.entries.push({label:`Self x${this.system.gear.quantity.value}`,id:`${this.id},system.gear.quantity`});
+          magazines.internal.entries.push({label:`${this.system.gear.quantity.value}x Self`,id:`${this.id},system.gear.quantity`});
           for (let [key, entry] of Object.entries(this.system.gear.resources)){
-            if (entry.type==='consumable') magazines.internal.entries.push({label:`${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}]`,id:`${this.id},system.gear.resources.${key}`});
+            if (entry.type==='consumable') magazines.internal.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${entry.name?entry.name:''}`,id:`${this.id},system.gear.resources.${key}`});
           }
           break;
         case 'cartridge':
           for (let [key, entry] of Object.entries(this.system.gear.resources)){
             if (entry.type==='cartridge'){
               for (let [subKey, subEntry] of Object.entries(entry.cartridges)){
-                magazines.internal.entries.push({label:`${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${subEntry.name?subEntry.name:''}`,id:`${this.id},system.gear.resources.${key},cartridges.${subKey}`});
+                magazines.internal.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${entry.name?entry.name:''} ${subEntry.name?subEntry.name:''}`,id:`${this.id},system.gear.resources.${key},cartridges.${subKey}`});
               }
             }
           }
           break;
         case 'coolant':
           for (let [key, entry] of Object.entries(this.system.gear.resources)){
-            if (entry.type==='coolant') magazines.internal.entries.push({label:`${entry.name?entry.name:''} [${entry.value?(entry.value):'Cool'}]`,id:`${this.id},system.gear.resources.${key}`});
+            if (entry.type==='coolant') magazines.internal.entries.push({label:`[${entry.value?(entry.value):'Cool'}] ${entry.name?entry.name:''}`,id:`${this.id},system.gear.resources.${key}`});
           }
           break;
       }
@@ -815,10 +869,10 @@ export class OpsItem extends Item {
         if (objectsEqual(this.system,i.system)) continue;
         switch (this.system.magazine.type){
           case 'consumable':
-            if (getProperty(i,'system.gear.quantity.available')) magazines.external.entries.push({label:`${i.name} x${i.system.gear.quantity.value}`,id:`${i.id},system.gear.quantity`});
+            if (getProperty(i,'system.gear.quantity.available')) magazines.external.entries.push({label:`${i.system.gear.quantity.value}x ${i.name}`,id:`${i.id},system.gear.quantity`});
             if (getProperty(i,'system.gear.resources')){
               for (let [key,entry] of Object.entries(i.system.gear.resources)){
-                if (entry.type==='consumable' && entry.available) magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}]`,id:`${i.id},system.gear.resources.${key}`});
+                if (entry.type==='consumable' && entry.available) magazines.external.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
               }
             }
             break;
@@ -827,7 +881,7 @@ export class OpsItem extends Item {
               for (let [key, entry] of Object.entries(i.system.gear.resources)){
                 if (entry.type==='cartridge' && entry.available){
                   for (let [subKey, subEntry] of Object.entries(entry.cartridges)){
-                    magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${subEntry.name?subEntry.name:''}`,id:`${i.id},system.gear.resources.${key},cartridges.${subKey}`});
+                    magazines.external.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${i.name}${entry.name?': '+entry.name:''} ${subEntry.name?subEntry.name:''}`,id:`${i.id},system.gear.resources.${key},cartridges.${subKey}`});
                   }
                 }
               }
@@ -836,14 +890,13 @@ export class OpsItem extends Item {
           case 'coolant':
             if (getProperty(i,'system.gear.resources')){
               for (let [key,entry] of Object.entries(i.system.gear.resources)){
-                if (entry.type==='coolant' && entry.available) magazines.external.entries.push({label:`${i.name}: ${entry.name?entry.name:''} [${entry.value?(entry.value):'Cool'}]`,id:`${i.id},system.gear.resources.${key}`});
+                if (entry.type==='coolant' && entry.available) magazines.external.entries.push({label:`[${entry.value?(entry.value):'Cool'}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
               }
             }
             break;
         }
       }
-    }
-    
+    }    
     return magazines;
   }
 

@@ -101,7 +101,7 @@
       <div class="flexrow flex-group-center resource-label" data-tooltip="{{#if (eq @../key 'shield')}}Shield Soak{{else}}Armor Points{{/if}}">
         <input type="text" class="item-input flex3" data-target-prop="system.ap.value" data-target-id="{{this._id}}" value="{{this.system.ap.value}}" data-dtype="Number"/>
         <span>/</span>
-        <input type="text" class="flex3" name="this.system.ap.max" value="{{this.system.ap.max}}" data-dtype="Number" readonly/>          
+        <input type="text" class="flex3" name="this.system.ap.max" value="{{#if (eq @../key 'shield')}}{{this.system.ap.soak}}{{else}}{{this.system.ap.max}}{{/if}}" data-dtype="Number" readonly/>          
       </div>
       {{else}}
       <input  type="text" value="n/A" data-tooltip="Flat Reduction" readonly>

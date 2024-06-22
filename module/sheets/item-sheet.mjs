@@ -76,6 +76,9 @@ export class OpsItemSheet extends ItemSheet {
         a.mods = context.item.actionSum(key);
       }
     }
+    if (itemData.type === 'armor'){
+      magazines = itemData.listMagazines();
+    }
     const sourceSkills = [{label:"None",id:""}];
     if (itemData.type === 'object'){
       // Build list of usable object resources or skill items for objects
@@ -149,6 +152,9 @@ export class OpsItemSheet extends ItemSheet {
       context.magazines = magazines;
       context.importableMods = importableMods;
     } 
+    if (itemData.type === 'armor'){
+      context.magazines = magazines;
+    }
     if (itemData.type === 'object'){
       context.sourceSkills = sourceSkills;
       context.magazines = magazines;

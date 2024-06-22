@@ -64,9 +64,22 @@
                     </select>
                     <span>CP Loss</span>
                     <input name="system.cpLoss" type="text" value="{{system.cpLoss}}" data-dtype="Number" placeholder="0"/>
-
-                 
-     
+                    {{#if (eq system.layer "shield")}}
+                    <span>Total Soak</span>
+                    <input type="text" value="{{system.ap.soak}}" readonly>
+                    <select class="grid-span-4 flex-group-center" name="system.coolant" data-dtype="String">
+                        {{#select system.coolant}}
+                            <option value="">Uncooled</option>
+                            {{#each magazines}}
+                            {{#if this.entries.length}}
+                            <optgroup label="{{this.label}}">
+                                {{selectOptions this.entries selected=@root.system.coolant nameAttr="id" labelAttr="label"}}
+                            </optgroup>
+                            {{/if}}
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                    {{/if}}
                 </div>
             </fieldset>
             <fieldset>

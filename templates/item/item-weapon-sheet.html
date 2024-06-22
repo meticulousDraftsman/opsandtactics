@@ -42,7 +42,7 @@
                         {{/select}}
                     </select>
                     <a class="resource-label resource-transfer" data-initial-id="{{system.magazine.source}}" data-tooltip="Transfer Ammo"><i class="fa-solid fa-right-left"></i></a>
-                    <select class="{{#if (eq system.magazine.type 'coolant')}}grid-span-4{{else}}grid-span-6{{/if}} flex-group-center" name="system.magazine.source" data-dtype="String">
+                    <select class="{{#if (eq system.magazine.type 'coolant')}}grid-span-6{{else}}grid-span-6{{/if}} flex-group-center" name="system.magazine.source" data-dtype="String">
                     {{#select system.magazine.source}}
                         <option value="">{{#if (eq system.magazine.type 'coolant')}}Uncooled{{else}}Unloaded{{/if}}</option>
                         {{#each magazines}}
@@ -56,8 +56,10 @@
                     </select>
                     {{/unless}}
                     {{#if (eq system.magazine.type "coolant")}}
-                    <span>Heat</span>
-                    <input type="text" name="system.magazine.heatBase" value="{{system.magazine.heatBase}}" data-dtype="Number">
+                    <span class="grid-span-3">Base Heat Capacity</span>
+                    <input class="grid-span-2" type="text" name="system.magazine.heatBase" value="{{system.magazine.heatBase}}" data-dtype="Number">
+                    <span class="grid-span-2">Total Heat </span>
+                    <input class="grid-span-2" type="text" value="{{system.magazine.heatMax}}" readonly>
                     {{/if}}
                     {{#if (eq system.magazine.type "cartridge")}}
                     <span class="grid-span-3">Empty Damage</span>

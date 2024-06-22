@@ -195,7 +195,7 @@ export class OpsActorSheet extends ActorSheet {
     const utilityObjects = [];
 
     // Iterate through items, allocating to containers
-    for (let i of context.items) {
+    for (let i of context.actor.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append skills.
       if (i.type === 'skill') {
@@ -259,7 +259,7 @@ export class OpsActorSheet extends ActorSheet {
       // Append to objects-with-resources
       if(!isEmpty(getProperty(i,'system.gear.resources'))){
         for (let [key,res] of Object.entries(i.system.gear.resources)){
-          let tempRes = res;
+          let tempRes = duplicate(res);
           tempRes.name = `${i.name}${res.name?`: ${res.name}`:''}`
           if (tempRes.type=='cartridge'){
             for (let [,car] of Object.entries(tempRes.cartridges)){

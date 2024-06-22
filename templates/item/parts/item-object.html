@@ -117,6 +117,10 @@
                 <input name="system.gear.resources.{{@key}}.available" data-tooltip="Available" type="checkbox" {{checked this.available}}/>
             </div>
             <a class="item-control sub-delete grid-start-10" data-target-name="gear.resources" data-remove-target="{{@key}}" data-tooltip="Remove Coolant Resource"><i class="fas fa-trash"></i></a>
+            <span class="grid-start-4 grid-span-2">Heat Mod</span>
+            <input class="grid-span-1" type="text" name="system.gear.resources.{{@key}}.heat" value="{{this.heat}}" data-dtype="Number" placeholder="0" data-tooltip="0.# to multiply, # to add">
+            <span class="grid-span-2">Soak Mod</span>
+            <input class="grid-span-1" type="text" name="system.gear.resources.{{@key}}.soak" value="{{this.soak}}" data-dtype="Number" placeholder="0" data-tooltip="0.# to multiply, # to add">
         </li>
         {{/if}}
         {{/each}}

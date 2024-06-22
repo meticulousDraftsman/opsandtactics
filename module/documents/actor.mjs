@@ -473,7 +473,7 @@ export class OpsActor extends Actor {
         if (this.items.get(target) == undefined) return null;
         drItem = this.items.get(target);
         remaining = drItem.system.ap.value;        
-        max = drItem.system.ap.max;
+        max = drItem.system.ap.soak ?? drItem.system.ap.max;
         dr = drItem.system.protection[drItem.system.activeDR]?.value ?? 0;
         if(dr==0) return;
         type = drItem.system.layer;
@@ -620,8 +620,15 @@ export class OpsActor extends Actor {
       setProperty(actorUpdateData,'system.health.incoming',null);
     }
     // Update target with new remaining value and actor with new incoming value
-    this.update(actorUpdateData);
-    if(!isEmpty(itemUpdateData)) drItem.update(itemUpdateData);
+    await this.update(actorUpdateData);
+    if(!isEmpty(itemUpdateData)){
+      await drItem.update(itemUpdateData);
+      if (type=='shield' && drItem.system.coolant!=''){
+        let dualID = drItem.system.coolant.split(',');
+        let coolItem = this.items.get(dualID[0]);
+        if (coolItem) await coolItem.update({[`${dualID[1]}.value`]:drItem.system.ap.soak-drItem.system.ap.value});
+      }
+    }
     return report;
   }
   

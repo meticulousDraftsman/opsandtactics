@@ -245,6 +245,8 @@ export class ResourceCoolant extends foundry.abstract.DataModel{
             name: new field.StringField(),
             type: new field.StringField({initial:'coolant'}),
             value: new field.NumberField(),
+            heat: new field.NumberField(),
+            soak: new field.NumberField(),
             available: new field.BooleanField({initial:true})
         }
     }
