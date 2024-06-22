@@ -12,7 +12,7 @@
       "insideOut": "both",
       "heatBase": 0
     },
-    "range": "40ft",
+    "range": "35ft",
     "crit": 16,
     "weaponMods": {},
     "actions": {
@@ -227,11 +227,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.0",
     "coreVersion": "11.315",
     "createdTime": 1681646395557,
-    "modifiedTime": 1705313862319,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719075434651,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "folder": "FGFpPjwlKFqX2Pri",
   "ownership": {
