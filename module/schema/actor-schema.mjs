@@ -189,14 +189,7 @@ export class OpsVehicle extends foundry.abstract.DataModel {
     static defineSchema(){
         return {
             vehicle: new field.SchemaField({
-                crew: new field.ObjectField({
-                    initial:{
-                        generic: {
-                            skillBase: 0,
-                            attackBase: 0
-                        }
-                    }
-                }),
+                crew: new field.ObjectField({}),
                 attacker: new field.StringField(),
                 skiller: new field.StringField(),
                 passengers: new field.StringField(),
@@ -260,8 +253,7 @@ export class OpsVehicle extends foundry.abstract.DataModel {
                 notes: new field.StringField(),
                 incoming: new field.NumberField(),
                 damageReport: new field.StringField({initial:""})
-            }),
-            actions: new field.ObjectField()
+            })
         }
     }
 }
