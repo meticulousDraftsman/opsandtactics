@@ -291,25 +291,24 @@ export class OpsActorSheet extends ActorSheet {
       }
     }
 
-    // Purge Empty Armor Layers
+    // Purge Empty Armor Layers and sort
     for (let [key,layer] of Object.entries(armors)){
+      layer.items = layer.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
       if (layer.items.length==0 && key != 'worn') delete armors[key];
     }    
 
-       
-
     // Assign and return
-    context.skills = skills;
+    context.skills = skills.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.armors = armors;
-    context.weapons = weapons;
-    context.gear = gear;
+    context.weapons = weapons.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.nestedGear = this._nestContainers(gear,gearFail);
-    context.traits = traits;
-    context.utilityMagic = utilityMagic;
-    context.attackMagic = attackMagic;
+    context.traits = traits.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.utilityMagic = utilityMagic.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.attackMagic = attackMagic.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.resObjects = resObjects;
-    context.attackObjects = attackObjects;
-    context.utilityObjects = utilityObjects;
+    context.attackObjects = attackObjects.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.utilityObjects = utilityObjects.sort((a, b) => (a.sort || 0) - (b.sort || 0));
   }
 
   _prepareVehicleData(context) {
