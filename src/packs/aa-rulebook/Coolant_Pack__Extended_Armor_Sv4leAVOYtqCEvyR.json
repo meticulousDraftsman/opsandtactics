@@ -25,7 +25,9 @@
           "type": "coolant",
           "value": null,
           "available": true,
-          "name": ""
+          "name": "",
+          "heat": 0.5,
+          "soak": 15
         }
       },
       "quality": "",
@@ -37,7 +39,7 @@
       "type": "unlimited"
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">Coolant packs are the primary means of plasarms, elarms, and lasarms to remove heat and keep firing without overheating. If a plasarm, elarm, or lasarm does not have a coolant pack inserted into it, it will not fire. Coolant packs come in various types and various efficiencies, but all coolant packs fit all plasarms, elarms, lasarms, and plasma systems. Unless otherwise noted, it takes a coolant pack 24 hours to cool once it has been used</span>.</p><p></p><p><span class=\"fontstyle0\">Designed primarily around its use in armor, granting +2 DR/Plasma and Electricity and can soak an additional 15 points of plasma or electrical damage in any armor that uses coolant packs, but provides ½ the normal heat when used in any plasarm, lasarm, or elarms.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">Coolant packs are the primary means of plasarms, elarms, and lasarms to remove heat and keep firing without overheating. If a plasarm, elarm, or lasarm does not have a coolant pack inserted into it, it will not fire. Coolant packs come in various types and various efficiencies, but all coolant packs fit all plasarms, elarms, lasarms, and plasma systems. Unless otherwise noted, it takes a coolant pack 24 hours to cool once it has been used</span>.</p><p></p><p><span class=\"fontstyle0\">Designed primarily around its use in armor, granting +2 DR/Plasma and Electricity and can soak an additional 15 points of plasma or electrical damage in any armor that uses coolant packs, but provides ½ the normal heat when used in any plasarm, lasarm, or elarms.</span></p><p>Note: The increased DR is not automated. Add it as an option to your armor manually.</p>"
   },
   "effects": [],
   "flags": {
@@ -47,11 +49,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.3.3",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642002467,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719039698742,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,
