@@ -22,7 +22,13 @@
         <a class="resource-label actor-action-dash" data-check-id="agi" data-tooltip="{{localize 'OATS.abilities.agi'}} Roll">{{localize "OATS.abilityShort.agi"}}</a>
         <input type="text" class="{{@root.agiLimited}}" name="system.abilities.dex.agi" value="{{numberFormat ability.agi sign=true}}" data-dtype="Number" readonly data-tooltip="{{#if (eq @root.agiLimited 'agi-limited')}}Reduced by active armor{{/if}}"/>
         {{/if}}
-        {{/each}}
+        {{/each}}        
+      </div>
+      <hr>
+      <div class="abilities flex-group-center grid grid-4col">
+        <a class="resource-label actor-action-dash grid-span-1" data-check-id="grapple" data-tooltip="Grapple Roll">Grp</a>
+        <input type="text" name="system.stats.grapple.misc" value="{{system.stats.grapple.misc}}" placeholder="+0" data-dtype="Number">
+        <input class="grid-start-4" type="text" value="{{numberFormat system.stats.grapple.value sign=true}}" readonly>
       </div>
     </fieldset>
     <fieldset>

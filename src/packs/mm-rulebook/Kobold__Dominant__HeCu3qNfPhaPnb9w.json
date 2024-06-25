@@ -41,6 +41,11 @@
           "key": "system.stats.carrying.formula",
           "mode": 5,
           "value": "(@str.score)*2"
+        },
+        {
+          "key": "system.stats.grapple.size",
+          "mode": 2,
+          "value": "-4"
         }
       ],
       "tint": null,
@@ -57,11 +62,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.1",
     "coreVersion": "11.315",
     "createdTime": 1677901192920,
-    "modifiedTime": 1705306221182,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719351610245,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

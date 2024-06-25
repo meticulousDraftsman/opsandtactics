@@ -1251,6 +1251,9 @@ export class OpsActorSheet extends ActorSheet {
       case 'will':
         checkName = 'Will Save';
         break;
+      case 'grapple':
+        checkName = 'Grapple Check';
+        break;
       default:
         checkName = `${game.i18n.localize(CONFIG.OATS.abilities[checkID])} Check`
     }
@@ -1704,6 +1707,9 @@ class ActionDashboardApp extends FormApplication {
       case 'reflex':
       case 'will':
         context.formula = `${this.options.actor.system.saves[this.options.target].value>=0?'+':''}${this.options.actor.system.saves[this.options.target].value}`;
+        break;
+      case 'grapple':
+        context.formula = `${this.options.actor.system.stats.grapple.value>=0?'+':''}${this.options.actor.system.stats.grapple.value}`;
         break;
       case 'vehicle':
         context.formula = `${this.options.actor.system.actions[this.option.target].check.total}`

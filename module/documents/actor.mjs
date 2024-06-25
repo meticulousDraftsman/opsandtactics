@@ -103,10 +103,11 @@ export class OpsActor extends Actor {
     systemData.def.flat = 10 + systemData.def.equip.value + Math.min(0,systemData.abilities.dex.agi) + systemData.def.size + systemData.def.move + systemData.def.misc.value;
 
     //Calculate Initiative Modifier
-    //console.debug(systemData.stats.init.subtotal)
     systemData.stats.init.value = systemData.stats.init.subtotal + systemData.abilities.dex.agi +systemData.stats.wager;
     // Calculate BAB
     systemData.stats.bab.value = systemData.stats.level.value + systemData.stats.bab.subtotal + this.wagerPenalty();
+    // Calculate Grapple Modifier
+    systemData.stats.grapple.value = systemData.stats.bab.value + systemData.abilities.str.foc + systemData.abilities.dex.agi + systemData.stats.grapple.subtotal;
     // Calculate Recoil Reduction
     systemData.stats.recoil.value = systemData.abilities.str.score - 10 + systemData.stats.recoil.subtotal;
     // Calculate Personal Capital    
@@ -252,6 +253,11 @@ export class OpsActor extends Actor {
         rollConfig.title = 'Will Save';
         rollConfig.checkType = 'generic';
         rollConfig.mod = checkData.modifier?checkData.modifier:this.system.saves[checkData.checkID].value;
+        break;
+      case 'grapple':
+        rollConfig.title = 'Grapple Check';
+        rollConfig.checkType = 'generic';
+        rollConfig.mod = checkData.modifier?checkData.modifier:this.system.stats.grapple.value;
         break;
       case 'skill':
         rollConfig.title = `${checkData.itemName} Check`

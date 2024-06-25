@@ -14,9 +14,11 @@
             </div>
         </fieldset>
         <fieldset>
+            {{#if action.name}}
             <legend class="resource-label">
                 {{action.name}}
             </legend>
+            {{/if}}
             <div class="flex-group-center">
                 {{#if item}}
                 <fieldset class="action-item">

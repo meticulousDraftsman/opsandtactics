@@ -41,6 +41,11 @@
           "key": "system.ml.formula",
           "mode": 5,
           "value": "((6+@wis.score)*@lvl)+35"
+        },
+        {
+          "key": "system.stats.grapple.size",
+          "mode": 2,
+          "value": "-4"
         }
       ],
       "tint": null,
@@ -57,11 +62,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.1",
     "coreVersion": "11.315",
     "createdTime": 1681242301062,
-    "modifiedTime": 1705306033152,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719351380807,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "folder": "0Dclfx8RnmbfM8Y0",
   "ownership": {
