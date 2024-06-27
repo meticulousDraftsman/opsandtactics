@@ -734,12 +734,15 @@ export class OpsActor extends Actor {
     if (data.stats.level) {
       data.lvl = data.stats.level.value ?? 1;
     }
-    // Add BAB and Initiative
+    // Add BAB and Initiative and Grapple
     if (data.stats.init){
       data.init = data.stats.init.value ?? 0;
     }
     if (data.stats.bab){
       data.bab = data.stats.bab.value ?? 0;
+    }
+    if (data.stats.grapple){
+      data.grapple = data.stats.grapple.value ?? 0;
     }
   }
 
