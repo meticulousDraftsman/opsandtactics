@@ -59,7 +59,8 @@
       "source": ""
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">A thick red liquid used by both field medics, paramedics, and street healers to quickly save a character from the clutches of death or poison. A character may inject or be injected with one dose of Stim to regain 1d4 CHP. If that character is Dying, they are immediately stabilized with 1 point of CHP. If a character is Poisoned, the effects of the poison are suspended for 1d3 minutes. After each injection, a character makes a Fortitude Saving Throw [TN15]. If the character fails this Saving Throw, they take 1 WIS damage. Stim is packaged in single dose ampules.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">A thick red liquid used by both field medics, paramedics, and street healers to quickly save a character from the clutches of death or poison. A character may inject or be injected with one dose of Stim to regain 1d4 CHP. If that character is Dying, they are immediately stabilized with 1 point of CHP. If a character is Poisoned, the effects of the poison are suspended for 1d3 minutes. After each injection, a character makes a Fortitude Saving Throw [TN15]. If the character fails this Saving Throw, they take 1 WIS damage. Stim is packaged in single dose ampules.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
   },
   "effects": [],
   "flags": {
@@ -69,11 +70,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642044326,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719523359243,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

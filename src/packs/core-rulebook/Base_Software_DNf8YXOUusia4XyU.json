@@ -30,7 +30,8 @@
       "type": "unlimited"
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">Software modules are programs installed that give the user of a computer a bonus to various things, dependent on what they are programmed to do.<br></span></p><p></p><p><span class=\"fontstyle0\">This software module is the OS for all computer hardware. It contains the software necessary to load additional modules, as well as a web browser, an audio and video player, a clock and calendar, a text editor, a calculator, some basic games, and a basic image viewer and editor. All computer hardware is preloaded with this software, it takes up no RAM, but does take up 1 storage slot and is always active.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">Software modules are programs installed that give the user of a computer a bonus to various things, dependent on what they are programmed to do.<br></span></p><p></p><p><span class=\"fontstyle0\">This software module is the OS for all computer hardware. It contains the software necessary to load additional modules, as well as a web browser, an audio and video player, a clock and calendar, a text editor, a calculator, some basic games, and a basic image viewer and editor. All computer hardware is preloaded with this software, it takes up no RAM, but does take up 1 storage slot and is always active.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
   },
   "effects": [],
   "flags": {
@@ -40,11 +41,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642217770,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719520755303,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

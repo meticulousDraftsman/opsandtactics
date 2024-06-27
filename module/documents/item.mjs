@@ -724,7 +724,11 @@ export class OpsItem extends Item {
     // Skill rolls just pull the skill modifier
     else if (sourceAction.check.type==='skill'){
       if (sourceAction.check.source==''){
-        if (getProperty(actingActor,'system.stats.skillBase')){
+        if (tweakedThis.system.skillSource){
+          let skillMod = actingActor?.items?.get(tweakedThis.system.skillSource)?.skillSum().total;
+          mods.checkTotal = !Number.isNaN(skillMod)?skillMod:'-404';
+        }
+        else if (getProperty(actingActor,'system.stats.skillBase')){
           mods.checkTotal = actingActor.system.stats.skillBase>=0?'+'+actingActor.system.stats.skillBase:actingActor.system.stats.skillBase;
         }
         else {
@@ -963,6 +967,7 @@ export class OpsItem extends Item {
   // Pre-creation
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
+    console.debug(data,this)
     // Assign default name based on type
     const updates = {};
     if (!hasProperty(data,'system')){
@@ -1008,6 +1013,21 @@ export class OpsItem extends Item {
         default:
           updates["img"] = CONFIG.OATS.objectIcons[Math.floor(Math.random()*CONFIG.OATS.objectIcons.length)];
           break;
+      }
+    }
+    // Attempt to match skill actions to skill items
+    if (this.actor && this.actor.type==='character' && this.type==='object'){
+      if (data.system.skillSource){
+        let newSource = this.actor.items.find((element) => element.flags.core?.sourceId == data.system.skillSource)
+        if (newSource) updates["system.skillSource"] = newSource.id;
+        else updates["system.skillSource"] = "";
+      }
+      for (let [k,a] of Object.entries(data.system.actions)){
+        if (a.check.source){
+          let newSource = this.actor.items.find((element) => element.flags.core?.sourceId == a.check.source)
+          if (newSource) updates[`system.actions.${k}.check.source`] = newSource.id;
+          else updates[`system.actions.${k}.check.source`] = "";
+        }
       }
     }
     if(updates) return this.updateSource(updates);

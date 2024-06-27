@@ -59,7 +59,8 @@
       "source": ""
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">NanoMed is a clear liquid with glints of tiny nanobots suspended within it. It is used as a stave off against possible future damage, by having nanobots repair internal injuries. A character may inject or be injected with one dose of NanoMed. When they receive any piercing, slashing, or ballistic damage to their CHP, they immediately heal 1 damage per turn, until they no longer have any injuries. After they have healed a total of 10 HP, the nanobots have exhausted their supply of medicine and are no longer effective. Taking more Nanomed before the first dose completely refreshes the clock and the total count of healed HP back to 0. NanoMed lasts for 3 hours, before the nanobots are flushed completely from an individual’s system. NanoMed is packaged in single dose ampules.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">NanoMed is a clear liquid with glints of tiny nanobots suspended within it. It is used as a stave off against possible future damage, by having nanobots repair internal injuries. A character may inject or be injected with one dose of NanoMed. When they receive any piercing, slashing, or ballistic damage to their CHP, they immediately heal 1 damage per turn, until they no longer have any injuries. After they have healed a total of 10 HP, the nanobots have exhausted their supply of medicine and are no longer effective. Taking more Nanomed before the first dose completely refreshes the clock and the total count of healed HP back to 0. NanoMed lasts for 3 hours, before the nanobots are flushed completely from an individual’s system. NanoMed is packaged in single dose ampules.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
   },
   "effects": [],
   "flags": {
@@ -69,11 +70,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642044326,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719523354126,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

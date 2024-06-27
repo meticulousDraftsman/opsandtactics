@@ -30,7 +30,8 @@
       "type": "unlimited"
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">Software modules are programs installed that give the user of a computer a bonus to various things, dependent on what they are programmed to do.<br></span></p><p><span class=\"fontstyle2\"><strong>Lite</strong> </span><span class=\"fontstyle0\">A lite module has the bare essentials necessary for use and has a lighter footprint to take up less space. This module provides a +1 to all bonuses listed in the module description unless specified otherwise and takes up 1 storage slot.</span> </p><p><span class=\"fontstyle0\">This software module is a quick look up resource, consisting of volumes of information about specific subjects, that can be called upon in an instant. This software module provides a bonus to any one Knowledge skill that it is programmed for and must be active to receive the bonus</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">Software modules are programs installed that give the user of a computer a bonus to various things, dependent on what they are programmed to do.<br></span></p><p><span class=\"fontstyle2\"><strong>Lite</strong> </span><span class=\"fontstyle0\">A lite module has the bare essentials necessary for use and has a lighter footprint to take up less space. This module provides a +1 to all bonuses listed in the module description unless specified otherwise and takes up 1 storage slot.</span> </p><p><span class=\"fontstyle0\">This software module is a quick look up resource, consisting of volumes of information about specific subjects, that can be called upon in an instant. This software module provides a bonus to any one Knowledge skill that it is programmed for and must be active to receive the bonus</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
   },
   "effects": [],
   "flags": {
@@ -40,11 +41,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642217770,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719520753788,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

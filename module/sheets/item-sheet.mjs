@@ -80,12 +80,16 @@ export class OpsItemSheet extends ItemSheet {
       magazines = itemData.listMagazines();
     }
     const sourceSkills = [{label:"None",id:""}];
+    const specificSkills = [{label:"Default",id:""}];
     if (itemData.type === 'object'){
       // Build list of usable object resources or skill items for objects
       magazines = itemData.listMagazines();
       if(actor){
         for (let i of actor.items){
-          if (i.type==='skill') sourceSkills.push({label:i.name,id:i.id})
+          if (i.type==='skill') {
+            sourceSkills.push({label:i.name,id:i.id})
+            specificSkills.push({label:i.name,id:i.id})
+          }
         }
       }
     }
@@ -157,6 +161,7 @@ export class OpsItemSheet extends ItemSheet {
     }
     if (itemData.type === 'object'){
       context.sourceSkills = sourceSkills;
+      context.specificSkills = specificSkills;
       context.magazines = magazines;
     }
     if (itemData.type === 'magic') context.magazines = magazines;

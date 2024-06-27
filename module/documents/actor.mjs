@@ -762,7 +762,7 @@ export class OpsActor extends Actor {
         if (!hasProperty(data,'items')){
           updates['items'] = []
           for (let sid of CONFIG.OATS.characterDefaultItems){
-            updates['items'].push((await fromUuid(sid)).toObject());
+            updates['items'].push((game.items.fromCompendium(await fromUuid(sid))));
           }
         }
         if (!hasProperty(data,'img')){

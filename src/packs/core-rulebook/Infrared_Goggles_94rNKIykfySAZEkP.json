@@ -30,7 +30,8 @@
       "type": "unlimited"
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">Infrared goggles are goggles that use heat signatures to locate targets. They grant the user the ability to see any target that is warmer than their surroundings in darkness, but because of the restricted view, grant a -5 penalty to all sight based perception checks made by someone wearing them. Mounts can be purchased to mount the IRGs to a combat helmet, at +1 WP to the cost.</span> </p>"
+    "description": "<p><span class=\"fontstyle0\">Infrared goggles are goggles that use heat signatures to locate targets. They grant the user the ability to see any target that is warmer than their surroundings in darkness, but because of the restricted view, grant a -5 penalty to all sight based perception checks made by someone wearing them. Mounts can be purchased to mount the IRGs to a combat helmet, at +1 WP to the cost.</span> </p>",
+    "skillSource": ""
   },
   "effects": [],
   "flags": {
@@ -40,11 +41,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642220931,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719520780910,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

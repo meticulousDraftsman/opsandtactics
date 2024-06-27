@@ -1214,6 +1214,7 @@ export class OpsActorSheet extends ActorSheet {
     switch (this.actor?.type){
       case 'character':
         actingActor = this.actor;
+        if (actingActor && tweaks.utility.check.type==='skill' && tweaks.utility.check.source=='') tweaks.utility.check.source = tweaks.item.system.skillSource;
         break;
       case 'vehicle':
         actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.uuid`))

@@ -295,7 +295,8 @@ export class OpsObject extends foundry.abstract.DataModel{
                 type: new field.StringField({initial:'unlimited'}),
                 source: new field.StringField()
             }),
-            crit: new field.NumberField({initial:16})
+            crit: new field.NumberField({initial:16}),
+            skillSource: new field.StringField()
         }
     }
 }

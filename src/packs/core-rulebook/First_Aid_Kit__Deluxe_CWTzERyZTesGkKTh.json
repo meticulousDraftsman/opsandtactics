@@ -20,17 +20,168 @@
         "parent": "Loose",
         "note": ""
       },
-      "resources": {},
+      "resources": {
+        "6xiI6wVb": {
+          "type": "consumable",
+          "value": 25,
+          "max": 25,
+          "available": false,
+          "name": "Supplies"
+        }
+      },
       "quality": "+1",
       "restriction": ""
     },
-    "actions": {},
+    "actions": {
+      "qMjooaC2": {
+        "name": "Long Term Care [TN20]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit this check allows a patient to restore CHP, XHP, and Ability Points at an advanced rate, 3HP/3AP per character level, per full day of rest. A new check is required each day. You can tend to as many patients as you have ranks. The patient must spend all their time resting and the user must dedicate 30 minutes of care per day per patient.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": null
+        }
+      },
+      "wu0SnV9a": {
+        "name": "Restore Hit Points [TN20]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit you can restore 1d4+1 CHP or XHP per character level of the user, to a character. This may be done only once per day per character.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "1d4+1",
+          "ability": "",
+          "flavor": "CHP is always restored first."
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 12
+        }
+      },
+      "jb2Y4CzZ": {
+        "name": "Stop Bleeding [TN10]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit or applicable supplies you can stop a character from bleeding. This removes 2 bleed dice. For every 4 points the character achieves beyond the TN, they heal an additional bleed dice.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      },
+      "RNZ4vcap": {
+        "name": "Revive a Dazed, Stunned, or Unconscious Character [TN17]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit you can remove the Dazed, Stunned, or Unconscious condition from a character. You can’t revive a character that is at −1 or lower CHP without stabilizing them first.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      },
+      "jzV6Mb0q": {
+        "name": "Stabilize Dying Character [TN15]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit you can tend to a dying character. The character stops losing HP. This action cannot be performed without a first aid kit.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      },
+      "UOFpFane": {
+        "name": "Surgery [TN25]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a surgery kit you can conduct field surgery, allowing you to realign broken bones, remove bullets or shrapnel, and stitch up grievous wounds. Surgery restores 1d6 CHP or XHP per 2 skill modifiers the character has in Treat Injury, heals all extremity damage, and removes all bleed damage. Undergoing surgery causes fatigue for 24 hours, minus 2 hours for every point above the TN the surgeon achieves. Surgery requires 1d4 hours plus one hour for each point the character’s CHP has fallen below 0.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "1d6",
+          "ability": "",
+          "flavor": "CHP is always restored first."
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": null
+        }
+      },
+      "QuCAdT3z": {
+        "name": "Treat Poison [TN15]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit, you make a check when a poisoned character makes a Fortitude Saving Throw against a poison’s secondary effect. If you succeed, you remove the secondary effect from the posioned character immediately. In the case of multiple secondary effects, you remove the last one taken.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      }
+    },
     "range": "5ft",
     "magazine": {
-      "type": "unlimited"
+      "type": "consumable",
+      "source": ""
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">Standard first aid kit plus portable defibrillator, intravenous blood expander and fluid packs, oxygen tank and mask, backboard, cervical collar, local anesthetic solution, field surgical tools. This kit can be used as a surgery kit.</span></p>"
+    "description": "<p><span class=\"fontstyle0\">Standard first aid kit plus portable defibrillator, intravenous blood expander and fluid packs, oxygen tank and mask, backboard, cervical collar, local anesthetic solution, field surgical tools. This kit can be used as a surgery kit.</span></p>",
+    "skillSource": "Compendium.opsandtactics.core-rulebook.Item.1BrffNyyRbew4xhe"
   },
   "effects": [],
   "flags": {
@@ -40,11 +191,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642226645,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719522219728,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

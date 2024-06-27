@@ -54,6 +54,13 @@
           {{/select}}
           </select>
           {{/unless}}
+          {{#if item.actor}}
+          <select class="grid-span-9 flex-group-center" name="system.skillSource">
+            {{selectOptions @root.sourceSkills selected=system.skillSource nameAttr="id" labelAttr="label"}}
+          </select>
+          {{else}}
+          <input class="grid-span-9 flex-group-center" type="text" name="system.skillSource" value="{{system.skillSource}}" data-dtype="String" placeholder="Skill UUID" data-tooltip="Paste the UUID of a skill in a compendium and when this object is added to an actor it will try to match with a skill from the same source">
+          {{/if}}
         </div>
       </fieldset>
       {{#each system.actions}}
@@ -90,9 +97,13 @@
           <li class="item grid grid-9col flex-group-center">
             {{#unless (or (eq this.check.type "noneAttack") (eq this.check.type "noneUtility") (eq this.check.type "noChatAttack") (eq this.check.type "noChatUtility"))}}
             {{#if (eq this.check.type "skill")}}
+            {{#if @root.item.actor}}
             <select class="grid-span-9 flex-group-center" name="system.actions.{{@key}}.check.source">
-              {{selectOptions @root.sourceSkills selected=this.check.source nameAttr="id" labelAttr="label"}}
+              {{selectOptions @root.specificSkills selected=this.check.source nameAttr="id" labelAttr="label"}}
             </select>
+            {{else}}
+            <input class="grid-span-9 flex-group-center" type="text" name="system.actions.{{@key}}.check.source" value="{{this.check.source}}" data-dtype="String" placeholder="Skill UUID" data-tooltip="Paste the UUID of a skill in a compendium and when this object is added to an actor it will try to match with a skill from the same source">
+            {{/if}}
             {{else}}
             <span class="grid-span-2">Check Modifier</span>
             <input class="grid-span-4" type="text" name="system.actions.{{@key}}.check.inherent" value="{{this.check.inherent}}" data-dtype="String" placeholder="Inherent">

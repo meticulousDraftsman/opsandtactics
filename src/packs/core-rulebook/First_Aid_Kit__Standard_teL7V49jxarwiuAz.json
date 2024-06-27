@@ -20,17 +20,148 @@
         "parent": "Loose",
         "note": ""
       },
-      "resources": {},
+      "resources": {
+        "sXoFH183": {
+          "type": "consumable",
+          "value": 10,
+          "max": 10,
+          "available": false,
+          "name": "Supplies"
+        }
+      },
       "quality": "+1",
       "restriction": ""
     },
-    "actions": {},
+    "actions": {
+      "7R2yeRe4": {
+        "name": "Long Term Care [TN20]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit this check allows a patient to restore CHP, XHP, and Ability Points at an advanced rate, 3HP/3AP per character level, per full day of rest. A new check is required each day. You can tend to as many patients as you have ranks. The patient must spend all their time resting and the user must dedicate 30 minutes of care per day per patient.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": null
+        }
+      },
+      "iDPDfn7a": {
+        "name": "Restore Hit Points [TN20]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit you can restore 1d4+1 CHP or XHP per character level of the user, to a character. This may be done only once per day per character.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "1d4+1",
+          "ability": "",
+          "flavor": "CHP is always restored first."
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 12
+        }
+      },
+      "Dc64fAG6": {
+        "name": "Stop Bleeding [TN10]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit or applicable supplies you can stop a character from bleeding. This removes 2 bleed dice. For every 4 points the character achieves beyond the TN, they heal an additional bleed dice.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      },
+      "Um8xUaXe": {
+        "name": "Revive a Dazed, Stunned, or Unconscious Character [TN17]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit you can remove the Dazed, Stunned, or Unconscious condition from a character. You can’t revive a character that is at −1 or lower CHP without stabilizing them first.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      },
+      "U1l93xYu": {
+        "name": "Stabilize Dying Character [TN15]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit you can tend to a dying character. The character stops losing HP. This action cannot be performed without a first aid kit.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      },
+      "GqUQjAMg": {
+        "name": "Treat Poison [TN15]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "With a first aid kit, you make a check when a poisoned character makes a Fortitude Saving Throw against a poison’s secondary effect. If you succeed, you remove the secondary effect from the posioned character immediately. In the case of multiple secondary effects, you remove the last one taken.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      }
+    },
     "range": "5ft",
     "magazine": {
-      "type": "unlimited"
+      "type": "consumable",
+      "source": ""
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">Small first aid kit plus CPR mask, nasopharyngeal airway, lubrication packets, stethoscope, shears, forceps, surgical needles and roll of suturing thread, burn gel, sedative pills, folding stretcher, antivenin solution, disposable syringes, blankets, stuffed animal, medical reporting forms and waterproof marker</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">Small first aid kit plus CPR mask, nasopharyngeal airway, lubrication packets, stethoscope, shears, forceps, surgical needles and roll of suturing thread, burn gel, sedative pills, folding stretcher, antivenin solution, disposable syringes, blankets, stuffed animal, medical reporting forms and waterproof marker</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": "Compendium.opsandtactics.core-rulebook.Item.1BrffNyyRbew4xhe"
   },
   "effects": [],
   "flags": {
@@ -40,11 +171,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642226645,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719522015068,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

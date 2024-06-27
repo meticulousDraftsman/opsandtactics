@@ -30,7 +30,8 @@
       "type": "unlimited"
     },
     "crit": 16,
-    "description": "<p>Four additional flavors for an E-Cig Kit.</p>"
+    "description": "<p>Four additional flavors for an E-Cig Kit.</p>",
+    "skillSource": ""
   },
   "effects": [],
   "flags": {
@@ -40,11 +41,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642223474,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719520823219,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

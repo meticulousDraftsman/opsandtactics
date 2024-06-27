@@ -32,13 +32,36 @@
       "quality": "",
       "restriction": ""
     },
-    "actions": {},
+    "actions": {
+      "0wXpjGLH": {
+        "name": "Apply Foam [TN5]",
+        "active": true,
+        "check": {
+          "type": "skill",
+          "inherent": "",
+          "ability": "",
+          "flavor": "If the check is successful the target stops bleeding and for every 5 points the roll exceeds the TN the target heals 1d4 XHP. You can take 10 on this check, but not 16/18.",
+          "source": ""
+        },
+        "effect": {
+          "inherent": "1d4",
+          "ability": "",
+          "flavor": ""
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8
+        }
+      }
+    },
     "range": "5ft",
     "magazine": {
-      "type": "unlimited"
+      "type": "consumable",
+      "source": ""
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">Originally invented as a biodegradable insulation an binding agent, Biofoam has evolved to be used to fill in lacerations, pad broken bones, and hold tissues together before slowly being consumed by the body itself, harmlessly.<br></span></p><p><span class=\"fontstyle0\">Using biofoam requires a Treat Injury check [TN5] that costs 8 CP. If the check is successful the target stops bleeding and for every 5 points the roll exceeds the TN the target heals 1d4 XHP. You can take 10 on this check, but not 16/18. Biofoam is packaged in a single use canister.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">Originally invented as a biodegradable insulation an binding agent, Biofoam has evolved to be used to fill in lacerations, pad broken bones, and hold tissues together before slowly being consumed by the body itself, harmlessly.<br></span></p><p><span class=\"fontstyle0\">Using biofoam requires a Treat Injury check [TN5] that costs 8 CP. If the check is successful the target stops bleeding and for every 5 points the roll exceeds the TN the target heals 1d4 XHP. You can take 10 on this check, but not 16/18. Biofoam is packaged in a single use canister.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": "Compendium.opsandtactics.core-rulebook.Item.1BrffNyyRbew4xhe"
   },
   "effects": [],
   "flags": {
@@ -48,11 +71,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642044326,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719523324904,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,

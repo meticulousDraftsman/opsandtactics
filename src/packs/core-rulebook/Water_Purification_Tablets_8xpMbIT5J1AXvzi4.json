@@ -30,7 +30,8 @@
       "type": "unlimited"
     },
     "crit": 16,
-    "description": "<p><span class=\"fontstyle0\">These tablets are chemical tablets that turn even the most suspicious of water sources into clean, drinkable water. One tablet purifies 24 oz/3 units of water. The price listed is for a bottle of 20 tablets</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>"
+    "description": "<p><span class=\"fontstyle0\">These tablets are chemical tablets that turn even the most suspicious of water sources into clean, drinkable water. One tablet purifies 24 oz/3 units of water. The price listed is for a bottle of 20 tablets</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
   },
   "effects": [],
   "flags": {
@@ -40,11 +41,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.2",
     "coreVersion": "11.315",
     "createdTime": 1704705890458,
-    "modifiedTime": 1705642223474,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719520831665,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,
