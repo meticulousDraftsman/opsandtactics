@@ -7,7 +7,8 @@
         <div class="dice-formula">{{formula}}</div>
         <div class="dice-tooltip">{{#if data.critical}}{{data.critical}}-18 Critical Strike{{/if}}{{#if (and data.critical data.error)}}, {{/if}}{{#if data.error}}3-{{jamBar}} Jam Chance{{/if}}</div>
         {{{tooltip}}}
-        <h4 class="dice-total {{#if (and isCritical isJam)}}critical-jam{{else}}{{#if isCritical}}critical{{/if}}{{#if isJam}}jammed{{/if}}{{/if}}">{{total}}</h4>
+        <h4 data-visibility="gm" class="dice-total {{#if (and isCritical isJam)}}critical-jam{{else}}{{#if isCritical}}critical{{/if}}{{#if isJam}}jammed{{/if}}{{/if}}">{{total}}{{#if data.targetDef}} vs {{data.targetDef.value}}/{{data.targetDef.flat}}/{{data.targetDef.touch}}:  {{#if hitCount}}Hit{{#if (eq hitCount 3)}}!{{else}}?{{/if}}{{else}}Miss!{{/if}}{{/if}}</h4>
+        <h4 data-visibility="nongm" class="dice-total {{#if (and isCritical isJam)}}critical-jam{{else}}{{#if isCritical}}critical{{/if}}{{#if isJam}}jammed{{/if}}{{/if}}">{{total}}</h4>
     </div>
 </div>
 {{#if missRoll}}

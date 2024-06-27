@@ -179,7 +179,7 @@ export class OpsItem extends Item {
     
     // Prep data for roll
     const rollData = checkData.actor?checkData.actor.getRollData():this.actor.getRollData();
-    
+    const mainTarget = Array.from(game.user.targets)[0] || undefined;
     const rollConfig = {
       mod: checkData.modifier?checkData.modifier:this.actionSum(checkData.actionID,checkData.tweaks?checkData.tweaks:{}).checkTotal,
       actor: this.actor,
@@ -192,6 +192,10 @@ export class OpsItem extends Item {
       checkType: getProperty(this,`system.actions.${checkData.actionID}.check.type`),
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
       rollMode: game.settings.get('core', 'rollMode'),
+    }
+    if (mainTarget && this.checkType(rollConfig.checkType)=='attack') {
+      rollConfig.targetDef = mainTarget.actor.system.def;
+      rollConfig.title = `${rollConfig.title} vs ${mainTarget.name}`;
     }
     // Execute roll
     const roll = await opsCheck(rollConfig);

@@ -110,7 +110,8 @@ Hooks.on("getChatLogEntryContext", addChatContext);
 Hooks.on("getJournalDirectoryEntryContext", addJournalContext);
 Hooks.on("getCompendiumEntryContext", addCompendiumContext);
 Hooks.on("getActorDirectoryEntryContext", addActorContext);
-Hooks.on("renderChatLog", (app, html, data) => OpsActor.addChatListeners(html));
+Hooks.on("renderChatMessage", (app, html, data) => OpsActor.addChatListeners(html));
+Hooks.on("renderChatMessage", (app, html, data) => onMessageRender(html));
 
 export default class OpsCombat extends Combat {
   async _onUpdate(changed, options, userId){
@@ -210,6 +211,7 @@ export async function opsDamage(data){
 
 export class OpsRoll extends Roll{
   static get name() {return "Roll"}
+  
   get isCritical(){
     if (!this._evaluated) return undefined;
     if ((this.terms[0] instanceof Die) && (this.terms[0].number==3) && (this.terms[0].faces==6)){
@@ -271,6 +273,20 @@ export class OpsRoll extends Roll{
     else {
       return undefined;
     }
+  }
+
+  get hitCount(){
+    if (!this._evaluated || !this.data.targetDef) return undefined;
+    let hits = 0;
+    if (this.total > this.data.targetDef.value) hits = hits+1;
+    if (this.total > this.data.targetDef.flat) hits = hits+1;
+    if (this.total > this.data.targetDef.touch) hits = hits+1;
+    if ((this.terms[0] instanceof Die) && (this.terms[0].number==3) && (this.terms[0].faces==6)){
+      if (this.dice[0].total == 3) hits = 0;
+      if (this.dice[0].total >= 16) hits = 3;
+    }
+    if (this.missRoll && !this.isClear) hits = 0;
+    return hits;
   }
 }
 
@@ -472,7 +488,14 @@ function addActorContext(html, options){
     }
   )
 }
-
+function onMessageRender(html){
+  if (!game.user.isGM){
+    html.find(`[data-visibility="gm"]`).remove();
+  }
+  else {
+    html.find(`[data-visibility="nongm"]`).remove();
+  }
+}
 async function handleWeaponMod(li,op){
   let target;
   if (li.closest('div').hasClass('compendium')){
