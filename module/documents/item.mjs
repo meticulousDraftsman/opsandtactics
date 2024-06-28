@@ -967,7 +967,6 @@ export class OpsItem extends Item {
   // Pre-creation
   async _preCreate(data, options, user){
     await super._preCreate(data, options, user);
-    console.debug(data,this)
     // Assign default name based on type
     const updates = {};
     if (!hasProperty(data,'system')){
@@ -1022,11 +1021,13 @@ export class OpsItem extends Item {
         if (newSource) updates["system.skillSource"] = newSource.id;
         else updates["system.skillSource"] = "";
       }
-      for (let [k,a] of Object.entries(data.system.actions)){
-        if (a.check.source){
-          let newSource = this.actor.items.find((element) => element.flags.core?.sourceId == a.check.source)
-          if (newSource) updates[`system.actions.${k}.check.source`] = newSource.id;
-          else updates[`system.actions.${k}.check.source`] = "";
+      if (!isEmpty(data.system.actions)){
+        for (let [k,a] of Object.entries(data.system.actions)){
+          if (a?.check?.source){
+            let newSource = this.actor.items.find((element) => element.flags.core?.sourceId == a.check.source)
+            if (newSource) updates[`system.actions.${k}.check.source`] = newSource.id;
+            else updates[`system.actions.${k}.check.source`] = "";
+          }
         }
       }
     }
