@@ -622,7 +622,7 @@ export class OpsItem extends Item {
     mods.cp = sourceAction.cp.inherent?Number(sourceAction.cp.inherent):null;
     if (hasProperty(sourceAction,'cp.mods')){
       for (let [,p] of Object.entries(sourceAction.cp.mods)){
-        if (p.value && p.active) mods.cp += Number(p.value) || 0;
+        if (p.value && p.active) mods.cp = Math.max(1, mods.cp + Number(p.value));
       }
     }
     // Handle Ammo and CP/Ammo Label
