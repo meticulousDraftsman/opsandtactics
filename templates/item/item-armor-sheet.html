@@ -9,6 +9,7 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="stats">Statistics</a>
         <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="effects">Effects</a>
       </nav>
     
     <section class="sheet-body">
@@ -99,6 +100,9 @@
         </div>
         <div class="tab" data-group="primary" data-tab="description">
             {{> "systems/opsandtactics/templates/item/parts/item-object.html"}}
+        </div>
+        <div class="tab" data-group="primary" data-tab="effects">
+            {{> "systems/opsandtactics/templates/item/parts/item-effects.html"}}
         </div>
     </section>
 </form>

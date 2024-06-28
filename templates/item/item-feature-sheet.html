@@ -6,46 +6,25 @@
       </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="effects">Effects</a>
+  </nav>
+
   <section class="sheet-body">
-    <fieldset>
-      <legend class="resource-label">
-        Active Effects 
-      </legend>
-      <ol class="items-list effects-list">
-        {{#each effects as |section sid|}}
-        <fieldset>
-          <legend class="resource-label">
-            <li data-effect-type="{{section.type}}">
-              <div class="item-controls effect-controls">
-                {{section.label}} <a class="effect-control" data-action="create" data-tooltip="Create {{section.type}} effect"><i class="fas fa-plus"></i></a>
-              </div>
-            </li>
-          </legend>
-          <ol class="items-list item-list effects-list">
-            {{#each section.effects as |effect|}}
-            <li class="item effect grid grid-10col" data-effect-id="{{effect.uuid}}">
-              <div class="item-name effect-name flexrow grid-span-7">
-                <img class="item-image" src="{{effect.icon}}"/>
-                <h4>{{effect.name}}</h4>
-              </div>
-              <a class="effect-control" data-action="toggle" data-tooltip="Toggle Effect"><i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i></a>
-              <a class="effect-control" data-action="edit" data-tooltip="Edit Effect"><i class="fas fa-edit"></i></a>
-              <a class="effect-control" data-action="delete" data-tooltip="Delete Effect"><i class="fas fa-trash"></i></a>
-            </li>
-            {{/each}}
-          </ol>
-        </fieldset>
-        {{/each}}
-      </ol>
-    </fieldset>
-    <fieldset>
-      <legend class="resource-label">
-        Summary and Description {{#if item.actor}}<a class="item-control self-destruct" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
-      </legend>
-      <input class="flex-group-center" type="text" name="system.summary" value="{{system.summary}}" data-dtype="String" placeholder="Summary">
-      <div>
-        {{editor enrichDescription target="system.description" rollData=rollData button=true owner=owner editable=editable engine="prosemirror"}}
-      </div>
-    </fieldset>
+    <div class="tab" data-group="primary" data-tab="effects">
+      {{> "systems/opsandtactics/templates/item/parts/item-effects.html"}}
+    </div>
+    <div class="tab" data-group="primary" data-tab="description">
+      <fieldset>
+        <legend class="resource-label">
+          Summary and Description {{#if item.actor}}<a class="item-control self-destruct" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
+        </legend>
+        <input class="flex-group-center" type="text" name="system.summary" value="{{system.summary}}" data-dtype="String" placeholder="Summary">
+        <div>
+          {{editor enrichDescription target="system.description" rollData=rollData button=true owner=owner editable=editable engine="prosemirror"}}
+        </div>
+      </fieldset>
+    </div>
   </section>
 </form>

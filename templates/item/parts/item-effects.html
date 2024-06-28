@@ -1,0 +1,31 @@
+<fieldset>
+    <legend class="resource-label">
+      Active Effects 
+    </legend>
+    <ol class="items-list effects-list">
+      {{#each effects as |section sid|}}
+      <fieldset>
+        <legend class="resource-label">
+          <li data-effect-type="{{section.type}}">
+            <div class="item-controls effect-controls">
+              {{section.label}} <a class="effect-control" data-action="create" data-tooltip="Create {{section.type}} effect"><i class="fas fa-plus"></i></a>
+            </div>
+          </li>
+        </legend>
+        <ol class="items-list item-list effects-list">
+          {{#each section.effects as |effect|}}
+          <li class="item effect grid grid-10col" data-effect-id="{{effect.uuid}}">
+            <div class="item-name effect-name flexrow grid-span-7">
+              <img class="item-image" src="{{effect.icon}}"/>
+              <h4>{{effect.name}}</h4>
+            </div>
+            <a class="effect-control" data-action="toggle" data-tooltip="Toggle Effect"><i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i></a>
+            <a class="effect-control" data-action="edit" data-tooltip="Edit Effect"><i class="fas fa-edit"></i></a>
+            <a class="effect-control" data-action="delete" data-tooltip="Delete Effect"><i class="fas fa-trash"></i></a>
+          </li>
+          {{/each}}
+        </ol>
+      </fieldset>
+      {{/each}}
+    </ol>
+  </fieldset>

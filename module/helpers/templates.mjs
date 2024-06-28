@@ -20,6 +20,7 @@
     "systems/opsandtactics/templates/actor/parts/vehicle-vehicle.html",
     "systems/opsandtactics/templates/actor/parts/vehicle-actions.html",
     // Item partials.
-    "systems/opsandtactics/templates/item/parts/item-object.html"
+    "systems/opsandtactics/templates/item/parts/item-object.html",
+    "systems/opsandtactics/templates/item/parts/item-effects.html"
   ]);
 };
