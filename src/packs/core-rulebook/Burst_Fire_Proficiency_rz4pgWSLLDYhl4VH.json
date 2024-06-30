@@ -9,7 +9,7 @@
     "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.X1Qj8vIUDMDE4iQ9]{Autofire Proficiency}</p><h3>Benefit</h3><p>The character’s Total Recoil Penalty is reduced by 2 when performing burst fire attacks. This reduction is calculated after the Attack Recoil Penalty and the Caliber Recoil Penalty.</p>"
   },
   "effects": [],
-  "sort": 112500,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -17,11 +17,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699580546206,
-    "modifiedTime": 1705304374123,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!rz4pgWSLLDYhl4VH"
 }

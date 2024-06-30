@@ -22,7 +22,7 @@
     "description": "<h1>Demolitions (INT) Trained Only</h1><p>The character is trained in arming, planting, and preparing an explosive device for detonation.</p><h3>Check</h3><p>Setting a simple explosive to blow up at a certain spot doesn’t require a check, but connecting and setting a detonator does. Also, placing an explosive for maximum effect against a structure calls for a check, as does disarming an explosive device.</p><h3>Set Detonator</h3><p>Most explosives require a detonator to go off. Connecting a detonator to an explosive requires a Demolitions check [TN10]. Failure means that the explosive fails to go off as planned. Failure by 10 or more means the explosive goes off as the detonator is being installed.</p><p>A character can make an explosive difficult to disarm. To do so, the character chooses the disarm TN before making their check to set the detonator (it must be higher than 10). The character’s TN to set the detonator is equal to the disarm TN.</p><h3>Create Pre-made Explosives</h3><p>This skill also includes creating pre-made explosives from raw explosive materials and detonators. The character chooses the type of detonators they wish to use for the explosive, as well as any pre- set weights, or timing required. A character may have an explosive with more than one kind of detonator, but each detonator after the 1st one increases the Demolitions Check by +6. The character then selects the type of explosive they wish to use. The TN is [Explosive TN + Detonator Modifier]. Failure means the supplies are wasted. Failure by 10 or more means the explosive goes off immediately.</p><h3>Place Explosive Device</h3><p>Carefully placing an explosive against a fixed structure (a stationary, unattended inanimate object) can maximize the damage dealt by exploiting vulnerabilities in the structure’s construction. The GM makes the check (so that the character doesn’t know exactly how well they have done). On a result of 15 or higher, the explosive deals double damage to the structure against which it is placed. On a result of 25 or higher, it deals triple damage to the structure. In all cases, it deals normal damage to all other targets within its blast radius.</p><h3>Disarm Explosive Device</h3><p>Disarming an explosive that has been set to go off requires a Demolitions check. The check is usually TN10, unless the person who set the detonator chose a higher disarm TN. If the character fails the check, they do not disarm the explosive. If the character fails by more than 5, the explosive goes off.</p><h3>Special</h3><p>A character can take 10 when using the Demolitions skill.</p><p>A character without a demolitions kit takes a −6 penalty on Demolitions checks.</p><h3>Try again?</h3><p>If time permits and the explosive has not gone off, yes.</p><h3>Time</h3><p>Setting a detonator costs 10 Combat Points. Placing an explosive device takes 1 minute, possibly longer depending on the scope of the job.</p>"
   },
   "effects": [],
-  "sort": 400000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -30,11 +30,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699926994766,
-    "modifiedTime": 1705309921915,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!3WDCPZXAXnkuqNfK"
 }

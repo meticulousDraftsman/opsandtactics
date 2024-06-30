@@ -120,7 +120,7 @@
     "description": "<p>A slingshot is a small hand powered weapon that uses rubber bands or tubing to fling a small projectile. The classic form consists of a Y-shaped frame held in the off hand, with two rubber strips attached to the uprights. The other ends of the strips lead back to a pocket which holds the projectile. The pocket is grasped by the off-hand and drawn back to the desired extent to provide power for the projectile. Slingshots are simple weapons and require no feats to use. They are limited to three range increments. Ammunition for slings usually encompasses rocks, small marbles, lead and steel balls and any generally any Fine sized object. Slingshots can fire lead ball ammunition, as well as all paintball ammunition. The damage listed is for lead balls and rocks. When calculating damage, a character adds 1½ times their POW modifier. Slingshots must be used with two hands.</p>"
   },
   "effects": [],
-  "sort": 600000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -128,11 +128,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699674179028,
-    "modifiedTime": 1705314090833,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!0tz0tjLrytwowZeP"
 }

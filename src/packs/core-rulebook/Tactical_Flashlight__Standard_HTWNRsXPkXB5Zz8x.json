@@ -34,7 +34,7 @@
     "description": "<p>This is a flashlight that attaches to a firearm. It comes in one of four styles:</p><p><strong>Standard</strong> This projects a beam of light in a 20’ cone. It cost 2 WP less.</p><p>Switching the light on or off, or changing modes costs 1 Combat Point.</p><p>All tactical flashlights can be purchased with infrared or ultraviolet modes, increasing the WP cost by 2 per extra mode. When in infrared mode, the flashlight has its range multiplied by 6.</p>"
   },
   "effects": [],
-  "sort": -100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -42,11 +42,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.13",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1713453377487,
-    "modifiedTime": 1713453649967,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!HTWNRsXPkXB5Zz8x"
 }

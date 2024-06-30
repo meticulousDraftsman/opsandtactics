@@ -21,7 +21,7 @@
     "ability": "int"
   },
   "effects": [],
-  "sort": 200000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -29,11 +29,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699857983996,
-    "modifiedTime": 1705309779249,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_id": "l7NGXGK10mcUJNo3",
   "_key": "!items!l7NGXGK10mcUJNo3"

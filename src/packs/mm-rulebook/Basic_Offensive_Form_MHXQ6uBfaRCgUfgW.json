@@ -8,7 +8,7 @@
   },
   "effects": [],
   "folder": "OGYPBbHEhg0JrXAA",
-  "sort": 100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "0zMFB2BmkiC13YBe": 3,
@@ -17,11 +17,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1698597373397,
-    "modifiedTime": 1705305778778,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711059074,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_id": "MHXQ6uBfaRCgUfgW",
   "_key": "!items!MHXQ6uBfaRCgUfgW"

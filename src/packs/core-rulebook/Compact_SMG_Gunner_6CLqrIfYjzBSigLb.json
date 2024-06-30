@@ -9,7 +9,7 @@
     "description": "<h3>Prerequisites</h3><p>@UUID[Compendium.opsandtactics.core-rulebook.Item.WZgKEHaJW8emVPBl]{Personal Firearms Proficiency}, @UUID[Compendium.opsandtactics.core-rulebook.Item.MjNoL6QtM0Nptxsw]{Rifle Specialist}</p><h3>Benefit</h3><p>When firing a sub-machine gun with a folded folding or fixed folding stock or a pistol grip, the character does not take any penalties to their attack from the stock.</p><h3>Normal</h3><p>A character without this feat has the range increment penalty doubled for all attacks with a folded folding stock or a pistol grip.</p>"
   },
   "effects": [],
-  "sort": -50000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -17,11 +17,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699579444428,
-    "modifiedTime": 1705304342824,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!6CLqrIfYjzBSigLb"
 }

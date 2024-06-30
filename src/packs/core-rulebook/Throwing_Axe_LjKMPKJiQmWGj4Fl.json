@@ -294,13 +294,13 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699220656362,
-    "modifiedTime": 1705314213671,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_id": "LjKMPKJiQmWGj4Fl",
-  "sort": 300000,
+  "sort": 0,
   "_key": "!items!LjKMPKJiQmWGj4Fl"
 }

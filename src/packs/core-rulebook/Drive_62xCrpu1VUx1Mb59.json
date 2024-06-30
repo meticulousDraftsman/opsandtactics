@@ -22,7 +22,7 @@
     "description": "<h1>Drive (DEX)</h1><p>The character is trained how to drive in unusual circumstances, such as inclement weather, or during a dramatic situation, such as being chased, or attempting to reach a location quickly. A character does not need any ranks in drive in order to drive a civilian car, truck, or motorcycle. When driving, the character can attempt simple maneuvers or stunts.</p><h3>Special</h3><p>A character can take 10 when driving.</p><p>There is no penalty for operating a general-purpose motor vehicle. Other types of motor vehicles (heavy wheeled, powerboat, sailboat, ship, and tracked) require the corresponding Surface Vehicle Operation feat, or the character takes a −4 penalty on Drive checks.</p><h3>Try Again?</h3><p>Most driving checks have consequences for failure that make trying again impossible.</p><h3>Time</h3><p>A Drive check costs 6 Combat Points.</p>"
   },
   "effects": [],
-  "sort": 700000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -30,11 +30,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699927610019,
-    "modifiedTime": 1705309916581,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!62xCrpu1VUx1Mb59"
 }

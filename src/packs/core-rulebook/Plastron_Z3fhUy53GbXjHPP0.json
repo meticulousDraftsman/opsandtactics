@@ -48,11 +48,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1705309249570,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "folder": "gMx1J0qOaPk1DblG",
   "ownership": {
@@ -60,6 +60,6 @@
     "qUf9EhhQBxZF46Rx": 3
   },
   "_id": "Z3fhUy53GbXjHPP0",
-  "sort": 500000,
+  "sort": 0,
   "_key": "!items!Z3fhUy53GbXjHPP0"
 }

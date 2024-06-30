@@ -137,7 +137,7 @@
     "description": "<p>A flamethrower consists of a pressurized backpack containing fuel, which is connected to a tube with a nozzle. It shoots a 5-foot wide, 60-foot long line of flame that deals 3d6 points of fire damage to all creatures and objects in its path. No attack roll is necessary. Any creature caught in the line of flame can make a Reflex Saving Throw [TN15] to take half damage. Creatures with cover get a bonus on their Reflex Saving Throw. A flamethrower’s backpack has hardness 5 and 20 HP. When worn, the backpack has a DEF equal to 9 + the wearer’s AGI modifier. A backpack reduced to 0 HP ruptures and explodes, dealing 8d6 points of fire damage to the wearer (no Saving Throw allowed) and 3d6 points of fire damage to creatures and objects within a 10’ burst radius (Reflex Saving Throw [TN15] for half damage).</p><p>Any creature or flammable object that takes damage from a flamethrower catches on fire immediately, taking 2d6 points of fire damage each subsequent round until the flames are extinguished. A fire engulfing a single creature or object can be doused or smothered for 12 Combat Points. They can not attempt a Reflex Saving Throw to extinguish themselves. A flamethrower can fire 20 times and a flamer can fire 8 times before the fuel supply is depleted and cannot double-tap, double fire, or perform any other special firing modes. The Exotic Firearms Proficiency (Flamethrowers) feat is required to use flamethrower or flamer.</p>"
   },
   "effects": [],
-  "sort": 100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -145,11 +145,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1699664336353,
-    "modifiedTime": 1705314285369,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711023773,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!m9QN461IYgVW1C7E"
 }

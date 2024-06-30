@@ -67,7 +67,7 @@
   "img": "systems/opsandtactics/icons/gear/objects/swipe-card.webp",
   "effects": [],
   "folder": "Ap3n784DNjeqgXkS",
-  "sort": 12500,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "qUf9EhhQBxZF46Rx": 3
@@ -79,11 +79,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.8",
+    "systemVersion": "0.4.4",
     "coreVersion": "11.315",
     "createdTime": 1706139361453,
-    "modifiedTime": 1706143008765,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1719711042764,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!0ALVKRohPOVRybKM"
 }
