@@ -629,7 +629,7 @@ export class OpsActor extends Actor {
     await this.update(actorUpdateData);
     if(!isEmpty(itemUpdateData)){
       await drItem.update(itemUpdateData);
-      if (type=='shield' && drItem.system.coolant!=''){
+      if (type=='shield' && drItem.system.coolant){
         let dualID = drItem.system.coolant.split(',');
         let coolItem = this.items.get(dualID[0]);
         if (coolItem) await coolItem.update({[`${dualID[1]}.value`]:drItem.system.ap.soak-drItem.system.ap.value});

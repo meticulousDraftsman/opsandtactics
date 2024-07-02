@@ -120,7 +120,7 @@ export class OpsItem extends Item {
   }
   _prepareArmorData(itemData){
     const systemData = itemData.system;
-    if (systemData.coolant!= '' && this.actor){
+    if (systemData.coolant && this.actor){
       let dualID = systemData.coolant.split(',');
       let loadedCool = getProperty(this.actor.items.filter(item => item._id == dualID[0])[0],dualID[1])
       if (loadedCool?.soak > 0 && loadedCool?.soak < 1) {
