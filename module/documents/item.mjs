@@ -962,7 +962,18 @@ export class OpsItem extends Item {
     }
   }
 
-  
+  static getDefaultArtwork(itemData){
+    const temp = {
+      weapon: CONFIG.OATS.weaponIcons[Math.floor(Math.random()*CONFIG.OATS.weaponIcons.length)],
+      armor: CONFIG.OATS.armorIcons[Math.floor(Math.random()*CONFIG.OATS.armorIcons.length)],
+      skill: `systems/opsandtactics/icons/abstract/bookshelf.webp`,
+      object: CONFIG.OATS.objectIcons[Math.floor(Math.random()*CONFIG.OATS.objectIcons.length)],
+      feature: `systems/opsandtactics/icons/gear/objects/notebook.webp`,
+      magic: CONFIG.OATS.magicIcons[Math.floor(Math.random()*CONFIG.OATS.magicIcons.length)]
+    }
+    if (hasProperty(itemData,'img')) return null;
+    else return { img: temp[itemData.type]};
+  }
 
   // Pre-creation
   async _preCreate(data, options, user){
@@ -988,29 +999,6 @@ export class OpsItem extends Item {
           break;
         case 'magic':
           updates["name"] = this.name.replace('Item','Magic')
-          break;
-      }
-    }
-    // Assign default image based on type
-    if (!hasProperty(data,'img')){
-      switch(this.type){
-        case 'weapon':
-          updates["img"] = CONFIG.OATS.weaponIcons[Math.floor(Math.random()*CONFIG.OATS.weaponIcons.length)];
-          break;
-        case 'armor':
-          updates["img"] = CONFIG.OATS.armorIcons[Math.floor(Math.random()*CONFIG.OATS.armorIcons.length)];
-          break;
-        case 'skill':
-          updates["img"] = `systems/opsandtactics/icons/abstract/bookshelf.webp`;
-          break;
-        case 'feature':
-          updates["img"] = `systems/opsandtactics/icons/gear/objects/notebook.webp`;
-          break;
-        case 'magic':
-          updates["img"] = CONFIG.OATS.magicIcons[Math.floor(Math.random()*CONFIG.OATS.magicIcons.length)];
-          break;
-        default:
-          updates["img"] = CONFIG.OATS.objectIcons[Math.floor(Math.random()*CONFIG.OATS.objectIcons.length)];
           break;
       }
     }

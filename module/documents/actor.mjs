@@ -171,7 +171,7 @@ export class OpsActor extends Actor {
         linked.add(i)
       }
       for (let i of linked){
-        if (fromUuidSync(i).type=='vehicle') fromUuidSync(i).reset();
+        if (fromUuidSync(i)?.type=='vehicle') fromUuidSync(i).reset();
       }
     } 
   }
@@ -751,6 +751,28 @@ export class OpsActor extends Actor {
     // Bring initiative up for combat tracker
     data.init = data.stats.init.value ?? 0;
   }
+  
+  static getDefaultArtwork(actorData){
+    let artwork = super.getDefaultArtwork(actorData);
+    const temp = {
+      character: CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)],
+      vehicle: CONFIG.OATS.vehicleIcons[Math.floor(Math.random()*CONFIG.OATS.vehicleIcons.length)],
+      spacecraft: CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)]
+    }
+    if (!hasProperty(actorData,'img')){ // If this is a fresh initializing actor with nothing
+      artwork.img = temp[actorData.type];
+      artwork.texture.src = temp[actorData.type];
+    }
+    else if (getProperty(actorData,'prototypeToken.texture.src') == this.DEFAULT_ICON){
+      artwork.img = actorData.img;
+      artwork.texture.src = actorData.img;
+    }
+    else { // If this is a token checking for if it matches the defaults
+      artwork.img = null; // Prevent the file picker from diverting to root
+      if (CONFIG.OATS[`${actorData.type}Icons`].includes(actorData?.prototypeToken?.texture?.src)) artwork.texture.src = actorData?.prototypeToken?.texture?.src;
+    }
+    return artwork;
+  }
 
   // Pre-creation
   async _preCreate(data, options, user){
@@ -765,40 +787,10 @@ export class OpsActor extends Actor {
             updates['items'].push((game.items.fromCompendium(await fromUuid(sid))));
           }
         }
-        if (!hasProperty(data,'img')){
-          updates['img'] = CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)];
-          updates['prototypeToken.texture.src'] = updates['img'];
-        }
         break;
       case 'vehicle':
-        //if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.vehicleActions;
-        if (!hasProperty(data,'img')){
-          updates['img'] = CONFIG.OATS.vehicleIcons[Math.floor(Math.random()*CONFIG.OATS.vehicleIcons.length)];
-          updates['prototypeToken.texture.src'] = updates['img'];
-        } 
         break;
       case 'spacecraft':
-        if (!hasProperty(data,'img')){
-          updates['img'] = CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)];
-          updates['prototypeToken.texture.src'] = updates['img'];
-        } 
-        break;
-    }
-    if(!isEmpty(updates)) return this.updateSource(updates);
-  }
-  // Pre-updation
-  async _preUpdate(changed,options,user){
-    await super._preUpdate(changed,options,user);
-    const updates= {};
-    switch (this.type){
-      case 'character':
-        if (hasProperty(changed,'img') && CONFIG.OATS.characterIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
-        break;
-      case 'vehicle':
-        if (hasProperty(changed,'img') && CONFIG.OATS.vehicleIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
-        break;
-      case 'spacecraft':
-        if (hasProperty(changed,'img') && CONFIG.OATS.spacecraftIcons.includes(this.img) && this.img == this.prototypeToken.texture.src) updates['prototypeToken.texture.src'] = changed.img;
         break;
     }
     if(!isEmpty(updates)) return this.updateSource(updates);
