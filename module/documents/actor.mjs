@@ -754,14 +754,10 @@ export class OpsActor extends Actor {
   
   static getDefaultArtwork(actorData){
     let artwork = super.getDefaultArtwork(actorData);
-    const temp = {
-      character: CONFIG.OATS.characterIcons[Math.floor(Math.random()*CONFIG.OATS.characterIcons.length)],
-      vehicle: CONFIG.OATS.vehicleIcons[Math.floor(Math.random()*CONFIG.OATS.vehicleIcons.length)],
-      spacecraft: CONFIG.OATS.spacecraftIcons[Math.floor(Math.random()*CONFIG.OATS.spacecraftIcons.length)]
-    }
+    const temp = CONFIG.OATS[`${actorData.type}Icons`][Math.floor(Math.random()*CONFIG.OATS[`${actorData.type}Icons`].length)]
     if (!hasProperty(actorData,'img')){ // If this is a fresh initializing actor with nothing
-      artwork.img = temp[actorData.type];
-      artwork.texture.src = temp[actorData.type];
+      artwork.img = temp;
+      artwork.texture.src = temp;
     }
     else if (getProperty(actorData,'prototypeToken.texture.src') == this.DEFAULT_ICON){
       artwork.img = actorData.img;
