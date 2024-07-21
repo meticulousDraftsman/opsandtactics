@@ -44,6 +44,7 @@ jobs:
           module/               \
           packs/                \
           templates/            \
+          ui/                   \
       
       - name: Add Artifacts to Release
         id: create_version_release

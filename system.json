@@ -77,5 +77,18 @@
     "gridDistance": 5,
     "gridUnits": "ft",
     "primaryTokenAttribute": "health.chp",
-    "secondaryTokenAttribute": "health.xhp"
+    "secondaryTokenAttribute": "health.xhp",
+    "background": "systems/opsandtactics/ui/ops-background.webp",
+    "media": [
+        {
+            "type": "cover",
+            "loop": false,
+            "flags": {}
+        },
+        {
+            "type": "setup",
+            "url": "systems/opsandtactics/ui/ops-media.jpg",
+            "thumbnail": "systems/opsandtactics/ui/ops-thumbnail.jpg"
+        }
+    ]
 }
