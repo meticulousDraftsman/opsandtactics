@@ -7,7 +7,7 @@ class Mods extends foundry.abstract.DataModel {
         }
     }
     get subtotal(){
-        return Object.values(this).reduce((a,b)=>a+b,hasProperty(this,'value')?-this.value:0);
+        return Object.values(this).reduce((a,b)=>a+b,foundry.utils.hasProperty(this,'value')?-this.value:0);
     }
 };
 class Health extends foundry.abstract.DataModel {

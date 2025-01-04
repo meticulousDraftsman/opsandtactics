@@ -130,7 +130,7 @@ export class OpsActor extends Actor {
     systemData.magic.mlRecipe = systemData.magic.invokerMemorize?((3*systemData.stats.level.value)+3):0;
     systemData.magic.mlObject = 0;
     for (let i of this.items){
-      if (hasProperty(i,'system.gear.resources')){
+      if (foundry.utils.hasProperty(i,'system.gear.resources')){
         for (let [,r] of Object.entries(i.system.gear.resources)){
           if (r.type==='magic' && r.value!=0) systemData.magic.mlObject += r.ml;
         }
@@ -165,7 +165,7 @@ export class OpsActor extends Actor {
     systemData.saves.will.value = Math.floor(systemData.saves.will.base * systemData.saves.will.mult) + systemData.saves.will.mods.subtotal + systemData.abilities.wis.mod;
     
     // Trigger Vehicle Data Prep
-    if (!isEmpty(systemData.links.vehicle)){
+    if (!foundry.utils.isEmpty(systemData.links.vehicle)){
       let linked = new Set()
       for (let [,i] of Object.entries(systemData.links.vehicle)){
         linked.add(i)
@@ -278,7 +278,7 @@ export class OpsActor extends Actor {
   async rollVehicleCheck(actionID, rollType,event=undefined){
     // Check Resource Consumptions
     let ammoCheck = (event && (event.ctrlKey || event.altKey))? true : this.vehicleResourceAvailableCheck(actionID);
-    let cpCheck = (getProperty(this,`system.actions.${actionID}.source`) == 'generic' || (event && (event.ctrlKey || event.altKey)))? true : fromUuidSync(getProperty(this,`system.vehicle.crew.${getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).cpAvailableCheck(getProperty(this,`system.actions.${actionID}.cp`))
+    let cpCheck = (foundry.utils.getProperty(this,`system.actions.${actionID}.source`) == 'generic' || (event && (event.ctrlKey || event.altKey)))? true : fromUuidSync(foundry.utils.getProperty(this,`system.vehicle.crew.${foundry.utils.getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).cpAvailableCheck(foundry.utils.getProperty(this,`system.actions.${actionID}.cp`))
     if (!ammoCheck || !cpCheck){
       await Dialog.confirm({
         title: "Insufficient Resources",
@@ -298,8 +298,8 @@ export class OpsActor extends Actor {
       actor: this,
       data: rollData,
       title: this.system.actions[actionID].name,
-      flavor: getProperty(this, `system.actions.${actionID}.check.flavor`),
-      mod: getProperty(this, `system.actions.${actionID}.check.total`), 
+      flavor: foundry.utils.getProperty(this, `system.actions.${actionID}.check.flavor`),
+      mod: foundry.utils.getProperty(this, `system.actions.${actionID}.check.total`), 
       speaker: ChatMessage.getSpeaker({actor:this}),
       rollMode: game.settings.get('core','rollMode'),
       popupSkip: (event && event.shiftKey)
@@ -324,27 +324,27 @@ export class OpsActor extends Actor {
     if (roll==null) return null;
     //Resource Consumption
     if (!(event && event.altKey)){
-      let cost = getProperty(this,`system.actions.${actionID}.ammo.cost`);
-      if (getProperty(this,`system.actions.${actionID}.ammo.source`)){
-        const dualID = getProperty(this,`system.actions.${actionID}.ammo.source`).split(',');
-        if (getProperty(this,`system.actions.${actionID}.linked.type`)=='coolant') cost *= -1;
+      let cost = foundry.utils.getProperty(this,`system.actions.${actionID}.ammo.cost`);
+      if (foundry.utils.getProperty(this,`system.actions.${actionID}.ammo.source`)){
+        const dualID = foundry.utils.getProperty(this,`system.actions.${actionID}.ammo.source`).split(',');
+        if (foundry.utils.getProperty(this,`system.actions.${actionID}.linked.type`)=='coolant') cost *= -1;
         await this.items.get(dualID[0]).attributeConsume(`${dualID[1]}.value`,cost)
       }
       else {
         await this.attributeConsume(`system.actions.${actionID}.ammo.value`,cost);
       }
-      if (getProperty(this,`system.actions.${actionID}.source`) != 'generic') await fromUuidSync(getProperty(this,`system.vehicle.crew.${getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).attributeConsume('system.cp.value',getProperty(this,`system.actions.${actionID}.cp`));
+      if (foundry.utils.getProperty(this,`system.actions.${actionID}.source`) != 'generic') await fromUuidSync(foundry.utils.getProperty(this,`system.vehicle.crew.${foundry.utils.getProperty(this,`system.actions.${actionID}.source`)}.uuid`)).attributeConsume('system.cp.value',foundry.utils.getProperty(this,`system.actions.${actionID}.cp`));
     }
     return roll;
   }
   vehicleResourceAvailableCheck(actionID){
-    const action = getProperty(this,`system.actions.${actionID}`);
-    const cost = getProperty(action, 'ammo.cost') ?? 0;
+    const action = foundry.utils.getProperty(this,`system.actions.${actionID}`);
+    const cost = foundry.utils.getProperty(action, 'ammo.cost') ?? 0;
     if (Number(cost)==0) return true;
-    if (getProperty(action,'ammo.source')){
-      const dualID = getProperty(action,'ammo.source').split(',');
+    if (foundry.utils.getProperty(action,'ammo.source')){
+      const dualID = foundry.utils.getProperty(action,'ammo.source').split(',');
       const item = this.items.get(dualID[0]);
-      const resource = getProperty(item,dualID[1]);
+      const resource = foundry.utils.getProperty(item,dualID[1]);
       if (action.linked.type=='coolant') return ((action.linked.value+cost) <= action.ammo.max);
       return ((action.linked.value-cost) >= 0)   
     }
@@ -354,7 +354,7 @@ export class OpsActor extends Actor {
   }
 
   async actorAction(checkID, event=undefined){
-    const cpCost = getProperty(this,`system.actions.${checkID}.cost`)*getProperty(this,`system.actions.${checkID}.quantity`);
+    const cpCost = foundry.utils.getProperty(this,`system.actions.${checkID}.cost`)*foundry.utils.getProperty(this,`system.actions.${checkID}.quantity`);
     if (cpCost==0) return;
     let cpCheck = (event && event.ctrlKey)? true : ((this.system.cp.value-cpCost) >= -this.system.cp.temp);
     if (!cpCheck){
@@ -375,12 +375,12 @@ export class OpsActor extends Actor {
   }
 
   cpAvailableCheck(cost){
-    if (cost==0 || !hasProperty(this,'system.cp.value')) return true;
+    if (cost==0 || !foundry.utils.hasProperty(this,'system.cp.value')) return true;
     return (this.system.cp.value-cost >= -this.system.cp.temp)
   }
   async attributeConsume(path,cost){
     if (Number(cost)==0) return;
-    await this.update({[path]:(getProperty(this,path)-cost)});
+    await this.update({[path]:(foundry.utils.getProperty(this,path)-cost)});
   }
 
   /**
@@ -402,12 +402,12 @@ export class OpsActor extends Actor {
           return 0;
       case 'foc':
       case 'pow':
-          return getProperty(this,`system.abilities.str.${source}`) ?? 0;
+          return foundry.utils.getProperty(this,`system.abilities.str.${source}`) ?? 0;
       case 'mrk':
       case 'agi':
-          return getProperty(this,`system.abilities.dex.${source}`) ?? 0;
+          return foundry.utils.getProperty(this,`system.abilities.dex.${source}`) ?? 0;
       default:
-          return getProperty(this,`system.abilities.${source}.mod`) ?? 0;
+          return foundry.utils.getProperty(this,`system.abilities.${source}.mod`) ?? 0;
     }  
   }
   wagerPenalty(){
@@ -491,7 +491,7 @@ export class OpsActor extends Actor {
         remaining -= incoming;
         report = `Core hit points take ${incoming} damage, ${remaining} CHP remains.`
         incoming = 0;
-        setProperty(actorUpdateData,'system.health.chp.value',remaining);
+        foundry.utils.setProperty(actorUpdateData,'system.health.chp.value',remaining);
         break;
       case 'xhp':
         if(remaining == 0) return null;
@@ -504,7 +504,7 @@ export class OpsActor extends Actor {
         else{
           report = `Extended hit points take ${reduced} damage, ${remaining} XHP remains.`
         }
-        setProperty(actorUpdateData,'system.health.xhp.value',remaining);
+        foundry.utils.setProperty(actorUpdateData,'system.health.xhp.value',remaining);
         break;
       case 'shield':
         if (max == 0) break;
@@ -536,7 +536,7 @@ export class OpsActor extends Actor {
           else{
             report = `${drItem.name} reduces damage to nothing, ${remaining} soak remains.`
           }
-          setProperty(itemUpdateData,'system.ap.value',remaining);
+          foundry.utils.setProperty(itemUpdateData,'system.ap.value',remaining);
         }
         break;
       case 'vehicle':
@@ -559,7 +559,7 @@ export class OpsActor extends Actor {
           }
         }
         incoming=0;
-        setProperty(actorUpdateData,'system.health.hp.value',remaining);
+        foundry.utils.setProperty(actorUpdateData,'system.health.hp.value',remaining);
         break;
       default:
         if (max == 0) break;
@@ -582,7 +582,7 @@ export class OpsActor extends Actor {
         else{
           report = `${drItem.name} reduces damage by ${reduced}, ${incoming} damage and ${remaining} AP remains`
         }
-        setProperty(itemUpdateData,'system.ap.value',remaining);
+        foundry.utils.setProperty(itemUpdateData,'system.ap.value',remaining);
         break;
     }
     // Apply non-health protection without defined AP/Soak as pure DR
@@ -596,7 +596,7 @@ export class OpsActor extends Actor {
         report = `${drItem.name} reduces damage to nothing.`;
       }
     }
-    setProperty(actorUpdateData,'system.health.incoming',incoming);
+    foundry.utils.setProperty(actorUpdateData,'system.health.incoming',incoming);
     // Create a new message if there's no existing one or the existing one isn't the most recent
     if (this.system.health.damageReport == '' || this.system.health.damageReport!=ui.chat.collection?.contents[ui.chat.collection.contents.length-1]?.id){
       const messageData = {
@@ -606,7 +606,7 @@ export class OpsActor extends Actor {
         content: ''
       }
       chatReport = await ChatMessage.create(messageData,{rollMode: game.settings.get('core', 'rollMode')});
-      setProperty(actorUpdateData,'system.health.damageReport',chatReport.id);
+      foundry.utils.setProperty(actorUpdateData,'system.health.damageReport',chatReport.id);
       await chatReport.setFlag('opsandtactics','report',{initial:initial,reports:[report]});
     }
     // If an existing message is most recent, add the new report to its list
@@ -622,12 +622,12 @@ export class OpsActor extends Actor {
     await chatReport.update({content:html});
     // Detach the chat message if all incoming damage is dealt with
     if(incoming==0){
-      setProperty(actorUpdateData,'system.health.damageReport','');
-      setProperty(actorUpdateData,'system.health.incoming',null);
+      foundry.utils.setProperty(actorUpdateData,'system.health.damageReport','');
+      foundry.utils.setProperty(actorUpdateData,'system.health.incoming',null);
     }
     // Update target with new remaining value and actor with new incoming value
     await this.update(actorUpdateData);
-    if(!isEmpty(itemUpdateData)){
+    if(!foundry.utils.isEmpty(itemUpdateData)){
       await drItem.update(itemUpdateData);
       if (type=='shield' && drItem.system.coolant){
         let dualID = drItem.system.coolant.split(',');
@@ -700,7 +700,7 @@ export class OpsActor extends Actor {
     return Promise.all(canvas.tokens.controlled.map(t => {
       const a = t.actor;
       if (!a.isOwner) return a;
-      const updateData = {['system.health.incoming']:getProperty(a,'system.health.incoming')+damage};
+      const updateData = {['system.health.incoming']:foundry.utils.getProperty(a,'system.health.incoming')+damage};
       return a.update(updateData);
     }))
   }
@@ -755,11 +755,11 @@ export class OpsActor extends Actor {
   static getDefaultArtwork(actorData){
     let artwork = super.getDefaultArtwork(actorData);
     const temp = CONFIG.OATS[`${actorData.type}Icons`][Math.floor(Math.random()*CONFIG.OATS[`${actorData.type}Icons`].length)]
-    if (!hasProperty(actorData,'img')){ // If this is a fresh initializing actor with nothing
+    if (!foundry.utils.hasProperty(actorData,'img')){ // If this is a fresh initializing actor with nothing
       artwork.img = temp;
       artwork.texture.src = temp;
     }
-    else if (getProperty(actorData,'prototypeToken.texture.src') == this.DEFAULT_ICON){
+    else if (foundry.utils.getProperty(actorData,'prototypeToken.texture.src') == this.DEFAULT_ICON){
       artwork.img = actorData.img;
       artwork.texture.src = actorData.img;
     }
@@ -776,8 +776,8 @@ export class OpsActor extends Actor {
     const updates = {};
     switch (this.type){
       case 'character':
-        if (!hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.characterActions;
-        if (!hasProperty(data,'items')){
+        if (!foundry.utils.hasProperty(data,'system')) updates['system.actions'] = CONFIG.OATS.characterActions;
+        if (!foundry.utils.hasProperty(data,'items')){
           updates['items'] = []
           for (let sid of CONFIG.OATS.characterDefaultItems){
             updates['items'].push((game.items.fromCompendium(await fromUuid(sid))));
@@ -789,14 +789,14 @@ export class OpsActor extends Actor {
       case 'spacecraft':
         break;
     }
-    if(!isEmpty(updates)) return this.updateSource(updates);
+    if(!foundry.utils.isEmpty(updates)) return this.updateSource(updates);
   }
 }  
 
 // Start of turn popup
 export class TurnStartDashboardApp extends FormApplication {
   static get defaultOptions(){
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['opsandtactics','sheet','item'],
       template: 'systems/opsandtactics/templates/interface/dialog-turn-start-dashboard.html',
       width: 300,

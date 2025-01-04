@@ -25,7 +25,7 @@ export class OpsItem extends Item {
     if (itemData.type === 'object') this._prepareObjectData(itemData);
     if (itemData.type === 'magic') this._prepareMagicData(itemData);
 
-    if (hasProperty(systemData,'gear.resources')){
+    if (foundry.utils.hasProperty(systemData,'gear.resources')){
       for (let [,entry] of Object.entries(systemData.gear.resources)){
         if (entry.type!='spacecraft') continue;
         entry.hardness.value = entry.hardness.inherent ?? 0;
@@ -39,10 +39,10 @@ export class OpsItem extends Item {
         }
       }
     }
-    if (hasProperty(systemData,'gear') && this.actor){
+    if (foundry.utils.hasProperty(systemData,'gear') && this.actor){
       systemData.gear.location.children = [];
       for (let i of this.actor.items){
-        if (getProperty(i,'system.gear.location.parent') == this.id) systemData.gear.location.children.push(i.id)
+        if (foundry.utils.getProperty(i,'system.gear.location.parent') == this.id) systemData.gear.location.children.push(i.id)
       }
     }
   }
@@ -55,35 +55,35 @@ export class OpsItem extends Item {
     // Map weapon mods values to attacks
     for (let [,a] of Object.entries(systemData.actions)){
       a.type = 'attack';
-      if (hasProperty(a,'check.mods')){
+      if (foundry.utils.hasProperty(a,'check.mods')){
         for (let [key,entry] of Object.entries(a.check.mods)){
           if (!entry.active) continue;
           entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
           entry.value = systemData.weaponMods?.[key]?.check ?? null;
          }
       }
-      if (hasProperty(a,'effect.mods')){
+      if (foundry.utils.hasProperty(a,'effect.mods')){
         for (let [key,entry] of Object.entries(a.effect.mods)){
           if (!entry.active) continue;
           entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
           entry.value = systemData.weaponMods?.[key]?.effect ?? null;
          }
       }
-      if (hasProperty(a,'dice.mods')){
+      if (foundry.utils.hasProperty(a,'dice.mods')){
         for (let [key,entry] of Object.entries(a.dice.mods)){
           if (!entry.active) continue;
           entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
           entry.value = systemData.weaponMods?.[key]?.dice ?? null;
          }
       }
-      if (hasProperty(a,'recoil.mods')){
+      if (foundry.utils.hasProperty(a,'recoil.mods')){
         for (let [key,entry] of Object.entries(a.recoil.mods)){
           if (!entry.active) continue;
           entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
           entry.value = systemData.weaponMods?.[key]?.recoil ?? null;
          }
       }
-      if (hasProperty(a,'cp.mods')){
+      if (foundry.utils.hasProperty(a,'cp.mods')){
         for (let [key,entry] of Object.entries(a.cp.mods)){
           if (!entry.active) continue;
           entry.name = systemData.weaponMods?.[key]?.name ?? 'Error';
@@ -94,10 +94,10 @@ export class OpsItem extends Item {
     if (systemData.magazine.type=='cartridge' && systemData.magazine.source!=''){
       let tripleID = systemData.magazine.source.split(',');
       if (this.actor){
-        systemData.magazine.loaded = getProperty(this.actor.items.filter(item => item._id == tripleID[0])[0],tripleID[1]+'.'+tripleID[2]);
+        systemData.magazine.loaded = foundry.utils.getProperty(this.actor.items.filter(item => item._id == tripleID[0])[0],tripleID[1]+'.'+tripleID[2]);
       }
       else {
-        systemData.magazine.loaded = getProperty(this,tripleID[1]+'.'+tripleID[2]);
+        systemData.magazine.loaded = foundry.utils.getProperty(this,tripleID[1]+'.'+tripleID[2]);
       }
       
     }
@@ -106,7 +106,7 @@ export class OpsItem extends Item {
     }
     if (systemData.magazine.type=='coolant' && systemData.magazine.source!='' && this.actor){
       let dualID = systemData.magazine.source.split(',');
-      let loadedCool = getProperty(this.actor.items.filter(item => item._id == dualID[0])[0],dualID[1])
+      let loadedCool = foundry.utils.getProperty(this.actor.items.filter(item => item._id == dualID[0])[0],dualID[1])
       if (loadedCool?.heat > 0 && loadedCool?.heat < 1) {
         systemData.magazine.heatMax = systemData.magazine.heatBase * loadedCool.heat;
       }
@@ -122,7 +122,7 @@ export class OpsItem extends Item {
     const systemData = itemData.system;
     if (systemData.coolant && this.actor){
       let dualID = systemData.coolant.split(',');
-      let loadedCool = getProperty(this.actor.items.filter(item => item._id == dualID[0])[0],dualID[1])
+      let loadedCool = foundry.utils.getProperty(this.actor.items.filter(item => item._id == dualID[0])[0],dualID[1])
       if (loadedCool?.soak > 0 && loadedCool?.soak < 1) {
         systemData.ap.soak = systemData.ap.max * loadedCool?.soak;
       }
@@ -161,7 +161,7 @@ export class OpsItem extends Item {
 
   async rollActionCheck(checkData){
     // Check resource consumption and override
-    let ammoCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.resourceAvailableCheck(checkData.ammo?checkData.ammo:getProperty(this,`system.actions.${checkData.actionID}.ammo`));
+    let ammoCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : this.resourceAvailableCheck(checkData.ammo?checkData.ammo:foundry.utils.getProperty(this,`system.actions.${checkData.actionID}.ammo`));
     let cpCheck = (checkData.event && (checkData.event.ctrlKey || checkData.event.altKey))? true : checkData.actor?checkData.actor.cpAvailableCheck(checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp):this.actor.cpAvailableCheck(checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     if (!ammoCheck || !cpCheck){
       await Dialog.confirm({
@@ -184,12 +184,12 @@ export class OpsItem extends Item {
       mod: checkData.modifier?checkData.modifier:this.actionSum(checkData.actionID,checkData.tweaks?checkData.tweaks:{}).checkTotal,
       actor: this.actor,
       data: rollData,
-      critical: getProperty(this,'system.crit'),
-      error: getProperty(this,'system.errorBase') + getProperty(this,'system.magazine.loaded.stats.error'),
+      critical: foundry.utils.getProperty(this,'system.crit'),
+      error: foundry.utils.getProperty(this,'system.errorBase') + foundry.utils.getProperty(this,'system.magazine.loaded.stats.error'),
       missChance: checkData.missChance,
       title: `${this.name} - ${this.system.actions[checkData.actionID].name}`,
-      flavor: getProperty(this,`system.actions.${checkData.actionID}.check.flavor`),
-      checkType: getProperty(this,`system.actions.${checkData.actionID}.check.type`),
+      flavor: foundry.utils.getProperty(this,`system.actions.${checkData.actionID}.check.flavor`),
+      checkType: foundry.utils.getProperty(this,`system.actions.${checkData.actionID}.check.type`),
       speaker: ChatMessage.getSpeaker({actor: this.actor}),
       rollMode: game.settings.get('core', 'rollMode'),
     }
@@ -203,7 +203,7 @@ export class OpsItem extends Item {
 
     // Perform resource consumption
     if (!(checkData.event && checkData.event.altKey)){
-      await this.resourceConsume(checkData.ammo?checkData.ammo:getProperty(this,`system.actions.${checkData.actionID}.ammo`));
+      await this.resourceConsume(checkData.ammo?checkData.ammo:foundry.utils.getProperty(this,`system.actions.${checkData.actionID}.ammo`));
       await checkData.actor?checkData.actor.attributeConsume('system.cp.value',checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp):this.actor.attributeConsume('system.cp.value',checkData.cp?checkData.cp:this.actionSum(checkData.actionID).cp);
     }
 
@@ -240,14 +240,14 @@ export class OpsItem extends Item {
         if (!this.system.magazine.source) return false;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        return ((getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.heatMax);
+        return ((foundry.utils.getProperty(loadedMag,`${dualID[1]}.value`)+cost) <= this.system.magazine.heatMax);
       case 'consumable':
       case 'cartridge':
       case 'magic':
         if (!this.system.magazine.source) return false;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        return ((getProperty(loadedMag,`${dualID[1]}.value`)-cost) >= 0);
+        return ((foundry.utils.getProperty(loadedMag,`${dualID[1]}.value`)-cost) >= 0);
     }
   }
   async resourceConsume(cost){
@@ -268,40 +268,40 @@ export class OpsItem extends Item {
         if (!this.system.magazine.source) return;
         dualID = this.system.magazine.source.split(',');
         loadedMag = this.actor.items.filter(item => item._id == dualID[0])[0];
-        await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-cost)});
+        await loadedMag.update({[`${dualID[1]}.value`]:(foundry.utils.getProperty(loadedMag,`${dualID[1]}.value`)-cost)});
         break;
     }
   }
 
   async attributeConsume(path,cost){
     if (Number(cost)==0) return;
-    await this.update({[path]:(getProperty(this,path)-cost)});
+    await this.update({[path]:(foundry.utils.getProperty(this,path)-cost)});
   }
   rollDamage(damageData){
     const rollData = damageData.actor?damageData.actor.getRollData():this.actor.getRollData();
-    const loadedMag = damageData.loaded?damageData.loaded:getProperty(this,'system.magazine.loaded');
+    const loadedMag = damageData.loaded?damageData.loaded:foundry.utils.getProperty(this,'system.magazine.loaded');
     console.debug(loadedMag)
     const rollConfig = {
       rolls: [],
       rollTypes: [],
       actor: this.actor,
       data: rollData,
-      title: `${this.name} - ${this.system.actions[damageData.actionID].name}${getProperty(loadedMag,'name')?` - ${loadedMag.name}`:''}`,
+      title: `${this.name} - ${this.system.actions[damageData.actionID].name}${foundry.utils.getProperty(loadedMag,'name')?` - ${loadedMag.name}`:''}`,
       flavor:[`${this.system.actions[damageData.actionID].effect.flavor}`],
       speaker: ChatMessage.getSpeaker({actor:this.actor}),
       rollMode: game.settings.get('core','rollMode')
     }
-    const useAmmo = damageData.useAmmo?damageData.useAmmo:getProperty(this,`system.actions.${damageData.actionID}.effect.ammo`)
-    if (useAmmo && loadedMag) rollConfig.flavor.push(getProperty(loadedMag,'flavor'))
+    const useAmmo = damageData.useAmmo?damageData.useAmmo:foundry.utils.getProperty(this,`system.actions.${damageData.actionID}.effect.ammo`)
+    if (useAmmo && loadedMag) rollConfig.flavor.push(foundry.utils.getProperty(loadedMag,'flavor'))
     const mods = damageData.mods?damageData.mods:this.actionSum(damageData.actionID,damageData.tweaks?damageData.tweaks:{});
     if (damageData.goodBad=='good'){
       if (mods.effectGood.primary){
         rollConfig.rolls.push(mods.effectGood.primary)
-        if (useAmmo && loadedMag) rollConfig.rollTypes.push(getProperty(loadedMag,'stats.good.primaryFlavor'));
+        if (useAmmo && loadedMag) rollConfig.rollTypes.push(foundry.utils.getProperty(loadedMag,'stats.good.primaryFlavor'));
       }
       if (mods.effectGood.secondary){
         rollConfig.rolls.push(mods.effectGood.secondary)
-        rollConfig.rollTypes.push(getProperty(loadedMag,'stats.good.secondaryFlavor'))
+        rollConfig.rollTypes.push(foundry.utils.getProperty(loadedMag,'stats.good.secondaryFlavor'))
       }
       if (mods.effectGood.extra){
         rollConfig.rolls.push(mods.effectGood.extra)
@@ -312,11 +312,11 @@ export class OpsItem extends Item {
       rollConfig.title = rollConfig.title.concat(' (Bad)');
       if (mods.effectBad.primary){
         rollConfig.rolls.push(mods.effectBad.primary)
-        rollConfig.rollTypes.push(getProperty(loadedMag,'stats.bad.primaryFlavor'));
+        rollConfig.rollTypes.push(foundry.utils.getProperty(loadedMag,'stats.bad.primaryFlavor'));
       }
       if (mods.effectBad.secondary){
         rollConfig.rolls.push(mods.effectBad.secondary)
-        rollConfig.rollTypes.push(getProperty(loadedMag,'stats.bad.secondaryFlavor'))
+        rollConfig.rollTypes.push(foundry.utils.getProperty(loadedMag,'stats.bad.secondaryFlavor'))
       }
       if (mods.effectBad.extra){
         rollConfig.rolls.push(mods.effectBad.extra)
@@ -342,8 +342,8 @@ export class OpsItem extends Item {
   }
 
   actionSum(actionKey,tweaks={}){
-    const tweakedThis = mergeObject(this.toObject(false),tweaks);
-    const sourceAction = getProperty(tweakedThis,`system.actions.${actionKey}`);
+    const tweakedThis = foundry.utils.mergeObject(this.toObject(false),tweaks);
+    const sourceAction = foundry.utils.getProperty(tweakedThis,`system.actions.${actionKey}`);
     let actingActor = null;
     switch (this.actor?.type){
       case 'character':
@@ -351,11 +351,11 @@ export class OpsItem extends Item {
         break;
       case 'vehicle':
         if (this.checkType(sourceAction.check.type)==='utility'){
-          actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.uuid`))
-          if (actingActor && sourceAction.check.type==='skill') sourceAction.check.source = getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.skill`)
+          actingActor = fromUuidSync(foundry.utils.getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.uuid`))
+          if (actingActor && sourceAction.check.type==='skill') sourceAction.check.source = foundry.utils.getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.skill`)
         }
         else {
-          actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.attacker}.uuid`))
+          actingActor = fromUuidSync(foundry.utils.getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.attacker}.uuid`))
         }
         if (actingActor==null) actingActor = this.actor;
         break;
@@ -391,7 +391,7 @@ export class OpsItem extends Item {
       
       if (this.type=='weapon'){
         // Add each mod with a damage impact on its own
-        if (hasProperty(sourceAction,'effect.mods')){
+        if (foundry.utils.hasProperty(sourceAction,'effect.mods')){
           for (let [,e] of Object.entries(sourceAction.effect.mods)){
             if (e.value && e.active) mods.effectParts.push(new Roll(`${e.value}`))
           }
@@ -404,62 +404,62 @@ export class OpsItem extends Item {
         let goodBonus = 0;
         let badBonus = 0;
         if (sourceAction.effect.ammo){
-          if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.primary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primary')){
             
-            mods.goodBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.primary}${getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')}]`:''}`);
+            mods.goodBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.primary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')}]`:''}`);
             if (mods.goodBase.primary.terms[0] instanceof Die) goodCount += mods.goodBase.primary.terms[0].number;
           } 
-          if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondary')){
             
-            mods.goodBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.secondary}${getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')}]`:''}`);
+            mods.goodBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.secondary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')}]`:''}`);
             if (mods.goodBase.secondary.terms[0] instanceof Die) goodCount += mods.goodBase.secondary.terms[0].number;
           } 
-          if (getProperty(tweakedThis,'system.magazine.loaded.stats.good.extra')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.extra')){
             
             mods.goodBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.good.extra);
           }
 
   
           
-          if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')){
             
-            mods.badBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.primary}${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')}]`:''}`);
+            mods.badBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.primary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')}]`:''}`);
             if (mods.badBase.primary.terms[0] instanceof Die) badCount += mods.badBase.primary.terms[0].number;
           } 
-          if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondary')){
             
-            mods.badBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.secondary}${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?`[${getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')}]`:''}`);
+            mods.badBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.secondary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')}]`:''}`);
             if (mods.badBase.secondary.terms[0] instanceof Die) badCount += mods.badBase.secondary.terms[0].number;
           } 
-          if (getProperty(tweakedThis,'system.magazine.loaded.stats.bad.extra')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.extra')){
             
             mods.badBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.bad.extra);
           } 
           // Dice scaling from attack
           
           
-          if (goodCount < getProperty(sourceAction,'dice.scaleCartridge.bar')){
-            goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.less'));
+          if (goodCount < foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.bar')){
+            goodBonus += Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.less'));
           }
           else{
-            goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
-            goodCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
-            if (goodCount >= Number(getProperty(sourceAction,'dice.scaleCartridge.per')) && getProperty(sourceAction,'dice.scaleCartridge.per')!=0 && getProperty(sourceAction,'dice.scaleCartridge.scale')) goodBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.scale'))*Math.floor(goodCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
+            goodBonus += Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.more'));
+            goodCount -= Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.bar'));
+            if (goodCount >= Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.per')) && foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.per')!=0 && foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.scale')) goodBonus += Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.scale'))*Math.floor(goodCount / Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.per')));
           }
           if (Number.isNaN(goodBonus)) goodBonus = 0;      
 
           
-          if (badCount < getProperty(sourceAction,'dice.scaleCartridge.bar')){
-            badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.less'));
+          if (badCount < foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.bar')){
+            badBonus += Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.less'));
           }
           else{
-            badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.more'));
-            badCount -= Number(getProperty(sourceAction,'dice.scaleCartridge.bar'));
-            if (badCount >= Number(getProperty(sourceAction,'dice.scaleCartridge.per')) && getProperty(sourceAction,'dice.scaleCartridge.per')!=0 && getProperty(sourceAction,'dice.scaleCartridge.scale')) badBonus += Number(getProperty(sourceAction,'dice.scaleCartridge.scale'))*Math.floor(badCount / Number(getProperty(sourceAction,'dice.scaleCartridge.per')));
+            badBonus += Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.more'));
+            badCount -= Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.bar'));
+            if (badCount >= Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.per')) && foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.per')!=0 && foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.scale')) badBonus += Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.scale'))*Math.floor(badCount / Number(foundry.utils.getProperty(sourceAction,'dice.scaleCartridge.per')));
           }
           if (Number.isNaN(badBonus)) badBonus = 0;    
           // Dice scaling from mods
-          if (hasProperty(sourceAction,'dice.mods')){
+          if (foundry.utils.hasProperty(sourceAction,'dice.mods')){
             for (let [,d] of Object.entries(sourceAction.dice.mods)){
               if (d.value && d.active) {
                 goodBonus += d.value;
@@ -516,35 +516,35 @@ export class OpsItem extends Item {
           }
           if (!sourceAction.effect.ammo){
             // If no ammo influence then just put it all in the good primary
-            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.primary)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
+            if (!(part.terms[0] instanceof OperatorTerm) && !foundry.utils.isEmpty(mods.goodBase.primary)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
             mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
           }
           // If it only has one flavor, nice and easy
           else if (flavors.length==1){
             // Check if it goes in the primary, then the secondary, and if neither then the extra
-            if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?.toLowerCase()){
+            if (flavors[0].toLowerCase()==foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
               mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
             }
-            else if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?.toLowerCase()){
+            else if (flavors[0].toLowerCase()==foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.goodBase.secondary.push(new OperatorTerm({operator:'+'}));
               mods.goodBase.secondary = mods.goodBase.secondary.concat(part.terms);
             }
             else {
-              if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
+              if (!(part.terms[0] instanceof OperatorTerm) && !foundry.utils.isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
               mods.goodBase.extra = mods.goodBase.extra.concat(part.terms);
             }
             // Same but bad
-            if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?.toLowerCase()){
+            if (flavors[0].toLowerCase()==foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.primary.push(new OperatorTerm({operator:'+'}));
               mods.badBase.primary = mods.badBase.primary.concat(part.terms);
             }
-            else if (flavors[0].toLowerCase()==getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?.toLowerCase()){
+            else if (flavors[0].toLowerCase()==foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?.toLowerCase()){
               if (!(part.terms[0] instanceof OperatorTerm)) mods.badBase.secondary.push(new OperatorTerm({operator:'+'}));
               mods.badBase.secondary = mods.badBase.secondary.concat(part.terms);
             }
             else {
-              if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
+              if (!(part.terms[0] instanceof OperatorTerm) && !foundry.utils.isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
               mods.badBase.extra = mods.badBase.extra.concat(part.terms);
             }
           }
@@ -559,43 +559,43 @@ export class OpsItem extends Item {
           }
           else{
             // If it's flavor-mixed, dump it in the extras
-            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
-            if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
+            if (!(part.terms[0] instanceof OperatorTerm) && !foundry.utils.isEmpty(mods.goodBase.extra)) mods.goodBase.extra.push(new OperatorTerm({operator:'+'}));
+            if (!(part.terms[0] instanceof OperatorTerm) && !foundry.utils.isEmpty(mods.badBase.extra)) mods.badBase.extra.push(new OperatorTerm({operator:'+'}));
             mods.goodBase.extra = mods.goodBase.extra.concat(part.terms);
             mods.badBase.extra = mods.badBase.extra.concat(part.terms);
           }
         }
         // Nuke the bad primary if it isn't defined
-        if(!getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')) mods.badBase.primary = []
+        if(!foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')) mods.badBase.primary = []
         // Nuke the bad extra if there's no bad primary or secondary
-        if (isEmpty(mods.badBase.primary) && isEmpty(mods.badBase.secondary)) mods.badBase.extra = [];
+        if (foundry.utils.isEmpty(mods.badBase.primary) && foundry.utils.isEmpty(mods.badBase.secondary)) mods.badBase.extra = [];
         // Turn everything back into rolls and then expressions
-        if (!isEmpty(mods.goodBase.primary)){
+        if (!foundry.utils.isEmpty(mods.goodBase.primary)){
           mods.effectGood.primary = Roll.fromTerms(mods.goodBase.primary);
           if (sourceAction.effect.ammo){
-            mods.effectGood.primaryLabel = [mods.effectGood.primary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor'):''].join(' ');
+            mods.effectGood.primaryLabel = [mods.effectGood.primary.terms.reduce((a,b)=>a+b.expression,''),foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor'):''].join(' ');
           }
           else{
             mods.effectGood.primaryLabel = mods.effectGood.primary.formula;
           }          
         } 
-        if (!isEmpty(mods.goodBase.secondary)){
+        if (!foundry.utils.isEmpty(mods.goodBase.secondary)){
           mods.effectGood.secondary = Roll.fromTerms(mods.goodBase.secondary);
-          mods.effectGood.secondaryLabel = [mods.effectGood.secondary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor'):''].join(' ');
+          mods.effectGood.secondaryLabel = [mods.effectGood.secondary.terms.reduce((a,b)=>a+b.expression,''),foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor'):''].join(' ');
         } 
-        if (!isEmpty(mods.goodBase.extra)){
+        if (!foundry.utils.isEmpty(mods.goodBase.extra)){
           mods.effectGood.extra = Roll.fromTerms(mods.goodBase.extra);
           mods.effectGood.extraLabel = mods.effectGood.extra.formula;
         } 
-        if (!isEmpty(mods.badBase.primary)){
+        if (!foundry.utils.isEmpty(mods.badBase.primary)){
           mods.effectBad.primary = Roll.fromTerms(mods.badBase.primary);
-          mods.effectBad.primaryLabel = [mods.effectBad.primary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor'):''].join(' ');
+          mods.effectBad.primaryLabel = [mods.effectBad.primary.terms.reduce((a,b)=>a+b.expression,''),foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor'):''].join(' ');
         } 
-        if (!isEmpty(mods.badBase.secondary)){
+        if (!foundry.utils.isEmpty(mods.badBase.secondary)){
           mods.effectBad.secondary = Roll.fromTerms(mods.badBase.secondary);
-          mods.effectBad.secondaryLabel = [mods.effectBad.secondary.terms.reduce((a,b)=>a+b.expression,''),getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor'):''].join(' ');
+          mods.effectBad.secondaryLabel = [mods.effectBad.secondary.terms.reduce((a,b)=>a+b.expression,''),foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor'):''].join(' ');
         } 
-        if (!isEmpty(mods.badBase.extra)){
+        if (!foundry.utils.isEmpty(mods.badBase.extra)){
           mods.effectBad.extra = Roll.fromTerms(mods.badBase.extra);
           mods.effectBad.extraLabel = mods.effectBad.extra.formula;
         } 
@@ -604,10 +604,10 @@ export class OpsItem extends Item {
       if (this.type=='object' || this.type=='magic'){
         mods.goodBase.primary = [];
         for (let part of mods.effectParts){
-          if (!(part.terms[0] instanceof OperatorTerm) && !isEmpty(mods.goodBase.primary)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
+          if (!(part.terms[0] instanceof OperatorTerm) && !foundry.utils.isEmpty(mods.goodBase.primary)) mods.goodBase.primary.push(new OperatorTerm({operator:'+'}));
           mods.goodBase.primary = mods.goodBase.primary.concat(part.terms);
         }
-        if (isEmpty(mods.goodBase.primary)){
+        if (foundry.utils.isEmpty(mods.goodBase.primary)){
           mods.effectGood.primary = new Roll('0');
           mods.effectGood.primaryLabel = null;
         }
@@ -620,7 +620,7 @@ export class OpsItem extends Item {
     }
     // Handle CP
     mods.cp = sourceAction.cp.inherent?Number(sourceAction.cp.inherent):null;
-    if (hasProperty(sourceAction,'cp.mods')){
+    if (foundry.utils.hasProperty(sourceAction,'cp.mods')){
       for (let [,p] of Object.entries(sourceAction.cp.mods)){
         if (p.value && p.active) mods.cp = Math.max(1, mods.cp + Number(p.value));
       }
@@ -651,7 +651,7 @@ export class OpsItem extends Item {
     }
     mods.cpAmmoLabel = [(mods.cp?`${mods.cp} CP`:null),(mods.ammo?`${mods.ammo} ${ammoLabel}`:null)].filter(part => part != null).join(', ');
     // Handle Recoil
-    if (hasProperty(sourceAction,'recoil')){
+    if (foundry.utils.hasProperty(sourceAction,'recoil')){
       mods.recoil = null;
       mods.reduction = null;
       if (sourceAction.recoil.active){
@@ -659,7 +659,7 @@ export class OpsItem extends Item {
           mods.recoil = Number(Math.min(sourceAction.recoil.inherent,0));
           mods.reduction = Number(Math.max(sourceAction.recoil.inherent,0));
         }
-        if (hasProperty(tweakedThis,'system.magazine.loaded.stats.recoil') && sourceAction.recoil.ammo){
+        if (foundry.utils.hasProperty(tweakedThis,'system.magazine.loaded.stats.recoil') && sourceAction.recoil.ammo){
           if (tweakedThis.system.magazine.loaded.stats.recoil > 0){
             mods.reduction += tweakedThis.system.magazine.loaded.stats.recoil;
           }
@@ -676,10 +676,10 @@ export class OpsItem extends Item {
           }
         }
         if (actingActor && (mods.recoil!=null || mods.reduction!=null)){
-          if (getProperty(actingActor,'system.stats.recoil.value')>0){
+          if (foundry.utils.getProperty(actingActor,'system.stats.recoil.value')>0){
             mods.reduction += actingActor.system.stats.recoil.value;
           }
-          else if (getProperty(actingActor,'system.stats.recoil.value')<0){
+          else if (foundry.utils.getProperty(actingActor,'system.stats.recoil.value')<0){
             mods.recoil += actingActor.system.stats.recoil.value;
           }
         }
@@ -695,10 +695,10 @@ export class OpsItem extends Item {
       mods.checkNum += Number(sourceAction.check.inherent)
     }
     // Ammo Impact
-    if (hasProperty(tweakedThis,'system.magazine.loaded.stats.check') && sourceAction.check.ammo) mods.checkNum += Number(tweakedThis.system.magazine.loaded.stats.check);
+    if (foundry.utils.hasProperty(tweakedThis,'system.magazine.loaded.stats.check') && sourceAction.check.ammo) mods.checkNum += Number(tweakedThis.system.magazine.loaded.stats.check);
     // If owned by an actor, add their ability modifier to num
     if (actingActor) mods.checkNum += actingActor.abilityMod(sourceAction.check.ability);
-    if (hasProperty(sourceAction,'check.mods')){
+    if (foundry.utils.hasProperty(sourceAction,'check.mods')){
       for (let [,c] of Object.entries(sourceAction.check.mods)){
         // If mod isn't active, skip it
         if (!c.active) continue;
@@ -713,8 +713,8 @@ export class OpsItem extends Item {
     }
     // Attacks add BAB, and recoil if present
     if (sourceAction.check.type==='melee' || sourceAction.check.type==='ranged' || sourceAction.check.type==='otherAttack'){
-      if (actingActor) mods.checkNum += Number(getProperty(actingActor,'system.stats.bab.value'));
-      if (hasProperty(sourceAction,'recoil')) mods.checkNum += Math.min(mods.recoil+mods.reduction,0);
+      if (actingActor) mods.checkNum += Number(foundry.utils.getProperty(actingActor,'system.stats.bab.value'));
+      if (foundry.utils.hasProperty(sourceAction,'recoil')) mods.checkNum += Math.min(mods.recoil+mods.reduction,0);
     }
     //Totals
     // Message Cards and No-Chats have no check modifier
@@ -728,7 +728,7 @@ export class OpsItem extends Item {
           let skillMod = actingActor?.items?.get(tweakedThis.system.skillSource)?.skillSum().total;
           mods.checkTotal = !Number.isNaN(skillMod)?skillMod:'-404';
         }
-        else if (getProperty(actingActor,'system.stats.skillBase')){
+        else if (foundry.utils.getProperty(actingActor,'system.stats.skillBase')){
           mods.checkTotal = actingActor.system.stats.skillBase>=0?'+'+actingActor.system.stats.skillBase:actingActor.system.stats.skillBase;
         }
         else {
@@ -761,7 +761,7 @@ export class OpsItem extends Item {
   }
 
   skillSum(tweaks={}){
-    const tweakedThis = mergeObject(this.toObject(false),tweaks);
+    const tweakedThis = foundry.utils.mergeObject(this.toObject(false),tweaks);
     const mods = {
       ability: (this?.actor ? this.actor.abilityMod(tweakedThis.system.ability) : 0),
       equip: 0,
@@ -771,10 +771,10 @@ export class OpsItem extends Item {
     };
     switch (tweakedThis.system.armor.active){
       case 1:
-        mods.armor = getProperty(this,'actor.system.stats.armorNoProf');
+        mods.armor = foundry.utils.getProperty(this,'actor.system.stats.armorNoProf');
         break;
       case 2:
-        mods.armor = getProperty(this,'actor.system.stats.armorPenalty.value');
+        mods.armor = foundry.utils.getProperty(this,'actor.system.stats.armorPenalty.value');
         break;
       default:
         mods.armor = null;
@@ -809,7 +809,7 @@ export class OpsItem extends Item {
     if (this.type=='armor'){
       magazines.internal = {label:'Internal',entries:[]};
       // Check for internal coolant resources
-      if (hasProperty(this,'system.gear.resources')){
+      if (foundry.utils.hasProperty(this,'system.gear.resources')){
         for (let [key, entry] of Object.entries(this.system.gear.resources)){
           if (entry.type==='coolant') magazines.internal.entries.push({label:`[${entry.value?(entry.value):'Cool'}] ${entry.name?entry.name:''}`,id:`${this.id},system.gear.resources.${key}`})
         }
@@ -819,7 +819,7 @@ export class OpsItem extends Item {
         // Check for external coolant resources
         for (let i of this.actor.items){
           if (objectsEqual(this.system,i.system)) continue;
-          if (getProperty(i,'system.gear.resources')){
+          if (foundry.utils.getProperty(i,'system.gear.resources')){
             for (let [key,entry] of Object.entries(i.system.gear.resources)){
               if (entry.type==='coolant' && entry.available) magazines.external.entries.push({label:`[${entry.value?(entry.value):'Cool'}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
             }
@@ -835,7 +835,7 @@ export class OpsItem extends Item {
       magazines.entries = [];
       if (this.actor){
         for (let i of this.actor.items){
-          if (getProperty(i,'system.gear.resources')){
+          if (foundry.utils.getProperty(i,'system.gear.resources')){
             for (let [key,entry] of Object.entries(i.system.gear.resources)){
               if (entry.type==='magic') magazines.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
             }
@@ -849,7 +849,7 @@ export class OpsItem extends Item {
       magazines.internal = {label:'Internal',entries: []};
       switch (this.system.magazine.type){
         case 'consumable':
-          if (!hasProperty(this,'system.gear')) break;
+          if (!foundry.utils.hasProperty(this,'system.gear')) break;
           magazines.internal.entries.push({label:`${this.system.gear.quantity.value}x Self`,id:`${this.id},system.gear.quantity`});
           for (let [key, entry] of Object.entries(this.system.gear.resources)){
             if (entry.type==='consumable') magazines.internal.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${entry.name?entry.name:''}`,id:`${this.id},system.gear.resources.${key}`});
@@ -877,15 +877,15 @@ export class OpsItem extends Item {
         if (objectsEqual(this.system,i.system)) continue;
         switch (this.system.magazine.type){
           case 'consumable':
-            if (getProperty(i,'system.gear.quantity.available')) magazines.external.entries.push({label:`${i.system.gear.quantity.value}x ${i.name}`,id:`${i.id},system.gear.quantity`});
-            if (getProperty(i,'system.gear.resources')){
+            if (foundry.utils.getProperty(i,'system.gear.quantity.available')) magazines.external.entries.push({label:`${i.system.gear.quantity.value}x ${i.name}`,id:`${i.id},system.gear.quantity`});
+            if (foundry.utils.getProperty(i,'system.gear.resources')){
               for (let [key,entry] of Object.entries(i.system.gear.resources)){
                 if (entry.type==='consumable' && entry.available) magazines.external.entries.push({label:`[${entry.value?entry.value:0}${entry.max?('/'+entry.max):''}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
               }
             }
             break;
           case 'cartridge':
-            if (getProperty(i,'system.gear.resources')){
+            if (foundry.utils.getProperty(i,'system.gear.resources')){
               for (let [key, entry] of Object.entries(i.system.gear.resources)){
                 if (entry.type==='cartridge' && entry.available){
                   for (let [subKey, subEntry] of Object.entries(entry.cartridges)){
@@ -896,7 +896,7 @@ export class OpsItem extends Item {
             }
             break;
           case 'coolant':
-            if (getProperty(i,'system.gear.resources')){
+            if (foundry.utils.getProperty(i,'system.gear.resources')){
               for (let [key,entry] of Object.entries(i.system.gear.resources)){
                 if (entry.type==='coolant' && entry.available) magazines.external.entries.push({label:`[${entry.value?(entry.value):'Cool'}] ${i.name}${entry.name?': '+entry.name:''}`,id:`${i.id},system.gear.resources.${key}`});
               }
@@ -971,7 +971,7 @@ export class OpsItem extends Item {
       feature: `systems/opsandtactics/icons/gear/objects/notebook.webp`,
       magic: CONFIG.OATS.magicIcons[Math.floor(Math.random()*CONFIG.OATS.magicIcons.length)]
     }
-    if (hasProperty(itemData,'img')) return null;
+    if (foundry.utils.hasProperty(itemData,'img')) return null;
     else return { img: temp[itemData.type]};
   }
 
@@ -980,7 +980,7 @@ export class OpsItem extends Item {
     await super._preCreate(data, options, user);
     // Assign default name based on type
     const updates = {};
-    if (!hasProperty(data,'system')){
+    if (!foundry.utils.hasProperty(data,'system')){
       switch(this.type){
         case 'weapon':
           updates["name"] = this.name.replace('Item','Weapon')
@@ -1009,7 +1009,7 @@ export class OpsItem extends Item {
         if (newSource) updates["system.skillSource"] = newSource.id;
         else updates["system.skillSource"] = "";
       }
-      if (!isEmpty(data.system.actions)){
+      if (!foundry.utils.isEmpty(data.system.actions)){
         for (let [k,a] of Object.entries(data.system.actions)){
           if (a?.check?.source){
             let newSource = this.actor.items.find((element) => element.flags.core?.sourceId == a.check.source)
@@ -1025,7 +1025,7 @@ export class OpsItem extends Item {
 
 export class ResourceTransferApp extends FormApplication {
   static get defaultOptions(){
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['opsandtactics','sheet','item'],
       template: 'systems/opsandtactics/templates/interface/dialog-resource-transfer.html',
       width: 800,
@@ -1064,7 +1064,7 @@ export class ResourceTransferApp extends FormApplication {
     }
     if (this.options.actor) {
       for (let i of this.options.actor.items){
-        if (getProperty(i,'system.gear.resources')){
+        if (foundry.utils.getProperty(i,'system.gear.resources')){
           for (let [key,entry] of Object.entries(i.system.gear.resources)){
             switch (entry.type){
               case 'consumable':
@@ -1078,14 +1078,14 @@ export class ResourceTransferApp extends FormApplication {
         }
       }
       if (this.object.resourceLeft){
-        context.leftObject = getProperty(this.options.actor.items.filter(item => item._id == context.leftID[0])[0],context.leftID[1]);
+        context.leftObject = foundry.utils.getProperty(this.options.actor.items.filter(item => item._id == context.leftID[0])[0],context.leftID[1]);
       }
       if (this.object.resourceRight){
-        context.rightObject = getProperty(this.options.actor.items.filter(item => item._id == context.rightID[0])[0],context.rightID[1]);
+        context.rightObject = foundry.utils.getProperty(this.options.actor.items.filter(item => item._id == context.rightID[0])[0],context.rightID[1]);
       }
     }
     else {
-      for (let [key, entry] of Object.entries(getProperty(this.options.item,'system.gear.resources'))){
+      for (let [key, entry] of Object.entries(foundry.utils.getProperty(this.options.item,'system.gear.resources'))){
         switch (entry.type){
           case 'consumable':
           case 'cartridge':
@@ -1096,10 +1096,10 @@ export class ResourceTransferApp extends FormApplication {
         }
       }
       if (this.object.resourceLeft){
-        context.leftObject = getProperty(this.options.item,context.leftID[1]);
+        context.leftObject = foundry.utils.getProperty(this.options.item,context.leftID[1]);
       }
       if (this.object.resourceRight){
-        context.rightObject = getProperty(this.options.item,context.rightID[1]);
+        context.rightObject = foundry.utils.getProperty(this.options.item,context.rightID[1]);
       }
     }
     //console.debug(context);
@@ -1122,7 +1122,7 @@ export class ResourceTransferApp extends FormApplication {
       case 'left':
         if (value=="all"){
           if (this.object.resourceRight){
-            value = Number(getProperty(context.rightObject,'value'));
+            value = Number(foundry.utils.getProperty(context.rightObject,'value'));
           } 
           else {
             return;
@@ -1136,7 +1136,7 @@ export class ResourceTransferApp extends FormApplication {
           else {
             leftItem = this.options.item;
           }          
-          updateLeft[`${context.leftID[1]}.value`] = getProperty(leftItem,`${context.leftID[1]}.value`) + value;
+          updateLeft[`${context.leftID[1]}.value`] = foundry.utils.getProperty(leftItem,`${context.leftID[1]}.value`) + value;
           await leftItem.update(updateLeft);
         }
         if (this.object.resourceRight){
@@ -1146,14 +1146,14 @@ export class ResourceTransferApp extends FormApplication {
           else {
             rightItem = this.options.item;
           }          
-          updateRight[`${context.rightID[1]}.value`] = getProperty(rightItem,`${context.rightID[1]}.value`) - value;
+          updateRight[`${context.rightID[1]}.value`] = foundry.utils.getProperty(rightItem,`${context.rightID[1]}.value`) - value;
           await rightItem.update(updateRight);
         }
         break;
       case 'right':
         if (value=="all"){
           if (this.object.resourceLeft){
-            value = Number(getProperty(context.leftObject,'value'));
+            value = Number(foundry.utils.getProperty(context.leftObject,'value'));
           } 
           else {
             return;
@@ -1167,7 +1167,7 @@ export class ResourceTransferApp extends FormApplication {
           else {
             leftItem = this.options.item;
           }      
-          updateLeft[`${context.leftID[1]}.value`] = getProperty(leftItem,`${context.leftID[1]}.value`) - value;
+          updateLeft[`${context.leftID[1]}.value`] = foundry.utils.getProperty(leftItem,`${context.leftID[1]}.value`) - value;
           await leftItem.update(updateLeft);
         }
         if (this.object.resourceRight){
@@ -1177,7 +1177,7 @@ export class ResourceTransferApp extends FormApplication {
           else {
             rightItem = this.options.item;
           }  
-          updateRight[`${context.rightID[1]}.value`] = getProperty(rightItem,`${context.rightID[1]}.value`) + value;
+          updateRight[`${context.rightID[1]}.value`] = foundry.utils.getProperty(rightItem,`${context.rightID[1]}.value`) + value;
           await rightItem.update(updateRight);
         }
         break;
@@ -1190,14 +1190,14 @@ export class ResourceTransferApp extends FormApplication {
   async _onCloneCartridge(event){
     event.preventDefault();
     const context = this.getData();
-    if (getProperty(context,'leftObject.type')!='cartridge' || getProperty(context,'rightObject.type')!='cartridge') return;
+    if (foundry.utils.getProperty(context,'leftObject.type')!='cartridge' || foundry.utils.getProperty(context,'rightObject.type')!='cartridge') return;
     const side = event.currentTarget.dataset.side;
     const cartridgeKey = event.currentTarget.dataset.cartridge;
     const updateData = {};
     let targetItem;
     switch (side){
       case 'left':
-        updateData[`${context.rightID[1]}.cartridges.${randomID(8)}`] = getProperty(context.leftObject.cartridges,cartridgeKey);
+        updateData[`${context.rightID[1]}.cartridges.${randomID(8)}`] = foundry.utils.getProperty(context.leftObject.cartridges,cartridgeKey);
         if (this.options.actor){
           targetItem = this.options.actor.items.filter(item => item._id == context.rightID[0])[0];
         }
@@ -1206,7 +1206,7 @@ export class ResourceTransferApp extends FormApplication {
         }        
         break;
       case 'right':
-        updateData[`${context.leftID[1]}.cartridges.${randomID(8)}`] = getProperty(context.rightObject.cartridges,cartridgeKey);
+        updateData[`${context.leftID[1]}.cartridges.${randomID(8)}`] = foundry.utils.getProperty(context.rightObject.cartridges,cartridgeKey);
         if (this.options.actor){
           targetItem = this.options.actor.items.filter(item => item._id == context.leftID[0])[0];
         }
@@ -1220,7 +1220,7 @@ export class ResourceTransferApp extends FormApplication {
   }
   _updateObject(event, formData){
     for (let [key,entry] of Object.entries(expandObject(formData))){
-      setProperty(this.object,key,entry);
+      foundry.utils.setProperty(this.object,key,entry);
     }
     this.render();
   }

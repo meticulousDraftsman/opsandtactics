@@ -10,7 +10,7 @@ export class OpsItemSheet extends ItemSheet {
 
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["opsandtactics", "sheet", "item"],
       width: 520,
       height: 480,
@@ -117,7 +117,7 @@ export class OpsItemSheet extends ItemSheet {
         syn: 'Synergy'
       }
     }
-    if (hasProperty(systemData,'gear.resources')){
+    if (foundry.utils.hasProperty(systemData,'gear.resources')){
       systemData.gear.hasConsumable = false;
       systemData.gear.hasCartridge = false;
       systemData.gear.hasCoolant = false;
@@ -202,7 +202,7 @@ export class OpsItemSheet extends ItemSheet {
   _onToggleValue(event){
     event.preventDefault();
     const target = event.currentTarget.dataset.target;
-    const updateData = {[target]:!getProperty(this.object,target)}
+    const updateData = {[target]:!foundry.utils.getProperty(this.object,target)}
     this.object.update(updateData);
   }
 
@@ -244,8 +244,8 @@ export class OpsItemSheet extends ItemSheet {
     if (Number.isNaN(Number(form.amount.value))) return undefined;
     const dualID = form.chooseMag.value.split(',');
     const loadedMag = this.object.actor.items.filter(item => item._id == dualID[0])[0];
-    await this.object.update({['system.magazine.value']:(getProperty(this.object,'system.magazine.value')+Number(form.amount.value))});
-    await loadedMag.update({[`${dualID[1]}.value`]:(getProperty(loadedMag,`${dualID[1]}.value`)-Number(form.amount.value))});
+    await this.object.update({['system.magazine.value']:(foundry.utils.getProperty(this.object,'system.magazine.value')+Number(form.amount.value))});
+    await loadedMag.update({[`${dualID[1]}.value`]:(foundry.utils.getProperty(loadedMag,`${dualID[1]}.value`)-Number(form.amount.value))});
   }
 
   async _onChamberRound(event){
@@ -254,7 +254,7 @@ export class OpsItemSheet extends ItemSheet {
     const value = event.shiftKey?-1:1;
     if (this.object.resourceAvailableCheck(value)){
       await this.object.resourceConsume(value);
-      await this.object.update({['system.magazine.value']:(getProperty(this.object,'system.magazine.value')+value)});
+      await this.object.update({['system.magazine.value']:(foundry.utils.getProperty(this.object,'system.magazine.value')+value)});
     }
   }
 
@@ -273,12 +273,12 @@ export class OpsItemSheet extends ItemSheet {
           if (i.textContent=='') continue;
           entries.push({label:i.textContent.split('|',1),value:i.textContent})
         }
-        if (hasProperty(importableMods,`${pe.name}.entries`)){
+        if (foundry.utils.hasProperty(importableMods,`${pe.name}.entries`)){
           importableMods[pe.name].entries.push(entries)
         }
         else {
-          setProperty(importableMods,`${pe.name}.entries`,entries);
-          setProperty(importableMods,`${pe.name}.name`,pe.name)
+          foundry.utils.setProperty(importableMods,`${pe.name}.entries`,entries);
+          foundry.utils.setProperty(importableMods,`${pe.name}.name`,pe.name)
         }
       }
     }
@@ -287,7 +287,7 @@ export class OpsItemSheet extends ItemSheet {
     for (let jp of journalPacks){
       await jp.getIndex({fields: ['flags']})
       for (let je of jp.index){
-        if (getProperty(je,'flags.opsandtactics.wepMods')){
+        if (foundry.utils.getProperty(je,'flags.opsandtactics.wepMods')){
           let jeGot = await jp.getDocument(je._id);
           for (let [,pe] of jeGot.pages.entries()){
             if (pe.type!=='text') continue;
@@ -297,12 +297,12 @@ export class OpsItemSheet extends ItemSheet {
               if (i.textContent=='') continue;
               entries.push({label:i.textContent.split('|',1),value:i.textContent})
             }
-            if (hasProperty(importableMods,`${pe.name}.entries`)){
+            if (foundry.utils.hasProperty(importableMods,`${pe.name}.entries`)){
               importableMods[pe.name].entries.push(entries)
             }
             else {
-              setProperty(importableMods,`${pe.name}.entries`,entries);
-              setProperty(importableMods,`${pe.name}.name`,pe.name)
+              foundry.utils.setProperty(importableMods,`${pe.name}.entries`,entries);
+              foundry.utils.setProperty(importableMods,`${pe.name}.name`,pe.name)
             }
           }
         }
@@ -327,49 +327,49 @@ export class OpsItemSheet extends ItemSheet {
       case 'skillMods':
         newProp = (new SkillMod).toObject();
         newProp.type = preTarget;
-        setProperty(updateData,`system.mods.${randomID(8)}`,newProp);
+        foundry.utils.setProperty(updateData,`system.mods.${randomID(8)}`,newProp);
         break;
       case 'protection':
-        setProperty(updateData,`system.protection.${randomID(8)}`,new Protection);
+        foundry.utils.setProperty(updateData,`system.protection.${randomID(8)}`,new Protection);
         break;
       case 'attacks':
         newProp = (new WeaponAttack).toObject();
-        setProperty(updateData,`system.actions.${randomID(8)}`,newProp);
+        foundry.utils.setProperty(updateData,`system.actions.${randomID(8)}`,newProp);
         break;
       case 'weaponMods':
         newProp = duplicate(this.object.readyMod);
-        setProperty(updateData,`system.weaponMods.${randomID(8)}`,newProp);
-        setProperty(updateData,'system.importFilter','');
-        setProperty(updateData,'system.importMod','');
+        foundry.utils.setProperty(updateData,`system.weaponMods.${randomID(8)}`,newProp);
+        foundry.utils.setProperty(updateData,'system.importFilter','');
+        foundry.utils.setProperty(updateData,'system.importMod','');
         break;
       case 'action':
         newProp = (new OpsAction).toObject();
         if (this.object.type==='object') newProp.check.type = 'otherUtility';
         if (this.object.type==='magic') newProp.check.type = 'ranged';
-        setProperty(updateData,`system.actions.${randomID(8)}`,newProp)
+        foundry.utils.setProperty(updateData,`system.actions.${randomID(8)}`,newProp)
         break;
       case 'consumable':
-        setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceConsumable);
+        foundry.utils.setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceConsumable);
         break;
       case 'cartridge':
         newProp = (new ResourceCartridge).toObject();
         newProp.cartridges[randomID(8)] = new Cartridge;
-        setProperty(updateData,`system.gear.resources.${randomID(8)}`,newProp);
+        foundry.utils.setProperty(updateData,`system.gear.resources.${randomID(8)}`,newProp);
         break;
       case 'bullet':
-        setProperty(updateData,`system.gear.resources.${preTarget}.cartridges.${randomID(8)}`,new Cartridge);
+        foundry.utils.setProperty(updateData,`system.gear.resources.${preTarget}.cartridges.${randomID(8)}`,new Cartridge);
         break;
       case 'coolant':
-        setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceCoolant);
+        foundry.utils.setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceCoolant);
         break;
       case 'magic':
-        setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceMagic);
+        foundry.utils.setProperty(updateData,`system.gear.resources.${randomID(8)}`,new ResourceMagic);
         break;
       case 'spacecraft':
-        setProperty(updateData,`system.gear.resources.${randomID(8)}`, new ResourceSpacecraft);
+        foundry.utils.setProperty(updateData,`system.gear.resources.${randomID(8)}`, new ResourceSpacecraft);
         break;
       case 'resource':
-        setProperty(updateData,`system.gear.resources.${randomID(8)}`,{name:null, type:'resource', value:null, max:null});
+        foundry.utils.setProperty(updateData,`system.gear.resources.${randomID(8)}`,{name:null, type:'resource', value:null, max:null});
         break;
     }
     this.object.update(updateData);
@@ -400,7 +400,7 @@ export class OpsItemSheet extends ItemSheet {
         updateData[`system.${target}.-=${removed}`] = null;
         for (let [key,entry] of Object.entries(this.object.system.actions)){
           for (let imp of ['check','effect','dice','recoil','cp']){
-            if (hasProperty(entry,`${imp}.mods.${removed}`)) updateData[`system.actions.${key}.${imp}.mods.-=${removed}`] = null;
+            if (foundry.utils.hasProperty(entry,`${imp}.mods.${removed}`)) updateData[`system.actions.${key}.${imp}.mods.-=${removed}`] = null;
           }
         }
         break;
@@ -414,7 +414,7 @@ export class OpsItemSheet extends ItemSheet {
 
 class AttackEditApp extends FormApplication {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["opsandtactics", "sheet", "item"],
       template: 'systems/opsandtactics/templates/interface/dialog-attack-edit.html',
       width: 520,
@@ -443,15 +443,15 @@ class AttackEditApp extends FormApplication {
         cp: {}
       } 
     }
-    if (getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
+    if (foundry.utils.getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
       for (let imp of ['check','effect','dice','recoil','cp']){
-        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)};
+        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:foundry.utils.getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)};
       }
     }
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
       for (let imp of ['check','effect','dice','recoil','cp']){
-        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)} ;
+        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:foundry.utils.getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)} ;
       }
     }
     return context;
@@ -470,7 +470,7 @@ class AttackEditApp extends FormApplication {
 }
 class CartridgeEditApp extends FormApplication {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['opsandtactics','sheet','item'],
       template: 'systems/opsandtactics/templates/interface/dialog-cartridge-edit.html',
       width: 520,

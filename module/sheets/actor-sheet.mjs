@@ -9,7 +9,7 @@ export class OpsActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["opsandtactics", "sheet", "actor"],
       template: "systems/opsandtactics/templates/actor/actor-sheet.html",
       width: 700,
@@ -81,10 +81,10 @@ export class OpsActorSheet extends ActorSheet {
     context.effects = prepareActiveEffectCategories(this.actor.allApplicableEffects());
     
     // Enrich HTML for editors
-    if (hasProperty(context,'system.wealth.description')) context.enrichGear = await TextEditor.enrichHTML(context.system.wealth.description,{async:true});
-    if (hasProperty(context,'system.details.biography')) context.enrichBio = await TextEditor.enrichHTML(context.system.details.biography,{async:true});
-    if (hasProperty(context,'system.vehicle.passengers')) context.enrichPassengers = await TextEditor.enrichHTML(context.system.vehicle.passengers,{async:true});
-    if (hasProperty(context,'system.details.cargo')) context.enrichCargo = await TextEditor.enrichHTML(context.system.details.cargo,{async:true});
+    if (foundry.utils.hasProperty(context,'system.wealth.description')) context.enrichGear = await TextEditor.enrichHTML(context.system.wealth.description,{async:true});
+    if (foundry.utils.hasProperty(context,'system.details.biography')) context.enrichBio = await TextEditor.enrichHTML(context.system.details.biography,{async:true});
+    if (foundry.utils.hasProperty(context,'system.vehicle.passengers')) context.enrichPassengers = await TextEditor.enrichHTML(context.system.vehicle.passengers,{async:true});
+    if (foundry.utils.hasProperty(context,'system.details.cargo')) context.enrichCargo = await TextEditor.enrichHTML(context.system.details.cargo,{async:true});
 
     return context;
   }
@@ -218,7 +218,7 @@ export class OpsActorSheet extends ActorSheet {
         }
         i.magazines = context.actor.items.get(i._id).listMagazines();
         i.system.error = i.system.errorBase;
-        if (getProperty(i,'system.magazine.loaded.stats.error')) i.system.error += getProperty(i,'system.magazine.loaded.stats.error');
+        if (foundry.utils.getProperty(i,'system.magazine.loaded.stats.error')) i.system.error += foundry.utils.getProperty(i,'system.magazine.loaded.stats.error');
         weapons.push(i);
       }
 
@@ -242,7 +242,7 @@ export class OpsActorSheet extends ActorSheet {
       // Append to magics.
       if (i.type === 'magic') {
         i.magazines = context.actor.items.get(i._id).listMagazines();
-        if(!isEmpty(getProperty(i,'system.actions'))){
+        if(!foundry.utils.isEmpty(foundry.utils.getProperty(i,'system.actions'))){
           let attackFlag = false;
           for (let [key,a] of Object.entries(i.system.actions)){
             a.mods = context.actor.items.get(i._id).actionSum(key);
@@ -257,7 +257,7 @@ export class OpsActorSheet extends ActorSheet {
       }
 
       // Append to objects-with-resources
-      if(!isEmpty(getProperty(i,'system.gear.resources'))){
+      if(!foundry.utils.isEmpty(foundry.utils.getProperty(i,'system.gear.resources'))){
         for (let [key,res] of Object.entries(i.system.gear.resources)){
           let tempRes = duplicate(res);
           tempRes.name = `${i.name}${res.name?`: ${res.name}`:''}`
@@ -272,13 +272,13 @@ export class OpsActorSheet extends ActorSheet {
         }
       }
       // Append to objects-with-attacks and objects-with utility
-      if(!isEmpty(getProperty(i,'system.actions')) && i.type==='object'){
+      if(!foundry.utils.isEmpty(foundry.utils.getProperty(i,'system.actions')) && i.type==='object'){
         if (i.system.magazine.type != 'unlimited'){
           if(i.system.magazine.source){
             let dualID = i.system.magazine.source.split(',')
             let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
-            i.system.magazine.value = getProperty(loadedMag,`${dualID[1]}.value`);
-            i.system.magazine.max = getProperty(loadedMag,`${dualID[1]}.max`);  
+            i.system.magazine.value = foundry.utils.getProperty(loadedMag,`${dualID[1]}.value`);
+            i.system.magazine.max = foundry.utils.getProperty(loadedMag,`${dualID[1]}.max`);  
           }
         }
         let attackFlag = false;
@@ -437,7 +437,7 @@ export class OpsActorSheet extends ActorSheet {
         }
       }
       // Append to objects-with-resources
-      if(!isEmpty(getProperty(i,'system.gear.resources'))){
+      if(!foundry.utils.isEmpty(foundry.utils.getProperty(i,'system.gear.resources'))){
         for (let [key,res] of Object.entries(i.system.gear.resources)){
           let tempRes = res;
           tempRes.name = `${i.name}${res.name?`: ${res.name}`:''}`
@@ -448,7 +448,7 @@ export class OpsActorSheet extends ActorSheet {
         }
       }
       // Append to offense items
-      //if (i.type=='weapon' && !isEmpty(i.system.actions)) e;
+      //if (i.type=='weapon' && !foundry.utils.isEmpty(i.system.actions)) e;
       // Append to utility items
     }
     context.gear = gear;
@@ -476,19 +476,19 @@ export class OpsActorSheet extends ActorSheet {
         }
         i.magazines = context.actor.items.get(i._id).listMagazines();
         i.system.error = i.system.errorBase;
-        if (getProperty(i,'system.magazine.loaded.stats.error')) i.system.error += getProperty(i,'system.magazine.loaded.stats.error');
+        if (foundry.utils.getProperty(i,'system.magazine.loaded.stats.error')) i.system.error += foundry.utils.getProperty(i,'system.magazine.loaded.stats.error');
         offense.weapons.push(i);
       }
       // Append objects
       if (i.type === 'object'){
         i.magazines = context.actor.items.get(i._id).listMagazines();
-        if(!isEmpty(getProperty(i,'system.actions'))){
+        if(!foundry.utils.isEmpty(foundry.utils.getProperty(i,'system.actions'))){
           if (i.system.magazine.type != 'unlimited'){
             if(i.system.magazine.source){
               let dualID = i.system.magazine.source.split(',')
               let loadedMag = context.items.filter(item => item._id == dualID[0])[0];
-              i.system.magazine.value = getProperty(loadedMag,`${dualID[1]}.value`);
-              i.system.magazine.max = getProperty(loadedMag,`${dualID[1]}.max`);  
+              i.system.magazine.value = foundry.utils.getProperty(loadedMag,`${dualID[1]}.value`);
+              i.system.magazine.max = foundry.utils.getProperty(loadedMag,`${dualID[1]}.max`);  
             }
           }
           let attackFlag = false;
@@ -622,7 +622,7 @@ export class OpsActorSheet extends ActorSheet {
       const charData = {};
       const randKey = randomID(8);
       updateData[`system.vehicle.crew.${randKey}`] = {uuid:data.uuid, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
-      charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
+      charData[`system.links.vehicle.${randKey}`] = foundry.utils.getProperty(this.actor,'uuid')
       await this.actor.update(updateData);
       await dropActor.update(charData);   
     }
@@ -637,10 +637,10 @@ export class OpsActorSheet extends ActorSheet {
 
     // Set category parent if dropping gear onto category
     const dropTarget = event.target.closest("[data-item-id]");
-    if (dropTarget && ['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1 && getProperty(itemData,'system.gear.physical')) itemData.system.gear.location.parent = dropTarget.dataset.itemId;
+    if (dropTarget && ['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1 && foundry.utils.getProperty(itemData,'system.gear.physical')) itemData.system.gear.location.parent = dropTarget.dataset.itemId;
 
     // If item is gear with children, handle all that mess
-    if ((event.shiftKey || event.ctrlKey) && getProperty(item,'system.gear.location.children.length')){
+    if ((event.shiftKey || event.ctrlKey) && foundry.utils.getProperty(item,'system.gear.location.children.length')){
       this._nestedGearDrop(item, dropTarget);
     }
     else {
@@ -655,22 +655,22 @@ export class OpsActorSheet extends ActorSheet {
     const sourceItems = sourceActor.items;
     // Item data and new created item for parent
     const dataLayer1 = item1.toObject();
-    if (dropTarget && ['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1 && getProperty(dataLayer1,'system.gear.physical')) dataLayer1.system.gear.location.parent = dropTarget.dataset.itemId;
+    if (dropTarget && ['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1 && foundry.utils.getProperty(dataLayer1,'system.gear.physical')) dataLayer1.system.gear.location.parent = dropTarget.dataset.itemId;
     const layer1 = await this.actor.createEmbeddedDocuments("Item", [dataLayer1], {render: false});
     // Item, item data, and new created item for first layer of children
-    for (let i = 0; i < getProperty(item1,'system.gear.location.children.length'); i++){
+    for (let i = 0; i < foundry.utils.getProperty(item1,'system.gear.location.children.length'); i++){
       const item2 = sourceItems.get(item1.system.gear.location.children[i]);
       const dataLayer2 = item2.toObject();
       dataLayer2.system.gear.location.parent = layer1[0]._id;
       const layer2 = await this.actor.createEmbeddedDocuments("Item", [dataLayer2], {render: false});
       // Item, item data, and new created item for second layer of children
-      for (let i = 0; i < getProperty(item2,'system.gear.location.children.length'); i++){
+      for (let i = 0; i < foundry.utils.getProperty(item2,'system.gear.location.children.length'); i++){
         const item3 = sourceItems.get(item2.system.gear.location.children[i]);
         const dataLayer3 = item3.toObject();
         dataLayer3.system.gear.location.parent = layer2[0]._id;
         const layer3 = await this.actor.createEmbeddedDocuments("Item", [dataLayer3], {render: false});
         // Item, item data, and new created item for third layer of children
-        for (let i = 0; i < getProperty(item3,'system.gear.location.children.length'); i++){
+        for (let i = 0; i < foundry.utils.getProperty(item3,'system.gear.location.children.length'); i++){
           const item4 = sourceItems.get(item3.system.gear.location.children[i]);
           const dataLayer4 = item4.toObject();
           dataLayer4.system.gear.location.parent = layer3[0]._id;
@@ -688,14 +688,14 @@ export class OpsActorSheet extends ActorSheet {
     const dropTarget = event.target.closest("[data-item-id]");
     if ( !dropTarget ) return;
     if (['Loose','Worn','Carried','Stored'].indexOf(dropTarget.dataset.itemId)>-1){
-      if (hasProperty(source, 'system.gear')) await source.update({['system.gear.location.parent']: dropTarget.dataset.itemId});
+      if (foundry.utils.hasProperty(source, 'system.gear')) await source.update({['system.gear.location.parent']: dropTarget.dataset.itemId});
       return;
     }
     else {
       if (event.shiftKey || event.ctrlKey){
         const target = items.get(dropTarget.dataset.itemId);
         // Don't nest if both items aren't physical
-        if (!hasProperty(source, 'system.gear') || !hasProperty(target,'system.gear')) return;
+        if (!foundry.utils.hasProperty(source, 'system.gear') || !foundry.utils.hasProperty(target,'system.gear')) return;
         // Don't self-nest
         if (source.id === target.id) return;
         // Set drop target as container parent
@@ -886,11 +886,11 @@ export class OpsActorSheet extends ActorSheet {
     if (targetId.includes(',')){
       const dualID = targetId.split(',');
       const item = this.actor.items.get(dualID[0]);
-      await item.update({[`${dualID[1]}.${targetProp}`]:!getProperty(item,`${dualID[1]}.${targetProp}`)})
+      await item.update({[`${dualID[1]}.${targetProp}`]:!foundry.utils.getProperty(item,`${dualID[1]}.${targetProp}`)})
     }
     else{
       const item = this.actor.items.get(targetId);
-      await item.update({[targetProp]:!getProperty(item,targetProp)});
+      await item.update({[targetProp]:!foundry.utils.getProperty(item,targetProp)});
     }
   }
   async _onItemToggle(event){
@@ -899,7 +899,7 @@ export class OpsActorSheet extends ActorSheet {
     const targetId = dataset.targetId;
     const targetProp = dataset.targetProp;
     const item = this.actor.items.get(targetId);
-    await item.update({[targetProp]:!getProperty(item,targetProp)});
+    await item.update({[targetProp]:!foundry.utils.getProperty(item,targetProp)});
   }
   _onToggleCollapse(event){
     event.preventDefault();
@@ -927,7 +927,7 @@ export class OpsActorSheet extends ActorSheet {
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
     const targetProp = dataset.targetProp;
-    await this.actor.update({[targetProp]:!getProperty(this.actor,targetProp)});
+    await this.actor.update({[targetProp]:!foundry.utils.getProperty(this.actor,targetProp)});
   }
   async _onRollBleed(event){
     event.preventDefault();
@@ -943,7 +943,7 @@ export class OpsActorSheet extends ActorSheet {
     const updateData = {};
     const targetProp = event.currentTarget.dataset.targetProp;
     const change = Number(event.currentTarget.dataset.change);
-    updateData[targetProp] = getProperty(this.actor,targetProp)+change;
+    updateData[targetProp] = foundry.utils.getProperty(this.actor,targetProp)+change;
     await this.actor.update(updateData);
   }
   async _incantRegain(event){
@@ -960,7 +960,7 @@ export class OpsActorSheet extends ActorSheet {
       newVal = Number(event.target.value.substr(1));
     }
     else if (event.target.value.charAt(0)=='+' || event.target.value.charAt(0)=='-'){
-      newVal = Number(getProperty(this.actor,dataset.target))+Number(event.target.value);
+      newVal = Number(foundry.utils.getProperty(this.actor,dataset.target))+Number(event.target.value);
     }
     else {
       newVal = Number(event.target.value)
@@ -969,7 +969,7 @@ export class OpsActorSheet extends ActorSheet {
       this.render()
       return;
     } 
-    setProperty(updateData,dataset.target,Number(newVal));
+    foundry.utils.setProperty(updateData,dataset.target,Number(newVal));
     await this.actor.update(updateData);
   }
   _actionCheck(event){
@@ -1047,14 +1047,14 @@ export class OpsActorSheet extends ActorSheet {
   async _copCreate(event){
     event.preventDefault();
     const updateData = {};
-    updateData['system.cops'] = getProperty(this.actor,'system.cops')
+    updateData['system.cops'] = foundry.utils.getProperty(this.actor,'system.cops')
     updateData['system.cops'].push({label:`Level ${updateData['system.cops'].length+1}`});
     await this.actor.update(updateData);
   }
   async _copDelete(event){
     event.preventDefault();
     const updateData = {};
-    updateData['system.cops'] = getProperty(this.actor,'system.cops')
+    updateData['system.cops'] = foundry.utils.getProperty(this.actor,'system.cops')
     updateData['system.cops'].splice(event.currentTarget.dataset.target,1);
     await this.actor.update(updateData);
   }
@@ -1097,7 +1097,7 @@ export class OpsActorSheet extends ActorSheet {
     const charData = {};
     const randKey = randomID(8);
     updateData[`system.vehicle.crew.${randKey}`] = {uuid:form.idLink.value, note:null, skill:null, attackMisc:null, attackAbility: 'mrk'};
-    charData[`system.links.vehicle.${randKey}`] = getProperty(this.actor,'uuid')
+    charData[`system.links.vehicle.${randKey}`] = foundry.utils.getProperty(this.actor,'uuid')
     await this.actor.update(updateData);
     await checkLink.update(charData);      
   }
@@ -1112,17 +1112,17 @@ export class OpsActorSheet extends ActorSheet {
     });
   }
   async _submitUnlinkCrew(event){
-    const checkLink = await fromUuid(getProperty(this.actor,`system.vehicle.crew.${event.currentTarget.dataset.target}.uuid`))
+    const checkLink = await fromUuid(foundry.utils.getProperty(this.actor,`system.vehicle.crew.${event.currentTarget.dataset.target}.uuid`))
     const updateData = {};
     const charData = {};
-    if (hasProperty(this.actor, `system.vehicle.crew.${event.currentTarget.dataset.target}`)){
+    if (foundry.utils.hasProperty(this.actor, `system.vehicle.crew.${event.currentTarget.dataset.target}`)){
       updateData[`system.vehicle.crew.-=${event.currentTarget.dataset.target}`] = null;
-      if (this.actor.system.stats.init.drive == getProperty(this.actor,`system.vehicle.crew.${event.currentTarget.dataset.target}.uuid`)) updateData['system.stats.init.drive'] = '';
+      if (this.actor.system.stats.init.drive == foundry.utils.getProperty(this.actor,`system.vehicle.crew.${event.currentTarget.dataset.target}.uuid`)) updateData['system.stats.init.drive'] = '';
       for (let [key,entry] of Object.entries(this.actor.system.actions)){
         if (entry.source==event.currentTarget.dataset.target) updateData[`system.actions.${key}.source`] = 'generic';
       }
     } 
-    if (hasProperty(checkLink, `system.links.vehicle.${event.currentTarget.dataset.target}`)) charData[`system.links.vehicle.-=${event.currentTarget.dataset.target}`] = null;
+    if (foundry.utils.hasProperty(checkLink, `system.links.vehicle.${event.currentTarget.dataset.target}`)) charData[`system.links.vehicle.-=${event.currentTarget.dataset.target}`] = null;
     await this.actor.update(updateData);
     if (checkLink)await checkLink.update(charData)
   }
@@ -1164,8 +1164,8 @@ export class OpsActorSheet extends ActorSheet {
       if (atkStance=='kneeling') tweaks.offense.stance = 1;
     }
     if (item.type=='weapon' && item.system.magazine.type=='cartridge' && item.system.magazine.source!=''){
-      const tripleID = getProperty(item,'system.magazine.source').split(',')
-      item.system.magazine.preLoad =  getProperty(this.actor.items.filter(item => item._id == tripleID[0])[0],tripleID[1]);
+      const tripleID = foundry.utils.getProperty(item,'system.magazine.source').split(',')
+      item.system.magazine.preLoad =  foundry.utils.getProperty(this.actor.items.filter(item => item._id == tripleID[0])[0],tripleID[1]);
       tweaks.ammo = {
         effect: tripleID[2],
         active: {}
@@ -1185,7 +1185,7 @@ export class OpsActorSheet extends ActorSheet {
         actingActor = this.actor;
         break;
       case 'vehicle':
-        actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.attacker}.uuid`))
+        actingActor = fromUuidSync(foundry.utils.getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.attacker}.uuid`))
         if (actingActor==null) actingActor = this.actor;
         if (this.actor.system.stats.maneuver.speed) tweaks.situation = `${this.actor.system.stats.maneuver.speed>=0?'+':''}${this.actor.system.stats.maneuver.speed}[Speed]`;
         break;
@@ -1217,8 +1217,8 @@ export class OpsActorSheet extends ActorSheet {
         if (actingActor && tweaks.utility.check.type==='skill' && tweaks.utility.check.source=='') tweaks.utility.check.source = tweaks.item.system.skillSource;
         break;
       case 'vehicle':
-        actingActor = fromUuidSync(getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.uuid`))
-        if (actingActor && tweaks.utility.check.type==='skill') tweaks.utility.check.source = getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.skill`)
+        actingActor = fromUuidSync(foundry.utils.getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.uuid`))
+        if (actingActor && tweaks.utility.check.type==='skill') tweaks.utility.check.source = foundry.utils.getProperty(this.actor,`system.vehicle.crew.${this.actor.system.vehicle.skiller}.skill`)
         if (actingActor==null) actingActor = this.actor;
         tweaks.situation = `${this.actor.system.stats.maneuver.speed?`${this.actor.system.stats.maneuver.speed>=0?'+':''}${this.actor.system.stats.maneuver.speed}[Speed]`:''}${this.actor.system.stats.maneuver.value?`${this.actor.system.stats.maneuver.value>=0?'+':''}${this.actor.system.stats.maneuver.value}[Maneuver]`:''}`
         break;
@@ -1312,7 +1312,7 @@ export class OpsActorSheet extends ActorSheet {
 
 class AttackDashboardApp extends FormApplication {
   static get defaultOptions(){
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['opsandtactics','sheet','item'],
       template: 'systems/opsandtactics/templates/interface/dialog-attack-dashboard.html',
       width: 650,
@@ -1334,24 +1334,24 @@ class AttackDashboardApp extends FormApplication {
       for (let [key,entry] of Object.entries(this.options.source.system.weaponMods)){
         for (let imp of ['check','effect','dice','recoil','cp']){
           if (entry[imp]){
-            setProperty(tempSource,`system.actions.${this.options.target}.${imp}.mods.${key}.value`,entry[imp])
+            foundry.utils.setProperty(tempSource,`system.actions.${this.options.target}.${imp}.mods.${key}.value`,entry[imp])
           }
         }
       }
     }
-    this.object.item = mergeObject(tempSource,this.object.item);
-    if (this.object.ammo && !isEmpty(this.options.source.system.magazine.preLoad)){
-      mergeObject(this.object.item.system.magazine.loaded,duplicate(getProperty(this.options.source.system.magazine.preLoad,this.object.ammo.effect)))
+    this.object.item = foundry.utils.mergeObject(tempSource,this.object.item);
+    if (this.object.ammo && !foundry.utils.isEmpty(this.options.source.system.magazine.preLoad)){
+      foundry.utils.mergeObject(this.object.item.system.magazine.loaded,duplicate(foundry.utils.getProperty(this.options.source.system.magazine.preLoad,this.object.ammo.effect)))
       let tempCheck = 0;
       let tempRecoil = 0;
       
       for (let [key,entry] of Object.entries(this.object.ammo.active)){
-        entry.name = getProperty(this.options.source.system.magazine.preLoad.cartridges,key).name;
-        if (entry.check) tempCheck += Number(getProperty(this.options.source.system.magazine.preLoad.cartridges,key).stats.check)
-        if (entry.recoil) tempRecoil += Number(getProperty(this.options.source.system.magazine.preLoad.cartridges,key).stats.recoil)
+        entry.name = foundry.utils.getProperty(this.options.source.system.magazine.preLoad.cartridges,key).name;
+        if (entry.check) tempCheck += Number(foundry.utils.getProperty(this.options.source.system.magazine.preLoad.cartridges,key).stats.check)
+        if (entry.recoil) tempRecoil += Number(foundry.utils.getProperty(this.options.source.system.magazine.preLoad.cartridges,key).stats.recoil)
       }
-      setProperty(this,'object.item.system.magazine.loaded.stats.check',tempCheck);
-      setProperty(this,'object.item.system.magazine.loaded.stats.recoil',tempRecoil);
+      foundry.utils.setProperty(this,'object.item.system.magazine.loaded.stats.check',tempCheck);
+      foundry.utils.setProperty(this,'object.item.system.magazine.loaded.stats.recoil',tempRecoil);
     }
     const context = {
       OATS: CONFIG.OATS,
@@ -1459,12 +1459,12 @@ class AttackDashboardApp extends FormApplication {
           break;
       }
     }
-    if (getProperty(context.action,'dice.scaleCartridge.bar')>0) context.action.dice.scaleCartridge.lessBar = context.action.dice.scaleCartridge.bar-1;
-    context.situational = getProperty(this.object,'situation')
-    context.offenseTotal = Number(getProperty(this.object,'offense.high')?this.object.offense.high:0) + Number(getProperty(this.object,'offense.seen')?this.object.offense.seen:0) + Number(getProperty(this.object,'offense.flank')?this.object.offense.flank:0) + Number(getProperty(this.object,'offense.stance')?this.object.offense.stance:0) + Number(getProperty(this.object,'offense.face')?this.object.offense.face:0) + Math.floor(Number(getProperty(this.object,'offense.range')?this.object.offense.range:0) * -2 * Number(getProperty(this.object,'offense.rangeMult')?this.object.offense.rangeMult:1))
-    context.defenseTotal = Number(getProperty(this.object,'defense.pin')?this.object.defense.pin:0) + Number(getProperty(this.object,'defense.stun')?this.object.defense.stun:0) + Number(getProperty(this.object,'defense.climb')?this.object.defense.climb:0) + Number(getProperty(this.object,'defense.stance')?this.object.defense.stance:0)
+    if (foundry.utils.getProperty(context.action,'dice.scaleCartridge.bar')>0) context.action.dice.scaleCartridge.lessBar = context.action.dice.scaleCartridge.bar-1;
+    context.situational = foundry.utils.getProperty(this.object,'situation')
+    context.offenseTotal = Number(foundry.utils.getProperty(this.object,'offense.high')?this.object.offense.high:0) + Number(foundry.utils.getProperty(this.object,'offense.seen')?this.object.offense.seen:0) + Number(foundry.utils.getProperty(this.object,'offense.flank')?this.object.offense.flank:0) + Number(foundry.utils.getProperty(this.object,'offense.stance')?this.object.offense.stance:0) + Number(foundry.utils.getProperty(this.object,'offense.face')?this.object.offense.face:0) + Math.floor(Number(foundry.utils.getProperty(this.object,'offense.range')?this.object.offense.range:0) * -2 * Number(foundry.utils.getProperty(this.object,'offense.rangeMult')?this.object.offense.rangeMult:1))
+    context.defenseTotal = Number(foundry.utils.getProperty(this.object,'defense.pin')?this.object.defense.pin:0) + Number(foundry.utils.getProperty(this.object,'defense.stun')?this.object.defense.stun:0) + Number(foundry.utils.getProperty(this.object,'defense.climb')?this.object.defense.climb:0) + Number(foundry.utils.getProperty(this.object,'defense.stance')?this.object.defense.stance:0)
     context.missChance = 0;
-    switch (getProperty(this.object,'defense.cover')){
+    switch (foundry.utils.getProperty(this.object,'defense.cover')){
       case 'cov0':
         break;
       case 'cov1':
@@ -1482,7 +1482,7 @@ class AttackDashboardApp extends FormApplication {
         context.defenseTotal += 15;
         context.missChance = 30;
     }
-    context.missChance = Math.max(context.missChance,Number(getProperty(this.object,'defense.conceal')?this.object.defense.conceal:0));
+    context.missChance = Math.max(context.missChance,Number(foundry.utils.getProperty(this.object,'defense.conceal')?this.object.defense.conceal:0));
     context.formula = context.attackMods.checkTotal;
     if (context.formula!==null){
       context.formula = `${context.formula}${context.situational?` +(${context.situational})`:''}${context.offenseTotal?` +(${context.offenseTotal})`:''}${context.defenseTotal?` -(${context.defenseTotal})`:''}`;
@@ -1534,14 +1534,14 @@ class AttackDashboardApp extends FormApplication {
   }
   async _updateObject(event, formData){
     for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){
-      setProperty(this.object,key,entry)
+      foundry.utils.setProperty(this.object,key,entry)
     }
     this.render()
   }
 }
 class UtilityDashboardApp extends FormApplication {
   static get defaultOptions(){
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['opsandtactics','sheet','item'],
       template: 'systems/opsandtactics/templates/interface/dialog-utility-dashboard.html',
       width: 520,
@@ -1559,10 +1559,10 @@ class UtilityDashboardApp extends FormApplication {
   }
   getData(){
     const tempItemSource = duplicate(this.options.sourceItem)
-    this.object.item = mergeObject(tempItemSource,this.object.item);
+    this.object.item = foundry.utils.mergeObject(tempItemSource,this.object.item);
     if (this.options.sourceSkill){
       const tempSkillSource = duplicate(this.options.sourceSkill)
-      this.object.skill = mergeObject(tempSkillSource,this.object.skill);
+      this.object.skill = foundry.utils.mergeObject(tempSkillSource,this.object.skill);
     }
     const context = {
       OATS: CONFIG.OATS,
@@ -1598,7 +1598,7 @@ class UtilityDashboardApp extends FormApplication {
       }
     }
 
-    context.situational = getProperty(this.object,'situation')
+    context.situational = foundry.utils.getProperty(this.object,'situation')
     if (this.options.sourceSkill) {
       context.skillMods = this.options.sourceSkill.skillSum(this.object.skill)
       context.formula = context.skillMods.total;
@@ -1653,14 +1653,14 @@ class UtilityDashboardApp extends FormApplication {
   }
   async _updateObject(event, formData){
     for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){
-      setProperty(this.object,key,entry)
+      foundry.utils.setProperty(this.object,key,entry)
     }
     this.render()
   }
 }
 class ActionDashboardApp extends FormApplication {
   static get defaultOptions(){
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['opsandtactics','sheet','item'],
       template: 'systems/opsandtactics/templates/interface/dialog-utility-dashboard.html',
       width: 520,
@@ -1679,7 +1679,7 @@ class ActionDashboardApp extends FormApplication {
   getData(){
     if (this.options.sourceSkill){
       const tempSkillSource = duplicate(this.options.sourceSkill)
-      this.object.skill = mergeObject(tempSkillSource,this.object.skill);
+      this.object.skill = foundry.utils.mergeObject(tempSkillSource,this.object.skill);
     }
     const context = {
       OATS: CONFIG.OATS,
@@ -1697,8 +1697,8 @@ class ActionDashboardApp extends FormApplication {
         ]
       }
     }
-    context.situational = getProperty(this.object,'situation')
-    context.cover = getProperty(this.object,'reflexCover')
+    context.situational = foundry.utils.getProperty(this.object,'situation')
+    context.cover = foundry.utils.getProperty(this.object,'reflexCover')
     switch(this.options.target){
       case 'skill':
         context.skillMods = this.options.sourceSkill.skillSum(this.object.skill)
@@ -1732,7 +1732,7 @@ class ActionDashboardApp extends FormApplication {
   rollAction(event){
     event.preventDefault();
     const context = this.getData();
-    this.options.actor.rollActorCheck({modifier:context.formula,event:event,checkID:this.options.target,itemName:getProperty(context,'skill.name')});
+    this.options.actor.rollActorCheck({modifier:context.formula,event:event,checkID:this.options.target,itemName:foundry.utils.getProperty(context,'skill.name')});
     this.close();
   }
   _onToggleCollapse(event){
@@ -1759,7 +1759,7 @@ class ActionDashboardApp extends FormApplication {
   }
   async _updateObject(event, formData){
     for (let [key,entry] of Object.entries(expandObject(formData).tweaks)){
-      setProperty(this.object,key,entry)
+      foundry.utils.setProperty(this.object,key,entry)
     }
     this.render()
   }

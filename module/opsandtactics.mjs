@@ -436,7 +436,7 @@ async function applyChatDamage(li, rollNum, multiplier) {
   return Promise.all(canvas.tokens.controlled.map(t => {
     const a = t.actor;
     if (!a.isOwner) return a;
-    const updateData = {['system.health.incoming']:getProperty(a,'system.health.incoming')+Math.floor(damage*multiplier)};
+    const updateData = {['system.health.incoming']:foundry.utils.getProperty(a,'system.health.incoming')+Math.floor(damage*multiplier)};
     return a.update(updateData);
   }));
 }
@@ -522,7 +522,7 @@ async function handleWeaponMod(li,op){
 }
 async function disableActorEffects(li){
   const target = await game.actors.get(li.data("documentId"));
-  if (isEmpty(target.appliedEffects)){
+  if (foundry.utils.isEmpty(target.appliedEffects)){
     ui.notifications.info(`${target.name} has no Active Effects`)
     return null;
   } 
