@@ -115,17 +115,17 @@ export class OpsActor extends Actor {
     // Calculate Hit Points
     const rollData = this.getRollData({deterministic:true});
     const chpRoll = new Roll(systemData.health.chp.formula,rollData);
-    systemData.health.chp.max = chpRoll.isDeterministic ? chpRoll.evaluate({async:false}).total + systemData.health.chp.mods.subtotal : 0;
+    systemData.health.chp.max = chpRoll.isDeterministic ? Roll.safeEval(chpRoll.formula) + systemData.health.chp.mods.subtotal : 0;
     const xhpRoll = new Roll(systemData.health.xhp.formula,rollData);
-    systemData.health.xhp.max = xhpRoll.isDeterministic ? xhpRoll.evaluate({async:false}).total + systemData.health.xhp.mods.subtotal : 0;
+    systemData.health.xhp.max = xhpRoll.isDeterministic ? Roll.safeEval(xhpRoll.formula) + systemData.health.xhp.mods.subtotal : 0;
     // Calculate Carrying Capacity
     const carryRoll = new Roll(systemData.stats.carrying.formula,rollData);
-    systemData.stats.carrying.light = carryRoll.isDeterministic ? carryRoll.evaluate({async:false}).total + systemData.stats.carrying.mods.subtotal : 0;
+    systemData.stats.carrying.light = carryRoll.isDeterministic ? Roll.safeEval(carryRoll.formula) + systemData.stats.carrying.mods.subtotal : 0;
     systemData.stats.carrying.medium = systemData.stats.carrying.light*2;
     systemData.stats.carrying.heavy = systemData.stats.carrying.light*3;
     // Calculate Mental Limit
     const mlRoll = new Roll(systemData.ml.formula,rollData);
-    systemData.ml.max = mlRoll.isDeterministic ? mlRoll.evaluate({async:false}).total + systemData.ml.mods.subtotal + systemData.ml.temp : 0;
+    systemData.ml.max = mlRoll.isDeterministic ? Roll.safeEval(mlRoll.formula) + systemData.ml.mods.subtotal + systemData.ml.temp : 0;
     systemData.magic.mlPsion = systemData.magic.psionFocus?((2*systemData.stats.level.value)+25):0;
     systemData.magic.mlRecipe = systemData.magic.invokerMemorize?((3*systemData.stats.level.value)+3):0;
     systemData.magic.mlObject = 0;
