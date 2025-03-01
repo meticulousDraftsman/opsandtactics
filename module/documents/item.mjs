@@ -1118,15 +1118,17 @@ export class ResourceTransferApp extends FormApplication {
     const updateRight = {};
     let rightItem;
     let value = event.currentTarget.dataset.transfer;
+    if (!(this.object.resourceLeft && this.object.resourceRight)) return;
+    console.debug(context.leftObject,context.rightObject)
     switch (event.currentTarget.dataset.direction){
       case 'left':
         if (value=="all"){
-          if (this.object.resourceRight){
-            value = Number(foundry.utils.getProperty(context.rightObject,'value'));
-          } 
+          if (foundry.utils.getProperty(context.leftObject,'max')){
+            value = Math.min(Number(foundry.utils.getProperty(context.rightObject,'value')), Number(foundry.utils.getProperty(context.leftObject,'max')) - Number(foundry.utils.getProperty(context.leftObject,'value')));
+          }
           else {
-            return;
-          }          
+            value = Number(foundry.utils.getProperty(context.rightObject,'value'));  
+          }               
         }
         value = Number(value);
         if (this.object.resourceLeft){
@@ -1152,12 +1154,12 @@ export class ResourceTransferApp extends FormApplication {
         break;
       case 'right':
         if (value=="all"){
-          if (this.object.resourceLeft){
-            value = Number(foundry.utils.getProperty(context.leftObject,'value'));
-          } 
+          if (foundry.utils.getProperty(context.rightObject,'max')){
+            value = Math.min(value = Number(foundry.utils.getProperty(context.leftObject,'value')), Number(foundry.utils.getProperty(context.rightObject,'max')) - Number(foundry.utils.getProperty(context.rightObject,'value')));
+          }
           else {
-            return;
-          }          
+            value = Number(foundry.utils.getProperty(context.leftObject,'value'));  
+          }   
         }
         value = Number(value);
         if (this.object.resourceLeft){
