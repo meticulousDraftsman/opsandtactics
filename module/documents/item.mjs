@@ -1119,7 +1119,6 @@ export class ResourceTransferApp extends FormApplication {
     let rightItem;
     let value = event.currentTarget.dataset.transfer;
     if (!(this.object.resourceLeft && this.object.resourceRight)) return;
-    console.debug(context.leftObject,context.rightObject)
     switch (event.currentTarget.dataset.direction){
       case 'left':
         if (value=="all"){

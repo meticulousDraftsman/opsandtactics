@@ -9,7 +9,7 @@
       <li class="item grid-span-9 grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
         <div class="grid-span-3 item-name flexrow">
           <img class="item-image" src="{{item.img}}">
-          <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+          <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
         </div>
         <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
       </li>
@@ -19,7 +19,7 @@
           <li class="item grid-span-9 grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
             <div class="grid-span-3 item-name flexrow">
               <img class="item-image" src="{{item.img}}">
-              <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+              <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
             </div>
             <i class="grid-span-6">{{item.system.gear.location.note}}</i>
           </li>
@@ -29,7 +29,7 @@
               <li class="item grid-span-9 grid grid-9col flex-group-left item-context"data-item-id="{{item._id}}">
                 <div class="grid-span-3 item-name flexrow">
                   <img class="item-image" src="{{item.img}}">
-                  <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+                  <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
                 </div>
                 <i class="grid-span-6">{{item.system.gear.location.note}}</i>
               </li>
@@ -39,7 +39,7 @@
                 <li class="item grid-span-9 grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
                   <div class="grid-span-3 item-name flexrow">
                     <img class="item-image" src="{{item.img}}">
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}} {{#if (ne item.system.gear.quantity.value 1)}}[{{item.system.gear.quantity.value}}]{{/if}}</a>
+                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
                   </div>
                   <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
                 </li>
