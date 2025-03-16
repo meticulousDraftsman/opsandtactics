@@ -251,6 +251,11 @@
   border-radius: 3px;
 }
 
+.opsandtactics .skill-list{
+  margin: 0;
+  padding: 0;
+}
+
 .opsandtactics .action-legend{
   background:#dad8cc;
   border-style:groove;

@@ -126,7 +126,24 @@ export class OpsActorSheet extends ActorSheet {
   _prepareCharacterItems(context) {
     const systemData = context.system;
     // Initialize containers.
-    const skills = [];
+    const skills = {
+      double: {
+        items: [],
+        label: 'Double-Focused'
+      },
+      occupation: {
+        items: [],
+        label: 'Occupational'
+      },
+      focus: {
+        items: [],
+        label: 'Focused'
+      },
+      unfocus: {
+        items: [],
+        label: 'Unfocused'
+      }
+    };
     const armors = {
       magic: {
         items: [],
@@ -200,7 +217,18 @@ export class OpsActorSheet extends ActorSheet {
       // Append skills.
       if (i.type === 'skill') {
         i.mods = context.actor.items.get(i._id).skillSum();
-        skills.push(i);
+        switch(i.system.focus){
+          case 'focus':
+              if (i.mods.occ) {
+                skills.occupation.items.push(i);
+              }
+              else {
+                skills.focus.items.push(i);
+              }
+              break;
+          default:
+            skills[i.system.focus].items.push(i);
+        }
       }
       // Append armor.
       if (i.type === 'armor') {
@@ -296,9 +324,14 @@ export class OpsActorSheet extends ActorSheet {
       layer.items = layer.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
       if (layer.items.length==0 && key != 'worn') delete armors[key];
     }    
+    // Purge Empty Skill Layers and sort
+    for (let [key,layer] of Object.entries(skills)){
+      layer.items = layer.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+      if (layer.items.length==0) delete skills[key];
+    }    
 
     // Assign and return
-    context.skills = skills.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.skills = skills;
     context.armors = armors;
     context.weapons = weapons.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
