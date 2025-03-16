@@ -1226,7 +1226,7 @@ export class OpsActorSheet extends ActorSheet {
         actingActor = this.actor;
     }
     if ((event && event.shiftKey) || item.system.actions[actionID].check.type.includes('noChat')){
-      new AttackDashboardApp(tweaks,{source:item,target:actionID}).rollAttack(event)
+      new AttackDashboardApp(tweaks,{source:item,actor:actingActor,target:actionID}).rollAttack(event)
     }
     else{
       new AttackDashboardApp(tweaks,{source:item,actor:actingActor,target:actionID}).render(true)
