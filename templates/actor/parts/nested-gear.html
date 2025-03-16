@@ -5,44 +5,72 @@
   </legend>
   <ol class="items-list flex-group-left {{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
     {{#each this.children as |item id|}}
-    <fieldset class="grid grid-9col nested-container">
-      <li class="item grid-span-9 grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
-        <div class="grid-span-3 item-name flexrow">
+    <fieldset class="flex-group-left nested-container">
+      <li class="item flex-group-left item-context" data-item-id="{{item._id}}">
+        <div class="item-name flexrow">
           <img class="item-image" src="{{item.img}}">
-          <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
-        </div>
-        <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
+          <a class="item-control item-edit flexcol" data-item-id="{{item._id}}" data-tooltip="Edit Item">
+            <div>
+            <i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}
+            </div>
+            <div>
+              {{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}{{#if (or this.value this.max)}} {{/if}}{{#if (eq this.type 'consumable')}}<i class="fas fa-boxes"></i>{{/if}}{{#if (eq this.type 'cartridge')}}<i class="fas fa-gun"></i>{{/if}}{{#if (eq this.type 'coolant')}}<i class="fas fa-temperature-full"></i>{{/if}}{{#if (eq this.type 'magic')}}<i class="fas fa-scroll"></i>{{/if}}]{{/each}}
+            </div>
+          </a>
+          <i class="flex-group-center">{{item.system.gear.location.note}}</i>  
+        </div>        
       </li>
       {{#if item.children.length}}
       {{#each item.children as |item id|}}
-        <fieldset class="grid grid-9col grid-start-2 grid-span-8 nested-container">
-          <li class="item grid-span-9 grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
-            <div class="grid-span-3 item-name flexrow">
+      <fieldset class="flex-group-left nested-container">
+          <li class="item flex-group-left item-context" data-item-id="{{item._id}}">
+            <div class="item-name flexrow">
               <img class="item-image" src="{{item.img}}">
-              <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
-            </div>
-            <i class="grid-span-6">{{item.system.gear.location.note}}</i>
+              <a class="item-control item-edit flexcol" data-item-id="{{item._id}}" data-tooltip="Edit Item">
+                <div>
+                <i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}
+                </div>
+                <div>
+                  {{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}{{#if (or this.value this.max)}} {{/if}}{{#if (eq this.type 'consumable')}}<i class="fas fa-boxes"></i>{{/if}}{{#if (eq this.type 'cartridge')}}<i class="fas fa-gun"></i>{{/if}}{{#if (eq this.type 'coolant')}}<i class="fas fa-temperature-full"></i>{{/if}}{{#if (eq this.type 'magic')}}<i class="fas fa-scroll"></i>{{/if}}]{{/each}}
+                </div>
+              </a>
+              <i class="flex-group-center">{{item.system.gear.location.note}}</i>  
+            </div>        
           </li>
           {{#if item.children.length}}
           {{#each item.children as |item id|}}
-            <fieldset class="grid grid-9col grid-start-2 grid-span-8 nested-container">
-              <li class="item grid-span-9 grid grid-9col flex-group-left item-context"data-item-id="{{item._id}}">
-                <div class="grid-span-3 item-name flexrow">
+          <fieldset class="flex-group-left nested-container">
+              <li class="item flex-group-left item-context" data-item-id="{{item._id}}">
+                <div class="item-name flexrow">
                   <img class="item-image" src="{{item.img}}">
-                  <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
-                </div>
-                <i class="grid-span-6">{{item.system.gear.location.note}}</i>
+                  <a class="item-control item-edit flexcol" data-item-id="{{item._id}}" data-tooltip="Edit Item">
+                    <div>
+                    <i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}
+                    </div>
+                    <div>
+                      {{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}{{#if (or this.value this.max)}} {{/if}}{{#if (eq this.type 'consumable')}}<i class="fas fa-boxes"></i>{{/if}}{{#if (eq this.type 'cartridge')}}<i class="fas fa-gun"></i>{{/if}}{{#if (eq this.type 'coolant')}}<i class="fas fa-temperature-full"></i>{{/if}}{{#if (eq this.type 'magic')}}<i class="fas fa-scroll"></i>{{/if}}]{{/each}}
+                    </div>
+                  </a>
+                  <i class="flex-group-center">{{item.system.gear.location.note}}</i>  
+                </div>        
               </li>
               {{#if item.children.length}}
               {{#each item.children as |item id|}}
-                <fieldset class="grid grid-9col grid-start-2 grid-span-8 nested-container">
-                <li class="item grid-span-9 grid grid-9col flex-group-left item-context" data-item-id="{{item._id}}">
-                  <div class="grid-span-3 item-name flexrow">
-                    <img class="item-image" src="{{item.img}}">
-                    <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Item"><i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}{{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}]{{/each}}</a>
-                  </div>
-                  <i class="grid-span-6">{{item.system.gear.location.note}}</i>  
-                </li>
+              <fieldset class="flex-group-left nested-container">
+                  <li class="item flex-group-left item-context" data-item-id="{{item._id}}">
+                    <div class="item-name flexrow">
+                      <img class="item-image" src="{{item.img}}">
+                      <a class="item-control item-edit flexcol" data-item-id="{{item._id}}" data-tooltip="Edit Item">
+                        <div>
+                        <i class="fas fa-edit"></i> {{item.name}}{{#if (ne item.system.gear.quantity.value 1)}} [{{item.system.gear.quantity.value}}]{{/if}}
+                        </div>
+                        <div>
+                          {{#each item.system.gear.resources}} [{{this.value}}{{#if this.max}}/{{this.max}}{{/if}}{{#if (or this.value this.max)}} {{/if}}{{#if (eq this.type 'consumable')}}<i class="fas fa-boxes"></i>{{/if}}{{#if (eq this.type 'cartridge')}}<i class="fas fa-gun"></i>{{/if}}{{#if (eq this.type 'coolant')}}<i class="fas fa-temperature-full"></i>{{/if}}{{#if (eq this.type 'magic')}}<i class="fas fa-scroll"></i>{{/if}}]{{/each}}
+                        </div>
+                      </a>
+                      <i class="flex-group-center">{{item.system.gear.location.note}}</i>  
+                    </div>        
+                  </li>
                 </fieldset>
               {{/each}}
               {{/if}}
