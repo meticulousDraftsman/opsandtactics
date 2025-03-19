@@ -237,7 +237,7 @@
       "weight": null,
       "cost": null,
       "quality": "",
-      "restriction": "",
+      "restriction": "L",
       "physical": true,
       "location": {
         "parent": "Loose",
@@ -258,10 +258,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.4.4",
+    "systemVersion": "0.5.2",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1719711023773,
+    "modifiedTime": 1742349481751,
     "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {

@@ -1,5 +1,5 @@
 {
-  "name": "Macahuitl",
+  "name": "Maquahuitl",
   "type": "weapon",
   "img": "systems/opsandtactics/icons/weapons/other/chainsaw.webp",
   "system": {
@@ -116,16 +116,18 @@
           "inherent": "",
           "ability": "foc",
           "mods": {},
-          "scaleAbility": 1
+          "scaleAbility": 1,
+          "ammo": false
         },
         "effect": {
           "flavor": "Slashing",
           "type": "",
           "source": "",
-          "inherent": "3d6+1",
+          "inherent": "",
           "ability": "pow",
           "mods": {},
-          "scaleAbility": 1
+          "scaleAbility": 1,
+          "ammo": true
         },
         "ammo": null,
         "cp": {
@@ -135,7 +137,18 @@
         "display": true,
         "recoil": {
           "inherent": null,
-          "mods": {}
+          "mods": {},
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
         }
       },
       "JwwHwrGj": {
@@ -397,11 +410,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.5.2",
     "coreVersion": "11.315",
     "createdTime": 1681639159699,
-    "modifiedTime": 1705313140020,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1742349224408,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "folder": "PVVjOMkBFXUvHywS",
   "ownership": {

@@ -6,7 +6,7 @@
     "description": "<p>This standard Kevlar vest is worn by most law enforcement officers under their uniform shirts.</p>\n<h3>Special Notes</h3>\n<p>Grants a +4 bonus to Stealth checks when hiding the armor.</p>",
     "layer": "worn",
     "active": false,
-    "def": 3,
+    "def": 2,
     "agiMax": 3,
     "penalty": -1,
     "cpLoss": 2,
@@ -52,10 +52,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.4.4",
+    "systemVersion": "0.4.6",
     "coreVersion": "11.315",
     "createdTime": 1681662154248,
-    "modifiedTime": 1719711023773,
+    "modifiedTime": 1721361927186,
     "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "folder": "g7HwcKEMx8hl1MoU",
