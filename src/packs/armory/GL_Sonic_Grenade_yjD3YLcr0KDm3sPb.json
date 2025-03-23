@@ -1,0 +1,87 @@
+{
+  "name": "GL Sonic Grenade",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.5,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "yBZJddak": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "cartridges": {
+            "jBFEfWsK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "1d4",
+                  "primaryFlavor": "Rounds",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "flavor": "35' Blast Radius, TN 20 WIL save vs Stun",
+              "name": "Shield"
+            }
+          },
+          "name": "GL Grenade"
+        }
+      },
+      "quality": "",
+      "restriction": "R"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<h2><span class=\"fontstyle0\">Sonic</span></h2><p><span class=\"fontstyle0\">A sonic grenade is a small ball with a keypad of six buttons, that when activated creates a high pitched tone that irritates and confuses all those caught in its blast. Anyone affected must immediately make a Will Saving Throw [TN20] to avoid being Stunned for 1d4 rounds.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
+  },
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "effects": [],
+  "folder": "d3JNH870scxUVFXj",
+  "ownership": {
+    "default": 0,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742375861756,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "yjD3YLcr0KDm3sPb",
+  "sort": 0,
+  "_key": "!items!yjD3YLcr0KDm3sPb"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Expensive Modern Target Handguns",
+  "sorting": "a",
+  "folder": "3RHwno4zxwPSvjY6",
+  "type": "Item",
+  "_id": "C74l5UF3zwBCcV6G",
+  "description": "",
+  "sort": 1000000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": null,
+    "modifiedTime": 1742519720917,
+    "lastModifiedBy": "nc4XC244wznrOEZR"
+  },
+  "_key": "!folders!C74l5UF3zwBCcV6G"
+}

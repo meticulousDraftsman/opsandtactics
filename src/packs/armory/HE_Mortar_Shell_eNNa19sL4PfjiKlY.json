@@ -1,0 +1,87 @@
+{
+  "name": "HE Mortar Shell",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 2,
+      "tons": false,
+      "cost": 100,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "yBZJddak": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "cartridges": {
+            "jBFEfWsK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "20d6",
+                  "primaryFlavor": "Concussion/Fire",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "flavor": "30' Blast Radius, 60' Wounding Radius",
+              "name": "High Explosive"
+            }
+          },
+          "name": "Mortar Shell"
+        }
+      },
+      "quality": "",
+      "restriction": "M&P"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<h2><span class=\"fontstyle0\">High Explosive (HE)</span></h2><p><span class=\"fontstyle0\">These shells are packed with a shaped charge, that when impacted, destroy armored targets and buildings. A HE shell ignores 35 points of Hardness.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
+  },
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "effects": [],
+  "folder": "1Fo36W7VdkpuYWi2",
+  "ownership": {
+    "default": 0,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742373888076,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "eNNa19sL4PfjiKlY",
+  "sort": 300000,
+  "_key": "!items!eNNa19sL4PfjiKlY"
+}

@@ -1,0 +1,116 @@
+{
+  "folder": "sBYKlUsbQAaDWyW2",
+  "name": "UV Grenade",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "gh5wEUN2": {
+        "name": "Throw",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {},
+          "flavor": "25' Blast Radius, 50' Wounding Radius",
+          "inherent": "",
+          "ability": "mrk",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {},
+          "flavor": "",
+          "inherent": "",
+          "ability": "",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": true
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {},
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 1,
+      "tons": false,
+      "cost": 9,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "R"
+    },
+    "description": "<h2>UV</h2><p><span class=\"fontstyle0\">When these grenades explode, they give off a sudden bright flash of ultraviolet light. This is considered a sliver of light to those affected. To creatures that aren’t affected by UV light this grenade does nothing.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "importFilter": "",
+    "importMod": "",
+    "errorBase": 0,
+    "damageBase": "3d6",
+    "flavorBase": "UV"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "IDlR3swyzHy0JGgv": 3,
+    "qUf9EhhQBxZF46Rx": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742378422139,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "rMtgGaoIBrNbdsEv",
+  "sort": 0,
+  "_key": "!items!rMtgGaoIBrNbdsEv"
+}

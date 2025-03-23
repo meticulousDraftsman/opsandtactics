@@ -1,0 +1,87 @@
+{
+  "name": "GL Smoke Grenade",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.8,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "yBZJddak": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "cartridges": {
+            "jBFEfWsK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "0",
+                  "primaryFlavor": "Typeless",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "flavor": "15' Initial Smoke Radius",
+              "name": "Smoke"
+            }
+          },
+          "name": "GL Grenade"
+        }
+      },
+      "quality": "",
+      "restriction": "L"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<h2><span class=\"fontstyle0\">Smoke</span></h2><p><span class=\"fontstyle0\">These grenades create smoke to serve as signals or concealment. When the grenade strikes a hard surface, it bursts and fills all squares within 15’ with smoke. On the following round it fills all squares within 20’ and on the third round it fills all squares within 25’. The smoke obscures all sight, including night vision goggles. Anyone within the area has total concealment. It disperses after 10 rounds. Smoke grenades are available in several colors including white, red, yellow, green, blue, orange, and purple.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
+  },
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "effects": [],
+  "folder": "scCtHeE6ujEwBXKQ",
+  "ownership": {
+    "default": 0,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742371933452,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "ozNszr9hLclydBEV",
+  "sort": 800000,
+  "_key": "!items!ozNszr9hLclydBEV"
+}

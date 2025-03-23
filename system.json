@@ -7,13 +7,13 @@
         "name": "Draft",
         "url": "https://foundryvtt.com/community/draftsman"
     }],    
-    "version": "0.5.3",
+    "version": "0.6.0",
     "compatibility": {
         "minimum": 11,
         "verified": "12.331"
     },
     "manifest": "https://raw.githubusercontent.com/meticulousDraftsman/opsandtactics/main/system.json",
-    "download": "https://github.com/meticulousDraftsman/opsandtactics/releases/download/v0.5.3/opsandtactics.zip",
+    "download": "https://github.com/meticulousDraftsman/opsandtactics/releases/download/v0.6.0/opsandtactics.zip",
     "esmodules":["module/opsandtactics.mjs"],
     "styles":["css/opsandtactics.css"],
     "scripts":[],
@@ -29,6 +29,13 @@
             "label": "Core Rulebook",
             "system": "opsandtactics",
             "path": "packs/core-rulebook",
+            "type": "Item"
+        },
+        {
+            "name": "armory",
+            "label": "Armory",
+            "system": "opsandtactics",
+            "path": "packs/armory",
             "type": "Item"
         },
         {
@@ -60,6 +67,7 @@
             "packs":[
                 "system-reference",
                 "core-rulebook",
+                "armory",
                 "mm-rulebook",
                 "aa-rulebook",
                 "procedural"

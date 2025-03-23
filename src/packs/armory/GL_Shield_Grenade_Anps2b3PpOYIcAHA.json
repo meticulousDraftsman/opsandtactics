@@ -1,0 +1,87 @@
+{
+  "name": "GL Shield Grenade",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 0.6,
+      "tons": false,
+      "cost": 10,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "yBZJddak": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "cartridges": {
+            "jBFEfWsK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "1d3+1",
+                  "primaryFlavor": "Rounds",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "flavor": "10' Shield Radius",
+              "name": "Shield"
+            }
+          },
+          "name": "GL Grenade"
+        }
+      },
+      "quality": "",
+      "restriction": "L"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<h2><span class=\"fontstyle0\">Shield</span></h2><p><span class=\"fontstyle0\">This grenade generates a force field shield for 1d3+1 rounds, that protects against 40 points of plasma, ballistic, fire, and cold damage wherever it lands. When the shield takes 40 points of damage from any of these combined damages it immediately disappears. This shield does not protect against acid, piercing, slashing, concussion, or bludgeoning damage. The shield does not also deny anyone the ability to step into the area nor does it protect any of the listed damages if the damage starts within the shield: it only prevents anyone out of the shield from damaging someone on the inside of the shield with the listed damages.</span> </p>",
+    "skillSource": ""
+  },
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "effects": [],
+  "folder": "d3JNH870scxUVFXj",
+  "ownership": {
+    "default": 0,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742375766021,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "Anps2b3PpOYIcAHA",
+  "sort": 0,
+  "_key": "!items!Anps2b3PpOYIcAHA"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Modern Anti-Materiel Rifles",
+  "sorting": "a",
+  "folder": "xhK040NZMYlOSJJ8",
+  "type": "Item",
+  "_id": "qolKS6PvXGzKLesU",
+  "description": "",
+  "sort": 300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1742085265617,
+    "lastModifiedBy": "nc4XC244wznrOEZR"
+  },
+  "_key": "!folders!qolKS6PvXGzKLesU"
+}

@@ -1,0 +1,116 @@
+{
+  "folder": "QoSgsqiM01go84rJ",
+  "name": "Concussion Grenade",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "gh5wEUN2": {
+        "name": "Throw",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {},
+          "flavor": "20' Blast Radius, 40' Wounding Radius",
+          "inherent": "",
+          "ability": "mrk",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {},
+          "flavor": "TN 17 FORT save vs Prone",
+          "inherent": "",
+          "ability": "",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": true
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {},
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "M&P"
+    },
+    "description": "<h2>Concussion</h2><p><span class=\"fontstyle0\">These grenades rely on their explosive power to inflict injury. Any target caught in the blast must make a Fortitude Saving Throw [TN17] or be knocked prone</span> </p>",
+    "importFilter": "",
+    "importMod": "",
+    "errorBase": 0,
+    "damageBase": "4d6",
+    "flavorBase": "Concussion"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "IDlR3swyzHy0JGgv": 3,
+    "qUf9EhhQBxZF46Rx": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742376287813,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "e1RXuemhbQJJOrK3",
+  "sort": 800000,
+  "_key": "!items!e1RXuemhbQJJOrK3"
+}

@@ -1,0 +1,87 @@
+{
+  "name": "Anti-Armor Rifle Grenade",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 1.5,
+      "tons": false,
+      "cost": 6,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "yBZJddak": {
+          "type": "cartridge",
+          "value": 1,
+          "max": 1,
+          "available": true,
+          "cartridges": {
+            "jBFEfWsK": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": 0,
+                "good": {
+                  "primary": "6d6",
+                  "primaryFlavor": "Concussion/Fire",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "flavor": "15' Blast Radius, 30' Wounding Radius, Ignores 10 HRD",
+              "name": "Concussion"
+            }
+          },
+          "name": "Rifle Grenade"
+        }
+      },
+      "quality": "",
+      "restriction": "M&P"
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "description": "<p>Changes weapon range increment to 50'</p><h2><span class=\"fontstyle0\">Rifle Grenade</span></h2><p><span class=\"fontstyle0\">A rifle grenade is a grenade that is attached to a rifle grenade\\ adapter on a rifle, and is fired using a blank round. It can not be used without being attached, and is reloaded onto the barrel of the adapter prior to firing. While attached, if the user fires any other ammunition through the rifle besides a blank round while the rifle grenade is attached, the grenade immediately explodes, damaging all objects and creatures within it’s blast radius. Rifle grenades require the Exotic Firearms Proficiency feat in order to be used without a -4 attack penalty. A rifle grenade can be used on any rifle with a rifle grenade adapter. All listed rifle grenades have a blast radius of 15’, a wounding radius of 30’, and immediately explode upon striking any surface when fired. Any target caught in the blast must make a Fortitude Saving Throw [TN20] or be knocked prone. Rifle grenades are limited to 5 range increments.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "skillSource": ""
+  },
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "effects": [],
+  "folder": "v1pExZHAaV59skum",
+  "ownership": {
+    "default": 0,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742374229431,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "rcOXHzIC5AKqLPw7",
+  "sort": 0,
+  "_key": "!items!rcOXHzIC5AKqLPw7"
+}

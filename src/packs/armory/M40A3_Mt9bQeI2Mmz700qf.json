@@ -1,0 +1,365 @@
+{
+  "name": "M40A3",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/guns/lee-enfield.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><p>F B O</p><h3>Bolt Action</h3><p>The firearm has a bolt that must be worked after each shot, expending the empty round and reloading a new round. All single shot attacks have a +1 attack bonus, but cost +1 Combat Point. Bolt action firearms can perform single shot and potshot attacks. Bolt action firearms require two hands to use, regardless of their size.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "270(135)ft",
+    "crit": 16,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots",
+        "dice": null
+      },
+      "Zn2PAkBL": {
+        "name": "Bipod (Deployed)",
+        "check": "+3",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Cannot also benefit from grips or slings"
+      },
+      "pzOq0lBx": {
+        "name": "Heavy Barrel",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      },
+      "QGjuhGv1": {
+        "name": "10x Telescopic Sight",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "2",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 9,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-4",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "Zn2PAkBL": {
+              "active": false
+            },
+            "pzOq0lBx": {
+              "active": false
+            },
+            "QGjuhGv1": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 16.5,
+      "cost": 136,
+      "quality": "+1",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "QpoFXQGp": {
+          "type": "cartridge",
+          "value": 5,
+          "max": 5,
+          "available": true,
+          "cartridges": {
+            "YNbjV8hJ": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Int. Magazine"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {},
+    "scene-packer": {
+      "hash": "789d3460366d4708ba8cb6d6624b352a608f790e",
+      "sourceId": "Item.gj5GlXsJlac4aIh5"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "folder": "DEedZqyo4dtzGBdS",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3,
+    "vIkoAf0tgtZl6eym": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "_id": "Mt9bQeI2Mmz700qf",
+  "sort": 3400000,
+  "_key": "!items!Mt9bQeI2Mmz700qf"
+}

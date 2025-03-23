@@ -1,0 +1,117 @@
+{
+  "folder": "RmBhYKfdKyZfHuLr",
+  "name": "Acid Pellet",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/abstract/chemical-bolt.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "gh5wEUN2": {
+        "name": "Throw",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {},
+          "flavor": "10'x10' Radius",
+          "inherent": "",
+          "ability": "mrk",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {},
+          "flavor": "",
+          "inherent": "",
+          "ability": "",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": true
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {},
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {}
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 6,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0.1,
+      "tons": false,
+      "cost": 3,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "M&P"
+    },
+    "description": "<p><span class=\"fontstyle0\">A pellet is a small plastic capsule filled with a substance that is activated by air. When a pellet is thrown down against the ground or against a surface, it releases its contents, that instantly react with the air around it giving a short, but sudden effect. When thrown, the pellets cover a 10’ by 10’ area. Pellets come in packs of six</span>.<br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p><h2>Acid</h2><p><span class=\"fontstyle0\">This pellet is filled with a concentrated acid used to burn quick holes in metal, wood, or plastic.</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "importFilter": "",
+    "importMod": "",
+    "errorBase": 0,
+    "damageBase": "1d2",
+    "flavorBase": "Acid"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "IDlR3swyzHy0JGgv": 3,
+    "qUf9EhhQBxZF46Rx": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742380263578,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "3ud6XuzapRdnonss",
+  "sort": 700000,
+  "_key": "!items!3ud6XuzapRdnonss"
+}

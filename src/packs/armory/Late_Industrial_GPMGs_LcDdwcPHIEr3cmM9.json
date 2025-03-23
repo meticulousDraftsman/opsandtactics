@@ -1,0 +1,20 @@
+{
+  "name": "Late Industrial GPMGs",
+  "sorting": "a",
+  "folder": "wi2Pl5Qyct50uDJz",
+  "type": "Item",
+  "_id": "LcDdwcPHIEr3cmM9",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!LcDdwcPHIEr3cmM9"
+}

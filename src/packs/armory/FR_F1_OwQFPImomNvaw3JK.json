@@ -1,0 +1,333 @@
+{
+  "name": "FR F1",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/guns/lee-enfield.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><p>F B O</p><h3>Bolt Action</h3><p>The firearm has a bolt that must be worked after each shot, expending the empty round and reloading a new round. All single shot attacks have a +1 attack bonus, but cost +1 Combat Point. Bolt action firearms can perform single shot and potshot attacks. Bolt action firearms require two hands to use, regardless of their size.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "external",
+      "heatBase": 0
+    },
+    "range": "195(130)ft",
+    "crit": 16,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots",
+        "dice": null
+      },
+      "YfktbjS0": {
+        "name": "Bipod (Deployed)",
+        "check": "+3",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Cannot also benefit from grips or slings"
+      },
+      "LXAFaIRI": {
+        "name": "Heavy Barrel",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      },
+      "9U4ysFeK": {
+        "name": "6x Telescopic Sight",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "2",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 9,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-4",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "YfktbjS0": {
+              "active": false
+            },
+            "LXAFaIRI": {
+              "active": false
+            },
+            "9U4ysFeK": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 12.8,
+      "cost": 150,
+      "quality": "1",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {},
+    "scene-packer": {
+      "hash": "c998d341cb43f2d0d8ba8a1dadba6e3e8f4f8f95",
+      "sourceId": "Actor.ofeN2ycNWEfd1Unf.Item.s4PT1OI285jyi6eM"
+    }
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742174107352,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "folder": "DEedZqyo4dtzGBdS",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3,
+    "CJVhBy5V8eu8KNLb": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "_id": "OwQFPImomNvaw3JK",
+  "sort": 2800000,
+  "_key": "!items!OwQFPImomNvaw3JK"
+}

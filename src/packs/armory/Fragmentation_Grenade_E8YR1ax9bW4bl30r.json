@@ -1,0 +1,116 @@
+{
+  "folder": "QoSgsqiM01go84rJ",
+  "name": "Fragmentation Grenade",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/explosives/grenade.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {},
+    "actions": {
+      "gh5wEUN2": {
+        "name": "Throw",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {},
+          "flavor": "15' Blast Radius, 30' Wounding Radius",
+          "inherent": "",
+          "ability": "mrk",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {},
+          "flavor": "TN 15 FORT save vs Prone",
+          "inherent": "",
+          "ability": "",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": true
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {},
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {}
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          }
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "tiny",
+      "weight": 1,
+      "tons": false,
+      "cost": 2,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "M&P"
+    },
+    "description": "<h2>Fragmentation</h2><p><span class=\"fontstyle0\">This is the most common style of hand grenade. It uses a small explosive charge to fling shards of metal in all directions. Any target caught in the blast must make a Fortitude Saving Throw [TN15] or be knocked prone</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "importFilter": "",
+    "importMod": "",
+    "errorBase": 0,
+    "damageBase": "5d6",
+    "flavorBase": "Slashing"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "IDlR3swyzHy0JGgv": 3,
+    "qUf9EhhQBxZF46Rx": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742376279193,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "E8YR1ax9bW4bl30r",
+  "sort": 600000,
+  "_key": "!items!E8YR1ax9bW4bl30r"
+}

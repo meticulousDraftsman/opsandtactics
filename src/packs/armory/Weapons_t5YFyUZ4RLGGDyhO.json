@@ -1,0 +1,23 @@
+{
+  "name": "Weapons",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "t5YFyUZ4RLGGDyhO",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "0d3c24ab37ed952761c467236bdc61fc9f257ded"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1704022440534,
+    "modifiedTime": 1742699964110,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_key": "!folders!t5YFyUZ4RLGGDyhO"
+}

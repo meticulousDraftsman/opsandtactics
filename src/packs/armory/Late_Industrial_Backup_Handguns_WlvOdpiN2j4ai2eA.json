@@ -1,0 +1,20 @@
+{
+  "name": "Late Industrial Backup Handguns",
+  "sorting": "a",
+  "folder": "3RHwno4zxwPSvjY6",
+  "type": "Item",
+  "_id": "WlvOdpiN2j4ai2eA",
+  "description": "",
+  "sort": 500000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": null,
+    "modifiedTime": 1742519720917,
+    "lastModifiedBy": "nc4XC244wznrOEZR"
+  },
+  "_key": "!folders!WlvOdpiN2j4ai2eA"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Carbines",
+  "sorting": "a",
+  "folder": "t5YFyUZ4RLGGDyhO",
+  "type": "Item",
+  "_id": "2XuTY4pBlRYtUKBS",
+  "description": "",
+  "sort": 500000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1740204464013,
+    "lastModifiedBy": "gq7L5rCvrQsirQoS"
+  },
+  "_key": "!folders!2XuTY4pBlRYtUKBS"
+}

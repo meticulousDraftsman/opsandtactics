@@ -1,0 +1,446 @@
+{
+  "name": "Franchi PA3",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/guns/sawed-off-shotgun.webp",
+  "system": {
+    "description": "<h3 style=\"box-sizing: border-box; user-select: text; margin: 0px 0px 0.5rem; padding: 0px; font-weight: normal; font-size: 1.25em; border-bottom: 1px solid var(--color-underline-header); color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"font-family: Roboto, sans-serif\">Weapon</span></h3><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\">Upgrade Points:</span></p><p>F B</p><h3 style=\"box-sizing: border-box; user-select: text; margin: 0px 0px 0.5rem; padding: 0px; font-weight: normal; font-size: 1.25em; border-bottom: 1px solid var(--color-underline-header); color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"font-family: Roboto, sans-serif\">Pump Action</span></h3><p style=\"box-sizing: border-box; user-select: text; margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\">The firearm has a pump on the forearm that is worked back and forth to cycle a new round. Pump action firearms can perform single shot and potshot attacks. Pump action firearms require two hands to use, regardless of their size.</span></p><h3 style=\"box-sizing: border-box; user-select: text; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track); margin: 0px 0px 0.5rem; padding: 0px; font-weight: normal; font-size: 1.25em; border-bottom: 1px solid var(--color-underline-header); color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\"><span style=\"font-family: Roboto, sans-serif\">Slam</span></h3><p style=\"box-sizing: border-box; user-select: text; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-track); margin: 0.5em 0px; color: rgb(25, 24, 19); font-family: Roboto, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: start\"><span style=\"font-family: Roboto, sans-serif\">A subset of pump action. Firearms with this have no disconnect and will discharge if pumped while the trigger is held down. Slam firearms require two hands to use, regardless of their size.</span></p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "25ft",
+    "crit": 16,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Folding Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots",
+        "dice": null
+      },
+      "OXOUwVq3": {
+        "name": "Coah Cut Smoothbore Barrel",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "-10' Range increment, No close combat penalty, +2 Stealth"
+      },
+      "FadSgT08": {
+        "name": "Vertical Foregrip",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": 2,
+        "cp": null,
+        "description": ""
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Singleshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-6",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": false
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            }
+          }
+        }
+      },
+      "E9nX11EO": {
+        "name": "2rd Slamfire",
+        "active": false,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "mrk",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 1,
+            "bar": 3,
+            "more": 2,
+            "per": 3,
+            "scale": 1
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          }
+        },
+        "recoil": {
+          "inherent": -4,
+          "active": true,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "FadSgT08": {
+              "active": true
+            },
+            "OXOUwVq3": {
+              "active": false
+            }
+          }
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          }
+        }
+      },
+      "6h8KpOOZ": {
+        "name": "3rd Slamfire",
+        "active": false,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "mrk",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 2,
+            "bar": 3,
+            "more": 3,
+            "per": 3,
+            "scale": 1
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          }
+        },
+        "recoil": {
+          "inherent": -5,
+          "active": true,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "FadSgT08": {
+              "active": true
+            },
+            "OXOUwVq3": {
+              "active": false
+            }
+          }
+        },
+        "ammo": 3,
+        "cp": {
+          "inherent": 6,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "OXOUwVq3": {
+              "active": false
+            },
+            "FadSgT08": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 5.9,
+      "cost": 60,
+      "quality": "",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Carried",
+        "note": ""
+      },
+      "resources": {
+        "hvNL0sbe": {
+          "type": "cartridge",
+          "value": 5,
+          "max": 5,
+          "available": true,
+          "cartridges": {
+            "OeZQ8zF7": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Buckshot",
+              "flavor": ""
+            }
+          },
+          "name": "Int"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "damageBase": "",
+    "flavorBase": "",
+    "minimized": false,
+    "errorBase": 0
+  },
+  "effects": [],
+  "folder": "CuJe5UYhS679tQ1k",
+  "ownership": {
+    "default": 0,
+    "AouyhKOcdHIHpK1O": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742327178376,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "MFYIt1yMjQIYcksl",
+  "sort": 1700000,
+  "_key": "!items!MFYIt1yMjQIYcksl"
+}

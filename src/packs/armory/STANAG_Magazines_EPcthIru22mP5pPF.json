@@ -1,0 +1,286 @@
+{
+  "name": "STANAG Magazines",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "description": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 2.75,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "BzIQm25G": {
+          "type": "cartridge",
+          "value": 30,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "uYvcwzrp": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 0"
+        },
+        "2uVxLeFW": {
+          "type": "cartridge",
+          "value": 30,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "lJ1EAcV1": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 1"
+        },
+        "vNpUbhsi": {
+          "type": "cartridge",
+          "value": 30,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "sii6Dx8U": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 2"
+        },
+        "CbPehkXZ": {
+          "type": "cartridge",
+          "value": 30,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "kK8aTdeL": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 3"
+        },
+        "yWftHdHO": {
+          "type": "cartridge",
+          "value": 30,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "uUpAoq3H": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 4"
+        },
+        "EmeiJc9N": {
+          "type": "cartridge",
+          "value": 30,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "uvn9ePRs": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 5"
+        },
+        "hI8V8lLj": {
+          "type": "cartridge",
+          "value": 30,
+          "max": 30,
+          "available": true,
+          "cartridges": {
+            "Xy7szw4H": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 6"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "actions": {},
+    "magazine": {
+      "type": "unlimited",
+      "source": ""
+    },
+    "crit": 16,
+    "range": "5ft"
+  },
+  "_id": "EPcthIru22mP5pPF",
+  "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
+  "effects": [],
+  "folder": "tphoWq7285kWdJNx",
+  "sort": 1700000,
+  "ownership": {
+    "default": 0,
+    "vIkoAf0tgtZl6eym": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "95f471db7b37c19510d0eaf62057ee4d35437c0c"
+    },
+    "core": {
+      "sourceId": "Actor.KPdkdEmNBEAGeESv.Item.VGgt6RitLWjccEce"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1684995958254,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_key": "!items!EPcthIru22mP5pPF"
+}

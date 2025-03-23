@@ -1,0 +1,20 @@
+{
+  "name": "Expensive Modern Rifles",
+  "sorting": "a",
+  "folder": "tI4mcc6u9CgfNi98",
+  "type": "Item",
+  "_id": "UTXWTlpgQTvi2yrd",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!UTXWTlpgQTvi2yrd"
+}

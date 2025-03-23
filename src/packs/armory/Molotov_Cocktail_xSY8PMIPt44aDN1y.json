@@ -1,0 +1,195 @@
+{
+  "folder": "QoSgsqiM01go84rJ",
+  "name": "Molotov Cocktail",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/explosives/molotov.webp",
+  "system": {
+    "minimized": false,
+    "magazine": {
+      "loaded": {},
+      "type": "consumable",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "10ft",
+    "crit": 16,
+    "weaponMods": {
+      "pIsRoHtP": {
+        "name": "Impact Slashing",
+        "check": "",
+        "effect": "1d4[slashing]",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      },
+      "LsjrsiXK": {
+        "name": "Impact Fire",
+        "check": "",
+        "effect": "1d6",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      },
+      "kOWrhMlH": {
+        "name": "Duration",
+        "check": "",
+        "effect": "1d3[Rounds]",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      }
+    },
+    "actions": {
+      "gh5wEUN2": {
+        "name": "Throw",
+        "active": true,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "mods": {
+            "pIsRoHtP": {
+              "active": false
+            },
+            "LsjrsiXK": {
+              "active": false
+            },
+            "kOWrhMlH": {
+              "active": false
+            }
+          },
+          "flavor": "10' Blast Radius",
+          "inherent": "",
+          "ability": "mrk",
+          "ammo": false
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "mods": {
+            "pIsRoHtP": {
+              "active": false
+            },
+            "LsjrsiXK": {
+              "active": false
+            },
+            "kOWrhMlH": {
+              "active": true
+            }
+          },
+          "flavor": "",
+          "inherent": "",
+          "ability": "",
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "ammo": true
+        },
+        "recoil": {
+          "inherent": null,
+          "active": false,
+          "mods": {
+            "pIsRoHtP": {
+              "active": false
+            },
+            "LsjrsiXK": {
+              "active": false
+            },
+            "kOWrhMlH": {
+              "active": false
+            }
+          },
+          "ammo": false
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "pIsRoHtP": {
+              "active": false
+            },
+            "LsjrsiXK": {
+              "active": false
+            },
+            "kOWrhMlH": {
+              "active": false
+            }
+          }
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "pIsRoHtP": {
+              "active": false
+            },
+            "LsjrsiXK": {
+              "active": false
+            },
+            "kOWrhMlH": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "gear": {
+      "quantity": {
+        "value": 4,
+        "available": false
+      },
+      "size": "small",
+      "weight": 1,
+      "tons": false,
+      "cost": 1,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "quality": "",
+      "restriction": "I"
+    },
+    "description": "<h2>Molotov Cocktail</h2><p><span class=\"fontstyle0\">This homemade explosive device is common on the street and consists of a glass bottle filled with a flammable liquid (usually gasoline) and an oily rag for a wick. It shatters when it hits a hard surface, spraying flaming gasoline over the immediate area and leaving a burning fire for 1d3+1 rounds in it’s burst radius. Anyone hit directly with a Molotov cocktail takes an additional 1d6 slashing damage, an additional 1d6 fire damage, and catches fire immediately. Any creature that steps into a square immediately takes the weapon’s fire damage, per square they step through. Making Molotov cocktails is a Demolitions check [TN10], but can be attempted untrained with an Intelligence Check [TN10]</span> <br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"><br style=\" font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; \"></p>",
+    "importFilter": "",
+    "importMod": "",
+    "errorBase": 0,
+    "damageBase": "1d6",
+    "flavorBase": "Fire"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "IDlR3swyzHy0JGgv": 3,
+    "qUf9EhhQBxZF46Rx": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742378076715,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "xSY8PMIPt44aDN1y",
+  "sort": 0,
+  "_key": "!items!xSY8PMIPt44aDN1y"
+}

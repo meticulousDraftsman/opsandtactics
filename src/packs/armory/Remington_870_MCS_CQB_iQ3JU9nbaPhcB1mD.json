@@ -1,0 +1,511 @@
+{
+  "name": "Remington 870 MCS CQB",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/guns/sawed-off-shotgun.webp",
+  "system": {
+    "description": "<p><span style=\"font-family: Roboto, sans-serif\">This weapon is built from a kit, where any Remington MCS can be constructed using the kit, but only one at a time. This change takes 15 minutes.</span></p><h3>Weapon</h3><p>Upgrade Points:</p><p>F B O 2T</p><h3>Pump Action</h3><p>The firearm has a pump on the forearm that is worked back and forth to cycle a new round. Pump action firearms can perform single shot and potshot attacks. Pump action firearms require two hands to use, regardless of their size.</p><h3>Slam</h3><p>A subset of pump action. Firearms with this have no disconnect and will discharge if pumped while the trigger is held down. Slam firearms require two hands to use, regardless of their size.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "internal",
+      "heatBase": 0
+    },
+    "range": "40ft",
+    "crit": 16,
+    "weaponMods": {
+      "gN80d9f3": {
+        "name": "Fixed Stock",
+        "check": "",
+        "effect": "",
+        "recoil": 2,
+        "cp": -1,
+        "description": "CP reduction for single shots and recoil reduction for multishots",
+        "dice": null
+      },
+      "APv7iqgY": {
+        "name": "Coach Cut Smoothbore Barrel",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "-10' Range increment, No close combat penalty, +2 stealth"
+      },
+      "NioYULJp": {
+        "name": "2rd Magazine Tube Upgrade",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": ""
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "1",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 8,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-5",
+          "ability": "mrk",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        }
+      },
+      "be8Kgd92": {
+        "name": "2rd Slamfire",
+        "active": false,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "mrk",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 1,
+            "bar": 3,
+            "more": 2,
+            "per": 3,
+            "scale": 1
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        },
+        "recoil": {
+          "inherent": -4,
+          "active": true,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        }
+      },
+      "PjPBif5r": {
+        "name": "3rd Slamfire",
+        "active": false,
+        "display": true,
+        "check": {
+          "type": "ranged",
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "mrk",
+          "flavor": ""
+        },
+        "effect": {
+          "scaleAbility": 1,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          },
+          "inherent": "",
+          "ability": "",
+          "flavor": ""
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 2,
+            "bar": 3,
+            "more": 3,
+            "per": 3,
+            "scale": 1
+          },
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        },
+        "recoil": {
+          "inherent": -5,
+          "active": true,
+          "ammo": true,
+          "mods": {
+            "gN80d9f3": {
+              "active": true
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        },
+        "ammo": 3,
+        "cp": {
+          "inherent": 6,
+          "mods": {
+            "gN80d9f3": {
+              "active": false
+            },
+            "APv7iqgY": {
+              "active": false
+            },
+            "NioYULJp": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "large",
+      "weight": 7.3,
+      "cost": 55,
+      "quality": "1",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "9K7Az2BT": {
+          "type": "cartridge",
+          "value": 5,
+          "max": 5,
+          "available": true,
+          "cartridges": {
+            "korc2nbC": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -6,
+                "good": {
+                  "primary": "5d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "Buckshot",
+              "flavor": ""
+            }
+          },
+          "name": "Int. Magazine"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {},
+    "scene-packer": {
+      "hash": "e7b6b224e1d0e9e4a722beb9d1b68c9970427adc",
+      "sourceId": "Item.j3NiGhaebpqnIawL"
+    }
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1742349922782,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "folder": "CuJe5UYhS679tQ1k",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3,
+    "vIkoAf0tgtZl6eym": 3,
+    "nc4XC244wznrOEZR": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "_id": "iQ3JU9nbaPhcB1mD",
+  "sort": 0,
+  "_key": "!items!iQ3JU9nbaPhcB1mD"
+}

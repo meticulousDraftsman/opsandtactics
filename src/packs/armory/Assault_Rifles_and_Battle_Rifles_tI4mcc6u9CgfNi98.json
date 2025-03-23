@@ -1,0 +1,20 @@
+{
+  "name": "Assault Rifles and Battle Rifles",
+  "sorting": "a",
+  "folder": "t5YFyUZ4RLGGDyhO",
+  "type": "Item",
+  "_id": "tI4mcc6u9CgfNi98",
+  "description": "",
+  "sort": 400000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1740204464013,
+    "lastModifiedBy": "gq7L5rCvrQsirQoS"
+  },
+  "_key": "!folders!tI4mcc6u9CgfNi98"
+}

@@ -1,0 +1,158 @@
+{
+  "name": "M249 Belt",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "description": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 5,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "rkeguCO7": {
+          "type": "cartridge",
+          "value": 100,
+          "max": 100,
+          "available": true,
+          "cartridges": {
+            "8PXEdHd2": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Belt 0"
+        },
+        "USAniKFy": {
+          "type": "cartridge",
+          "value": null,
+          "max": null,
+          "available": true,
+          "cartridges": {
+            "pRffwKZ6": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Belt 1"
+        },
+        "f9XqZ4Po": {
+          "type": "cartridge",
+          "value": null,
+          "max": null,
+          "available": true,
+          "cartridges": {
+            "w8wXLBdd": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -5,
+                "good": {
+                  "primary": "5d4",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Belt 2"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "actions": {},
+    "magazine": {
+      "type": "unlimited",
+      "source": ""
+    },
+    "crit": 16,
+    "range": "5ft"
+  },
+  "_id": "0GJd2ljPCWcIwwVO",
+  "img": "systems/opsandtactics/icons/weapons/ammo/bullets.webp",
+  "effects": [],
+  "folder": "tphoWq7285kWdJNx",
+  "sort": 1100000,
+  "ownership": {
+    "default": 0,
+    "vIkoAf0tgtZl6eym": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "4d0eada6849d0ddcb0c9bdba2a930e11975edb01"
+    },
+    "core": {
+      "sourceId": "Actor.kHnhdwcofv3Yk8X3.Item.Wcq0CA023rcmAzU0"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1684997087862,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_key": "!items!0GJd2ljPCWcIwwVO"
+}

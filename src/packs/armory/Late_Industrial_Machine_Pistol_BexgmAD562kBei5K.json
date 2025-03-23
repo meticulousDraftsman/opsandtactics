@@ -1,0 +1,20 @@
+{
+  "name": "Late Industrial Machine Pistol",
+  "sorting": "a",
+  "folder": "F05STkteIwvXztNE",
+  "type": "Item",
+  "_id": "BexgmAD562kBei5K",
+  "description": "",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1742077349352,
+    "lastModifiedBy": "nc4XC244wznrOEZR"
+  },
+  "_key": "!folders!BexgmAD562kBei5K"
+}

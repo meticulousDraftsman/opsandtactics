@@ -1,0 +1,100 @@
+{
+  "name": "Glock 26 Magazine 15 Rds",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "qBJGbMVf": {
+          "type": "cartridge",
+          "value": 15,
+          "max": 15,
+          "available": true,
+          "cartridges": {
+            "2af9s1RW": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6+2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "2d6-2",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "JHP",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 0"
+        },
+        "By0tOLdI": {
+          "type": "cartridge",
+          "value": 15,
+          "max": 15,
+          "available": true,
+          "cartridges": {},
+          "name": "Mag 1"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "skillSource": ""
+  },
+  "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
+  "effects": [],
+  "folder": "tphoWq7285kWdJNx",
+  "ownership": {
+    "default": 0,
+    "vIkoAf0tgtZl6eym": 3,
+    "vGHctaJvDKyhqw1i": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "12aa0e6eac98f33139052584a9db19ab74dec0f6"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1705762968587,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "Ltkh2UTOXgAHMoEP",
+  "sort": 1000000,
+  "_key": "!items!Ltkh2UTOXgAHMoEP"
+}

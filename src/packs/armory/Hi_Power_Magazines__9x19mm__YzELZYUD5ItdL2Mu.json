@@ -1,0 +1,159 @@
+{
+  "name": "Hi Power Magazines (9x19mm)",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "description": "",
+    "gear": {
+      "quantity": {
+        "value": 3,
+        "available": false
+      },
+      "size": "fine",
+      "weight": 0,
+      "cost": null,
+      "quality": "",
+      "restriction": "",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "NL8nVefW": {
+          "type": "cartridge",
+          "value": 13,
+          "max": 13,
+          "available": true,
+          "cartridges": {
+            "Sxmcctg0": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 0"
+        },
+        "BsrUvIky": {
+          "type": "cartridge",
+          "value": 13,
+          "max": 13,
+          "available": true,
+          "cartridges": {
+            "wetJGpga": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 1"
+        },
+        "BdWIFic7": {
+          "type": "cartridge",
+          "value": 13,
+          "max": 13,
+          "available": true,
+          "cartridges": {
+            "0pjqitRh": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 2"
+        }
+      },
+      "tons": false,
+      "capital": false
+    },
+    "actions": {},
+    "magazine": {
+      "type": "unlimited",
+      "source": ""
+    },
+    "crit": 16,
+    "range": "5ft",
+    "skillSource": ""
+  },
+  "_id": "YzELZYUD5ItdL2Mu",
+  "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
+  "effects": [],
+  "folder": "tphoWq7285kWdJNx",
+  "sort": 1200000,
+  "ownership": {
+    "default": 0,
+    "vIkoAf0tgtZl6eym": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "aee604c615df09f0854d36474a3129ee25ad6e5c"
+    },
+    "core": {
+      "sourceId": "Actor.it2Rr7UZbUq8RcXC.Item.KiU5Z90pXstVUxPY"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1684986440686,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_key": "!items!YzELZYUD5ItdL2Mu"
+}

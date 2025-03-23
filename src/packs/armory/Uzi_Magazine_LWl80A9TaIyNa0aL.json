@@ -1,0 +1,94 @@
+{
+  "name": "Uzi Magazine",
+  "type": "object",
+  "system": {
+    "minimized": false,
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "fine",
+      "weight": null,
+      "tons": false,
+      "cost": null,
+      "capital": false,
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {
+        "8bXrWt63": {
+          "type": "cartridge",
+          "value": 32,
+          "max": 32,
+          "available": true,
+          "cartridges": {
+            "SGJMuwiM": {
+              "stats": {
+                "check": 0,
+                "error": 0,
+                "recoil": -2,
+                "good": {
+                  "primary": "2d6",
+                  "primaryFlavor": "Ballistic",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                },
+                "bad": {
+                  "primary": "",
+                  "primaryFlavor": "",
+                  "secondary": "",
+                  "secondaryFlavor": "",
+                  "extra": ""
+                }
+              },
+              "name": "FMJ",
+              "flavor": ""
+            }
+          },
+          "name": "Mag 0"
+        }
+      },
+      "quality": "",
+      "restriction": ""
+    },
+    "actions": {},
+    "range": "5ft",
+    "magazine": {
+      "type": "unlimited"
+    },
+    "crit": 16,
+    "skillSource": ""
+  },
+  "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
+  "effects": [],
+  "folder": "tphoWq7285kWdJNx",
+  "ownership": {
+    "default": 0,
+    "vIkoAf0tgtZl6eym": 3,
+    "ktVGZJuAFIg56jDi": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "flags": {
+    "scene-packer": {
+      "hash": "8b29ecc799ab61faa55c128128a6f927f7168d0f"
+    },
+    "core": {
+      "sourceId": "Actor.oVSd7PpqBrYhViNa.Item.s1zXGXIp33DxxQpa"
+    }
+  },
+  "_stats": {
+    "coreVersion": "11.315",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": 1739797876051,
+    "modifiedTime": 1742699962342,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_id": "LWl80A9TaIyNa0aL",
+  "sort": 106250,
+  "_key": "!items!LWl80A9TaIyNa0aL"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Ammunition",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "uHpSXPZ23t04nuzr",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "scene-packer": {
+      "hash": "4d569de8e07821d724f0d84c6167604641894356"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1704350342954,
+    "modifiedTime": 1742700006359,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "_key": "!folders!uHpSXPZ23t04nuzr"
+}

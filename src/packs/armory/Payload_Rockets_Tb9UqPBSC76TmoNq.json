@@ -1,0 +1,20 @@
+{
+  "name": "Payload Rockets",
+  "sorting": "a",
+  "folder": "80hUh2jwkgsU0xpE",
+  "type": "Item",
+  "_id": "Tb9UqPBSC76TmoNq",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!Tb9UqPBSC76TmoNq"
+}

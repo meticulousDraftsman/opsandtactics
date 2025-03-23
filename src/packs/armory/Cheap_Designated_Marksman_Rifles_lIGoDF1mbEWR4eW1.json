@@ -1,0 +1,20 @@
+{
+  "name": "Cheap Designated Marksman Rifles",
+  "sorting": "a",
+  "folder": "xhK040NZMYlOSJJ8",
+  "type": "Item",
+  "_id": "lIGoDF1mbEWR4eW1",
+  "description": "",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1742085303322,
+    "lastModifiedBy": "nc4XC244wznrOEZR"
+  },
+  "_key": "!folders!lIGoDF1mbEWR4eW1"
+}

@@ -1,0 +1,443 @@
+{
+  "name": "Wilson Combat Hunter",
+  "type": "weapon",
+  "img": "systems/opsandtactics/icons/weapons/guns/colt-m1911.webp",
+  "system": {
+    "description": "<h3>Weapon</h3><p>Upgrade Points:</p><p>F B</p><h3>Single Action (SA)</h3><p>Single Action requires the hammer to be pulled back before firing again. Single action firearms that take box magazines or have internal magazines are considered semi- automatic firearms. All Single Action firearms gain a +1 attack bonus on all single shot and potshot attacks. Single Action firearms with cylinders cost +1 Combat Points when performing a single shot attack.</p>",
+    "type": "",
+    "magazine": {
+      "loaded": {},
+      "type": "cartridge",
+      "source": "",
+      "insideOut": "external",
+      "heatBase": 0
+    },
+    "range": "50ft",
+    "crit": 16,
+    "weaponMods": {
+      "qiawlpxu": {
+        "name": "Adjustable Iron Sights",
+        "check": "2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "+2 To-Hit in second range increment"
+      },
+      "R4A6HuPe": {
+        "name": " Grip sight Laser (Single)",
+        "check": "+1",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Attack bonus to single shots within first range increment, cannot combine with other sight attack bonuses"
+      },
+      "yXLdZfzi": {
+        "name": "Grip sight Laser (Potshot)",
+        "check": "+2",
+        "effect": "",
+        "dice": null,
+        "recoil": null,
+        "cp": null,
+        "description": "Attack bonus to potshots within first range increment, cannot combine with other sight attack bonuses"
+      },
+      "N7TXsosp": {
+        "name": "Muzzle Brake",
+        "check": "",
+        "effect": "",
+        "dice": null,
+        "recoil": 3,
+        "cp": null,
+        "description": "Barrel must be threaded"
+      }
+    },
+    "actions": {
+      "NVA771Fm": {
+        "name": "Single Shot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "+4",
+          "ability": "mrk",
+          "mods": {
+            "R4A6HuPe": {
+              "active": true
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "qiawlpxu": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 5,
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "N7TXsosp": {
+              "active": false
+            },
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          }
+        }
+      },
+      "DBIBJwPl": {
+        "name": "Potshot",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "-2",
+          "ability": "mrk",
+          "mods": {
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": true
+            },
+            "qiawlpxu": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 1,
+        "cp": {
+          "inherent": 4,
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": null,
+          "mods": {
+            "N7TXsosp": {
+              "active": false
+            },
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            }
+          },
+          "active": false,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": null,
+            "bar": null,
+            "more": null,
+            "per": null,
+            "scale": null
+          },
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          }
+        }
+      },
+      "lla0OcKp": {
+        "name": "Double Tap",
+        "active": true,
+        "check": {
+          "flavor": "",
+          "type": "ranged",
+          "source": "",
+          "inherent": "3",
+          "ability": "mrk",
+          "mods": {
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "qiawlpxu": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "effect": {
+          "flavor": "",
+          "type": "",
+          "source": "",
+          "inherent": "",
+          "ability": "",
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          },
+          "scaleAbility": 1,
+          "ammo": true
+        },
+        "ammo": 2,
+        "cp": {
+          "inherent": 6,
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          }
+        },
+        "display": true,
+        "recoil": {
+          "inherent": -3,
+          "mods": {
+            "N7TXsosp": {
+              "active": true
+            },
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            }
+          },
+          "active": true,
+          "ammo": true
+        },
+        "dice": {
+          "scaleCartridge": {
+            "less": 1,
+            "bar": 3,
+            "more": 2,
+            "per": 3,
+            "scale": 1
+          },
+          "mods": {
+            "qiawlpxu": {
+              "active": false
+            },
+            "R4A6HuPe": {
+              "active": false
+            },
+            "yXLdZfzi": {
+              "active": false
+            },
+            "N7TXsosp": {
+              "active": false
+            }
+          }
+        }
+      }
+    },
+    "selectMod": "",
+    "importFilter": "",
+    "importMod": "",
+    "gear": {
+      "quantity": {
+        "value": 1,
+        "available": false
+      },
+      "size": "small",
+      "weight": 3,
+      "cost": 200,
+      "quality": "+3",
+      "restriction": "L",
+      "physical": true,
+      "location": {
+        "parent": "Loose",
+        "note": ""
+      },
+      "resources": {},
+      "tons": false,
+      "capital": false
+    },
+    "minimized": false,
+    "errorBase": 0,
+    "damageBase": "",
+    "flavorBase": ""
+  },
+  "effects": [],
+  "flags": {
+    "core": {},
+    "scene-packer": {
+      "hash": "0ee37e47a6367841959ff84fc7c9f66d352de44a",
+      "sourceId": "Item.hugRIwh5wKxhHqy1"
+    }
+  },
+  "_stats": {
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.3",
+    "coreVersion": "11.315",
+    "createdTime": 1681637449760,
+    "modifiedTime": 1742699965976,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
+  },
+  "folder": "C74l5UF3zwBCcV6G",
+  "ownership": {
+    "default": 0,
+    "qUf9EhhQBxZF46Rx": 3,
+    "vIkoAf0tgtZl6eym": 3,
+    "awmzRJQcQXoX998M": 3
+  },
+  "_id": "SmWNry3zuYcUkOqT",
+  "sort": 4700000,
+  "_key": "!items!SmWNry3zuYcUkOqT"
+}

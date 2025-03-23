@@ -1,0 +1,20 @@
+{
+  "name": "Early Modern Rifles",
+  "sorting": "a",
+  "folder": "tI4mcc6u9CgfNi98",
+  "type": "Item",
+  "_id": "nhUkKhMMCfVG85W9",
+  "description": "",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1740204232052,
+    "lastModifiedBy": "gq7L5rCvrQsirQoS"
+  },
+  "_key": "!folders!nhUkKhMMCfVG85W9"
+}

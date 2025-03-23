@@ -1,0 +1,20 @@
+{
+  "name": "Late Industrial SMGs",
+  "sorting": "a",
+  "folder": "F05STkteIwvXztNE",
+  "type": "Item",
+  "_id": "pzRVqvApWLUwF1RO",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!pzRVqvApWLUwF1RO"
+}

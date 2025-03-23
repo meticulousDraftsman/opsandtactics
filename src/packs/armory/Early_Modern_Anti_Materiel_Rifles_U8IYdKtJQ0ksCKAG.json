@@ -1,0 +1,20 @@
+{
+  "name": "Early Modern Anti-Materiel Rifles",
+  "sorting": "a",
+  "folder": "xhK040NZMYlOSJJ8",
+  "type": "Item",
+  "_id": "U8IYdKtJQ0ksCKAG",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1742085594770,
+    "lastModifiedBy": "nc4XC244wznrOEZR"
+  },
+  "_key": "!folders!U8IYdKtJQ0ksCKAG"
+}

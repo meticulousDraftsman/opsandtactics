@@ -1,0 +1,20 @@
+{
+  "name": "Cheap Modern Rifles",
+  "sorting": "a",
+  "folder": "tI4mcc6u9CgfNi98",
+  "type": "Item",
+  "_id": "9OgsQguVz4AzhEnd",
+  "description": "",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "opsandtactics",
+    "systemVersion": "0.5.0",
+    "createdTime": null,
+    "modifiedTime": 1742397965141,
+    "lastModifiedBy": "nc4XC244wznrOEZR"
+  },
+  "_key": "!folders!9OgsQguVz4AzhEnd"
+}
