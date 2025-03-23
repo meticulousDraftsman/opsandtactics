@@ -1,5 +1,5 @@
 {
-  "name": "STANAG Magazines",
+  "name": "STANAG (M16) Magazines",
   "type": "object",
   "system": {
     "minimized": false,
@@ -254,7 +254,8 @@
       "source": ""
     },
     "crit": 16,
-    "range": "5ft"
+    "range": "5ft",
+    "skillSource": ""
   },
   "_id": "EPcthIru22mP5pPF",
   "img": "systems/opsandtactics/icons/weapons/ammo/magazine.webp",
@@ -276,10 +277,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.5.3",
+    "systemVersion": "0.6.0",
     "coreVersion": "11.315",
     "createdTime": 1684995958254,
-    "modifiedTime": 1742699962342,
+    "modifiedTime": 1742702040096,
     "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!EPcthIru22mP5pPF"
