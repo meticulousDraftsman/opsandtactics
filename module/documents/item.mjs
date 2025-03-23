@@ -404,34 +404,34 @@ export class OpsItem extends Item {
         let goodBonus = 0;
         let badBonus = 0;
         if (sourceAction.effect.ammo){
-          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primary') && Roll.validate(tweakedThis.system.magazine.loaded.stats.good.primary)){
             
             mods.goodBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.primary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.primaryFlavor')}]`:''}`);
             if (mods.goodBase.primary.terms[0] instanceof Die) goodCount += mods.goodBase.primary.terms[0].number;
           } 
-          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondary') && Roll.validate(tweakedThis.system.magazine.loaded.stats.good.secondary)){
             
             mods.goodBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.good.secondary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.secondaryFlavor')}]`:''}`);
             if (mods.goodBase.secondary.terms[0] instanceof Die) goodCount += mods.goodBase.secondary.terms[0].number;
           } 
-          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.extra')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.good.extra') && Roll.validate(tweakedThis.system.magazine.loaded.stats.good.extra)){
             
             mods.goodBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.good.extra);
           }
 
   
           
-          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primary') && Roll.validate(tweakedThis.system.magazine.loaded.stats.bad.primary)){
             
             mods.badBase.primary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.primary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.primaryFlavor')}]`:''}`);
             if (mods.badBase.primary.terms[0] instanceof Die) badCount += mods.badBase.primary.terms[0].number;
           } 
-          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondary')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondary') && Roll.validate(tweakedThis.system.magazine.loaded.stats.bad.secondary)){
             
             mods.badBase.secondary = new Roll(`${tweakedThis.system.magazine.loaded.stats.bad.secondary}${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')?`[${foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.secondaryFlavor')}]`:''}`);
             if (mods.badBase.secondary.terms[0] instanceof Die) badCount += mods.badBase.secondary.terms[0].number;
           } 
-          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.extra')){
+          if (foundry.utils.getProperty(tweakedThis,'system.magazine.loaded.stats.bad.extra') && Roll.validate(tweakedThis.system.magazine.loaded.stats.bad.extra)){
             
             mods.badBase.extra = new Roll(tweakedThis.system.magazine.loaded.stats.bad.extra);
           } 
