@@ -1501,18 +1501,18 @@ class AttackDashboardApp extends FormApplication {
       case 'cov0':
         break;
       case 'cov1':
-        context.defenseTotal += 3;
+        context.defenseTotal += Math.floor(3/Number(foundry.utils.getProperty(this.object,'offense.sharp')?this.object.offense.sharp:1));
         break;
       case 'cov2':
-        context.defenseTotal += 6;
+        context.defenseTotal += Math.floor(6/Number(foundry.utils.getProperty(this.object,'offense.sharp')?this.object.offense.sharp:1));
         context.missChance = 10;
         break;
       case 'cov3':
-        context.defenseTotal += 9;
+        context.defenseTotal += Math.floor(9/Number(foundry.utils.getProperty(this.object,'offense.sharp')?this.object.offense.sharp:1));
         context.missChance = 20;
         break;
       case 'cov4':
-        context.defenseTotal += 15;
+        context.defenseTotal += Math.floor(15/Number(foundry.utils.getProperty(this.object,'offense.sharp')?this.object.offense.sharp:1));
         context.missChance = 30;
     }
     context.missChance = Math.max(context.missChance,Number(foundry.utils.getProperty(this.object,'defense.conceal')?this.object.defense.conceal:0));

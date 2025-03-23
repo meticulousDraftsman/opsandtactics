@@ -7,7 +7,7 @@
             <div class="flex-group-center">
                 <input type="text" name="tweaks.situation" value="{{tweaks.situation}}" placeholder="Generic">
             </div>
-            <div class="grid grid-2col flex-grouo-venter">
+            <div class="grid grid-2col">
                 <fieldset>
                     <legend class="resource-label">
                         {{#if (eq tweaks.attack.check.type 'melee')}}Melee{{else}}Ranged{{/if}} Attack: {{numberFormat offenseTotal sign=true}}
@@ -19,7 +19,11 @@
                             <input type="checkbox" name="tweaks.offense.high" value="1" {{checked tweaks.offense.high}}>
                         </label>
                         {{/if}}
-                        <label class="grid-span-2 flexrow flex-group-center">
+                        <label class="grid-span-1 flexrow flex-group-center">
+                            <span>Sharpshooter</span>
+                            <input type="checkbox" name="tweaks.offense.sharp" value="2" {{checked tweaks.offense.sharp}}>
+                        </label>
+                        <label class="grid-span-1 flexrow flex-group-center">
                             <span>Unseen (+2)</span>
                             <input type="checkbox" name="tweaks.offense.seen" value="2" {{checked tweaks.offense.seen}}>
                         </label>
