@@ -98,8 +98,14 @@ export class OpsActorSheet extends ActorSheet {
    */
   async _prepareCharacterData(context) {
     const systemData = context.system;
+    const rollData = this.actor.getRollData({deterministic:true});
     // Determine XP required for the next level
     systemData.stats.level.xp.needed =`${Number(systemData.stats.level.xp.value).toLocaleString()} / ${Number(systemData.stats.level.value*systemData.stats.level.value*1500).toLocaleString()}xp`;
+    // Display trait formulas with rolldata replaced
+    systemData.health.chp.display = Roll.replaceFormulaData(systemData.health.chp.formula,rollData);
+    systemData.health.xhp.display = Roll.replaceFormulaData(systemData.health.xhp.formula,rollData);
+    systemData.ml.display = Roll.replaceFormulaData(systemData.ml.formula,rollData);
+    systemData.stats.carrying.display = Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData);
     // Determine number of Incantation Recipes are memorized
     systemData.magic.numRecipes = systemData.magic.invokerMemorize?((3+systemData.abilities.cha.mod)*systemData.stats.level.value):0;
     // Initiative Wagering Options
@@ -793,6 +799,8 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.action-spend').click(this._actionSpend.bind(this));
     html.find('.action-create').click(this._actionCreate.bind(this));
     html.find('.action-delete').click(this._actionDelete.bind(this));
+    // Trait Editing
+    html.find('.trait-edit').click(this._editTrait.bind(this));
     // Character Option Points
     html.find('.create-cop').click(this._copCreate.bind(this));    
     html.find('.delete-cop').click(this._copDelete.bind(this));
@@ -1076,6 +1084,13 @@ export class OpsActorSheet extends ActorSheet {
     const updateData = {};
     updateData[`system.actions.-=${event.currentTarget.dataset.target}`] = null;
     await this.actor.update(updateData);
+  }
+  _editTrait(event){
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+    const target = dataset.targetName;
+    console.debug(this.object)
+    new TraitEditApp(this.object,{target:target}).render(true)
   }
   async _copCreate(event){
     event.preventDefault();
@@ -1528,7 +1543,7 @@ class AttackDashboardApp extends FormApplication {
     super.activateListeners(html);
     html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
     html.find('.attack-roll').click(this.rollAttack.bind(this));
-    html.find('.damage-roll').click(this.rollDamage.bind(this));
+    html.find('.damage-roll').click(this.rollDamage.bind(this));    
   }
 
   async rollAttack(event){
@@ -1570,6 +1585,88 @@ class AttackDashboardApp extends FormApplication {
       foundry.utils.setProperty(this.object,key,entry)
     }
     this.render()
+  }
+}
+class TraitEditApp extends FormApplication {
+  static get defaultOptions() {
+    return foundry.utils.mergeObject(super.defaultOptions, {
+      classes: ["opsandtactics", "sheet", "item"],
+      template: 'systems/opsandtactics/templates/interface/dialog-trait-edit.html',
+      width: 520,
+      height: 240,
+      closeOnSubmit: false,
+      submitOnChange: true,
+      submitOnClose: true,
+      resizable: true
+    });
+  }
+  get title(){
+    let temp = 'Trait';
+    switch (this.options.target){
+      case 'system.health.chp':
+        temp = 'Core Hit Points';
+        break;
+      case 'system.health.xhp':
+        temp = 'Extended Hit Points';
+        break;
+      case 'system.ml':
+        temp = 'Mental Limit';
+        break;
+      case 'system.stats.carrying':
+        temp = 'Carrying Capacity';
+        break;
+    }
+    return `Editing ${temp} calculation for ${this.object.name}`;
+  }
+  getData(){
+    const context = {
+      OATS: CONFIG.OATS,
+      system: this.object.system,
+      trait: {
+        id: this.options.target,
+        object: foundry.utils.getProperty(this.object,this.options.target),
+        formula: {
+          current: foundry.utils.getProperty(this.object,`${this.options.target}.formula`),
+          source: foundry.utils.getProperty(this.object._source,`${this.options.target}.formula`),
+          overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.formula`)
+        },
+        misc: foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`)
+      }
+    };    
+    console.debug(this.object)
+    return context;
+    if (foundry.utils.getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
+    for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
+      for (let imp of ['check','effect','dice','recoil','cp']){
+        if ((entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: entry[imp], description: entry.description,active:foundry.utils.getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)};
+      }
+    }
+    for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
+      for (let imp of ['check','effect','dice','recoil','cp']){
+        if (!(entry[imp])) context.attack[imp][key] =  {name: entry.name, [imp]: null, description: entry.description,active:foundry.utils.getProperty(this.object,`system.actions.${this.options.target}.${imp}.mods.${key}.active`)} ;
+      }
+    }
+    return context;
+  }
+  activateListeners(html){
+    super.activateListeners(html);
+    html.find('.trait-copy').click(this._onCopyTrait.bind(this));
+  }
+  _onCopyTrait(event){
+    event.preventDefault();
+    game.clipboard.copyPlainText(event.currentTarget.dataset.path)
+    ui.notifications.info(`Example attribute key '${event.currentTarget.dataset.path}' copied to clipboard.`)
+  }
+  render(force=false, options={}){
+    this.object.apps[this.appId] = this;
+    return super.render(force,options)
+  }
+  close(options={}){
+    delete this.object.apps[this.appId]
+    return super.close(options)
+  }
+  async _updateObject(event, formData){
+    await this.object.update(formData)
   }
 }
 class UtilityDashboardApp extends FormApplication {

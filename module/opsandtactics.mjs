@@ -97,6 +97,10 @@ Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });
 
+Handlebars.registerHelper('capitalize', function(str) {
+  return String(str).charAt(0).toUpperCase() + String(str).slice(1);;
+});
+
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */

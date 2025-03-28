@@ -1,0 +1,28 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <section class="sheet-body">
+        <fieldset>
+            <legend class="resource-label">Base Formula</legend>
+            <div class="flex-group-center">
+                <input name="{{trait.id}}.formula" value="{{trait.formula.source}}" type="text" data-dtype="String" placeholder="Formula">
+                {{#if trait.formula.overridden}}
+                <input value="{{trait.formula.current}}" type="text" data-dtype="String" data-tooltip="Attribute changed by Active Effects" readonly>
+                {{/if}}
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend class="resource-label">Modifiers <a data-tooltip="Copy Attribute Key"><i class="fas fa-copy trait-copy" data-path="{{trait.id}}.mods.effectName"></i></a></legend>
+            <div class="grid grid-4col flex-group-center">
+                {{#each trait.object.mods}}
+                {{#if (eq 'misc' @key)}}
+                <span>Misc</span>
+                <input name="{{@root.trait.id}}.mods.misc" value="{{@root.trait.misc}}" type="text" data-dtype="Number" placeholder="0">
+                {{else}}
+                <span>{{capitalize @key}}</span>
+                <input value="{{this}}" type="text" data-dtype="String" readonly>
+                {{/if}}
+                {{/each}}
+                
+            </div>
+        </fieldset>
+    </section>
+</form>
