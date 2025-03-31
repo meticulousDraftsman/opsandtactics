@@ -47,6 +47,9 @@
           "mods": {
             "gN80d9f3": {
               "active": false
+            },
+            "n7IMcskE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -61,6 +64,9 @@
           "mods": {
             "gN80d9f3": {
               "active": false
+            },
+            "n7IMcskE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -72,6 +78,9 @@
           "mods": {
             "gN80d9f3": {
               "active": true
+            },
+            "n7IMcskE": {
+              "active": false
             }
           }
         },
@@ -80,6 +89,9 @@
           "inherent": null,
           "mods": {
             "gN80d9f3": {
+              "active": false
+            },
+            "n7IMcskE": {
               "active": false
             }
           },
@@ -96,6 +108,9 @@
           },
           "mods": {
             "gN80d9f3": {
+              "active": false
+            },
+            "n7IMcskE": {
               "active": false
             }
           }
@@ -179,6 +194,9 @@
           "mods": {
             "gN80d9f3": {
               "active": false
+            },
+            "n7IMcskE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -193,6 +211,9 @@
           "mods": {
             "gN80d9f3": {
               "active": false
+            },
+            "n7IMcskE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -204,6 +225,9 @@
           "mods": {
             "gN80d9f3": {
               "active": false
+            },
+            "n7IMcskE": {
+              "active": false
             }
           }
         },
@@ -213,6 +237,9 @@
           "mods": {
             "gN80d9f3": {
               "active": true
+            },
+            "n7IMcskE": {
+              "active": false
             }
           },
           "active": true,
@@ -228,6 +255,9 @@
           },
           "mods": {
             "gN80d9f3": {
+              "active": false
+            },
+            "n7IMcskE": {
               "active": false
             }
           }
@@ -301,9 +331,9 @@
   "_stats": {
     "coreVersion": "11.315",
     "systemId": "opsandtactics",
-    "systemVersion": "0.5.3",
+    "systemVersion": "0.6.0",
     "createdTime": 1742230634482,
-    "modifiedTime": 1742699965976,
+    "modifiedTime": 1742747055426,
     "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {

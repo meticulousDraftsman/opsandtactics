@@ -60,7 +60,7 @@
     {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
     <fieldset>
       <legend class="resource-label">
-        Skills [{{system.stats.skills.spent}}/{{system.stats.skills.points}}] <a class="item-control item-create" data-tooltip="Create skill" data-type="skill"><i class="fas fa-plus"></i></a>
+        Skills [{{system.stats.skills.spent}}/{{system.stats.skills.points}}] <a class="item-control item-create" data-tooltip="Create skill" data-type="skill"><i class="fas fa-plus"></i></a> <a data-tooltip="Toggle Skill Bins"><i class="fas fa-list verbose-toggle" data-verbose="skills"></i></a>
       </legend>
       <ol class="skill-list">
         {{#each skills}}

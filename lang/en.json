@@ -82,10 +82,11 @@
             "ranks": "Ranks",
             "equipment": "Equipment",
             "synergy": "Synergy",
-            "occupation": "Occupation",
-            "focus": "Focused",
+            "occupation": "Focused by Occupation",
+            "default": "Focused by Default",
+            "focus": "Focused by Choice",
             "unfocus": "Unfocused",
-            "double": "Double-Focused"
+            "double": "Focused by Occupation & Another"
         },
         "phrasing":{
             "rolling": "Rolling a",

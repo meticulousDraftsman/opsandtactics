@@ -43,7 +43,8 @@ export class OpsActorSheet extends ActorSheet {
     Worn: false,
     Carried: false,
     Stored: false,
-    unfiltered: true
+    unfiltered: true,
+    skills: false
   }
 
   /** @override */
@@ -135,7 +136,7 @@ export class OpsActorSheet extends ActorSheet {
     const skills = {
       double: {
         items: [],
-        label: 'Double-Focused'
+        label: 'Occupational (Double)'
       },
       occupation: {
         items: [],
@@ -144,6 +145,10 @@ export class OpsActorSheet extends ActorSheet {
       focus: {
         items: [],
         label: 'Focused'
+      },
+      default: {
+        items: [],
+        label: 'Focused (Default)'
       },
       unfocus: {
         items: [],
@@ -223,18 +228,28 @@ export class OpsActorSheet extends ActorSheet {
       // Append skills.
       if (i.type === 'skill') {
         i.mods = context.actor.items.get(i._id).skillSum();
+        let target = 'unfocus';
         switch(i.system.focus){
-          case 'focus':
-              if (i.mods.occ) {
-                skills.occupation.items.push(i);
-              }
-              else {
-                skills.focus.items.push(i);
-              }
-              break;
+          case 'double':
+            if (this.collapseStates.skills){
+              target = 'double';
+            }
+            else {
+              target = 'occupation';
+            };
+            break;
+          case 'default':
+            if (this.collapseStates.skills){
+              target = 'default';
+            }
+            else {
+              target = 'focus';
+            }
+            break;
           default:
-            skills[i.system.focus].items.push(i);
+            target = i.system.focus;
         }
+        skills[target].items.push(i);
       }
       // Append armor.
       if (i.type === 'armor') {
@@ -771,6 +786,7 @@ export class OpsActorSheet extends ActorSheet {
     html.find('.resource-transfer').click(this._onResourceTransfer.bind(this));
     // Toggle visibility of a collapsible element
     html.find('.collapse-toggle').click(this._onToggleCollapse.bind(this));
+    html.find('.verbose-toggle').click(this._onToggleVerbose.bind(this));
     // Toggle an actor property
     html.find('.actor-toggle').click(this._onActorToggle.bind(this));
     // Roll bleed dice and add them to incoming damage
@@ -963,6 +979,12 @@ export class OpsActorSheet extends ActorSheet {
         this.collapseStates[collapseTarget] = true;
       });
     }
+  }
+  _onToggleVerbose(event){
+    event.preventDefault();
+    const verboseTarget = event.currentTarget.dataset.verbose;
+    this.collapseStates[verboseTarget] = !this.collapseStates[verboseTarget];
+    this.render();
   }
   async _onActorToggle(event){
     event.preventDefault();

@@ -12,19 +12,21 @@
       <legend class="resource-label">
         {{item.mods.total}} Total Modifier {{#if item.actor}}<a class="item-control self-destruct" title="Delete Item"><i class="fas fa-trash"></i></a>{{/if}}
       </legend>
-      <div class="grid grid-2col flex-group-center">
-        <div>
-          <div class="grid grid-4col flex-group-center">
+      <div class="grid grid-8col flex-group-center">
             <span>Focus</span>
-            <div class="grid-span-3">
+            <div class="grid-span-5">
               <select name="system.focus" data-dtype="String">
                 {{#select system.focus}}
                 <option value="unfocus">{{localize "OATS.skills.unfocus"}}</option>
+                <option value="default">{{localize "OATS.skills.default"}}</option>
                 <option value="focus">{{localize "OATS.skills.focus"}}</option>
+                <option value="occupation">{{localize OATS.skills.occupation}}</option>
                 <option value="double">{{localize "OATS.skills.double"}}</option>
                 {{/select}}
               </select>
             </div>
+            <span>Ranks</span>
+            <input name="system.ranks" type="text" value="{{system.ranks}}" placeholder="0" data-dtype="Number"/>
             <span>Ability</span>
             <div class="grid-span-3">
               <select name="system.ability" data-dtype="String">
@@ -36,9 +38,6 @@
                 {{/select}}
               </select>
             </div>
-            <span>Ranks</span>
-            <input name="system.ranks" type="text" value="{{system.ranks}}" placeholder="0" data-dtype="Number"/>
-            <span class="grid-span-2"></span>
             <span>Armor Penalty</span>
             <select class="grid-span-3" name="system.armor.active" data-dtype="Number">
               {{#select system.armor.active}}
@@ -47,9 +46,7 @@
               <option value="2">Proficient</option>
               {{/select}}
             </select>
-          </div>
-        </div>
-        <i>{{item.mods.label}}</i>
+        <input class="grid-span-8" type="text" value="{{item.mods.label}}" readonly/>
       </div>
       
     </fieldset>
@@ -59,6 +56,12 @@
         {{this}} Modifiers <a class="item-control sub-create" data-target-name="skillMods" data-pre-target="{{@key}}" title="Add {{this}} Modifier"><i class="fas fa-plus"></i></a>
       </legend>
       <ol class="items-list">
+        {{#if (and (eq 'occ' @key) (eq 'double' @root.system.focus))}}
+        <li class="grid grid-12col flex-group-center">
+          <input class="grid-span-7" type="text" value="Already-Focused Occupational Skill" readonly/>
+          <input class="grid-span-2" type="text" value="1"readonly/>
+        </li>
+        {{/if}}
         {{#each @root.system.mods}}
         {{#if (eq this.type @../key)}}
         <li class="grid grid-12col flex-group-center">

@@ -6,7 +6,7 @@
   "img": "systems/opsandtactics/icons/abstract/bookshelf.webp",
   "system": {
     "ranks": null,
-    "focus": "focus",
+    "focus": "default",
     "armor": {
       "active": false
     },
@@ -23,11 +23,11 @@
   "flags": {},
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.6.0",
     "coreVersion": "11.315",
     "createdTime": 1700000282856,
-    "modifiedTime": 1705309908061,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1743382532725,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "_key": "!items!KQLOGO7C1Qui7n0o"
 }
