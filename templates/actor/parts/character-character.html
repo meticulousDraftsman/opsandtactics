@@ -7,22 +7,53 @@
       <legend class="resource-label">Ability Scores</legend>
       <div class="abilities flex-group-center grid grid-4col">
         {{#each system.abilities as |ability|}}
+        <fieldset class="save grid-span-4">
+          <div class="grid grid-2col flex-group-center">
+            <a class="resource-label actor-action-dash" data-check-id="{{@key}}" data-tooltip="{{localize (concat 'OATS.abilities.' @key)}} Roll">{{localize (concat "OATS.abilityShort." @key)}} {{numberFormat ability.mod sign=true}}</a>
+            <a class="trait-edit action-legend">{{ability.score}} <i class="fas fa-edit"></i></a>
+            
+            {{#if (eq @key 'str')}}
+            <a class="resource-label ability-score actor-action-dash" data-check-id="foc" data-tooltip="{{localize 'OATS.abilities.foc'}} Roll">{{localize "OATS.abilityShort.foc"}} {{numberFormat ability.foc sign=true}}</a>
+            <a class="resource-label ability-score actor-action-dash" data-check-id="pow" data-tooltip="{{localize 'OATS.abilities.pow'}} Roll">{{localize "OATS.abilityShort.pow"}} {{numberFormat ability.pow sign=true}}</a>
+            {{/if}}
+            {{#if (eq @key 'dex')}}
+            <a class="resource-label ability-score actor-action-dash" data-check-id="mrk" data-tooltip="{{localize 'OATS.abilities.mrk'}} Roll">{{localize "OATS.abilityShort.mrk"}} {{numberFormat ability.mrk sign=true}}</a>
+            <a class="resource-label ability-score actor-action-dash" data-check-id="agi" data-tooltip="{{localize 'OATS.abilities.agi'}} Roll">{{localize "OATS.abilityShort.agi"}} {{numberFormat ability.agi sign=true}}</a>
+            {{/if}}
+          </div>
+        </fieldset>
+        {{/each}}
+        {{#if false}}
+        {{#each system.abilities as |ability|}}
         <a class="resource-label actor-action-dash" data-check-id="{{@key}}" data-tooltip="{{localize (concat 'OATS.abilities.' @key)}} Roll">{{localize (concat "OATS.abilityShort." @key)}}</a>
-        <input type="text" name="system.abilities.{{@key}}.score" value="{{ability.score}}" data-dtype="Number"/>
+        {{#if ../collapses.edit}}
+        <input type="text" name="system.abilities.{{@key}}.score" value="{{lookup (lookup @root.actor._source.system.abilities @key) 'score'}}" data-dtype="Number"/>
+        {{else}}
+        <input type="text" value="{{ability.score}}" readonly/>        
+        {{/if}}        
         <input class="grid-start-4" type="text" name="system.abilities.{{@key}}.mod" value="{{numberFormat ability.mod sign=true}}" data-dtype="Number" readonly/>
         {{#if (eq @key "str")}}
-        <a class="resource-label actor-action-dash" data-check-id="foc" data-tooltip="{{localize 'OATS.abilities.foc'}} Roll">{{localize "OATS.abilityShort.foc"}}</a>
-        <input type="text" name="system.abilities.str.foc" value="{{numberFormat ability.foc sign=true}}" data-dtype="Number"/>
-        <a class="resource-label actor-action-dash" data-check-id="pow" data-tooltip="{{localize 'OATS.abilities.pow'}} Roll">{{localize "OATS.abilityShort.pow"}}</a>
-        <input type="text" name="system.abilities.str.pow" value="{{numberFormat ability.pow sign=true}}" data-dtype="Number" readonly/>
+          <a class="resource-label actor-action-dash" data-check-id="foc" data-tooltip="{{localize 'OATS.abilities.foc'}} Roll">{{localize "OATS.abilityShort.foc"}}</a>
+          {{#if ../collapses.edit}}
+          <input type="text" name="system.abilities.str.foc" value="{{numberFormat @root.actor._source.system.abilities.str.foc sign=true}}" data-dtype="Number"/>        
+          {{else}}
+          <input type="text" value="{{numberFormat ability.foc sign=true}}" readonly/>
+          {{/if}}
+          <a class="resource-label actor-action-dash" data-check-id="pow" data-tooltip="{{localize 'OATS.abilities.pow'}} Roll">{{localize "OATS.abilityShort.pow"}}</a>
+          <input type="text" value="{{numberFormat ability.pow sign=true}}" readonly/>
         {{/if}}
         {{#if (eq @key "dex")}}
-        <a class="resource-label actor-action-dash" data-check-id="mrk" data-tooltip="{{localize 'OATS.abilities.mrk'}} Roll">{{localize "OATS.abilityShort.mrk"}}</a>
-        <input type="text" name="system.abilities.dex.mrk" value="{{numberFormat ability.mrk sign=true}}" data-dtype="Number"/>
-        <a class="resource-label actor-action-dash" data-check-id="agi" data-tooltip="{{localize 'OATS.abilities.agi'}} Roll">{{localize "OATS.abilityShort.agi"}}</a>
-        <input type="text" class="{{@root.agiLimited}}" name="system.abilities.dex.agi" value="{{numberFormat ability.agi sign=true}}" data-dtype="Number" readonly data-tooltip="{{#if (eq @root.agiLimited 'agi-limited')}}Reduced by active armor{{/if}}"/>
+          <a class="resource-label actor-action-dash" data-check-id="mrk" data-tooltip="{{localize 'OATS.abilities.mrk'}} Roll">{{localize "OATS.abilityShort.mrk"}}</a>
+          {{#if ../collapses.edit}}
+          <input type="text" name="system.abilities.dex.mrk" value="{{numberFormat @root.actor._source.system.abilities.dex.mrk sign=true}}" data-dtype="Number"/>        
+          {{else}}
+          <input type="text" value="{{numberFormat ability.mrk sign=true}}" readonly/>
+          {{/if}}
+          <a class="resource-label actor-action-dash" data-check-id="agi" data-tooltip="{{localize 'OATS.abilities.agi'}} Roll">{{localize "OATS.abilityShort.agi"}}</a>
+          <input type="text" class="{{@root.agiLimited}}" value="{{numberFormat ability.agi sign=true}}" readonly data-tooltip="{{#if (eq @root.agiLimited 'agi-limited')}}Reduced by active armor{{/if}}"/>
         {{/if}}
-        {{/each}}        
+        {{/each}}   
+        {{/if}}     
       </div>
       <hr>
       <div class="abilities flex-group-center grid grid-4col">
@@ -71,8 +102,8 @@
           {{#each this.items as |item id|}}
             <li class="item skill flex-group-center item-context" data-item-id="{{item._id}}">
               <fieldset>
-                <a class="item-control item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Skill Item"><i class="fas fa-edit"></i> {{item.name}}</a>
-                <a class="actor-action-dash resource-label" data-check-id="skill" data-item-id="{{item._id}}" data-tooltip="{{item.mods.label}}"><i class="fas fa-dice"></i> {{item.mods.total}}</a>
+                <a class="actor-action-dash resource-label" data-check-id="skill" data-item-id="{{item._id}}" data-tooltip="{{item.mods.label}}">{{item.name}} {{item.mods.total}}</a>
+                <a class="item-control action-legend item-edit" data-item-id="{{item._id}}" data-tooltip="Edit Skill Item"><i class="fas fa-edit"></i></a>                
               </fieldset> 
             </li>
           {{/each}}

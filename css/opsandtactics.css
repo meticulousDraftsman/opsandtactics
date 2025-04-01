@@ -239,6 +239,10 @@
   background:#dad8cc;
 }
 
+.opsandtactics .ability-score{
+  margin-top: .5em;
+}
+
 .opsandtactics .skill{
   display: inline-block;
 }

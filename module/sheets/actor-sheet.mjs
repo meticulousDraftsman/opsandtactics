@@ -24,6 +24,12 @@ export class OpsActorSheet extends ActorSheet {
     return `systems/opsandtactics/templates/actor/actor-${this.actor.type}-sheet.html`;
   }
 
+ /** @override */
+  _getSubmitData(updateData = {}) {
+    // Skip over ActorSheet#_getSubmitData to allow for editing overridden values.
+    return FormApplication.prototype._getSubmitData.call(this, updateData);
+  }
+
   /* -------------------------------------------- */
   
   collapseStates = {
@@ -44,7 +50,8 @@ export class OpsActorSheet extends ActorSheet {
     Carried: false,
     Stored: false,
     unfiltered: true,
-    skills: false
+    skills: false,
+    edit: false
   }
 
   /** @override */

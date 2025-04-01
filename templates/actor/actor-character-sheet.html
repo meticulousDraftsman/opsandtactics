@@ -1,5 +1,4 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-
   {{!-- Sheet Header --}}
   <header class="sheet-header">
     <div class="flexrow">
@@ -38,7 +37,11 @@
               <div class="grid-span-2 flexrow flex-group-center">
                 <input class="flex3 resource-delta" type="text" data-target="system.cp.value" value="{{system.cp.value}}" data-dtype="String">
                 <span>/</span>
-                <input class="flex3" type="text" name="system.cp.max" value="{{system.cp.max}}" data-dtype="Number">
+                {{#if collapses.edit}}
+                <input class="flex3" type="text" name="system.cp.max" value="{{actor._source.system.cp.max}}" data-dtype="Number">
+                {{else}}
+                <input class="flex3" type="text" value="{{system.cp.max}}" readonly>
+                {{/if}}
               </div>
               <span>Temp</span>
               <input class="grid-span-2" type="text" name="system.cp.temp" value="{{system.cp.temp}}" data-dtype="Number">              
@@ -64,6 +67,7 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item">{{#if collapses.edit}}<i class="fas fa-lock-open verbose-toggle" data-verbose="edit"></i>{{else}}<i class="fas fa-lock verbose-toggle" data-verbose="edit"></i>{{/if}}</a>
     <a class="item" data-tab="character">Character</a>
     <a class="item" data-tab="traits">Traits</a>
     <a class="item" data-tab="offense">Offense</a>
