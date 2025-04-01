@@ -49,6 +49,18 @@ export class OpsActor extends Actor {
   _prepareCharacterBase(actorBase){
     if (actorBase.type !== 'character') return;
     const systemBase = actorBase.system;
+    // Loop through ability scores and calculate initial modifiers
+    for (let [key, ability] of Object.entries(systemBase.abilities)) {
+      ability.mod = Math.floor((ability.score-10)/2)
+      switch(key){
+        case 'str':
+            ability.pow = ability.mod - ability.foc;
+          break;
+        case 'dex':
+          ability.agi = ability.mod - ability.mrk;
+          break;
+      }
+    }
   }
   _prepareCharacterData(actorData) {
     if (actorData.type !== 'character') return;
@@ -84,15 +96,16 @@ export class OpsActor extends Actor {
       }
     }
 
-    // Loop through ability scores and calculate modifiers
+    // Loop through ability scores and calculate adjusted modifiers
     for (let [key, ability] of Object.entries(systemData.abilities)) {
       ability.mod = Math.floor((ability.score-10)/2)+ability.modMods.subtotal;
+      let difMod = ability.mod - Math.floor((actorData._source.system.abilities[key].score-10)/2);
       switch(key){
         case 'str':
-            ability.pow = ability.mod - ability.foc;
+          ability.pow += difMod;
           break;
         case 'dex':
-          ability.agi = ability.mod - ability.mrk;
+          ability.agi += difMod;
           if (agiClamp) ability.agi = Math.min(ability.agi,systemData.stats.agiMax);
           break;
       }
