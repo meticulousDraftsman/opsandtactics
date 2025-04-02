@@ -26,8 +26,10 @@ export class OpsActorSheet extends ActorSheet {
 
  /** @override */
   _getSubmitData(updateData = {}) {
-    // Skip over ActorSheet#_getSubmitData to allow for editing overridden values.
-    return FormApplication.prototype._getSubmitData.call(this, updateData);
+    // Skip over ActorSheet#_getSubmitData to allow for editing overridden values in edit mode.
+    if (this.collapseStates.edit) return FormApplication.prototype._getSubmitData.call(this, updateData);
+    const data = super._getSubmitData(updateData);
+    return data;
   }
 
   /* -------------------------------------------- */
@@ -1631,18 +1633,35 @@ class TraitEditApp extends FormApplication {
   }
   get title(){
     let temp = 'Trait';
-    switch (this.options.target){
-      case 'system.health.chp':
+    let target = this.options.target.split('.').pop();
+    switch (target){
+      case 'chp':
         temp = 'Core Hit Points';
         break;
-      case 'system.health.xhp':
+      case 'xhp':
         temp = 'Extended Hit Points';
         break;
-      case 'system.ml':
+      case 'ml':
         temp = 'Mental Limit';
         break;
-      case 'system.stats.carrying':
+      case 'carrying':
         temp = 'Carrying Capacity';
+        break;
+      case 'str':
+      case 'dex':
+      case 'con':
+      case 'int':
+      case 'wis':
+      case 'cha':
+        temp = game.i18n.localize(CONFIG.OATS.abilities[target]);
+        break;
+      case 'fortitude':
+      case 'reflex':
+      case 'will':
+        temp = game.i18n.localize(CONFIG.OATS.saves[target]);
+        break;
+      case 'grapple':
+        temp = 'Grapple';
         break;
     }
     return `Editing ${temp} calculation for ${this.object.name}`;
@@ -1653,16 +1672,43 @@ class TraitEditApp extends FormApplication {
       system: this.object.system,
       trait: {
         id: this.options.target,
-        object: foundry.utils.getProperty(this.object,this.options.target),
-        formula: {
-          current: foundry.utils.getProperty(this.object,`${this.options.target}.formula`),
-          source: foundry.utils.getProperty(this.object._source,`${this.options.target}.formula`),
-          overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.formula`)
-        },
-        misc: foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`)
+        object: foundry.utils.getProperty(this.object,this.options.target)
       }
-    };    
-    console.debug(this.object)
+    }; 
+    if (foundry.utils.hasProperty(this.object,`${this.options.target}.formula`)){
+      context.trait.formula = {
+        current: foundry.utils.getProperty(this.object,`${this.options.target}.formula`),
+        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.formula`),
+        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.formula`)
+      };
+    }   
+    if (foundry.utils.hasProperty(this.object,`${this.options.target}.score`)){
+      context.trait.score = {
+        current: foundry.utils.getProperty(this.object,`${this.options.target}.score`),
+        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.score`),
+        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.score`),
+        sourceMod: Math.floor((foundry.utils.getProperty(this.object._source,`${this.options.target}.score`)-10)/2),
+        modMisc: foundry.utils.getProperty(this.object,`${this.options.target}.modsMods.misc`)
+      };
+    }
+    if (foundry.utils.hasProperty(this.object,`${this.options.target}.foc`)){
+      context.trait.foc = {
+        current: foundry.utils.getProperty(this.object,`${this.options.target}.foc`),
+        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.foc`),
+        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.foc`)
+      }
+    }
+    if (foundry.utils.hasProperty(this.object,`${this.options.target}.mrk`)){
+      context.trait.mrk = {
+        current: foundry.utils.getProperty(this.object,`${this.options.target}.mrk`),
+        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.mrk`),
+        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.mrk`)
+      }
+    }
+    if (foundry.utils.hasProperty(this.object,`${this.options.target}.mods.misc`)){
+      context.trait.misc = foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`);
+    }
+    console.debug(this.object, context)
     return context;
     if (foundry.utils.getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){

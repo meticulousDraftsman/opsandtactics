@@ -4,21 +4,20 @@
     use both the "grid" and "grid-Ncol" class where "N" can be any number
     from 1 to 12 and will create that number of columns.  --}}
     <fieldset>
-      <legend class="resource-label">Ability Scores</legend>
+      <legend class="resource-label">Abilities & Saves</legend>
       <div class="abilities flex-group-center grid grid-4col">
         {{#each system.abilities as |ability|}}
         <fieldset class="save grid-span-4">
           <div class="grid grid-2col flex-group-center">
             <a class="resource-label actor-action-dash" data-check-id="{{@key}}" data-tooltip="{{localize (concat 'OATS.abilities.' @key)}} Roll">{{localize (concat "OATS.abilityShort." @key)}} {{numberFormat ability.mod sign=true}}</a>
-            <a class="trait-edit action-legend">{{ability.score}} <i class="fas fa-edit"></i></a>
-            
+            <a class="trait-edit action-legend" data-target-name="system.abilities.{{@key}}">{{ability.score}} <i class="fas fa-edit"></i></a>            
             {{#if (eq @key 'str')}}
-            <a class="resource-label ability-score actor-action-dash" data-check-id="foc" data-tooltip="{{localize 'OATS.abilities.foc'}} Roll">{{localize "OATS.abilityShort.foc"}} {{numberFormat ability.foc sign=true}}</a>
-            <a class="resource-label ability-score actor-action-dash" data-check-id="pow" data-tooltip="{{localize 'OATS.abilities.pow'}} Roll">{{localize "OATS.abilityShort.pow"}} {{numberFormat ability.pow sign=true}}</a>
+            <a class="resource-label actor-action-dash" data-check-id="foc" data-tooltip="{{localize 'OATS.abilities.foc'}} Roll">{{localize "OATS.abilityShort.foc"}} {{numberFormat ability.foc sign=true}}</a>
+            <a class="resource-label  actor-action-dash" data-check-id="pow" data-tooltip="{{localize 'OATS.abilities.pow'}} Roll">{{localize "OATS.abilityShort.pow"}} {{numberFormat ability.pow sign=true}}</a>
             {{/if}}
             {{#if (eq @key 'dex')}}
-            <a class="resource-label ability-score actor-action-dash" data-check-id="mrk" data-tooltip="{{localize 'OATS.abilities.mrk'}} Roll">{{localize "OATS.abilityShort.mrk"}} {{numberFormat ability.mrk sign=true}}</a>
-            <a class="resource-label ability-score actor-action-dash" data-check-id="agi" data-tooltip="{{localize 'OATS.abilities.agi'}} Roll">{{localize "OATS.abilityShort.agi"}} {{numberFormat ability.agi sign=true}}</a>
+            <a class="resource-label  actor-action-dash" data-check-id="mrk" data-tooltip="{{localize 'OATS.abilities.mrk'}} Roll">{{localize "OATS.abilityShort.mrk"}} {{numberFormat ability.mrk sign=true}}</a>
+            <a class="resource-label  actor-action-dash" data-check-id="agi" data-tooltip="{{localize 'OATS.abilities.agi'}} Roll">{{localize "OATS.abilityShort.agi"}} {{numberFormat ability.agi sign=true}}</a>
             {{/if}}
           </div>
         </fieldset>
@@ -55,12 +54,20 @@
         {{/each}}   
         {{/if}}     
       </div>
-      <hr>
-      <div class="abilities flex-group-center grid grid-4col">
-        <a class="resource-label actor-action-dash grid-span-1" data-check-id="grapple" data-tooltip="Grapple Roll">Grp</a>
-        <input type="text" name="system.stats.grapple.misc" value="{{system.stats.grapple.misc}}" placeholder="+0" data-dtype="Number">
-        <input class="grid-start-4" type="text" value="{{numberFormat system.stats.grapple.value sign=true}}" readonly>
-      </div>
+      <fieldset class="save grid-span-4">
+        <div class="grid grid-5col flex-group-center">
+          <a class="resource-label actor-action-dash grid-span-4" data-check-id="grapple" data-tooltip="Grapple Roll">Grapple {{numberFormat system.stats.grapple.value sign=true}}</a>
+          <a class="trait-edit action-legend" data-target-name="system.stats.grapple"><i class="fas fa-edit"></i></a>
+        </div>
+      </fieldset>
+      <fieldset class="save grid-span-4">
+        <div class="grid grid-5col flex-group-center">
+          {{#each system.saves as |save|}}          
+          <a class="resource-label actor-action-dash grid-span-4" data-check-id="{{@key}}" data-tooltip="{{localize (concat 'OATS.saves.' @key)}} Roll">{{localize (concat "OATS.saves." @key)}} {{numberFormat save.value sign=true}}</a>
+          <a class="trait-edit action-legend" data-target-name="system.saves.{{@key}}"><i class="fas fa-edit"></i></a>          
+          {{/each}}
+        </div>
+      </fieldset>
     </fieldset>
     <fieldset>
       <legend class="resource-label">

@@ -1,15 +1,83 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <section class="sheet-body">
-        <fieldset>
-            <legend class="resource-label">Base Formula</legend>
+    <section class="sheet-body grid grid-2col">
+        {{#if trait.formula includeZero=true}}
+        <fieldset class=grid-span-2>
+            <legend class="resource-label">Formula</legend>
             <div class="flex-group-center">
-                <input name="{{trait.id}}.formula" value="{{trait.formula.source}}" type="text" data-dtype="String" placeholder="Formula">
                 {{#if trait.formula.overridden}}
                 <input value="{{trait.formula.current}}" type="text" data-dtype="String" data-tooltip="Attribute changed by Active Effects" readonly>
                 {{/if}}
+                <input name="{{trait.id}}.formula" value="{{trait.formula.source}}" type="text" data-dtype="String" placeholder="Formula">
             </div>
         </fieldset>
-        <fieldset>
+        {{/if}}
+        {{#if trait.score includeZero=true}}
+        <div>
+            <fieldset>
+                <legend class="resource-label">Score</legend>
+                <div class="flex-group-center grid grid-3col">
+                    {{#if trait.score.overridden}}
+                    <span>Current</span>
+                    <input class="grid-span-2" value="{{trait.score.current}}" type="text" data-dtype="String" data-tooltip="Attribute changed by Active Effects" readonly>
+                    {{/if}}
+                    <span>Base</span>
+                    <input class="grid-span-2" name="{{trait.id}}.score" value="{{trait.score.source}}" type="text" data-dtype="String" placeholder="Score">
+                </div>
+            </fieldset>
+            {{#if trait.foc includeZero=true}}
+            <fieldset>
+                <legend class="resource-label">Focus</legend>
+                <div class="flex-group-center grid grid-3col">
+                    {{#if trait.foc.overridden}}
+                    <span>Current</span>
+                    <input class="grid-span-2" value="{{trait.foc.current}}" type="text" data-dtype="String" data-tooltip="Attribute changed by Active Effects" readonly>
+                    {{/if}}
+                    <span>Base</span>
+                    <input class="grid-span-2" name="{{trait.id}}.foc" value="{{trait.foc.source}}" type="text" data-dtype="String" placeholder="Score">                        
+                </div>
+            </fieldset>
+            {{/if}}
+            {{#if trait.mrk includeZero=true}}
+            <fieldset>
+                <legend class="resource-label">Marksmanship</legend>
+                <div class="flex-group-center grid grid-3col">
+                    {{#if trait.mrk.overridden}}
+                    <span>Current</span>
+                    <input class="grid-span-2" value="{{trait.mrk.current}}" type="text" data-dtype="String" data-tooltip="Attribute changed by Active Effects" readonly>
+                    {{/if}}
+                    <span>Base</span>
+                    <input class="grid-span-2" name="{{trait.id}}.mrk" value="{{trait.mrk.source}}" type="text" data-dtype="String" placeholder="Score">                        
+                </div>
+            </fieldset>
+            {{/if}}
+        </div>
+        <div>
+            <fieldset>
+                <legend class="resource-label">Modifier <a data-tooltip="Copy Attribute Key"><i class="fas fa-copy trait-copy" data-path="{{trait.id}}.modMods.effectName"></i></a></legend>
+                <div class="flex-group-center grid grid-3col">
+                    {{#if (or trait.score.overridden trait.object.modMods.subtotal)}}
+                    <span>Current</span>
+                    <input class="grid-span-2" value="{{trait.object.mod}}" type="text" data-dtype="String" data-tooltip="Attribute changed by Active Effects" readonly>
+                    {{/if}}
+                    <span>Base</span>
+                    <input class="grid-span-2" value="{{trait.score.sourceMod}}" type="text" data-dtype="String" data-tooltip="Attribute changed by Active Effects" readonly>
+                    {{#each trait.object.modMods}}
+                    {{#if (eq 'misc' @key)}}
+                    <span>Misc</span>
+                    <input class="grid-span-2" name="{{@root.trait.id}}.modMods.misc" value="{{@root.trait.object.modMods.misc}}" type="text" data-dtype="Number" placeholder="0">
+                    {{else}}
+                    <span>{{@key}}</span>
+                    <input class="grid-span-2" value="{{this}}" type="text" data-dtype="String" readonly>
+                    {{/if}}
+                    {{/each}}                  
+                </div>
+            </fieldset>
+        </div>
+        
+        {{/if}}
+        
+        {{#if trait.object.mods includeZero=true}}
+        <fieldset class="grid-span-2">
             <legend class="resource-label">Modifiers <a data-tooltip="Copy Attribute Key"><i class="fas fa-copy trait-copy" data-path="{{trait.id}}.mods.effectName"></i></a></legend>
             <div class="grid grid-4col flex-group-center">
                 {{#each trait.object.mods}}
@@ -17,12 +85,12 @@
                 <span>Misc</span>
                 <input name="{{@root.trait.id}}.mods.misc" value="{{@root.trait.misc}}" type="text" data-dtype="Number" placeholder="0">
                 {{else}}
-                <span>{{capitalize @key}}</span>
+                <span>{{@key}}</span>
                 <input value="{{this}}" type="text" data-dtype="String" readonly>
                 {{/if}}
-                {{/each}}
-                
+                {{/each}}                
             </div>
         </fieldset>
+        {{/if}}
     </section>
 </form>
