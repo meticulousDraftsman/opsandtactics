@@ -1120,8 +1120,9 @@ export class OpsActorSheet extends ActorSheet {
     event.preventDefault();
     const dataset = event.currentTarget.dataset;
     const target = dataset.targetName;
+    const type = dataset.targetType;
     console.debug(this.object)
-    new TraitEditApp(this.object,{target:target}).render(true)
+    new TraitEditApp(this.object,{target:target, type:type}).render(true)
   }
   async _copCreate(event){
     event.preventDefault();
@@ -1620,7 +1621,7 @@ class AttackDashboardApp extends FormApplication {
 }
 class TraitEditApp extends FormApplication {
   static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
+    const options = foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["opsandtactics", "sheet", "item"],
       template: 'systems/opsandtactics/templates/interface/dialog-trait-edit.html',
       width: 520,
@@ -1629,7 +1630,8 @@ class TraitEditApp extends FormApplication {
       submitOnChange: true,
       submitOnClose: true,
       resizable: true
-    });
+    })
+    return options;
   }
   get title(){
     let temp = 'Trait';
@@ -1672,41 +1674,70 @@ class TraitEditApp extends FormApplication {
       system: this.object.system,
       trait: {
         id: this.options.target,
+        type: this.options.type,
         object: foundry.utils.getProperty(this.object,this.options.target)
       }
     }; 
+    switch (this.options.type){
+      case 'formula':
+        context.trait.formula = {
+          current: foundry.utils.getProperty(this.object,`${this.options.target}.formula`),
+          source: foundry.utils.getProperty(this.object._source,`${this.options.target}.formula`),
+          overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.formula`),
+          misc: foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`)
+        };
+        break;
+      case 'ability':
+        context.trait.score = {
+          current: foundry.utils.getProperty(this.object,`${this.options.target}.score`),
+          source: foundry.utils.getProperty(this.object._source,`${this.options.target}.score`),
+          overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.score`),
+          sourceMod: Math.floor((foundry.utils.getProperty(this.object._source,`${this.options.target}.score`)-10)/2),
+          modMisc: foundry.utils.getProperty(this.object,`${this.options.target}.modsMods.misc`)
+        };
+        if (this.options.target == 'system.abilities.str'){
+          context.trait.foc = {
+            current: foundry.utils.getProperty(this.object,`${this.options.target}.foc`),
+            source: foundry.utils.getProperty(this.object._source,`${this.options.target}.foc`),
+            overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.foc`)
+          }
+        }
+        if (this.options.target == 'system.abilities.dex'){
+          context.trait.mrk = {
+            current: foundry.utils.getProperty(this.object,`${this.options.target}.mrk`),
+            source: foundry.utils.getProperty(this.object._source,`${this.options.target}.mrk`),
+            overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.mrk`)
+          }
+        }
+        break;
+      case 'mod':
+        context.trait.misc = {
+          misc: foundry.utils.getProperty(this.object,`${this.options.target}.misc`)
+        }
+      case 'save':
+        context.trait.save = {
+          current: foundry.utils.getProperty(this.object,`${this.options.target}.mult`),
+          source: foundry.utils.getProperty(this.object._source,`${this.options.target}.mult`),
+          overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.mult`),
+          base: foundry.utils.getProperty(this.object,`${this.options.target}.base`),
+          misc: foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`)
+        }
+        break;
+    }
     if (foundry.utils.hasProperty(this.object,`${this.options.target}.formula`)){
-      context.trait.formula = {
-        current: foundry.utils.getProperty(this.object,`${this.options.target}.formula`),
-        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.formula`),
-        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.formula`)
-      };
+      
     }   
     if (foundry.utils.hasProperty(this.object,`${this.options.target}.score`)){
-      context.trait.score = {
-        current: foundry.utils.getProperty(this.object,`${this.options.target}.score`),
-        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.score`),
-        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.score`),
-        sourceMod: Math.floor((foundry.utils.getProperty(this.object._source,`${this.options.target}.score`)-10)/2),
-        modMisc: foundry.utils.getProperty(this.object,`${this.options.target}.modsMods.misc`)
-      };
+
     }
     if (foundry.utils.hasProperty(this.object,`${this.options.target}.foc`)){
-      context.trait.foc = {
-        current: foundry.utils.getProperty(this.object,`${this.options.target}.foc`),
-        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.foc`),
-        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.foc`)
-      }
+      
     }
     if (foundry.utils.hasProperty(this.object,`${this.options.target}.mrk`)){
-      context.trait.mrk = {
-        current: foundry.utils.getProperty(this.object,`${this.options.target}.mrk`),
-        source: foundry.utils.getProperty(this.object._source,`${this.options.target}.mrk`),
-        overridden: foundry.utils.hasProperty(this.object.overrides,`${this.options.target}.mrk`)
-      }
+
     }
     if (foundry.utils.hasProperty(this.object,`${this.options.target}.mods.misc`)){
-      context.trait.misc = foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`);
+      //context.trait.misc = foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`);
     }
     console.debug(this.object, context)
     return context;
