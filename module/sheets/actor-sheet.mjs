@@ -35,9 +35,6 @@ export class OpsActorSheet extends ActorSheet {
   /* -------------------------------------------- */
   
   collapseStates = {
-    fortitude: true,
-    reflex: true,
-    will: true,
     cops:false,
     weapons: false,
     objectAttacks: false,

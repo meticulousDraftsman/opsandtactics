@@ -69,28 +69,6 @@
         </div>
       </fieldset>
     </fieldset>
-    <fieldset>
-      <legend class="resource-label">
-        Saving Throws
-      </legend>
-        {{#each system.saves as |save|}}
-          <fieldset class="save flex-group-center collapse-parent">
-            <a class="resource-label actor-action-dash" data-check-id="{{@key}}" data-tooltip="{{localize (concat 'OATS.saves.' @key)}} Roll">{{numberFormat save.value sign=true}} {{localize (concat "OATS.saves." @key)}}</a> <a data-tooltip="Toggle Modifier Display"><i class="fas fa-list collapse-toggle" data-collapse="{{@key}}"></i></a>
-            <div class="{{@key}} {{#if (lookup ../collapses @key)}}collapse{{/if}}">
-              <div class="grid grid-3col flex-group-center">
-                <span>Base</span>
-                <div class="grid-span-2 flexrow flex-group-center">
-                  <input class="flex3" type="text" value="{{save.base}}" readonly/>
-                  <span>x</span>
-                  <input class="flex3" type="text" name="system.saves.{{@key}}.mult" value="{{save.mult}}" data-dtype="Number"/>
-                </div>
-                <span>Misc</span>
-                <input class="grid-span-2" type="text" name="system.saves.{{@key}}.mods.misc" value="{{save.mods.misc}}" data-dtype="Number"/>
-              </div>
-            </div>
-          </fieldset>
-        {{/each}}
-    </fieldset>
   </aside>
 
   {{!-- For the main features list, span the right two columns --}}

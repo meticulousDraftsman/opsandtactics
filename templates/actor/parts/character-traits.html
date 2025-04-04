@@ -1,34 +1,34 @@
-<div class="grid grid-5col">
-    <fieldset class="grid-span-3">
+<div>
+    <fieldset>
         <legend class="resource-label">
-            Formulae
+            Formulas & Modifiers
         </legend>
-        <div class="grid grid-6col flex-group-center">
-            <button type="button" class="trait-edit item-control grid-span-3" data-target-name="system.health.chp" data-target-type="formula" data-tooltip="Edit Core Hit Points Calculation">Core HP: {{system.health.chp.display}}{{#each system.health.chp.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}}</button>
-            <button type="button" class="trait-edit item-control grid-span-3" data-target-name="system.health.xhp" data-target-type="formula" data-tooltip="Edit Extended Hit Points Calculation">Extended HP: {{system.health.xhp.display}}{{#each system.health.xhp.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}}</button>
-            <button type="button" class="trait-edit item-control grid-span-3" data-target-name="system.ml" data-target-type="formula" data-tooltip="Edit Mental Limit Calculation">Mental Limit: {{system.ml.display}}{{#each system.ml.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}}</button>
-            <button type="button" class="trait-edit item-control grid-span-3" data-target-name="system.stats.carrying" data-target-type="formula" data-tooltip="Edit Carrying Capacity Calculation">Carrying Capacity: {{system.stats.carrying.display}}{{#each system.stats.carrying.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}}</button>
-        </div>
-    </fieldset>
-    <fieldset class="grid-span-2">
-        <legend class="resource-label">
-            Modifiers
-        </legend>
-        <div class="grid grid-4col flex-group-center">
-            <span class="grid-span-2">Base Attack</span>
-            <input type="text" value="{{numberFormat system.stats.bab.value sign=true}}" readonly>
-            <input type="text" name="system.stats.bab.misc" value="{{system.stats.bab.misc}}" placeholder="Misc" data-dtype="Number">
-            <span class="grid-span-2">Initiative</span>
-            <input type="text"value="{{numberFormat system.stats.init.value sign=true}}" readonly>
-            <input type="text" name="system.stats.init.misc" value="{{system.stats.init.misc}}" placeholder="Misc" data-dtype="Number">
-            <select class="grid-span-4 flex-group-center" name="system.stats.wager" data-dtype="Number">
+        <div class="grid grid-2col flex-group-center">
+            <fieldset class="save">
+                <a class="trait-edit" data-target-name="system.health.chp" data-target-type="formula" data-tooltip="Edit Core Hit Points Calculation">Core HP: {{system.health.chp.display}}{{#each system.health.chp.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}} <i class="fas fa-edit"></i></a>
+            </fieldset>
+            <fieldset class="save">
+                <a class="trait-edit" data-target-name="system.health.xhp" data-target-type="formula" data-tooltip="Edit Extended Hit Points Calculation">Extended HP: {{system.health.xhp.display}}{{#each system.health.xhp.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}} <i class="fas fa-edit"></i></a>
+            </fieldset>
+            <fieldset class="save">
+                <a class="trait-edit" data-target-name="system.ml" data-target-type="formula" data-tooltip="Edit Mental Limit Calculation Calculation">Mental Limit: {{system.ml.display}}{{#each system.ml.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}} <i class="fas fa-edit"></i></a>
+            </fieldset>
+            <fieldset class="save">
+                <a class="trait-edit" data-target-name="system.stats.carrying" data-target-type="formula" data-tooltip="Edit Carrying Capacity Calculation">Carrying Capacity: {{system.stats.carrying.display}}{{#each system.stats.carrying.mods}}{{#if this}}{{numberFormat this sign=true}}{{/if}}{{/each}} <i class="fas fa-edit"></i></a>
+            </fieldset>
+            <fieldset class="save">
+                <a class="trait-edit" data-target-name="system.stats.bab" data-target-type="mod" data-tooltip="Edit Base Attack Bonus">Base Attack Bonus: {{numberFormat system.stats.bab.value sign=true}} <i class="fas fa-edit"></i></a>
+            </fieldset>
+            <fieldset class="save">
+                <a class="trait-edit" data-target-name="system.stats.recoil" data-target-type="mod" data-tooltip="Edit Recoil Reduction">Recoil Reduction: {{numberFormat system.stats.recoil.value sign=true}} <i class="fas fa-edit"></i></a>
+            </fieldset>
+            <fieldset class="save">
+                <a class="trait-edit" data-target-name="system.stats.init" data-target-type="mod" data-tooltip="Edit Initiative Bonus">Initiative Bonus: {{numberFormat system.stats.init.value sign=true}} <i class="fas fa-edit"></i></a>
+            </fieldset>
+            <select class="flex-group-center" name="system.stats.wager" data-dtype="Number">
                 {{selectOptions wagers selected=system.stats.wager nameAttr="value" labelAttr="label"}}
             </select>
-            <span class="grid-span-2">Recoil</span>
-            <input type="text"value="{{numberFormat system.stats.recoil.value sign=true}}" readonly>
-            <input type="text" name="system.stats.recoil.misc" value="{{system.stats.recoil.misc}}" placeholder="Misc" data-dtype="Number">
         </div>
-    </fieldset>
 </div>
 <fieldset class="collapse-parent">
     <legend class="resource-label">
