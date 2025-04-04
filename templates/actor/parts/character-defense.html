@@ -3,39 +3,49 @@
     <legend class="resource-label">
       Defense Modifiers
     </legend>
-    <div class="grid grid-4col flex-group-center">
-      <span>Miscellaneous</span>
-      <div class="flexrow">
-        <input type="text" value="{{numberFormat system.def.misc.value sign=true}}" data-dtype="Number" readonly/>
-        <input type="text" name="system.def.misc.misc" value="{{system.def.misc.misc}}" data-dtype="Number" placeholder="0"/>
-      </div>      
-      <span>Movement</span>
-      <input type="text" name="system.def.move" value="{{system.def.move}}" data-dtype="Number" placeholder="+1/5' over 20'"/>
-      <span>Equipment</span>
-      <div class="flexrow">
-        <input type="text" value="{{numberFormat system.def.equip.value sign=true}}" data-dtype="Number" readonly/>
-        <input type="text" name="system.def.equip.misc" value="{{system.def.equip.misc}}" data-dtype="Number" placeholder="0"/>
-      </div>    
-      <span>Size</span>
-      <input type="text" name="system.def.size" value="{{system.def.size}}" data-dtype="Number" placeholder="0"/>        
-      <span>Dodge</span>
-      <div class="flexrow">
-        <input type="text" value="{{numberFormat system.def.dodge.value sign=true}}" readonly>
-        <input type="text" name="system.def.dodge.misc" value="{{system.def.dodge.misc}}" data-dtype="Number" placeholder="0"/>
-      </div>
+    <div class="grid grid-2col flex-group-center">
+      <fieldset class="save">
+        <a class="trait-edit" data-target-name="system.def.equip" data-target-type="mod" data-tooltip="Edit Equipment Modifier">Equipment: {{numberFormat system.def.equip.value sign=true}} <i class="fas fa-edit"></i></a>
+      </fieldset>
+      <fieldset class="save">
+        <a class="trait-edit" data-target-name="system.def.dodge" data-target-type="mod" data-tooltip="Edit Dodge Modifier">Dodge: {{numberFormat system.def.dodge.value sign=true}} <i class="fas fa-edit"></i></a>
+      </fieldset>
+      <fieldset class="save">
+        <a class="trait-edit" data-target-name="system.def.misc" data-target-type="mod" data-tooltip="Edit Miscellaneous Modifier">Miscellaneous: {{numberFormat system.def.misc.value sign=true}} <i class="fas fa-edit"></i></a>
+      </fieldset>      
+      {{#if collapses.edit}}
+      <div class="flexrow flex-group-center">
+        <span>Size</span>
+        <input type="text" name="system.def.size" value="{{actor._source.system.def.size}}" data-dtype="Number" placeholder="0"/>   
+      </div>        
+      {{else}}
+      <fieldset class="save flexrow flex-group-center">
+        <span>Size: {{numberFormat system.def.size sign=true}}</span>
+      </fieldset>
+      {{/if}}            
+      <select class="flex-group-center grid-span-2" name="system.def.move" data-dtype="Number">
+        {{selectOptions movements selected=system.def.move nameAttr="value" labelAttr="label"}}
+      </select>      
     </div>
   </fieldset>
   <fieldset>
     <legend class="resource-label">
       Defense Impacts
     </legend>
-    <div class="grid grid-2col flex-group-center">
-      <span>Max Agility</span>
-      <input type="text" value="{{#if system.stats.agiMax includeZero=true}}{{numberFormat system.stats.agiMax sign=true}}{{/if}}" data-dtype="Number" placeholder="n/A" readonly/>
-      <span>Armor Penalty</span>
-      <input type="text" value="{{numberFormat system.stats.armorPenalty.value sign=true}}{{#if system.stats.armorNoProf}} / {{numberFormat system.stats.armorNoProf sign=true}}{{/if}}" data-dtype="Number" readonly/>
-      <span>CP Loss</span>
-      <input type="text" value="{{system.cp.armor.value}} CP to move" data-dtype="Number" readonly/>
+    <div class="flex-group-center">
+      <fieldset class="save">
+        {{#if system.stats.agiMax includeZero=true}}
+        <span>Max Agility: {{numberFormat system.stats.agiMax sign=true}}</span>
+        {{else}}
+        <span>Max Agility not limited</span>
+        {{/if}}        
+      </fieldset>
+      <fieldset class="save">
+        <a class="trait-edit" data-target-name="system.stats.armorPenalty" data-target-type="mod" data-tooltip="Edit Armor Penalty">Armor Penalty: {{numberFormat system.stats.armorPenalty.value sign=true}}{{#if system.stats.armorNoProf}} / {{numberFormat system.stats.armorNoProf sign=true}}{{/if}} <i class="fas fa-edit"></i></a>
+      </fieldset>
+      <fieldset class="save">
+        <a class="trait-edit" data-target-name="system.cp.armor" data-target-type="mod" data-tooltip="Edit CP Loss">{{system.cp.armor.value}} CP to move <i class="fas fa-edit"></i></a>
+      </fieldset>
     </div>
   </fieldset>
 </div>

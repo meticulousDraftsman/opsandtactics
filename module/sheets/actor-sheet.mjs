@@ -124,6 +124,19 @@ export class OpsActorSheet extends ActorSheet {
       {value:4,label:'+4 Init, -10 CP and Atk'},
       {value:5,label:'+5 Init, -15 CP and Atk'}
     ];
+    context.movements = [
+      {value:0,label:`Movement Modifier: +0 for moving 20' or less`},
+      {value:1,label:`Movement Modifier: +1 for moving 25'`},
+      {value:2,label:`Movement Modifier: +2 for moving 30'`},
+      {value:3,label:`Movement Modifier: +3 for moving 35'`},
+      {value:4,label:`Movement Modifier: +4 for moving 40'`},
+      {value:5,label:`Movement Modifier: +5 for moving 45'`},
+      {value:6,label:`Movement Modifier: +6 for moving 50'`},
+      {value:7,label:`Movement Modifier: +7 for moving 55'`},
+      {value:8,label:`Movement Modifier: +8 for moving 60'`},
+      {value:9,label:`Movement Modifier: +9 for moving 65'`},
+      {value:10,label:`Movement Modifier: +10 for moving 70' or more`},
+    ]
     // Check if agility is being limited by armor
     context.agiLimited = ((systemData.abilities.dex.mrk + systemData.abilities.dex.agi)<systemData.abilities.dex.mod)?'agi-limited':'';
   }
