@@ -39,7 +39,7 @@ export class OpsActorSheet extends ActorSheet {
     weapons: false,
     objectAttacks: false,
     magicAttacks:false,
-    mental:true,
+    mental:this.object.items.filter((item) => item.type == 'magic').length?false:true,
     resources: true,    
     characterActions: true,
     objectUtility: false,
@@ -114,7 +114,7 @@ export class OpsActorSheet extends ActorSheet {
     systemData.ml.display = Roll.replaceFormulaData(systemData.ml.formula,rollData);
     systemData.stats.carrying.display = Roll.replaceFormulaData(systemData.stats.carrying.formula,rollData);
     // Determine number of Incantation Recipes are memorized
-    systemData.magic.numRecipes = systemData.magic.invokerMemorize?((3+systemData.abilities.cha.mod)*systemData.stats.level.value):0;
+    systemData.magic.numRecipes = systemData.magic.invokerMemorize?((systemData.magic.recipeBase+systemData.abilities.cha.mod)*systemData.stats.level.value):0;
     // Initiative Wagering Options
     context.wagers = [
       {value:0,label:'Initiative Wagering'},

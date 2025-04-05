@@ -3,7 +3,7 @@
   "type": "feature",
   "img": "systems/opsandtactics/icons/abstract/dna.webp",
   "system": {
-    "description": "<h3>Racial Traits</h3>\n<ul>\n<li>Canyon orcs can use any ranged weapon as if it were one size smaller. This only applies to using, not concealing.</li>\n<li>Canyon orcs can not use Fine, Diminutive, or Tiny sized weapons, and take a &minus;2 penalty when using all Small sized weapons.</li>\n<li>Canyon orcs regenerate spent Mental Limit from Incanta- tions twice as fast as normal (20% instead of 10%).</li>\n<li>Canyon orcs receive the extra feat Second Wind for free at 1st level, even if they do not meet the prerequisites.</li>\n<li>Canyon orcs are immune to dry environments. They require half the water intake of a normal character.</li>\n<li>Canyon orcs can keep <code>((6+CHA Modifier)&times;CL)</code> Incantation recipes</li>\n<li>Canyon orcs can select Karkarash Expressive, Trade Bant Simplfied, or Trade Bant Traditional as their native language.</li>\n</ul>\n<h3>Racial Traits (Active Effect)</h3>\n<ul>\n<li>Canyon orcs are Medium sized creatures.</li>\n<li>Canyon orcs have a Mental Limit equal to <code>((6+WIS Score)&times;CL) + 60</code>.</li>\n<li>Canyon orcs multiply their base Will Saving Throw by 1.5.</li>\n<li>Canyon orcs have a base Combat Point score of 14.</li>\n<li>Canyon orcs CHP formula is <code>CON Score 3</code>.</li>\n</ul>\n<h3>Physical Description</h3>\n<p>A healthy canyon orc typically stands between 5&frac34;-6&frac12;&rsquo;, and weighs between 160-270 lbs. The males are significantly larger than the females, usually towering a good foot above them. Male and female orcs begin to grow out their inferior canines as they reach adulthood, that sit in front of the lower lip once fully grown. These canines are considered a badge of adulthood, and are kept clean and sharp. Orc skin tone ranges in the grays, browns, and greens, and their hair ranges from dark brown to black, usually in a coarse, curly texture. The average orc lifespan is 130 years, reaching physical adulthood between the ages of 16-20.</p>\n<h3>Language</h3>\n<p>The native language of a canyon orc depends on their background. They primarily speak Karkarash Expressive, but have been known to speak a multitude of languages.</p>\n<h3>Names</h3>\n<p>Canyon orcs generally have two sets of names. The first name being their legal, recorded name, that usually follows the same naming conventions that humans use, and a second, given name at a teeth cutting ceremony. The newly adult orc is given a title, that includes their first name, with an adjective describing them. As they go throughout life, they will be granted more titles by more experienced, higher titled orcs.</p>",
+    "description": "<h3>Racial Traits</h3><ul><li>Canyon orcs can use any ranged weapon as if it were one size smaller. This only applies to using, not concealing.</li><li>Canyon orcs can not use Fine, Diminutive, or Tiny sized weapons, and take a −2 penalty when using all Small sized weapons.</li><li>Canyon orcs regenerate spent Mental Limit from Incanta- tions twice as fast as normal (20% instead of 10%).</li><li>Canyon orcs receive the extra feat Second Wind for free at 1st level, even if they do not meet the prerequisites.</li><li>Canyon orcs are immune to dry environments. They require half the water intake of a normal character.</li><li>Canyon orcs can select Karkarash Expressive, Trade Bant Simplfied, or Trade Bant Traditional as their native language.</li></ul><h3>Racial Traits (Active Effect)</h3><ul><li>Canyon orcs are Medium sized creatures.</li><li>Canyon orcs have a Mental Limit equal to <code>((6+WIS Score)×CL) + 60</code>.</li><li>Canyon orcs can keep <code>((6+CHA Modifier)×CL)</code> Incantation recipes</li><li>Canyon orcs multiply their base Will Saving Throw by 1.5.</li><li>Canyon orcs have a base Combat Point score of 14.</li><li>Canyon orcs CHP formula is <code>CON Score 3</code>.</li></ul><h3>Physical Description</h3><p>A healthy canyon orc typically stands between 5¾-6½’, and weighs between 160-270 lbs. The males are significantly larger than the females, usually towering a good foot above them. Male and female orcs begin to grow out their inferior canines as they reach adulthood, that sit in front of the lower lip once fully grown. These canines are considered a badge of adulthood, and are kept clean and sharp. Orc skin tone ranges in the grays, browns, and greens, and their hair ranges from dark brown to black, usually in a coarse, curly texture. The average orc lifespan is 130 years, reaching physical adulthood between the ages of 16-20.</p><h3>Language</h3><p>The native language of a canyon orc depends on their background. They primarily speak Karkarash Expressive, but have been known to speak a multitude of languages.</p><h3>Names</h3><p>Canyon orcs generally have two sets of names. The first name being their legal, recorded name, that usually follows the same naming conventions that humans use, and a second, given name at a teeth cutting ceremony. The newly adult orc is given a title, that includes their first name, with an adjective describing them. As they go throughout life, they will be granted more titles by more experienced, higher titled orcs.</p>",
     "summary": ""
   },
   "effects": [
@@ -51,6 +51,11 @@
           "key": "system.saves.will.mult",
           "mode": 5,
           "value": "1.5"
+        },
+        {
+          "key": "system.magic.recipeBase",
+          "mode": 5,
+          "value": "6"
         }
       ],
       "tint": null,
@@ -67,11 +72,11 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.2.7",
+    "systemVersion": "0.6.1",
     "coreVersion": "11.315",
     "createdTime": 1677901192920,
-    "modifiedTime": 1705305991263,
-    "lastModifiedBy": "qUf9EhhQBxZF46Rx"
+    "modifiedTime": 1743881242200,
+    "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {
     "default": 0,
