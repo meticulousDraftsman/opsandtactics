@@ -1,33 +1,46 @@
 <fieldset class="collapse-parent">
     <legend class="resource-label">
-        Mental Limit <a data-tooltip="Toggle Mental Limit Display"><i class="fas fa-list collapse-toggle" data-collapse="mental"></i></a>
+        Mental Limit [{{system.magic.mlUsed}}/{{system.ml.max}}] <a data-tooltip="Toggle Mental Limit Display"><i class="fas fa-list collapse-toggle" data-collapse="mental"></i></a>
     </legend>
-    <div class="mental {{#if collapses.mental}}collapse{{/if}}">
-        <div class="grid grid-8col flex-group-center">
-            <span class="grid-span-2">Total Mental Limit Used</span>
-            <input class="grid-start-4" type="text" value="{{system.magic.mlUsed}}" readonly>   
-            <span class="grid-span-3">Total Mental Limit Capacity</span>
-            <input type="text" value="{{system.ml.max}}" readonly>       
-            <span class="grid-span-2">Misc Mental Limit Costs</span>
-            <input type="text" name="system.magic.mods.misc" value="{{system.magic.mods.misc}}" data-dtype="Number" placeholder="Misc">    
-            <input type="text" value="{{system.magic.mlMisc}}" readonly>                
-            <span class="grid-span-3">Temporary Mental Limit Capacity</span>
-            <input type="text" name="system.ml.temp" value="{{system.ml.temp}}" data-dtype="Number" placeholder="0">                              
-            <span class="grid-span-2">Psionically {{#if system.magic.psionFocus}}Fo{{else}}Unfo{{/if}}cused</span>
-            <div>
+    <div class="mental grid grid-2col flex-group-center {{#if collapses.mental}}collapse{{/if}}">
+        <fieldset class="save">
+            <a class="trait-edit" data-target-name="system.magic.mods" data-target-type="mod" data-tooltip="Edit Miscellaneous Mental Limit Costs">Miscellaneous Costs: {{system.magic.mlMisc}} ML <i class="fas fa-edit"></i></a>
+        </fieldset>
+        <fieldset class="save">
+            <span>Scribed Spells: {{system.magic.mlObject}} ML</span>
+        </fieldset>
+        <fieldset class="save">
+            <label class="flexrow flex-group-center">
+                <span>Psionic Focus: {{system.magic.mlPsion}} ML</span>
                 <input name="system.magic.psionFocus" type="checkbox" {{checked system.magic.psionFocus}}/>
-            </div>
-            <input type="text" value="{{system.magic.mlPsion}}" readonly>
-            <span class="grid-span-3">Mental Limit Spent from Objects</span>
-            <input type="text" value="{{system.magic.mlObject}}" readonly>    
-            <span class="grid-span-2">{{system.magic.numRecipes}} Recipes Memorized</span>
-            <div>
+            </label>
+        </fieldset>
+        <fieldset class="save">
+            <label class="flexrow flex-group-center">
+                <span>{{system.magic.numRecipes}} Memorized Incantations: {{system.magic.mlRecipe}} ML</span>
                 <input name="system.magic.invokerMemorize" type="checkbox" {{checked system.magic.invokerMemorize}}/>
+            </label>
+        </fieldset>
+        <fieldset class="save">
+            {{#if collapses.edit}}
+            <div class="flexrow flex-group-center">
+                <span>Temporary Capacity</span>
+                <input type="text" name="system.ml.temp" value="{{system.ml.temp}}" data-dtype="Number" placeholder="0">   
             </div>
-            <input type="text" value="{{system.magic.mlRecipe}}" readonly>
-            <a class="grid-span-3 resource-label incant-regain" data-tooltip="Regain Mental Limit spent by Invoking">Mental Limit Spent Invoking <i class="fas fa-recycle"></i></a>
-            <input type="text" name="system.magic.mlCant" value="{{system.magic.mlCant}}" data-dtype="Number" placeholder="Spent">
-        </div>
+            {{else}}
+            <span>Temporary Capacity: {{system.ml.temp}} ML</span>
+            {{/if}}
+        </fieldset>
+        <fieldset class="save">
+            {{#if collapses.edit}}
+            <div class="flexrow flex-group-center">
+                <a class="resource-label incant-regain" data-tooltip="Regain Mental Limit spent by Invoking">Used by Invoking <i class="fas fa-recycle"></i></a>
+                <input type="text" name="system.magic.mlCant" value="{{system.magic.mlCant}}" data-dtype="Number" placeholder="Spent">
+            </div>
+            {{else}}
+            <a class="resource-label incant-regain" data-tooltip="Regain Mental Limit spent by Invoking">Used by Invoking: {{system.magic.mlCant}} ML <i class="fas fa-recycle"></i></a>
+            {{/if}}
+        </fieldset>
     </div>
 </fieldset>
 {{> "systems/opsandtactics/templates/actor/parts/object-resources.html"}}

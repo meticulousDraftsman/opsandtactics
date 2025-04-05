@@ -149,7 +149,8 @@ export class OpsActor extends Actor {
         }
       }
     }
-    systemData.magic.mlMisc = systemData.magic.mods.subtotal
+    systemData.magic.mods.value = systemData.magic.mods.subtotal;
+    systemData.magic.mlMisc = systemData.magic.mods.value;
     systemData.magic.mlUsed = systemData.magic.mlPsion + systemData.magic.mlRecipe + systemData.magic.mlObject + systemData.magic.mlCant + systemData.magic.mlMisc;
     systemData.ml.value = systemData.ml.max - systemData.magic.mlUsed;
     // Calculate Skill Points
