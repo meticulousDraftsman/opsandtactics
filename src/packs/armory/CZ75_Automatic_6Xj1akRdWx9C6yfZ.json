@@ -400,11 +400,11 @@
         },
         "dice": {
           "scaleCartridge": {
-            "less": null,
-            "bar": null,
-            "more": null,
-            "per": null,
-            "scale": null
+            "less": 3,
+            "bar": 3,
+            "more": 4,
+            "per": 3,
+            "scale": 1
           },
           "mods": {
             "nqoS926o": {
@@ -791,9 +791,9 @@
   "_stats": {
     "coreVersion": "11.315",
     "systemId": "opsandtactics",
-    "systemVersion": "0.5.3",
+    "systemVersion": "0.6.1",
     "createdTime": 1742149169985,
-    "modifiedTime": 1742699965976,
+    "modifiedTime": 1743947956762,
     "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "ownership": {

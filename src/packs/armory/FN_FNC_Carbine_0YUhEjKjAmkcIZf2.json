@@ -59,6 +59,9 @@
             },
             "axrSoQri": {
               "active": false
+            },
+            "gZQuAJFE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -76,6 +79,9 @@
             },
             "axrSoQri": {
               "active": false
+            },
+            "gZQuAJFE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -90,6 +96,9 @@
             },
             "axrSoQri": {
               "active": false
+            },
+            "gZQuAJFE": {
+              "active": false
             }
           }
         },
@@ -101,6 +110,9 @@
               "active": false
             },
             "axrSoQri": {
+              "active": false
+            },
+            "gZQuAJFE": {
               "active": false
             }
           },
@@ -120,6 +132,9 @@
               "active": false
             },
             "axrSoQri": {
+              "active": false
+            },
+            "gZQuAJFE": {
               "active": false
             }
           }
@@ -464,6 +479,9 @@
             },
             "axrSoQri": {
               "active": false
+            },
+            "gZQuAJFE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -481,6 +499,9 @@
             },
             "axrSoQri": {
               "active": false
+            },
+            "gZQuAJFE": {
+              "active": false
             }
           },
           "scaleAbility": 1,
@@ -495,6 +516,9 @@
             },
             "axrSoQri": {
               "active": false
+            },
+            "gZQuAJFE": {
+              "active": false
             }
           }
         },
@@ -506,6 +530,9 @@
               "active": true
             },
             "axrSoQri": {
+              "active": false
+            },
+            "gZQuAJFE": {
               "active": false
             }
           },
@@ -525,6 +552,9 @@
               "active": false
             },
             "axrSoQri": {
+              "active": false
+            },
+            "gZQuAJFE": {
               "active": false
             }
           }
@@ -744,9 +774,9 @@
   "_stats": {
     "coreVersion": "11.315",
     "systemId": "opsandtactics",
-    "systemVersion": "0.5.3",
+    "systemVersion": "0.6.1",
     "createdTime": 1742411444010,
-    "modifiedTime": 1742699965976,
+    "modifiedTime": 1744424763264,
     "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "folder": "23cC502P2PggeErj",

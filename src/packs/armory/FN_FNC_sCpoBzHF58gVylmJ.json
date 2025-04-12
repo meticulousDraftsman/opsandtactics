@@ -638,7 +638,7 @@
           "flavor": "",
           "type": "",
           "source": "",
-          "inherent": "5d4",
+          "inherent": "",
           "ability": "",
           "mods": {
             "gN80d9f3": {
@@ -698,7 +698,7 @@
         "dice": {
           "scaleCartridge": {
             "less": null,
-            "bar": 1,
+            "bar": 0,
             "more": 5,
             "per": null,
             "scale": null
@@ -1010,10 +1010,10 @@
   },
   "_stats": {
     "systemId": "opsandtactics",
-    "systemVersion": "0.5.3",
+    "systemVersion": "0.6.1",
     "coreVersion": "11.315",
     "createdTime": 1681637449760,
-    "modifiedTime": 1742699965976,
+    "modifiedTime": 1744424731373,
     "lastModifiedBy": "awmzRJQcQXoX998M"
   },
   "folder": "y6WXOSFRkZLTAj7b",
