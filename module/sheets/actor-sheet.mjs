@@ -1675,6 +1675,18 @@ class TraitEditApp extends FormApplication {
       case 'grapple':
         temp = 'Grapple';
         break;
+      case 'bab':
+        temp = 'Base Attack Bonus';
+        break;
+      case 'init':
+        temp = 'Initiative';
+        break;
+      case 'recoil':
+        temp = 'Recoil Reduction';
+        break;      
+      case 'mods':
+        temp = 'Miscellaneous Mental Limit Cost';
+        break;
     }
     return `Editing ${temp} calculation for ${this.object.name}`;
   }
