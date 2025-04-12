@@ -280,7 +280,7 @@ export class OpsItem extends Item {
   rollDamage(damageData){
     const rollData = damageData.actor?damageData.actor.getRollData():this.actor.getRollData();
     const loadedMag = damageData.loaded?damageData.loaded:foundry.utils.getProperty(this,'system.magazine.loaded');
-    console.debug(loadedMag)
+    //console.debug(loadedMag)
     const rollConfig = {
       rolls: [],
       rollTypes: [],

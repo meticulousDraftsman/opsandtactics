@@ -426,7 +426,7 @@ function addChatContext(html, options){
 }
 async function applyChatDamage(li, rollNum, multiplier) {
   const message = game.messages.get(li.data("messageId"));
-  console.debug(game.actors.get(message?.speaker?.actor)?.type==='spacecraft')
+  //console.debug(game.actors.get(message?.speaker?.actor)?.type==='spacecraft')
   let damage = 0;
   if (rollNum>=0){
     damage = Number(message.rolls[rollNum].total);

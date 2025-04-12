@@ -1131,7 +1131,7 @@ export class OpsActorSheet extends ActorSheet {
     const dataset = event.currentTarget.dataset;
     const target = dataset.targetName;
     const type = dataset.targetType;
-    console.debug(this.object)
+    //console.debug(this.object)
     new TraitEditApp(this.object,{target:target, type:type}).render(true)
   }
   async _copCreate(event){
@@ -1749,7 +1749,7 @@ class TraitEditApp extends FormApplication {
     if (foundry.utils.hasProperty(this.object,`${this.options.target}.mods.misc`)){
       //context.trait.misc = foundry.utils.getProperty(this.object,`${this.options.target}.mods.misc`);
     }
-    console.debug(this.object, context)
+    //console.debug(this.object, context)
     return context;
     if (foundry.utils.getProperty(context,'attack.object.dice.scaleCartridge.bar') > 0) context.attack.object.dice.scaleCartridge.lessBar = context.attack.object.dice.scaleCartridge.bar - 1;
     for (let [key,entry] of Object.entries(this.object.system.weaponMods)){
