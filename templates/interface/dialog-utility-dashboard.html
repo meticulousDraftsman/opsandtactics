@@ -69,27 +69,28 @@
                         </legend>
                         {{#if skill}}
                         <div class="grid grid-6col flex-group-center">
-                            <select class="grid-span-2 flex-group-center" name="tweaks.skill.system.focus" data-dtype="String">
+                            <select class="grid-span-4 flex-group-center" name="tweaks.skill.system.focus" data-dtype="String">
                                 {{#select tweaks.skill.system.focus}}
                                 <option value="unfocus">{{localize "OATS.skills.unfocus"}}</option>
+                                <option value="default">{{localize "OATS.skills.default"}}</option>
                                 <option value="focus">{{localize "OATS.skills.focus"}}</option>
+                                <option value="occupation">{{localize OATS.skills.occupation}}</option>
                                 <option value="double">{{localize "OATS.skills.double"}}</option>
                                 {{/select}}
-                              </select>
-                            <select class="flex-group-center" name="tweaks.skill.system.ability">
-                                {{selectOptions OATS.abilityShort selected=tweaks.skill.system.ability localize=true blank="Ability"}}
+                            </select>
+                            <select class="grid-span-2 flex-group-center" name="tweaks.skill.system.ability">
+                                {{selectOptions OATS.abilities selected=tweaks.skill.system.ability localize=true blank="Ability"}}
                             </select>
                             <span>Ranks</span>
                             <input type="text" name="tweaks.skill.system.ranks" value="{{tweaks.skill.system.ranks}}">
-                            <label class="flex-group-center">
-                                <div class="flexrow flex-group-center">
-                                    <span>Armor</span>
-                                    <div class="flex-group-center">
-                                        <input type="checkbox" name="tweaks.skill.system.armor.active" {{checked tweaks.skill.system.armor.active}}>
-                                    </div>
-                                </div>
-
-                            </label>
+                            <span class="grid-span-2">Armor Penalty</span>
+                            <select class="grid-span-2 flex-group-center" name="tweaks.skill.system.armor.active" data-dtype="Number">
+                              {{#select tweaks.skill.system.armor.active}}
+                              <option value="0">None</option>
+                              <option value="1">Non-Proficient</option>
+                              <option value="2">Proficient</option>
+                              {{/select}}
+                            </select>
                             <div class="grid-span-6 flex-group-center">
                                 {{#each tweaks.skill.system.mods}}
                                 {{#if this.value}}
