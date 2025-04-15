@@ -1947,7 +1947,7 @@ class ActionDashboardApp extends FormApplication {
       isReflex: (this.options.target=='reflex'),
       lists: {
         reflexCover: [
-          {label:'Not Behind Cover',value:'cov0'},
+          {label:'Not Behind Cover',value:0},
           {label:'Behind 1/4 Cover (+2)',value:2},
           {label:'Behind 1/2 Cover (+4)',value:4},
           {label:'Behind 3/4 Cover (+6)',value:6},
