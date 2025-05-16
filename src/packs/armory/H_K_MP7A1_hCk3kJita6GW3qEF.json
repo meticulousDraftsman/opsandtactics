@@ -160,7 +160,7 @@
             }
           },
           "scaleAbility": 1,
-          "ammo": false
+          "ammo": true
         },
         "ammo": 2,
         "cp": {
@@ -723,10 +723,10 @@
   "_stats": {
     "coreVersion": "11.315",
     "systemId": "opsandtactics",
-    "systemVersion": "0.5.3",
+    "systemVersion": "0.6.3",
     "createdTime": 1742149704697,
-    "modifiedTime": 1742699965976,
-    "lastModifiedBy": "awmzRJQcQXoX998M"
+    "modifiedTime": 1747425227862,
+    "lastModifiedBy": "OO4YQoZOjPfjYFSm"
   },
   "folder": "h1VpRtjhybi9KzOm",
   "ownership": {
